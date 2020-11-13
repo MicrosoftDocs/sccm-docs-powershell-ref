@@ -1,4 +1,4 @@
----
+﻿---
 description: Creates a file replication route for Configuration Manager.
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -15,8 +15,8 @@ Creates a file replication route for Configuration Manager.
 ## SYNTAX
 
 ```
-New-CMFileReplicationRoute -SourceSiteCode <String> -DestinationSiteCode <String>
- [-DestinationSiteServerName <String>] [-FileReplicationAccountName <String>] [-DisableWildcardHandling]
+New-CMFileReplicationRoute -DestinationSiteCode <String> [-DestinationSiteServerName <String>]
+ [-FileReplicationAccountName <String>] -SourceSiteCode <String> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -44,21 +44,6 @@ This command creates a file replication route from the site that has the site co
 Configuration Manager uses the account named AdminRepl01 to manage data transfer over this route.
 
 ## PARAMETERS
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -DestinationSiteCode
 Specifies a destination site for data transfers by using a site code.
@@ -147,6 +132,21 @@ Aliases:
 Required: True
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

@@ -1,4 +1,4 @@
----
+﻿---
 description: Removes a deployment type for a Configuration Manager deployment application.
 external help file: AdminUI.PS.AppMan.dll-Help.xml
 Module Name: ConfigurationManager
@@ -17,19 +17,19 @@ Removes a deployment type for a Configuration Manager deployment application.
 
 ### SearchByInputObjectMandatory (Default)
 ```
-Remove-CMDeploymentType [-Force] [-ApplicationName <String>] -InputObject <IResultObject>
+Remove-CMDeploymentType [-ApplicationName <String>] [-Force] -InputObject <IResultObject>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory
 ```
-Remove-CMDeploymentType -DeploymentTypeId <Int32> [-Force] -ApplicationName <String> [-DisableWildcardHandling]
+Remove-CMDeploymentType -ApplicationName <String> -DeploymentTypeId <Int32> [-Force] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByNameMandatory
 ```
-Remove-CMDeploymentType [-DeploymentTypeName] <String> [-Force] -ApplicationName <String>
+Remove-CMDeploymentType -ApplicationName <String> [-DeploymentTypeName] <String> [-Force]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -83,22 +83,6 @@ Aliases:
 Required: True
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -197,6 +181,22 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

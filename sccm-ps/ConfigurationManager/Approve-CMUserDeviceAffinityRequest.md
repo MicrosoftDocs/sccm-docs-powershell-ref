@@ -1,4 +1,4 @@
----
+﻿---
 description: Approves a request for user device affinity in Configuration Manager.
 external help file: AdminUI.PS.Collections.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,18 +16,18 @@ Approves a request for user device affinity in Configuration Manager.
 
 ### SearchByNameMandatory (Default)
 ```
-Approve-CMUserDeviceAffinityRequest -CollectionName <String> [-UserName <String>] [-UserId <String>]
- [-DeviceName <String>] [-DeviceId <String>] [-UserDeviceAffinityRequestId <String>]
- [-UserDeviceAffinityRequest <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Approve-CMUserDeviceAffinityRequest -CollectionName <String> [-DeviceId <String>] [-DeviceName <String>]
+ [-UserDeviceAffinityRequest <IResultObject>] [-UserDeviceAffinityRequestId <String>] [-UserId <String>]
+ [-UserName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory
 ```
-Approve-CMUserDeviceAffinityRequest -CollectionId <String> [-UserName <String>] [-UserId <String>]
- [-DeviceName <String>] [-DeviceId <String>] [-UserDeviceAffinityRequestId <String>]
- [-UserDeviceAffinityRequest <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Approve-CMUserDeviceAffinityRequest -CollectionId <String> [-DeviceId <String>] [-DeviceName <String>]
+ [-UserDeviceAffinityRequest <IResultObject>] [-UserDeviceAffinityRequestId <String>] [-UserId <String>]
+ [-UserName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -78,21 +78,6 @@ Aliases:
 Required: True
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -214,6 +199,21 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

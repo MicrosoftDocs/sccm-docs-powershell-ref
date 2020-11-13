@@ -1,4 +1,4 @@
----
+﻿---
 description: This cmdlet is deprecated. Use the Set-CMTaskSequence cmdlet to disable a task sequence.
 external help file: AdminUI.PS.Osd.dll-Help.xml
 Module Name: ConfigurationManager
@@ -21,16 +21,16 @@ Disable-CMTaskSequence -TaskSequencePackageId <String> [-DisableWildcardHandling
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### SearchByNameMandatory
-```
-Disable-CMTaskSequence -Name <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
-```
-
 ### SearchByValueMandatory
 ```
 Disable-CMTaskSequence -InputObject <IResultObject> [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SearchByNameMandatory
+```
+Disable-CMTaskSequence -Name <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -46,22 +46,6 @@ Use the [Set-CMTaskSequence](Set-CMTaskSequence.md) cmdlet to disable a task seq
 ## EXAMPLES
 
 ## PARAMETERS
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -DisableWildcardHandling
 
@@ -140,6 +124,22 @@ Aliases: PackageId, Id
 Required: True
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

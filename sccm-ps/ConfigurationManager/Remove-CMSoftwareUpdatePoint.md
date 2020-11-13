@@ -1,4 +1,4 @@
----
+﻿---
 description: Removes a software update point site system role from Configuration Manager.
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,14 +16,14 @@ Removes a software update point site system role from Configuration Manager.
 
 ### SearchByValueMandatory (Default)
 ```
-Remove-CMSoftwareUpdatePoint [-Force] [-DefaultServerName <String>] -InputObject <IResultObject>
+Remove-CMSoftwareUpdatePoint [-DefaultServerName <String>] [-Force] -InputObject <IResultObject>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByNameMandatory
 ```
-Remove-CMSoftwareUpdatePoint [-SiteCode <String>] [-Force] [-SiteSystemServerName] <String>
- [-DefaultServerName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+Remove-CMSoftwareUpdatePoint [-DefaultServerName <String>] [-Force] [-SiteCode <String>]
+ [-SiteSystemServerName] <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
@@ -65,21 +65,6 @@ The second command removes the software update point saved in the $CMSUP variabl
 This command uses the *Force* parameter, so the cmdlet does not prompt you for confirmation.
 
 ## PARAMETERS
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -DefaultServerName
 {{ Fill DefaultServerName Description }}
@@ -187,6 +172,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
@@ -212,7 +212,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-###  
+### 
 
 ## NOTES
 

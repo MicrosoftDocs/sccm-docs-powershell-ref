@@ -1,4 +1,4 @@
----
+﻿---
 description: Get component status messages in Configuration Manager.
 external help file: AdminUI.PS.SystemStatus.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,8 +16,8 @@ Get component status messages in Configuration Manager.
 ## SYNTAX
 
 ```
-Get-CMComponentStatusMessage [-ComponentName <String>] [-ComputerName <String>] [-SiteCode <String>]
- [-Severity <Severity>] -StartTime <DateTime> [-DisableWildcardHandling] [-ForceWildcardHandling]
+Get-CMComponentStatusMessage [-ComponentName <String>] [-ComputerName <String>] [-Severity <Severity>]
+ [-SiteCode <String>] -StartTime <DateTime> [-DisableWildcardHandling] [-ForceWildcardHandling]
  [<CommonParameters>]
 ```
 
@@ -202,7 +202,6 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -214,8 +213,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### IResultObject[]#SMS_StatusMessage
 
 ### IResultObject#SMS_StatusMessage
-
-For more information on this return object and its properties, see [SMS_StatusMessage server WMI class](/mem/configmgr/develop/reference/core/servers/manage/sms_statusmessage-server-wmi-class).
 
 ## NOTES
 

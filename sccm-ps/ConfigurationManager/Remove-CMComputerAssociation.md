@@ -1,4 +1,4 @@
----
+﻿---
 description: Deletes a computer association from Configuration Manager.
 external help file: AdminUI.PS.Osd.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,20 +16,20 @@ Deletes a computer association from Configuration Manager.
 
 ### SearchByNameMandatory (Default)
 ```
-Remove-CMComputerAssociation -DestinationComputer <String> -SourceComputer <String> [-Force]
+Remove-CMComputerAssociation -DestinationComputer <String> [-Force] -SourceComputer <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### SearchByIdMandatory
-```
-Remove-CMComputerAssociation -MigrationId <String> [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByValueMandatory
 ```
-Remove-CMComputerAssociation -InputObject <IResultObject> [-Force] [-DisableWildcardHandling]
+Remove-CMComputerAssociation [-Force] -InputObject <IResultObject> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SearchByIdMandatory
+```
+Remove-CMComputerAssociation [-Force] -MigrationId <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -70,21 +70,6 @@ The second command removes the association saved in the $CMCA variable.
 This command uses the *Force* parameter, so the cmdlet does not prompt you for confirmation before it removes the association.
 
 ## PARAMETERS
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -DestinationComputer
 Specifies the name of a destination computer.
@@ -188,6 +173,21 @@ Aliases: SourceName
 Required: True
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

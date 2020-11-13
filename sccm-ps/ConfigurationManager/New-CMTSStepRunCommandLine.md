@@ -1,4 +1,4 @@
----
+﻿---
 description: Creates a t s step run command line.
 external help file: AdminUI.PS.Osd.dll-Help.xml
 Module Name: ConfigurationManager
@@ -17,28 +17,28 @@ Creates a t s step run command line.
 
 ### ByName (Default)
 ```
-New-CMTSStepRunCommandLine -CommandLine <String> [-WorkingDirectory <String>] [-PackageId <String>]
- [-Timeout <Int32>] [-DisableWow64Redirection] [-RunAsUser] [-UserName <String>] [-UserPassword <SecureString>]
- [-SuccessCode <Int32[]>] -Name <String> [-Description <String>] [-ContinueOnError] [-Disable]
- [-Condition <IResultObject[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+New-CMTSStepRunCommandLine -CommandLine <String> [-DisableWow64Redirection] [-PackageId <String>] [-RunAsUser]
+ [-SuccessCode <Int32[]>] [-Timeout <Int32>] [-UserName <String>] [-UserPassword <SecureString>]
+ [-WorkingDirectory <String>] [-Condition <IResultObject[]>] [-ContinueOnError] [-Description <String>]
+ [-Disable] -Name <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ### RunScriptFromSource
 ```
-New-CMTSStepRunCommandLine -CommandLine <String> [-WorkingDirectory <String>] [-PackageId <String>]
- [-OutputVariableName <String>] [-Timeout <Int32>] [-DisableWow64Redirection] [-RunAsUser] [-UserName <String>]
- [-UserPassword <SecureString>] [-SuccessCode <Int32[]>] [-Description <String>] [-ContinueOnError] [-Disable]
- [-Condition <IResultObject[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+New-CMTSStepRunCommandLine -CommandLine <String> [-DisableWow64Redirection] [-OutputVariableName <String>]
+ [-PackageId <String>] [-RunAsUser] [-SuccessCode <Int32[]>] [-Timeout <Int32>] [-UserName <String>]
+ [-UserPassword <SecureString>] [-WorkingDirectory <String>] [-Condition <IResultObject[]>] [-ContinueOnError]
+ [-Description <String>] [-Disable] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ### RunScriptFromPackage
 ```
-New-CMTSStepRunCommandLine -CommandLine <String> [-WorkingDirectory <String>] [-PackageId <String>]
- [-OutputVariableName <String>] [-Timeout <Int32>] [-DisableWow64Redirection] [-RunAsUser] [-UserName <String>]
- [-UserPassword <SecureString>] [-SuccessCode <Int32[]>] [-Description <String>] [-ContinueOnError] [-Disable]
- [-Condition <IResultObject[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+New-CMTSStepRunCommandLine -CommandLine <String> [-DisableWow64Redirection] [-OutputVariableName <String>]
+ [-PackageId <String>] [-RunAsUser] [-SuccessCode <Int32[]>] [-Timeout <Int32>] [-UserName <String>]
+ [-UserPassword <SecureString>] [-WorkingDirectory <String>] [-Condition <IResultObject[]>] [-ContinueOnError]
+ [-Description <String>] [-Disable] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
@@ -76,21 +76,6 @@ Accept wildcard characters: False
 Type: IResultObject[]
 Parameter Sets: (All)
 Aliases: Conditions
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
 
 Required: False
 Position: Named
@@ -287,14 +272,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
-
+### -WorkingDirectory
 ```yaml
-Type: SwitchParameter
+Type: String
 Parameter Sets: (All)
-Aliases: wi
+Aliases: StartIn
 
 Required: False
 Position: Named
@@ -303,11 +285,29 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WorkingDirectory
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
 ```yaml
-Type: String
+Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: StartIn
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
 
 Required: False
 Position: Named

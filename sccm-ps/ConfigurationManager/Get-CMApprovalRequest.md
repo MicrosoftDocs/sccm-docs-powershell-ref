@@ -1,4 +1,4 @@
----
+﻿---
 description: Gets an approval request to allow the installation of a Configuration Manager application.
 external help file: AdminUI.PS.AppModel.dll-Help.xml
 Module Name: ConfigurationManager
@@ -17,31 +17,31 @@ Gets an approval request to allow the installation of a Configuration Manager ap
 
 ### SearchByName (Default)
 ```
-Get-CMApprovalRequest [-ApplicationName <String[]>] [-User <String>] [-CurrentState <RequestState>]
+Get-CMApprovalRequest [-ApplicationName <String[]>] [-CurrentState <RequestState>] [-User <String>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ### SearchById
 ```
-Get-CMApprovalRequest -Id <String[]> [-User <String>] [-CurrentState <RequestState>] [-DisableWildcardHandling]
+Get-CMApprovalRequest [-CurrentState <RequestState>] -Id <String[]> [-User <String>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [<CommonParameters>]
+```
+
+### SearchByValue
+```
+Get-CMApprovalRequest [-CurrentState <RequestState>] -InputObject <IResultObject> [-User <String>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ### SearchByModelName
 ```
-Get-CMApprovalRequest [-User <String>] -ModelName <String> [-CurrentState <RequestState>]
+Get-CMApprovalRequest [-CurrentState <RequestState>] -ModelName <String> [-User <String>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ### SearchByGuid
 ```
-Get-CMApprovalRequest [-User <String>] -RequestGuid <String> [-CurrentState <RequestState>]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
-```
-
-### SearchByValue
-```
-Get-CMApprovalRequest [-User <String>] -InputObject <IResultObject> [-CurrentState <RequestState>]
+Get-CMApprovalRequest [-CurrentState <RequestState>] -RequestGuid <String> [-User <String>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 

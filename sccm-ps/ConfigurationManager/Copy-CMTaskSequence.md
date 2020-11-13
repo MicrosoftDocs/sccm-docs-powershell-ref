@@ -1,4 +1,4 @@
----
+﻿---
 description: Create a copy of an existing task sequence in Configuration Manager.
 external help file: AdminUI.PS.Osd.dll-Help.xml
 Module Name: ConfigurationManager
@@ -21,16 +21,16 @@ Copy-CMTaskSequence -Id <String> [-DisableWildcardHandling] [-ForceWildcardHandl
  [<CommonParameters>]
 ```
 
-### SearchByName
-```
-Copy-CMTaskSequence -Name <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
-```
-
 ### SearchByValue
 ```
 Copy-CMTaskSequence -InputObject <IResultObject> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
  [-Confirm] [<CommonParameters>]
+```
+
+### SearchByName
+```
+Copy-CMTaskSequence -Name <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -55,22 +55,6 @@ PS XYZ:\> $newTS = Copy-CMTaskSequence -Name "TaskSequence01"
 This command makes a copy of the task sequence with the name TaskSequence01.
 
 ## PARAMETERS
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -DisableWildcardHandling
 
@@ -146,6 +130,22 @@ Parameter Sets: SearchByName
 Aliases: TaskSequenceName
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False

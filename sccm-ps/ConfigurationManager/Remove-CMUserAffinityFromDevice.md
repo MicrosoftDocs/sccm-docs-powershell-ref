@@ -1,4 +1,4 @@
----
+﻿---
 description: Removes a primary user from one or more devices in the Configuration Manager hierarchy.
 external help file: AdminUI.PS.Collections.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,13 +16,13 @@ Removes a primary user from one or more devices in the Configuration Manager hie
 
 ### RemoveUserAffinityByDeviceName (Default)
 ```
-Remove-CMUserAffinityFromDevice -DeviceName <String[]> [-UserId <Int32[]>] [-UserName <String[]>] [-Force]
+Remove-CMUserAffinityFromDevice -DeviceName <String[]> [-Force] [-UserId <Int32[]>] [-UserName <String[]>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### RemoveUserAffinityByDeviceId
 ```
-Remove-CMUserAffinityFromDevice -DeviceId <Int32[]> [-UserId <Int32[]>] [-UserName <String[]>] [-Force]
+Remove-CMUserAffinityFromDevice -DeviceId <Int32[]> [-Force] [-UserId <Int32[]>] [-UserName <String[]>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -46,21 +46,6 @@ PS XYZ:\> Remove-CMUserAffinityFromDevice -DeviceId "209846738" -UserId "2063593
 This command removes the association between the user that has the ID 206359374 and the device that has the ID 209846738.
 
 ## PARAMETERS
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -DeviceId
 Specifies an array of IDs of the devices.
@@ -163,6 +148,21 @@ Aliases: UserNames
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

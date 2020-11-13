@@ -1,4 +1,4 @@
----
+﻿---
 description: Removes a variable defined for a Configuration Manager device.
 external help file: AdminUI.PS.Collections.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,19 +16,19 @@ Removes a variable defined for a Configuration Manager device.
 
 ### SearchByValueMandatory (Default)
 ```
-Remove-CMDeviceVariable -Device <IResultObject> -VariableName <String> [-Force] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### SearchByIdMandatory
-```
-Remove-CMDeviceVariable -ResourceId <String> -VariableName <String> [-Force] [-DisableWildcardHandling]
+Remove-CMDeviceVariable -Device <IResultObject> [-Force] -VariableName <String> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByNameMandatory
 ```
-Remove-CMDeviceVariable -DeviceName <String> -VariableName <String> [-Force] [-DisableWildcardHandling]
+Remove-CMDeviceVariable -DeviceName <String> [-Force] -VariableName <String> [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SearchByIdMandatory
+```
+Remove-CMDeviceVariable [-Force] -ResourceId <String> -VariableName <String> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -52,21 +52,6 @@ PS XYZ:\> Remove-CMDeviceVariable -DeviceName "gateway-server.contoso.com" -Vari
 This command removes the device variable ServerIPAddress from the device gateway-server.contoso.com.
 
 ## PARAMETERS
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -Device
 Specifies a **CMDevice** object.
@@ -171,6 +156,21 @@ Aliases:
 Required: True
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

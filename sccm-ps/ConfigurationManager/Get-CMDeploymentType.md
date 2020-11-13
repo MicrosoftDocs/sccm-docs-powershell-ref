@@ -1,4 +1,4 @@
----
+﻿---
 description: Gets the deployment type of a Configuration Manager deployment application.
 external help file: AdminUI.PS.AppMan.dll-Help.xml
 Module Name: ConfigurationManager
@@ -17,13 +17,13 @@ Gets the deployment type of a Configuration Manager deployment application.
 
 ### SearchByName (Default)
 ```
-Get-CMDeploymentType [-DeploymentTypeName <String>] -ApplicationName <String> [-DisableWildcardHandling]
+Get-CMDeploymentType -ApplicationName <String> [-DeploymentTypeName <String>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory
 ```
-Get-CMDeploymentType -DeploymentTypeId <Int32> -ApplicationName <String> [-DisableWildcardHandling]
+Get-CMDeploymentType -ApplicationName <String> -DeploymentTypeId <Int32> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [<CommonParameters>]
 ```
 

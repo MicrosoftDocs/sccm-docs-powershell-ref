@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.ClientSettings.dll-Help.xml
 Module Name: ConfigurationManager
 online version:
@@ -14,43 +14,43 @@ Use this cmdlet to configure the client settings in the **Software Center** grou
 
 ### SetCustomSettingByName (Default)
 ```
-Set-CMClientSettingSoftwareCenter [-EnableCustomize <Boolean>] [-CompanyName <String>] [-ColorScheme <Color>]
- [-LogoFilePath <String>] [-HideUnapprovedApplication <Boolean>] [-HideInstalledApplication <Boolean>]
- [-HideApplicationCatalogLink <Boolean>] [-EnableApplicationsTab <Boolean>] [-EnableUpdatesTab <Boolean>]
- [-EnableOperatingSystemsTab <Boolean>] [-EnableStatusTab <Boolean>] [-EnableComplianceTab <Boolean>]
- [-EnableOptionsTab <Boolean>] [-ClearCustomTab] [-RemoveCustomTabName <String[]>]
- [-AddCustomTab <SoftwareCenterTabItem[]>] [-SetVisibleTabName <String[]>] [-SetInvisibleTabName <String[]>]
- [-SelectCustomTabName <String>] [-SelectBuiltInTab <BuiltInTab>] [-SelectTabIndex <Int32>]
- [-MoveSelectedTabToIndex <Int32>] [-SelectedTabNewName <String>] [-SelectedTabNewUrl <Uri>]
- [-CustomTabName <String>] [-CustomTabUrl <Uri>] -Name <String> [-PassThru] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMClientSettingSoftwareCenter [-AddCustomTab <SoftwareCenterTabItem[]>] [-ClearCustomTab]
+ [-ColorScheme <Color>] [-CompanyName <String>] [-CustomTabName <String>] [-CustomTabUrl <Uri>]
+ [-EnableApplicationsTab <Boolean>] [-EnableComplianceTab <Boolean>] [-EnableCustomize <Boolean>]
+ [-EnableOperatingSystemsTab <Boolean>] [-EnableOptionsTab <Boolean>] [-EnableStatusTab <Boolean>]
+ [-EnableUpdatesTab <Boolean>] [-HideApplicationCatalogLink <Boolean>] [-HideInstalledApplication <Boolean>]
+ [-HideUnapprovedApplication <Boolean>] [-LogoFilePath <String>] [-MoveSelectedTabToIndex <Int32>]
+ [-RemoveCustomTabName <String[]>] [-SelectBuiltInTab <BuiltInTab>] [-SelectCustomTabName <String>]
+ [-SelectedTabNewName <String>] [-SelectedTabNewUrl <Uri>] [-SelectTabIndex <Int32>]
+ [-SetInvisibleTabName <String[]>] [-SetVisibleTabName <String[]>] -Name <String> [-PassThru]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetDefaultSetting
 ```
-Set-CMClientSettingSoftwareCenter [-EnableCustomize <Boolean>] [-CompanyName <String>] [-ColorScheme <Color>]
- [-LogoFilePath <String>] [-HideUnapprovedApplication <Boolean>] [-HideInstalledApplication <Boolean>]
- [-HideApplicationCatalogLink <Boolean>] [-EnableApplicationsTab <Boolean>] [-EnableUpdatesTab <Boolean>]
- [-EnableOperatingSystemsTab <Boolean>] [-EnableStatusTab <Boolean>] [-EnableComplianceTab <Boolean>]
- [-EnableOptionsTab <Boolean>] [-ClearCustomTab] [-RemoveCustomTabName <String[]>]
- [-AddCustomTab <SoftwareCenterTabItem[]>] [-SetVisibleTabName <String[]>] [-SetInvisibleTabName <String[]>]
- [-SelectCustomTabName <String>] [-SelectBuiltInTab <BuiltInTab>] [-SelectTabIndex <Int32>]
- [-MoveSelectedTabToIndex <Int32>] [-SelectedTabNewName <String>] [-SelectedTabNewUrl <Uri>]
- [-CustomTabName <String>] [-CustomTabUrl <Uri>] [-DefaultSetting] [-PassThru] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMClientSettingSoftwareCenter [-AddCustomTab <SoftwareCenterTabItem[]>] [-ClearCustomTab]
+ [-ColorScheme <Color>] [-CompanyName <String>] [-CustomTabName <String>] [-CustomTabUrl <Uri>]
+ [-EnableApplicationsTab <Boolean>] [-EnableComplianceTab <Boolean>] [-EnableCustomize <Boolean>]
+ [-EnableOperatingSystemsTab <Boolean>] [-EnableOptionsTab <Boolean>] [-EnableStatusTab <Boolean>]
+ [-EnableUpdatesTab <Boolean>] [-HideApplicationCatalogLink <Boolean>] [-HideInstalledApplication <Boolean>]
+ [-HideUnapprovedApplication <Boolean>] [-LogoFilePath <String>] [-MoveSelectedTabToIndex <Int32>]
+ [-RemoveCustomTabName <String[]>] [-SelectBuiltInTab <BuiltInTab>] [-SelectCustomTabName <String>]
+ [-SelectedTabNewName <String>] [-SelectedTabNewUrl <Uri>] [-SelectTabIndex <Int32>]
+ [-SetInvisibleTabName <String[]>] [-SetVisibleTabName <String[]>] [-DefaultSetting] [-PassThru]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetCustomSettingByValue
 ```
-Set-CMClientSettingSoftwareCenter [-EnableCustomize <Boolean>] [-CompanyName <String>] [-ColorScheme <Color>]
- [-LogoFilePath <String>] [-HideUnapprovedApplication <Boolean>] [-HideInstalledApplication <Boolean>]
- [-HideApplicationCatalogLink <Boolean>] [-EnableApplicationsTab <Boolean>] [-EnableUpdatesTab <Boolean>]
- [-EnableOperatingSystemsTab <Boolean>] [-EnableStatusTab <Boolean>] [-EnableComplianceTab <Boolean>]
- [-EnableOptionsTab <Boolean>] [-ClearCustomTab] [-RemoveCustomTabName <String[]>]
- [-AddCustomTab <SoftwareCenterTabItem[]>] [-SetVisibleTabName <String[]>] [-SetInvisibleTabName <String[]>]
- [-SelectCustomTabName <String>] [-SelectBuiltInTab <BuiltInTab>] [-SelectTabIndex <Int32>]
- [-MoveSelectedTabToIndex <Int32>] [-SelectedTabNewName <String>] [-SelectedTabNewUrl <Uri>]
- [-CustomTabName <String>] [-CustomTabUrl <Uri>] -InputObject <IResultObject> [-PassThru]
+Set-CMClientSettingSoftwareCenter [-AddCustomTab <SoftwareCenterTabItem[]>] [-ClearCustomTab]
+ [-ColorScheme <Color>] [-CompanyName <String>] [-CustomTabName <String>] [-CustomTabUrl <Uri>]
+ [-EnableApplicationsTab <Boolean>] [-EnableComplianceTab <Boolean>] [-EnableCustomize <Boolean>]
+ [-EnableOperatingSystemsTab <Boolean>] [-EnableOptionsTab <Boolean>] [-EnableStatusTab <Boolean>]
+ [-EnableUpdatesTab <Boolean>] [-HideApplicationCatalogLink <Boolean>] [-HideInstalledApplication <Boolean>]
+ [-HideUnapprovedApplication <Boolean>] [-LogoFilePath <String>] [-MoveSelectedTabToIndex <Int32>]
+ [-RemoveCustomTabName <String[]>] [-SelectBuiltInTab <BuiltInTab>] [-SelectCustomTabName <String>]
+ [-SelectedTabNewName <String>] [-SelectedTabNewUrl <Uri>] [-SelectTabIndex <Int32>]
+ [-SetInvisibleTabName <String[]>] [-SetVisibleTabName <String[]>] -InputObject <IResultObject> [-PassThru]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -183,21 +183,6 @@ Starting in version 1906, use this parameter to configure the Software Center cl
 Type: String
 Parameter Sets: (All)
 Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
 
 Required: False
 Position: Named
@@ -552,21 +537,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -SelectTabIndex
-Use this parameter to select a tab by order in Software Center. Specify an integer for position, with `0` at the top. Use one of the following parameters in the same command to change the tab's configuration: **MoveSelectedTabToIndex**, **SelectedTabNewName**, **SelectedTabNewUrl**.
-
-```yaml
-Type: Int32
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -SelectedTabNewName
 In the same command when you select a tab, use this parameter to change the name of the tab.
 
@@ -597,6 +567,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -SelectTabIndex
+Use this parameter to select a tab by order in Software Center. Specify an integer for position, with `0` at the top. Use one of the following parameters in the same command to change the tab's configuration: **MoveSelectedTabToIndex**, **SelectedTabNewName**, **SelectedTabNewUrl**.
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -SetInvisibleTabName
 Use this parameter to hide a custom tab based upon its name. You can specify one or more tabs.
 
@@ -619,6 +604,21 @@ Use this parameter to show a custom tab based upon its name. You can specify one
 Type: String[]
 Parameter Sets: (All)
 Aliases: SetVisibleCustomTabNames
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
 
 Required: False
 Position: Named

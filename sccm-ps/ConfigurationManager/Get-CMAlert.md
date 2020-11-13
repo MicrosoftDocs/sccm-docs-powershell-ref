@@ -1,4 +1,4 @@
----
+﻿---
 description: Gets Configuration Manager alerts.
 external help file: AdminUI.PS.Alerts.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,7 +16,7 @@ Gets Configuration Manager alerts.
 
 ### SearchByName (Default)
 ```
-Get-CMAlert [[-Name] <String>] [-TypeInstanceId <String>] [-TypeId <Int32>] [-DisableWildcardHandling]
+Get-CMAlert [[-Name] <String>] [-TypeId <Int32>] [-TypeInstanceId <String>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [<CommonParameters>]
 ```
 

@@ -1,4 +1,4 @@
----
+﻿---
 description: Sets a compliance setting script.
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 Module Name: ConfigurationManager
@@ -18,7 +18,7 @@ Sets a compliance setting script.
 Set-CMComplianceSettingScript [-DiscoveryScriptFile <String>] [-DiscoveryScriptLanguage <ScriptingLanguage>]
  [-DiscoveryScriptText <String>] [-Is64Bit <Boolean>] [-IsPerUser <Boolean>] [-RemediationScriptFile <String>]
  [-RemediationScriptLanguage <ScriptingLanguage>] [-RemediationScriptText <String>] [-RemoveRemediationScript]
- [-Description <String>] -InputObject <PSObject> -SettingName <String> [-NewSettingName <String>] [-PassThru]
+ [-Description <String>] -InputObject <PSObject> [-NewSettingName <String>] [-PassThru] -SettingName <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -37,21 +37,6 @@ PS XYZ:\>
 ```
 
 ## PARAMETERS
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -Description
 ```yaml
@@ -263,6 +248,21 @@ Parameter Sets: (All)
 Aliases: Name
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False

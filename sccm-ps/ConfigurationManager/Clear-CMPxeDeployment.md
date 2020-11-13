@@ -1,4 +1,4 @@
----
+﻿---
 description: Clears the status of the most recent PXE deployment in Configuration Manager.
 external help file: AdminUI.PS.Collections.dll-Help.xml
 Module Name: ConfigurationManager
@@ -20,15 +20,21 @@ Clear-CMPxeDeployment -DeviceCollection <IResultObject> [-DisableWildcardHandlin
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### SearchByNameMandatory
+### SearchByValueMandatory_Device
 ```
-Clear-CMPxeDeployment -DeviceCollectionName <String[]> [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+Clear-CMPxeDeployment -Device <IResultObject> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory
 ```
 Clear-CMPxeDeployment -DeviceCollectionId <String[]> [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SearchByNameMandatory
+```
+Clear-CMPxeDeployment -DeviceCollectionName <String[]> [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -41,12 +47,6 @@ Clear-CMPxeDeployment -DeviceName <String[]> [-DisableWildcardHandling] [-ForceW
 ### SearchByIdMandatory_Device
 ```
 Clear-CMPxeDeployment -ResourceId <Int32[]> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
-```
-
-### SearchByValueMandatory_Device
-```
-Clear-CMPxeDeployment -Device <IResultObject> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
  [-Confirm] [<CommonParameters>]
 ```
 
@@ -72,21 +72,6 @@ PS XYZ:\>Clear-CMPxeDeployment -DeviceCollectionId "SMS00072"
 This command clears a PXE deployment identified with a device collection ID.
 
 ## PARAMETERS
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -Device
 Specifies a device object.
@@ -207,6 +192,21 @@ Aliases: ResourceIds
 Required: True
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 Module Name: ConfigurationManager
 online version:
@@ -13,8 +13,8 @@ schema: 2.0.0
 ## SYNTAX
 
 ```
-New-CMRequirementRuleFreeDiskSpaceValue -RuleOperator <RuleExpressionOperator> -Value1 <Int64[]>
- [-Value2 <Int64>] [-DriverLetter <String>] -PartitionOption <PartitionType> [-InputObject] <IResultObject>
+New-CMRequirementRuleFreeDiskSpaceValue [-DriverLetter <String>] -PartitionOption <PartitionType>
+ -RuleOperator <RuleExpressionOperator> -Value1 <Int64[]> [-Value2 <Int64>] [-InputObject] <IResultObject>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 

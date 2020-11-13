@@ -1,4 +1,4 @@
----
+﻿---
 description: Modifies a Configuration Manager reporting service point.
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,16 +16,16 @@ Modifies a Configuration Manager reporting service point.
 
 ### SetByValue (Default)
 ```
-Set-CMReportingServicePoint [-DatabaseServerName <String>] [-DatabaseName <String>] [-UserName <String>]
- -InputObject <IResultObject> [-Force] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMReportingServicePoint [-DatabaseName <String>] [-DatabaseServerName <String>] [-Force]
+ -InputObject <IResultObject> [-PassThru] [-UserName <String>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetByName
 ```
-Set-CMReportingServicePoint [-SiteCode <String>] [-SiteSystemServerName] <String>
- [-DatabaseServerName <String>] [-DatabaseName <String>] [-UserName <String>] [-Force] [-PassThru]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMReportingServicePoint [-DatabaseName <String>] [-DatabaseServerName <String>] [-Force] [-PassThru]
+ [-SiteCode <String>] [-SiteSystemServerName] <String> [-UserName <String>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -64,21 +64,6 @@ The first command uses the **Get-CMReportingServicePoint** cmdlet to get a repor
 The second command uses the **Set-CMReportingServicePoint** cmdlet to set the reporting point by using the input object.
 
 ## PARAMETERS
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -DatabaseName
 Specifies the name of the Configuration Manager database that you want to use as the data source for reports from Microsoft SQL Server Reporting Services.
@@ -229,6 +214,21 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

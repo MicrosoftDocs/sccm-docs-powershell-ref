@@ -1,4 +1,4 @@
----
+﻿---
 description: Adds a collection to distribution point group.
 external help file: AdminUI.PS.Content.dll-Help.xml
 Module Name: ConfigurationManager
@@ -17,6 +17,24 @@ Adds a collection to distribution point group
 ### AddById_Object (Default)
 ```
 Add-CMCollectionToDistributionPointGroup -CollectionId <String> -DistributionPointGroup <IResultObject>
+ [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### AddByObject_Id
+```
+Add-CMCollectionToDistributionPointGroup -Collection <IResultObject> -DistributionPointGroupId <String>
+ [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### AddByObject_Name
+```
+Add-CMCollectionToDistributionPointGroup -Collection <IResultObject> -DistributionPointGroupName <String>
+ [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### AddByObject_Object
+```
+Add-CMCollectionToDistributionPointGroup -Collection <IResultObject> -DistributionPointGroup <IResultObject>
  [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -47,24 +65,6 @@ Add-CMCollectionToDistributionPointGroup -CollectionName <String> -DistributionP
 ### AddByName_Object
 ```
 Add-CMCollectionToDistributionPointGroup -CollectionName <String> -DistributionPointGroup <IResultObject>
- [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### AddByObject_Id
-```
-Add-CMCollectionToDistributionPointGroup -Collection <IResultObject> -DistributionPointGroupId <String>
- [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### AddByObject_Name
-```
-Add-CMCollectionToDistributionPointGroup -Collection <IResultObject> -DistributionPointGroupName <String>
- [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### AddByObject_Object
-```
-Add-CMCollectionToDistributionPointGroup -Collection <IResultObject> -DistributionPointGroup <IResultObject>
  [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -123,21 +123,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -DisableWildcardHandling
 DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
@@ -156,7 +141,7 @@ Accept wildcard characters: False
 ### -DistributionPointGroup
 ```yaml
 Type: IResultObject
-Parameter Sets: AddById_Object, AddByName_Object, AddByObject_Object
+Parameter Sets: AddById_Object, AddByObject_Object, AddByName_Object
 Aliases:
 
 Required: True
@@ -169,7 +154,7 @@ Accept wildcard characters: False
 ### -DistributionPointGroupId
 ```yaml
 Type: String
-Parameter Sets: AddById_Id, AddByName_Id, AddByObject_Id
+Parameter Sets: AddByObject_Id, AddById_Id, AddByName_Id
 Aliases:
 
 Required: True
@@ -182,7 +167,7 @@ Accept wildcard characters: False
 ### -DistributionPointGroupName
 ```yaml
 Type: String
-Parameter Sets: AddById_Name, AddByName_Name, AddByObject_Name
+Parameter Sets: AddByObject_Name, AddById_Name, AddByName_Name
 Aliases:
 
 Required: True
@@ -214,6 +199,21 @@ Returns an object representing the item with which you are working. By default, 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
 
 Required: False
 Position: Named

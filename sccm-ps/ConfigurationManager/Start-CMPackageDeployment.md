@@ -1,4 +1,4 @@
----
+﻿---
 description: Starts deployment of a software package to a Configuration Manager collection.
 external help file: AdminUI.PS.AppModel.dll-Help.xml
 Module Name: ConfigurationManager
@@ -17,100 +17,98 @@ Starts deployment of a software package to a Configuration Manager collection.
 
 ### DeployStandardProgramByPackageValue (Default)
 ```
-Start-CMPackageDeployment [-StandardProgram] [-Package] <IResultObject> -ProgramName <String>
- -CollectionName <String> [-Comment <String>] [-DeployPurpose <DeployPurposeType>]
- [-SendWakeupPacket <Boolean>] [-UseMeteredNetwork <Boolean>] [-DeploymentAvailableDay <DateTime>]
- [-DeploymentAvailableTime <DateTime>] [-DeploymentAvailableDateTime <DateTime>]
- [-UseUtcForAvailableSchedule <Boolean>] [-DeploymentExpireDay <DateTime>] [-DeploymentExpireTime <DateTime>]
- [-DeploymentExpireDateTime <DateTime>] [-UseUtcForExpireSchedule <Boolean>]
- [-ScheduleEvent <ScheduleEventType>] [-Schedule <IResultObject[]>] [-RerunBehavior <RerunBehaviorType>]
- [-RunFromSoftwareCenter <Boolean>] [-SoftwareInstallation <Boolean>] [-SystemRestart <Boolean>]
- [-PersistOnWriteFilterDevice <Boolean>] [-FastNetworkOption <FastNetworkOptionType>]
- [-SlowNetworkOption <SlowNetworkOptionType>] [-AllowSharedContent <Boolean>] [-PassThru]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Start-CMPackageDeployment [-AllowSharedContent <Boolean>] -CollectionName <String> [-Comment <String>]
+ [-DeploymentAvailableDateTime <DateTime>] [-DeploymentAvailableDay <DateTime>]
+ [-DeploymentAvailableTime <DateTime>] [-DeploymentExpireDateTime <DateTime>] [-DeploymentExpireDay <DateTime>]
+ [-DeploymentExpireTime <DateTime>] [-DeployPurpose <DeployPurposeType>]
+ [-FastNetworkOption <FastNetworkOptionType>] [-Package] <IResultObject> [-PassThru]
+ [-PersistOnWriteFilterDevice <Boolean>] -ProgramName <String> [-RerunBehavior <RerunBehaviorType>]
+ [-RunFromSoftwareCenter <Boolean>] [-Schedule <IResultObject[]>] [-ScheduleEvent <ScheduleEventType>]
+ [-SendWakeupPacket <Boolean>] [-SlowNetworkOption <SlowNetworkOptionType>] [-SoftwareInstallation <Boolean>]
+ [-StandardProgram] [-SystemRestart <Boolean>] [-UseMeteredNetwork <Boolean>]
+ [-UseUtcForAvailableSchedule <Boolean>] [-UseUtcForExpireSchedule <Boolean>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### DeployStandardProgramByPackageName
+```
+Start-CMPackageDeployment [-AllowSharedContent <Boolean>] -CollectionName <String> [-Comment <String>]
+ [-DeploymentAvailableDateTime <DateTime>] [-DeploymentAvailableDay <DateTime>]
+ [-DeploymentAvailableTime <DateTime>] [-DeploymentExpireDateTime <DateTime>] [-DeploymentExpireDay <DateTime>]
+ [-DeploymentExpireTime <DateTime>] [-DeployPurpose <DeployPurposeType>]
+ [-FastNetworkOption <FastNetworkOptionType>] -PackageName <String> [-PassThru]
+ [-PersistOnWriteFilterDevice <Boolean>] -ProgramName <String> [-RerunBehavior <RerunBehaviorType>]
+ [-RunFromSoftwareCenter <Boolean>] [-Schedule <IResultObject[]>] [-ScheduleEvent <ScheduleEventType>]
+ [-SendWakeupPacket <Boolean>] [-SlowNetworkOption <SlowNetworkOptionType>] [-SoftwareInstallation <Boolean>]
+ [-StandardProgram] [-SystemRestart <Boolean>] [-UseMeteredNetwork <Boolean>]
+ [-UseUtcForAvailableSchedule <Boolean>] [-UseUtcForExpireSchedule <Boolean>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### DeployStandardProgramByPackageId
+```
+Start-CMPackageDeployment [-AllowSharedContent <Boolean>] -CollectionName <String> [-Comment <String>]
+ [-DeploymentAvailableDateTime <DateTime>] [-DeploymentAvailableDay <DateTime>]
+ [-DeploymentAvailableTime <DateTime>] [-DeploymentExpireDateTime <DateTime>] [-DeploymentExpireDay <DateTime>]
+ [-DeploymentExpireTime <DateTime>] [-DeployPurpose <DeployPurposeType>]
+ [-FastNetworkOption <FastNetworkOptionType>] -PackageId <String> [-PassThru]
+ [-PersistOnWriteFilterDevice <Boolean>] -ProgramName <String> [-RerunBehavior <RerunBehaviorType>]
+ [-RunFromSoftwareCenter <Boolean>] [-Schedule <IResultObject[]>] [-ScheduleEvent <ScheduleEventType>]
+ [-SendWakeupPacket <Boolean>] [-SlowNetworkOption <SlowNetworkOptionType>] [-SoftwareInstallation <Boolean>]
+ [-StandardProgram] [-SystemRestart <Boolean>] [-UseMeteredNetwork <Boolean>]
+ [-UseUtcForAvailableSchedule <Boolean>] [-UseUtcForExpireSchedule <Boolean>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### DeployStandardProgramByProgramValue
+```
+Start-CMPackageDeployment [-AllowSharedContent <Boolean>] -CollectionName <String> [-Comment <String>]
+ [-DeploymentAvailableDateTime <DateTime>] [-DeploymentAvailableDay <DateTime>]
+ [-DeploymentAvailableTime <DateTime>] [-DeploymentExpireDateTime <DateTime>] [-DeploymentExpireDay <DateTime>]
+ [-DeploymentExpireTime <DateTime>] [-DeployPurpose <DeployPurposeType>]
+ [-FastNetworkOption <FastNetworkOptionType>] [-PassThru] [-PersistOnWriteFilterDevice <Boolean>]
+ [-Program] <IResultObject> [-RerunBehavior <RerunBehaviorType>] [-RunFromSoftwareCenter <Boolean>]
+ [-Schedule <IResultObject[]>] [-ScheduleEvent <ScheduleEventType>] [-SendWakeupPacket <Boolean>]
+ [-SlowNetworkOption <SlowNetworkOptionType>] [-SoftwareInstallation <Boolean>] [-StandardProgram]
+ [-SystemRestart <Boolean>] [-UseMeteredNetwork <Boolean>] [-UseUtcForAvailableSchedule <Boolean>]
+ [-UseUtcForExpireSchedule <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### DeployDeviceProgramByPackageName
 ```
-Start-CMPackageDeployment [-DeviceProgram] -PackageName <String> -ProgramName <String> -CollectionName <String>
- [-Comment <String>] [-DeployPurpose <DeployPurposeType>] [-UseMeteredNetwork <Boolean>]
- [-DeploymentStartDay <DateTime>] [-DeploymentStartTime <DateTime>] [-DeploymentStartDateTime <DateTime>]
- [-UseUtc <Boolean>] [-RecurValue <Int32>] [-RecurUnit <RecurUnitType>] [-Rerun <Boolean>] [-PassThru]
+Start-CMPackageDeployment -CollectionName <String> [-Comment <String>] [-DeploymentStartDateTime <DateTime>]
+ [-DeploymentStartDay <DateTime>] [-DeploymentStartTime <DateTime>] [-DeployPurpose <DeployPurposeType>]
+ [-DeviceProgram] -PackageName <String> [-PassThru] -ProgramName <String> [-RecurUnit <RecurUnitType>]
+ [-RecurValue <Int32>] [-Rerun <Boolean>] [-UseMeteredNetwork <Boolean>] [-UseUtc <Boolean>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### DeployDeviceProgramByPackageId
 ```
-Start-CMPackageDeployment [-DeviceProgram] -PackageId <String> -ProgramName <String> -CollectionName <String>
- [-Comment <String>] [-DeployPurpose <DeployPurposeType>] [-UseMeteredNetwork <Boolean>]
- [-DeploymentStartDay <DateTime>] [-DeploymentStartTime <DateTime>] [-DeploymentStartDateTime <DateTime>]
- [-UseUtc <Boolean>] [-RecurValue <Int32>] [-RecurUnit <RecurUnitType>] [-Rerun <Boolean>] [-PassThru]
+Start-CMPackageDeployment -CollectionName <String> [-Comment <String>] [-DeploymentStartDateTime <DateTime>]
+ [-DeploymentStartDay <DateTime>] [-DeploymentStartTime <DateTime>] [-DeployPurpose <DeployPurposeType>]
+ [-DeviceProgram] -PackageId <String> [-PassThru] -ProgramName <String> [-RecurUnit <RecurUnitType>]
+ [-RecurValue <Int32>] [-Rerun <Boolean>] [-UseMeteredNetwork <Boolean>] [-UseUtc <Boolean>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### DeployDeviceProgramByPackageValue
 ```
-Start-CMPackageDeployment [-DeviceProgram] [-Package] <IResultObject> -ProgramName <String>
- -CollectionName <String> [-Comment <String>] [-DeployPurpose <DeployPurposeType>]
- [-UseMeteredNetwork <Boolean>] [-DeploymentStartDay <DateTime>] [-DeploymentStartTime <DateTime>]
- [-DeploymentStartDateTime <DateTime>] [-UseUtc <Boolean>] [-RecurValue <Int32>] [-RecurUnit <RecurUnitType>]
- [-Rerun <Boolean>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Start-CMPackageDeployment -CollectionName <String> [-Comment <String>] [-DeploymentStartDateTime <DateTime>]
+ [-DeploymentStartDay <DateTime>] [-DeploymentStartTime <DateTime>] [-DeployPurpose <DeployPurposeType>]
+ [-DeviceProgram] [-Package] <IResultObject> [-PassThru] -ProgramName <String> [-RecurUnit <RecurUnitType>]
+ [-RecurValue <Int32>] [-Rerun <Boolean>] [-UseMeteredNetwork <Boolean>] [-UseUtc <Boolean>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### DeployDeviceProgramByProgramValue
 ```
-Start-CMPackageDeployment [-DeviceProgram] [-Program] <IResultObject> -CollectionName <String>
- [-Comment <String>] [-DeployPurpose <DeployPurposeType>] [-SendWakeupPacket <Boolean>]
- [-UseMeteredNetwork <Boolean>] [-DeploymentStartDay <DateTime>] [-DeploymentStartTime <DateTime>]
- [-DeploymentStartDateTime <DateTime>] [-UseUtc <Boolean>] [-RecurValue <Int32>] [-RecurUnit <RecurUnitType>]
- [-Rerun <Boolean>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
-```
-
-### DeployStandardProgramByPackageName
-```
-Start-CMPackageDeployment [-StandardProgram] -PackageName <String> -ProgramName <String>
- -CollectionName <String> [-Comment <String>] [-DeployPurpose <DeployPurposeType>]
- [-SendWakeupPacket <Boolean>] [-UseMeteredNetwork <Boolean>] [-DeploymentAvailableDay <DateTime>]
- [-DeploymentAvailableTime <DateTime>] [-DeploymentAvailableDateTime <DateTime>]
- [-UseUtcForAvailableSchedule <Boolean>] [-DeploymentExpireDay <DateTime>] [-DeploymentExpireTime <DateTime>]
- [-DeploymentExpireDateTime <DateTime>] [-UseUtcForExpireSchedule <Boolean>]
- [-ScheduleEvent <ScheduleEventType>] [-Schedule <IResultObject[]>] [-RerunBehavior <RerunBehaviorType>]
- [-RunFromSoftwareCenter <Boolean>] [-SoftwareInstallation <Boolean>] [-SystemRestart <Boolean>]
- [-PersistOnWriteFilterDevice <Boolean>] [-FastNetworkOption <FastNetworkOptionType>]
- [-SlowNetworkOption <SlowNetworkOptionType>] [-AllowSharedContent <Boolean>] [-PassThru]
+Start-CMPackageDeployment -CollectionName <String> [-Comment <String>] [-DeploymentStartDateTime <DateTime>]
+ [-DeploymentStartDay <DateTime>] [-DeploymentStartTime <DateTime>] [-DeployPurpose <DeployPurposeType>]
+ [-DeviceProgram] [-PassThru] [-Program] <IResultObject> [-RecurUnit <RecurUnitType>] [-RecurValue <Int32>]
+ [-Rerun <Boolean>] [-SendWakeupPacket <Boolean>] [-UseMeteredNetwork <Boolean>] [-UseUtc <Boolean>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### DeployStandardProgramByPackageId
-```
-Start-CMPackageDeployment [-StandardProgram] -PackageId <String> -ProgramName <String> -CollectionName <String>
- [-Comment <String>] [-DeployPurpose <DeployPurposeType>] [-SendWakeupPacket <Boolean>]
- [-UseMeteredNetwork <Boolean>] [-DeploymentAvailableDay <DateTime>] [-DeploymentAvailableTime <DateTime>]
- [-DeploymentAvailableDateTime <DateTime>] [-UseUtcForAvailableSchedule <Boolean>]
- [-DeploymentExpireDay <DateTime>] [-DeploymentExpireTime <DateTime>] [-DeploymentExpireDateTime <DateTime>]
- [-UseUtcForExpireSchedule <Boolean>] [-ScheduleEvent <ScheduleEventType>] [-Schedule <IResultObject[]>]
- [-RerunBehavior <RerunBehaviorType>] [-RunFromSoftwareCenter <Boolean>] [-SoftwareInstallation <Boolean>]
- [-SystemRestart <Boolean>] [-PersistOnWriteFilterDevice <Boolean>]
- [-FastNetworkOption <FastNetworkOptionType>] [-SlowNetworkOption <SlowNetworkOptionType>]
- [-AllowSharedContent <Boolean>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
-```
-
-### DeployStandardProgramByProgramValue
-```
-Start-CMPackageDeployment [-StandardProgram] [-Program] <IResultObject> -CollectionName <String>
- [-Comment <String>] [-DeployPurpose <DeployPurposeType>] [-SendWakeupPacket <Boolean>]
- [-UseMeteredNetwork <Boolean>] [-DeploymentAvailableDay <DateTime>] [-DeploymentAvailableTime <DateTime>]
- [-DeploymentAvailableDateTime <DateTime>] [-UseUtcForAvailableSchedule <Boolean>]
- [-DeploymentExpireDay <DateTime>] [-DeploymentExpireTime <DateTime>] [-DeploymentExpireDateTime <DateTime>]
- [-UseUtcForExpireSchedule <Boolean>] [-ScheduleEvent <ScheduleEventType>] [-Schedule <IResultObject[]>]
- [-RerunBehavior <RerunBehaviorType>] [-RunFromSoftwareCenter <Boolean>] [-SoftwareInstallation <Boolean>]
- [-SystemRestart <Boolean>] [-PersistOnWriteFilterDevice <Boolean>]
- [-FastNetworkOption <FastNetworkOptionType>] [-SlowNetworkOption <SlowNetworkOptionType>]
- [-AllowSharedContent <Boolean>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -204,43 +202,6 @@ Specifies a comment for the deployment.
 Type: String
 Parameter Sets: (All)
 Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DeployPurpose
-
-Specifies the purpose for the deployment.
-The acceptable values for this parameter are:
-
-- Available
-- Required
-
-```yaml
-Type: DeployPurposeType
-Parameter Sets: (All)
-Aliases:
-Accepted values: Available, Required
 
 Required: False
 Position: Named
@@ -396,6 +357,27 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -DeployPurpose
+
+Specifies the purpose for the deployment.
+The acceptable values for this parameter are:
+
+- Available
+- Required
+
+```yaml
+Type: DeployPurposeType
+Parameter Sets: (All)
+Aliases:
+Accepted values: Available, Required
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -DeviceProgram
 
 Specifies a device program.
@@ -488,7 +470,7 @@ Specifies the ID of a package.
 
 ```yaml
 Type: String
-Parameter Sets: DeployDeviceProgramByPackageId, DeployStandardProgramByPackageId
+Parameter Sets: DeployStandardProgramByPackageId, DeployDeviceProgramByPackageId
 Aliases:
 
 Required: True
@@ -504,7 +486,7 @@ Specifies the name of a package.
 
 ```yaml
 Type: String
-Parameter Sets: DeployDeviceProgramByPackageName, DeployStandardProgramByPackageName
+Parameter Sets: DeployStandardProgramByPackageName, DeployDeviceProgramByPackageName
 Aliases:
 
 Required: True
@@ -556,7 +538,7 @@ Specifies a program.
 
 ```yaml
 Type: IResultObject
-Parameter Sets: DeployDeviceProgramByProgramValue, DeployStandardProgramByProgramValue
+Parameter Sets: DeployStandardProgramByProgramValue, DeployDeviceProgramByProgramValue
 Aliases:
 
 Required: True
@@ -572,7 +554,7 @@ Specifies the name of a program.
 
 ```yaml
 Type: String
-Parameter Sets: DeployStandardProgramByPackageValue, DeployDeviceProgramByPackageName, DeployDeviceProgramByPackageId, DeployDeviceProgramByPackageValue, DeployStandardProgramByPackageName, DeployStandardProgramByPackageId
+Parameter Sets: DeployStandardProgramByPackageValue, DeployStandardProgramByPackageName, DeployStandardProgramByPackageId, DeployDeviceProgramByPackageName, DeployDeviceProgramByPackageId, DeployDeviceProgramByPackageValue
 Aliases: StandardProgramName, DeviceProgramName
 
 Required: True
@@ -733,7 +715,7 @@ For computers to wake, you must first configure Wake On LAN.
 
 ```yaml
 Type: Boolean
-Parameter Sets: DeployStandardProgramByPackageValue, DeployDeviceProgramByProgramValue, DeployStandardProgramByPackageName, DeployStandardProgramByPackageId, DeployStandardProgramByProgramValue
+Parameter Sets: DeployStandardProgramByPackageValue, DeployStandardProgramByPackageName, DeployStandardProgramByPackageId, DeployStandardProgramByProgramValue, DeployDeviceProgramByProgramValue
 Aliases:
 
 Required: False
@@ -885,6 +867,22 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

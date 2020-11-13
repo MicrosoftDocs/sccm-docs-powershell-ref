@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Deployments.dll-Help.xml
 Module Name: ConfigurationManager
 online version:
@@ -12,6 +12,12 @@ schema: 2.0.0
 Use this cmdlet to get the phased deployment for software updates.
 
 ## SYNTAX
+
+### SearchBySoftwareUpdate
+```
+Get-CMSoftwareUpdatePhasedDeployment -SoftwareUpdate <IResultObject> [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [<CommonParameters>]
+```
 
 ### SearchBySoftwareUpdateGroup
 ```
@@ -28,12 +34,6 @@ Get-CMSoftwareUpdatePhasedDeployment -SoftwareUpdateGroupId <String> [-DisableWi
 ### SearchBySoftwareUpdateGroupName
 ```
 Get-CMSoftwareUpdatePhasedDeployment -SoftwareUpdateGroupName <String> [-DisableWildcardHandling]
- [-ForceWildcardHandling] [<CommonParameters>]
-```
-
-### SearchBySoftwareUpdate
-```
-Get-CMSoftwareUpdatePhasedDeployment -SoftwareUpdate <IResultObject> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [<CommonParameters>]
 ```
 

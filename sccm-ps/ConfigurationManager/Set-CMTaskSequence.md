@@ -1,4 +1,4 @@
----
+﻿---
 description: Sets a Configuration Manager task sequence.
 external help file: AdminUI.PS.Osd.dll-Help.xml
 Module Name: ConfigurationManager
@@ -17,41 +17,38 @@ Sets a Configuration Manager task sequence.
 
 ### SetByValue (Default)
 ```
-Set-CMTaskSequence -InputObject <IResultObject> [-NewName <String>] [-Description <String>]
- [-Category <String>] [-UseDefaultText <Boolean>] [-CustomText <String>] [-RunAnotherProgram <Boolean>]
- [-DeploymentPackageId <String>] [-ProgramName <String>] [-RunEveryTime <Boolean>]
- [-SuppressNotification <Boolean>] [-EnableNotification <Boolean>] [-DisableTaskSequence <Boolean>]
- [-EnableTaskSequence <Boolean>] [-MaxRunTimeMins <Int64>] [-UseBootImage <Boolean>] [-BootImageId <String>]
- [-AddSupportedOperatingSystemPlatform <IResultObject[]>]
- [-RemoveSupportedOperatingSystemPlatform <IResultObject[]>] [-RunOnAnyPlatform] [-PassThru]
- [-HighPerformance <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Set-CMTaskSequence [-AddSupportedOperatingSystemPlatform <IResultObject[]>] [-BootImageId <String>]
+ [-Category <String>] [-CustomText <String>] [-DeploymentPackageId <String>] [-Description <String>]
+ [-DisableTaskSequence <Boolean>] [-EnableNotification <Boolean>] [-EnableTaskSequence <Boolean>]
+ [-HighPerformance <Boolean>] -InputObject <IResultObject> [-MaxRunTimeMins <Int64>] [-NewName <String>]
+ [-PassThru] [-ProgramName <String>] [-RemoveSupportedOperatingSystemPlatform <IResultObject[]>]
+ [-RunAnotherProgram <Boolean>] [-RunEveryTime <Boolean>] [-RunOnAnyPlatform] [-SuppressNotification <Boolean>]
+ [-UseBootImage <Boolean>] [-UseDefaultText <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetById
 ```
-Set-CMTaskSequence -TaskSequenceId <String> [-NewName <String>] [-Description <String>] [-Category <String>]
- [-UseDefaultText <Boolean>] [-CustomText <String>] [-RunAnotherProgram <Boolean>]
- [-DeploymentPackageId <String>] [-ProgramName <String>] [-RunEveryTime <Boolean>]
- [-SuppressNotification <Boolean>] [-EnableNotification <Boolean>] [-DisableTaskSequence <Boolean>]
- [-EnableTaskSequence <Boolean>] [-MaxRunTimeMins <Int64>] [-UseBootImage <Boolean>] [-BootImageId <String>]
- [-AddSupportedOperatingSystemPlatform <IResultObject[]>]
- [-RemoveSupportedOperatingSystemPlatform <IResultObject[]>] [-RunOnAnyPlatform] [-PassThru]
- [-HighPerformance <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Set-CMTaskSequence [-AddSupportedOperatingSystemPlatform <IResultObject[]>] [-BootImageId <String>]
+ [-Category <String>] [-CustomText <String>] [-DeploymentPackageId <String>] [-Description <String>]
+ [-DisableTaskSequence <Boolean>] [-EnableNotification <Boolean>] [-EnableTaskSequence <Boolean>]
+ [-HighPerformance <Boolean>] [-MaxRunTimeMins <Int64>] [-NewName <String>] [-PassThru] [-ProgramName <String>]
+ [-RemoveSupportedOperatingSystemPlatform <IResultObject[]>] [-RunAnotherProgram <Boolean>]
+ [-RunEveryTime <Boolean>] [-RunOnAnyPlatform] [-SuppressNotification <Boolean>] -TaskSequenceId <String>
+ [-UseBootImage <Boolean>] [-UseDefaultText <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetByName
 ```
-Set-CMTaskSequence -TaskSequenceName <String> [-NewName <String>] [-Description <String>] [-Category <String>]
- [-UseDefaultText <Boolean>] [-CustomText <String>] [-RunAnotherProgram <Boolean>]
- [-DeploymentPackageId <String>] [-ProgramName <String>] [-RunEveryTime <Boolean>]
- [-SuppressNotification <Boolean>] [-EnableNotification <Boolean>] [-DisableTaskSequence <Boolean>]
- [-EnableTaskSequence <Boolean>] [-MaxRunTimeMins <Int64>] [-UseBootImage <Boolean>] [-BootImageId <String>]
- [-AddSupportedOperatingSystemPlatform <IResultObject[]>]
- [-RemoveSupportedOperatingSystemPlatform <IResultObject[]>] [-RunOnAnyPlatform] [-PassThru]
- [-HighPerformance <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Set-CMTaskSequence [-AddSupportedOperatingSystemPlatform <IResultObject[]>] [-BootImageId <String>]
+ [-Category <String>] [-CustomText <String>] [-DeploymentPackageId <String>] [-Description <String>]
+ [-DisableTaskSequence <Boolean>] [-EnableNotification <Boolean>] [-EnableTaskSequence <Boolean>]
+ [-HighPerformance <Boolean>] [-MaxRunTimeMins <Int64>] [-NewName <String>] [-PassThru] [-ProgramName <String>]
+ [-RemoveSupportedOperatingSystemPlatform <IResultObject[]>] [-RunAnotherProgram <Boolean>]
+ [-RunEveryTime <Boolean>] [-RunOnAnyPlatform] [-SuppressNotification <Boolean>] -TaskSequenceName <String>
+ [-UseBootImage <Boolean>] [-UseDefaultText <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -132,22 +129,6 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -527,6 +508,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 
 Shows what would happen if the cmdlet runs.
@@ -554,7 +551,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
-
 ## NOTES
 
 ## RELATED LINKS

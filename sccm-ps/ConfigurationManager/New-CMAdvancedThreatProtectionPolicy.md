@@ -1,4 +1,4 @@
----
+﻿---
 description: Creates an advanced threat protection policy.
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 Module Name: ConfigurationManager
@@ -15,8 +15,8 @@ Creates an advanced threat protection policy.
 ## SYNTAX
 
 ```
-New-CMAdvancedThreatProtectionPolicy -Name <String> [-Description <String>] -PolicyType <ConfigurationType>
- -FilePath <String> [-SampleSharingType <SampleSharingType>]
+New-CMAdvancedThreatProtectionPolicy [-Description <String>] -FilePath <String> -Name <String>
+ -PolicyType <ConfigurationType> [-SampleSharingType <SampleSharingType>]
  [-TelemetryReportingFrequencyType <TelemetryReportingFrequencyType>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
@@ -36,21 +36,6 @@ PS XYZ:\>
 ```
 
 ## PARAMETERS
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -Description
 ```yaml
@@ -155,6 +140,21 @@ Type: TelemetryReportingFrequencyType
 Parameter Sets: (All)
 Aliases:
 Accepted values: Normal, Expedited
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
 
 Required: False
 Position: Named

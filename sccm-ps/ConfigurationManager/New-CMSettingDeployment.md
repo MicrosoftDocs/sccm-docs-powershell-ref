@@ -1,9 +1,9 @@
----
+﻿---
 external help file: AdminUI.PS.Deployments.dll-Help.xml
 Module Name: ConfigurationManager
+ms.date: 08/20/2020
 online version:
 schema: 2.0.0
-ms.date: 08/20/2020
 ---
 
 # New-CMSettingDeployment
@@ -16,7 +16,7 @@ Deploy a settings policy object to a collection.
 
 ```
 New-CMSettingDeployment [-CMSetting] <CMSettings> [-Schedule <IResultObject>] [-OverrideServiceWindows]
- [-CollectionName <String>] [-CollectionId <String>] [-Collection <IResultObject>] [-DisableWildcardHandling]
+ [-Collection <IResultObject>] [-CollectionId <String>] [-CollectionName <String>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
@@ -186,7 +186,6 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS

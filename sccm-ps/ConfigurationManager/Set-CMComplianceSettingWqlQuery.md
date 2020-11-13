@@ -1,4 +1,4 @@
----
+﻿---
 description: Sets a compliance setting wql query.
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,9 +16,9 @@ Sets a compliance setting wql query.
 
 ```
 Set-CMComplianceSettingWqlQuery [-ClassName <String>] [-Namespace <String>] [-Property <String>]
- [-WhereClause <String>] [-Description <String>] -InputObject <PSObject> -SettingName <String>
- [-NewSettingName <String>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+ [-WhereClause <String>] [-Description <String>] -InputObject <PSObject> [-NewSettingName <String>] [-PassThru]
+ -SettingName <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -42,21 +42,6 @@ PS XYZ:\>
 Type: String
 Parameter Sets: (All)
 Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
 
 Required: False
 Position: Named
@@ -188,14 +173,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
-
+### -WhereClause
 ```yaml
-Type: SwitchParameter
+Type: String
 Parameter Sets: (All)
-Aliases: wi
+Aliases:
 
 Required: False
 Position: Named
@@ -204,11 +186,29 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhereClause
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
 ```yaml
-Type: String
+Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
 
 Required: False
 Position: Named

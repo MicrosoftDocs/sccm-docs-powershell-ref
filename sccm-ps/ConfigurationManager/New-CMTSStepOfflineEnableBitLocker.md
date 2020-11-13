@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Osd.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 07/31/2020
@@ -14,9 +14,9 @@ Add the **Pre-provision BitLocker** step in a task sequence, to enable BitLocker
 ## SYNTAX
 
 ```
-New-CMTSStepOfflineEnableBitLocker [-Disk <Int32>] [-Partition <Int32>] [-Drive <String>]
- [-VariableName <String>] [-EnableSkipWhenTpmInvalid <Boolean>] [-EncryptionMethod <DiskEncryptionMethod>]
- -Name <String> [-Description <String>] [-ContinueOnError] [-Disable] [-Condition <IResultObject[]>]
+New-CMTSStepOfflineEnableBitLocker [-Disk <Int32>] [-Drive <String>] [-EnableSkipWhenTpmInvalid <Boolean>]
+ [-EncryptionMethod <DiskEncryptionMethod>] [-Partition <Int32>] [-VariableName <String>]
+ [-Condition <IResultObject[]>] [-ContinueOnError] [-Description <String>] [-Disable] -Name <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -46,22 +46,6 @@ Specify a condition object to add to this step.
 Type: IResultObject[]
 Parameter Sets: (All)
 Aliases: Conditions
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
 
 Required: False
 Position: Named
@@ -255,6 +239,22 @@ Specify a task sequence variable to identify the logical drive letter as the des
 Type: String
 Parameter Sets: (All)
 Aliases: DestinationVariable
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
 
 Required: False
 Position: Named

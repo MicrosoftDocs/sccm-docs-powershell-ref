@@ -1,4 +1,4 @@
----
+﻿---
 description: Configure a Configuration Manager query.
 external help file: AdminUI.PS.SystemStatus.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,22 +16,22 @@ Configure a Configuration Manager query.
 
 ### SearchByValueMandatory (Default)
 ```
-Set-CMQuery -InputObject <IResultObject> [-NewName <String>] [-Comment <String>] [-Expression <String>]
- [-LimitToCollectionId <String>] [-TargetClassName <String>] [-PassThru] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMQuery [-Comment <String>] [-Expression <String>] -InputObject <IResultObject>
+ [-LimitToCollectionId <String>] [-NewName <String>] [-PassThru] [-TargetClassName <String>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory
 ```
-Set-CMQuery -Id <String> [-NewName <String>] [-Comment <String>] [-Expression <String>]
- [-LimitToCollectionId <String>] [-TargetClassName <String>] [-PassThru] [-DisableWildcardHandling]
+Set-CMQuery [-Comment <String>] [-Expression <String>] -Id <String> [-LimitToCollectionId <String>]
+ [-NewName <String>] [-PassThru] [-TargetClassName <String>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByNameMandatory
 ```
-Set-CMQuery -Name <String> [-NewName <String>] [-Comment <String>] [-Expression <String>]
- [-LimitToCollectionId <String>] [-TargetClassName <String>] [-PassThru] [-DisableWildcardHandling]
+Set-CMQuery [-Comment <String>] [-Expression <String>] [-LimitToCollectionId <String>] -Name <String>
+ [-NewName <String>] [-PassThru] [-TargetClassName <String>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -60,21 +60,6 @@ This command updates the name of a query.
 Type: String
 Parameter Sets: (All)
 Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
 
 Required: False
 Position: Named
@@ -211,6 +196,21 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: (All)
 Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
 
 Required: False
 Position: Named

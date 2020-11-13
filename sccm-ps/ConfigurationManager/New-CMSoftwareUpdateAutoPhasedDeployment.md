@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Deployments.dll-Help.xml
 Module Name: ConfigurationManager
 online version:
@@ -13,76 +13,76 @@ Use this cmdlet to create a phased deployment for software updates by generating
 
 ## SYNTAX
 
-### SearchByValueMandatory
-```
-New-CMSoftwareUpdateAutoPhasedDeployment [-SoftwareUpdates] <IResultObject[]>
- [-FirstCollection <IResultObject>] [-FirstCollectionId <String>] [-FirstCollectionName <String>]
- [-SecondCollection <IResultObject>] [-SecondCollectionId <String>] [-SecondCollectionName <String>]
- [-CriteriaOption <CriteriaType>] [-CriteriaValue <Int32>] [-BeginCondition <BeginConditionType>]
- [-DaysAfterPreviousPhaseSuccess <Int32>] [-ThrottlingDays <Int32>]
- [-InstallationChoice <InstallationChoiceType>] [-DeadlineUnit <TimeUnitType>] [-DeadlineValue <Int32>]
- [-AddPhases <Phase[]>] [-InsertAtOrder <Int32>] -Name <String> [-Description <String>]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### SearchByIdMandatory
-```
-New-CMSoftwareUpdateAutoPhasedDeployment [-SoftwareUpdateIds] <String[]> [-FirstCollection <IResultObject>]
- [-FirstCollectionId <String>] [-FirstCollectionName <String>] [-SecondCollection <IResultObject>]
- [-SecondCollectionId <String>] [-SecondCollectionName <String>] [-CriteriaOption <CriteriaType>]
- [-CriteriaValue <Int32>] [-BeginCondition <BeginConditionType>] [-DaysAfterPreviousPhaseSuccess <Int32>]
- [-ThrottlingDays <Int32>] [-InstallationChoice <InstallationChoiceType>] [-DeadlineUnit <TimeUnitType>]
- [-DeadlineValue <Int32>] [-AddPhases <Phase[]>] [-InsertAtOrder <Int32>] -Name <String>
- [-Description <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
-```
-
-### SearchByNameMandatory
-```
-New-CMSoftwareUpdateAutoPhasedDeployment [-SoftwareUpdateNames] <String[]> [-FirstCollection <IResultObject>]
- [-FirstCollectionId <String>] [-FirstCollectionName <String>] [-SecondCollection <IResultObject>]
- [-SecondCollectionId <String>] [-SecondCollectionName <String>] [-CriteriaOption <CriteriaType>]
- [-CriteriaValue <Int32>] [-BeginCondition <BeginConditionType>] [-DaysAfterPreviousPhaseSuccess <Int32>]
- [-ThrottlingDays <Int32>] [-InstallationChoice <InstallationChoiceType>] [-DeadlineUnit <TimeUnitType>]
- [-DeadlineValue <Int32>] [-AddPhases <Phase[]>] [-InsertAtOrder <Int32>] -Name <String>
- [-Description <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
-```
-
 ### SearchByGroupMandatory
 ```
-New-CMSoftwareUpdateAutoPhasedDeployment [-SoftwareUpdateGroup] <IResultObject>
+New-CMSoftwareUpdateAutoPhasedDeployment [-SoftwareUpdateGroup] <IResultObject> [-AddPhases <Phase[]>]
+ [-BeginCondition <BeginConditionType>] [-CriteriaOption <CriteriaType>] [-CriteriaValue <Int32>]
+ [-DaysAfterPreviousPhaseSuccess <Int32>] [-DeadlineUnit <TimeUnitType>] [-DeadlineValue <Int32>]
  [-FirstCollection <IResultObject>] [-FirstCollectionId <String>] [-FirstCollectionName <String>]
- [-SecondCollection <IResultObject>] [-SecondCollectionId <String>] [-SecondCollectionName <String>]
- [-CriteriaOption <CriteriaType>] [-CriteriaValue <Int32>] [-BeginCondition <BeginConditionType>]
- [-DaysAfterPreviousPhaseSuccess <Int32>] [-ThrottlingDays <Int32>]
- [-InstallationChoice <InstallationChoiceType>] [-DeadlineUnit <TimeUnitType>] [-DeadlineValue <Int32>]
- [-AddPhases <Phase[]>] [-InsertAtOrder <Int32>] -Name <String> [-Description <String>]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-InsertAtOrder <Int32>] [-InstallationChoice <InstallationChoiceType>] [-SecondCollection <IResultObject>]
+ [-SecondCollectionId <String>] [-SecondCollectionName <String>] [-ThrottlingDays <Int32>]
+ [-Description <String>] -Name <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByGroupIdMandatory
 ```
-New-CMSoftwareUpdateAutoPhasedDeployment [-SoftwareUpdateGroupId] <String> [-FirstCollection <IResultObject>]
- [-FirstCollectionId <String>] [-FirstCollectionName <String>] [-SecondCollection <IResultObject>]
- [-SecondCollectionId <String>] [-SecondCollectionName <String>] [-CriteriaOption <CriteriaType>]
- [-CriteriaValue <Int32>] [-BeginCondition <BeginConditionType>] [-DaysAfterPreviousPhaseSuccess <Int32>]
- [-ThrottlingDays <Int32>] [-InstallationChoice <InstallationChoiceType>] [-DeadlineUnit <TimeUnitType>]
- [-DeadlineValue <Int32>] [-AddPhases <Phase[]>] [-InsertAtOrder <Int32>] -Name <String>
- [-Description <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+New-CMSoftwareUpdateAutoPhasedDeployment [-SoftwareUpdateGroupId] <String> [-AddPhases <Phase[]>]
+ [-BeginCondition <BeginConditionType>] [-CriteriaOption <CriteriaType>] [-CriteriaValue <Int32>]
+ [-DaysAfterPreviousPhaseSuccess <Int32>] [-DeadlineUnit <TimeUnitType>] [-DeadlineValue <Int32>]
+ [-FirstCollection <IResultObject>] [-FirstCollectionId <String>] [-FirstCollectionName <String>]
+ [-InsertAtOrder <Int32>] [-InstallationChoice <InstallationChoiceType>] [-SecondCollection <IResultObject>]
+ [-SecondCollectionId <String>] [-SecondCollectionName <String>] [-ThrottlingDays <Int32>]
+ [-Description <String>] -Name <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByGroupNameMandatory
 ```
-New-CMSoftwareUpdateAutoPhasedDeployment [-SoftwareUpdateGroupName] <String> [-FirstCollection <IResultObject>]
- [-FirstCollectionId <String>] [-FirstCollectionName <String>] [-SecondCollection <IResultObject>]
- [-SecondCollectionId <String>] [-SecondCollectionName <String>] [-CriteriaOption <CriteriaType>]
- [-CriteriaValue <Int32>] [-BeginCondition <BeginConditionType>] [-DaysAfterPreviousPhaseSuccess <Int32>]
- [-ThrottlingDays <Int32>] [-InstallationChoice <InstallationChoiceType>] [-DeadlineUnit <TimeUnitType>]
- [-DeadlineValue <Int32>] [-AddPhases <Phase[]>] [-InsertAtOrder <Int32>] -Name <String>
- [-Description <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+New-CMSoftwareUpdateAutoPhasedDeployment [-SoftwareUpdateGroupName] <String> [-AddPhases <Phase[]>]
+ [-BeginCondition <BeginConditionType>] [-CriteriaOption <CriteriaType>] [-CriteriaValue <Int32>]
+ [-DaysAfterPreviousPhaseSuccess <Int32>] [-DeadlineUnit <TimeUnitType>] [-DeadlineValue <Int32>]
+ [-FirstCollection <IResultObject>] [-FirstCollectionId <String>] [-FirstCollectionName <String>]
+ [-InsertAtOrder <Int32>] [-InstallationChoice <InstallationChoiceType>] [-SecondCollection <IResultObject>]
+ [-SecondCollectionId <String>] [-SecondCollectionName <String>] [-ThrottlingDays <Int32>]
+ [-Description <String>] -Name <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
+```
+
+### SearchByIdMandatory
+```
+New-CMSoftwareUpdateAutoPhasedDeployment [-SoftwareUpdateIds] <String[]> [-AddPhases <Phase[]>]
+ [-BeginCondition <BeginConditionType>] [-CriteriaOption <CriteriaType>] [-CriteriaValue <Int32>]
+ [-DaysAfterPreviousPhaseSuccess <Int32>] [-DeadlineUnit <TimeUnitType>] [-DeadlineValue <Int32>]
+ [-FirstCollection <IResultObject>] [-FirstCollectionId <String>] [-FirstCollectionName <String>]
+ [-InsertAtOrder <Int32>] [-InstallationChoice <InstallationChoiceType>] [-SecondCollection <IResultObject>]
+ [-SecondCollectionId <String>] [-SecondCollectionName <String>] [-ThrottlingDays <Int32>]
+ [-Description <String>] -Name <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
+```
+
+### SearchByNameMandatory
+```
+New-CMSoftwareUpdateAutoPhasedDeployment [-SoftwareUpdateNames] <String[]> [-AddPhases <Phase[]>]
+ [-BeginCondition <BeginConditionType>] [-CriteriaOption <CriteriaType>] [-CriteriaValue <Int32>]
+ [-DaysAfterPreviousPhaseSuccess <Int32>] [-DeadlineUnit <TimeUnitType>] [-DeadlineValue <Int32>]
+ [-FirstCollection <IResultObject>] [-FirstCollectionId <String>] [-FirstCollectionName <String>]
+ [-InsertAtOrder <Int32>] [-InstallationChoice <InstallationChoiceType>] [-SecondCollection <IResultObject>]
+ [-SecondCollectionId <String>] [-SecondCollectionName <String>] [-ThrottlingDays <Int32>]
+ [-Description <String>] -Name <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
+```
+
+### SearchByValueMandatory
+```
+New-CMSoftwareUpdateAutoPhasedDeployment [-SoftwareUpdates] <IResultObject[]> [-AddPhases <Phase[]>]
+ [-BeginCondition <BeginConditionType>] [-CriteriaOption <CriteriaType>] [-CriteriaValue <Int32>]
+ [-DaysAfterPreviousPhaseSuccess <Int32>] [-DeadlineUnit <TimeUnitType>] [-DeadlineValue <Int32>]
+ [-FirstCollection <IResultObject>] [-FirstCollectionId <String>] [-FirstCollectionName <String>]
+ [-InsertAtOrder <Int32>] [-InstallationChoice <InstallationChoiceType>] [-SecondCollection <IResultObject>]
+ [-SecondCollectionId <String>] [-SecondCollectionName <String>] [-ThrottlingDays <Int32>]
+ [-Description <String>] -Name <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -141,22 +141,6 @@ Type: BeginConditionType
 Parameter Sets: (All)
 Aliases:
 Accepted values: AfterPeriod, Manually
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
 
 Required: False
 Position: Named
@@ -566,6 +550,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 
 Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
@@ -587,9 +587,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject[]
-
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
+### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject[]
 
 ## OUTPUTS
 

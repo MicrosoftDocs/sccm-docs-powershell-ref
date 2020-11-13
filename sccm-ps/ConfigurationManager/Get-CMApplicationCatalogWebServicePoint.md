@@ -1,4 +1,4 @@
----
+﻿---
 description: Gets an Application Catalog web service point.
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,7 +16,7 @@ Gets an Application Catalog web service point.
 
 ### SearchByName (Default)
 ```
-Get-CMApplicationCatalogWebServicePoint [-SiteCode <String>] [[-SiteSystemServerName] <String>] [-AllSite]
+Get-CMApplicationCatalogWebServicePoint [-AllSite] [-SiteCode <String>] [[-SiteSystemServerName] <String>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 

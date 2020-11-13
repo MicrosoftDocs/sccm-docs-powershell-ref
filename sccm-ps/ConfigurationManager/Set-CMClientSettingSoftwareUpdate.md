@@ -1,4 +1,4 @@
----
+﻿---
 description: Sets a client setting software update.
 external help file: AdminUI.PS.ClientSettings.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,29 +16,32 @@ Sets a client setting software update.
 
 ### SetCustomSettingByName (Default)
 ```
-Set-CMClientSettingSoftwareUpdate [-Enable <Boolean>] [-ScanSchedule <IResultObject>]
- [-DeploymentEvaluationSchedule <IResultObject>] [-BatchingTimeout <Int32>] [-EnforceMandatory <Boolean>]
- [-TimeUnit <BatchingTimeoutType>] [-Office365ManagementType <Boolean>] [-EnableThirdPartyUpdates <Boolean>]
- [-EnableDeltaDownload <Boolean>] [-DeltaDownloadPort <Int32>] -Name <String> [-PassThru]
+Set-CMClientSettingSoftwareUpdate [-BatchingTimeout <Int32>] [-DeltaDownloadPort <Int32>]
+ [-DeploymentEvaluationSchedule <IResultObject>] [-Enable <Boolean>] [-EnableDeltaDownload <Boolean>]
+ [-EnableDynamicUpdate <Boolean>] [-EnableInstallation <Boolean>] [-EnableThirdPartyUpdates <Boolean>]
+ [-EnforceMandatory <Boolean>] [-Office365ManagementType <Boolean>] [-ScanSchedule <IResultObject>]
+ [-ThreadPriority <ThreadPriorityType>] [-TimeUnit <BatchingTimeoutType>] -Name <String> [-PassThru]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetDefaultSetting
 ```
-Set-CMClientSettingSoftwareUpdate [-Enable <Boolean>] [-ScanSchedule <IResultObject>]
- [-DeploymentEvaluationSchedule <IResultObject>] [-BatchingTimeout <Int32>] [-EnforceMandatory <Boolean>]
- [-TimeUnit <BatchingTimeoutType>] [-Office365ManagementType <Boolean>] [-EnableThirdPartyUpdates <Boolean>]
- [-EnableDeltaDownload <Boolean>] [-DeltaDownloadPort <Int32>] [-DefaultSetting] [-PassThru]
+Set-CMClientSettingSoftwareUpdate [-BatchingTimeout <Int32>] [-DeltaDownloadPort <Int32>]
+ [-DeploymentEvaluationSchedule <IResultObject>] [-Enable <Boolean>] [-EnableDeltaDownload <Boolean>]
+ [-EnableDynamicUpdate <Boolean>] [-EnableInstallation <Boolean>] [-EnableThirdPartyUpdates <Boolean>]
+ [-EnforceMandatory <Boolean>] [-Office365ManagementType <Boolean>] [-ScanSchedule <IResultObject>]
+ [-ThreadPriority <ThreadPriorityType>] [-TimeUnit <BatchingTimeoutType>] [-DefaultSetting] [-PassThru]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetCustomSettingByValue
 ```
-Set-CMClientSettingSoftwareUpdate [-Enable <Boolean>] [-ScanSchedule <IResultObject>]
- [-DeploymentEvaluationSchedule <IResultObject>] [-BatchingTimeout <Int32>] [-EnforceMandatory <Boolean>]
- [-TimeUnit <BatchingTimeoutType>] [-Office365ManagementType <Boolean>] [-EnableThirdPartyUpdates <Boolean>]
- [-EnableDeltaDownload <Boolean>] [-DeltaDownloadPort <Int32>] -InputObject <IResultObject> [-PassThru]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMClientSettingSoftwareUpdate [-BatchingTimeout <Int32>] [-DeltaDownloadPort <Int32>]
+ [-DeploymentEvaluationSchedule <IResultObject>] [-Enable <Boolean>] [-EnableDeltaDownload <Boolean>]
+ [-EnableDynamicUpdate <Boolean>] [-EnableInstallation <Boolean>] [-EnableThirdPartyUpdates <Boolean>]
+ [-EnforceMandatory <Boolean>] [-Office365ManagementType <Boolean>] [-ScanSchedule <IResultObject>]
+ [-ThreadPriority <ThreadPriorityType>] [-TimeUnit <BatchingTimeoutType>] -InputObject <IResultObject>
+ [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -72,21 +75,6 @@ Set-CMClientSettingSoftwareUpdate -Name $clientDeviceSettingName -Enable $true -
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
 
 Required: False
 Position: Named
@@ -169,6 +157,36 @@ Accept wildcard characters: False
 ### -EnableDeltaDownload
 
 Use this parameter to enable or disable the following client setting in the **Software Updates** group: **Allow clients to download delta content when available**. Use the **DeltaDownloadPort** parameter to configure the network port.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableDynamicUpdate
+{{ Fill EnableDynamicUpdate Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableInstallation
+{{ Fill EnableInstallation Description }}
 
 ```yaml
 Type: Boolean
@@ -292,12 +310,43 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ThreadPriority
+{{ Fill ThreadPriority Description }}
+
+```yaml
+Type: ThreadPriorityType
+Parameter Sets: (All)
+Aliases:
+Accepted values: Normal, Low
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -TimeUnit
 ```yaml
 Type: BatchingTimeoutType
 Parameter Sets: (All)
 Aliases:
 Accepted values: Days, Hours
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
 
 Required: False
 Position: Named

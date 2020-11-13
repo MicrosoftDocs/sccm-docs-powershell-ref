@@ -1,4 +1,4 @@
----
+﻿---
 description: Modifies the Asset Intelligence hardware inventory reporting classes.
 external help file: AdminUI.PS.AssetIntelligence.dll-Help.xml
 Module Name: ConfigurationManager
@@ -22,8 +22,8 @@ Set-CMAssetIntelligenceClass [-EnableAllReportingClass] [-DisableWildcardHandlin
 
 ### SetBySelectReportClass
 ```
-Set-CMAssetIntelligenceClass [-EnableReportingClass <ClassNameType[]>]
- [-DisableReportingClass <ClassNameType[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+Set-CMAssetIntelligenceClass [-DisableReportingClass <ClassNameType[]>]
+ [-EnableReportingClass <ClassNameType[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
  [-Confirm] [<CommonParameters>]
 ```
 
@@ -56,21 +56,6 @@ PS XYZ:\> Set-CMAssetIntelligenceClass -EnableAllReportingClass
 This command enables all the Asset Intelligence hardware inventory reporting classes.
 
 ## PARAMETERS
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -DisableReportingClass
 Specifies an array of Asset Intelligence reporting classes to disable.
@@ -171,6 +156,21 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

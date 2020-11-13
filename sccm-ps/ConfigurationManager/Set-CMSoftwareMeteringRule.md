@@ -1,4 +1,4 @@
----
+﻿---
 description: Changes properties and security scopes for Configuration Manager software metering rules.
 external help file: AdminUI.PS.AssetIntelligence.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,26 +16,26 @@ Changes properties and security scopes for Configuration Manager software meteri
 
 ### SetByValueMandatory (Default)
 ```
-Set-CMSoftwareMeteringRule -InputObject <IResultObject> [-FileName <String>] [-FileVersion <String>]
- [-OriginalFileName <String>] [-Comment <String>] [-LanguageId <Int32>] [-SiteCode <String>]
- [-NewProductName <String>] [-Path <String>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### SetById
-```
-Set-CMSoftwareMeteringRule -Id <String> [-FileName <String>] [-FileVersion <String>]
- [-OriginalFileName <String>] [-Comment <String>] [-LanguageId <Int32>] [-SiteCode <String>]
- [-NewProductName <String>] [-Path <String>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Set-CMSoftwareMeteringRule [-Comment <String>] [-FileName <String>] [-FileVersion <String>]
+ -InputObject <IResultObject> [-LanguageId <Int32>] [-NewProductName <String>] [-OriginalFileName <String>]
+ [-PassThru] [-Path <String>] [-SiteCode <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetByName
 ```
-Set-CMSoftwareMeteringRule [-FileName <String>] [-FileVersion <String>] [-OriginalFileName <String>]
- [-Comment <String>] [-LanguageId <Int32>] [-SiteCode <String>] -ProductName <String>
- [-NewProductName <String>] [-Path <String>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMSoftwareMeteringRule [-Comment <String>] [-FileName <String>] [-FileVersion <String>]
+ [-LanguageId <Int32>] [-NewProductName <String>] [-OriginalFileName <String>] [-PassThru] [-Path <String>]
+ -ProductName <String> [-SiteCode <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
+```
+
+### SetById
+```
+Set-CMSoftwareMeteringRule [-Comment <String>] [-FileName <String>] [-FileVersion <String>] -Id <String>
+ [-LanguageId <Int32>] [-NewProductName <String>] [-OriginalFileName <String>] [-PassThru] [-Path <String>]
+ [-SiteCode <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -85,21 +85,6 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -299,6 +284,21 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

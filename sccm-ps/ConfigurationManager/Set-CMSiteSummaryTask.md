@@ -1,4 +1,4 @@
----
+﻿---
 description: Sets a site summary task.
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,21 +16,22 @@ Sets a site summary task.
 
 ### SetSummaryTaskByName (Default)
 ```
-Set-CMSiteSummaryTask -TaskName <String> [-RunNow] [-RunIntervalMins <Int32>] [-DisableFixedRun]
- [-SiteCode <String>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+Set-CMSiteSummaryTask [-DisableFixedRun] [-RunIntervalMins <Int32>] [-RunNow] -TaskName <String> [-PassThru]
+ [-SiteCode <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ### SetSummaryTaskById
 ```
-Set-CMSiteSummaryTask -Id <Int32> [-RunNow] [-RunIntervalMins <Int32>] [-DisableFixedRun] [-SiteCode <String>]
- [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMSiteSummaryTask [-DisableFixedRun] -Id <Int32> [-RunIntervalMins <Int32>] [-RunNow] [-PassThru]
+ [-SiteCode <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### SetSummaryTaskByValue
 ```
-Set-CMSiteSummaryTask [-RunNow] [-RunIntervalMins <Int32>] [-DisableFixedRun] -InputObject <IResultObject>
- [-SiteCode <String>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+Set-CMSiteSummaryTask [-DisableFixedRun] -InputObject <IResultObject> [-RunIntervalMins <Int32>] [-RunNow]
+ [-PassThru] [-SiteCode <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
@@ -49,21 +50,6 @@ PS XYZ:\>
 ```
 
 ## PARAMETERS
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -DisableFixedRun
 ```yaml
@@ -201,6 +187,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
@@ -226,7 +227,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-###  
+### 
 
 ## NOTES
 

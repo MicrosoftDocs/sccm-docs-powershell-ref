@@ -1,4 +1,4 @@
----
+﻿---
 description: Gets a named user account.
 external help file: AdminUI.PS.Accounts.dll-Help.xml
 Module Name: ConfigurationManager
@@ -15,7 +15,7 @@ Gets a named user account.
 ## SYNTAX
 
 ```
-Get-CMAccount [[-UserName] <String>] [-SiteCode <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Get-CMAccount [-SiteCode <String>] [[-UserName] <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [<CommonParameters>]
 ```
 

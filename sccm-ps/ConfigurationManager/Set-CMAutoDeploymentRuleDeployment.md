@@ -1,4 +1,4 @@
----
+﻿---
 description: Sets a deployment for an automatic deployment rule.
 external help file: AdminUI.PS.Sum.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,35 +16,37 @@ Sets a deployment for an automatic deployment rule.
 
 ### ByValue (Default)
 ```
-Set-CMAutoDeploymentRuleDeployment [-InputObject] <IResultObject> [-Collection <IResultObject>]
- [-CollectionName <String>] [-CollectionId <String>] [-EnableDeployment <Boolean>]
- [-SendWakeupPacket <Boolean>] [-VerboseLevel <VerboseLevelType>] [-UseUtc <Boolean>]
+Set-CMAutoDeploymentRuleDeployment [-AlertTime <Int32>] [-AlertTimeUnit <TimeUnitType>]
+ [-AllowDownloadFromMicrosoftUpdate <Boolean>] [-AllowRestart <Boolean>]
+ [-AllowSoftwareInstallationOutsideMaintenanceWindow <Boolean>] [-AllowUseMeteredNetwork <Boolean>]
  [-AvailableImmediately <Boolean>] [-AvailableTime <Int32>] [-AvailableTimeUnit <TimeUnitType>]
+ [-Collection <IResultObject>] [-CollectionId <String>] [-CollectionName <String>]
  [-DeadlineImmediately <Boolean>] [-DeadlineTime <Int32>] [-DeadlineTimeUnit <TimeUnitType>]
- [-UserNotification <UserNotificationOption>] [-AllowSoftwareInstallationOutsideMaintenanceWindow <Boolean>]
- [-AllowRestart <Boolean>] [-SuppressRestartServer <Boolean>] [-SuppressRestartWorkstation <Boolean>]
- [-WriteFilterHandling <Boolean>] [-GenerateSuccessAlert <Boolean>] [-SuccessPercentage <Int32>]
- [-AlertTime <Int32>] [-AlertTimeUnit <TimeUnitType>] [-DisableOperationsManager <Boolean>]
- [-GenerateOperationsManagerAlert <Boolean>] [-NoInstallOnRemote <Boolean>] [-NoInstallOnUnprotected <Boolean>]
- [-UseBranchCache <Boolean>] [-AllowDownloadFromMicrosoftUpdate <Boolean>] [-AllowUseMeteredNetwork <Boolean>]
- [-SoftDeadlineEnabled <Boolean>] [-RequirePostRebootFullScan <Boolean>] [-PassThru] [-DisableWildcardHandling]
+ [-DisableOperationsManager <Boolean>] [-EnableDeployment <Boolean>]
+ [-GenerateOperationsManagerAlert <Boolean>] [-GenerateSuccessAlert <Boolean>] [-InputObject] <IResultObject>
+ [-NoInstallOnRemote <Boolean>] [-NoInstallOnUnprotected <Boolean>] [-PassThru]
+ [-RequirePostRebootFullScan <Boolean>] [-SendWakeupPacket <Boolean>] [-SoftDeadlineEnabled <Boolean>]
+ [-SuccessPercentage <Int32>] [-SuppressRestartServer <Boolean>] [-SuppressRestartWorkstation <Boolean>]
+ [-UseBranchCache <Boolean>] [-UserNotification <UserNotificationOption>] [-UseUtc <Boolean>]
+ [-VerboseLevel <VerboseLevelType>] [-WriteFilterHandling <Boolean>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ById
 ```
-Set-CMAutoDeploymentRuleDeployment [-Id] <Int32> [-Collection <IResultObject>] [-CollectionName <String>]
- [-CollectionId <String>] [-EnableDeployment <Boolean>] [-SendWakeupPacket <Boolean>]
- [-VerboseLevel <VerboseLevelType>] [-UseUtc <Boolean>] [-AvailableImmediately <Boolean>]
- [-AvailableTime <Int32>] [-AvailableTimeUnit <TimeUnitType>] [-DeadlineImmediately <Boolean>]
- [-DeadlineTime <Int32>] [-DeadlineTimeUnit <TimeUnitType>] [-UserNotification <UserNotificationOption>]
- [-AllowSoftwareInstallationOutsideMaintenanceWindow <Boolean>] [-AllowRestart <Boolean>]
- [-SuppressRestartServer <Boolean>] [-SuppressRestartWorkstation <Boolean>] [-WriteFilterHandling <Boolean>]
- [-GenerateSuccessAlert <Boolean>] [-SuccessPercentage <Int32>] [-AlertTime <Int32>]
- [-AlertTimeUnit <TimeUnitType>] [-DisableOperationsManager <Boolean>]
- [-GenerateOperationsManagerAlert <Boolean>] [-NoInstallOnRemote <Boolean>] [-NoInstallOnUnprotected <Boolean>]
- [-UseBranchCache <Boolean>] [-AllowDownloadFromMicrosoftUpdate <Boolean>] [-AllowUseMeteredNetwork <Boolean>]
- [-SoftDeadlineEnabled <Boolean>] [-RequirePostRebootFullScan <Boolean>] [-PassThru] [-DisableWildcardHandling]
+Set-CMAutoDeploymentRuleDeployment [-AlertTime <Int32>] [-AlertTimeUnit <TimeUnitType>]
+ [-AllowDownloadFromMicrosoftUpdate <Boolean>] [-AllowRestart <Boolean>]
+ [-AllowSoftwareInstallationOutsideMaintenanceWindow <Boolean>] [-AllowUseMeteredNetwork <Boolean>]
+ [-AvailableImmediately <Boolean>] [-AvailableTime <Int32>] [-AvailableTimeUnit <TimeUnitType>]
+ [-Collection <IResultObject>] [-CollectionId <String>] [-CollectionName <String>]
+ [-DeadlineImmediately <Boolean>] [-DeadlineTime <Int32>] [-DeadlineTimeUnit <TimeUnitType>]
+ [-DisableOperationsManager <Boolean>] [-EnableDeployment <Boolean>]
+ [-GenerateOperationsManagerAlert <Boolean>] [-GenerateSuccessAlert <Boolean>] [-Id] <Int32>
+ [-NoInstallOnRemote <Boolean>] [-NoInstallOnUnprotected <Boolean>] [-PassThru]
+ [-RequirePostRebootFullScan <Boolean>] [-SendWakeupPacket <Boolean>] [-SoftDeadlineEnabled <Boolean>]
+ [-SuccessPercentage <Int32>] [-SuppressRestartServer <Boolean>] [-SuppressRestartWorkstation <Boolean>]
+ [-UseBranchCache <Boolean>] [-UserNotification <UserNotificationOption>] [-UseUtc <Boolean>]
+ [-VerboseLevel <VerboseLevelType>] [-WriteFilterHandling <Boolean>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -271,21 +273,6 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -618,21 +605,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -UseUtc
-Indicates whether the schedule for this deployment is evaluated based upon Universal Coordinated Time (UTC).
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -UserNotification
 Specifies the notification behavior of the user visual experience.
 Valid values are:
@@ -646,6 +618,21 @@ Type: UserNotificationOption
 Parameter Sets: (All)
 Aliases:
 Accepted values: DisplayAll, DisplaySoftwareCenterOnly, HideAll
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UseUtc
+Indicates whether the schedule for this deployment is evaluated based upon Universal Coordinated Time (UTC).
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named
@@ -675,22 +662,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -WriteFilterHandling
 Indicates whether changes are committed at deadline or during a maintenance window (requires restarts).
 If set to $False, content is applied on the overlay and committed later.
@@ -703,6 +674,37 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Sum.dll-Help.xml
 Module Name: ConfigurationManager
 online version:
@@ -14,8 +14,8 @@ Use this cmdlet to create a new third-party updates catalog.
 ## SYNTAX
 
 ```
-New-CMThirdPartyUpdateCatalog [-DownloadUrl] <Uri> [-PublisherName] <String> [-Name] <String>
- [-Description] <String> [[-SupportUrl] <Uri>] [[-SupportContact] <String>] [-DisableWildcardHandling]
+New-CMThirdPartyUpdateCatalog [-Description] <String> [-DownloadUrl] <Uri> [-Name] <String>
+ [-PublisherName] <String> [[-SupportContact] <String>] [[-SupportUrl] <Uri>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [<CommonParameters>]
 ```
 

@@ -1,4 +1,4 @@
----
+﻿---
 description: Sets properties of a software distribution component in Configuration Manager.
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,20 +16,21 @@ Sets properties of a software distribution component in Configuration Manager.
 
 ### SearchBySiteCodeMandatory (Default)
 ```
-Set-CMSoftwareDistributionComponent [-SiteCode <String>] [-MaximumPackageCount <Int32>]
- [-MaximumThreadCountPerPackage <Int32>] [-RetryCount <Int32>] [-DelayBeforeRetryingMins <Int32>]
- [-MulticastRetryCount <Int32>] [-MulticastDelayBeforeRetryingMins <Int32>]
- [-NetworkAccessAccountName <String[]>] [-AddNetworkAccessAccountName <String[]>]
- [-RemoveNetworkAccessAccountName <String[]>] [-CleanNetworkAccessAccountName] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMSoftwareDistributionComponent [-AddNetworkAccessAccountName <String[]>] [-CleanNetworkAccessAccountName]
+ [-DelayBeforeRetryingMins <Int32>] [-MaximumPackageCount <Int32>] [-MaximumThreadCountPerPackage <Int32>]
+ [-MulticastDelayBeforeRetryingMins <Int32>] [-MulticastRetryCount <Int32>]
+ [-NetworkAccessAccountName <String[]>] [-RemoveNetworkAccessAccountName <String[]>] [-RetryCount <Int32>]
+ [-SiteCode <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### SearchBySiteCodeMandatory_ClientComputerAccount
 ```
-Set-CMSoftwareDistributionComponent [-SiteCode <String>] [-MaximumPackageCount <Int32>]
- [-MaximumThreadCountPerPackage <Int32>] [-RetryCount <Int32>] [-DelayBeforeRetryingMins <Int32>]
- [-MulticastRetryCount <Int32>] [-MulticastDelayBeforeRetryingMins <Int32>] [-ClientComputerAccount]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMSoftwareDistributionComponent [-ClientComputerAccount] [-DelayBeforeRetryingMins <Int32>]
+ [-MaximumPackageCount <Int32>] [-MaximumThreadCountPerPackage <Int32>]
+ [-MulticastDelayBeforeRetryingMins <Int32>] [-MulticastRetryCount <Int32>] [-RetryCount <Int32>]
+ [-SiteCode <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -93,21 +94,6 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -271,6 +257,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
@@ -296,7 +297,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-###  
+### 
 
 ## NOTES
 

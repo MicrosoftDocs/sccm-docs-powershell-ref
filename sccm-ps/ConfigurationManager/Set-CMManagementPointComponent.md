@@ -1,4 +1,4 @@
----
+﻿---
 description: Sets a component for a management point in Configuration Manager.
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,19 +16,19 @@ Sets a component for a management point in Configuration Manager.
 
 ### SearchBySiteCodeMandatory (Default)
 ```
-Set-CMManagementPointComponent [-SiteCode <String>] [-PublishDns <Boolean>] [-DisableWildcardHandling]
+Set-CMManagementPointComponent [-PublishDns <Boolean>] [-SiteCode <String>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SearchByValueMandatory
+```
+Set-CMManagementPointComponent -InputObject <IResultObject> [-PublishDns <Boolean>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByNameMandatory
 ```
 Set-CMManagementPointComponent -Name <String> [-PublishDns <Boolean>] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### SearchByValueMandatory
-```
-Set-CMManagementPointComponent [-PublishDns <Boolean>] -InputObject <IResultObject> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -51,21 +51,6 @@ The command sets a management point component by using the *SiteCode* parameter.
 The command also sets the *PublishDNS* parameter to $True to publish the management point component in DNS.
 
 ## PARAMETERS
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -DisableWildcardHandling
 DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
@@ -165,6 +150,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
@@ -190,7 +190,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-###  
+### 
 
 ## NOTES
 

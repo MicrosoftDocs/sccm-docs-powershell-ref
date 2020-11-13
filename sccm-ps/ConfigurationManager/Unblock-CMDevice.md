@@ -1,4 +1,4 @@
----
+﻿---
 description: Unblocks a client device.
 external help file: AdminUI.PS.Collections.dll-Help.xml
 Module Name: ConfigurationManager
@@ -20,15 +20,15 @@ Unblock-CMDevice [-InputObject] <IResultObject> [-DisableWildcardHandling] [-For
  [-Confirm] [<CommonParameters>]
 ```
 
-### SearchByNameMandatory
-```
-Unblock-CMDevice -DeviceName <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
-```
-
 ### SearchByIdMandatory
 ```
 Unblock-CMDevice -DeviceId <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### SearchByNameMandatory
+```
+Unblock-CMDevice -DeviceName <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
@@ -59,21 +59,6 @@ PS XYZ:\> Get-CMDevice -Name "WIN10-86-33" | Unblock-CMDevice
 This command gets the device object named WIN10-86-33 and uses the pipeline operator to pass the object to **Unblock-CMDevice**, which unblocks the device object.
 
 ## PARAMETERS
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -DeviceId
 Specifies the ID of a device.
@@ -148,6 +133,21 @@ Required: True
 Position: 0
 Default value: None
 Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

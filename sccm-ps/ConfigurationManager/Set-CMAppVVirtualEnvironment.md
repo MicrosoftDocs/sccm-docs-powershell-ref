@@ -1,4 +1,4 @@
----
+﻿---
 description: Changes settings for virtual applications that you have deployed by using Configuration Manager.
 external help file: AdminUI.PS.AppModel.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,23 +16,24 @@ Changes settings for virtual applications that you have deployed by using Config
 
 ### SetByValue (Default)
 ```
-Set-CMAppVVirtualEnvironment [-InputObject] <IResultObject> [-NewName <String>] [-Description <String>]
- [-AddApplicationGroup <VirtualEnvironmentGroup[]>] [-RemoveApplicationGroup <VirtualEnvironmentGroup[]>]
- [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMAppVVirtualEnvironment [-AddApplicationGroup <VirtualEnvironmentGroup[]>] [-Description <String>]
+ [-InputObject] <IResultObject> [-NewName <String>] [-PassThru]
+ [-RemoveApplicationGroup <VirtualEnvironmentGroup[]>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetById
 ```
-Set-CMAppVVirtualEnvironment [-Id] <Int32[]> [-NewName <String>] [-Description <String>]
- [-AddApplicationGroup <VirtualEnvironmentGroup[]>] [-RemoveApplicationGroup <VirtualEnvironmentGroup[]>]
- [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMAppVVirtualEnvironment [-AddApplicationGroup <VirtualEnvironmentGroup[]>] [-Description <String>]
+ [-Id] <Int32[]> [-NewName <String>] [-PassThru] [-RemoveApplicationGroup <VirtualEnvironmentGroup[]>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetByName
 ```
-Set-CMAppVVirtualEnvironment [-Name] <String> [-NewName <String>] [-Description <String>]
- [-AddApplicationGroup <VirtualEnvironmentGroup[]>] [-RemoveApplicationGroup <VirtualEnvironmentGroup[]>]
- [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMAppVVirtualEnvironment [-AddApplicationGroup <VirtualEnvironmentGroup[]>] [-Description <String>]
+ [-Name] <String> [-NewName <String>] [-PassThru] [-RemoveApplicationGroup <VirtualEnvironmentGroup[]>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -67,21 +68,6 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -220,6 +206,21 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

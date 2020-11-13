@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 Module Name: ConfigurationManager
 online version:
@@ -13,8 +13,8 @@ schema: 2.0.0
 ## SYNTAX
 
 ```
-New-CMGlobalConditionExpression -RootExpression <ExpressionBase> -Name <String> [-Description <String>]
- -DeviceType <GlobalConditionDeviceType> [-DisableWildcardHandling] [-ForceWildcardHandling]
+New-CMGlobalConditionExpression -RootExpression <ExpressionBase> [-Description <String>]
+ -DeviceType <GlobalConditionDeviceType> -Name <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
  [<CommonParameters>]
 ```
 

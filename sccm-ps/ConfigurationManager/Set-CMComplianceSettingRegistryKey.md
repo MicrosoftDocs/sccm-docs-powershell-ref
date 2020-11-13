@@ -1,4 +1,4 @@
----
+﻿---
 description: Sets a compliance setting registry key.
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 Module Name: ConfigurationManager
@@ -15,8 +15,8 @@ Sets a compliance setting registry key.
 ## SYNTAX
 
 ```
-Set-CMComplianceSettingRegistryKey [-Is64Bit <Boolean>] [-KeyName <String>] [-Hive <RegistryRootKey>]
- [-Description <String>] -InputObject <PSObject> -SettingName <String> [-NewSettingName <String>] [-PassThru]
+Set-CMComplianceSettingRegistryKey [-Hive <RegistryRootKey>] [-Is64Bit <Boolean>] [-KeyName <String>]
+ [-Description <String>] -InputObject <PSObject> [-NewSettingName <String>] [-PassThru] -SettingName <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -35,21 +35,6 @@ PS XYZ:\>
 ```
 
 ## PARAMETERS
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -Description
 ```yaml
@@ -182,6 +167,21 @@ Parameter Sets: (All)
 Aliases: Name
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False

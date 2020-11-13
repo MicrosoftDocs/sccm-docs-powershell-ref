@@ -1,4 +1,4 @@
----
+﻿---
 description: Adds a software update to a software update group in Configuration Manager.
 external help file: AdminUI.PS.Sum.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,37 +16,7 @@ Adds a software update to a software update group in Configuration Manager.
 
 ### ById_Id (Default)
 ```
-Add-CMSoftwareUpdateToGroup -SoftwareUpdateId <String[]> -SoftwareUpdateGroupId <String>
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### ById_Name
-```
-Add-CMSoftwareUpdateToGroup -SoftwareUpdateId <String[]> -SoftwareUpdateGroupName <String>
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### ById_Object
-```
-Add-CMSoftwareUpdateToGroup -SoftwareUpdateId <String[]> -SoftwareUpdateGroup <IResultObject>
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### ByName_Id
-```
-Add-CMSoftwareUpdateToGroup -SoftwareUpdateName <String[]> -SoftwareUpdateGroupId <String>
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### ByName_Name
-```
-Add-CMSoftwareUpdateToGroup -SoftwareUpdateName <String[]> -SoftwareUpdateGroupName <String>
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### ByName_Object
-```
-Add-CMSoftwareUpdateToGroup -SoftwareUpdateName <String[]> -SoftwareUpdateGroup <IResultObject>
+Add-CMSoftwareUpdateToGroup -SoftwareUpdateGroupId <String> -SoftwareUpdateId <String[]>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -65,6 +35,36 @@ Add-CMSoftwareUpdateToGroup -SoftwareUpdate <IResultObject[]> -SoftwareUpdateGro
 ### ByObject_Object
 ```
 Add-CMSoftwareUpdateToGroup -SoftwareUpdate <IResultObject[]> -SoftwareUpdateGroup <IResultObject>
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### ById_Object
+```
+Add-CMSoftwareUpdateToGroup -SoftwareUpdateGroup <IResultObject> -SoftwareUpdateId <String[]>
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### ByName_Object
+```
+Add-CMSoftwareUpdateToGroup -SoftwareUpdateGroup <IResultObject> -SoftwareUpdateName <String[]>
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### ByName_Id
+```
+Add-CMSoftwareUpdateToGroup -SoftwareUpdateGroupId <String> -SoftwareUpdateName <String[]>
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### ById_Name
+```
+Add-CMSoftwareUpdateToGroup -SoftwareUpdateGroupName <String> -SoftwareUpdateId <String[]>
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### ByName_Name
+```
+Add-CMSoftwareUpdateToGroup -SoftwareUpdateGroupName <String> -SoftwareUpdateName <String[]>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -95,21 +95,6 @@ PS XYZ:\>Add-CMSoftwareUpdateToGroup -SoftwareUpdateGroupId "SUP00045" -Software
 This command adds a software update that has the ID SMS00078 to the update group with the specified ID.
 
 ## PARAMETERS
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -DisableWildcardHandling
 DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
@@ -163,7 +148,7 @@ To obtain a software update group object, use **Get-CMSoftwareUpdateGroup**.
 
 ```yaml
 Type: IResultObject
-Parameter Sets: ById_Object, ByName_Object, ByObject_Object
+Parameter Sets: ByObject_Object, ById_Object, ByName_Object
 Aliases:
 
 Required: True
@@ -178,7 +163,7 @@ Specifies an ID of a software group.
 
 ```yaml
 Type: String
-Parameter Sets: ById_Id, ByName_Id, ByObject_Id
+Parameter Sets: ById_Id, ByObject_Id, ByName_Id
 Aliases:
 
 Required: True
@@ -193,7 +178,7 @@ Specifies a name of a software group.
 
 ```yaml
 Type: String
-Parameter Sets: ById_Name, ByName_Name, ByObject_Name
+Parameter Sets: ByObject_Name, ById_Name, ByName_Name
 Aliases:
 
 Required: True
@@ -208,7 +193,7 @@ Specifies an ID of a software update.
 
 ```yaml
 Type: String[]
-Parameter Sets: ById_Id, ById_Name, ById_Object
+Parameter Sets: ById_Id, ById_Object, ById_Name
 Aliases: SoftwareUpdateIds
 
 Required: True
@@ -223,12 +208,27 @@ Specifies a name of a software update.
 
 ```yaml
 Type: String[]
-Parameter Sets: ByName_Id, ByName_Name, ByName_Object
+Parameter Sets: ByName_Object, ByName_Id, ByName_Name
 Aliases: SoftwareUpdateNames
 
 Required: True
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

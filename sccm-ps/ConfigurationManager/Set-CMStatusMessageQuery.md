@@ -1,4 +1,4 @@
----
+﻿---
 description: Changes settings or security scope or deletes messages for a Configuration Manager status message query.
 external help file: AdminUI.PS.SystemStatus.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,38 +16,38 @@ Changes settings or security scope or deletes messages for a Configuration Manag
 
 ### SetStatusMessageQueryByObjectMandatory (Default)
 ```
-Set-CMStatusMessageQuery -InputObject <IResultObject> [-NewName <String>] [-Expression <String>]
- [-Comment <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+Set-CMStatusMessageQuery [-Comment <String>] [-Expression <String>] -InputObject <IResultObject>
+ [-NewName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ### SetStatusMessageQueryByIdMandatory
 ```
-Set-CMStatusMessageQuery -Id <String> [-NewName <String>] [-Expression <String>] [-Comment <String>]
+Set-CMStatusMessageQuery [-Comment <String>] [-Expression <String>] -Id <String> [-NewName <String>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### DeleteMessageByIdMandatory
-```
-Set-CMStatusMessageQuery -Id <String> [-DeleteMessage] [-PassThru] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetStatusMessageQueryByNameMandatory
 ```
-Set-CMStatusMessageQuery -Name <String> [-NewName <String>] [-Expression <String>] [-Comment <String>]
+Set-CMStatusMessageQuery [-Comment <String>] [-Expression <String>] -Name <String> [-NewName <String>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### DeleteMessageByNameMandatory
-```
-Set-CMStatusMessageQuery -Name <String> [-DeleteMessage] [-PassThru] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### DeleteMessageByObjectMandatory
 ```
-Set-CMStatusMessageQuery -InputObject <IResultObject> [-DeleteMessage] [-PassThru] [-DisableWildcardHandling]
+Set-CMStatusMessageQuery [-DeleteMessage] -InputObject <IResultObject> [-PassThru] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### DeleteMessageByNameMandatory
+```
+Set-CMStatusMessageQuery [-DeleteMessage] -Name <String> [-PassThru] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### DeleteMessageByIdMandatory
+```
+Set-CMStatusMessageQuery [-DeleteMessage] -Id <String> [-PassThru] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -107,27 +107,12 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -DeleteMessage
 Indicates that messages found by this query are deleted from the Configuration Manager database.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: DeleteMessageByIdMandatory, DeleteMessageByNameMandatory, DeleteMessageByObjectMandatory
+Parameter Sets: DeleteMessageByObjectMandatory, DeleteMessageByNameMandatory, DeleteMessageByIdMandatory
 Aliases:
 
 Required: True
@@ -249,12 +234,27 @@ By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: DeleteMessageByIdMandatory, DeleteMessageByNameMandatory, DeleteMessageByObjectMandatory
+Parameter Sets: DeleteMessageByObjectMandatory, DeleteMessageByNameMandatory, DeleteMessageByIdMandatory
 Aliases:
 
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

@@ -1,4 +1,4 @@
----
+﻿---
 description: Adds a deployment type for a Configuration Manager deployment application. This cmdlet is deprecated.
 external help file: AdminUI.PS.AppMan.dll-Help.xml
 Module Name: ConfigurationManager
@@ -17,162 +17,163 @@ Adds a deployment type for a Configuration Manager deployment application. This 
 
 ### AddDeploymentTypeByMsiInstallerAuto (Default)
 ```
-Add-CMDeploymentType [-AddRequirement <Rule[]>] [-AdministratorComment <String>]
- [-EnableContentLocationFallback <Boolean>] [-InputObject <IResultObject>] [-ApplicationName <String>]
- [-AutoIdentifyFromInstallationFile] [-DeploymentTypeName <String>] [-ForceForUnknownPublisher <Boolean>]
- [-InstallationBehaviorType <InstallationBehaviorType>] -ContentLocation <String>
- [-InstallationProgram <String>] [-Language <String[]>] [-MsiInstaller]
- [-OnSlowNetworkMode <ContentHandlingMode>] [-Force32BitInstaller <Boolean>] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Add-CMDeploymentType [-AddRequirement <Rule[]>] [-AdministratorComment <String>] [-ApplicationName <String>]
+ [-AutoIdentifyFromInstallationFile] -ContentLocation <String> [-DeploymentTypeName <String>]
+ [-EnableContentLocationFallback <Boolean>] [-Force32BitInstaller <Boolean>]
+ [-ForceForUnknownPublisher <Boolean>] [-InputObject <IResultObject>]
+ [-InstallationBehaviorType <InstallationBehaviorType>] [-InstallationProgram <String>] [-Language <String[]>]
+ [-MsiInstaller] [-OnSlowNetworkMode <ContentHandlingMode>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### AddDeploymentTypeByAndroidInstallerAuto
 ```
 Add-CMDeploymentType [-AddRequirement <Rule[]>] [-AdministratorComment <String>] [-AndroidInstaller]
- [-InputObject <IResultObject>] [-ApplicationName <String>] [-AutoIdentifyFromInstallationFile]
- [-DeploymentTypeName <String>] [-ForceForUnknownPublisher <Boolean>] -ContentLocation <String>
+ [-ApplicationName <String>] [-AutoIdentifyFromInstallationFile] -ContentLocation <String>
+ [-DeploymentTypeName <String>] [-ForceForUnknownPublisher <Boolean>] [-InputObject <IResultObject>]
  [-Language <String[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ### AddDeploymentTypeByAppV5xInstallerAuto
 ```
-Add-CMDeploymentType [-AddRequirement <Rule[]>] [-AdministratorComment <String>]
- [-EnableContentLocationFallback <Boolean>] [-AppV5xInstaller] [-InputObject <IResultObject>]
- [-ApplicationName <String>] [-AutoIdentifyFromInstallationFile] [-DeploymentTypeName <String>]
- [-ForceForUnknownPublisher <Boolean>] -ContentLocation <String> [-Language <String[]>]
+Add-CMDeploymentType [-AddRequirement <Rule[]>] [-AdministratorComment <String>] [-ApplicationName <String>]
+ [-AppV5xInstaller] [-AutoIdentifyFromInstallationFile] -ContentLocation <String>
+ [-DeploymentTypeName <String>] [-EnableContentLocationFallback <Boolean>]
+ [-ForceForUnknownPublisher <Boolean>] [-InputObject <IResultObject>] [-Language <String[]>]
  [-OnFastNetworkMode <OnFastNetworkMode>] [-OnSlowNetworkMode <ContentHandlingMode>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### AddDeploymentTypeByAppvInstallerAuto
 ```
-Add-CMDeploymentType [-AddRequirement <Rule[]>] [-AdministratorComment <String>]
- [-EnableContentLocationFallback <Boolean>] [-InputObject <IResultObject>] [-ApplicationName <String>]
- [-AppvInstaller] [-AutoIdentifyFromInstallationFile] [-DeploymentTypeName <String>]
- [-ForceForUnknownPublisher <Boolean>] -ContentLocation <String> [-Language <String[]>]
- [-OnFastNetworkMode <OnFastNetworkMode>] [-OnSlowNetworkMode <ContentHandlingMode>] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Add-CMDeploymentType [-AddRequirement <Rule[]>] [-AdministratorComment <String>] [-ApplicationName <String>]
+ [-AppvInstaller] [-AutoIdentifyFromInstallationFile] -ContentLocation <String> [-DeploymentTypeName <String>]
+ [-EnableContentLocationFallback <Boolean>] [-ForceForUnknownPublisher <Boolean>]
+ [-InputObject <IResultObject>] [-Language <String[]>] [-OnFastNetworkMode <OnFastNetworkMode>]
+ [-OnSlowNetworkMode <ContentHandlingMode>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ### AddDeploymentTypeByIosAppStoreInstallerAuto
 ```
-Add-CMDeploymentType [-AddRequirement <Rule[]>] [-AdministratorComment <String>] [-InputObject <IResultObject>]
- [-ApplicationName <String>] [-AutoIdentifyFromInstallationFile] [-DeploymentTypeName <String>]
- [-ForceForUnknownPublisher <Boolean>] -ContentLocation <String> [-IosAppStoreInstaller] [-Language <String[]>]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Add-CMDeploymentType [-AddRequirement <Rule[]>] [-AdministratorComment <String>] [-ApplicationName <String>]
+ [-AutoIdentifyFromInstallationFile] -ContentLocation <String> [-DeploymentTypeName <String>]
+ [-ForceForUnknownPublisher <Boolean>] [-InputObject <IResultObject>] [-IosAppStoreInstaller]
+ [-Language <String[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### AddDeploymentTypeByIosInstallerAuto
 ```
-Add-CMDeploymentType [-AddRequirement <Rule[]>] [-AdministratorComment <String>] [-InputObject <IResultObject>]
- [-ApplicationName <String>] [-AutoIdentifyFromInstallationFile] [-DeploymentTypeName <String>]
- [-ForceForUnknownPublisher <Boolean>] -ContentLocation <String> [-IosInstaller] [-Language <String[]>]
+Add-CMDeploymentType [-AddRequirement <Rule[]>] [-AdministratorComment <String>] [-ApplicationName <String>]
+ [-AutoIdentifyFromInstallationFile] -ContentLocation <String> [-DeploymentTypeName <String>]
+ [-ForceForUnknownPublisher <Boolean>] [-InputObject <IResultObject>] [-IosInstaller] [-Language <String[]>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### AddDeploymentTypeByMacInstallerAuto
 ```
-Add-CMDeploymentType [-AddRequirement <Rule[]>] [-AdministratorComment <String>] [-InputObject <IResultObject>]
- [-ApplicationName <String>] [-AutoIdentifyFromInstallationFile] [-DeploymentTypeName <String>]
- [-ForceForUnknownPublisher <Boolean>] -ContentLocation <String> [-Language <String[]>] [-MacInstaller]
+Add-CMDeploymentType [-AddRequirement <Rule[]>] [-AdministratorComment <String>] [-ApplicationName <String>]
+ [-AutoIdentifyFromInstallationFile] -ContentLocation <String> [-DeploymentTypeName <String>]
+ [-ForceForUnknownPublisher <Boolean>] [-InputObject <IResultObject>] [-Language <String[]>] [-MacInstaller]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### AddDeploymentTypeByScriptInstallerManual
 ```
-Add-CMDeploymentType [-AddRequirement <Rule[]>] [-AdministratorComment <String>] [-EnableBranchCache <Boolean>]
- [-EnableContentLocationFallback <Boolean>] [-InputObject <IResultObject>] [-ApplicationName <String>]
- -DeploymentTypeName <String> [-DetectDeploymentTypeByCustomScript] [-EstimatedInstallationTimeMins <Int32>]
- [-InstallationBehaviorType <InstallationBehaviorType>] [-ContentLocation <String>]
- -InstallationProgram <String> [-InstallationProgramVisibility <UserInteractionMode>]
- [-InstallationStartIn <String>] [-Language <String[]>] [-LogonRequirementType <LogonRequirementType>]
- [-ManualSpecifyDeploymentType] [-MaximumAllowedRunTimeMins <Int32>] [-OnSlowNetworkMode <ContentHandlingMode>]
- [-PersistContentInClientCache <Boolean>] [-RequireUserInteraction <Boolean>] [-Force32BitInstaller <Boolean>]
- [-Force32BitDetectionScript <Boolean>] -ScriptContent <String> [-ScriptInstaller] -ScriptType <ScriptLanguage>
- [-UninstallProgram <String>] [-UninstallStartIn <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+Add-CMDeploymentType [-AddRequirement <Rule[]>] [-AdministratorComment <String>] [-ApplicationName <String>]
+ [-ContentLocation <String>] -DeploymentTypeName <String> [-DetectDeploymentTypeByCustomScript]
+ [-EnableBranchCache <Boolean>] [-EnableContentLocationFallback <Boolean>]
+ [-EstimatedInstallationTimeMins <Int32>] [-Force32BitDetectionScript <Boolean>]
+ [-Force32BitInstaller <Boolean>] [-InputObject <IResultObject>]
+ [-InstallationBehaviorType <InstallationBehaviorType>] -InstallationProgram <String>
+ [-InstallationProgramVisibility <UserInteractionMode>] [-InstallationStartIn <String>] [-Language <String[]>]
+ [-LogonRequirementType <LogonRequirementType>] [-ManualSpecifyDeploymentType]
+ [-MaximumAllowedRunTimeMins <Int32>] [-OnSlowNetworkMode <ContentHandlingMode>]
+ [-PersistContentInClientCache <Boolean>] [-RequireUserInteraction <Boolean>] -ScriptContent <String>
+ [-ScriptInstaller] -ScriptType <ScriptLanguage> [-UninstallProgram <String>] [-UninstallStartIn <String>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### AddDeploymentTypeByWebAppInstallerAuto
 ```
-Add-CMDeploymentType [-AddRequirement <Rule[]>] [-AdministratorComment <String>] [-InputObject <IResultObject>]
- [-ApplicationName <String>] [-AutoIdentifyFromInstallationFile] [-DeploymentTypeName <String>]
- -ContentLocation <String> [-Language <String[]>] [-WebAppInstaller] [-DisableWildcardHandling]
+Add-CMDeploymentType [-AddRequirement <Rule[]>] [-AdministratorComment <String>] [-ApplicationName <String>]
+ [-AutoIdentifyFromInstallationFile] -ContentLocation <String> [-DeploymentTypeName <String>]
+ [-InputObject <IResultObject>] [-Language <String[]>] [-WebAppInstaller] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### AddDeploymentTypeByWindows8AppInstallerAuto
 ```
-Add-CMDeploymentType [-AddRequirement <Rule[]>] [-AdministratorComment <String>]
- [-EnableContentLocationFallback <Boolean>] [-InputObject <IResultObject>] [-ApplicationName <String>]
- [-AutoIdentifyFromInstallationFile] [-DeploymentTypeName <String>] [-ForceForUnknownPublisher <Boolean>]
- -ContentLocation <String> [-Language <String[]>] [-OnSlowNetworkMode <ContentHandlingMode>]
+Add-CMDeploymentType [-AddRequirement <Rule[]>] [-AdministratorComment <String>] [-ApplicationName <String>]
+ [-AutoIdentifyFromInstallationFile] -ContentLocation <String> [-DeploymentTypeName <String>]
+ [-EnableContentLocationFallback <Boolean>] [-ForceForUnknownPublisher <Boolean>]
+ [-InputObject <IResultObject>] [-Language <String[]>] [-OnSlowNetworkMode <ContentHandlingMode>]
  [-TriggerVpn <Boolean>] [-Windows8AppInstaller] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
  [-Confirm] [<CommonParameters>]
 ```
 
 ### AddDeploymentTypeByWindowsStoreInstallerAuto
 ```
-Add-CMDeploymentType [-AddRequirement <Rule[]>] [-AdministratorComment <String>] [-InputObject <IResultObject>]
- [-ApplicationName <String>] -ApplicationNameInWindowsStore <String> [-AutoIdentifyFromInstallationFile]
- [-DeploymentTypeName <String>] [-ForceForUnknownPublisher <Boolean>] [-Language <String[]>]
+Add-CMDeploymentType [-AddRequirement <Rule[]>] [-AdministratorComment <String>] [-ApplicationName <String>]
+ -ApplicationNameInWindowsStore <String> [-AutoIdentifyFromInstallationFile] [-DeploymentTypeName <String>]
+ [-ForceForUnknownPublisher <Boolean>] [-InputObject <IResultObject>] [-Language <String[]>]
  -RemoteComputerName <String> [-WindowsStoreInstaller] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### AddDeploymentTypeByWinPhone8InstallerAuto
 ```
-Add-CMDeploymentType [-AddRequirement <Rule[]>] [-AdministratorComment <String>] [-InputObject <IResultObject>]
- [-ApplicationName <String>] [-AutoIdentifyFromInstallationFile] [-DeploymentTypeName <String>]
- [-ForceForUnknownPublisher <Boolean>] -ContentLocation <String> [-Language <String[]>]
+Add-CMDeploymentType [-AddRequirement <Rule[]>] [-AdministratorComment <String>] [-ApplicationName <String>]
+ [-AutoIdentifyFromInstallationFile] -ContentLocation <String> [-DeploymentTypeName <String>]
+ [-ForceForUnknownPublisher <Boolean>] [-InputObject <IResultObject>] [-Language <String[]>]
  [-WindowsPhone8Installer] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ### AddDeploymentTypeByWinPhoneStoreInstallerAuto
 ```
-Add-CMDeploymentType [-AddRequirement <Rule[]>] [-AdministratorComment <String>] [-InputObject <IResultObject>]
- [-ApplicationName <String>] [-AutoIdentifyFromInstallationFile] [-DeploymentTypeName <String>]
- [-ForceForUnknownPublisher <Boolean>] -ContentLocation <String> [-Language <String[]>]
+Add-CMDeploymentType [-AddRequirement <Rule[]>] [-AdministratorComment <String>] [-ApplicationName <String>]
+ [-AutoIdentifyFromInstallationFile] -ContentLocation <String> [-DeploymentTypeName <String>]
+ [-ForceForUnknownPublisher <Boolean>] [-InputObject <IResultObject>] [-Language <String[]>]
  [-WindowsPhoneStoreInstaller] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ### AddDeploymentTypeByWMInstaller
 ```
-Add-CMDeploymentType [-AddRequirement <Rule[]>] [-AdministratorComment <String>]
- [-EnableUserUninstall <Boolean>] [-InputObject <IResultObject>] [-ApplicationName <String>]
- [-AutoIdentifyFromInstallationFile] [-DeploymentTypeName <String>] [-ForceForUnknownPublisher <Boolean>]
- -ContentLocation <String> [-Language <String[]>] [-ManualSpecifyDeploymentType] [-PfxFileLocation <String>]
+Add-CMDeploymentType [-AddRequirement <Rule[]>] [-AdministratorComment <String>] [-ApplicationName <String>]
+ [-AutoIdentifyFromInstallationFile] -ContentLocation <String> [-DeploymentTypeName <String>]
+ [-EnableUserUninstall <Boolean>] [-ForceForUnknownPublisher <Boolean>] [-InputObject <IResultObject>]
+ [-Language <String[]>] [-ManualSpecifyDeploymentType] [-PfxFileLocation <String>]
  [-PfxFilePassword <SecureString>] [-SignContentFile <Boolean>] [-SignedContentFileLocation <String>]
  [-WMInstaller] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### AddDeploymentTypeByMobileMsiInstallerAuto
 ```
-Add-CMDeploymentType [-AddRequirement <Rule[]>] [-AdministratorComment <String>] [-InputObject <IResultObject>]
- [-ApplicationName <String>] [-AutoIdentifyFromInstallationFile] [-DeploymentTypeName <String>]
- [-ForceForUnknownPublisher <Boolean>] -ContentLocation <String> [-InstallationCommandLine <String>]
+Add-CMDeploymentType [-AddRequirement <Rule[]>] [-AdministratorComment <String>] [-ApplicationName <String>]
+ [-AutoIdentifyFromInstallationFile] -ContentLocation <String> [-DeploymentTypeName <String>]
+ [-ForceForUnknownPublisher <Boolean>] [-InputObject <IResultObject>] [-InstallationCommandLine <String>]
  [-Language <String[]>] [-MobileMsiInstaller] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
  [-Confirm] [<CommonParameters>]
 ```
 
 ### AddDeploymentTypeByMobileMsiInstallerManual
 ```
-Add-CMDeploymentType [-AddRequirement <Rule[]>] [-AdministratorComment <String>] [-InputObject <IResultObject>]
- [-ApplicationName <String>] -DeploymentTypeName <String> [-ContentLocation <String>] [-Language <String[]>]
+Add-CMDeploymentType [-AddRequirement <Rule[]>] [-AdministratorComment <String>] [-ApplicationName <String>]
+ [-ContentLocation <String>] -DeploymentTypeName <String> [-InputObject <IResultObject>] [-Language <String[]>]
  [-ManualSpecifyDeploymentType] [-MobileMsiInstaller] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### AddDeploymentTypeByAndroidGooglePlayInstallerAuto
 ```
-Add-CMDeploymentType [-AdministratorComment <String>] [-AndroidGooglePlayInstaller]
- [-InputObject <IResultObject>] [-ApplicationName <String>] [-AutoIdentifyFromInstallationFile]
- [-DeploymentTypeName <String>] [-ForceForUnknownPublisher <Boolean>] -ContentLocation <String>
- [-Language <String[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Add-CMDeploymentType [-AdministratorComment <String>] [-AndroidGooglePlayInstaller] [-ApplicationName <String>]
+ [-AutoIdentifyFromInstallationFile] -ContentLocation <String> [-DeploymentTypeName <String>]
+ [-ForceForUnknownPublisher <Boolean>] [-InputObject <IResultObject>] [-Language <String[]>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -181,12 +182,8 @@ This cmdlet is deprecated.
 
 Use one of the following cmdlets:
 
-* [Add-CMAndroidDeploymentType](Add-CMAndroidDeploymentType.md)
 * [Add-CMAppv5XDeploymentType](Add-CMAppv5XDeploymentType.md)
 * [Add-CMAppvDeploymentType](Add-CMAppvDeploymentType.md)
-* [Add-CMGooglePlayDeploymentType](Add-CMGooglePlayDeploymentType.md)
-* [Add-CMIosAppStoreDeploymentType](Add-CMIosAppStoreDeploymentType.md)
-* [Add-CMIosDeploymentType](Add-CMIosDeploymentType.md)
 * [Add-CMMacDeploymentType](Add-CMMacDeploymentType.md)
 * [Add-CMMobileMsiDeploymentType](Add-CMMobileMsiDeploymentType.md)
 * [Add-CMMsiDeploymentType](Add-CMMsiDeploymentType.md)
@@ -297,22 +294,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AppV5xInstaller
-
-Indicates that the deployment type detects application information and deployment types from a Application Virtualization (App-V) 5.0  .appv package file.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: AddDeploymentTypeByAppV5xInstallerAuto
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -ApplicationName
 
 Specifies the name of the application that is associated with the deployment type.
@@ -336,6 +317,22 @@ Specifies the name of the application in the Windows Store.
 ```yaml
 Type: String
 Parameter Sets: AddDeploymentTypeByWindowsStoreInstallerAuto
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AppV5xInstaller
+
+Indicates that the deployment type detects application information and deployment types from a Application Virtualization (App-V) 5.0  .appv package file.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: AddDeploymentTypeByAppV5xInstallerAuto
 Aliases:
 
 Required: True
@@ -373,22 +370,6 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -1115,22 +1096,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WMInstaller
-
-Indicates that the deployment type detects application information and deployment types from a Windows Mobile cabinet (.cab) file.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: AddDeploymentTypeByWMInstaller
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -WebAppInstaller
 
 Indicates that this cmdlet uses a web application installer for the deployment.
@@ -1143,23 +1108,6 @@ Aliases:
 Required: True
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WhatIf
-
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -1218,6 +1166,55 @@ Aliases: DeeplinkInstaller
 Required: True
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WMInstaller
+
+Indicates that the deployment type detects application information and deployment types from a Windows Mobile cabinet (.cab) file.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: AddDeploymentTypeByWMInstaller
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

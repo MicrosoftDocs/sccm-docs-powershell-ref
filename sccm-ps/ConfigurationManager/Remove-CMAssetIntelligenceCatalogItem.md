@@ -1,4 +1,4 @@
----
+﻿---
 description: Removes an item from the Asset Intelligence catalog.
 external help file: AdminUI.PS.AssetIntelligence.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,7 +16,7 @@ Removes an item from the Asset Intelligence catalog.
 
 ### SearchByValueMandatory (Default)
 ```
-Remove-CMAssetIntelligenceCatalogItem -InputObject <IResultObject> [-Force] [-DisableWildcardHandling]
+Remove-CMAssetIntelligenceCatalogItem [-Force] -InputObject <IResultObject> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -28,7 +28,7 @@ Remove-CMAssetIntelligenceCatalogItem -CategoryName <String> [-Force] [-DisableW
 
 ### SearchByIdMandatory
 ```
-Remove-CMAssetIntelligenceCatalogItem -Id <String> [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Remove-CMAssetIntelligenceCatalogItem [-Force] -Id <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -68,21 +68,6 @@ Aliases:
 Required: True
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -160,6 +145,21 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

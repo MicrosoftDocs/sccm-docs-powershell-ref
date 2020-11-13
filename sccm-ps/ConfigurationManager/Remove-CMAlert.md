@@ -1,4 +1,4 @@
----
+﻿---
 description: Removes Configuration Manager alerts.
 external help file: AdminUI.PS.Alerts.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,19 +16,19 @@ Removes Configuration Manager alerts.
 
 ### SearchByValueMandatory (Default)
 ```
-Remove-CMAlert -InputObject <IResultObject> [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Remove-CMAlert [-Force] -InputObject <IResultObject> [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory
 ```
-Remove-CMAlert -Id <String> [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+Remove-CMAlert [-Force] -Id <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ### SearchByNameMandatory
 ```
-Remove-CMAlert -Name <String> [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+Remove-CMAlert [-Force] -Name <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
@@ -60,21 +60,6 @@ The first command gets a **CMAlert** object that has the ID 16777221, and then s
 The second command removes the alert stored in the $AlertObj variable.
 
 ## PARAMETERS
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -DisableWildcardHandling
 DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
@@ -166,6 +151,21 @@ Aliases:
 Required: True
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

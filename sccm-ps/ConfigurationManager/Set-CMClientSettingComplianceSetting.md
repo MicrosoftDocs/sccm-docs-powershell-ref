@@ -1,4 +1,4 @@
----
+﻿---
 description: Sets a client setting compliance setting.
 external help file: AdminUI.PS.ClientSettings.dll-Help.xml
 Module Name: ConfigurationManager
@@ -22,9 +22,9 @@ Set-CMClientSettingComplianceSetting [-Enable <Boolean>] [-EnableUserDataAndProf
 
 ### SetDefaultSetting
 ```
-Set-CMClientSettingComplianceSetting [-Schedule <IResultObject>] [-Enable <Boolean>]
- [-EnableUserDataAndProfile <Boolean>] [-DefaultSetting] [-PassThru] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMClientSettingComplianceSetting [-Enable <Boolean>] [-EnableUserDataAndProfile <Boolean>]
+ [-Schedule <IResultObject>] [-DefaultSetting] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetCustomSettingByValue
@@ -49,21 +49,6 @@ PS XYZ:\>
 ```
 
 ## PARAMETERS
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -DefaultSetting
 ```yaml
@@ -180,6 +165,21 @@ Accept wildcard characters: False
 Type: IResultObject
 Parameter Sets: SetDefaultSetting
 Aliases: EvaluationSchedule
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
 
 Required: False
 Position: Named

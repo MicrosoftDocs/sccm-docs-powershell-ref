@@ -1,4 +1,4 @@
----
+﻿---
 description: Modifies settings for a Configuration Manager filter rule for status messages.
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -15,14 +15,14 @@ Modifies settings for a Configuration Manager filter rule for status messages.
 ## SYNTAX
 
 ```
-Set-CMStatusFilterRule [-SiteCode <String>] -Name <String> [-Priority <PriorityChangeType>] [-Source <String>]
- [-StatusFilterRuleSiteCode <String>] [-SiteSystemServerName <String>] [-ComponentName <String>]
- [-MessageType <MessageType>] [-SeverityType <SeverityType>] [-MessageId <Int32>] [-PropertyId <String>]
- [-PropertyValue <String>] [-WriteToDatabase <Boolean>] [-AllowDeleteAfterDays <Int32>]
- [-ReportToEventLog <Boolean>] [-ReplicateToParentSite <Boolean>] [-ReplicationPriority <ReplicationPriority>]
- [-RunProgram <Boolean>] [-ProgramPath <String>] [-ForwardToStatusSummarizer <Boolean>]
- [-ProcessLowerPriorityRule <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Set-CMStatusFilterRule [-AllowDeleteAfterDays <Int32>] [-ComponentName <String>]
+ [-ForwardToStatusSummarizer <Boolean>] [-MessageId <Int32>] [-MessageType <MessageType>] -Name <String>
+ [-Priority <PriorityChangeType>] [-ProcessLowerPriorityRule <Boolean>] [-ProgramPath <String>]
+ [-PropertyId <String>] [-PropertyValue <String>] [-ReplicateToParentSite <Boolean>]
+ [-ReplicationPriority <ReplicationPriority>] [-ReportToEventLog <Boolean>] [-RunProgram <Boolean>]
+ [-SeverityType <SeverityType>] [-SiteCode <String>] [-SiteSystemServerName <String>] [-Source <String>]
+ [-StatusFilterRuleSiteCode <String>] [-WriteToDatabase <Boolean>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -76,21 +76,6 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -426,22 +411,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -WriteToDatabase
 Indicates whether to write a message to the database.
 Specify a value of $True for this parameter to enable the *AllowUserDeleteMessagesAfterThresholdDays* parameter.
@@ -458,6 +427,37 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
@@ -467,7 +467,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-###  
+### 
 
 ## NOTES
 

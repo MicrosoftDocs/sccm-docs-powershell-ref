@@ -1,4 +1,4 @@
----
+﻿---
 description: Creates a custom security role.
 external help file: AdminUI.PS.Rba.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,20 +16,20 @@ Creates a custom security role.
 
 ### CopyFromId (Default)
 ```
-Copy-CMSecurityRole -SourceRoleId <String> -Name <String> [-Description <String>] [-DisableWildcardHandling]
+Copy-CMSecurityRole [-Description <String>] -Name <String> -SourceRoleId <String> [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### CopyFromName
+```
+Copy-CMSecurityRole [-Description <String>] -Name <String> -SourceRoleName <String> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### CopyFromValue
 ```
-Copy-CMSecurityRole -InputObject <IResultObject> -Name <String> [-Description <String>]
+Copy-CMSecurityRole [-Description <String>] -InputObject <IResultObject> -Name <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### CopyFromName
-```
-Copy-CMSecurityRole -Name <String> [-Description <String>] -SourceRoleName <String> [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -69,21 +69,6 @@ The first command gets the security role named Software Update Manager and store
 The second command creates a new security role named SecRole02 by copying the object stored in $Srole.
 
 ## PARAMETERS
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -Description
 Specifies the description of a security role.
@@ -187,6 +172,21 @@ Aliases:
 Required: True
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

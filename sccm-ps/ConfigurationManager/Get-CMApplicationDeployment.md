@@ -1,4 +1,4 @@
----
+﻿---
 description: Gets an application deployment.
 external help file: AdminUI.PS.Deployments.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,28 +16,28 @@ Gets an application deployment.
 
 ### SearchByName (Default)
 ```
-Get-CMApplicationDeployment [-Name <String>] [-Summary] [-CollectionName <String>] [-CollectionId <String>]
- [-Collection <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
-```
-
-### SearchById
-```
-Get-CMApplicationDeployment [-SmsObjectId <Int32>] [-Summary] [-CollectionName <String>]
- [-CollectionId <String>] [-Collection <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [<CommonParameters>]
+Get-CMApplicationDeployment [-Name <String>] [-Summary] [-Collection <IResultObject>] [-CollectionId <String>]
+ [-CollectionName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ### SearchByDeploymentId
 ```
-Get-CMApplicationDeployment [-DeploymentId <String>] [-Summary] [-CollectionName <String>]
- [-CollectionId <String>] [-Collection <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Get-CMApplicationDeployment [-DeploymentId <String>] [-Summary] [-Collection <IResultObject>]
+ [-CollectionId <String>] [-CollectionName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [<CommonParameters>]
 ```
 
 ### SearchByValue
 ```
-Get-CMApplicationDeployment [-InputObject <IResultObject>] [-Summary] [-CollectionName <String>]
- [-CollectionId <String>] [-Collection <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Get-CMApplicationDeployment [-InputObject <IResultObject>] [-Summary] [-Collection <IResultObject>]
+ [-CollectionId <String>] [-CollectionName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [<CommonParameters>]
+```
+
+### SearchById
+```
+Get-CMApplicationDeployment [-SmsObjectId <Int32>] [-Summary] [-Collection <IResultObject>]
+ [-CollectionId <String>] [-CollectionName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [<CommonParameters>]
 ```
 

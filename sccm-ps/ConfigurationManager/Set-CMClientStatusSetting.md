@@ -1,4 +1,4 @@
----
+﻿---
 description: Modifies client status settings.
 external help file: AdminUI.PS.ClientStatus.dll-Help.xml
 Module Name: ConfigurationManager
@@ -15,10 +15,10 @@ Modifies client status settings.
 ## SYNTAX
 
 ```
-Set-CMClientStatusSetting [-ClientPolicyDays <Int32>] [-HeartbeatDiscoveryDays <Int32>]
- [-HardwareInventoryDays <Int32>] [-SoftwareInventoryDays <Int32>] [-StatusMessageDays <Int32>]
- [-HistoryCleanupDays <Int32>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Set-CMClientStatusSetting [-ClientPolicyDays <Int32>] [-HardwareInventoryDays <Int32>]
+ [-HeartbeatDiscoveryDays <Int32>] [-HistoryCleanupDays <Int32>] [-PassThru] [-SoftwareInventoryDays <Int32>]
+ [-StatusMessageDays <Int32>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -59,21 +59,6 @@ Aliases: PolicyInactiveInterval, ClientPolicyDayInterval
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -185,6 +170,21 @@ Aliases: StatusInactiveInterval, StatusMessageDayInterval
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

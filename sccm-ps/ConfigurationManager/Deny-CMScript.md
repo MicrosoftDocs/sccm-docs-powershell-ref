@@ -1,4 +1,4 @@
----
+﻿---
 description: Denies a Configuration Manager PowerShell script.
 external help file: AdminUI.PS.ClientOperations.dll-Help.xml
 Module Name: ConfigurationManager
@@ -17,13 +17,13 @@ Denies a Configuration Manager PowerShell script.
 
 ### ByScript
 ```
-Deny-CMScript -InputObject <IResultObject> [-Comment <String>] [-DisableWildcardHandling]
+Deny-CMScript [-Comment <String>] -InputObject <IResultObject> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByScriptId
 ```
-Deny-CMScript -ScriptGuid <String> [-Comment <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Deny-CMScript [-Comment <String>] -ScriptGuid <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -68,22 +68,6 @@ Specifies a comment about the denial of the script.
 Type: String
 Parameter Sets: (All)
 Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
 
 Required: False
 Position: Named
@@ -151,6 +135,22 @@ Parameter Sets: ByScriptId
 Aliases:
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False

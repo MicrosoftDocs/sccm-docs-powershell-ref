@@ -1,4 +1,4 @@
----
+﻿---
 description: Creates a new program in Configuration Manager.
 external help file: AdminUI.PS.AppModel.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,38 +16,40 @@ Creates a new program in Configuration Manager.
 
 ### NewStandardProgram (Default)
 ```
-New-CMProgram [-DriveLetter <String>] [-WorkingDirectory <String>] -CommandLine <String>
- [-DiskSpaceRequirement <String>] [-Duration <Int32>] -PackageName <String> -StandardProgramName <String>
- [-RunType <RunType>] [-ProgramRunType <ProgramRunType>] [-RunMode <RunModeType>] [-UserInteraction <Boolean>]
- [-Reconnect <Boolean>] [-DriveMode <DriveModeType>] [-DiskSpaceUnit <DiskSpaceUnitType>]
- [-AddSupportedOperatingSystemPlatform <IResultObject[]>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+New-CMProgram [-AddSupportedOperatingSystemPlatform <IResultObject[]>] -CommandLine <String>
+ [-DiskSpaceRequirement <String>] [-DiskSpaceUnit <DiskSpaceUnitType>] [-DriveLetter <String>]
+ [-DriveMode <DriveModeType>] [-Duration <Int32>] -PackageName <String> [-ProgramRunType <ProgramRunType>]
+ [-Reconnect <Boolean>] [-RunMode <RunModeType>] [-RunType <RunType>] -StandardProgramName <String>
+ [-UserInteraction <Boolean>] [-WorkingDirectory <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### NewStandardProgramById
 ```
-New-CMProgram [-DriveLetter <String>] [-WorkingDirectory <String>] -CommandLine <String>
- [-DiskSpaceRequirement <String>] [-Duration <Int32>] -PackageId <String> -StandardProgramName <String>
- [-RunType <RunType>] [-ProgramRunType <ProgramRunType>] [-RunMode <RunModeType>] [-UserInteraction <Boolean>]
- [-Reconnect <Boolean>] [-DriveMode <DriveModeType>] [-DiskSpaceUnit <DiskSpaceUnitType>]
- [-AddSupportedOperatingSystemPlatform <IResultObject[]>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+New-CMProgram [-AddSupportedOperatingSystemPlatform <IResultObject[]>] -CommandLine <String>
+ [-DiskSpaceRequirement <String>] [-DiskSpaceUnit <DiskSpaceUnitType>] [-DriveLetter <String>]
+ [-DriveMode <DriveModeType>] [-Duration <Int32>] -PackageId <String> [-ProgramRunType <ProgramRunType>]
+ [-Reconnect <Boolean>] [-RunMode <RunModeType>] [-RunType <RunType>] -StandardProgramName <String>
+ [-UserInteraction <Boolean>] [-WorkingDirectory <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### NewDeviceProgram
 ```
-New-CMProgram [-WorkingDirectory <String>] -CommandLine <String> [-DiskSpaceRequirement <String>]
- [-Requirement <String>] -PackageName <String> [-DiskSpaceUnit <DiskSpaceUnitType>] -DeviceProgramName <String>
- [-Comment <String>] [-CommandLineFolder <String>] [-DownloadProgramType <DownloadProgramType>]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+New-CMProgram -CommandLine <String> [-CommandLineFolder <String>] [-Comment <String>]
+ -DeviceProgramName <String> [-DiskSpaceRequirement <String>] [-DiskSpaceUnit <DiskSpaceUnitType>]
+ [-DownloadProgramType <DownloadProgramType>] -PackageName <String> [-Requirement <String>]
+ [-WorkingDirectory <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### NewDeviceProgramById
 ```
-New-CMProgram [-WorkingDirectory <String>] -CommandLine <String> [-DiskSpaceRequirement <String>]
- [-Requirement <String>] -PackageId <String> [-DiskSpaceUnit <DiskSpaceUnitType>] -DeviceProgramName <String>
- [-Comment <String>] [-CommandLineFolder <String>] [-DownloadProgramType <DownloadProgramType>]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+New-CMProgram -CommandLine <String> [-CommandLineFolder <String>] [-Comment <String>]
+ -DeviceProgramName <String> [-DiskSpaceRequirement <String>] [-DiskSpaceUnit <DiskSpaceUnitType>]
+ [-DownloadProgramType <DownloadProgramType>] -PackageId <String> [-Requirement <String>]
+ [-WorkingDirectory <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -135,21 +137,6 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -264,7 +251,7 @@ If *DriveMode* is set to RequiresSpecificDriveLetter, the program only runs if t
 Type: DriveModeType
 Parameter Sets: NewStandardProgram, NewStandardProgramById
 Aliases:
-Accepted values: RenameWithUnc, RequiresDriveLetter, RequiresSpecificDriveLetter
+Accepted values: RunWithUnc, RequiresDriveLetter, RequiresSpecificDriveLetter
 
 Required: False
 Position: Named
@@ -456,6 +443,36 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -WorkingDirectory
+Specifies a working directory for the program.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
@@ -468,21 +485,6 @@ Aliases: wi
 Required: False
 Position: Named
 Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WorkingDirectory
-Specifies a working directory for the program.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

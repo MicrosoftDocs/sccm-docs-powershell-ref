@@ -1,4 +1,4 @@
----
+﻿---
 description: Creates capture media.
 external help file: AdminUI.PS.Osd.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,8 +16,9 @@ Creates capture media.
 
 ```
 New-CMCaptureMedia [-AllowUacPrompt] -BootImage <IResultObject> -DistributionPoint <IResultObject[]> [-Force]
- [-FormatMedia] -MediaType <MediaInputType> -Path <String> [-TemporaryFolder <String>] [-NoAutoRun]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-FormatMedia] [-SiteCode <String>] -MediaType <MediaInputType> [-NoAutoRun] -Path <String>
+ [-TemporaryFolder <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -74,21 +75,6 @@ Aliases: BootImagePackage
 Required: True
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -221,6 +207,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -SiteCode
+{{ Fill SiteCode Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -TemporaryFolder
 {{ Fill TemporaryFolder Description }}
 
@@ -232,6 +233,21 @@ Aliases: TemporaryDirectory, StagingArea
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

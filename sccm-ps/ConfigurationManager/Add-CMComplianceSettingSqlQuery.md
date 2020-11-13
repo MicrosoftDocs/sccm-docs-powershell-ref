@@ -1,4 +1,4 @@
----
+﻿---
 description: Adds a compliance setting sql query.
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 Module Name: ConfigurationManager
@@ -17,7 +17,7 @@ Adds a compliance setting sql query
 ### EmptyRule (Default)
 ```
 Add-CMComplianceSettingSqlQuery -ColumnName <String> -DatabaseName <String> -DataType <SettingDataType>
- [-InstanceType <TargetSqlInstance>] [-InstanceName <String>] [-SqlStatementFile <String>]
+ [-InstanceName <String>] [-InstanceType <TargetSqlInstance>] [-SqlStatementFile <String>]
  [-SqlStatementText <String>] [-Description <String>] -InputObject <PSObject> -Name <String> [-NoRule]
  [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
@@ -25,22 +25,23 @@ Add-CMComplianceSettingSqlQuery -ColumnName <String> -DatabaseName <String> -Dat
 ### ExistentialRule
 ```
 Add-CMComplianceSettingSqlQuery -ColumnName <String> -DatabaseName <String> -DataType <SettingDataType>
- [-InstanceType <TargetSqlInstance>] [-InstanceName <String>] [-SqlStatementFile <String>]
+ [-InstanceName <String>] [-InstanceType <TargetSqlInstance>] [-SqlStatementFile <String>]
  [-SqlStatementText <String>] [-Description <String>] -Existence <ExistenceType> [-ExistentialRule]
  [-ExpectedValue <String[]>] [-ExpressionOperator <RuleExpressionOperator>] -InputObject <PSObject>
- -Name <String> [-NoncomplianceSeverity <NoncomplianceSeverity>] [-RuleDescription <String>] -RuleName <String>
- [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ -Name <String> [-NoncomplianceSeverity <NoncomplianceSeverity>] [-PassThru] [-RuleDescription <String>]
+ -RuleName <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### ValueRule
 ```
 Add-CMComplianceSettingSqlQuery -ColumnName <String> -DatabaseName <String> -DataType <SettingDataType>
- [-InstanceType <TargetSqlInstance>] [-InstanceName <String>] [-SqlStatementFile <String>]
+ [-InstanceName <String>] [-InstanceType <TargetSqlInstance>] [-SqlStatementFile <String>]
  [-SqlStatementText <String>] [-Description <String>] -ExpectedValue <String[]>
  -ExpressionOperator <RuleExpressionOperator> -InputObject <PSObject> -Name <String>
- [-NoncomplianceSeverity <NoncomplianceSeverity>] [-ReportNoncompliance] [-RuleDescription <String>]
- -RuleName <String> [-ValueRule] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+ [-NoncomplianceSeverity <NoncomplianceSeverity>] [-PassThru] [-ReportNoncompliance]
+ [-RuleDescription <String>] -RuleName <String> [-ValueRule] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -72,15 +73,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
+### -DatabaseName
 ```yaml
-Type: SwitchParameter
+Type: String
 Parameter Sets: (All)
-Aliases: cf
+Aliases:
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -93,19 +92,6 @@ Type: SettingDataType
 Parameter Sets: (All)
 Aliases:
 Accepted values: String, DateTime, Integer, FloatingPoint, Version, Boolean
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DatabaseName
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
 
 Required: True
 Position: Named
@@ -289,11 +275,12 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -NoRule
+### -NoncomplianceSeverity
 ```yaml
-Type: SwitchParameter
-Parameter Sets: EmptyRule
-Aliases: NoRules
+Type: NoncomplianceSeverity
+Parameter Sets: ExistentialRule, ValueRule
+Aliases:
+Accepted values: None, Informational, Warning, Critical, CriticalWithEvent
 
 Required: False
 Position: Named
@@ -302,12 +289,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -NoncomplianceSeverity
+### -NoRule
 ```yaml
-Type: NoncomplianceSeverity
-Parameter Sets: ExistentialRule, ValueRule
-Aliases:
-Accepted values: None, Informational, Warning, Critical, CriticalWithEvent
+Type: SwitchParameter
+Parameter Sets: EmptyRule
+Aliases: NoRules
 
 Required: False
 Position: Named
@@ -403,6 +389,21 @@ Parameter Sets: ValueRule
 Aliases:
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False

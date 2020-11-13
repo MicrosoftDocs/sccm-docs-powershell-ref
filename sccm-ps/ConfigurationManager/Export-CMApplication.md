@@ -1,4 +1,4 @@
----
+﻿---
 description: Exports an application.
 external help file: AdminUI.PS.AppMan.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,20 +16,19 @@ Exports an application.
 
 ### SearchByValueMandatory (Default)
 ```
-Export-CMApplication -InputObject <IResultObject> -Path <String> [-IgnoreRelated] [-OmitContent]
- [-Comment <String>] [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
-```
-
-### SearchByNameMandatory
-```
-Export-CMApplication -Name <String> -Path <String> [-IgnoreRelated] [-OmitContent] [-Comment <String>] [-Force]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Export-CMApplication [-Comment <String>] [-Force] [-IgnoreRelated] -InputObject <IResultObject> [-OmitContent]
+ -Path <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory
 ```
-Export-CMApplication -Id <Int32> -Path <String> [-IgnoreRelated] [-OmitContent] [-Comment <String>] [-Force]
+Export-CMApplication [-Comment <String>] [-Force] -Id <Int32> [-IgnoreRelated] [-OmitContent] -Path <String>
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SearchByNameMandatory
+```
+Export-CMApplication [-Comment <String>] [-Force] [-IgnoreRelated] -Name <String> [-OmitContent] -Path <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -74,21 +73,6 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -226,6 +210,21 @@ Aliases:
 Required: True
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

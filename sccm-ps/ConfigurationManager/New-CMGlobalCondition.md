@@ -1,4 +1,4 @@
----
+﻿---
 description: Creates a Configuration Manager global condition object.
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 Module Name: ConfigurationManager
@@ -17,112 +17,111 @@ Creates a Configuration Manager global condition object.
 
 ### NewADQuery (Default)
 ```
-New-CMGlobalCondition -Name <String> [-Description <String>] -DeviceType <GlobalConditionDeviceType>
- -DataType <GlobalConditionDataType> [-LdapPrefix <String>] -DistinguishedName <String> -LdapFilter <String>
- -SearchScope <SearchScope> -Property <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
-```
-
-### NewIisMetabase
-```
-New-CMGlobalCondition -Name <String> [-Description <String>] -DeviceType <GlobalConditionDeviceType>
- -DataType <GlobalConditionDataType> [-MetabasePath <String>] -PropertyId <String> [-DisableWildcardHandling]
+New-CMGlobalCondition -DataType <GlobalConditionDataType> [-Description <String>]
+ -DeviceType <GlobalConditionDeviceType> -DistinguishedName <String> -LdapFilter <String>
+ [-LdapPrefix <String>] -Name <String> -Property <String> -SearchScope <SearchScope> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### NewRegistryValue
-```
-New-CMGlobalCondition -Name <String> [-Description <String>] -DeviceType <GlobalConditionDeviceType>
- -DataType <GlobalConditionDataType> [-Is64Bit <Boolean>] -RegistryHive <RegistryRootKey> -KeyName <String>
- -ValueName <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
-```
-
-### NewScript
-```
-New-CMGlobalCondition -Name <String> [-Description <String>] -DeviceType <GlobalConditionDeviceType>
- -DataType <GlobalConditionDataType> -FilePath <String> -ScriptLanguage <ScriptingLanguage>
- [-UseLoggedOnUserCredential <Boolean>] [-Use32BitHost <Boolean>] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### NewSqlQueryDefaultInstance
-```
-New-CMGlobalCondition -Name <String> [-Description <String>] -DeviceType <GlobalConditionDeviceType>
- -DataType <GlobalConditionDataType> -FilePath <String> [-DefaultInstance] -Database <String> -Column <String>
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### NewSqlQueryAllInstances
 ```
-New-CMGlobalCondition -Name <String> [-Description <String>] -DeviceType <GlobalConditionDeviceType>
- -DataType <GlobalConditionDataType> -FilePath <String> [-AllInstances] -Database <String> -Column <String>
+New-CMGlobalCondition [-AllInstances] -Column <String> -Database <String> -DataType <GlobalConditionDataType>
+ [-Description <String>] -DeviceType <GlobalConditionDeviceType> -FilePath <String> -Name <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### NewSqlQuerySpecificInstance
-```
-New-CMGlobalCondition -Name <String> [-Description <String>] -DeviceType <GlobalConditionDeviceType>
- -DataType <GlobalConditionDataType> -FilePath <String> -InstanceName <String> -Database <String>
- -Column <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### NewWqlQuery
-```
-New-CMGlobalCondition -Name <String> [-Description <String>] -DeviceType <GlobalConditionDeviceType>
- -DataType <GlobalConditionDataType> -Property <String> [-Namespace <String>] -Class <String>
- [-WhereClause <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
-```
-
-### NewXPathQuery
-```
-New-CMGlobalCondition -Name <String> [-Description <String>] -DeviceType <GlobalConditionDeviceType>
- -DataType <GlobalConditionDataType> -FilePath <String> [-IncludeSubfolder <Boolean>] [-Is64Bit <Boolean>]
- [-XmlNamespace <String[]>] -XPathQuery <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
-```
-
-### NewXPathQueryFromFile
-```
-New-CMGlobalCondition -Name <String> [-Description <String>] -DeviceType <GlobalConditionDeviceType>
- -DataType <GlobalConditionDataType> -FilePath <String> -XmlFilePath <String> [-IncludeSubfolder <Boolean>]
- [-Is64Bit <Boolean>] [-XmlNamespace <String[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
-```
-
-### NewOmaUri
-```
-New-CMGlobalCondition -Name <String> [-Description <String>] -DeviceType <GlobalConditionDeviceType>
- -DataType <GlobalConditionDataType> -OmaUri <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### NewAssembly
 ```
-New-CMGlobalCondition -Name <String> [-Description <String>] -DeviceType <GlobalConditionDeviceType>
- -AssemblyName <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+New-CMGlobalCondition -AssemblyName <String> [-Description <String>] -DeviceType <GlobalConditionDeviceType>
+ -Name <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### NewWqlQuery
+```
+New-CMGlobalCondition -Class <String> -DataType <GlobalConditionDataType> [-Description <String>]
+ -DeviceType <GlobalConditionDeviceType> -Name <String> [-Namespace <String>] -Property <String>
+ [-WhereClause <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
+```
+
+### NewSqlQueryDefaultInstance
+```
+New-CMGlobalCondition -Column <String> -Database <String> -DataType <GlobalConditionDataType>
+ [-DefaultInstance] [-Description <String>] -DeviceType <GlobalConditionDeviceType> -FilePath <String>
+ -Name <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### NewSqlQuerySpecificInstance
+```
+New-CMGlobalCondition -Column <String> -Database <String> -DataType <GlobalConditionDataType>
+ [-Description <String>] -DeviceType <GlobalConditionDeviceType> -FilePath <String> -InstanceName <String>
+ -Name <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### NewIisMetabase
+```
+New-CMGlobalCondition -DataType <GlobalConditionDataType> [-Description <String>]
+ -DeviceType <GlobalConditionDeviceType> [-MetabasePath <String>] -Name <String> -PropertyId <String>
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### NewRegistryValue
+```
+New-CMGlobalCondition -DataType <GlobalConditionDataType> [-Description <String>]
+ -DeviceType <GlobalConditionDeviceType> [-Is64Bit <Boolean>] -KeyName <String> -Name <String>
+ -RegistryHive <RegistryRootKey> -ValueName <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### NewScript
+```
+New-CMGlobalCondition -DataType <GlobalConditionDataType> [-Description <String>]
+ -DeviceType <GlobalConditionDeviceType> -FilePath <String> -Name <String> -ScriptLanguage <ScriptingLanguage>
+ [-Use32BitHost <Boolean>] [-UseLoggedOnUserCredential <Boolean>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### NewXPathQuery
+```
+New-CMGlobalCondition -DataType <GlobalConditionDataType> [-Description <String>]
+ -DeviceType <GlobalConditionDeviceType> -FilePath <String> [-IncludeSubfolder <Boolean>] [-Is64Bit <Boolean>]
+ -Name <String> [-XmlNamespace <String[]>] -XPathQuery <String> [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### NewXPathQueryFromFile
+```
+New-CMGlobalCondition -DataType <GlobalConditionDataType> [-Description <String>]
+ -DeviceType <GlobalConditionDeviceType> -FilePath <String> [-IncludeSubfolder <Boolean>] [-Is64Bit <Boolean>]
+ -Name <String> -XmlFilePath <String> [-XmlNamespace <String[]>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### NewOmaUri
+```
+New-CMGlobalCondition -DataType <GlobalConditionDataType> [-Description <String>]
+ -DeviceType <GlobalConditionDeviceType> -Name <String> -OmaUri <String> [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### NewFileSystem
 ```
-New-CMGlobalCondition -Name <String> [-Description <String>] -DeviceType <GlobalConditionDeviceType>
- [-IsFolder] -Path <String> -FileOrFolderName <String> [-IncludeSubfolder <Boolean>] [-Is64Bit <Boolean>]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+New-CMGlobalCondition [-Description <String>] -DeviceType <GlobalConditionDeviceType>
+ -FileOrFolderName <String> [-IncludeSubfolder <Boolean>] [-Is64Bit <Boolean>] [-IsFolder] -Name <String>
+ -Path <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### NewFileSystemFile
 ```
-New-CMGlobalCondition -Name <String> [-Description <String>] -DeviceType <GlobalConditionDeviceType>
- -FilePath <String> [-IncludeSubfolder <Boolean>] [-Is64Bit <Boolean>] [-DisableWildcardHandling]
+New-CMGlobalCondition [-Description <String>] -DeviceType <GlobalConditionDeviceType> -FilePath <String>
+ [-IncludeSubfolder <Boolean>] [-Is64Bit <Boolean>] -Name <String> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### NewRegistryKey
 ```
-New-CMGlobalCondition -Name <String> [-Description <String>] -DeviceType <GlobalConditionDeviceType>
- [-Is64Bit <Boolean>] -RegistryHive <RegistryRootKey> -KeyName <String> [-DisableWildcardHandling]
+New-CMGlobalCondition [-Description <String>] -DeviceType <GlobalConditionDeviceType> [-Is64Bit <Boolean>]
+ -KeyName <String> -Name <String> -RegistryHive <RegistryRootKey> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -207,7 +206,7 @@ Specifies the column name used to assess the compliance of the global condition.
 
 ```yaml
 Type: String
-Parameter Sets: NewSqlQueryDefaultInstance, NewSqlQueryAllInstances, NewSqlQuerySpecificInstance
+Parameter Sets: NewSqlQueryAllInstances, NewSqlQueryDefaultInstance, NewSqlQuerySpecificInstance
 Aliases:
 
 Required: True
@@ -217,18 +216,19 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
+### -Database
 
-Prompts you for confirmation before running the cmdlet.
+Specifies the name of a database.
+The SQL query runs on this database.
 
 ```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
+Type: String
+Parameter Sets: NewSqlQueryAllInstances, NewSqlQueryDefaultInstance, NewSqlQuerySpecificInstance
+Aliases:
 
-Required: False
+Required: True
 Position: Named
-Default value: False
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -249,26 +249,9 @@ The acceptable values for this parameter are:
 
 ```yaml
 Type: GlobalConditionDataType
-Parameter Sets: NewADQuery, NewIisMetabase, NewRegistryValue, NewScript, NewSqlQueryDefaultInstance, NewSqlQueryAllInstances, NewSqlQuerySpecificInstance, NewWqlQuery, NewXPathQuery, NewXPathQueryFromFile, NewOmaUri
+Parameter Sets: NewADQuery, NewSqlQueryAllInstances, NewWqlQuery, NewSqlQueryDefaultInstance, NewSqlQuerySpecificInstance, NewIisMetabase, NewRegistryValue, NewScript, NewXPathQuery, NewXPathQueryFromFile, NewOmaUri
 Aliases:
 Accepted values: String, DateTime, Integer, FloatingPoint, Version, Boolean, StringArray, IntegerArray, Base64, Xml
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Database
-
-Specifies the name of a database.
-The SQL query runs on this database.
-
-```yaml
-Type: String
-Parameter Sets: NewSqlQueryDefaultInstance, NewSqlQueryAllInstances, NewSqlQuerySpecificInstance
-Aliases:
 
 Required: True
 Position: Named
@@ -383,7 +366,7 @@ Specifies a file path for the file that the condition assesses for compliance.
 
 ```yaml
 Type: String
-Parameter Sets: NewScript, NewSqlQueryDefaultInstance, NewSqlQueryAllInstances, NewSqlQuerySpecificInstance, NewXPathQuery, NewXPathQueryFromFile, NewFileSystemFile
+Parameter Sets: NewSqlQueryAllInstances, NewSqlQueryDefaultInstance, NewSqlQuerySpecificInstance, NewScript, NewXPathQuery, NewXPathQueryFromFile, NewFileSystemFile
 Aliases:
 
 Required: True
@@ -753,23 +736,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhatIf
-
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -WhereClause
 
 Specifies a WQL query WHERE clause to apply to the specified namespace, class, and property on client computers.
@@ -780,22 +746,6 @@ Parameter Sets: NewWqlQuery
 Aliases:
 
 Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -XPathQuery
-
-Specifies a XPath query.
-
-```yaml
-Type: String
-Parameter Sets: NewXPathQuery
-Aliases:
-
-Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -830,6 +780,55 @@ Aliases: XmlNamespaces
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -XPathQuery
+
+Specifies a XPath query.
+
+```yaml
+Type: String
+Parameter Sets: NewXPathQuery
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

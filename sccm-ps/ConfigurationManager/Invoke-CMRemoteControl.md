@@ -1,4 +1,4 @@
----
+﻿---
 description: Enables remote control on computers.
 external help file: AdminUI.PS.Oob.dll-Help.xml
 Module Name: ConfigurationManager
@@ -20,10 +20,10 @@ Invoke-CMRemoteControl -InputObject <IResultObject> [-PassThru] [-DisableWildcar
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### InvokeSiteStatusByNameMandatory
+### InvokeDeviceByIdMandatory
 ```
-Invoke-CMRemoteControl -SiteSystemServerName <String> [-SiteSystemRole <String>] [-SiteCode <String>]
- [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Invoke-CMRemoteControl -DeviceId <String> [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### InvokeDeviceByNameMandatory
@@ -32,10 +32,11 @@ Invoke-CMRemoteControl -DeviceName <String> [-PassThru] [-DisableWildcardHandlin
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### InvokeDeviceByIdMandatory
+### InvokeSiteStatusByNameMandatory
 ```
-Invoke-CMRemoteControl -DeviceId <String> [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+Invoke-CMRemoteControl [-PassThru] [-SiteCode <String>] [-SiteSystemRole <String>]
+ -SiteSystemServerName <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -61,21 +62,6 @@ PS XYZ:\>Invoke-CMRemoteControl -DeviceName "CMCEN-DIST02"
 This command enables remote control on the computer named CMCEN-DIST02.
 
 ## PARAMETERS
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -DeviceId
 Specifies an array of device IDs.
@@ -210,6 +196,21 @@ Aliases:
 Required: True
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

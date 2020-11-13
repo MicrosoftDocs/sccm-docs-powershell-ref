@@ -1,4 +1,4 @@
----
+﻿---
 description: Sets a Windows Phone app package deployment type.
 external help file: AdminUI.PS.AppMan.dll-Help.xml
 Module Name: ConfigurationManager
@@ -17,33 +17,33 @@ Sets a Windows Phone app package deployment type.
 ### ByAppName (Default)
 ```
 Set-CMWindowsPhoneDeploymentType [-AddRequirement <Rule[]>] -ApplicationName <String>
- -DeploymentTypeName <String> [-NewName <String>] [-ContentLocation <String>] [-RemoveRequirement <Rule[]>]
- [-RemoveLanguage <String[]>] [-PassThru] [-AddLanguage <String[]>] [-Comment <String>] [-Force]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### ByAppId
-```
-Set-CMWindowsPhoneDeploymentType [-AddRequirement <Rule[]>] -ApplicationId <Int32> -DeploymentTypeName <String>
- [-NewName <String>] [-ContentLocation <String>] [-RemoveRequirement <Rule[]>] [-RemoveLanguage <String[]>]
- [-PassThru] [-AddLanguage <String[]>] [-Comment <String>] [-Force] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-ContentLocation <String>] -DeploymentTypeName <String> [-NewName <String>] [-PassThru]
+ [-RemoveLanguage <String[]>] [-RemoveRequirement <Rule[]>] [-AddLanguage <String[]>] [-Comment <String>]
+ [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByAppValue
 ```
-Set-CMWindowsPhoneDeploymentType [-AddRequirement <Rule[]>] -DeploymentTypeName <String>
- -Application <IResultObject> [-NewName <String>] [-ContentLocation <String>] [-RemoveRequirement <Rule[]>]
- [-RemoveLanguage <String[]>] [-PassThru] [-AddLanguage <String[]>] [-Comment <String>] [-Force]
+Set-CMWindowsPhoneDeploymentType [-AddRequirement <Rule[]>] -Application <IResultObject>
+ [-ContentLocation <String>] -DeploymentTypeName <String> [-NewName <String>] [-PassThru]
+ [-RemoveLanguage <String[]>] [-RemoveRequirement <Rule[]>] [-AddLanguage <String[]>] [-Comment <String>]
+ [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### ByAppId
+```
+Set-CMWindowsPhoneDeploymentType [-AddRequirement <Rule[]>] -ApplicationId <Int32> [-ContentLocation <String>]
+ -DeploymentTypeName <String> [-NewName <String>] [-PassThru] [-RemoveLanguage <String[]>]
+ [-RemoveRequirement <Rule[]>] [-AddLanguage <String[]>] [-Comment <String>] [-Force]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByDTValue
 ```
-Set-CMWindowsPhoneDeploymentType [-AddRequirement <Rule[]>] -InputObject <IResultObject> [-NewName <String>]
- [-ContentLocation <String>] [-RemoveRequirement <Rule[]>] [-RemoveLanguage <String[]>] [-PassThru]
- [-AddLanguage <String[]>] [-Comment <String>] [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMWindowsPhoneDeploymentType [-AddRequirement <Rule[]>] [-ContentLocation <String>]
+ -InputObject <IResultObject> [-NewName <String>] [-PassThru] [-RemoveLanguage <String[]>]
+ [-RemoveRequirement <Rule[]>] [-AddLanguage <String[]>] [-Comment <String>] [-Force]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -167,21 +167,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -ContentLocation
 Specifies the path of the content.
 The site system server must have permissions to read the content files.
@@ -203,7 +188,7 @@ Specifies a display name for this deployment type.
 
 ```yaml
 Type: String
-Parameter Sets: ByAppName, ByAppId, ByAppValue
+Parameter Sets: ByAppName, ByAppValue, ByAppId
 Aliases:
 
 Required: True
@@ -332,6 +317,21 @@ Aliases: RemoveRequirements
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

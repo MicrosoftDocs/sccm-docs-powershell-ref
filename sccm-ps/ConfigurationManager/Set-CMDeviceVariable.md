@@ -1,4 +1,4 @@
----
+﻿---
 description: Modifies a device variable of a Configuration Manager device.
 external help file: AdminUI.PS.Collections.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,23 +16,23 @@ Modifies a device variable of a Configuration Manager device.
 
 ### SetByValueMandatory (Default)
 ```
-Set-CMDeviceVariable -InputObject <IResultObject> -VariableName <String> [-NewVariableName <String>]
- [-NewVariableValue <String>] [-IsMask <Boolean>] [-PassThru] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### SetByIdMandatory
-```
-Set-CMDeviceVariable -ResourceId <String> -VariableName <String> [-NewVariableName <String>]
- [-NewVariableValue <String>] [-IsMask <Boolean>] [-PassThru] [-DisableWildcardHandling]
+Set-CMDeviceVariable -InputObject <IResultObject> [-IsMask <Boolean>] [-NewVariableName <String>]
+ [-NewVariableValue <String>] [-PassThru] -VariableName <String> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByNameMandatory
 ```
-Set-CMDeviceVariable -DeviceName <String> -VariableName <String> [-NewVariableName <String>]
- [-NewVariableValue <String>] [-IsMask <Boolean>] [-PassThru] [-DisableWildcardHandling]
+Set-CMDeviceVariable -DeviceName <String> [-IsMask <Boolean>] [-NewVariableName <String>]
+ [-NewVariableValue <String>] [-PassThru] -VariableName <String> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SetByIdMandatory
+```
+Set-CMDeviceVariable [-IsMask <Boolean>] [-NewVariableName <String>] [-NewVariableValue <String>] [-PassThru]
+ -ResourceId <String> -VariableName <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -56,21 +56,6 @@ This command modifies the device variable ServerIPAddress associated with the de
 In this example, the value of the variable is set to 192.168.100.10.
 
 ## PARAMETERS
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -DeviceName
 Specifies a device name.
@@ -218,6 +203,21 @@ Aliases:
 Required: True
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

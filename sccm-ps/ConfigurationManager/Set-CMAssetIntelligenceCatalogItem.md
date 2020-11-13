@@ -1,4 +1,4 @@
----
+﻿---
 description: Changes the properties of an item in the Asset Intelligence catalog.
 external help file: AdminUI.PS.AssetIntelligence.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,23 +16,23 @@ Changes the properties of an item in the Asset Intelligence catalog.
 
 ### SetById (Default)
 ```
-Set-CMAssetIntelligenceCatalogItem -Id <String> [-NewCategoryName <String>] [-Description <String>]
- [-LanguageId <Int32>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+Set-CMAssetIntelligenceCatalogItem [-Description <String>] -Id <String> [-LanguageId <Int32>]
+ [-NewCategoryName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ### SetByName
 ```
-Set-CMAssetIntelligenceCatalogItem -CategoryName <String> [-NewCategoryName <String>] [-Description <String>]
- [-LanguageId <Int32>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+Set-CMAssetIntelligenceCatalogItem -CategoryName <String> [-Description <String>] [-LanguageId <Int32>]
+ [-NewCategoryName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ### SetByValueMandatory
 ```
-Set-CMAssetIntelligenceCatalogItem -InputObject <IResultObject> [-NewCategoryName <String>]
- [-Description <String>] [-LanguageId <Int32>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Set-CMAssetIntelligenceCatalogItem [-Description <String>] -InputObject <IResultObject> [-LanguageId <Int32>]
+ [-NewCategoryName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -85,21 +85,6 @@ Aliases:
 Required: True
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -207,6 +192,21 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

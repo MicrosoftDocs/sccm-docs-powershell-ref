@@ -1,4 +1,4 @@
----
+﻿---
 description: Approves a request to allow the installation of an application.
 external help file: AdminUI.PS.AppModel.dll-Help.xml
 Module Name: ConfigurationManager
@@ -24,9 +24,9 @@ Approve-CMApprovalRequest [-Comment <String>] -InputObject <IResultObject>
 
 ### SearchByNameMandatory
 ```
-Approve-CMApprovalRequest -ApplicationName <String[]> [-Comment <String>] -User <String>
- [-InstallActionBehavior <ActionBehavior>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Approve-CMApprovalRequest -ApplicationName <String[]> [-Comment <String>]
+ [-InstallActionBehavior <ActionBehavior>] -User <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory
@@ -37,7 +37,7 @@ Approve-CMApprovalRequest [-Comment <String>] -Id <String[]> [-InstallActionBeha
 
 ### SearchByGuid
 ```
-Approve-CMApprovalRequest [-Comment <String>] -RequestGuid <String> [-InstallActionBehavior <ActionBehavior>]
+Approve-CMApprovalRequest [-Comment <String>] [-InstallActionBehavior <ActionBehavior>] -RequestGuid <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -111,22 +111,6 @@ Aliases: Comments
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -240,6 +224,22 @@ Aliases:
 Required: True
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

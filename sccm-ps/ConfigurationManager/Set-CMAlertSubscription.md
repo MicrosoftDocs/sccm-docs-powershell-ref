@@ -1,4 +1,4 @@
----
+﻿---
 description: Changes the properties of an alert subscription.
 external help file: AdminUI.PS.Alerts.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,22 +16,23 @@ Changes the properties of an alert subscription.
 
 ### SetByValueMandatory (Default)
 ```
-Set-CMAlertSubscription -InputObject <IResultObject> [-NewName <String>] [-AlertId <Int32[]>]
- [-EmailAddress <String[]>] [-AddEmailAddress <String[]>] [-RemoveEmailAddress <String[]>] [-LocaleId <Int32>]
- [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMAlertSubscription [-AddEmailAddress <String[]>] [-AlertId <Int32[]>] [-EmailAddress <String[]>]
+ -InputObject <IResultObject> [-LocaleId <Int32>] [-NewName <String>] [-PassThru]
+ [-RemoveEmailAddress <String[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### SetById
 ```
-Set-CMAlertSubscription -Id <String> [-NewName <String>] [-AlertId <Int32[]>] [-EmailAddress <String[]>]
- [-AddEmailAddress <String[]>] [-RemoveEmailAddress <String[]>] [-LocaleId <Int32>] [-PassThru]
+Set-CMAlertSubscription [-AddEmailAddress <String[]>] [-AlertId <Int32[]>] [-EmailAddress <String[]>]
+ -Id <String> [-LocaleId <Int32>] [-NewName <String>] [-PassThru] [-RemoveEmailAddress <String[]>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetByName
 ```
-Set-CMAlertSubscription -Name <String> [-NewName <String>] [-AlertId <Int32[]>] [-EmailAddress <String[]>]
- [-AddEmailAddress <String[]>] [-RemoveEmailAddress <String[]>] [-LocaleId <Int32>] [-PassThru]
+Set-CMAlertSubscription [-AddEmailAddress <String[]>] [-AlertId <Int32[]>] [-EmailAddress <String[]>]
+ [-LocaleId <Int32>] -Name <String> [-NewName <String>] [-PassThru] [-RemoveEmailAddress <String[]>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -111,21 +112,6 @@ Aliases: AlertIds
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -277,6 +263,21 @@ Aliases: RemoveEmailAddresses
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

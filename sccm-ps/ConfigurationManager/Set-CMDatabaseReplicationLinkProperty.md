@@ -1,4 +1,4 @@
----
+﻿---
 description: Changes configuration settings for a database replication link.
 external help file: AdminUI.PS.DatabaseReplication.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,20 +16,19 @@ Changes configuration settings for a database replication link.
 
 ### SetBySiteCodeMandatory (Default)
 ```
-Set-CMDatabaseReplicationLinkProperty -ParentSiteCode <String> -ChildSiteCode <String>
+Set-CMDatabaseReplicationLinkProperty -ChildSiteCode <String> [-DegradedLinkStatusRetryCount <Int32>]
  [-EnableDistributedViewForHardwareInventory <Boolean>] [-EnableDistributedViewForSoftwareInventory <Boolean>]
- [-EnableDistributedViewForStatusMessage <Boolean>] [-ReplicationDataTrafficSummarizationMins <Int32>]
- [-DegradedLinkStatusRetryCount <Int32>] [-FailedLinkStatusRetryCount <Int32>]
- [-GenerateReplicationDownAlert <Boolean>] [-ReplicationDownAlertMins <Int32>] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-EnableDistributedViewForStatusMessage <Boolean>] [-FailedLinkStatusRetryCount <Int32>]
+ [-GenerateReplicationDownAlert <Boolean>] -ParentSiteCode <String>
+ [-ReplicationDataTrafficSummarizationMins <Int32>] [-ReplicationDownAlertMins <Int32>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetScheduleBySiteCodeMandatory
 ```
-Set-CMDatabaseReplicationLinkProperty -ParentSiteCode <String> -ChildSiteCode <String>
- -DaysOfWeek <DaysOfWeek[]> -ReplicationStartHr <Int32> -ReplicationEndHr <Int32>
- -AvailabilityLevel <InvAvailabilityLevel> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Set-CMDatabaseReplicationLinkProperty -AvailabilityLevel <InvAvailabilityLevel> -ChildSiteCode <String>
+ -DaysOfWeek <DaysOfWeek[]> -ParentSiteCode <String> -ReplicationEndHr <Int32> -ReplicationStartHr <Int32>
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -101,21 +100,6 @@ Aliases: Site2
 Required: True
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -329,6 +313,21 @@ Aliases: TimePeriodStart, ReplicationStartHour
 Required: True
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

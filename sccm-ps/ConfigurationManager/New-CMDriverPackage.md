@@ -1,4 +1,4 @@
----
+﻿---
 description: Creates a driver package.
 external help file: AdminUI.PS.Osd.dll-Help.xml
 Module Name: ConfigurationManager
@@ -15,8 +15,8 @@ Creates a driver package.
 ## SYNTAX
 
 ```
-New-CMDriverPackage -Name <String> -Path <String> [-Description <String>] [-DriverManufacturer <String>]
- [-DriverModel <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+New-CMDriverPackage [-Description <String>] [-DriverManufacturer <String>] [-DriverModel <String>]
+ -Name <String> -Path <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
@@ -38,21 +38,6 @@ PS XYZ:\> New-CMDriverPackage -Name "Pckg01" -Path "\\Contoso01\Users\pattifulle
 This command creates a new driver package named Pckg01.
 
 ## PARAMETERS
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -Description
 Specifies a description of a driver package.
@@ -156,6 +141,21 @@ Aliases: PackageSourcePath
 Required: True
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

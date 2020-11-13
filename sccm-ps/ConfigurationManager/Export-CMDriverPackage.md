@@ -1,4 +1,4 @@
----
+﻿---
 description: Exports driver packages.
 external help file: AdminUI.PS.Osd.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,22 +16,22 @@ Exports driver packages.
 
 ### SearchPackageByNameMandatory (Default)
 ```
-Export-CMDriverPackage -Name <String> -ExportFilePath <String> [-WithDependence <Boolean>]
- [-WithContent <Boolean>] [-Comment <String>] [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Export-CMDriverPackage [-Comment <String>] -ExportFilePath <String> [-Force] -Name <String>
+ [-WithContent <Boolean>] [-WithDependence <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByValueMandatory
 ```
-Export-CMDriverPackage -InputObject <IResultObject> -ExportFilePath <String> [-WithDependence <Boolean>]
- [-WithContent <Boolean>] [-Comment <String>] [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Export-CMDriverPackage [-Comment <String>] -ExportFilePath <String> [-Force] -InputObject <IResultObject>
+ [-WithContent <Boolean>] [-WithDependence <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchPackageByIdMandatory
 ```
-Export-CMDriverPackage -Id <String> -ExportFilePath <String> [-WithDependence <Boolean>]
- [-WithContent <Boolean>] [-Comment <String>] [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Export-CMDriverPackage [-Comment <String>] -ExportFilePath <String> [-Force] -Id <String>
+ [-WithContent <Boolean>] [-WithDependence <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -63,21 +63,6 @@ Aliases: Comments
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -188,22 +173,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -WithContent
 Specifies whether to export the content files for the driver packages and drivers.
 
@@ -230,6 +199,37 @@ Aliases: ExportAssociateDrivers
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

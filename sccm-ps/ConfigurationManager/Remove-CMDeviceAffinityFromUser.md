@@ -1,4 +1,4 @@
----
+﻿---
 description: Removes device affinity from a Configuration Manager user.
 external help file: AdminUI.PS.Collections.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,13 +16,13 @@ Removes device affinity from a Configuration Manager user.
 
 ### RemoveDeviceAffinityByUserName (Default)
 ```
-Remove-CMDeviceAffinityFromUser -UserName <String[]> [-DeviceId <Int32[]>] [-DeviceName <String[]>] [-Force]
+Remove-CMDeviceAffinityFromUser [-DeviceId <Int32[]>] [-DeviceName <String[]>] [-Force] -UserName <String[]>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### RemoveDeviceAffinityByUserId
 ```
-Remove-CMDeviceAffinityFromUser -UserId <Int32> [-DeviceId <Int32[]>] [-DeviceName <String[]>] [-Force]
+Remove-CMDeviceAffinityFromUser [-DeviceId <Int32[]>] [-DeviceName <String[]>] [-Force] -UserId <Int32>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -50,21 +50,6 @@ PS XYZ:\> Remove-CMDeviceAffinityFromUser -UserName "Patti Fuller" -DeviceName "
 This command adds affinity to the device named WestDivUpdates05 for the user named Patti Fuller.
 
 ## PARAMETERS
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -DeviceId
 Specifies a device by using an ID.
@@ -165,6 +150,21 @@ Aliases: UniqueUserName
 Required: True
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

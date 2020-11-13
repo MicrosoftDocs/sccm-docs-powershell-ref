@@ -1,4 +1,4 @@
----
+﻿---
 description: Removes a Configuration Manager package.
 external help file: AdminUI.PS.AppModel.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,19 +16,19 @@ Removes a Configuration Manager package.
 
 ### SearchByValue (Default)
 ```
-Remove-CMPackage -InputObject <IResultObject> [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Remove-CMPackage [-Force] -InputObject <IResultObject> [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory
 ```
-Remove-CMPackage -Id <String> [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+Remove-CMPackage [-Force] -Id <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ### SearchByNameMandatory
 ```
-Remove-CMPackage -Name <String> [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+Remove-CMPackage [-Force] -Name <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
  [-Confirm] [<CommonParameters>]
 ```
 
@@ -66,21 +66,6 @@ The first command gets the package that has the ID CM10000D, and then stores the
 The second command removes the package stored in the $Pkg variable.
 
 ## PARAMETERS
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -DisableWildcardHandling
 DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
@@ -169,6 +154,21 @@ Aliases:
 Required: True
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

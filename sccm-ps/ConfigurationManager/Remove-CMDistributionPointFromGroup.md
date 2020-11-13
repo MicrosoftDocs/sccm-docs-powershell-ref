@@ -1,4 +1,4 @@
----
+﻿---
 description: Removes a Configuration Manager distribution point from a distribution point group.
 external help file: AdminUI.PS.Content.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,62 +16,56 @@ Removes a Configuration Manager distribution point from a distribution point gro
 
 ### RemoveDistributionPointFromGroupByObject_Object (Default)
 ```
-Remove-CMDistributionPointFromGroup [-Force] -DistributionPoint <IResultObject>
- -DistributionPointGroup <IResultObject> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Remove-CMDistributionPointFromGroup -DistributionPoint <IResultObject> -DistributionPointGroup <IResultObject>
+ [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### RemoveDistributionPointFromGroupByObject_Id
+```
+Remove-CMDistributionPointFromGroup -DistributionPoint <IResultObject> -DistributionPointGroupId <String>
+ [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### RemoveDistributionPointFromGroupByObject_Name
+```
+Remove-CMDistributionPointFromGroup -DistributionPoint <IResultObject> -DistributionPointGroupName <String>
+ [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### RemoveDistributionPointFromGroupById_Object
+```
+Remove-CMDistributionPointFromGroup -DistributionPointGroup <IResultObject> -DistributionPointId <String>
+ [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### RemoveDistributionPointFromGroupByName_Object
+```
+Remove-CMDistributionPointFromGroup -DistributionPointGroup <IResultObject> -DistributionPointName <String>
+ [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### RemoveDistributionPointFromGroupById_Id
 ```
-Remove-CMDistributionPointFromGroup [-Force] -DistributionPointId <String> -DistributionPointGroupId <String>
+Remove-CMDistributionPointFromGroup -DistributionPointGroupId <String> -DistributionPointId <String> [-Force]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### RemoveDistributionPointFromGroupByName_Id
+```
+Remove-CMDistributionPointFromGroup -DistributionPointGroupId <String> -DistributionPointName <String> [-Force]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### RemoveDistributionPointFromGroupById_Name
 ```
-Remove-CMDistributionPointFromGroup [-Force] -DistributionPointId <String> -DistributionPointGroupName <String>
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### RemoveDistributionPointFromGroupById_Object
-```
-Remove-CMDistributionPointFromGroup [-Force] -DistributionPointId <String>
- -DistributionPointGroup <IResultObject> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
-```
-
-### RemoveDistributionPointFromGroupByName_Id
-```
-Remove-CMDistributionPointFromGroup [-Force] -DistributionPointName <String> -DistributionPointGroupId <String>
+Remove-CMDistributionPointFromGroup -DistributionPointGroupName <String> -DistributionPointId <String> [-Force]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### RemoveDistributionPointFromGroupByName_Name
 ```
-Remove-CMDistributionPointFromGroup [-Force] -DistributionPointName <String>
- -DistributionPointGroupName <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
-```
-
-### RemoveDistributionPointFromGroupByName_Object
-```
-Remove-CMDistributionPointFromGroup [-Force] -DistributionPointName <String>
- -DistributionPointGroup <IResultObject> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
-```
-
-### RemoveDistributionPointFromGroupByObject_Id
-```
-Remove-CMDistributionPointFromGroup [-Force] -DistributionPoint <IResultObject>
- -DistributionPointGroupId <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
-```
-
-### RemoveDistributionPointFromGroupByObject_Name
-```
-Remove-CMDistributionPointFromGroup [-Force] -DistributionPoint <IResultObject>
- -DistributionPointGroupName <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Remove-CMDistributionPointFromGroup -DistributionPointGroupName <String> -DistributionPointName <String>
+ [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -104,21 +98,6 @@ This command removes a distribution point, specified by its name, from a distrib
 This command uses the *Force* parameter, therefore, it does not prompt you before it removes the distribution point.
 
 ## PARAMETERS
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -DisableWildcardHandling
 DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
@@ -172,7 +151,7 @@ Specifies the ID of a distribution point group.
 
 ```yaml
 Type: String
-Parameter Sets: RemoveDistributionPointFromGroupById_Id, RemoveDistributionPointFromGroupByName_Id, RemoveDistributionPointFromGroupByObject_Id
+Parameter Sets: RemoveDistributionPointFromGroupByObject_Id, RemoveDistributionPointFromGroupById_Id, RemoveDistributionPointFromGroupByName_Id
 Aliases:
 
 Required: True
@@ -187,7 +166,7 @@ Specifies the name of a distribution point group.
 
 ```yaml
 Type: String
-Parameter Sets: RemoveDistributionPointFromGroupById_Name, RemoveDistributionPointFromGroupByName_Name, RemoveDistributionPointFromGroupByObject_Name
+Parameter Sets: RemoveDistributionPointFromGroupByObject_Name, RemoveDistributionPointFromGroupById_Name, RemoveDistributionPointFromGroupByName_Name
 Aliases:
 
 Required: True
@@ -202,7 +181,7 @@ Specifies the ID of a distribution point.
 
 ```yaml
 Type: String
-Parameter Sets: RemoveDistributionPointFromGroupById_Id, RemoveDistributionPointFromGroupById_Name, RemoveDistributionPointFromGroupById_Object
+Parameter Sets: RemoveDistributionPointFromGroupById_Object, RemoveDistributionPointFromGroupById_Id, RemoveDistributionPointFromGroupById_Name
 Aliases:
 
 Required: True
@@ -217,7 +196,7 @@ Specifies the name of a distribution point.
 
 ```yaml
 Type: String
-Parameter Sets: RemoveDistributionPointFromGroupByName_Id, RemoveDistributionPointFromGroupByName_Name, RemoveDistributionPointFromGroupByName_Object
+Parameter Sets: RemoveDistributionPointFromGroupByName_Object, RemoveDistributionPointFromGroupByName_Id, RemoveDistributionPointFromGroupByName_Name
 Aliases:
 
 Required: True
@@ -253,6 +232,21 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

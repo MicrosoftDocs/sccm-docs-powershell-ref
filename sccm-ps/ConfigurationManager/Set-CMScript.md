@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.ClientOperations.dll-Help.xml
 Module Name: ConfigurationManager
 online version:
@@ -15,19 +15,19 @@ Use this cmdlet to edit a script.
 
 ### ByScript
 ```
-Set-CMScript -InputObject <IResultObject> [-ScriptText <String>] [-ScriptFile <String>]
+Set-CMScript -InputObject <IResultObject> [-ScriptFile <String>] [-ScriptText <String>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ById
 ```
-Set-CMScript -ScriptGuid <String> [-ScriptText <String>] [-ScriptFile <String>] [-DisableWildcardHandling]
+Set-CMScript [-ScriptFile <String>] -ScriptGuid <String> [-ScriptText <String>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByName
 ```
-Set-CMScript -ScriptName <String> [-ScriptText <String>] [-ScriptFile <String>] [-DisableWildcardHandling]
+Set-CMScript [-ScriptFile <String>] -ScriptName <String> [-ScriptText <String>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -46,22 +46,6 @@ Get-CMScript -ScriptName "myScript" | Set-CMScript -ScriptFile "\\server\share\s
 ```
 
 ## PARAMETERS
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -DisableWildcardHandling
 
@@ -167,6 +151,22 @@ Specify the text to use for this script.
 Type: String
 Parameter Sets: (All)
 Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
 
 Required: False
 Position: Named

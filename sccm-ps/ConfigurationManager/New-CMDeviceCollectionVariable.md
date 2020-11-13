@@ -1,4 +1,4 @@
----
+﻿---
 description: Creates a device collection variable.
 external help file: AdminUI.PS.Collections.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,22 +16,22 @@ Creates a device collection variable.
 
 ### NewByValueMandatory (Default)
 ```
-New-CMDeviceCollectionVariable -InputObject <IResultObject> -VariableName <String> [-Value <String>]
- [-IsMask <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+New-CMDeviceCollectionVariable -InputObject <IResultObject> [-IsMask <Boolean>] [-Value <String>]
+ -VariableName <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ### NewByIdMandatory
 ```
-New-CMDeviceCollectionVariable -CollectionId <String> -VariableName <String> [-Value <String>]
- [-IsMask <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+New-CMDeviceCollectionVariable -CollectionId <String> [-IsMask <Boolean>] [-Value <String>]
+ -VariableName <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ### NewByNameMandatory
 ```
-New-CMDeviceCollectionVariable -CollectionName <String> -VariableName <String> [-Value <String>]
- [-IsMask <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+New-CMDeviceCollectionVariable -CollectionName <String> [-IsMask <Boolean>] [-Value <String>]
+ -VariableName <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
@@ -85,21 +85,6 @@ Aliases:
 Required: True
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -191,6 +176,21 @@ Aliases:
 Required: True
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

@@ -1,4 +1,4 @@
----
+﻿---
 description: Creates a maintenance window for a collection.
 external help file: AdminUI.PS.Collections.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,25 +16,25 @@ Creates a maintenance window for a collection.
 
 ### ByValue (Default)
 ```
-New-CMMaintenanceWindow [-InputObject] <IResultObject> [-IsEnabled <Boolean>] -Schedule <IResultObject>
- -Name <String> [-ApplyTo <MaintenanceWindowApplyTo>] [-ApplyToTaskSequenceOnly] [-ApplyToSoftwareUpdateOnly]
- [-IsUtc <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+New-CMMaintenanceWindow [-ApplyTo <MaintenanceWindowApplyTo>] [-ApplyToSoftwareUpdateOnly]
+ [-ApplyToTaskSequenceOnly] [-InputObject] <IResultObject> [-IsEnabled <Boolean>] [-IsUtc <Boolean>]
+ -Name <String> -Schedule <IResultObject> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ### ByCollectionId
 ```
-New-CMMaintenanceWindow [-CollectionId] <String> [-IsEnabled <Boolean>] -Schedule <IResultObject>
- -Name <String> [-ApplyTo <MaintenanceWindowApplyTo>] [-ApplyToTaskSequenceOnly] [-ApplyToSoftwareUpdateOnly]
- [-IsUtc <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+New-CMMaintenanceWindow [-ApplyTo <MaintenanceWindowApplyTo>] [-ApplyToSoftwareUpdateOnly]
+ [-ApplyToTaskSequenceOnly] [-CollectionId] <String> [-IsEnabled <Boolean>] [-IsUtc <Boolean>] -Name <String>
+ -Schedule <IResultObject> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ### ByCollectionName
 ```
-New-CMMaintenanceWindow [-CollectionName] <String> [-IsEnabled <Boolean>] -Schedule <IResultObject>
- -Name <String> [-ApplyTo <MaintenanceWindowApplyTo>] [-ApplyToTaskSequenceOnly] [-ApplyToSoftwareUpdateOnly]
- [-IsUtc <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+New-CMMaintenanceWindow [-ApplyTo <MaintenanceWindowApplyTo>] [-ApplyToSoftwareUpdateOnly]
+ [-ApplyToTaskSequenceOnly] [-CollectionName] <String> [-IsEnabled <Boolean>] [-IsUtc <Boolean>] -Name <String>
+ -Schedule <IResultObject> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
@@ -130,21 +130,6 @@ Aliases:
 Required: True
 Position: 0
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -249,6 +234,21 @@ Aliases:
 Required: True
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

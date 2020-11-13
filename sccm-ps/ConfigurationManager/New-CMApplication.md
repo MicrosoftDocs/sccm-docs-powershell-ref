@@ -1,4 +1,4 @@
----
+﻿---
 description: Creates an application.
 external help file: AdminUI.PS.AppMan.dll-Help.xml
 Module Name: ConfigurationManager
@@ -15,14 +15,13 @@ Creates an application.
 ## SYNTAX
 
 ```
-New-CMApplication [-Name] <String> [-Description <String>] [-Publisher <String>] [-SoftwareVersion <String>]
- [-OptionalReference <String>] [-ReleaseDate <DateTime>] [-AutoInstall <Boolean>] [-AddOwner <String[]>]
- [-AddSupportContact <String[]>] [-Owner <String>] [-SupportContact <String>] [-LocalizedName <String>]
- [-UserDocumentation <String>] [-LinkText <String>] [-LocalizedDescription <String>] [-Keyword <String[]>]
- [-PrivacyUrl <String>] [-IsFeatured <Boolean>] [-IconLocationFile <String>]
- [-DisplaySupersedenceInApplicationCatalog <Boolean>] [-AppCatalog <AppDisplayInfo[]>]
- [-DefaultLanguageId <Int32>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+New-CMApplication [-AddOwner <String[]>] [-AddSupportContact <String[]>] [-AppCatalog <AppDisplayInfo[]>]
+ [-AutoInstall <Boolean>] [-DefaultLanguageId <Int32>] [-Description <String>]
+ [-DisplaySupersedenceInApplicationCatalog <Boolean>] [-IconLocationFile <String>] [-IsFeatured <Boolean>]
+ [-Keyword <String[]>] [-LinkText <String>] [-LocalizedDescription <String>] [-LocalizedName <String>]
+ [-Name] <String> [-OptionalReference <String>] [-Owner <String>] [-PrivacyUrl <String>] [-Publisher <String>]
+ [-ReleaseDate <DateTime>] [-SoftwareVersion <String>] [-SupportContact <String>] [-UserDocumentation <String>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -100,21 +99,6 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -426,6 +410,21 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

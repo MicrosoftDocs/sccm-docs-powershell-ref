@@ -1,4 +1,4 @@
----
+﻿---
 description: Adds a direct membership rule to one or more Configuration Manager user collections.
 external help file: AdminUI.PS.Collections.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,37 +16,37 @@ Adds a direct membership rule to one or more Configuration Manager user collecti
 
 ### ByCollectionValueAndResourceValue (Default)
 ```
-Add-CMUserCollectionDirectMembershipRule -InputObject <IResultObject> -Resource <IResultObject[]> [-PassThru]
+Add-CMUserCollectionDirectMembershipRule -InputObject <IResultObject> [-PassThru] -Resource <IResultObject[]>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByCollectionIdAndResourceId
 ```
-Add-CMUserCollectionDirectMembershipRule -CollectionId <String> -ResourceId <Int32[]> [-PassThru]
+Add-CMUserCollectionDirectMembershipRule -CollectionId <String> [-PassThru] -ResourceId <Int32[]>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByCollectionIdAndResourceValue
 ```
-Add-CMUserCollectionDirectMembershipRule -CollectionId <String> -Resource <IResultObject[]> [-PassThru]
+Add-CMUserCollectionDirectMembershipRule -CollectionId <String> [-PassThru] -Resource <IResultObject[]>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByCollectionNameAndResourceId
 ```
-Add-CMUserCollectionDirectMembershipRule -CollectionName <String> -ResourceId <Int32[]> [-PassThru]
+Add-CMUserCollectionDirectMembershipRule -CollectionName <String> [-PassThru] -ResourceId <Int32[]>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByCollectionNameAndResourceValue
 ```
-Add-CMUserCollectionDirectMembershipRule -CollectionName <String> -Resource <IResultObject[]> [-PassThru]
+Add-CMUserCollectionDirectMembershipRule -CollectionName <String> [-PassThru] -Resource <IResultObject[]>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByCollectionValueAndResourceId
 ```
-Add-CMUserCollectionDirectMembershipRule -InputObject <IResultObject> -ResourceId <Int32[]> [-PassThru]
+Add-CMUserCollectionDirectMembershipRule -InputObject <IResultObject> [-PassThru] -ResourceId <Int32[]>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -99,21 +99,6 @@ Aliases:
 Required: True
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -206,6 +191,21 @@ Aliases: ResourceIds
 Required: True
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Deployments.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 07/31/2020
@@ -16,22 +16,23 @@ Configure a phased deployment for a software update.
 
 ### SearchByValue
 ```
-Set-CMSoftwareUpdatePhasedDeployment -InputObject <IResultObject> [-NewName <String>] [-Description <String>]
- [-AddPhases <Phase[]>] [-RemovePhases <Phase[]>] [-RemovePhaseOrders <Int32[]>] [-RemovePhaseIds <String[]>]
- [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMSoftwareUpdatePhasedDeployment [-AddPhases <Phase[]>] [-Description <String>]
+ -InputObject <IResultObject> [-NewName <String>] [-PassThru] [-RemovePhaseIds <String[]>]
+ [-RemovePhaseOrders <Int32[]>] [-RemovePhases <Phase[]>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchById
 ```
-Set-CMSoftwareUpdatePhasedDeployment [-NewName <String>] [-Description <String>] [-AddPhases <Phase[]>]
- [-RemovePhases <Phase[]>] [-RemovePhaseOrders <Int32[]>] [-RemovePhaseIds <String[]>] [-PassThru] -Id <String>
+Set-CMSoftwareUpdatePhasedDeployment [-AddPhases <Phase[]>] [-Description <String>] [-NewName <String>]
+ [-PassThru] [-RemovePhaseIds <String[]>] [-RemovePhaseOrders <Int32[]>] [-RemovePhases <Phase[]>] -Id <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByName
 ```
-Set-CMSoftwareUpdatePhasedDeployment [-NewName <String>] [-Description <String>] [-AddPhases <Phase[]>]
- [-RemovePhases <Phase[]>] [-RemovePhaseOrders <Int32[]>] [-RemovePhaseIds <String[]>] [-PassThru]
+Set-CMSoftwareUpdatePhasedDeployment [-AddPhases <Phase[]>] [-Description <String>] [-NewName <String>]
+ [-PassThru] [-RemovePhaseIds <String[]>] [-RemovePhaseOrders <Int32[]>] [-RemovePhases <Phase[]>]
  -Name <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -71,22 +72,6 @@ Use this parameter to add one or more phases to a software update phased deploym
 Type: Phase[]
 Parameter Sets: (All)
 Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
 
 Required: False
 Position: Named
@@ -263,6 +248,22 @@ Remove one or more phases from a software update phased deployment. Use the [Get
 Type: Phase[]
 Parameter Sets: (All)
 Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
 
 Required: False
 Position: Named

@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.ClientOperations.dll-Help.xml
 Module Name: ConfigurationManager
 online version:
@@ -12,15 +12,15 @@ schema: 2.0.0
 
 ## SYNTAX
 
-### ByText
+### ByFile
 ```
-New-CMScript -ScriptText <String> -ScriptName <String> [-Fast] [-DisableWildcardHandling]
+New-CMScript [-Fast] -ScriptFile <String> -ScriptName <String> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### ByFile
+### ByText
 ```
-New-CMScript -ScriptName <String> -ScriptFile <String> [-Fast] [-DisableWildcardHandling]
+New-CMScript [-Fast] -ScriptName <String> -ScriptText <String> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -42,21 +42,6 @@ PS XYZ:\> {{ Add example code here }}
 {{ Add example description here }}
 
 ## PARAMETERS
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -DisableWildcardHandling
 This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
@@ -142,6 +127,21 @@ Parameter Sets: ByText
 Aliases:
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False

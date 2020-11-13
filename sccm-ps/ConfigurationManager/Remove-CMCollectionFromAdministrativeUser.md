@@ -1,4 +1,4 @@
----
+﻿---
 description: Removes a collection from administrative user.
 external help file: AdminUI.PS.Rba.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,55 +16,55 @@ Removes a collection from administrative user.
 
 ### RemoveCollectionFromAdminByName_Name (Default)
 ```
-Remove-CMCollectionFromAdministrativeUser -CollectionName <String> -UserName <String> [-Force]
+Remove-CMCollectionFromAdministrativeUser -CollectionName <String> [-Force] -UserName <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### RemoveCollectionFromAdminById_Id
 ```
-Remove-CMCollectionFromAdministrativeUser -CollectionId <String> -UserId <Int32> [-Force]
+Remove-CMCollectionFromAdministrativeUser -CollectionId <String> [-Force] -UserId <Int32>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### RemoveCollectionFromAdminById_Name
 ```
-Remove-CMCollectionFromAdministrativeUser -CollectionId <String> -UserName <String> [-Force]
+Remove-CMCollectionFromAdministrativeUser -CollectionId <String> [-Force] -UserName <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### RemoveCollectionFromAdminById_Object
 ```
-Remove-CMCollectionFromAdministrativeUser -CollectionId <String> -User <IResultObject> [-Force]
+Remove-CMCollectionFromAdministrativeUser -CollectionId <String> [-Force] -User <IResultObject>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### RemoveCollectionFromAdminByName_Id
 ```
-Remove-CMCollectionFromAdministrativeUser -CollectionName <String> -UserId <Int32> [-Force]
+Remove-CMCollectionFromAdministrativeUser -CollectionName <String> [-Force] -UserId <Int32>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### RemoveCollectionFromAdminByName_Object
 ```
-Remove-CMCollectionFromAdministrativeUser -CollectionName <String> -User <IResultObject> [-Force]
+Remove-CMCollectionFromAdministrativeUser -CollectionName <String> [-Force] -User <IResultObject>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### RemoveCollectionFromAdminByObject_Id
 ```
-Remove-CMCollectionFromAdministrativeUser -InputObject <IResultObject> -UserId <Int32> [-Force]
+Remove-CMCollectionFromAdministrativeUser [-Force] -InputObject <IResultObject> -UserId <Int32>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### RemoveCollectionFromAdminByObject_Name
 ```
-Remove-CMCollectionFromAdministrativeUser -InputObject <IResultObject> -UserName <String> [-Force]
+Remove-CMCollectionFromAdministrativeUser [-Force] -InputObject <IResultObject> -UserName <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### RemoveCollectionFromAdminByObject_Object
 ```
-Remove-CMCollectionFromAdministrativeUser -InputObject <IResultObject> -User <IResultObject> [-Force]
+Remove-CMCollectionFromAdministrativeUser [-Force] -InputObject <IResultObject> -User <IResultObject>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -104,21 +104,6 @@ Parameter Sets: RemoveCollectionFromAdminByName_Name, RemoveCollectionFromAdminB
 Aliases: DeviceCollectionName, UserCollectionName
 
 Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -214,6 +199,21 @@ Parameter Sets: RemoveCollectionFromAdminByName_Name, RemoveCollectionFromAdminB
 Aliases: AdministrativeUserName
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False

@@ -1,4 +1,4 @@
----
+﻿---
 description: Creates a Configuration Manager hardware requirement object for a product.
 external help file: AdminUI.PS.AssetIntelligence.dll-Help.xml
 Module Name: ConfigurationManager
@@ -15,8 +15,9 @@ Creates a Configuration Manager hardware requirement object for a product.
 ## SYNTAX
 
 ```
-New-CMHardwareRequirement -Product <String> -MinCpu <Int32> -MinDiskFree <Int64> -MinDiskSize <Int64>
- -MinRam <Int64> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+New-CMHardwareRequirement -MinCpu <Int32> -MinDiskFree <Int64> -MinDiskSize <Int64> -MinRam <Int64>
+ -Product <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -51,21 +52,6 @@ The command specifies the minimum hardware requirements for the product.
 If you do not include all of these required parameters, the system prompts you for values.
 
 ## PARAMETERS
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -DisableWildcardHandling
 DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
@@ -168,6 +154,21 @@ Aliases:
 Required: True
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

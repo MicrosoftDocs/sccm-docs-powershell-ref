@@ -1,4 +1,4 @@
----
+﻿---
 description: Create a task sequence partition setting.
 external help file: AdminUI.PS.Osd.dll-Help.xml
 Module Name: ConfigurationManager
@@ -17,45 +17,45 @@ Create a task sequence partition object to use with the **Format and Partition D
 
 ### PrimaryPartition (Default)
 ```
-New-CMTSPartitionSetting [-PartitionPrimary] [-Name <String>] [-Size <Int32>] [-SizeUnit <SizeUnitType>]
- [-EnableDriveLetterAssignment <Boolean>] [-IsBootPartition <Boolean>] [-EnableQuickFormat <Boolean>]
- [-PartitionFileSystem <FileSystemType>] [-Variable <String>] [-DisableWildcardHandling]
+New-CMTSPartitionSetting [-EnableDriveLetterAssignment <Boolean>] [-EnableQuickFormat <Boolean>]
+ [-IsBootPartition <Boolean>] [-Name <String>] [-PartitionFileSystem <FileSystemType>] [-PartitionPrimary]
+ [-Size <Int32>] [-SizeUnit <SizeUnitType>] [-Variable <String>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### EfiPartition
 ```
-New-CMTSPartitionSetting [-PartitionEfi] [-Name <String>] [-Size <Int32>] [-SizeUnit <SizeUnitType>]
+New-CMTSPartitionSetting [-Name <String>] [-PartitionEfi] [-Size <Int32>] [-SizeUnit <SizeUnitType>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ExtendedPartition
 ```
-New-CMTSPartitionSetting [-PartitionExtended] [-Name <String>] [-Size <Int32>] [-SizeUnit <SizeUnitType>]
+New-CMTSPartitionSetting [-Name <String>] [-PartitionExtended] [-Size <Int32>] [-SizeUnit <SizeUnitType>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### HiddenPartition
 ```
-New-CMTSPartitionSetting [-PartitionHidden] [-Name <String>] [-Size <Int32>] [-SizeUnit <SizeUnitType>]
+New-CMTSPartitionSetting [-Name <String>] [-PartitionHidden] [-Size <Int32>] [-SizeUnit <SizeUnitType>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### LogicalPartition
 ```
-New-CMTSPartitionSetting [-PartitionLogical] [-Name <String>] [-Size <Int32>] [-SizeUnit <SizeUnitType>]
+New-CMTSPartitionSetting [-Name <String>] [-PartitionLogical] [-Size <Int32>] [-SizeUnit <SizeUnitType>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### MsrPartition
 ```
-New-CMTSPartitionSetting [-PartitionMsr] [-Name <String>] [-Size <Int32>] [-SizeUnit <SizeUnitType>]
+New-CMTSPartitionSetting [-Name <String>] [-PartitionMsr] [-Size <Int32>] [-SizeUnit <SizeUnitType>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### RecoveryPartition
 ```
-New-CMTSPartitionSetting [-PartitionRecovery] [-Name <String>] [-Size <Int32>] [-SizeUnit <SizeUnitType>]
+New-CMTSPartitionSetting [-Name <String>] [-PartitionRecovery] [-Size <Int32>] [-SizeUnit <SizeUnitType>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -76,22 +76,6 @@ This cmdlet corresponds to the new **Partition Properties** window from the [For
 ```
 
 ## PARAMETERS
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -DisableWildcardHandling
 
@@ -363,6 +347,22 @@ By default, Configuration Manager assigns the next available drive letter to thi
 Type: String
 Parameter Sets: PrimaryPartition
 Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
 
 Required: False
 Position: Named

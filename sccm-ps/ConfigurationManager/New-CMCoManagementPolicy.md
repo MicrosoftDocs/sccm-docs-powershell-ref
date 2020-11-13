@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 Module Name: ConfigurationManager
 online version:
@@ -13,10 +13,10 @@ schema: 2.0.0
 ## SYNTAX
 
 ```
-New-CMCoManagementPolicy [-CoManagementPolicyName <String>] -AutoEnroll <Boolean>
- [-CAWorkloadEnabled <Boolean>] [-RAWorkloadEnabled <Boolean>] [-WufbWorkloadEnabled <Boolean>]
- [-EPWorkloadEnabled <Boolean>] [-DCWorkloadEnabled <Boolean>] [-ClientAppsWorkloadEnabled <Boolean>]
- [-O365WorkloadEnabled <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+New-CMCoManagementPolicy -AutoEnroll <Boolean> [-CAWorkloadEnabled <Boolean>]
+ [-ClientAppsWorkloadEnabled <Boolean>] [-CoManagementPolicyName <String>] [-DCWorkloadEnabled <Boolean>]
+ [-EPWorkloadEnabled <Boolean>] [-O365WorkloadEnabled <Boolean>] [-RAWorkloadEnabled <Boolean>]
+ [-WufbWorkloadEnabled <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
@@ -91,21 +91,6 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: (All)
 Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
 
 Required: False
 Position: Named
@@ -204,14 +189,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+### -WufbWorkloadEnabled
+{{ Fill WufbWorkloadEnabled Description }}
 
 ```yaml
-Type: SwitchParameter
+Type: Boolean
 Parameter Sets: (All)
-Aliases: wi
+Aliases:
 
 Required: False
 Position: Named
@@ -220,13 +204,29 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WufbWorkloadEnabled
-{{ Fill WufbWorkloadEnabled Description }}
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: Boolean
+Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
 
 Required: False
 Position: Named

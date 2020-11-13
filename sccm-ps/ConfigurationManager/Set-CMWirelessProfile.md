@@ -1,4 +1,4 @@
----
+﻿---
 description: Sets a wireless profile.
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,58 +16,57 @@ Sets a wireless profile.
 
 ### ByValue (Default)
 ```
-Set-CMWirelessProfile -InputObject <IResultObject> [-Description <String>] [-Severity <NoncomplianceSeverity>]
- [-ClearSupportedPlatform] [-AddSupportedPlatform <IResultObject[]>]
- [-RemoveSupportedPlatform <IResultObject[]>] [-NetworkName <String>] [-Ssid <String>]
- [-ConnectAutoNetworkInRange <Boolean>] [-LookOtherNetworkWhileConnected <Boolean>]
- [-ConnectEvenNotBroadcasting <Boolean>] [-AuthenticationMode <AuthenticationMode>]
- [-EnableSingleSignOn <Boolean>] [-SingleSignOnImmediatelyBefore <Boolean>] [-SingleSignOnMaxDelaySec <Int32>]
- [-SingleSignOnAdditionalDialogs <Boolean>] [-SingleSignOnVlan <Boolean>] [-EnablePmkCaching <Boolean>]
- [-PmkTimeToLiveMins <Int32>] [-PmkCacheMaxEntries <Int32>] [-PreAuthentication <Boolean>]
- [-PreAuthAttempts <Int32>] [-EnableFipsCompliance <Boolean>] [-ConfigureProxy <Boolean>]
- [-AutoDetectProxy <Boolean>] [-AutoScriptUrl <String>] [-ProxyAddress <String>] [-ProxyPort <Int32>]
- [-BypassProxy <String>] [-SecurityAuthentication <SecurityAuthentication>]
- [-SecurityEncryption <SecurityEncryption>] [-EapType <EapType>] [-TrustedServerCertSubjectNames <String>]
- [-RememberCredentials] [-RememberUserCredentials <Boolean>] [-RootCertificate <IResultObject[]>]
- [-ClientCertificate <IResultObject>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+Set-CMWirelessProfile [-AddSupportedPlatform <IResultObject[]>] [-AuthenticationMode <AuthenticationMode>]
+ [-AutoDetectProxy <Boolean>] [-AutoScriptUrl <String>] [-BypassProxy <String>] [-ClearSupportedPlatform]
+ [-ClientCertificate <IResultObject>] [-ConfigureProxy <Boolean>] [-ConnectAutoNetworkInRange <Boolean>]
+ [-ConnectEvenNotBroadcasting <Boolean>] [-Description <String>] [-EapType <EapType>]
+ [-EnableFipsCompliance <Boolean>] [-EnablePmkCaching <Boolean>] [-EnableSingleSignOn <Boolean>]
+ -InputObject <IResultObject> [-LookOtherNetworkWhileConnected <Boolean>] [-NetworkName <String>] [-PassThru]
+ [-PmkCacheMaxEntries <Int32>] [-PmkTimeToLiveMins <Int32>] [-PreAuthAttempts <Int32>]
+ [-PreAuthentication <Boolean>] [-ProxyAddress <String>] [-ProxyPort <Int32>] [-RememberCredentials]
+ [-RememberUserCredentials <Boolean>] [-RemoveSupportedPlatform <IResultObject[]>]
+ [-RootCertificate <IResultObject[]>] [-SecurityAuthentication <SecurityAuthentication>]
+ [-SecurityEncryption <SecurityEncryption>] [-Severity <NoncomplianceSeverity>]
+ [-SingleSignOnAdditionalDialogs <Boolean>] [-SingleSignOnImmediatelyBefore <Boolean>]
+ [-SingleSignOnMaxDelaySec <Int32>] [-SingleSignOnVlan <Boolean>] [-Ssid <String>]
+ [-TrustedServerCertSubjectNames <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
  [-Confirm] [<CommonParameters>]
 ```
 
 ### ById
 ```
-Set-CMWirelessProfile -Id <Int32> [-Description <String>] [-Severity <NoncomplianceSeverity>]
- [-ClearSupportedPlatform] [-AddSupportedPlatform <IResultObject[]>]
- [-RemoveSupportedPlatform <IResultObject[]>] [-NetworkName <String>] [-Ssid <String>]
- [-ConnectAutoNetworkInRange <Boolean>] [-LookOtherNetworkWhileConnected <Boolean>]
- [-ConnectEvenNotBroadcasting <Boolean>] [-AuthenticationMode <AuthenticationMode>]
- [-EnableSingleSignOn <Boolean>] [-SingleSignOnImmediatelyBefore <Boolean>] [-SingleSignOnMaxDelaySec <Int32>]
- [-SingleSignOnAdditionalDialogs <Boolean>] [-SingleSignOnVlan <Boolean>] [-EnablePmkCaching <Boolean>]
- [-PmkTimeToLiveMins <Int32>] [-PmkCacheMaxEntries <Int32>] [-PreAuthentication <Boolean>]
- [-PreAuthAttempts <Int32>] [-EnableFipsCompliance <Boolean>] [-ConfigureProxy <Boolean>]
- [-AutoDetectProxy <Boolean>] [-AutoScriptUrl <String>] [-ProxyAddress <String>] [-ProxyPort <Int32>]
- [-BypassProxy <String>] [-SecurityAuthentication <SecurityAuthentication>]
- [-SecurityEncryption <SecurityEncryption>] [-EapType <EapType>] [-TrustedServerCertSubjectNames <String>]
- [-RememberCredentials] [-RememberUserCredentials <Boolean>] [-RootCertificate <IResultObject[]>]
- [-ClientCertificate <IResultObject>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Set-CMWirelessProfile [-AddSupportedPlatform <IResultObject[]>] [-AuthenticationMode <AuthenticationMode>]
+ [-AutoDetectProxy <Boolean>] [-AutoScriptUrl <String>] [-BypassProxy <String>] [-ClearSupportedPlatform]
+ [-ClientCertificate <IResultObject>] [-ConfigureProxy <Boolean>] [-ConnectAutoNetworkInRange <Boolean>]
+ [-ConnectEvenNotBroadcasting <Boolean>] [-Description <String>] [-EapType <EapType>]
+ [-EnableFipsCompliance <Boolean>] [-EnablePmkCaching <Boolean>] [-EnableSingleSignOn <Boolean>] -Id <Int32>
+ [-LookOtherNetworkWhileConnected <Boolean>] [-NetworkName <String>] [-PassThru] [-PmkCacheMaxEntries <Int32>]
+ [-PmkTimeToLiveMins <Int32>] [-PreAuthAttempts <Int32>] [-PreAuthentication <Boolean>]
+ [-ProxyAddress <String>] [-ProxyPort <Int32>] [-RememberCredentials] [-RememberUserCredentials <Boolean>]
+ [-RemoveSupportedPlatform <IResultObject[]>] [-RootCertificate <IResultObject[]>]
+ [-SecurityAuthentication <SecurityAuthentication>] [-SecurityEncryption <SecurityEncryption>]
+ [-Severity <NoncomplianceSeverity>] [-SingleSignOnAdditionalDialogs <Boolean>]
+ [-SingleSignOnImmediatelyBefore <Boolean>] [-SingleSignOnMaxDelaySec <Int32>] [-SingleSignOnVlan <Boolean>]
+ [-Ssid <String>] [-TrustedServerCertSubjectNames <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByName
 ```
-Set-CMWirelessProfile -Name <String> [-Description <String>] [-Severity <NoncomplianceSeverity>]
- [-ClearSupportedPlatform] [-AddSupportedPlatform <IResultObject[]>]
- [-RemoveSupportedPlatform <IResultObject[]>] [-NetworkName <String>] [-Ssid <String>]
- [-ConnectAutoNetworkInRange <Boolean>] [-LookOtherNetworkWhileConnected <Boolean>]
- [-ConnectEvenNotBroadcasting <Boolean>] [-AuthenticationMode <AuthenticationMode>]
- [-EnableSingleSignOn <Boolean>] [-SingleSignOnImmediatelyBefore <Boolean>] [-SingleSignOnMaxDelaySec <Int32>]
- [-SingleSignOnAdditionalDialogs <Boolean>] [-SingleSignOnVlan <Boolean>] [-EnablePmkCaching <Boolean>]
- [-PmkTimeToLiveMins <Int32>] [-PmkCacheMaxEntries <Int32>] [-PreAuthentication <Boolean>]
- [-PreAuthAttempts <Int32>] [-EnableFipsCompliance <Boolean>] [-ConfigureProxy <Boolean>]
- [-AutoDetectProxy <Boolean>] [-AutoScriptUrl <String>] [-ProxyAddress <String>] [-ProxyPort <Int32>]
- [-BypassProxy <String>] [-SecurityAuthentication <SecurityAuthentication>]
- [-SecurityEncryption <SecurityEncryption>] [-EapType <EapType>] [-TrustedServerCertSubjectNames <String>]
- [-RememberCredentials] [-RememberUserCredentials <Boolean>] [-RootCertificate <IResultObject[]>]
- [-ClientCertificate <IResultObject>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+Set-CMWirelessProfile [-AddSupportedPlatform <IResultObject[]>] [-AuthenticationMode <AuthenticationMode>]
+ [-AutoDetectProxy <Boolean>] [-AutoScriptUrl <String>] [-BypassProxy <String>] [-ClearSupportedPlatform]
+ [-ClientCertificate <IResultObject>] [-ConfigureProxy <Boolean>] [-ConnectAutoNetworkInRange <Boolean>]
+ [-ConnectEvenNotBroadcasting <Boolean>] [-Description <String>] [-EapType <EapType>]
+ [-EnableFipsCompliance <Boolean>] [-EnablePmkCaching <Boolean>] [-EnableSingleSignOn <Boolean>]
+ [-LookOtherNetworkWhileConnected <Boolean>] -Name <String> [-NetworkName <String>] [-PassThru]
+ [-PmkCacheMaxEntries <Int32>] [-PmkTimeToLiveMins <Int32>] [-PreAuthAttempts <Int32>]
+ [-PreAuthentication <Boolean>] [-ProxyAddress <String>] [-ProxyPort <Int32>] [-RememberCredentials]
+ [-RememberUserCredentials <Boolean>] [-RemoveSupportedPlatform <IResultObject[]>]
+ [-RootCertificate <IResultObject[]>] [-SecurityAuthentication <SecurityAuthentication>]
+ [-SecurityEncryption <SecurityEncryption>] [-Severity <NoncomplianceSeverity>]
+ [-SingleSignOnAdditionalDialogs <Boolean>] [-SingleSignOnImmediatelyBefore <Boolean>]
+ [-SingleSignOnMaxDelaySec <Int32>] [-SingleSignOnVlan <Boolean>] [-Ssid <String>]
+ [-TrustedServerCertSubjectNames <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
  [-Confirm] [<CommonParameters>]
 ```
 
@@ -186,21 +185,6 @@ Accept wildcard characters: False
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
 
 Required: False
 Position: Named
@@ -659,6 +643,21 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: (All)
 Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
 
 Required: False
 Position: Named

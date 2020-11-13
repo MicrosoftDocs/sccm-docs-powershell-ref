@@ -1,4 +1,4 @@
----
+﻿---
 description: Creates bootable media.
 external help file: AdminUI.PS.Osd.dll-Help.xml
 Module Name: ConfigurationManager
@@ -18,9 +18,9 @@ Creates bootable media.
 New-CMBootableMedia [-AllowUacPrompt] [-AllowUnattended] [-AllowUnknownMachine] -BootImage <IResultObject>
  [-CertificateExpireTime <DateTime>] [-CertificatePassword <SecureString>] [-CertificatePath <String>]
  [-CertificateStartTime <DateTime>] -DistributionPoint <IResultObject[]> [-Force] [-FormatMedia]
- -ManagementPoint <IResultObject[]> -MediaMode <MediaMode> [-MediaPassword <SecureString>]
- -MediaType <MediaInputType> -Path <String> [-TemporaryFolder <String>] [-NoAutoRun]
- [-PrestartCommand <String>] [-PrestartPackage <IResultObject>] [-UserDeviceAffinity <UserDeviceAffinityType>]
+ -ManagementPoint <IResultObject[]> [-SiteCode <String>] -MediaMode <MediaMode> [-MediaPassword <SecureString>]
+ -MediaType <MediaInputType> [-NoAutoRun] -Path <String> [-PrestartCommand <String>]
+ [-PrestartPackage <IResultObject>] [-TemporaryFolder <String>] [-UserDeviceAffinity <UserDeviceAffinityType>]
  [-Variable <Hashtable>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
@@ -175,21 +175,6 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -405,6 +390,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -SiteCode
+{{ Fill SiteCode Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -TemporaryFolder
 {{ Fill TemporaryFolder Description }}
 
@@ -453,6 +453,21 @@ Aliases: TaskSequenceVariables, Variables
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

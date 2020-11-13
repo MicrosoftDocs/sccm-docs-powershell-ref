@@ -1,4 +1,4 @@
----
+﻿---
 description: Creates an association between two computers in Configuration Manager.
 external help file: AdminUI.PS.Osd.dll-Help.xml
 Module Name: ConfigurationManager
@@ -15,9 +15,9 @@ Creates an association between two computers in Configuration Manager.
 ## SYNTAX
 
 ```
-New-CMComputerAssociation -DestinationComputer <String> -SourceComputer <String>
- [-MigrationBehavior <MigrationBehavior>] [-MigrationUserName <String[]>] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+New-CMComputerAssociation -DestinationComputer <String> [-MigrationBehavior <MigrationBehavior>]
+ [-MigrationUserName <String[]>] -SourceComputer <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -44,21 +44,6 @@ This command creates a computer association between the source computer named TS
 The command specifies a user name for migration to the destination computer.
 
 ## PARAMETERS
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -DestinationComputer
 Specifies the name of a destination computer.
@@ -161,6 +146,21 @@ Aliases: SourceName
 Required: True
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

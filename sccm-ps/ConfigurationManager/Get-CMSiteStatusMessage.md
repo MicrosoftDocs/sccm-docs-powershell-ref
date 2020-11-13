@@ -1,4 +1,4 @@
----
+﻿---
 description: Gets site system status messages.
 external help file: AdminUI.PS.SystemStatus.dll-Help.xml
 Module Name: ConfigurationManager
@@ -15,10 +15,9 @@ Gets site system status messages.
 ## SYNTAX
 
 ```
-Get-CMSiteStatusMessage [-ComputerName <String[]>] [-Severity <Severity[]>] [-SiteCode <String[]>]
- [-StartDateTime <DateTime>] [-MessageId <Int32[]>] [-Module <String[]>] [-Component <String[]>]
- [-FilterHashtable <Hashtable>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [<CommonParameters>]
+Get-CMSiteStatusMessage [-Component <String[]>] [-ComputerName <String[]>] [-FilterHashtable <Hashtable>]
+ [-MessageId <Int32[]>] [-Module <String[]>] [-PassThru] [-Severity <Severity[]>] [-SiteCode <String[]>]
+ [-StartDateTime <DateTime>] [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

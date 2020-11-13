@@ -1,4 +1,4 @@
----
+﻿---
 description: Sets a client setting user and device affinity.
 external help file: AdminUI.PS.ClientSettings.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,22 +16,22 @@ Sets a client setting user and device affinity.
 
 ### SetCustomSettingByName (Default)
 ```
-Set-CMClientSettingUserAndDeviceAffinity [-LogOnThresholdMins <Int32>] [-UsageThresholdDays <Int32>]
- [-AutoApproveAffinity <Boolean>] [-AllowUserAffinity <Boolean>] -Name <String> [-PassThru]
+Set-CMClientSettingUserAndDeviceAffinity [-AllowUserAffinity <Boolean>] [-AutoApproveAffinity <Boolean>]
+ [-LogOnThresholdMins <Int32>] [-UsageThresholdDays <Int32>] -Name <String> [-PassThru]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetDefaultSetting
 ```
-Set-CMClientSettingUserAndDeviceAffinity [-LogOnThresholdMins <Int32>] [-UsageThresholdDays <Int32>]
- [-AutoApproveAffinity <Boolean>] [-AllowUserAffinity <Boolean>] [-DefaultSetting] [-PassThru]
+Set-CMClientSettingUserAndDeviceAffinity [-AllowUserAffinity <Boolean>] [-AutoApproveAffinity <Boolean>]
+ [-LogOnThresholdMins <Int32>] [-UsageThresholdDays <Int32>] [-DefaultSetting] [-PassThru]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetCustomSettingByValue
 ```
-Set-CMClientSettingUserAndDeviceAffinity [-LogOnThresholdMins <Int32>] [-UsageThresholdDays <Int32>]
- [-AutoApproveAffinity <Boolean>] [-AllowUserAffinity <Boolean>] -InputObject <IResultObject> [-PassThru]
+Set-CMClientSettingUserAndDeviceAffinity [-AllowUserAffinity <Boolean>] [-AutoApproveAffinity <Boolean>]
+ [-LogOnThresholdMins <Int32>] [-UsageThresholdDays <Int32>] -InputObject <IResultObject> [-PassThru]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -69,21 +69,6 @@ Accept wildcard characters: False
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
 
 Required: False
 Position: Named
@@ -194,6 +179,21 @@ Accept wildcard characters: False
 Type: Int32
 Parameter Sets: (All)
 Aliases: UserAffinityUsageThresholdDays
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
 
 Required: False
 Position: Named

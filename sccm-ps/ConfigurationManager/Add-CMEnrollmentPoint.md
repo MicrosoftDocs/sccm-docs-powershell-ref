@@ -1,4 +1,4 @@
----
+﻿---
 description: Adds an enrollment point to Configuration Manager.
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,15 +16,15 @@ Adds an enrollment point to Configuration Manager.
 
 ### EnrollmentPointByValue (Default)
 ```
-Add-CMEnrollmentPoint [-WebsiteName <String>] [-WebApplicationName <String>] [-PortNumber <Int32>]
- -InputObject <IResultObject> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+Add-CMEnrollmentPoint -InputObject <IResultObject> [-PortNumber <Int32>] [-WebApplicationName <String>]
+ [-WebsiteName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ### EnrollmentPoint
 ```
-Add-CMEnrollmentPoint [-WebsiteName <String>] [-WebApplicationName <String>] [-PortNumber <Int32>]
- [-SiteSystemServerName] <String> [-SiteCode <String>] [-UserName <String>] [-DisableWildcardHandling]
+Add-CMEnrollmentPoint [-PortNumber <Int32>] [-SiteCode <String>] [-SiteSystemServerName] <String>
+ [-UserName <String>] [-WebApplicationName <String>] [-WebsiteName <String>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -55,21 +55,6 @@ The command specifies an IIS website and port number, and the user name that the
 This command also specifies the web application name.
 
 ## PARAMETERS
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -DisableWildcardHandling
 DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
@@ -201,6 +186,21 @@ Aliases: IISWebsite
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

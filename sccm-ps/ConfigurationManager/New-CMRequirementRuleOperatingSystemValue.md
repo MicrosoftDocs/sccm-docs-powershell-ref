@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 Module Name: ConfigurationManager
 online version:
@@ -13,8 +13,8 @@ schema: 2.0.0
 ## SYNTAX
 
 ```
-New-CMRequirementRuleOperatingSystemValue -RuleOperator <RuleExpressionOperator>
- [-SelectFullPlatform <FullPlatformOption>] [-Platform <IResultObject[]>] [-PlatformString <String[]>]
+New-CMRequirementRuleOperatingSystemValue [-Platform <IResultObject[]>] [-PlatformString <String[]>]
+ -RuleOperator <RuleExpressionOperator> [-SelectFullPlatform <FullPlatformOption>]
  [-InputObject] <IResultObject> [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 

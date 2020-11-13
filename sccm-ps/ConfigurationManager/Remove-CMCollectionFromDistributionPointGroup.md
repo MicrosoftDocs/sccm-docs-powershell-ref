@@ -1,4 +1,4 @@
----
+﻿---
 description: Removes a collection from distribution point group.
 external help file: AdminUI.PS.Content.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,22 +16,20 @@ Removes a collection from distribution point group.
 
 ### SearchByValueMandatory (Default)
 ```
-Remove-CMCollectionFromDistributionPointGroup [-Force] -CollectionName <String> -InputObject <IResultObject>
+Remove-CMCollectionFromDistributionPointGroup -CollectionName <String> [-Force] -InputObject <IResultObject>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByNameMandatory
 ```
-Remove-CMCollectionFromDistributionPointGroup -DistributionPointGroupName <String> [-Force]
- -CollectionName <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Remove-CMCollectionFromDistributionPointGroup -CollectionName <String> -DistributionPointGroupName <String>
+ [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory
 ```
-Remove-CMCollectionFromDistributionPointGroup -DistributionPointGroupId <String> [-Force]
- -CollectionName <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Remove-CMCollectionFromDistributionPointGroup -CollectionName <String> -DistributionPointGroupId <String>
+ [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -57,21 +55,6 @@ Parameter Sets: (All)
 Aliases: DeviceCollectionName, UserCollectionName
 
 Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -157,6 +140,21 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

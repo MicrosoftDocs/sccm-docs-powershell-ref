@@ -1,4 +1,4 @@
----
+﻿---
 description: Sets a compliance setting directory.
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,9 +16,9 @@ Sets a compliance setting directory.
 
 ```
 Set-CMComplianceSettingDirectory [-DirectoryName <String>] [-IncludeSubfolders <Boolean>] [-Is64Bit <Boolean>]
- [-Path <String>] [-Description <String>] -InputObject <PSObject> -SettingName <String>
- [-NewSettingName <String>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+ [-Path <String>] [-Description <String>] -InputObject <PSObject> [-NewSettingName <String>] [-PassThru]
+ -SettingName <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -36,21 +36,6 @@ PS XYZ:\>
 ```
 
 ## PARAMETERS
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -Description
 ```yaml
@@ -195,6 +180,21 @@ Parameter Sets: (All)
 Aliases: Name
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False

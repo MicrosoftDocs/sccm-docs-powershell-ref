@@ -1,4 +1,4 @@
----
+﻿---
 description: Changes configuration settings of a security role.
 external help file: AdminUI.PS.Rba.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,19 +16,19 @@ Changes configuration settings of a security role.
 
 ### SetByValue (Default)
 ```
-Set-CMSecurityRole -InputObject <IResultObject> [-NewName <String>] [-Description <String>]
+Set-CMSecurityRole [-Description <String>] -InputObject <IResultObject> [-NewName <String>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetById
 ```
-Set-CMSecurityRole -Id <String> [-NewName <String>] [-Description <String>] [-DisableWildcardHandling]
+Set-CMSecurityRole [-Description <String>] -Id <String> [-NewName <String>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetByName
 ```
-Set-CMSecurityRole -Name <String> [-NewName <String>] [-Description <String>] [-DisableWildcardHandling]
+Set-CMSecurityRole [-Description <String>] -Name <String> [-NewName <String>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -71,21 +71,6 @@ The second command renames the security role for the object stored in $Srole.
 The command changes the name to RTOperator02.
 
 ## PARAMETERS
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -Description
 Specifies the description of a security role.
@@ -189,6 +174,21 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

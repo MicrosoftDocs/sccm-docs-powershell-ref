@@ -1,4 +1,4 @@
----
+﻿---
 description: Creates a detection clause mac package.
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 Module Name: ConfigurationManager
@@ -15,8 +15,8 @@ Creates a detection clause mac package.
 ## SYNTAX
 
 ```
-New-CMDetectionClauseMacPackage -ExpressionOperator <RuleExpressionOperator> -PackageId <String>
- -ExpectedValue <String> [-Value] [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
+New-CMDetectionClauseMacPackage -ExpectedValue <String> -ExpressionOperator <MacRuleExpressionOperator>
+ -PackageId <String> [-Value] [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -65,10 +65,10 @@ Accept wildcard characters: False
 
 ### -ExpressionOperator
 ```yaml
-Type: RuleExpressionOperator
+Type: MacRuleExpressionOperator
 Parameter Sets: (All)
 Aliases:
-Accepted values: IsEquals, GreaterEquals, GreaterThan, LessEquals, LessThan
+Accepted values: IsEquals, GreaterThan, LessThan, GreaterEquals, LessEquals
 
 Required: True
 Position: Named

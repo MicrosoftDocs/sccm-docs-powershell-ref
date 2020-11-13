@@ -1,4 +1,4 @@
----
+﻿---
 description: Sets a Mac deployment type.
 external help file: AdminUI.PS.AppMan.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,41 +16,41 @@ Sets a Mac deployment type.
 
 ### ByAppName (Default)
 ```
-Set-CMMacDeploymentType [-AddDetectionClause <DetectionClause[]>] [-RemoveDetectionClause <String[]>]
- [-GroupDetectionClauses <String[]>] [-DetectionClauseConnector <Hashtable[]>] [-AddRequirement <Rule[]>]
- -ApplicationName <String> -DeploymentTypeName <String> [-NewName <String>] [-ContentLocation <String>]
- [-RemoveRequirement <Rule[]>] [-RemoveLanguage <String[]>] [-PassThru] [-AddLanguage <String[]>]
- [-Comment <String>] [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
-```
-
-### ByAppId
-```
-Set-CMMacDeploymentType [-AddDetectionClause <DetectionClause[]>] [-RemoveDetectionClause <String[]>]
- [-GroupDetectionClauses <String[]>] [-DetectionClauseConnector <Hashtable[]>] [-AddRequirement <Rule[]>]
- -ApplicationId <Int32> -DeploymentTypeName <String> [-NewName <String>] [-ContentLocation <String>]
- [-RemoveRequirement <Rule[]>] [-RemoveLanguage <String[]>] [-PassThru] [-AddLanguage <String[]>]
+Set-CMMacDeploymentType [-AddDetectionClause <DetectionClause[]>] [-DetectionClauseConnector <Hashtable[]>]
+ [-GroupDetectionClauses <String[]>] [-RemoveDetectionClause <String[]>] [-AddRequirement <Rule[]>]
+ -ApplicationName <String> [-ContentLocation <String>] -DeploymentTypeName <String> [-NewName <String>]
+ [-PassThru] [-RemoveLanguage <String[]>] [-RemoveRequirement <Rule[]>] [-AddLanguage <String[]>]
  [-Comment <String>] [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ### ByAppValue
 ```
-Set-CMMacDeploymentType [-AddDetectionClause <DetectionClause[]>] [-RemoveDetectionClause <String[]>]
- [-GroupDetectionClauses <String[]>] [-DetectionClauseConnector <Hashtable[]>] [-AddRequirement <Rule[]>]
- -DeploymentTypeName <String> -Application <IResultObject> [-NewName <String>] [-ContentLocation <String>]
- [-RemoveRequirement <Rule[]>] [-RemoveLanguage <String[]>] [-PassThru] [-AddLanguage <String[]>]
+Set-CMMacDeploymentType [-AddDetectionClause <DetectionClause[]>] [-DetectionClauseConnector <Hashtable[]>]
+ [-GroupDetectionClauses <String[]>] [-RemoveDetectionClause <String[]>] [-AddRequirement <Rule[]>]
+ -Application <IResultObject> [-ContentLocation <String>] -DeploymentTypeName <String> [-NewName <String>]
+ [-PassThru] [-RemoveLanguage <String[]>] [-RemoveRequirement <Rule[]>] [-AddLanguage <String[]>]
+ [-Comment <String>] [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### ByAppId
+```
+Set-CMMacDeploymentType [-AddDetectionClause <DetectionClause[]>] [-DetectionClauseConnector <Hashtable[]>]
+ [-GroupDetectionClauses <String[]>] [-RemoveDetectionClause <String[]>] [-AddRequirement <Rule[]>]
+ -ApplicationId <Int32> [-ContentLocation <String>] -DeploymentTypeName <String> [-NewName <String>]
+ [-PassThru] [-RemoveLanguage <String[]>] [-RemoveRequirement <Rule[]>] [-AddLanguage <String[]>]
  [-Comment <String>] [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ### ByDTValue
 ```
-Set-CMMacDeploymentType [-AddDetectionClause <DetectionClause[]>] [-RemoveDetectionClause <String[]>]
- [-GroupDetectionClauses <String[]>] [-DetectionClauseConnector <Hashtable[]>] [-AddRequirement <Rule[]>]
- -InputObject <IResultObject> [-NewName <String>] [-ContentLocation <String>] [-RemoveRequirement <Rule[]>]
- [-RemoveLanguage <String[]>] [-PassThru] [-AddLanguage <String[]>] [-Comment <String>] [-Force]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMMacDeploymentType [-AddDetectionClause <DetectionClause[]>] [-DetectionClauseConnector <Hashtable[]>]
+ [-GroupDetectionClauses <String[]>] [-RemoveDetectionClause <String[]>] [-AddRequirement <Rule[]>]
+ [-ContentLocation <String>] -InputObject <IResultObject> [-NewName <String>] [-PassThru]
+ [-RemoveLanguage <String[]>] [-RemoveRequirement <Rule[]>] [-AddLanguage <String[]>] [-Comment <String>]
+ [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -193,21 +193,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -ContentLocation
 Specifies the path of the content.
 The site system server requires permissions to read the content files.
@@ -229,7 +214,7 @@ Specifies a display name for this deployment type.
 
 ```yaml
 Type: String
-Parameter Sets: ByAppName, ByAppId, ByAppValue
+Parameter Sets: ByAppName, ByAppValue, ByAppId
 Aliases:
 
 Required: True
@@ -401,6 +386,21 @@ Aliases: RemoveRequirements
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

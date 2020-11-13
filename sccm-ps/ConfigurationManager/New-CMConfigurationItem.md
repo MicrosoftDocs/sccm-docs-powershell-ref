@@ -1,4 +1,4 @@
----
+﻿---
 description: Creates a Configuration Manager configuration item.
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 Module Name: ConfigurationManager
@@ -17,16 +17,15 @@ Creates a Configuration Manager configuration item.
 
 ### NewChild (Default)
 ```
-New-CMConfigurationItem -Name <String> [-Description <String>] [-Category <String[]>]
+New-CMConfigurationItem [-Category <String[]>] [-Description <String>] -Name <String>
  -ParentConfigurationItem <IResultObject> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
  [-Confirm] [<CommonParameters>]
 ```
 
 ### New
 ```
-New-CMConfigurationItem -Name <String> [-Description <String>] [-Category <String[]>]
- -CreationType <CICreationType> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+New-CMConfigurationItem [-Category <String[]>] -CreationType <CICreationType> [-Description <String>]
+ -Name <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -67,22 +66,6 @@ Aliases: LocalizedCategoryInstanceNames
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -189,6 +172,22 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

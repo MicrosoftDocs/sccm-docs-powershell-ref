@@ -1,4 +1,4 @@
----
+﻿---
 description: Gets how often Configuration Manager evaluates collection membership.
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -15,7 +15,7 @@ Gets how often Configuration Manager evaluates collection membership.
 ## SYNTAX
 
 ```
-Get-CMCollectionMembershipEvaluationComponent [-SiteSystemServerName <String>] [-SiteCode <String>]
+Get-CMCollectionMembershipEvaluationComponent [-SiteCode <String>] [-SiteSystemServerName <String>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 

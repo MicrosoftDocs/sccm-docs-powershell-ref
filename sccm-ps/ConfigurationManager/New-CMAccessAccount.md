@@ -1,4 +1,4 @@
----
+﻿---
 description: Adds users or groups to an access account.
 external help file: AdminUI.PS.Rba.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,107 +16,107 @@ Adds users or groups to an access account.
 
 ### SearchByValue (Default)
 ```
-New-CMAccessAccount [-InputObject] <IResultObject> -AccountType <AccessAccountType> [-UserName <String>]
- -Access <AccessRight> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
-```
-
-### SearchByApplicationName
-```
-New-CMAccessAccount -ApplicationName <String> -AccountType <AccessAccountType> [-UserName <String>]
- -Access <AccessRight> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+New-CMAccessAccount -Access <AccessRight> -AccountType <AccessAccountType> [-InputObject] <IResultObject>
+ [-UserName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ### SearchByApplicationId
 ```
-New-CMAccessAccount -ApplicationId <String> -AccountType <AccessAccountType> [-UserName <String>]
- -Access <AccessRight> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+New-CMAccessAccount -Access <AccessRight> -AccountType <AccessAccountType> -ApplicationId <String>
+ [-UserName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
-### SearchByBootImageName
+### SearchByApplicationName
 ```
-New-CMAccessAccount -BootImageName <String> -AccountType <AccessAccountType> [-UserName <String>]
- -Access <AccessRight> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+New-CMAccessAccount -Access <AccessRight> -AccountType <AccessAccountType> -ApplicationName <String>
+ [-UserName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ### SearchByBootImageId
 ```
-New-CMAccessAccount -BootImageId <String> -AccountType <AccessAccountType> [-UserName <String>]
- -Access <AccessRight> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+New-CMAccessAccount -Access <AccessRight> -AccountType <AccessAccountType> -BootImageId <String>
+ [-UserName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
-### SearchByDriverPackageName
+### SearchByBootImageName
 ```
-New-CMAccessAccount -DriverPackageName <String> -AccountType <AccessAccountType> [-UserName <String>]
- -Access <AccessRight> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+New-CMAccessAccount -Access <AccessRight> -AccountType <AccessAccountType> -BootImageName <String>
+ [-UserName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ### SearchByDriverPackageId
 ```
-New-CMAccessAccount -DriverPackageId <String> -AccountType <AccessAccountType> [-UserName <String>]
- -Access <AccessRight> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+New-CMAccessAccount -Access <AccessRight> -AccountType <AccessAccountType> -DriverPackageId <String>
+ [-UserName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
-### SearchByOSImageName
+### SearchByDriverPackageName
 ```
-New-CMAccessAccount -OperatingSystemImageName <String> -AccountType <AccessAccountType> [-UserName <String>]
- -Access <AccessRight> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+New-CMAccessAccount -Access <AccessRight> -AccountType <AccessAccountType> -DriverPackageName <String>
+ [-UserName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ### SearchByOSImageId
 ```
-New-CMAccessAccount -OperatingSystemImageId <String> -AccountType <AccessAccountType> [-UserName <String>]
- -Access <AccessRight> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+New-CMAccessAccount -Access <AccessRight> -AccountType <AccessAccountType> -OperatingSystemImageId <String>
+ [-UserName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### SearchByOSImageName
+```
+New-CMAccessAccount -Access <AccessRight> -AccountType <AccessAccountType> -OperatingSystemImageName <String>
+ [-UserName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### SearchByOSInstallerId
+```
+New-CMAccessAccount -Access <AccessRight> -AccountType <AccessAccountType> -OperatingSystemInstallerId <String>
+ [-UserName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ### SearchByOSInstallerName
 ```
-New-CMAccessAccount -OperatingSystemInstallerName <String> -AccountType <AccessAccountType>
- [-UserName <String>] -Access <AccessRight> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+New-CMAccessAccount -Access <AccessRight> -AccountType <AccessAccountType>
+ -OperatingSystemInstallerName <String> [-UserName <String>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### SearchByOSInstallerId
+### SearchByPackageId
 ```
-New-CMAccessAccount -OperatingSystemInstallerId <String> -AccountType <AccessAccountType> [-UserName <String>]
- -Access <AccessRight> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+New-CMAccessAccount -Access <AccessRight> -AccountType <AccessAccountType> -PackageId <String>
+ [-UserName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ### SearchByPackageName
 ```
-New-CMAccessAccount -PackageName <String> -AccountType <AccessAccountType> [-UserName <String>]
- -Access <AccessRight> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+New-CMAccessAccount -Access <AccessRight> -AccountType <AccessAccountType> -PackageName <String>
+ [-UserName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
-```
-
-### SearchByPackageId
-```
-New-CMAccessAccount -PackageId <String> -AccountType <AccessAccountType> [-UserName <String>]
- -Access <AccessRight> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
-```
-
-### SearchBySoftwareUpdateDeploymentPackageName
-```
-New-CMAccessAccount -SoftwareUpdateDeploymentPackageName <String> -AccountType <AccessAccountType>
- [-UserName <String>] -Access <AccessRight> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchBySoftwareUpdateDeploymentPackageId
 ```
-New-CMAccessAccount -SoftwareUpdateDeploymentPackageId <String> -AccountType <AccessAccountType>
- [-UserName <String>] -Access <AccessRight> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+New-CMAccessAccount -Access <AccessRight> -AccountType <AccessAccountType>
+ -SoftwareUpdateDeploymentPackageId <String> [-UserName <String>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SearchBySoftwareUpdateDeploymentPackageName
+```
+New-CMAccessAccount -Access <AccessRight> -AccountType <AccessAccountType>
+ -SoftwareUpdateDeploymentPackageName <String> [-UserName <String>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -235,21 +235,6 @@ Aliases:
 Required: True
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -461,6 +446,21 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

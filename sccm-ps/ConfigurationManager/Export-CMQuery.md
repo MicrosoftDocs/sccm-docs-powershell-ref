@@ -1,4 +1,4 @@
----
+﻿---
 description: Export a query from Configuration Manager.
 external help file: AdminUI.PS.SystemStatus.dll-Help.xml
 Module Name: ConfigurationManager
@@ -17,19 +17,19 @@ Export a query from Configuration Manager.
 
 ### SearchByNameMandatory (Default)
 ```
-Export-CMQuery -Name <String> -ExportFilePath <String> [-Comment <String>] [-DisableWildcardHandling]
+Export-CMQuery [-Comment <String>] -ExportFilePath <String> -Name <String> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory
 ```
-Export-CMQuery -Id <String> -ExportFilePath <String> [-Comment <String>] [-DisableWildcardHandling]
+Export-CMQuery [-Comment <String>] -ExportFilePath <String> -Id <String> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByValueMandatory
 ```
-Export-CMQuery [-InputObject] <IResultObject> -ExportFilePath <String> [-Comment <String>]
+Export-CMQuery [-Comment <String>] -ExportFilePath <String> [-InputObject] <IResultObject>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -56,38 +56,22 @@ Export-CMQuery -Name "My Systems" -ExportFilePath "C:\Export\Query.mof"
 
 Add a comment to the exported MOF file. For example:
 
-```powershell
+
+
 Export-CMQuery -Name "My Systems" -ExportFilePath "C:\Export\Query.mof" -Comment "This is a comment"
-```
 
 This example sets the following comment in the exported file:
 
-```mof
+
+
 // Comments :
 //
 // This is a comment
-```
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
 
 Required: False
 Position: Named
@@ -192,6 +176,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 
 Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
@@ -209,7 +209,6 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -219,7 +218,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
-
 ## NOTES
 
 ## RELATED LINKS

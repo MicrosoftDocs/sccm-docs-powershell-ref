@@ -1,4 +1,4 @@
----
+﻿---
 description: Adds a data warehouse service point.
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,21 +16,20 @@ Adds a data warehouse service point
 
 ### DataWarehouseServicePointByValue (Default)
 ```
-Add-CMDataWarehouseServicePoint [-DataWarehouseDatabaseServerName <String>]
- [-DataWarehouseInstanceName <String>] [-DataWarehouseDatabaseName <String>] [-DataWarehouseSqlPort <Int32>]
- [-StartAftertime <DateTime>] [-WeekFrequency <Int32>] [-DaysOfWeek <DataWarehouseDaysOfWeek>]
- -UserName <String> [-DataRetentionDays <Int32>] -InputObject <IResultObject> [-Force]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Add-CMDataWarehouseServicePoint [-DataRetentionDays <Int32>] [-DataWarehouseDatabaseName <String>]
+ [-DataWarehouseDatabaseServerName <String>] [-DataWarehouseInstanceName <String>]
+ [-DataWarehouseSqlPort <Int32>] [-DaysOfWeek <DataWarehouseDaysOfWeek>] [-Force] -InputObject <IResultObject>
+ [-StartAftertime <DateTime>] -UserName <String> [-WeekFrequency <Int32>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### DataWarehouseServicePoint
 ```
-Add-CMDataWarehouseServicePoint [-SiteSystemServerName] <String> [-SiteCode <String>]
+Add-CMDataWarehouseServicePoint [-DataRetentionDays <Int32>] [-DataWarehouseDatabaseName <String>]
  [-DataWarehouseDatabaseServerName <String>] [-DataWarehouseInstanceName <String>]
- [-DataWarehouseDatabaseName <String>] [-DataWarehouseSqlPort <Int32>] [-StartAftertime <DateTime>]
- [-WeekFrequency <Int32>] [-DaysOfWeek <DataWarehouseDaysOfWeek>] -UserName <String>
- [-DataRetentionDays <Int32>] [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-DataWarehouseSqlPort <Int32>] [-DaysOfWeek <DataWarehouseDaysOfWeek>] [-Force] [-SiteCode <String>]
+ [-SiteSystemServerName] <String> [-StartAftertime <DateTime>] -UserName <String> [-WeekFrequency <Int32>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -48,21 +47,6 @@ PS XYZ:\>
 ```
 
 ## PARAMETERS
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -DataRetentionDays
 {{ Fill DataRetentionDays Description }}
@@ -262,6 +246,21 @@ Accept wildcard characters: False
 Type: Int32
 Parameter Sets: (All)
 Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
 
 Required: False
 Position: Named

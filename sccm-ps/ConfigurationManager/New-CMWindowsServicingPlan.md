@@ -1,4 +1,4 @@
----
+﻿---
 description: Creates a Windows 10 servicing plan.
 external help file: AdminUI.PS.Sum-help.xml
 Module Name: ConfigurationManager
@@ -288,21 +288,6 @@ Aliases:
 Required: True
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -761,21 +746,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -UseUtc
-Indicates whether the schedule for this deployment is evaluated based upon Universal Coordinated Time (UTC).
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -UserNotification
 Specifies the notification behavior of the user visual experience.
 Valid values are:
@@ -789,6 +759,21 @@ Type: UserNotificationType
 Parameter Sets: (All)
 Aliases:
 Accepted values: DisplayAll, DisplaySoftwareCenterOnly, HideAll
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UseUtc
+Indicates whether the schedule for this deployment is evaluated based upon Universal Coordinated Time (UTC).
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named
@@ -818,22 +803,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -WriteFilterHandling
 Indicates whether changes are committed at deadline or during a maintenance window (requires restarts).
 If set to $False, content is applied on the overlay and committed later.
@@ -846,6 +815,37 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

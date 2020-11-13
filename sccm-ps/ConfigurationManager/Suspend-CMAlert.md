@@ -1,4 +1,4 @@
----
+﻿---
 description: Suspends monitoring alerts.
 external help file: AdminUI.PS.Alerts.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,19 +16,19 @@ Suspends monitoring alerts.
 
 ### SearchByValueMandatory (Default)
 ```
-Suspend-CMAlert -InputObject <IResultObject> [-Comment <String>] -SkipUntil <DateTime> [-PassThru]
+Suspend-CMAlert [-Comment <String>] -InputObject <IResultObject> [-PassThru] -SkipUntil <DateTime>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory
 ```
-Suspend-CMAlert -Id <String> [-Comment <String>] -SkipUntil <DateTime> [-PassThru] [-DisableWildcardHandling]
+Suspend-CMAlert [-Comment <String>] -Id <String> [-PassThru] -SkipUntil <DateTime> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByNameMandatory
 ```
-Suspend-CMAlert -Name <String> [-Comment <String>] -SkipUntil <DateTime> [-PassThru] [-DisableWildcardHandling]
+Suspend-CMAlert [-Comment <String>] -Name <String> [-PassThru] -SkipUntil <DateTime> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -76,21 +76,6 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -205,6 +190,21 @@ Aliases:
 Required: True
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

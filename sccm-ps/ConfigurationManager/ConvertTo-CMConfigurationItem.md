@@ -1,4 +1,4 @@
----
+﻿---
 description: Convert a Configuration Manager management iResultObject to a configuration item object.
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 Module Name: ConfigurationManager
@@ -17,7 +17,7 @@ Convert a Configuration Manager management iResultObject to a configuration item
 
 ### ByObjectValue (Default)
 ```
-ConvertTo-CMConfigurationItem -InputObject <IResultObject> [-Force] [-DisableWildcardHandling]
+ConvertTo-CMConfigurationItem [-Force] -InputObject <IResultObject> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [<CommonParameters>]
 ```
 

@@ -1,4 +1,4 @@
----
+﻿---
 description: Clears an operating system upgrade update schedule
 external help file: AdminUI.PS.Osd.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,19 +16,19 @@ Clears an operating system upgrade update schedule
 
 ### SearchByValueMandatory (Default)
 ```
-Clear-CMOperatingSystemUpgradeUpdateSchedule -InputObject <IResultObject> [-Force] [-DisableWildcardHandling]
+Clear-CMOperatingSystemUpgradeUpdateSchedule [-Force] -InputObject <IResultObject> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory
 ```
-Clear-CMOperatingSystemUpgradeUpdateSchedule -Id <String> [-Force] [-DisableWildcardHandling]
+Clear-CMOperatingSystemUpgradeUpdateSchedule [-Force] -Id <String> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByNameMandatory
 ```
-Clear-CMOperatingSystemUpgradeUpdateSchedule -Name <String> [-Force] [-DisableWildcardHandling]
+Clear-CMOperatingSystemUpgradeUpdateSchedule [-Force] -Name <String> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -47,21 +47,6 @@ PS XYZ:\>
 ```
 
 ## PARAMETERS
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -DisableWildcardHandling
 DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
@@ -139,6 +124,21 @@ Parameter Sets: SearchByNameMandatory
 Aliases: OperatingSystemImageName
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False

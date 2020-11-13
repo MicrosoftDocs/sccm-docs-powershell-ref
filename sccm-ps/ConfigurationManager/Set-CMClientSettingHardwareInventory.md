@@ -1,4 +1,4 @@
----
+﻿---
 description: Sets a client setting hardware inventory.
 external help file: AdminUI.PS.ClientSettings.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,28 +16,28 @@ Sets a client setting hardware inventory.
 
 ### SetCustomSettingByName (Default)
 ```
-Set-CMClientSettingHardwareInventory [-Enable <Boolean>] [-Schedule <IResultObject>]
- [-InventoryReportId <String>] [-CleanInventoryReportClass] [-RemoveInventoryReportClassById <String[]>]
- [-AddInventoryReportClass <IResultObject[]>] [-MaxRandomDelayMins <Int32>] [-MaxThirdPartyMifSize <Int32>]
- [-CollectMifFile <MifCollectionType>] -Name <String> [-PassThru] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMClientSettingHardwareInventory [-AddInventoryReportClass <IResultObject[]>] [-CleanInventoryReportClass]
+ [-CollectMifFile <MifCollectionType>] [-Enable <Boolean>] [-InventoryReportId <String>]
+ [-MaxRandomDelayMins <Int32>] [-MaxThirdPartyMifSize <Int32>] [-RemoveInventoryReportClassById <String[]>]
+ [-Schedule <IResultObject>] -Name <String> [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetDefaultSetting
 ```
-Set-CMClientSettingHardwareInventory [-Enable <Boolean>] [-Schedule <IResultObject>]
- [-InventoryReportId <String>] [-CleanInventoryReportClass] [-RemoveInventoryReportClassById <String[]>]
- [-AddInventoryReportClass <IResultObject[]>] [-MaxRandomDelayMins <Int32>] [-MaxThirdPartyMifSize <Int32>]
- [-CollectMifFile <MifCollectionType>] [-DefaultSetting] [-PassThru] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMClientSettingHardwareInventory [-AddInventoryReportClass <IResultObject[]>] [-CleanInventoryReportClass]
+ [-CollectMifFile <MifCollectionType>] [-Enable <Boolean>] [-InventoryReportId <String>]
+ [-MaxRandomDelayMins <Int32>] [-MaxThirdPartyMifSize <Int32>] [-RemoveInventoryReportClassById <String[]>]
+ [-Schedule <IResultObject>] [-DefaultSetting] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetCustomSettingByValue
 ```
-Set-CMClientSettingHardwareInventory [-Enable <Boolean>] [-Schedule <IResultObject>]
- [-InventoryReportId <String>] [-CleanInventoryReportClass] [-RemoveInventoryReportClassById <String[]>]
- [-AddInventoryReportClass <IResultObject[]>] [-MaxRandomDelayMins <Int32>] [-MaxThirdPartyMifSize <Int32>]
- [-CollectMifFile <MifCollectionType>] -InputObject <IResultObject> [-PassThru] [-DisableWildcardHandling]
+Set-CMClientSettingHardwareInventory [-AddInventoryReportClass <IResultObject[]>] [-CleanInventoryReportClass]
+ [-CollectMifFile <MifCollectionType>] [-Enable <Boolean>] [-InventoryReportId <String>]
+ [-MaxRandomDelayMins <Int32>] [-MaxThirdPartyMifSize <Int32>] [-RemoveInventoryReportClassById <String[]>]
+ [-Schedule <IResultObject>] -InputObject <IResultObject> [-PassThru] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -93,21 +93,6 @@ Type: MifCollectionType
 Parameter Sets: (All)
 Aliases: CollectMifFiles
 Accepted values: None, CollectNoIdMifFile, CollectIdMifFile, CollectIdMifAndNoIdMifFile
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
 
 Required: False
 Position: Named
@@ -272,6 +257,21 @@ Accept wildcard characters: False
 Type: IResultObject
 Parameter Sets: (All)
 Aliases: InventorySchedule, HardwareInventorySchedule
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
 
 Required: False
 Position: Named

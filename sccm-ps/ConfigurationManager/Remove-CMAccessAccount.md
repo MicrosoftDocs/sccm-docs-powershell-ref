@@ -1,4 +1,4 @@
----
+﻿---
 description: Removes users or groups from an access account.
 external help file: AdminUI.PS.Rba.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,96 +16,99 @@ Removes users or groups from an access account.
 
 ### SearchByValue (Default)
 ```
-Remove-CMAccessAccount -AccountType <AccessAccountType> [-UserName <String>] [-Force]
- [-InputObject] <IResultObject> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+Remove-CMAccessAccount -AccountType <AccessAccountType> [-Force] [-InputObject] <IResultObject>
+ [-UserName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
-```
-
-### SearchByApplicationName
-```
-Remove-CMAccessAccount -ApplicationName <String> -AccountType <AccessAccountType> [-UserName <String>] [-Force]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByApplicationId
 ```
-Remove-CMAccessAccount -ApplicationId <String> -AccountType <AccessAccountType> [-UserName <String>] [-Force]
+Remove-CMAccessAccount -AccountType <AccessAccountType> -ApplicationId <String> [-Force] [-UserName <String>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### SearchByBootImageName
+### SearchByApplicationName
 ```
-Remove-CMAccessAccount -BootImageName <String> -AccountType <AccessAccountType> [-UserName <String>] [-Force]
+Remove-CMAccessAccount -AccountType <AccessAccountType> -ApplicationName <String> [-Force] [-UserName <String>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByBootImageId
 ```
-Remove-CMAccessAccount -BootImageId <String> -AccountType <AccessAccountType> [-UserName <String>] [-Force]
+Remove-CMAccessAccount -AccountType <AccessAccountType> -BootImageId <String> [-Force] [-UserName <String>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SearchByBootImageName
+```
+Remove-CMAccessAccount -AccountType <AccessAccountType> -BootImageName <String> [-Force] [-UserName <String>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SearchByDriverPackageId
+```
+Remove-CMAccessAccount -AccountType <AccessAccountType> -DriverPackageId <String> [-Force] [-UserName <String>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByDriverPackageName
 ```
-Remove-CMAccessAccount -DriverPackageName <String> -AccountType <AccessAccountType> [-UserName <String>]
- [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### SearchByDriverPackageId
-```
-Remove-CMAccessAccount -DriverPackageId <String> -AccountType <AccessAccountType> [-UserName <String>] [-Force]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### SearchByOSImageName
-```
-Remove-CMAccessAccount -OperatingSystemImageName <String> -AccountType <AccessAccountType> [-UserName <String>]
- [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Remove-CMAccessAccount -AccountType <AccessAccountType> -DriverPackageName <String> [-Force]
+ [-UserName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### SearchByOSImageId
 ```
-Remove-CMAccessAccount -OperatingSystemImageId <String> -AccountType <AccessAccountType> [-UserName <String>]
- [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Remove-CMAccessAccount -AccountType <AccessAccountType> [-Force] -OperatingSystemImageId <String>
+ [-UserName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
-### SearchByOSInstallerName
+### SearchByOSImageName
 ```
-Remove-CMAccessAccount -OperatingSystemInstallerName <String> -AccountType <AccessAccountType>
- [-UserName <String>] [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+Remove-CMAccessAccount -AccountType <AccessAccountType> [-Force] -OperatingSystemImageName <String>
+ [-UserName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ### SearchByOSInstallerId
 ```
-Remove-CMAccessAccount -OperatingSystemInstallerId <String> -AccountType <AccessAccountType>
- [-UserName <String>] [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+Remove-CMAccessAccount -AccountType <AccessAccountType> [-Force] -OperatingSystemInstallerId <String>
+ [-UserName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
-### SearchByPackageName
+### SearchByOSInstallerName
 ```
-Remove-CMAccessAccount -PackageName <String> -AccountType <AccessAccountType> [-UserName <String>] [-Force]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Remove-CMAccessAccount -AccountType <AccessAccountType> [-Force] -OperatingSystemInstallerName <String>
+ [-UserName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### SearchByPackageId
 ```
-Remove-CMAccessAccount -PackageId <String> -AccountType <AccessAccountType> [-UserName <String>] [-Force]
+Remove-CMAccessAccount -AccountType <AccessAccountType> [-Force] -PackageId <String> [-UserName <String>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### SearchBySoftwareUpdateDeploymentPackageName
+### SearchByPackageName
 ```
-Remove-CMAccessAccount -SoftwareUpdateDeploymentPackageName <String> -AccountType <AccessAccountType>
- [-UserName <String>] [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Remove-CMAccessAccount -AccountType <AccessAccountType> [-Force] -PackageName <String> [-UserName <String>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchBySoftwareUpdateDeploymentPackageId
 ```
-Remove-CMAccessAccount -SoftwareUpdateDeploymentPackageId <String> -AccountType <AccessAccountType>
- [-UserName <String>] [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+Remove-CMAccessAccount -AccountType <AccessAccountType> [-Force] -SoftwareUpdateDeploymentPackageId <String>
+ [-UserName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### SearchBySoftwareUpdateDeploymentPackageName
+```
+Remove-CMAccessAccount -AccountType <AccessAccountType> [-Force] -SoftwareUpdateDeploymentPackageName <String>
+ [-UserName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
@@ -216,21 +219,6 @@ Aliases:
 Required: True
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -457,6 +445,21 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

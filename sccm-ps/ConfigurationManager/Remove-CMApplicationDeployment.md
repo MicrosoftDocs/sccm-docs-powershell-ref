@@ -1,4 +1,4 @@
----
+﻿---
 description: Removes an application deployment.
 external help file: AdminUI.PS.Deployments.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,29 +16,29 @@ Removes an application deployment.
 
 ### SearchByValue (Default)
 ```
-Remove-CMApplicationDeployment -InputObject <IResultObject> [-Force] [-CollectionName <String>]
- [-CollectionId <String>] [-Collection <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### SearchByName
-```
-Remove-CMApplicationDeployment [-Name <String>] [-Force] [-CollectionName <String>] [-CollectionId <String>]
- [-Collection <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
-```
-
-### SearchBySmsObjectId
-```
-Remove-CMApplicationDeployment [-SmsObjectId <Int32>] [-Force] [-CollectionName <String>]
- [-CollectionId <String>] [-Collection <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Remove-CMApplicationDeployment -InputObject <IResultObject> [-Force] [-Collection <IResultObject>]
+ [-CollectionId <String>] [-CollectionName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByDeploymentId
 ```
-Remove-CMApplicationDeployment [-DeploymentId <String>] [-Force] [-CollectionName <String>]
- [-CollectionId <String>] [-Collection <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Remove-CMApplicationDeployment [-DeploymentId <String>] [-Force] [-Collection <IResultObject>]
+ [-CollectionId <String>] [-CollectionName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SearchByName
+```
+Remove-CMApplicationDeployment [-Name <String>] [-Force] [-Collection <IResultObject>] [-CollectionId <String>]
+ [-CollectionName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### SearchBySmsObjectId
+```
+Remove-CMApplicationDeployment [-SmsObjectId <Int32>] [-Force] [-Collection <IResultObject>]
+ [-CollectionId <String>] [-CollectionName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -89,21 +89,6 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: (All)
 Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
 
 Required: False
 Position: Named
@@ -199,6 +184,21 @@ Accept wildcard characters: False
 Type: Int32
 Parameter Sets: SearchBySmsObjectId
 Aliases: CI_ID, ApplicationID
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
 
 Required: False
 Position: Named

@@ -1,4 +1,4 @@
----
+﻿---
 description: Creates a compliance rule file folder simple.
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 Module Name: ConfigurationManager
@@ -15,11 +15,11 @@ Creates a compliance rule file folder simple.
 ## SYNTAX
 
 ```
-New-CMComplianceRuleFileFolderSimple -PropertyType <FileFolderProperty>
- -ExpressionOperator <RuleExpressionOperator> [-ReportNoncompliance] -RuleName <String>
- -InputObject <ConfigurationItemSetting> [-ExpectedValue <String[]>]
- [-NoncomplianceSeverity <NoncomplianceSeverity>] [-RuleDescription <String>] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+New-CMComplianceRuleFileFolderSimple -PropertyType <SimpleFileFolderProperty>
+ -ExpressionOperator <RuleExpressionOperator> [-ReportNoncompliance] -InputObject <ConfigurationItemSetting>
+ -RuleName <String> [-ExpectedValue <String[]>] [-NoncomplianceSeverity <NoncomplianceSeverity>]
+ [-RuleDescription <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -37,21 +37,6 @@ PS XYZ:\>
 ```
 
 ## PARAMETERS
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -DisableWildcardHandling
 DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
@@ -139,7 +124,7 @@ Accept wildcard characters: False
 
 ### -PropertyType
 ```yaml
-Type: FileFolderProperty
+Type: SimpleFileFolderProperty
 Parameter Sets: (All)
 Aliases:
 Accepted values: Company, ProductName, SHA1Hash
@@ -184,6 +169,21 @@ Parameter Sets: (All)
 Aliases:
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False

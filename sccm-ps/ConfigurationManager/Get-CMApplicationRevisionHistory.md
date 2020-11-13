@@ -1,4 +1,4 @@
----
+﻿---
 description: Gets a Configuration Manager object that represents the revision history for an application.
 external help file: AdminUI.PS.AppMan.dll-Help.xml
 Module Name: ConfigurationManager
@@ -20,15 +20,15 @@ Get-CMApplicationRevisionHistory [-Name] <String> [-Revision <UInt32>] [-Disable
  [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
-### SearchByValueMandatory
-```
-Get-CMApplicationRevisionHistory -InputObject <IResultObject> [-Revision <UInt32>] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [<CommonParameters>]
-```
-
 ### SearchBySingleIdMandatory
 ```
 Get-CMApplicationRevisionHistory -Id <Int32> [-Revision <UInt32>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [<CommonParameters>]
+```
+
+### SearchByValueMandatory
+```
+Get-CMApplicationRevisionHistory -InputObject <IResultObject> [-Revision <UInt32>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [<CommonParameters>]
 ```
 

@@ -1,4 +1,4 @@
----
+﻿---
 description: Modifies a driver package.
 external help file: AdminUI.PS.Osd.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,38 +16,40 @@ Modifies a driver package.
 
 ### SetByValueMandatory (Default)
 ```
-Set-CMDriverPackage -InputObject <IResultObject> [-NewName <String>] [-Description <String>]
- [-Version <String>] [-DriverManufacturer <String>] [-DriverModel <String>] [-DriverPackageSource <String>]
- [-DistributionPointUpdateSchedule <IResultObject>] [-DisconnectUserFromDistributionPoint <Boolean>]
- [-DisconnectUserFromDistributionPointRetryCount <UInt32>] [-DisconnectUserFromDistributionPointMins <UInt32>]
- [-CustomPackageShareName <String>] [-CopyToPackageShareOnDistributionPoint <Boolean>]
- [-MulticastAllow <Boolean>] [-MulticastEncrypt <Boolean>] [-MulticastTransferOnly <Boolean>]
- [-Priority <Priority>] [-SendToPreferredDistributionPoint <Boolean>] [-PrestageBehavior <PrestageBehavior>]
- [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMDriverPackage [-CopyToPackageShareOnDistributionPoint <Boolean>] [-CustomPackageShareName <String>]
+ [-Description <String>] [-DisconnectUserFromDistributionPoint <Boolean>]
+ [-DisconnectUserFromDistributionPointMins <UInt32>] [-DisconnectUserFromDistributionPointRetryCount <UInt32>]
+ [-DistributionPointUpdateSchedule <IResultObject>] [-DriverManufacturer <String>] [-DriverModel <String>]
+ [-DriverPackageSource <String>] -InputObject <IResultObject> [-MulticastAllow <Boolean>]
+ [-MulticastEncrypt <Boolean>] [-MulticastTransferOnly <Boolean>] [-NewName <String>] [-PassThru]
+ [-PrestageBehavior <PrestageBehavior>] [-Priority <Priority>] [-SendToPreferredDistributionPoint <Boolean>]
+ [-Version <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### SetById
 ```
-Set-CMDriverPackage -Id <String> [-NewName <String>] [-Description <String>] [-Version <String>]
- [-DriverManufacturer <String>] [-DriverModel <String>] [-DriverPackageSource <String>]
- [-DistributionPointUpdateSchedule <IResultObject>] [-DisconnectUserFromDistributionPoint <Boolean>]
- [-DisconnectUserFromDistributionPointRetryCount <UInt32>] [-DisconnectUserFromDistributionPointMins <UInt32>]
- [-CustomPackageShareName <String>] [-CopyToPackageShareOnDistributionPoint <Boolean>]
- [-MulticastAllow <Boolean>] [-MulticastEncrypt <Boolean>] [-MulticastTransferOnly <Boolean>]
- [-Priority <Priority>] [-SendToPreferredDistributionPoint <Boolean>] [-PrestageBehavior <PrestageBehavior>]
- [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMDriverPackage [-CopyToPackageShareOnDistributionPoint <Boolean>] [-CustomPackageShareName <String>]
+ [-Description <String>] [-DisconnectUserFromDistributionPoint <Boolean>]
+ [-DisconnectUserFromDistributionPointMins <UInt32>] [-DisconnectUserFromDistributionPointRetryCount <UInt32>]
+ [-DistributionPointUpdateSchedule <IResultObject>] [-DriverManufacturer <String>] [-DriverModel <String>]
+ [-DriverPackageSource <String>] -Id <String> [-MulticastAllow <Boolean>] [-MulticastEncrypt <Boolean>]
+ [-MulticastTransferOnly <Boolean>] [-NewName <String>] [-PassThru] [-PrestageBehavior <PrestageBehavior>]
+ [-Priority <Priority>] [-SendToPreferredDistributionPoint <Boolean>] [-Version <String>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetByName
 ```
-Set-CMDriverPackage -Name <String> [-NewName <String>] [-Description <String>] [-Version <String>]
- [-DriverManufacturer <String>] [-DriverModel <String>] [-DriverPackageSource <String>]
- [-DistributionPointUpdateSchedule <IResultObject>] [-DisconnectUserFromDistributionPoint <Boolean>]
- [-DisconnectUserFromDistributionPointRetryCount <UInt32>] [-DisconnectUserFromDistributionPointMins <UInt32>]
- [-CustomPackageShareName <String>] [-CopyToPackageShareOnDistributionPoint <Boolean>]
- [-MulticastAllow <Boolean>] [-MulticastEncrypt <Boolean>] [-MulticastTransferOnly <Boolean>]
- [-Priority <Priority>] [-SendToPreferredDistributionPoint <Boolean>] [-PrestageBehavior <PrestageBehavior>]
- [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMDriverPackage [-CopyToPackageShareOnDistributionPoint <Boolean>] [-CustomPackageShareName <String>]
+ [-Description <String>] [-DisconnectUserFromDistributionPoint <Boolean>]
+ [-DisconnectUserFromDistributionPointMins <UInt32>] [-DisconnectUserFromDistributionPointRetryCount <UInt32>]
+ [-DistributionPointUpdateSchedule <IResultObject>] [-DriverManufacturer <String>] [-DriverModel <String>]
+ [-DriverPackageSource <String>] [-MulticastAllow <Boolean>] [-MulticastEncrypt <Boolean>]
+ [-MulticastTransferOnly <Boolean>] -Name <String> [-NewName <String>] [-PassThru]
+ [-PrestageBehavior <PrestageBehavior>] [-Priority <Priority>] [-SendToPreferredDistributionPoint <Boolean>]
+ [-Version <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -75,21 +77,6 @@ PS XYZ:\> Set-CMDriverPackage -SecurityScopeAction RemoveMembership -SecuritySco
 This command removes a security scope action from the driver package that is named Windows 7 Standard Hardware Package.
 
 ## PARAMETERS
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -CopyToPackageShareOnDistributionPoint
 ```yaml
@@ -429,6 +416,21 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

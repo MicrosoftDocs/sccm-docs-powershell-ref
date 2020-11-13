@@ -1,4 +1,4 @@
----
+﻿---
 description: Removes a boundary group relationship.
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,19 +16,19 @@ Removes a boundary group relationship.
 
 ### SearchByValueMandatory (Default)
 ```
-Remove-CMBoundaryGroupRelationship -InputObject <IResultObject> [-Force] [-DisableWildcardHandling]
+Remove-CMBoundaryGroupRelationship [-Force] -InputObject <IResultObject> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory
 ```
-Remove-CMBoundaryGroupRelationship -SourceGroupId <Int32> [-DestinationGroupId <Int32>] [-Force]
+Remove-CMBoundaryGroupRelationship [-DestinationGroupId <Int32>] [-Force] -SourceGroupId <Int32>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByName
 ```
-Remove-CMBoundaryGroupRelationship [-SourceGroupName <String>] [-DestinationGroupName <String>] [-Force]
+Remove-CMBoundaryGroupRelationship [-DestinationGroupName <String>] [-Force] [-SourceGroupName <String>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -47,21 +47,6 @@ PS XYZ:\>
 ```
 
 ## PARAMETERS
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -DestinationGroupId
 ```yaml
@@ -171,6 +156,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
@@ -196,7 +196,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-###  
+### 
 
 ## NOTES
 

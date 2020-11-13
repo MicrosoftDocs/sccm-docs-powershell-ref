@@ -1,4 +1,4 @@
----
+﻿---
 description: Get a Configuration Manager collection membership rule.
 external help file: AdminUI.PS.Collections.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,23 +16,23 @@ Get a Configuration Manager collection membership rule.
 
 ### ByName (Default)
 ```
-Get-CMCollectionMembershipRule [-CollectionType <CollectionType>] -CollectionName <String>
- -RuleClassName <String> -ChildSearchCriteria <SmsProviderSearch> [-ExtraArguments <Object>]
+Get-CMCollectionMembershipRule -ChildSearchCriteria <SmsProviderSearch> -CollectionName <String>
+ [-CollectionType <CollectionType>] [-ExtraArguments <Object>] -RuleClassName <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ### ById
 ```
-Get-CMCollectionMembershipRule [-CollectionType <CollectionType>] -CollectionId <String>
- -RuleClassName <String> -ChildSearchCriteria <SmsProviderSearch> [-ExtraArguments <Object>]
+Get-CMCollectionMembershipRule -ChildSearchCriteria <SmsProviderSearch> -CollectionId <String>
+ [-CollectionType <CollectionType>] [-ExtraArguments <Object>] -RuleClassName <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ### ByValue
 ```
-Get-CMCollectionMembershipRule [-CollectionType <CollectionType>] -InputObject <IResultObject>
- -RuleClassName <String> -ChildSearchCriteria <SmsProviderSearch> [-ExtraArguments <Object>]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
+Get-CMCollectionMembershipRule -ChildSearchCriteria <SmsProviderSearch> [-CollectionType <CollectionType>]
+ [-ExtraArguments <Object>] -InputObject <IResultObject> -RuleClassName <String> [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -174,9 +174,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
-
 ### System.Object
+
+### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
 
 ## OUTPUTS
 

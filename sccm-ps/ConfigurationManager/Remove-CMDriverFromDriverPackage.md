@@ -1,4 +1,4 @@
----
+﻿---
 description: Removes a driver from a driver package.
 external help file: AdminUI.PS.Osd.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,63 +16,63 @@ Removes a driver from a driver package.
 
 ### RemoveDriverFromDriverPackageById_Id (Default)
 ```
-Remove-CMDriverFromDriverPackage [-Force] -DriverId <Int32> -DriverPackageId <String>
- [-UpdateDistributionPoints <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
-```
-
-### RemoveDriverFromDriverPackageById_Name
-```
-Remove-CMDriverFromDriverPackage [-Force] -DriverId <Int32> -DriverPackageName <String>
- [-UpdateDistributionPoints <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
-```
-
-### RemoveDriverFromDriverPackageById_Object
-```
-Remove-CMDriverFromDriverPackage [-Force] -DriverId <Int32> -DriverPackage <IResultObject>
- [-UpdateDistributionPoints <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
-```
-
-### RemoveDriverFromDriverPackageByName_Id
-```
-Remove-CMDriverFromDriverPackage [-Force] -DriverName <String> -DriverPackageId <String>
- [-UpdateDistributionPoints <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
-```
-
-### RemoveDriverFromDriverPackageByName_Name
-```
-Remove-CMDriverFromDriverPackage [-Force] -DriverName <String> -DriverPackageName <String>
- [-UpdateDistributionPoints <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
-```
-
-### RemoveDriverFromDriverPackageByName_Object
-```
-Remove-CMDriverFromDriverPackage [-Force] -DriverName <String> -DriverPackage <IResultObject>
+Remove-CMDriverFromDriverPackage -DriverId <Int32> -DriverPackageId <String> [-Force]
  [-UpdateDistributionPoints <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ### RemoveDriverFromDriverPackageByObject_Id
 ```
-Remove-CMDriverFromDriverPackage [-Force] -Driver <IResultObject> -DriverPackageId <String>
+Remove-CMDriverFromDriverPackage -Driver <IResultObject> -DriverPackageId <String> [-Force]
  [-UpdateDistributionPoints <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ### RemoveDriverFromDriverPackageByObject_Name
 ```
-Remove-CMDriverFromDriverPackage [-Force] -Driver <IResultObject> -DriverPackageName <String>
+Remove-CMDriverFromDriverPackage -Driver <IResultObject> -DriverPackageName <String> [-Force]
  [-UpdateDistributionPoints <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ### RemoveDriverFromDriverPackageByObject_Object
 ```
-Remove-CMDriverFromDriverPackage [-Force] -Driver <IResultObject> -DriverPackage <IResultObject>
+Remove-CMDriverFromDriverPackage -Driver <IResultObject> -DriverPackage <IResultObject> [-Force]
+ [-UpdateDistributionPoints <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### RemoveDriverFromDriverPackageById_Name
+```
+Remove-CMDriverFromDriverPackage -DriverId <Int32> -DriverPackageName <String> [-Force]
+ [-UpdateDistributionPoints <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### RemoveDriverFromDriverPackageById_Object
+```
+Remove-CMDriverFromDriverPackage -DriverId <Int32> -DriverPackage <IResultObject> [-Force]
+ [-UpdateDistributionPoints <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### RemoveDriverFromDriverPackageByName_Id
+```
+Remove-CMDriverFromDriverPackage -DriverName <String> -DriverPackageId <String> [-Force]
+ [-UpdateDistributionPoints <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### RemoveDriverFromDriverPackageByName_Name
+```
+Remove-CMDriverFromDriverPackage -DriverName <String> -DriverPackageName <String> [-Force]
+ [-UpdateDistributionPoints <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### RemoveDriverFromDriverPackageByName_Object
+```
+Remove-CMDriverFromDriverPackage -DriverName <String> -DriverPackage <IResultObject> [-Force]
  [-UpdateDistributionPoints <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
@@ -96,21 +96,6 @@ PS XYZ:\> Remove-CMDriverfromDriverPackage -DriverName "Adaptec Embedded SCSI Ho
 This command removes the driver named Adaptec Embedded SCSI HostRAID Controller from the boot image named DrvPkg01.
 
 ## PARAMETERS
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -DisableWildcardHandling
 DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
@@ -179,7 +164,7 @@ To obtain a **CMDriverPackage** object, use the [Get-CMDriverPackage](Get-CMDriv
 
 ```yaml
 Type: IResultObject
-Parameter Sets: RemoveDriverFromDriverPackageById_Object, RemoveDriverFromDriverPackageByName_Object, RemoveDriverFromDriverPackageByObject_Object
+Parameter Sets: RemoveDriverFromDriverPackageByObject_Object, RemoveDriverFromDriverPackageById_Object, RemoveDriverFromDriverPackageByName_Object
 Aliases:
 
 Required: True
@@ -194,7 +179,7 @@ Specifies the ID of a driver package.
 
 ```yaml
 Type: String
-Parameter Sets: RemoveDriverFromDriverPackageById_Id, RemoveDriverFromDriverPackageByName_Id, RemoveDriverFromDriverPackageByObject_Id
+Parameter Sets: RemoveDriverFromDriverPackageById_Id, RemoveDriverFromDriverPackageByObject_Id, RemoveDriverFromDriverPackageByName_Id
 Aliases:
 
 Required: True
@@ -209,7 +194,7 @@ Specifies the name of a driver package.
 
 ```yaml
 Type: String
-Parameter Sets: RemoveDriverFromDriverPackageById_Name, RemoveDriverFromDriverPackageByName_Name, RemoveDriverFromDriverPackageByObject_Name
+Parameter Sets: RemoveDriverFromDriverPackageByObject_Name, RemoveDriverFromDriverPackageById_Name, RemoveDriverFromDriverPackageByName_Name
 Aliases:
 
 Required: True
@@ -260,6 +245,21 @@ Aliases: UpdateDistributionPoint, UpdateDistributionPointForDriverPackage, Updat
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

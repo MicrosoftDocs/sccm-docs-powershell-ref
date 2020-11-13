@@ -1,4 +1,4 @@
----
+﻿---
 description: Modifies a software update deployment package.
 external help file: AdminUI.PS.Sum.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,25 +16,26 @@ Modifies a software update deployment package.
 
 ### SetById (Default)
 ```
-Set-CMSoftwareUpdateDeploymentPackage -Id <String> [-NewName <String>] [-Description <String>] [-Path <String>]
- [-Priority <Priorities>] [-RemoveExpired] [-RemoveSuperseded] [-Force] [-RefreshDistributionPoint] [-PassThru]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### SetByName
-```
-Set-CMSoftwareUpdateDeploymentPackage -Name <String> [-NewName <String>] [-Description <String>]
- [-Path <String>] [-Priority <Priorities>] [-RemoveExpired] [-RemoveSuperseded] [-Force]
- [-RefreshDistributionPoint] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Set-CMSoftwareUpdateDeploymentPackage [-Description <String>] [-Force] -Id <String> [-NewName <String>]
+ [-PassThru] [-Path <String>] [-Priority <Priorities>] [-RefreshDistributionPoint] [-RemoveExpired]
+ [-RemoveSuperseded] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### SetByValueMandatory
 ```
-Set-CMSoftwareUpdateDeploymentPackage -InputObject <IResultObject> [-NewName <String>] [-Description <String>]
- [-Path <String>] [-Priority <Priorities>] [-RemoveExpired] [-RemoveSuperseded] [-Force]
- [-RefreshDistributionPoint] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Set-CMSoftwareUpdateDeploymentPackage [-Description <String>] [-Force] -InputObject <IResultObject>
+ [-NewName <String>] [-PassThru] [-Path <String>] [-Priority <Priorities>] [-RefreshDistributionPoint]
+ [-RemoveExpired] [-RemoveSuperseded] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### SetByName
+```
+Set-CMSoftwareUpdateDeploymentPackage [-Description <String>] [-Force] -Name <String> [-NewName <String>]
+ [-PassThru] [-Path <String>] [-Priority <Priorities>] [-RefreshDistributionPoint] [-RemoveExpired]
+ [-RemoveSuperseded] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -70,21 +71,6 @@ PS XYZ:\> Set-CMSoftwareUpdateDeploymentPackage -Name "DP107" -SecurityScopeActi
 This command removes membership for the security scope named testScopeName.
 
 ## PARAMETERS
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -Description
 Specifies a description for the deployment package.
@@ -289,6 +275,21 @@ Aliases: RemoveDownloadedSupersededSoftwareUpdateFromPackage
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

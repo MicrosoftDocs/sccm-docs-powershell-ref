@@ -1,4 +1,4 @@
----
+﻿---
 description: Gets client settings.
 external help file: AdminUI.PS.ClientSettings.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,13 +16,13 @@ Gets client settings.
 
 ### SearchByName (Default)
 ```
-Get-CMClientSetting [-Setting <SettingType>] [-SettingType <Types>] [-Name <String>] [-Raw]
+Get-CMClientSetting [-Name <String>] [-Raw] [-Setting <SettingType>] [-SettingType <Types>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory
 ```
-Get-CMClientSetting [-Setting <SettingType>] [-SettingType <Types>] -Id <String> [-Raw]
+Get-CMClientSetting -Id <String> [-Raw] [-Setting <SettingType>] [-SettingType <Types>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 

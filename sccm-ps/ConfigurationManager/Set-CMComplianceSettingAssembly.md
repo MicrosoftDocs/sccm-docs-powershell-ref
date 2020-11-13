@@ -1,4 +1,4 @@
----
+﻿---
 description: Sets a compliance setting assembly.
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,7 +16,7 @@ Sets a compliance setting assembly.
 
 ```
 Set-CMComplianceSettingAssembly [-AssemblyName <String>] [-Description <String>] -InputObject <PSObject>
- -SettingName <String> [-NewSettingName <String>] [-PassThru] [-DisableWildcardHandling]
+ [-NewSettingName <String>] [-PassThru] -SettingName <String> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -41,21 +41,6 @@ PS XYZ:\>
 Type: String
 Parameter Sets: (All)
 Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
 
 Required: False
 Position: Named
@@ -155,6 +140,21 @@ Parameter Sets: (All)
 Aliases: Name
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False

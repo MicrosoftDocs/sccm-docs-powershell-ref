@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Osd.dll-Help.xml
 Module Name: ConfigurationManager
 online version:
@@ -13,8 +13,8 @@ schema: 2.0.0
 ## SYNTAX
 
 ```
-New-CMTSStepPrepareWindows [-BuildDriverList <Boolean>] [-KeepActivation <Boolean>] -Name <String>
- [-Description <String>] [-ContinueOnError] [-Disable] [-Condition <IResultObject[]>]
+New-CMTSStepPrepareWindows [-BuildDriverList <Boolean>] [-KeepActivation <Boolean>]
+ [-Condition <IResultObject[]>] [-ContinueOnError] [-Description <String>] [-Disable] -Name <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -59,21 +59,6 @@ Specify a condition object to use with this step.
 Type: IResultObject[]
 Parameter Sets: (All)
 Aliases: Conditions
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
 
 Required: False
 Position: Named
@@ -181,6 +166,21 @@ Parameter Sets: (All)
 Aliases: StepName
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False

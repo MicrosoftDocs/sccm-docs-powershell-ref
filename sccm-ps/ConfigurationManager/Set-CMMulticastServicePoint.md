@@ -1,4 +1,4 @@
----
+﻿---
 description: Sets a multicast service point.
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,21 +16,20 @@ Sets a multicast service point.
 
 ### ByValue (Default)
 ```
-Set-CMMulticastServicePoint [-ClientTransferRate <NetworkProfile>] [-EndIPAddress <String>]
- [-EndUdpPort <Int32>] [-InputObject] <IResultObject> [-EnableScheduledMulticast <Boolean>]
- [-MinimumClientCount <Int32>] [-MaximumClientCount <Int32>] [-PassThru] [-SessionStartDelayMins <Int32>]
- [-StartIPAddress <String>] [-StartUdpPort <Int32>] [-UseAnyRangeIP] [-UserName <String>]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMMulticastServicePoint [-ClientTransferRate <NetworkProfile>] [-EnableScheduledMulticast <Boolean>]
+ [-EndIPAddress <String>] [-EndUdpPort <Int32>] [-InputObject] <IResultObject> [-MaximumClientCount <Int32>]
+ [-MinimumClientCount <Int32>] [-PassThru] [-SessionStartDelayMins <Int32>] [-StartIPAddress <String>]
+ [-StartUdpPort <Int32>] [-UseAnyRangeIP] [-UserName <String>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByName
 ```
-Set-CMMulticastServicePoint [-ClientTransferRate <NetworkProfile>] [-EndIPAddress <String>]
- [-EndUdpPort <Int32>] [-EnableScheduledMulticast <Boolean>] [-MinimumClientCount <Int32>]
- [-MaximumClientCount <Int32>] [-PassThru] [-SessionStartDelayMins <Int32>] [-SiteCode <String>]
- [-SiteSystemServerName] <String> [-StartIPAddress <String>] [-StartUdpPort <Int32>] [-UseAnyRangeIP]
- [-UserName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Set-CMMulticastServicePoint [-ClientTransferRate <NetworkProfile>] [-EnableScheduledMulticast <Boolean>]
+ [-EndIPAddress <String>] [-EndUdpPort <Int32>] [-MaximumClientCount <Int32>] [-MinimumClientCount <Int32>]
+ [-PassThru] [-SessionStartDelayMins <Int32>] [-SiteCode <String>] [-SiteSystemServerName] <String>
+ [-StartIPAddress <String>] [-StartUdpPort <Int32>] [-UseAnyRangeIP] [-UserName <String>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -85,21 +84,6 @@ Accepted values: None, ProfileCustom, Profile10Mbps, Profile100Mbps, Profile1Gbp
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -341,6 +325,21 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

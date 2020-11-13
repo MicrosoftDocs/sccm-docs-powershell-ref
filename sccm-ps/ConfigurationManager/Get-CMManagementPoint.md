@@ -1,4 +1,4 @@
----
+﻿---
 description: Gets a management point.
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,7 +16,7 @@ Gets a management point.
 
 ### SearchByName (Default)
 ```
-Get-CMManagementPoint [-SiteCode <String>] [[-SiteSystemServerName] <String>] [-AllSite]
+Get-CMManagementPoint [-AllSite] [-SiteCode <String>] [[-SiteSystemServerName] <String>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 

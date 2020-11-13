@@ -1,4 +1,4 @@
----
+﻿---
 description: Creates a remote connection profile.
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 Module Name: ConfigurationManager
@@ -15,9 +15,9 @@ Creates a remote connection profile.
 ## SYNTAX
 
 ```
-New-CMRemoteConnectionProfileConfigurationItem -Name <String> [-Description <String>]
- [-EnableTSConnection <Boolean>] [-EnableNla <Boolean>] [-EnablePrimaryUser <Boolean>]
- [-EnableTSFirewallRule <Boolean>] [-Enable <Boolean>] [-RDGatewayServer <String>] [-DisableWildcardHandling]
+New-CMRemoteConnectionProfileConfigurationItem [-Description <String>] [-Enable <Boolean>]
+ [-EnableNla <Boolean>] [-EnablePrimaryUser <Boolean>] [-EnableTSConnection <Boolean>]
+ [-EnableTSFirewallRule <Boolean>] -Name <String> [-RDGatewayServer <String>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -41,21 +41,6 @@ This command creates a remote connection profile configuration item named Europe
 For this item the *EnablePrimaryUsers*, *EnableTSConnection*, and *EnableTSFirewall* properties are all set to $True.
 
 ## PARAMETERS
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -Description
 Specifies a description for a remote connection profile.
@@ -201,6 +186,21 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

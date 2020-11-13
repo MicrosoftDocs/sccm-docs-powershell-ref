@@ -1,4 +1,4 @@
----
+﻿---
 description: Creates a t s step condition if statement.
 external help file: AdminUI.PS.Osd.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,7 +16,7 @@ Creates a t s step condition if statement.
 ## SYNTAX
 
 ```
-New-CMTSStepConditionIfStatement -StatementType <ConditionStatementType> [-Condition <IResultObject[]>]
+New-CMTSStepConditionIfStatement [-Condition <IResultObject[]>] -StatementType <ConditionStatementType>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -41,21 +41,6 @@ PS XYZ:\>
 Type: IResultObject[]
 Parameter Sets: (All)
 Aliases: SubCondition, SubConditions
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
 
 Required: False
 Position: Named
@@ -102,6 +87,21 @@ Aliases: Operator
 Accepted values: All, Any, None
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False

@@ -1,4 +1,4 @@
----
+﻿---
 description: Sets a client setting client cache.
 external help file: AdminUI.PS.ClientSettings.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,29 +16,29 @@ Sets a client setting client cache.
 
 ### SetCustomSettingByName (Default)
 ```
-Set-CMClientSettingClientCache [-ConfigureBranchCache <Boolean>] [-EnableBranchCache <Boolean>]
- [-MaxBranchCacheSizePercent <Int32>] [-ConfigureCacheSize <Boolean>] [-MaxCacheSize <Int32>]
- [-MaxCacheSizePercent <Int32>] [-EnableSuperPeer <Boolean>] [-BroadcastPort <Int32>] [-EnableHttps <Boolean>]
- [-DownloadPort <Int32>] -Name <String> [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMClientSettingClientCache [-BroadcastPort <Int32>] [-ConfigureBranchCache <Boolean>]
+ [-ConfigureCacheSize <Boolean>] [-DownloadPort <Int32>] [-EnableBranchCache <Boolean>]
+ [-EnableHttps <Boolean>] [-EnableSuperPeer <Boolean>] [-MaxBranchCacheSizePercent <Int32>]
+ [-MaxCacheSize <Int32>] [-MaxCacheSizePercent <Int32>] -Name <String> [-PassThru] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetDefaultSetting
 ```
-Set-CMClientSettingClientCache [-ConfigureBranchCache <Boolean>] [-EnableBranchCache <Boolean>]
- [-MaxBranchCacheSizePercent <Int32>] [-ConfigureCacheSize <Boolean>] [-MaxCacheSize <Int32>]
- [-MaxCacheSizePercent <Int32>] [-EnableSuperPeer <Boolean>] [-BroadcastPort <Int32>] [-EnableHttps <Boolean>]
- [-DownloadPort <Int32>] [-DefaultSetting] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMClientSettingClientCache [-BroadcastPort <Int32>] [-ConfigureBranchCache <Boolean>]
+ [-ConfigureCacheSize <Boolean>] [-DownloadPort <Int32>] [-EnableBranchCache <Boolean>]
+ [-EnableHttps <Boolean>] [-EnableSuperPeer <Boolean>] [-MaxBranchCacheSizePercent <Int32>]
+ [-MaxCacheSize <Int32>] [-MaxCacheSizePercent <Int32>] [-DefaultSetting] [-PassThru]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetCustomSettingByValue
 ```
-Set-CMClientSettingClientCache [-ConfigureBranchCache <Boolean>] [-EnableBranchCache <Boolean>]
- [-MaxBranchCacheSizePercent <Int32>] [-ConfigureCacheSize <Boolean>] [-MaxCacheSize <Int32>]
- [-MaxCacheSizePercent <Int32>] [-EnableSuperPeer <Boolean>] [-BroadcastPort <Int32>] [-EnableHttps <Boolean>]
- [-DownloadPort <Int32>] -InputObject <IResultObject> [-PassThru] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMClientSettingClientCache [-BroadcastPort <Int32>] [-ConfigureBranchCache <Boolean>]
+ [-ConfigureCacheSize <Boolean>] [-DownloadPort <Int32>] [-EnableBranchCache <Boolean>]
+ [-EnableHttps <Boolean>] [-EnableSuperPeer <Boolean>] [-MaxBranchCacheSizePercent <Int32>]
+ [-MaxCacheSize <Int32>] [-MaxCacheSizePercent <Int32>] -InputObject <IResultObject> [-PassThru]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -88,21 +88,6 @@ Accept wildcard characters: False
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
 
 Required: False
 Position: Named
@@ -278,6 +263,21 @@ Returns an object representing the item with which you are working. By default, 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
 
 Required: False
 Position: Named

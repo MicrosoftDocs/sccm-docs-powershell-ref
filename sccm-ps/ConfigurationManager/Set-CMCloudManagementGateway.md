@@ -1,4 +1,4 @@
----
+﻿---
 description: Configure a cloud management gateway (CMG).
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -17,29 +17,38 @@ Configure a cloud management gateway (CMG).
 
 ### SetByValue (Default)
 ```
-Set-CMCloudManagementGateway -InputObject <IResultObject> [-Description <String>] [-TrafficOutGB <Int32>]
- [-TrafficWarningPct <Int32>] [-TrafficCriticalPct <Int32>] [-VMInstancesCount <Int32>]
- [-CheckClientCertRevocation <Boolean>] [-ServiceCertPath <String>] [-ServiceCertPassword <SecureString>]
- [-Force] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Set-CMCloudManagementGateway [-CARootCert <Hashtable>] [-CheckClientCertRevocation <Boolean>]
+ [-Description <String>] [-EnableCloudDPFunction <Boolean>] [-EnableStorageQuota <Boolean>]
+ [-EnableTrafficOut <Boolean>] [-EnforceProtocol <Boolean>] [-Force] -InputObject <IResultObject> [-PassThru]
+ [-RemoveCertThumbprints <String[]>] [-ServiceCertPassword <SecureString>] [-ServiceCertPath <String>]
+ [-StorageCriticalPct <Int32>] [-StorageQuotaGB <Int32>] [-StorageWarningPct <Int32>]
+ [-TrafficCriticalPct <Int32>] [-TrafficOutGB <Int32>] [-TrafficOutStopService <Boolean>]
+ [-TrafficWarningPct <Int32>] [-VMInstanceCount <Int32>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetById
 ```
-Set-CMCloudManagementGateway -Id <String> [-Description <String>] [-TrafficOutGB <Int32>]
- [-TrafficWarningPct <Int32>] [-TrafficCriticalPct <Int32>] [-VMInstancesCount <Int32>]
- [-CheckClientCertRevocation <Boolean>] [-ServiceCertPath <String>] [-ServiceCertPassword <SecureString>]
- [-Force] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Set-CMCloudManagementGateway [-CARootCert <Hashtable>] [-CheckClientCertRevocation <Boolean>]
+ [-Description <String>] [-EnableCloudDPFunction <Boolean>] [-EnableStorageQuota <Boolean>]
+ [-EnableTrafficOut <Boolean>] [-EnforceProtocol <Boolean>] [-Force] -Id <String> [-PassThru]
+ [-RemoveCertThumbprints <String[]>] [-ServiceCertPassword <SecureString>] [-ServiceCertPath <String>]
+ [-StorageCriticalPct <Int32>] [-StorageQuotaGB <Int32>] [-StorageWarningPct <Int32>]
+ [-TrafficCriticalPct <Int32>] [-TrafficOutGB <Int32>] [-TrafficOutStopService <Boolean>]
+ [-TrafficWarningPct <Int32>] [-VMInstanceCount <Int32>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetByName
 ```
-Set-CMCloudManagementGateway -Name <String> [-Description <String>] [-TrafficOutGB <Int32>]
- [-TrafficWarningPct <Int32>] [-TrafficCriticalPct <Int32>] [-VMInstancesCount <Int32>]
- [-CheckClientCertRevocation <Boolean>] [-ServiceCertPath <String>] [-ServiceCertPassword <SecureString>]
- [-Force] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Set-CMCloudManagementGateway [-CARootCert <Hashtable>] [-CheckClientCertRevocation <Boolean>]
+ [-Description <String>] [-EnableCloudDPFunction <Boolean>] [-EnableStorageQuota <Boolean>]
+ [-EnableTrafficOut <Boolean>] [-EnforceProtocol <Boolean>] [-Force] -Name <String> [-PassThru]
+ [-RemoveCertThumbprints <String[]>] [-ServiceCertPassword <SecureString>] [-ServiceCertPath <String>]
+ [-StorageCriticalPct <Int32>] [-StorageQuotaGB <Int32>] [-StorageWarningPct <Int32>]
+ [-TrafficCriticalPct <Int32>] [-TrafficOutGB <Int32>] [-TrafficOutStopService <Boolean>]
+ [-TrafficWarningPct <Int32>] [-VMInstanceCount <Int32>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -69,14 +78,13 @@ Set-CMCloudManagementGateway -Name "GraniteFalls" -ServiceCertPath "c:\TestPath\
 
 ## PARAMETERS
 
-### -CheckClientCertRevocation
-
-Set this parameter to `true` to verify client certificate revocation. A certificate revocation list (CRL) must be publicly published for this verification to work. For more information, see [Publish the certificate revocation list](https://docs.microsoft.com/mem/configmgr/core/clients/manage/cmg/security-and-privacy-for-cloud-management-gateway#bkmk_crl).
+### -CARootCert
+{{ Fill CARootCert Description }}
 
 ```yaml
-Type: Boolean
+Type: Hashtable
 Parameter Sets: (All)
-Aliases:
+Aliases: CARootCertificate, CARootCertificates
 
 Required: False
 Position: Named
@@ -85,14 +93,14 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
+### -CheckClientCertRevocation
 
-Prompts you for confirmation before running the cmdlet.
+Set this parameter to `true` to verify client certificate revocation. A certificate revocation list (CRL) must be publicly published for this verification to work. For more information, see [Publish the certificate revocation list](https://docs.microsoft.com/mem/configmgr/core/clients/manage/cmg/security-and-privacy-for-cloud-management-gateway#bkmk_crl).
 
 ```yaml
-Type: SwitchParameter
+Type: Boolean
 Parameter Sets: (All)
-Aliases: cf
+Aliases:
 
 Required: False
 Position: Named
@@ -123,6 +131,66 @@ This parameter treats wildcard characters as literal character values. You can't
 
 ```yaml
 Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableCloudDPFunction
+{{ Fill EnableCloudDPFunction Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableStorageQuota
+{{ Fill EnableStorageQuota Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableTrafficOut
+{{ Fill EnableTrafficOut Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnforceProtocol
+{{ Fill EnforceProtocol Description }}
+
+```yaml
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 
@@ -227,6 +295,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -RemoveCertThumbprints
+{{ Fill RemoveCertThumbprints Description }}
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ServiceCertPassword
 
 Applies to version 2006 and later. Specify the password for the certificate in the **-ServiceCertPath**.
@@ -251,6 +334,51 @@ Applies to version 2006 and later. Specify the path to the CMG server authentica
 Type: String
 Parameter Sets: (All)
 Aliases: ServiceCertificatePath
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -StorageCriticalPct
+{{ Fill StorageCriticalPct Description }}
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases: StorageCriticalPercent
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -StorageQuotaGB
+{{ Fill StorageQuotaGB Description }}
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -StorageWarningPct
+{{ Fill StorageWarningPct Description }}
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases: StorageWarningPercent
 
 Required: False
 Position: Named
@@ -291,6 +419,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -TrafficOutStopService
+{{ Fill TrafficOutStopService Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: StopTrafficOutService
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -TrafficWarningPct
 
 If you enable alerts for monitoring outbound data transfer, specify the percentage of threshold for raising a **Warning** alert. This value is `50` by default.
@@ -307,14 +450,29 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -VMInstancesCount
-
-Specify the number of Azure virtual machines (VMs) to support this CMG. The default is `1`, but you can scale up to `16` per CMG.
+### -VMInstanceCount
+{{ Fill VMInstanceCount Description }}
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases:
+Aliases: VMInstancesCount
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
 
 Required: False
 Position: Named
@@ -349,7 +507,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
-
 ## NOTES
 
 ## RELATED LINKS

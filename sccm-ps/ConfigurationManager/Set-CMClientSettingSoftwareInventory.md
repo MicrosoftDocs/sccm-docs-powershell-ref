@@ -1,4 +1,4 @@
----
+﻿---
 description: Sets a client setting software inventory.
 external help file: AdminUI.PS.ClientSettings.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,32 +16,32 @@ Sets a client setting software inventory.
 
 ### SetCustomSettingByName (Default)
 ```
-Set-CMClientSettingSoftwareInventory [-Enable <Boolean>] [-Schedule <IResultObject>]
- [-ReportOption <ReportOptionType>] [-FileName <String>] [-FileDisplayName <String>]
- [-FileInventoriedName <String>] [-AddInventoryFileType <Hashtable[]>] [-RemoveInventoryFileType <Hashtable[]>]
- [-CleanInventoryFileType] [-AddCollectFile <Hashtable[]>] [-RemoveCollectFile <Hashtable[]>]
- [-CleanCollectFile] -Name <String> [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Set-CMClientSettingSoftwareInventory [-AddCollectFile <Hashtable[]>] [-AddInventoryFileType <Hashtable[]>]
+ [-CleanCollectFile] [-CleanInventoryFileType] [-Enable <Boolean>] [-FileDisplayName <String>]
+ [-FileInventoriedName <String>] [-FileName <String>] [-RemoveCollectFile <Hashtable[]>]
+ [-RemoveInventoryFileType <Hashtable[]>] [-ReportOption <ReportOptionType>] [-Schedule <IResultObject>]
+ -Name <String> [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### SetDefaultSetting
 ```
-Set-CMClientSettingSoftwareInventory [-Enable <Boolean>] [-Schedule <IResultObject>]
- [-ReportOption <ReportOptionType>] [-FileName <String>] [-FileDisplayName <String>]
- [-FileInventoriedName <String>] [-AddInventoryFileType <Hashtable[]>] [-RemoveInventoryFileType <Hashtable[]>]
- [-CleanInventoryFileType] [-AddCollectFile <Hashtable[]>] [-RemoveCollectFile <Hashtable[]>]
- [-CleanCollectFile] [-DefaultSetting] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMClientSettingSoftwareInventory [-AddCollectFile <Hashtable[]>] [-AddInventoryFileType <Hashtable[]>]
+ [-CleanCollectFile] [-CleanInventoryFileType] [-Enable <Boolean>] [-FileDisplayName <String>]
+ [-FileInventoriedName <String>] [-FileName <String>] [-RemoveCollectFile <Hashtable[]>]
+ [-RemoveInventoryFileType <Hashtable[]>] [-ReportOption <ReportOptionType>] [-Schedule <IResultObject>]
+ [-DefaultSetting] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### SetCustomSettingByValue
 ```
-Set-CMClientSettingSoftwareInventory [-Enable <Boolean>] [-Schedule <IResultObject>]
- [-ReportOption <ReportOptionType>] [-FileName <String>] [-FileDisplayName <String>]
- [-FileInventoriedName <String>] [-AddInventoryFileType <Hashtable[]>] [-RemoveInventoryFileType <Hashtable[]>]
- [-CleanInventoryFileType] [-AddCollectFile <Hashtable[]>] [-RemoveCollectFile <Hashtable[]>]
- [-CleanCollectFile] -InputObject <IResultObject> [-PassThru] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMClientSettingSoftwareInventory [-AddCollectFile <Hashtable[]>] [-AddInventoryFileType <Hashtable[]>]
+ [-CleanCollectFile] [-CleanInventoryFileType] [-Enable <Boolean>] [-FileDisplayName <String>]
+ [-FileInventoriedName <String>] [-FileName <String>] [-RemoveCollectFile <Hashtable[]>]
+ [-RemoveInventoryFileType <Hashtable[]>] [-ReportOption <ReportOptionType>] [-Schedule <IResultObject>]
+ -InputObject <IResultObject> [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -104,21 +104,6 @@ Accept wildcard characters: False
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: CleanInventoryFileTypes
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
 
 Required: False
 Position: Named
@@ -308,6 +293,21 @@ Accept wildcard characters: False
 Type: IResultObject
 Parameter Sets: (All)
 Aliases: InventorySchedule, SoftwareInventorySchedule
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
 
 Required: False
 Position: Named

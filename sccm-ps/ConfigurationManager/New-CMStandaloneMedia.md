@@ -1,4 +1,4 @@
----
+﻿---
 description: Creates stand-alone media.
 external help file: AdminUI.PS.Osd.dll-Help.xml
 Module Name: ConfigurationManager
@@ -15,13 +15,14 @@ Creates stand-alone media.
 ## SYNTAX
 
 ```
-New-CMStandaloneMedia [-DriverPackage <IResultObject[]>] [-Application <IResultObject[]>]
- [-Package <IResultObject[]>] [-MediaStartDate <DateTime>] [-MediaExpirationDate <DateTime>]
- [-IncludeApplicationDependency] [-MediaSize <MediaSize>] -TaskSequence <IResultObject> [-AllowUacPrompt]
+New-CMStandaloneMedia [-Application <IResultObject[]>] [-DriverPackage <IResultObject[]>]
+ [-IncludeApplicationDependency] [-MediaExpirationDate <DateTime>] [-MediaSize <MediaSize>]
+ [-MediaStartDate <DateTime>] [-Package <IResultObject[]>] -TaskSequence <IResultObject> [-AllowUacPrompt]
  [-AllowUnattended] [-CertificatePath <String>] -DistributionPoint <IResultObject[]> [-Force] [-FormatMedia]
- [-MediaPassword <SecureString>] -MediaType <MediaInputType> -Path <String> [-TemporaryFolder <String>]
- [-NoAutoRun] [-PrestartCommand <String>] [-PrestartPackage <IResultObject>] [-Variable <Hashtable>]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-SiteCode <String>] [-MediaPassword <SecureString>] -MediaType <MediaInputType> [-NoAutoRun] -Path <String>
+ [-PrestartCommand <String>] [-PrestartPackage <IResultObject>] [-TemporaryFolder <String>]
+ [-Variable <Hashtable>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -106,21 +107,6 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -390,6 +376,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -SiteCode
+{{ Fill SiteCode Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -TaskSequence
 Specifies a task sequence object.
 To obtain a task sequence object, use the [Get-CMTaskSequence](Get-CMTaskSequence.md) cmdlet.
@@ -433,6 +434,21 @@ Aliases: TaskSequenceVariables, Variables
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

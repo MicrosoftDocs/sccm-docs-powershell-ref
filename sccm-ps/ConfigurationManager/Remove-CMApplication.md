@@ -1,4 +1,4 @@
----
+﻿---
 description: Removes an application from Configuration Manager.
 external help file: AdminUI.PS.AppMan.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,25 +16,25 @@ Removes an application from Configuration Manager.
 
 ### SearchByValueMandatory (Default)
 ```
-Remove-CMApplication -InputObject <IResultObject> [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Remove-CMApplication [-Force] -InputObject <IResultObject> [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### SearchByNameMandatory
-```
-Remove-CMApplication [-Name] <String> [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory
 ```
-Remove-CMApplication -Id <Int32> [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+Remove-CMApplication [-Force] -Id <Int32> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
  [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByModelName
 ```
-Remove-CMApplication -ModelName <String> [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+Remove-CMApplication [-Force] -ModelName <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
+```
+
+### SearchByNameMandatory
+```
+Remove-CMApplication [-Force] [-Name] <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
  [-Confirm] [<CommonParameters>]
 ```
 
@@ -66,21 +66,6 @@ This command removes the application object with the specified model name.
 Specifying the *Force* parameter indicates that the user is not prompted before the application is removed.
 
 ## PARAMETERS
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -DisableWildcardHandling
 DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
@@ -184,6 +169,21 @@ Aliases: LocalizedDisplayName, ApplicationName
 Required: True
 Position: 0
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

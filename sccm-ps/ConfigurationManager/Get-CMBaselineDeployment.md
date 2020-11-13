@@ -1,4 +1,4 @@
----
+﻿---
 description: Gets a baseline deployment.
 external help file: AdminUI.PS.Deployments.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,27 +16,28 @@ Gets a baseline deployment.
 
 ### SearchByName (Default)
 ```
-Get-CMBaselineDeployment [-Name <String>] [-Summary] [-CollectionName <String>] [-CollectionId <String>]
- [-Collection <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
-```
-
-### SearchById
-```
-Get-CMBaselineDeployment [-SmsObjectId <Int32>] [-Summary] [-CollectionName <String>] [-CollectionId <String>]
- [-Collection <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
+Get-CMBaselineDeployment [-Name <String>] [-Summary] [-Collection <IResultObject>] [-CollectionId <String>]
+ [-CollectionName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ### SearchByDeploymentId
 ```
-Get-CMBaselineDeployment [-DeploymentId <String>] [-Summary] [-CollectionName <String>]
- [-CollectionId <String>] [-Collection <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Get-CMBaselineDeployment [-DeploymentId <String>] [-Summary] [-Collection <IResultObject>]
+ [-CollectionId <String>] [-CollectionName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [<CommonParameters>]
 ```
 
 ### SearchByValue
 ```
-Get-CMBaselineDeployment [-InputObject <IResultObject>] [-Summary] [-CollectionName <String>]
- [-CollectionId <String>] [-Collection <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Get-CMBaselineDeployment [-InputObject <IResultObject>] [-Summary] [-Collection <IResultObject>]
+ [-CollectionId <String>] [-CollectionName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [<CommonParameters>]
+```
+
+### SearchById
+```
+Get-CMBaselineDeployment [-SmsObjectId <Int32>] [-Summary] [-Collection <IResultObject>]
+ [-CollectionId <String>] [-CollectionName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [<CommonParameters>]
 ```
 

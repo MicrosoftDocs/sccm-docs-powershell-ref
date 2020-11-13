@@ -1,4 +1,4 @@
----
+﻿---
 description: Installs a Configuration Manager client.
 external help file: AdminUI.PS.Collections.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,37 +16,37 @@ Installs a Configuration Manager client.
 
 ### SearchByValueMandatory (Default)
 ```
-Install-CMClient -InputObject <IResultObject> [-IncludeDomainController <Boolean>]
- [-AlwaysInstallClient <Boolean>] [-ForceReinstall <Boolean>] [-SiteCode <String>] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### SearchByNameMandatory
-```
-Install-CMClient -Name <String> [-IncludeDomainController <Boolean>] [-AlwaysInstallClient <Boolean>]
- [-ForceReinstall <Boolean>] [-SiteCode <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
-```
-
-### SearchByIdMandatory
-```
-Install-CMClient -CollectionId <String> [-IncludeDomainController <Boolean>] [-AlwaysInstallClient <Boolean>]
- [-ForceReinstall <Boolean>] [-SiteCode <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
-```
-
-### SearchByDeviceNameMandatory
-```
-Install-CMClient -DeviceName <String> [-IncludeDomainController <Boolean>] [-AlwaysInstallClient <Boolean>]
- [-ForceReinstall <Boolean>] [-SiteCode <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Install-CMClient [-AlwaysInstallClient <Boolean>] [-ForceReinstall <Boolean>]
+ [-IncludeDomainController <Boolean>] -InputObject <IResultObject> [-SiteCode <String>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByDeviceIdMandatory
 ```
-Install-CMClient -DeviceId <String> [-IncludeDomainController <Boolean>] [-AlwaysInstallClient <Boolean>]
- [-ForceReinstall <Boolean>] [-SiteCode <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Install-CMClient [-AlwaysInstallClient <Boolean>] -DeviceId <String> [-ForceReinstall <Boolean>]
+ [-IncludeDomainController <Boolean>] [-SiteCode <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SearchByDeviceNameMandatory
+```
+Install-CMClient [-AlwaysInstallClient <Boolean>] -DeviceName <String> [-ForceReinstall <Boolean>]
+ [-IncludeDomainController <Boolean>] [-SiteCode <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SearchByIdMandatory
+```
+Install-CMClient [-AlwaysInstallClient <Boolean>] -CollectionId <String> [-ForceReinstall <Boolean>]
+ [-IncludeDomainController <Boolean>] [-SiteCode <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SearchByNameMandatory
+```
+Install-CMClient [-AlwaysInstallClient <Boolean>] [-ForceReinstall <Boolean>]
+ [-IncludeDomainController <Boolean>] -Name <String> [-SiteCode <String>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -94,21 +94,6 @@ Aliases:
 Required: True
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -245,6 +230,21 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

@@ -1,4 +1,4 @@
----
+﻿---
 description: Creates a t s step reboot.
 external help file: AdminUI.PS.Osd.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,10 +16,10 @@ Creates a t s step reboot.
 ## SYNTAX
 
 ```
-New-CMTSStepReboot [-RunAfterRestart <RunAfterRestartType>] [-NotificationMessage <String>]
- [-MessageTimeout <Int32>] -Name <String> [-Description <String>] [-ContinueOnError] [-Disable]
- [-Condition <IResultObject[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+New-CMTSStepReboot [-MessageTimeout <Int32>] [-NotificationMessage <String>]
+ [-RunAfterRestart <RunAfterRestartType>] [-Condition <IResultObject[]>] [-ContinueOnError]
+ [-Description <String>] [-Disable] -Name <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -43,21 +43,6 @@ PS XYZ:\>
 Type: IResultObject[]
 Parameter Sets: (All)
 Aliases: Conditions
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
 
 Required: False
 Position: Named
@@ -180,6 +165,21 @@ Type: RunAfterRestartType
 Parameter Sets: (All)
 Aliases:
 Accepted values: WinPE, HardDisk
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
 
 Required: False
 Position: Named

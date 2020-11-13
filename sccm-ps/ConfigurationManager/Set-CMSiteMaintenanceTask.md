@@ -1,4 +1,4 @@
----
+﻿---
 description: Changes settings for a Configuration Manager maintenance task.
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,33 +16,35 @@ Changes settings for a Configuration Manager maintenance task.
 
 ### SetSummaryTaskByName (Default)
 ```
-Set-CMSiteMaintenanceTask -SummaryTask <SummaryTask> [-RunNow] [-RunIntervalMins <Int32>] [-FixedRun]
- [-SiteCode <String>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+Set-CMSiteMaintenanceTask [-FixedRun] [-RunIntervalMins <Int32>] [-RunNow] -SummaryTask <SummaryTask>
+ [-PassThru] [-SiteCode <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ### SetMaintenanceTasksByValue
 ```
-Set-CMSiteMaintenanceTask [-DeleteOlderThanDays <Int32>] [-DeviceName <String>] [-Enabled <Boolean>]
- [-BeginTime <DateTime>] [-LatestBeginTime <DateTime>] [-DaysOfWeek <DaysOfWeek[]>] [-EnableAlert <Boolean>]
- -InputObject <IResultObject> [-SiteCode <String>] [-PassThru] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMSiteMaintenanceTask [-BeginTime <DateTime>] [-DaysOfWeek <DaysOfWeek[]>] [-DeleteOlderThanDays <Int32>]
+ [-DeviceName <String>] [-EnableAlert <Boolean>] [-Enabled <Boolean>] -InputObject <IResultObject>
+ [-LatestBeginTime <DateTime>] [-SiteBackupPath <String>] [-SqlBackupPath <String>] [-PassThru]
+ [-SiteCode <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### SetMaintenanceTasksByTaskName
 ```
-Set-CMSiteMaintenanceTask [-DeleteOlderThanDays <Int32>] [-DeviceName <String>] -Name <String>
- [-Enabled <Boolean>] [-BeginTime <DateTime>] [-LatestBeginTime <DateTime>] [-DaysOfWeek <DaysOfWeek[]>]
- [-EnableAlert <Boolean>] [-SiteCode <String>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMSiteMaintenanceTask [-BeginTime <DateTime>] [-DaysOfWeek <DaysOfWeek[]>] [-DeleteOlderThanDays <Int32>]
+ [-DeviceName <String>] [-EnableAlert <Boolean>] [-Enabled <Boolean>] [-LatestBeginTime <DateTime>]
+ -Name <String> [-SiteBackupPath <String>] [-SqlBackupPath <String>] [-PassThru] [-SiteCode <String>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetMaintenanceTasksByName
 ```
-Set-CMSiteMaintenanceTask [-DeleteOlderThanDays <Int32>] [-DeviceName <String>]
- -MaintenanceTask <MaintenanceTask> [-Enabled <Boolean>] [-BeginTime <DateTime>] [-LatestBeginTime <DateTime>]
- [-DaysOfWeek <DaysOfWeek[]>] [-EnableAlert <Boolean>] [-SiteCode <String>] [-PassThru]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMSiteMaintenanceTask [-BeginTime <DateTime>] [-DaysOfWeek <DaysOfWeek[]>] [-DeleteOlderThanDays <Int32>]
+ [-DeviceName <String>] [-EnableAlert <Boolean>] [-Enabled <Boolean>] [-LatestBeginTime <DateTime>]
+ -MaintenanceTask <MaintenanceTask> [-SiteBackupPath <String>] [-SqlBackupPath <String>] [-PassThru]
+ [-SiteCode <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -76,21 +78,6 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -370,12 +357,42 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -SiteBackupPath
+{{ Fill SiteBackupPath Description }}
+
+```yaml
+Type: String
+Parameter Sets: SetMaintenanceTasksByValue, SetMaintenanceTasksByTaskName, SetMaintenanceTasksByName
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -SiteCode
 Specifies the site code of the Configuration Manager site that hosts the site system role.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SqlBackupPath
+{{ Fill SqlBackupPath Description }}
+
+```yaml
+Type: String
+Parameter Sets: SetMaintenanceTasksByValue, SetMaintenanceTasksByTaskName, SetMaintenanceTasksByName
 Aliases:
 
 Required: False
@@ -398,6 +415,21 @@ Accepted values: UpdateApplicationCatalogTables
 Required: True
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

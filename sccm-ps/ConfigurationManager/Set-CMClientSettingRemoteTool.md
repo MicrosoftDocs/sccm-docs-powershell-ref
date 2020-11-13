@@ -1,4 +1,4 @@
----
+﻿---
 description: Sets a client setting remote tool.
 external help file: AdminUI.PS.ClientSettings.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,41 +16,41 @@ Sets a client setting remote tool.
 
 ### SetCustomSettingByName (Default)
 ```
-Set-CMClientSettingRemoteTool [-FirewallExceptionProfile <FirewallExceptionProfileType[]>]
- [-AllowClientChange <Boolean>] [-AllowUnattendedComputer <Boolean>] [-PromptUserForPermission <Boolean>]
- [-PromptUserForClipboardPermission <Boolean>] [-GrantPermissionToLocalAdministrator <Boolean>]
- [-AccessLevel <AccessLevelType>] [-PermittedViewer <String[]>] [-ShowNotificationIconOnTaskbar <Boolean>]
- [-ShowSessionConnectionBar <Boolean>] [-AudibleSignal <AudibleSignalType>]
- [-ManageUnsolicitedRemoteAssistance <Boolean>] [-ManageSolicitedRemoteAssistance <Boolean>]
- [-RemoteAssistanceAccessLevel <RemoteAssistanceAccessLevelType>] [-ManageRemoteDesktopSetting <Boolean>]
- [-AllowPermittedViewer <Boolean>] [-RequireAuthentication <Boolean>] -Name <String> [-PassThru]
+Set-CMClientSettingRemoteTool [-AccessLevel <AccessLevelType>] [-AllowClientChange <Boolean>]
+ [-AllowPermittedViewer <Boolean>] [-AllowUnattendedComputer <Boolean>] [-AudibleSignal <AudibleSignalType>]
+ [-FirewallExceptionProfile <FirewallExceptionProfileType[]>] [-GrantPermissionToLocalAdministrator <Boolean>]
+ [-ManageRemoteDesktopSetting <Boolean>] [-ManageSolicitedRemoteAssistance <Boolean>]
+ [-ManageUnsolicitedRemoteAssistance <Boolean>] [-PermittedViewer <String[]>]
+ [-PromptUserForClipboardPermission <Boolean>] [-PromptUserForPermission <Boolean>]
+ [-RemoteAssistanceAccessLevel <RemoteAssistanceAccessLevelType>] [-RequireAuthentication <Boolean>]
+ [-ShowNotificationIconOnTaskbar <Boolean>] [-ShowSessionConnectionBar <Boolean>] -Name <String> [-PassThru]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetDefaultSetting
 ```
-Set-CMClientSettingRemoteTool [-FirewallExceptionProfile <FirewallExceptionProfileType[]>]
- [-AllowClientChange <Boolean>] [-AllowUnattendedComputer <Boolean>] [-PromptUserForPermission <Boolean>]
- [-PromptUserForClipboardPermission <Boolean>] [-GrantPermissionToLocalAdministrator <Boolean>]
- [-AccessLevel <AccessLevelType>] [-PermittedViewer <String[]>] [-ShowNotificationIconOnTaskbar <Boolean>]
- [-ShowSessionConnectionBar <Boolean>] [-AudibleSignal <AudibleSignalType>]
- [-ManageUnsolicitedRemoteAssistance <Boolean>] [-ManageSolicitedRemoteAssistance <Boolean>]
- [-RemoteAssistanceAccessLevel <RemoteAssistanceAccessLevelType>] [-ManageRemoteDesktopSetting <Boolean>]
- [-AllowPermittedViewer <Boolean>] [-RequireAuthentication <Boolean>] [-DefaultSetting] [-PassThru]
+Set-CMClientSettingRemoteTool [-AccessLevel <AccessLevelType>] [-AllowClientChange <Boolean>]
+ [-AllowPermittedViewer <Boolean>] [-AllowUnattendedComputer <Boolean>] [-AudibleSignal <AudibleSignalType>]
+ [-FirewallExceptionProfile <FirewallExceptionProfileType[]>] [-GrantPermissionToLocalAdministrator <Boolean>]
+ [-ManageRemoteDesktopSetting <Boolean>] [-ManageSolicitedRemoteAssistance <Boolean>]
+ [-ManageUnsolicitedRemoteAssistance <Boolean>] [-PermittedViewer <String[]>]
+ [-PromptUserForClipboardPermission <Boolean>] [-PromptUserForPermission <Boolean>]
+ [-RemoteAssistanceAccessLevel <RemoteAssistanceAccessLevelType>] [-RequireAuthentication <Boolean>]
+ [-ShowNotificationIconOnTaskbar <Boolean>] [-ShowSessionConnectionBar <Boolean>] [-DefaultSetting] [-PassThru]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetCustomSettingByValue
 ```
-Set-CMClientSettingRemoteTool [-FirewallExceptionProfile <FirewallExceptionProfileType[]>]
- [-AllowClientChange <Boolean>] [-AllowUnattendedComputer <Boolean>] [-PromptUserForPermission <Boolean>]
- [-PromptUserForClipboardPermission <Boolean>] [-GrantPermissionToLocalAdministrator <Boolean>]
- [-AccessLevel <AccessLevelType>] [-PermittedViewer <String[]>] [-ShowNotificationIconOnTaskbar <Boolean>]
- [-ShowSessionConnectionBar <Boolean>] [-AudibleSignal <AudibleSignalType>]
- [-ManageUnsolicitedRemoteAssistance <Boolean>] [-ManageSolicitedRemoteAssistance <Boolean>]
- [-RemoteAssistanceAccessLevel <RemoteAssistanceAccessLevelType>] [-ManageRemoteDesktopSetting <Boolean>]
- [-AllowPermittedViewer <Boolean>] [-RequireAuthentication <Boolean>] -InputObject <IResultObject> [-PassThru]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMClientSettingRemoteTool [-AccessLevel <AccessLevelType>] [-AllowClientChange <Boolean>]
+ [-AllowPermittedViewer <Boolean>] [-AllowUnattendedComputer <Boolean>] [-AudibleSignal <AudibleSignalType>]
+ [-FirewallExceptionProfile <FirewallExceptionProfileType[]>] [-GrantPermissionToLocalAdministrator <Boolean>]
+ [-ManageRemoteDesktopSetting <Boolean>] [-ManageSolicitedRemoteAssistance <Boolean>]
+ [-ManageUnsolicitedRemoteAssistance <Boolean>] [-PermittedViewer <String[]>]
+ [-PromptUserForClipboardPermission <Boolean>] [-PromptUserForPermission <Boolean>]
+ [-RemoteAssistanceAccessLevel <RemoteAssistanceAccessLevelType>] [-RequireAuthentication <Boolean>]
+ [-ShowNotificationIconOnTaskbar <Boolean>] [-ShowSessionConnectionBar <Boolean>] -InputObject <IResultObject>
+ [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -128,21 +128,6 @@ Type: AudibleSignalType
 Parameter Sets: (All)
 Aliases:
 Accepted values: PlayNoSound, PlaySoundAtBeginAndEnd, PlaySoundRepeatedly
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
 
 Required: False
 Position: Named
@@ -385,6 +370,21 @@ Accept wildcard characters: False
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
 
 Required: False
 Position: Named

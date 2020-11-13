@@ -1,4 +1,4 @@
----
+﻿---
 description: Sets a web application deployment type.
 external help file: AdminUI.PS.AppMan.dll-Help.xml
 Module Name: ConfigurationManager
@@ -17,31 +17,31 @@ Sets a web application deployment type.
 ### ByAppName (Default)
 ```
 Set-CMWebApplicationDeploymentType [-Url <String>] [-AddRequirement <Rule[]>] -ApplicationName <String>
- -DeploymentTypeName <String> [-NewName <String>] [-RemoveRequirement <Rule[]>] [-RemoveLanguage <String[]>]
- [-PassThru] [-AddLanguage <String[]>] [-Comment <String>] [-Force] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ -DeploymentTypeName <String> [-NewName <String>] [-PassThru] [-RemoveLanguage <String[]>]
+ [-RemoveRequirement <Rule[]>] [-AddLanguage <String[]>] [-Comment <String>] [-Force]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### ByAppValue
+```
+Set-CMWebApplicationDeploymentType [-Url <String>] [-AddRequirement <Rule[]>] -Application <IResultObject>
+ -DeploymentTypeName <String> [-NewName <String>] [-PassThru] [-RemoveLanguage <String[]>]
+ [-RemoveRequirement <Rule[]>] [-AddLanguage <String[]>] [-Comment <String>] [-Force]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByAppId
 ```
 Set-CMWebApplicationDeploymentType [-Url <String>] [-AddRequirement <Rule[]>] -ApplicationId <Int32>
- -DeploymentTypeName <String> [-NewName <String>] [-RemoveRequirement <Rule[]>] [-RemoveLanguage <String[]>]
- [-PassThru] [-AddLanguage <String[]>] [-Comment <String>] [-Force] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### ByAppValue
-```
-Set-CMWebApplicationDeploymentType [-Url <String>] [-AddRequirement <Rule[]>] -DeploymentTypeName <String>
- -Application <IResultObject> [-NewName <String>] [-RemoveRequirement <Rule[]>] [-RemoveLanguage <String[]>]
- [-PassThru] [-AddLanguage <String[]>] [-Comment <String>] [-Force] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ -DeploymentTypeName <String> [-NewName <String>] [-PassThru] [-RemoveLanguage <String[]>]
+ [-RemoveRequirement <Rule[]>] [-AddLanguage <String[]>] [-Comment <String>] [-Force]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByDTValue
 ```
 Set-CMWebApplicationDeploymentType [-Url <String>] [-AddRequirement <Rule[]>] -InputObject <IResultObject>
- [-NewName <String>] [-RemoveRequirement <Rule[]>] [-RemoveLanguage <String[]>] [-PassThru]
+ [-NewName <String>] [-PassThru] [-RemoveLanguage <String[]>] [-RemoveRequirement <Rule[]>]
  [-AddLanguage <String[]>] [-Comment <String>] [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
@@ -167,27 +167,12 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -DeploymentTypeName
 Specifies a display name for this deployment type.
 
 ```yaml
 Type: String
-Parameter Sets: ByAppName, ByAppId, ByAppValue
+Parameter Sets: ByAppName, ByAppValue, ByAppId
 Aliases:
 
 Required: True
@@ -331,6 +316,21 @@ Aliases: ContentLocation
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

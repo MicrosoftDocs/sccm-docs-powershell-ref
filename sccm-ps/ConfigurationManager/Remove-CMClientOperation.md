@@ -1,4 +1,4 @@
----
+﻿---
 description: Removes a Configuration Manager client operation object.
 external help file: AdminUI.PS.ClientOperations.dll-Help.xml
 Module Name: ConfigurationManager
@@ -22,7 +22,7 @@ Remove-CMClientOperation -ClientOperation <IResultObject> [-Force] [-DisableWild
 
 ### RemoveById
 ```
-Remove-CMClientOperation -Id <String> [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+Remove-CMClientOperation [-Force] -Id <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
  [-Confirm] [<CommonParameters>]
 ```
 
@@ -56,21 +56,6 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -130,6 +115,21 @@ Aliases:
 Required: True
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

@@ -1,4 +1,4 @@
----
+﻿---
 description: Creates a t s step partition disk.
 external help file: AdminUI.PS.Osd.dll-Help.xml
 Module Name: ConfigurationManager
@@ -15,10 +15,10 @@ Add the **Format and Partition Disk** step in a task sequence.
 ## SYNTAX
 
 ```
-New-CMTSStepPartitionDisk [-DiskType <PartitionDiskStyle>] [-IsBootDisk <Boolean>] [-DiskNumber <Int32>]
- [-DiskNumberVariable <String>] -PartitionSetting <IResultObject[]> -Name <String> [-Description <String>]
- [-ContinueOnError] [-Disable] [-Condition <IResultObject[]>] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+New-CMTSStepPartitionDisk [-DiskNumber <Int32>] [-DiskNumberVariable <String>] [-DiskType <PartitionDiskStyle>]
+ [-IsBootDisk <Boolean>] -PartitionSetting <IResultObject[]> [-Condition <IResultObject[]>] [-ContinueOnError]
+ [-Description <String>] [-Disable] -Name <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -47,22 +47,6 @@ Specify a condition object to add to this step.
 Type: IResultObject[]
 Parameter Sets: (All)
 Aliases: Conditions
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
 
 Required: False
 Position: Named
@@ -245,6 +229,22 @@ Parameter Sets: (All)
 Aliases: PartitionSettings
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False

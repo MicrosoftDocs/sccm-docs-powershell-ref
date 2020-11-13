@@ -1,4 +1,4 @@
----
+﻿---
 description: Removes a secondary site from Configuration Manager.
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,19 +16,19 @@ Removes a secondary site from Configuration Manager.
 
 ### SearchByValueMandatory (Default)
 ```
-Remove-CMSecondarySite -InputObject <IResultObject> [-Force] -Action <ActionType> [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### SearchBySiteCodeMandatory
-```
-Remove-CMSecondarySite -SiteCode <String> [-Force] -Action <ActionType> [-DisableWildcardHandling]
+Remove-CMSecondarySite -Action <ActionType> [-Force] -InputObject <IResultObject> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByNameMandatory
 ```
-Remove-CMSecondarySite -Name <String> [-Force] -Action <ActionType> [-DisableWildcardHandling]
+Remove-CMSecondarySite -Action <ActionType> [-Force] -Name <String> [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SearchBySiteCodeMandatory
+```
+Remove-CMSecondarySite -Action <ActionType> [-Force] -SiteCode <String> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -72,21 +72,6 @@ Accepted values: Uninstall, Delete
 Required: True
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -182,6 +167,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
@@ -207,7 +207,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-###  
+### 
 
 ## NOTES
 

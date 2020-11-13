@@ -1,4 +1,4 @@
----
+﻿---
 description: Creates a Registry Value type global condition in Configuration Manager.
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,10 +16,10 @@ Creates a Registry Value type global condition in Configuration Manager.
 ## SYNTAX
 
 ```
-New-CMGlobalConditionRegistryValue -DataType <GlobalConditionDataType> [-Is64Bit <Boolean>]
- [-RegistryHive <RegistryRootKey>] -KeyName <String> [-ValueName <String>] -Name <String>
- [-Description <String>] -DeviceType <GlobalConditionDeviceType> [-DisableWildcardHandling]
- [-ForceWildcardHandling] [<CommonParameters>]
+New-CMGlobalConditionRegistryValue -DataType <GlobalConditionDataType> [-Is64Bit <Boolean>] -KeyName <String>
+ [-RegistryHive <RegistryRootKey>] [-ValueName <String>] [-Description <String>]
+ -DeviceType <GlobalConditionDeviceType> -Name <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

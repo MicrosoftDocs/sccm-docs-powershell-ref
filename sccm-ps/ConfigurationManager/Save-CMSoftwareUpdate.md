@@ -1,4 +1,4 @@
----
+﻿---
 description: Saves software updates to update groups and packages.
 external help file: AdminUI.PS.Sum.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,43 +16,43 @@ Saves software updates to update groups and packages.
 
 ### SearchByNameMandatory (Default)
 ```
-Save-CMSoftwareUpdate -SoftwareUpdateName <String[]> [-Location <String>] -DeploymentPackageName <String>
- [-SoftwareUpdateLanguage <String[]>] [-RetryCount <UInt32>] [-RetryDelaySec <UInt32>]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### SearchByIdMandatory
-```
-Save-CMSoftwareUpdate -SoftwareUpdateId <String[]> [-Location <String>] -DeploymentPackageName <String>
- [-SoftwareUpdateLanguage <String[]>] [-RetryCount <UInt32>] [-RetryDelaySec <UInt32>]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### SearchByValueMandatory
-```
-Save-CMSoftwareUpdate -SoftwareUpdate <IResultObject> [-Location <String>] -DeploymentPackageName <String>
- [-SoftwareUpdateLanguage <String[]>] [-RetryCount <UInt32>] [-RetryDelaySec <UInt32>]
+Save-CMSoftwareUpdate -DeploymentPackageName <String> [-Location <String>] [-RetryCount <UInt32>]
+ [-RetryDelaySec <UInt32>] [-SoftwareUpdateLanguage <String[]>] -SoftwareUpdateName <String[]>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory_UpdateGroup
 ```
-Save-CMSoftwareUpdate -SoftwareUpdateGroupId <String[]> [-Location <String>] -DeploymentPackageName <String>
- [-SoftwareUpdateLanguage <String[]>] [-RetryCount <UInt32>] [-RetryDelaySec <UInt32>]
+Save-CMSoftwareUpdate -DeploymentPackageName <String> [-Location <String>] [-RetryCount <UInt32>]
+ [-RetryDelaySec <UInt32>] -SoftwareUpdateGroupId <String[]> [-SoftwareUpdateLanguage <String[]>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByNameMandatory_UpdateGroup
 ```
-Save-CMSoftwareUpdate -SoftwareUpdateGroupName <String[]> [-Location <String>] -DeploymentPackageName <String>
- [-SoftwareUpdateLanguage <String[]>] [-RetryCount <UInt32>] [-RetryDelaySec <UInt32>]
+Save-CMSoftwareUpdate -DeploymentPackageName <String> [-Location <String>] [-RetryCount <UInt32>]
+ [-RetryDelaySec <UInt32>] -SoftwareUpdateGroupName <String[]> [-SoftwareUpdateLanguage <String[]>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByValueMandatory_UpdateGroup
 ```
-Save-CMSoftwareUpdate -SoftwareUpdateGroup <IResultObject> [-Location <String>] -DeploymentPackageName <String>
- [-SoftwareUpdateLanguage <String[]>] [-RetryCount <UInt32>] [-RetryDelaySec <UInt32>]
+Save-CMSoftwareUpdate -DeploymentPackageName <String> [-Location <String>] [-RetryCount <UInt32>]
+ [-RetryDelaySec <UInt32>] -SoftwareUpdateGroup <IResultObject> [-SoftwareUpdateLanguage <String[]>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SearchByIdMandatory
+```
+Save-CMSoftwareUpdate -DeploymentPackageName <String> [-Location <String>] [-RetryCount <UInt32>]
+ [-RetryDelaySec <UInt32>] -SoftwareUpdateId <String[]> [-SoftwareUpdateLanguage <String[]>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SearchByValueMandatory
+```
+Save-CMSoftwareUpdate -DeploymentPackageName <String> [-Location <String>] [-RetryCount <UInt32>]
+ [-RetryDelaySec <UInt32>] -SoftwareUpdate <IResultObject> [-SoftwareUpdateLanguage <String[]>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -92,21 +92,6 @@ PS XYZ:\> Get-CMSoftwareUpdateGroup -Name "TestSUgroup10" Save-CMSoftwareUpdate 
 This command gets the software update group object named TestSUgroup10 and uses the pipeline operator to pass the object to **Save-CMSoftwareUpdate**, which saves the software update from the file share Updates on Server01 with the package name Package01.
 
 ## PARAMETERS
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -DeploymentPackageName
 Specifies a name of a deployment package.
@@ -301,6 +286,21 @@ Aliases: LocalizedDisplayName
 Required: True
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

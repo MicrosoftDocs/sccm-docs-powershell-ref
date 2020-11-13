@@ -1,4 +1,4 @@
----
+﻿---
 description: Gets a site system server.
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,7 +16,7 @@ Gets a site system server.
 
 ### SearchByName (Default)
 ```
-Get-CMSiteSystemServer [-SiteCode <String>] [[-SiteSystemServerName] <String>] [-AllSite]
+Get-CMSiteSystemServer [-AllSite] [-SiteCode <String>] [[-SiteSystemServerName] <String>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 

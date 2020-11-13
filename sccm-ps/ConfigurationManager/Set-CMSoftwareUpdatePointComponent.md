@@ -1,4 +1,4 @@
----
+﻿---
 description: Modifies a software update point.
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,55 +16,54 @@ Modifies a software update point.
 
 ### SearchBySiteCodeMandatory (Default)
 ```
-Set-CMSoftwareUpdatePointComponent [-SiteCode <String>] [-DefaultWsusServer <String>]
- [-SynchronizeAction <SynchronizeActionType>] [-UpstreamSourceLocation <String>]
- [-ReportingEvent <ReportingEventType>] [-RemoveUpdateClassification <String[]>]
- [-AddUpdateClassification <String[]>] [-AddCompany <String[]>] [-RemoveCompany <String[]>]
- [-AddProductFamily <String[]>] [-RemoveProductFamily <String[]>] [-AddProduct <String[]>]
- [-RemoveProduct <String[]>] [-EnableSynchronization <Boolean>] [-Schedule <IResultObject>]
- [-EnableSyncFailureAlert <Boolean>] [-ImmediatelyExpireSupersedence <Boolean>]
- [-ImmediatelyExpireSupersedenceForFeature <Boolean>] [-EnableCallWsusCleanupWizard <Boolean>]
- [-EnableThirdPartyUpdates <Boolean>] [-EnableManualCertManagement <Boolean>] [-WaitMonth <Int32>]
- [-WaitMonthForFeature <Int32>] [-AddLanguageUpdateFile <String[]>] [-RemoveLanguageUpdateFile <String[]>]
- [-AddLanguageSummaryDetail <String[]>] [-RemoveLanguageSummaryDetail <String[]>]
- [-ContentFileOption <ContentFileOptions>] [-NonFeatureUpdateMaxRuntimeMins <Int32>]
- [-FeatureUpdateMaxRuntimeMins <Int32>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMSoftwareUpdatePointComponent [-AddCompany <String[]>] [-AddLanguageSummaryDetail <String[]>]
+ [-AddLanguageUpdateFile <String[]>] [-AddProduct <String[]>] [-AddProductFamily <String[]>]
+ [-AddUpdateClassification <String[]>] [-ContentFileOption <ContentFileOptions>] [-DefaultWsusServer <String>]
+ [-EnableCallWsusCleanupWizard <Boolean>] [-EnableManualCertManagement <Boolean>]
+ [-EnableSyncFailureAlert <Boolean>] [-EnableSynchronization <Boolean>] [-EnableThirdPartyUpdates <Boolean>]
+ [-FeatureUpdateMaxRuntimeMins <Int32>] [-ImmediatelyExpireSupersedence <Boolean>]
+ [-ImmediatelyExpireSupersedenceForFeature <Boolean>] [-NonFeatureUpdateMaxRuntimeMins <Int32>] [-PassThru]
+ [-RemoveCompany <String[]>] [-RemoveLanguageSummaryDetail <String[]>] [-RemoveLanguageUpdateFile <String[]>]
+ [-RemoveProduct <String[]>] [-RemoveProductFamily <String[]>] [-RemoveUpdateClassification <String[]>]
+ [-ReportingEvent <ReportingEventType>] [-Schedule <IResultObject>] [-SiteCode <String>]
+ [-SynchronizeAction <SynchronizeActionType>] [-UpstreamSourceLocation <String>] [-WaitMonth <Int32>]
+ [-WaitMonthForFeature <Int32>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### SearchByNameMandatory
 ```
-Set-CMSoftwareUpdatePointComponent -Name <String> [-DefaultWsusServer <String>]
- [-SynchronizeAction <SynchronizeActionType>] [-UpstreamSourceLocation <String>]
- [-ReportingEvent <ReportingEventType>] [-RemoveUpdateClassification <String[]>]
- [-AddUpdateClassification <String[]>] [-AddCompany <String[]>] [-RemoveCompany <String[]>]
- [-AddProductFamily <String[]>] [-RemoveProductFamily <String[]>] [-AddProduct <String[]>]
- [-RemoveProduct <String[]>] [-EnableSynchronization <Boolean>] [-Schedule <IResultObject>]
- [-EnableSyncFailureAlert <Boolean>] [-ImmediatelyExpireSupersedence <Boolean>]
- [-ImmediatelyExpireSupersedenceForFeature <Boolean>] [-EnableCallWsusCleanupWizard <Boolean>]
- [-EnableThirdPartyUpdates <Boolean>] [-EnableManualCertManagement <Boolean>] [-WaitMonth <Int32>]
- [-WaitMonthForFeature <Int32>] [-AddLanguageUpdateFile <String[]>] [-RemoveLanguageUpdateFile <String[]>]
- [-AddLanguageSummaryDetail <String[]>] [-RemoveLanguageSummaryDetail <String[]>]
- [-ContentFileOption <ContentFileOptions>] [-NonFeatureUpdateMaxRuntimeMins <Int32>]
- [-FeatureUpdateMaxRuntimeMins <Int32>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMSoftwareUpdatePointComponent [-AddCompany <String[]>] [-AddLanguageSummaryDetail <String[]>]
+ [-AddLanguageUpdateFile <String[]>] [-AddProduct <String[]>] [-AddProductFamily <String[]>]
+ [-AddUpdateClassification <String[]>] [-ContentFileOption <ContentFileOptions>] [-DefaultWsusServer <String>]
+ [-EnableCallWsusCleanupWizard <Boolean>] [-EnableManualCertManagement <Boolean>]
+ [-EnableSyncFailureAlert <Boolean>] [-EnableSynchronization <Boolean>] [-EnableThirdPartyUpdates <Boolean>]
+ [-FeatureUpdateMaxRuntimeMins <Int32>] [-ImmediatelyExpireSupersedence <Boolean>]
+ [-ImmediatelyExpireSupersedenceForFeature <Boolean>] -Name <String> [-NonFeatureUpdateMaxRuntimeMins <Int32>]
+ [-PassThru] [-RemoveCompany <String[]>] [-RemoveLanguageSummaryDetail <String[]>]
+ [-RemoveLanguageUpdateFile <String[]>] [-RemoveProduct <String[]>] [-RemoveProductFamily <String[]>]
+ [-RemoveUpdateClassification <String[]>] [-ReportingEvent <ReportingEventType>] [-Schedule <IResultObject>]
+ [-SynchronizeAction <SynchronizeActionType>] [-UpstreamSourceLocation <String>] [-WaitMonth <Int32>]
+ [-WaitMonthForFeature <Int32>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### SearchByValueMandatory
 ```
-Set-CMSoftwareUpdatePointComponent [-DefaultWsusServer <String>] [-SynchronizeAction <SynchronizeActionType>]
- [-UpstreamSourceLocation <String>] [-ReportingEvent <ReportingEventType>]
- [-RemoveUpdateClassification <String[]>] [-AddUpdateClassification <String[]>] [-AddCompany <String[]>]
- [-RemoveCompany <String[]>] [-AddProductFamily <String[]>] [-RemoveProductFamily <String[]>]
- [-AddProduct <String[]>] [-RemoveProduct <String[]>] [-EnableSynchronization <Boolean>]
- [-Schedule <IResultObject>] [-EnableSyncFailureAlert <Boolean>] [-ImmediatelyExpireSupersedence <Boolean>]
- [-ImmediatelyExpireSupersedenceForFeature <Boolean>] [-EnableCallWsusCleanupWizard <Boolean>]
- [-EnableThirdPartyUpdates <Boolean>] [-EnableManualCertManagement <Boolean>] [-WaitMonth <Int32>]
- [-WaitMonthForFeature <Int32>] [-AddLanguageUpdateFile <String[]>] [-RemoveLanguageUpdateFile <String[]>]
- [-AddLanguageSummaryDetail <String[]>] [-RemoveLanguageSummaryDetail <String[]>]
- [-ContentFileOption <ContentFileOptions>] [-NonFeatureUpdateMaxRuntimeMins <Int32>]
- [-FeatureUpdateMaxRuntimeMins <Int32>] -InputObject <IResultObject> [-PassThru] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMSoftwareUpdatePointComponent [-AddCompany <String[]>] [-AddLanguageSummaryDetail <String[]>]
+ [-AddLanguageUpdateFile <String[]>] [-AddProduct <String[]>] [-AddProductFamily <String[]>]
+ [-AddUpdateClassification <String[]>] [-ContentFileOption <ContentFileOptions>] [-DefaultWsusServer <String>]
+ [-EnableCallWsusCleanupWizard <Boolean>] [-EnableManualCertManagement <Boolean>]
+ [-EnableSyncFailureAlert <Boolean>] [-EnableSynchronization <Boolean>] [-EnableThirdPartyUpdates <Boolean>]
+ [-FeatureUpdateMaxRuntimeMins <Int32>] [-ImmediatelyExpireSupersedence <Boolean>]
+ [-ImmediatelyExpireSupersedenceForFeature <Boolean>] -InputObject <IResultObject>
+ [-NonFeatureUpdateMaxRuntimeMins <Int32>] [-PassThru] [-RemoveCompany <String[]>]
+ [-RemoveLanguageSummaryDetail <String[]>] [-RemoveLanguageUpdateFile <String[]>] [-RemoveProduct <String[]>]
+ [-RemoveProductFamily <String[]>] [-RemoveUpdateClassification <String[]>]
+ [-ReportingEvent <ReportingEventType>] [-Schedule <IResultObject>]
+ [-SynchronizeAction <SynchronizeActionType>] [-UpstreamSourceLocation <String>] [-WaitMonth <Int32>]
+ [-WaitMonthForFeature <Int32>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -173,21 +172,6 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -639,6 +623,21 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

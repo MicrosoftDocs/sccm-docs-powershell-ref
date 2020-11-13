@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 Module Name: ConfigurationManager
 online version:
@@ -13,7 +13,7 @@ schema: 2.0.0
 ## SYNTAX
 
 ```
-New-CMRequirementRuleFilePermissionValue [-Exclusive <Boolean>] -ControlEntry <FileSystemAccessControlEntry[]>
+New-CMRequirementRuleFilePermissionValue -ControlEntry <FileSystemAccessControlEntry[]> [-Exclusive <Boolean>]
  [-InputObject] <IResultObject> [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 

@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Sum.dll-Help.xml
 Module Name: ConfigurationManager
 online version:
@@ -15,25 +15,25 @@ Use this cmdlet to modify a third-party updates catalog.
 
 ### SearchByName (Default)
 ```
-Set-CMThirdPartyUpdateCatalog [[-Name] <String>] [-Subscribe] [-Unsubscribe] [-SyncNow]
- [-PublisherName <String>] [-NewName <String>] [-Description <String>] [-SupportUrl <Uri>]
- [-SupportContact <String>] [-Schedule <IResultObject>] [-PassThru] [-Force] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMThirdPartyUpdateCatalog [-Description <String>] [-Force] [[-Name] <String>] [-NewName <String>]
+ [-PassThru] [-PublisherName <String>] [-Schedule <IResultObject>] [-Subscribe] [-SupportContact <String>]
+ [-SupportUrl <Uri>] [-SyncNow] [-Unsubscribe] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory
 ```
-Set-CMThirdPartyUpdateCatalog [-Id] <String> [-Subscribe] [-Unsubscribe] [-SyncNow] [-PublisherName <String>]
- [-NewName <String>] [-Description <String>] [-SupportUrl <Uri>] [-SupportContact <String>]
- [-Schedule <IResultObject>] [-PassThru] [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+Set-CMThirdPartyUpdateCatalog [-Description <String>] [-Force] [-Id] <String> [-NewName <String>] [-PassThru]
+ [-PublisherName <String>] [-Schedule <IResultObject>] [-Subscribe] [-SupportContact <String>]
+ [-SupportUrl <Uri>] [-SyncNow] [-Unsubscribe] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
  [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByValueMandatory
 ```
-Set-CMThirdPartyUpdateCatalog [-InputObject] <IResultObject> [-Subscribe] [-Unsubscribe] [-SyncNow]
- [-PublisherName <String>] [-NewName <String>] [-Description <String>] [-SupportUrl <Uri>]
- [-SupportContact <String>] [-Schedule <IResultObject>] [-PassThru] [-Force] [-DisableWildcardHandling]
+Set-CMThirdPartyUpdateCatalog [-Description <String>] [-Force] [-InputObject] <IResultObject>
+ [-NewName <String>] [-PassThru] [-PublisherName <String>] [-Schedule <IResultObject>] [-Subscribe]
+ [-SupportContact <String>] [-SupportUrl <Uri>] [-SyncNow] [-Unsubscribe] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -68,22 +68,6 @@ $catalog | Set-CMThirdPartyUpdateCatalog -SupportContact "Contoso hardware suppo
 ```
 
 ## PARAMETERS
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -Description
 
@@ -329,6 +313,22 @@ Configure the site to unsubscribe from the third-party updates catalog. This par
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
 
 Required: False
 Position: Named

@@ -1,4 +1,4 @@
----
+﻿---
 description: Sets a Registry Key type global condition in Configuration Manager.
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,7 +16,7 @@ Sets a Registry Key type global condition in Configuration Manager.
 ## SYNTAX
 
 ```
-Set-CMGlobalConditionRegistryKey [-Is64Bit <Boolean>] [-RegistryHive <RegistryRootKey>] [-KeyName <String>]
+Set-CMGlobalConditionRegistryKey [-Is64Bit <Boolean>] [-KeyName <String>] [-RegistryHive <RegistryRootKey>]
  -Name <String> [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
@@ -41,22 +41,6 @@ PS XYZ:\> $GlobalRegKey = Set-CMGlobalConditionRegistryKey -KeyName key -Name GC
 This command sets a Registry Key type global condition in Configuration Manager.
 
 ## PARAMETERS
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -DisableWildcardHandling
 
@@ -164,6 +148,22 @@ Type: RegistryRootKey
 Parameter Sets: (All)
 Aliases:
 Accepted values: ClassesRoot, CurrentConfig, CurrentUser, LocalMachine, Users
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
 
 Required: False
 Position: Named

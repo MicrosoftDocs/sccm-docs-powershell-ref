@@ -1,4 +1,4 @@
----
+﻿---
 description: Sets a client setting enrollment.
 external help file: AdminUI.PS.ClientSettings.dll-Help.xml
 Module Name: ConfigurationManager
@@ -17,24 +17,24 @@ Sets a client setting enrollment.
 ### SetCustomSettingByName (Default)
 ```
 Set-CMClientSettingEnrollment [-EnableDevice <Boolean>] [-EnableModernDevice <Boolean>]
- [-EnrollmentProfileName <String>] [-ModernEnrollmentProfileName <String>] [-IntervalModernMins <Int32>]
- [-IntervalDeviceHr <Int32>] [-IntervalDeviceMins <Int32>] -Name <String> [-PassThru]
+ [-EnrollmentProfileName <String>] [-IntervalDeviceHr <Int32>] [-IntervalDeviceMins <Int32>]
+ [-IntervalModernMins <Int32>] [-ModernEnrollmentProfileName <String>] -Name <String> [-PassThru]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetDefaultSetting
 ```
 Set-CMClientSettingEnrollment [-EnableDevice <Boolean>] [-EnableModernDevice <Boolean>]
- [-EnrollmentProfileName <String>] [-ModernEnrollmentProfileName <String>] [-IntervalModernMins <Int32>]
- [-IntervalDeviceHr <Int32>] [-IntervalDeviceMins <Int32>] [-DefaultSetting] [-PassThru]
+ [-EnrollmentProfileName <String>] [-IntervalDeviceHr <Int32>] [-IntervalDeviceMins <Int32>]
+ [-IntervalModernMins <Int32>] [-ModernEnrollmentProfileName <String>] [-DefaultSetting] [-PassThru]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetCustomSettingByValue
 ```
 Set-CMClientSettingEnrollment [-EnableDevice <Boolean>] [-EnableModernDevice <Boolean>]
- [-EnrollmentProfileName <String>] [-ModernEnrollmentProfileName <String>] [-IntervalModernMins <Int32>]
- [-IntervalDeviceHr <Int32>] [-IntervalDeviceMins <Int32>] -InputObject <IResultObject> [-PassThru]
+ [-EnrollmentProfileName <String>] [-IntervalDeviceHr <Int32>] [-IntervalDeviceMins <Int32>]
+ [-IntervalModernMins <Int32>] [-ModernEnrollmentProfileName <String>] -InputObject <IResultObject> [-PassThru]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -53,21 +53,6 @@ PS XYZ:\>
 ```
 
 ## PARAMETERS
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -DefaultSetting
 ```yaml
@@ -236,6 +221,21 @@ Returns an object representing the item with which you are working. By default, 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
 
 Required: False
 Position: Named

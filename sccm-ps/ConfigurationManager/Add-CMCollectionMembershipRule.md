@@ -1,4 +1,4 @@
----
+﻿---
 description: Adds a Configuration Manager collection membership rule.
 external help file: AdminUI.PS.Collections.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,25 +16,25 @@ Adds a Configuration Manager collection membership rule.
 
 ### ByName (Default)
 ```
-Add-CMCollectionMembershipRule -CollectionType <CollectionType> -CollectionName <String>
- -RulePropertyName <String> -RuleClassName <String> -ChildSearchCriteria <SmsProviderSearch> [-PassThru]
- [-ExtraArguments <Object>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+Add-CMCollectionMembershipRule -ChildSearchCriteria <SmsProviderSearch> -CollectionName <String>
+ -CollectionType <CollectionType> [-ExtraArguments <Object>] [-PassThru] -RuleClassName <String>
+ -RulePropertyName <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ### ById
 ```
-Add-CMCollectionMembershipRule -CollectionType <CollectionType> -CollectionId <String>
- -RulePropertyName <String> -RuleClassName <String> -ChildSearchCriteria <SmsProviderSearch> [-PassThru]
- [-ExtraArguments <Object>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+Add-CMCollectionMembershipRule -ChildSearchCriteria <SmsProviderSearch> -CollectionId <String>
+ -CollectionType <CollectionType> [-ExtraArguments <Object>] [-PassThru] -RuleClassName <String>
+ -RulePropertyName <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ### ByValue
 ```
-Add-CMCollectionMembershipRule -CollectionType <CollectionType> -InputObject <IResultObject>
- -RulePropertyName <String> -RuleClassName <String> -ChildSearchCriteria <SmsProviderSearch> [-PassThru]
- [-ExtraArguments <Object>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+Add-CMCollectionMembershipRule -ChildSearchCriteria <SmsProviderSearch> -CollectionType <CollectionType>
+ [-ExtraArguments <Object>] -InputObject <IResultObject> [-PassThru] -RuleClassName <String>
+ -RulePropertyName <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
@@ -97,21 +97,6 @@ Aliases:
 Accepted values: User, Device
 
 Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -215,6 +200,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
@@ -236,9 +236,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
-
 ### System.Object
+
+### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
 
 ## OUTPUTS
 

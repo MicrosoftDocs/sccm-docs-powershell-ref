@@ -1,4 +1,4 @@
----
+﻿---
 description: Changes Active Directory forest properties in Configuration Manager.
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,26 +16,26 @@ Changes Active Directory forest properties in Configuration Manager.
 
 ### SetByValue (Default)
 ```
-Set-CMActiveDirectoryForest -InputObject <IResultObject> [-Description <String>] [-EnableDiscovery <Boolean>]
- [-UserName <String>] [-Password <SecureString>] [-PublishingPath <String>]
- [-AddPublishingSite <IResultObject[]>] [-RemovePublishingSite <IResultObject[]>] [-PassThru]
+Set-CMActiveDirectoryForest [-AddPublishingSite <IResultObject[]>] [-Description <String>]
+ [-EnableDiscovery <Boolean>] -InputObject <IResultObject> [-PassThru] [-Password <SecureString>]
+ [-PublishingPath <String>] [-RemovePublishingSite <IResultObject[]>] [-UserName <String>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetByFQDN
 ```
-Set-CMActiveDirectoryForest -ForestFqdn <String> [-Description <String>] [-EnableDiscovery <Boolean>]
- [-UserName <String>] [-Password <SecureString>] [-PublishingPath <String>]
- [-AddPublishingSite <IResultObject[]>] [-RemovePublishingSite <IResultObject[]>] [-PassThru]
+Set-CMActiveDirectoryForest [-AddPublishingSite <IResultObject[]>] [-Description <String>]
+ [-EnableDiscovery <Boolean>] -ForestFqdn <String> [-PassThru] [-Password <SecureString>]
+ [-PublishingPath <String>] [-RemovePublishingSite <IResultObject[]>] [-UserName <String>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetById
 ```
-Set-CMActiveDirectoryForest -Id <UInt32> [-Description <String>] [-EnableDiscovery <Boolean>]
- [-UserName <String>] [-Password <SecureString>] [-PublishingPath <String>]
- [-AddPublishingSite <IResultObject[]>] [-RemovePublishingSite <IResultObject[]>] [-PassThru]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMActiveDirectoryForest [-AddPublishingSite <IResultObject[]>] [-Description <String>]
+ [-EnableDiscovery <Boolean>] -Id <UInt32> [-PassThru] [-Password <SecureString>] [-PublishingPath <String>]
+ [-RemovePublishingSite <IResultObject[]>] [-UserName <String>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -70,21 +70,6 @@ Aliases: AddPublishingSites
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -266,6 +251,21 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

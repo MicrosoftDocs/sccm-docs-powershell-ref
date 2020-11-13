@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 Module Name: ConfigurationManager
 online version:
@@ -13,8 +13,8 @@ schema: 2.0.0
 ## SYNTAX
 
 ```
-New-CMRequirementRuleOperatingSystemLanguageValue -RuleOperator <RuleExpressionOperator>
- -Culture <CultureInfo[]> [-IsMobile <Boolean>] [-InputObject] <IResultObject> [-DisableWildcardHandling]
+New-CMRequirementRuleOperatingSystemLanguageValue -Culture <CultureInfo[]> [-IsMobile <Boolean>]
+ -RuleOperator <RuleExpressionOperator> [-InputObject] <IResultObject> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [<CommonParameters>]
 ```
 

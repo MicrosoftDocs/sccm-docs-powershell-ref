@@ -1,4 +1,4 @@
----
+﻿---
 description: Modifies a site system server.
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,17 +16,17 @@ Modifies a site system server.
 
 ### SearchByValueMandatory (Default)
 ```
-Set-CMSiteSystemServer [-PublicFqdn <String>] [-FdmOperation <Boolean>] [-UseSiteServerAccount]
- [-AccountName <String>] [-EnableProxy <Boolean>] [-ProxyServerName <String>] [-ProxyServerPort <UInt32>]
- [-ProxyAccessAccount <IResultObject>] -InputObject <IResultObject> [-PassThru] [-DisableWildcardHandling]
+Set-CMSiteSystemServer [-AccountName <String>] [-EnableProxy <Boolean>] [-FdmOperation <Boolean>]
+ -InputObject <IResultObject> [-PassThru] [-ProxyAccessAccount <IResultObject>] [-ProxyServerName <String>]
+ [-ProxyServerPort <UInt32>] [-PublicFqdn <String>] [-UseSiteServerAccount] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByNameMandatory
 ```
-Set-CMSiteSystemServer [-SiteCode <String>] [-SiteSystemServerName] <String> [-PublicFqdn <String>]
- [-FdmOperation <Boolean>] [-UseSiteServerAccount] [-AccountName <String>] [-EnableProxy <Boolean>]
- [-ProxyServerName <String>] [-ProxyServerPort <UInt32>] [-ProxyAccessAccount <IResultObject>] [-PassThru]
+Set-CMSiteSystemServer [-AccountName <String>] [-EnableProxy <Boolean>] [-FdmOperation <Boolean>] [-PassThru]
+ [-ProxyAccessAccount <IResultObject>] [-ProxyServerName <String>] [-ProxyServerPort <UInt32>]
+ [-PublicFqdn <String>] [-SiteCode <String>] [-SiteSystemServerName] <String> [-UseSiteServerAccount]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -68,21 +68,6 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -282,6 +267,21 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

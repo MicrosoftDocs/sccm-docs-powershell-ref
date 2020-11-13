@@ -1,4 +1,4 @@
----
+﻿---
 description: Adds a Windows app package deployment type.
 external help file: AdminUI.PS.AppMan.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,8 +16,8 @@ Adds a Windows app package deployment type.
 
 ### ByAppName (Default)
 ```
-Add-CMWindowsAppxDeploymentType [-SlowNetworkDeploymentMode <ContentHandlingMode>] [-TriggerVpn]
- [-ContentFallback] [-DeploymentTypeName <String>] [-AddRequirement <Rule[]>] -ApplicationName <String>
+Add-CMWindowsAppxDeploymentType [-ContentFallback] [-SlowNetworkDeploymentMode <ContentHandlingMode>]
+ [-TriggerVpn] [-DeploymentTypeName <String>] [-AddRequirement <Rule[]>] -ApplicationName <String>
  [-RemoveLanguage <String[]>] [-RemoveRequirement <Rule[]>] [-AddLanguage <String[]>] [-Comment <String>]
  -ContentLocation <String> [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
@@ -25,8 +25,8 @@ Add-CMWindowsAppxDeploymentType [-SlowNetworkDeploymentMode <ContentHandlingMode
 
 ### ByAppId
 ```
-Add-CMWindowsAppxDeploymentType [-SlowNetworkDeploymentMode <ContentHandlingMode>] [-TriggerVpn]
- [-ContentFallback] [-DeploymentTypeName <String>] [-AddRequirement <Rule[]>] -ApplicationId <Int32>
+Add-CMWindowsAppxDeploymentType [-ContentFallback] [-SlowNetworkDeploymentMode <ContentHandlingMode>]
+ [-TriggerVpn] [-DeploymentTypeName <String>] [-AddRequirement <Rule[]>] -ApplicationId <Int32>
  [-RemoveLanguage <String[]>] [-RemoveRequirement <Rule[]>] [-AddLanguage <String[]>] [-Comment <String>]
  -ContentLocation <String> [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
@@ -34,8 +34,8 @@ Add-CMWindowsAppxDeploymentType [-SlowNetworkDeploymentMode <ContentHandlingMode
 
 ### ByAppValue
 ```
-Add-CMWindowsAppxDeploymentType [-SlowNetworkDeploymentMode <ContentHandlingMode>] [-TriggerVpn]
- [-ContentFallback] [-DeploymentTypeName <String>] [-AddRequirement <Rule[]>] -InputObject <IResultObject>
+Add-CMWindowsAppxDeploymentType [-ContentFallback] [-SlowNetworkDeploymentMode <ContentHandlingMode>]
+ [-TriggerVpn] [-DeploymentTypeName <String>] [-AddRequirement <Rule[]>] -InputObject <IResultObject>
  [-RemoveLanguage <String[]>] [-RemoveRequirement <Rule[]>] [-AddLanguage <String[]>] [-Comment <String>]
  -ContentLocation <String> [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
@@ -144,21 +144,6 @@ Aliases: AdministratorComment
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -334,6 +319,21 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

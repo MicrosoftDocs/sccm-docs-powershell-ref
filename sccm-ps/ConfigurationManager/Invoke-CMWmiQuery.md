@@ -1,4 +1,4 @@
----
+﻿---
 description: Runs a WMI query.
 external help file: AdminUI.PS.Common.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,14 +16,14 @@ Runs a WMI query.
 
 ### ByWql (Default)
 ```
-Invoke-CMWmiQuery [-Option <QueryOptions>] [-Query] <String> [-Context <Hashtable>] [-DisableWildcardHandling]
+Invoke-CMWmiQuery [-Context <Hashtable>] [-Option <QueryOptions>] [-Query] <String> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### BySearch
 ```
-Invoke-CMWmiQuery -Search <SmsProviderSearch> -ClassName <String> [-Option <QueryOptions>]
- [-Context <Hashtable>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+Invoke-CMWmiQuery -ClassName <String> [-Context <Hashtable>] [-Option <QueryOptions>]
+ -Search <SmsProviderSearch> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
@@ -124,21 +124,6 @@ Aliases:
 Required: True
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -245,6 +230,21 @@ Aliases:
 Required: True
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

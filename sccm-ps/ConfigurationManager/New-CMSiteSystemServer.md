@@ -1,4 +1,4 @@
----
+﻿---
 description: Creates a site system server.
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -15,9 +15,9 @@ Creates a site system server.
 ## SYNTAX
 
 ```
-New-CMSiteSystemServer [-SiteCode <String>] [-SiteSystemServerName] <String> [-PublicFqdn <String>]
- [-FdmOperation <Boolean>] [-UseSiteServerAccount] [-AccountName <String>] [-EnableProxy <Boolean>]
- [-ProxyServerName <String>] [-ProxyServerPort <UInt32>] [-ProxyAccessAccount <IResultObject>]
+New-CMSiteSystemServer [-AccountName <String>] [-EnableProxy <Boolean>] [-FdmOperation <Boolean>]
+ [-ProxyAccessAccount <IResultObject>] [-ProxyServerName <String>] [-ProxyServerPort <UInt32>]
+ [-PublicFqdn <String>] [-SiteCode <String>] [-SiteSystemServerName] <String> [-UseSiteServerAccount]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -54,21 +54,6 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -236,6 +221,21 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

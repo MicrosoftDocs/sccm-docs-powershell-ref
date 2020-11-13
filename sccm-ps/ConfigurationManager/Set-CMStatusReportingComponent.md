@@ -1,4 +1,4 @@
----
+﻿---
 description: Sets an object representing a status reporting component.
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,35 +16,35 @@ Sets an object representing a status reporting component.
 
 ### SearchByValueMandatory (Default)
 ```
-Set-CMStatusReportingComponent -InputObject <IResultObject> [-ServerReportChecked <Boolean>]
- [-ServerReportType <StatusReportOrLogType>] [-ServerReportFailureChecked <Boolean>]
- [-ServerLogChecked <Boolean>] [-ServerLogType <StatusReportOrLogType>] [-ServerLogFailureChecked <Boolean>]
- [-ClientReportChecked <Boolean>] [-ClientReportType <StatusReportOrLogType>]
- [-ClientReportFailureChecked <Boolean>] [-ClientLogChecked <Boolean>] [-ClientLogType <StatusReportOrLogType>]
- [-ClientLogFailureChecked <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
-```
-
-### SearchBySiteCodeMandatory
-```
-Set-CMStatusReportingComponent [-SiteCode <String>] [-ServerReportChecked <Boolean>]
- [-ServerReportType <StatusReportOrLogType>] [-ServerReportFailureChecked <Boolean>]
- [-ServerLogChecked <Boolean>] [-ServerLogType <StatusReportOrLogType>] [-ServerLogFailureChecked <Boolean>]
- [-ClientReportChecked <Boolean>] [-ClientReportType <StatusReportOrLogType>]
- [-ClientReportFailureChecked <Boolean>] [-ClientLogChecked <Boolean>] [-ClientLogType <StatusReportOrLogType>]
- [-ClientLogFailureChecked <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Set-CMStatusReportingComponent [-ClientLogChecked <Boolean>] [-ClientLogFailureChecked <Boolean>]
+ [-ClientLogType <StatusReportOrLogType>] [-ClientReportChecked <Boolean>]
+ [-ClientReportFailureChecked <Boolean>] [-ClientReportType <StatusReportOrLogType>]
+ -InputObject <IResultObject> [-ServerLogChecked <Boolean>] [-ServerLogFailureChecked <Boolean>]
+ [-ServerLogType <StatusReportOrLogType>] [-ServerReportChecked <Boolean>]
+ [-ServerReportFailureChecked <Boolean>] [-ServerReportType <StatusReportOrLogType>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByNameMandatory
 ```
-Set-CMStatusReportingComponent -Name <String> [-ServerReportChecked <Boolean>]
- [-ServerReportType <StatusReportOrLogType>] [-ServerReportFailureChecked <Boolean>]
- [-ServerLogChecked <Boolean>] [-ServerLogType <StatusReportOrLogType>] [-ServerLogFailureChecked <Boolean>]
- [-ClientReportChecked <Boolean>] [-ClientReportType <StatusReportOrLogType>]
- [-ClientReportFailureChecked <Boolean>] [-ClientLogChecked <Boolean>] [-ClientLogType <StatusReportOrLogType>]
- [-ClientLogFailureChecked <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Set-CMStatusReportingComponent [-ClientLogChecked <Boolean>] [-ClientLogFailureChecked <Boolean>]
+ [-ClientLogType <StatusReportOrLogType>] [-ClientReportChecked <Boolean>]
+ [-ClientReportFailureChecked <Boolean>] [-ClientReportType <StatusReportOrLogType>] -Name <String>
+ [-ServerLogChecked <Boolean>] [-ServerLogFailureChecked <Boolean>] [-ServerLogType <StatusReportOrLogType>]
+ [-ServerReportChecked <Boolean>] [-ServerReportFailureChecked <Boolean>]
+ [-ServerReportType <StatusReportOrLogType>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
+```
+
+### SearchBySiteCodeMandatory
+```
+Set-CMStatusReportingComponent [-ClientLogChecked <Boolean>] [-ClientLogFailureChecked <Boolean>]
+ [-ClientLogType <StatusReportOrLogType>] [-ClientReportChecked <Boolean>]
+ [-ClientReportFailureChecked <Boolean>] [-ClientReportType <StatusReportOrLogType>]
+ [-ServerLogChecked <Boolean>] [-ServerLogFailureChecked <Boolean>] [-ServerLogType <StatusReportOrLogType>]
+ [-ServerReportChecked <Boolean>] [-ServerReportFailureChecked <Boolean>]
+ [-ServerReportType <StatusReportOrLogType>] [-SiteCode <String>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -156,21 +156,6 @@ Accepted values: AllMilestonesAndAllDetails, AllMilestones, ErrorAndWarningMiles
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -342,6 +327,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 
 Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
@@ -359,7 +359,6 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -367,6 +366,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
 
 ## OUTPUTS
+
+### 
 
 ## NOTES
 

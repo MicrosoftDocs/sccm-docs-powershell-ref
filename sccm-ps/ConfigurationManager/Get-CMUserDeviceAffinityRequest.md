@@ -1,4 +1,4 @@
----
+﻿---
 description: Gets a request for user device affinity in Configuration Manager.
 external help file: AdminUI.PS.Collections.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,15 +16,15 @@ Gets a request for user device affinity in Configuration Manager.
 
 ### SearchByNameMandatory (Default)
 ```
-Get-CMUserDeviceAffinityRequest -CollectionName <String> [-UserName <String>] [-UserId <String>]
- [-DeviceName <String>] [-DeviceId <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Get-CMUserDeviceAffinityRequest -CollectionName <String> [-DeviceId <String>] [-DeviceName <String>]
+ [-UserId <String>] [-UserName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory
 ```
-Get-CMUserDeviceAffinityRequest -CollectionId <String> [-UserName <String>] [-UserId <String>]
- [-DeviceName <String>] [-DeviceId <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Get-CMUserDeviceAffinityRequest -CollectionId <String> [-DeviceId <String>] [-DeviceName <String>]
+ [-UserId <String>] [-UserName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [<CommonParameters>]
 ```
 

@@ -1,4 +1,4 @@
----
+﻿---
 description: Removes custom security roles from Configuration Manager.
 external help file: AdminUI.PS.Rba.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,19 +16,19 @@ Removes custom security roles from Configuration Manager.
 
 ### SearchByValueMandatory (Default)
 ```
-Remove-CMSecurityRole -InputObject <IResultObject> [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Remove-CMSecurityRole [-Force] -InputObject <IResultObject> [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### SearchByNameMandatory
-```
-Remove-CMSecurityRole -Name <String> [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory
 ```
-Remove-CMSecurityRole -Id <String> [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+Remove-CMSecurityRole [-Force] -Id <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
+```
+
+### SearchByNameMandatory
+```
+Remove-CMSecurityRole [-Force] -Name <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
  [-Confirm] [<CommonParameters>]
 ```
 
@@ -73,21 +73,6 @@ It stores them in the $Roles variable.
 The second command removes each security role stored in the $Roles variable.
 
 ## PARAMETERS
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -DisableWildcardHandling
 DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
@@ -176,6 +161,21 @@ Aliases: RoleName
 Required: True
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

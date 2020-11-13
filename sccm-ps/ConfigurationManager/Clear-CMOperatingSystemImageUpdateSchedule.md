@@ -1,4 +1,4 @@
----
+﻿---
 description: Removes a schedule for updating an operating system image.
 external help file: AdminUI.PS.Osd.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,19 +16,19 @@ Removes a schedule for updating an operating system image.
 
 ### SearchByValueMandatory (Default)
 ```
-Clear-CMOperatingSystemImageUpdateSchedule -InputObject <IResultObject> [-Force] [-DisableWildcardHandling]
+Clear-CMOperatingSystemImageUpdateSchedule [-Force] -InputObject <IResultObject> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory
 ```
-Clear-CMOperatingSystemImageUpdateSchedule -Id <String> [-Force] [-DisableWildcardHandling]
+Clear-CMOperatingSystemImageUpdateSchedule [-Force] -Id <String> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByNameMandatory
 ```
-Clear-CMOperatingSystemImageUpdateSchedule -Name <String> [-Force] [-DisableWildcardHandling]
+Clear-CMOperatingSystemImageUpdateSchedule [-Force] -Name <String> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -64,21 +64,6 @@ The command stores this schedule in the $UpdateSchedObject variable.
 The second command removes the image update schedule by using $UpdateSchedObject.
 
 ## PARAMETERS
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -DisableWildcardHandling
 DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
@@ -163,6 +148,21 @@ Aliases: OperatingSystemImageName
 Required: True
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

@@ -1,4 +1,4 @@
----
+﻿---
 description: Adds an Application Catalog web service point to a Configuration Manager site.
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,17 +16,16 @@ Adds an Application Catalog web service point to Configuration Manager.
 
 ### WebServicePointByValue (Default)
 ```
-Add-CMApplicationCatalogWebServicePoint [-WebsiteName <String>] [-WebApplicationName <String>]
- [-PortNumber <Int32>] [-CommunicationType <ComputerCommunicationType>] -InputObject <IResultObject>
+Add-CMApplicationCatalogWebServicePoint [-CommunicationType <ComputerCommunicationType>]
+ -InputObject <IResultObject> [-PortNumber <Int32>] [-WebApplicationName <String>] [-WebsiteName <String>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### WebServicePointByName
 ```
-Add-CMApplicationCatalogWebServicePoint [-WebsiteName <String>] [-WebApplicationName <String>]
- [-PortNumber <Int32>] [-SiteSystemServerName] <String> [-SiteCode <String>]
- [-CommunicationType <ComputerCommunicationType>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Add-CMApplicationCatalogWebServicePoint [-CommunicationType <ComputerCommunicationType>] [-PortNumber <Int32>]
+ [-SiteCode <String>] [-SiteSystemServerName] <String> [-WebApplicationName <String>] [-WebsiteName <String>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -68,21 +67,6 @@ Accepted values: Http, Https
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -202,6 +186,21 @@ Aliases: IISWebSite
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

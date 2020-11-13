@@ -1,4 +1,4 @@
----
+﻿---
 description: Create an application deployment.
 external help file: AdminUI.PS.Deployments.dll-Help.xml
 Module Name: ConfigurationManager
@@ -17,52 +17,52 @@ Create an application deployment.
 
 ### SearchByValueMandatory (Default)
 ```
-New-CMApplicationDeployment [-InputObject] <IResultObject> [-ApprovalRequired <Boolean>]
- [-DeployAction <DeployActionType>] [-DeployPurpose <DeployPurposeType>] [-EnableMomAlert <Boolean>]
- [-FailParameterValue <Int32>] [-OverrideServiceWindow <Boolean>] [-PostponeDateTime <DateTime>]
- [-PreDeploy <Boolean>] [-GenerateScomAlertOnFailure <Boolean>] [-RebootOutsideServiceWindow <Boolean>]
- [-SuccessParameterValue <Int32>] [-TimeBaseOn <TimeType>] [-UserNotification <UserNotificationType>]
- [-DisableContentDependencyDetection] [-UpdateSupersedence <Boolean>] [-Simulation]
- [-EnableSoftDeadline <Boolean>] [-ReplaceToastNotificationWithDialog <Boolean>] [-AllowRepairApp <Boolean>]
- [-DeadlineDateTime <DateTime>] [-DistributeContent] [-DistributeCollectionName <String>]
- [-DistributionPointGroupName <String>] [-DistributionPointName <String>] [-Comment <String>]
- [-AvailableDateTime <DateTime>] [-UseMeteredNetwork <Boolean>] [-PersistOnWriteFilterDevice <Boolean>]
- [-SendWakeupPacket <Boolean>] [-CollectionName <String>] [-CollectionId <String>]
- [-Collection <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
-```
-
-### SearchByNameMandatory
-```
-New-CMApplicationDeployment [-Name] <String> [-ApprovalRequired <Boolean>] [-DeployAction <DeployActionType>]
- [-DeployPurpose <DeployPurposeType>] [-EnableMomAlert <Boolean>] [-FailParameterValue <Int32>]
+New-CMApplicationDeployment [-AllowRepairApp <Boolean>] [-ApprovalRequired <Boolean>]
+ [-DeadlineDateTime <DateTime>] [-DeployAction <DeployActionType>] [-DeployPurpose <DeployPurposeType>]
+ [-DisableContentDependencyDetection] [-EnableMomAlert <Boolean>] [-EnableSoftDeadline <Boolean>]
+ [-FailParameterValue <Int32>] [-GenerateScomAlertOnFailure <Boolean>] [-InputObject] <IResultObject>
  [-OverrideServiceWindow <Boolean>] [-PostponeDateTime <DateTime>] [-PreDeploy <Boolean>]
- [-GenerateScomAlertOnFailure <Boolean>] [-RebootOutsideServiceWindow <Boolean>]
- [-SuccessParameterValue <Int32>] [-TimeBaseOn <TimeType>] [-UserNotification <UserNotificationType>]
- [-DisableContentDependencyDetection] [-UpdateSupersedence <Boolean>] [-Simulation]
- [-EnableSoftDeadline <Boolean>] [-ReplaceToastNotificationWithDialog <Boolean>] [-AllowRepairApp <Boolean>]
- [-DeadlineDateTime <DateTime>] [-DistributeContent] [-DistributeCollectionName <String>]
- [-DistributionPointGroupName <String>] [-DistributionPointName <String>] [-Comment <String>]
- [-AvailableDateTime <DateTime>] [-UseMeteredNetwork <Boolean>] [-PersistOnWriteFilterDevice <Boolean>]
- [-SendWakeupPacket <Boolean>] [-CollectionName <String>] [-CollectionId <String>]
- [-Collection <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [-RebootOutsideServiceWindow <Boolean>] [-ReplaceToastNotificationWithDialog <Boolean>] [-Simulation]
+ [-SuccessParameterValue <Int32>] [-TimeBaseOn <TimeType>] [-UpdateSupersedence <Boolean>]
+ [-UserNotification <UserNotificationType>] [-DistributeCollectionName <String>] [-DistributeContent]
+ [-DistributionPointGroupName <String>] [-DistributionPointName <String>] [-AvailableDateTime <DateTime>]
+ [-Comment <String>] [-PersistOnWriteFilterDevice <Boolean>] [-SendWakeupPacket <Boolean>]
+ [-UseMeteredNetwork <Boolean>] [-Collection <IResultObject>] [-CollectionId <String>]
+ [-CollectionName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory
 ```
-New-CMApplicationDeployment [-Id] <Int32> [-ApprovalRequired <Boolean>] [-DeployAction <DeployActionType>]
- [-DeployPurpose <DeployPurposeType>] [-EnableMomAlert <Boolean>] [-FailParameterValue <Int32>]
+New-CMApplicationDeployment [-AllowRepairApp <Boolean>] [-ApprovalRequired <Boolean>]
+ [-DeadlineDateTime <DateTime>] [-DeployAction <DeployActionType>] [-DeployPurpose <DeployPurposeType>]
+ [-DisableContentDependencyDetection] [-EnableMomAlert <Boolean>] [-EnableSoftDeadline <Boolean>]
+ [-FailParameterValue <Int32>] [-GenerateScomAlertOnFailure <Boolean>] [-Id] <Int32>
  [-OverrideServiceWindow <Boolean>] [-PostponeDateTime <DateTime>] [-PreDeploy <Boolean>]
- [-GenerateScomAlertOnFailure <Boolean>] [-RebootOutsideServiceWindow <Boolean>]
- [-SuccessParameterValue <Int32>] [-TimeBaseOn <TimeType>] [-UserNotification <UserNotificationType>]
- [-DisableContentDependencyDetection] [-UpdateSupersedence <Boolean>] [-Simulation]
- [-EnableSoftDeadline <Boolean>] [-ReplaceToastNotificationWithDialog <Boolean>] [-AllowRepairApp <Boolean>]
- [-DeadlineDateTime <DateTime>] [-DistributeContent] [-DistributeCollectionName <String>]
- [-DistributionPointGroupName <String>] [-DistributionPointName <String>] [-Comment <String>]
- [-AvailableDateTime <DateTime>] [-UseMeteredNetwork <Boolean>] [-PersistOnWriteFilterDevice <Boolean>]
- [-SendWakeupPacket <Boolean>] [-CollectionName <String>] [-CollectionId <String>]
- [-Collection <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [-RebootOutsideServiceWindow <Boolean>] [-ReplaceToastNotificationWithDialog <Boolean>] [-Simulation]
+ [-SuccessParameterValue <Int32>] [-TimeBaseOn <TimeType>] [-UpdateSupersedence <Boolean>]
+ [-UserNotification <UserNotificationType>] [-DistributeCollectionName <String>] [-DistributeContent]
+ [-DistributionPointGroupName <String>] [-DistributionPointName <String>] [-AvailableDateTime <DateTime>]
+ [-Comment <String>] [-PersistOnWriteFilterDevice <Boolean>] [-SendWakeupPacket <Boolean>]
+ [-UseMeteredNetwork <Boolean>] [-Collection <IResultObject>] [-CollectionId <String>]
+ [-CollectionName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### SearchByNameMandatory
+```
+New-CMApplicationDeployment [-AllowRepairApp <Boolean>] [-ApprovalRequired <Boolean>]
+ [-DeadlineDateTime <DateTime>] [-DeployAction <DeployActionType>] [-DeployPurpose <DeployPurposeType>]
+ [-DisableContentDependencyDetection] [-EnableMomAlert <Boolean>] [-EnableSoftDeadline <Boolean>]
+ [-FailParameterValue <Int32>] [-GenerateScomAlertOnFailure <Boolean>] [-Name] <String>
+ [-OverrideServiceWindow <Boolean>] [-PostponeDateTime <DateTime>] [-PreDeploy <Boolean>]
+ [-RebootOutsideServiceWindow <Boolean>] [-ReplaceToastNotificationWithDialog <Boolean>] [-Simulation]
+ [-SuccessParameterValue <Int32>] [-TimeBaseOn <TimeType>] [-UpdateSupersedence <Boolean>]
+ [-UserNotification <UserNotificationType>] [-DistributeCollectionName <String>] [-DistributeContent]
+ [-DistributionPointGroupName <String>] [-DistributionPointName <String>] [-AvailableDateTime <DateTime>]
+ [-Comment <String>] [-PersistOnWriteFilterDevice <Boolean>] [-SendWakeupPacket <Boolean>]
+ [-UseMeteredNetwork <Boolean>] [-Collection <IResultObject>] [-CollectionId <String>]
+ [-CollectionName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
@@ -171,22 +171,6 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: (All)
 Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
 
 Required: False
 Position: Named
@@ -599,6 +583,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 
 Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
@@ -625,7 +625,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
-
 ## NOTES
 
 ## RELATED LINKS

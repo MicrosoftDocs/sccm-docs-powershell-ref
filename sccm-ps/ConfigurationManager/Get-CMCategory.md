@@ -1,4 +1,4 @@
----
+﻿---
 description: Gets configuration categories in Configuration Manager.
 external help file: AdminUI.PS.Osd.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,7 +16,7 @@ Gets configuration categories in Configuration Manager.
 
 ### GetCategoryByName (Default)
 ```
-Get-CMCategory [-Name <String>] [-CategoryType <CategoryType>] [-DisableWildcardHandling]
+Get-CMCategory [-CategoryType <CategoryType>] [-Name <String>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [<CommonParameters>]
 ```
 

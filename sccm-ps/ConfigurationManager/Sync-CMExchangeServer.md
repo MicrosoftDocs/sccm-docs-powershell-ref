@@ -1,4 +1,4 @@
----
+﻿---
 description: Synchronizes Configuration Manager mobile device information with an Exchange Server.
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -15,7 +15,7 @@ Synchronizes Configuration Manager mobile device information with an Exchange Se
 ## SYNTAX
 
 ```
-Sync-CMExchangeServer [-SiteCode <String>] -Address <String> [-Force] [-PassThru] [-DisableWildcardHandling]
+Sync-CMExchangeServer -Address <String> [-Force] [-PassThru] [-SiteCode <String>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -51,21 +51,6 @@ Aliases:
 Required: True
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -142,6 +127,21 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Deployments.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 07/31/2020
@@ -16,47 +16,44 @@ Use this cmdlet to configure a deployment phase for a task sequence.
 
 ### SearchByPhasedDeployment
 ```
-Set-CMTaskSequencePhase [-UserNotification <UserNotificationType>] [-SoftwareInstallation <Boolean>]
- [-AllowSystemRestart <Boolean>] [-WriteFilterCommit <Boolean>] [-PreDownload <Boolean>] [-Comments <String>]
- [-DeploymentOption <DeploymentOptionType>] [-AllowRemoteDP <Boolean>] [-AllowFallback <Boolean>]
- [-CriteriaOption <CriteriaType>] [-CriteriaValue <Int32>] [-BeginCondition <BeginConditionType>]
- [-DaysAfterPreviousPhaseSuccess <Int32>] [-ThrottlingDays <Int32>]
- [-InstallationChoice <InstallationChoiceType>] [-DeadlineUnit <TimeUnitType>] [-DeadlineValue <Int32>]
- [-MovePhase <ReorderType>] [-MoveToOrder <Int32>] [-NewPhaseName <String>] [-NewCollection <IResultObject>]
- [-NewCollectionId <String>] [-NewCollectionName <String>] [-InputObject] <IResultObject> [-Order <Int32>]
- [-Id <String>] [-Name <String>] [-Collection <IResultObject>] [-CollectionId <String>]
- [-CollectionName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Set-CMTaskSequencePhase [-AllowFallback <Boolean>] [-AllowRemoteDP <Boolean>] [-AllowSystemRestart <Boolean>]
+ [-Comments <String>] [-DeploymentOption <DeploymentOptionType>] [-PreDownload <Boolean>]
+ [-SoftwareInstallation <Boolean>] [-UserNotification <UserNotificationType>] [-WriteFilterCommit <Boolean>]
+ [-BeginCondition <BeginConditionType>] [-CriteriaOption <CriteriaType>] [-CriteriaValue <Int32>]
+ [-DaysAfterPreviousPhaseSuccess <Int32>] [-DeadlineUnit <TimeUnitType>] [-DeadlineValue <Int32>]
+ [-InstallationChoice <InstallationChoiceType>] [-MovePhase <ReorderType>] [-MoveToOrder <Int32>]
+ [-NewCollection <IResultObject>] [-NewCollectionId <String>] [-NewCollectionName <String>]
+ [-NewPhaseName <String>] [-ThrottlingDays <Int32>] [-Collection <IResultObject>] [-CollectionId <String>]
+ [-CollectionName <String>] [-Id <String>] [-InputObject] <IResultObject> [-Name <String>] [-Order <Int32>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByPhasedDeploymentId
 ```
-Set-CMTaskSequencePhase [-UserNotification <UserNotificationType>] [-SoftwareInstallation <Boolean>]
- [-AllowSystemRestart <Boolean>] [-WriteFilterCommit <Boolean>] [-PreDownload <Boolean>] [-Comments <String>]
- [-DeploymentOption <DeploymentOptionType>] [-AllowRemoteDP <Boolean>] [-AllowFallback <Boolean>]
- [-CriteriaOption <CriteriaType>] [-CriteriaValue <Int32>] [-BeginCondition <BeginConditionType>]
- [-DaysAfterPreviousPhaseSuccess <Int32>] [-ThrottlingDays <Int32>]
- [-InstallationChoice <InstallationChoiceType>] [-DeadlineUnit <TimeUnitType>] [-DeadlineValue <Int32>]
- [-MovePhase <ReorderType>] [-MoveToOrder <Int32>] [-NewPhaseName <String>] [-NewCollection <IResultObject>]
- [-NewCollectionId <String>] [-NewCollectionName <String>] [-PhasedDeploymentId] <String> [-Order <Int32>]
- [-Id <String>] [-Name <String>] [-Collection <IResultObject>] [-CollectionId <String>]
- [-CollectionName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Set-CMTaskSequencePhase [-AllowFallback <Boolean>] [-AllowRemoteDP <Boolean>] [-AllowSystemRestart <Boolean>]
+ [-Comments <String>] [-DeploymentOption <DeploymentOptionType>] [-PreDownload <Boolean>]
+ [-SoftwareInstallation <Boolean>] [-UserNotification <UserNotificationType>] [-WriteFilterCommit <Boolean>]
+ [-BeginCondition <BeginConditionType>] [-CriteriaOption <CriteriaType>] [-CriteriaValue <Int32>]
+ [-DaysAfterPreviousPhaseSuccess <Int32>] [-DeadlineUnit <TimeUnitType>] [-DeadlineValue <Int32>]
+ [-InstallationChoice <InstallationChoiceType>] [-MovePhase <ReorderType>] [-MoveToOrder <Int32>]
+ [-NewCollection <IResultObject>] [-NewCollectionId <String>] [-NewCollectionName <String>]
+ [-NewPhaseName <String>] [-ThrottlingDays <Int32>] [-Collection <IResultObject>] [-CollectionId <String>]
+ [-CollectionName <String>] [-Id <String>] [-Name <String>] [-Order <Int32>] [-PhasedDeploymentId] <String>
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByPhasedDeploymentName
 ```
-Set-CMTaskSequencePhase [-UserNotification <UserNotificationType>] [-SoftwareInstallation <Boolean>]
- [-AllowSystemRestart <Boolean>] [-WriteFilterCommit <Boolean>] [-PreDownload <Boolean>] [-Comments <String>]
- [-DeploymentOption <DeploymentOptionType>] [-AllowRemoteDP <Boolean>] [-AllowFallback <Boolean>]
- [-CriteriaOption <CriteriaType>] [-CriteriaValue <Int32>] [-BeginCondition <BeginConditionType>]
- [-DaysAfterPreviousPhaseSuccess <Int32>] [-ThrottlingDays <Int32>]
- [-InstallationChoice <InstallationChoiceType>] [-DeadlineUnit <TimeUnitType>] [-DeadlineValue <Int32>]
- [-MovePhase <ReorderType>] [-MoveToOrder <Int32>] [-NewPhaseName <String>] [-NewCollection <IResultObject>]
- [-NewCollectionId <String>] [-NewCollectionName <String>] [-PhasedDeploymentName] <String> [-Order <Int32>]
- [-Id <String>] [-Name <String>] [-Collection <IResultObject>] [-CollectionId <String>]
- [-CollectionName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Set-CMTaskSequencePhase [-AllowFallback <Boolean>] [-AllowRemoteDP <Boolean>] [-AllowSystemRestart <Boolean>]
+ [-Comments <String>] [-DeploymentOption <DeploymentOptionType>] [-PreDownload <Boolean>]
+ [-SoftwareInstallation <Boolean>] [-UserNotification <UserNotificationType>] [-WriteFilterCommit <Boolean>]
+ [-BeginCondition <BeginConditionType>] [-CriteriaOption <CriteriaType>] [-CriteriaValue <Int32>]
+ [-DaysAfterPreviousPhaseSuccess <Int32>] [-DeadlineUnit <TimeUnitType>] [-DeadlineValue <Int32>]
+ [-InstallationChoice <InstallationChoiceType>] [-MovePhase <ReorderType>] [-MoveToOrder <Int32>]
+ [-NewCollection <IResultObject>] [-NewCollectionId <String>] [-NewCollectionName <String>]
+ [-NewPhaseName <String>] [-ThrottlingDays <Int32>] [-Collection <IResultObject>] [-CollectionId <String>]
+ [-CollectionName <String>] [-Id <String>] [-Name <String>] [-Order <Int32>] [-PhasedDeploymentName] <String>
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -218,22 +215,6 @@ Specify optional comments for this phase. The maximum length is 512 characters.
 Type: String
 Parameter Sets: (All)
 Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
 
 Required: False
 Position: Named
@@ -668,22 +649,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhatIf
-
-Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -WriteFilterCommit
 
 This parameter is the same as the following setting on the **User Experience** page of the **Add Phase Wizard** in the console: **Commit changes at deadline or during a maintenance window (requires restart)**. This setting applies to write filter handling for Windows Embedded devices.
@@ -692,6 +657,38 @@ This parameter is the same as the following setting on the **User Experience** p
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+
+Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
 
 Required: False
 Position: Named

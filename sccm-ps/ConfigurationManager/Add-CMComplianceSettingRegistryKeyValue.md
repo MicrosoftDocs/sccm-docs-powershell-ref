@@ -1,4 +1,4 @@
----
+﻿---
 description: Add a compliance setting registry key value.
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 Module Name: ConfigurationManager
@@ -18,7 +18,7 @@ Add a compliance setting registry key value.
 ### EmptyRule (Default)
 ```
 Add-CMComplianceSettingRegistryKeyValue -DataType <SettingDataType> -Hive <RegistryRootKey> [-Is64Bit]
- -KeyName <String> [-ValueName <String>] [-RemediateDword <Boolean>] [-Description <String>]
+ -KeyName <String> [-RemediateDword <Boolean>] [-ValueName <String>] [-Description <String>]
  -InputObject <PSObject> -Name <String> [-NoRule] [-PassThru] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
@@ -26,9 +26,9 @@ Add-CMComplianceSettingRegistryKeyValue -DataType <SettingDataType> -Hive <Regis
 ### ExistentialRule
 ```
 Add-CMComplianceSettingRegistryKeyValue -DataType <SettingDataType> [-Existence <ExistenceType>]
- -Hive <RegistryRootKey> [-Is64Bit] -KeyName <String> [-ValueName <String>] [-RemediateDword <Boolean>]
+ -Hive <RegistryRootKey> [-Is64Bit] -KeyName <String> [-RemediateDword <Boolean>] [-ValueName <String>]
  [-Description <String>] [-ExistentialRule] -InputObject <PSObject> -Name <String>
- [-NoncomplianceSeverity <NoncomplianceSeverity>] [-RuleDescription <String>] -RuleName <String> [-PassThru]
+ [-NoncomplianceSeverity <NoncomplianceSeverity>] [-PassThru] [-RuleDescription <String>] -RuleName <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -36,9 +36,9 @@ Add-CMComplianceSettingRegistryKeyValue -DataType <SettingDataType> [-Existence 
 ```
 Add-CMComplianceSettingRegistryKeyValue -DataType <SettingDataType> -ExpectedValue <String[]>
  [-ExpressionOperator <RuleExpressionOperator>] -Hive <RegistryRootKey> [-Is64Bit] -KeyName <String>
- [-Remediate] [-ValueName <String>] [-RemediateDword <Boolean>] [-Description <String>] -InputObject <PSObject>
- -Name <String> [-NoncomplianceSeverity <NoncomplianceSeverity>] [-ReportNoncompliance]
- [-RuleDescription <String>] -RuleName <String> [-ValueRule] [-PassThru] [-DisableWildcardHandling]
+ [-Remediate] [-RemediateDword <Boolean>] [-ValueName <String>] [-Description <String>] -InputObject <PSObject>
+ -Name <String> [-NoncomplianceSeverity <NoncomplianceSeverity>] [-PassThru] [-ReportNoncompliance]
+ [-RuleDescription <String>] -RuleName <String> [-ValueRule] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -60,22 +60,6 @@ Add a compliance setting registry key value.
 ```
 
 ## PARAMETERS
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -DataType
 ```yaml
@@ -259,11 +243,12 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -NoRule
+### -NoncomplianceSeverity
 ```yaml
-Type: SwitchParameter
-Parameter Sets: EmptyRule
-Aliases: NoRules
+Type: NoncomplianceSeverity
+Parameter Sets: ExistentialRule, ValueRule
+Aliases:
+Accepted values: None, Informational, Warning, Critical, CriticalWithEvent
 
 Required: False
 Position: Named
@@ -272,12 +257,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -NoncomplianceSeverity
+### -NoRule
 ```yaml
-Type: NoncomplianceSeverity
-Parameter Sets: ExistentialRule, ValueRule
-Aliases:
-Accepted values: None, Informational, Warning, Critical, CriticalWithEvent
+Type: SwitchParameter
+Parameter Sets: EmptyRule
+Aliases: NoRules
 
 Required: False
 Position: Named
@@ -395,6 +379,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 
 Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
@@ -421,7 +421,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
-
 ## NOTES
 
 ## RELATED LINKS

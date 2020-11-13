@@ -1,4 +1,4 @@
----
+﻿---
 description: Removes a configuration category in Configuration Manager.
 external help file: AdminUI.PS.Osd.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,26 +16,26 @@ Removes a configuration category in Configuration Manager.
 
 ### ByValue (Default)
 ```
-Remove-CMCategory -InputObject <IResultObject> [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Remove-CMCategory [-Force] -InputObject <IResultObject> [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### ByCategory
+```
+Remove-CMCategory -CategoryType <CategoryType> [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByName
 ```
-Remove-CMCategory -Name <String[]> [-Force] [-CategoryType <CategoryType>] [-DisableWildcardHandling]
+Remove-CMCategory [-CategoryType <CategoryType>] [-Force] -Name <String[]> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ById
 ```
-Remove-CMCategory -Id <String[]> [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+Remove-CMCategory [-Force] -Id <String[]> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
  [-Confirm] [<CommonParameters>]
-```
-
-### ByCategory
-```
-Remove-CMCategory [-Force] -CategoryType <CategoryType> [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -70,19 +70,6 @@ Valid values are:
 
 ```yaml
 Type: CategoryType
-Parameter Sets: ByName
-Aliases:
-Accepted values: UserCategories, BaselineCategories, DriverCategories, AppCategories, GlobalCondition, CatalogCategories
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-```yaml
-Type: CategoryType
 Parameter Sets: ByCategory
 Aliases:
 Accepted values: UserCategories, BaselineCategories, DriverCategories, AppCategories, GlobalCondition, CatalogCategories
@@ -94,17 +81,15 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
 ```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
+Type: CategoryType
+Parameter Sets: ByName
+Aliases:
+Accepted values: UserCategories, BaselineCategories, DriverCategories, AppCategories, GlobalCondition, CatalogCategories
 
 Required: False
 Position: Named
-Default value: False
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -196,6 +181,21 @@ Aliases: LocalizedCategoryInstanceName, CategoryName
 Required: True
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

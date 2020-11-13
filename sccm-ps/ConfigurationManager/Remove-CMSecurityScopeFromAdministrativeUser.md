@@ -1,4 +1,4 @@
----
+﻿---
 description: Removes the association between security scopes and an administrative user.
 external help file: AdminUI.PS.Rba.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,56 +16,63 @@ Removes the association between security scopes and an administrative user.
 
 ### RemoveScopeFromAdminByName_Name (Default)
 ```
-Remove-CMSecurityScopeFromAdministrativeUser -SecurityScopeName <String> -AdministrativeUserName <String>
- [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### RemoveScopeFromAdminById_Id
-```
-Remove-CMSecurityScopeFromAdministrativeUser -SecurityScopeId <String> -AdministrativeUserId <Int32> [-Force]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### RemoveScopeFromAdminById_Name
-```
-Remove-CMSecurityScopeFromAdministrativeUser -SecurityScopeId <String> -AdministrativeUserName <String>
- [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Remove-CMSecurityScopeFromAdministrativeUser -AdministrativeUserName <String> [-Force]
+ -SecurityScopeName <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### RemoveScopeFromAdminById_Object
 ```
-Remove-CMSecurityScopeFromAdministrativeUser -SecurityScopeId <String> -AdministrativeUser <IResultObject>
- [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### RemoveScopeFromAdminByName_Id
-```
-Remove-CMSecurityScopeFromAdministrativeUser -SecurityScopeName <String> -AdministrativeUserId <Int32> [-Force]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Remove-CMSecurityScopeFromAdministrativeUser -AdministrativeUser <IResultObject> [-Force]
+ -SecurityScopeId <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### RemoveScopeFromAdminByName_Object
 ```
-Remove-CMSecurityScopeFromAdministrativeUser -SecurityScopeName <String> -AdministrativeUser <IResultObject>
- [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### RemoveScopeFromAdminByObject_Id
-```
-Remove-CMSecurityScopeFromAdministrativeUser -SecurityScope <IResultObject> -AdministrativeUserId <Int32>
- [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### RemoveScopeFromAdminByObject_Name
-```
-Remove-CMSecurityScopeFromAdministrativeUser -SecurityScope <IResultObject> -AdministrativeUserName <String>
- [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Remove-CMSecurityScopeFromAdministrativeUser -AdministrativeUser <IResultObject> [-Force]
+ -SecurityScopeName <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### RemoveScopeFromAdminByObject_Object
 ```
-Remove-CMSecurityScopeFromAdministrativeUser -SecurityScope <IResultObject> -AdministrativeUser <IResultObject>
- [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Remove-CMSecurityScopeFromAdministrativeUser -AdministrativeUser <IResultObject> [-Force]
+ -SecurityScope <IResultObject> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### RemoveScopeFromAdminById_Id
+```
+Remove-CMSecurityScopeFromAdministrativeUser -AdministrativeUserId <Int32> [-Force] -SecurityScopeId <String>
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### RemoveScopeFromAdminByName_Id
+```
+Remove-CMSecurityScopeFromAdministrativeUser -AdministrativeUserId <Int32> [-Force] -SecurityScopeName <String>
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### RemoveScopeFromAdminByObject_Id
+```
+Remove-CMSecurityScopeFromAdministrativeUser -AdministrativeUserId <Int32> [-Force]
+ -SecurityScope <IResultObject> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### RemoveScopeFromAdminById_Name
+```
+Remove-CMSecurityScopeFromAdministrativeUser -AdministrativeUserName <String> [-Force]
+ -SecurityScopeId <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### RemoveScopeFromAdminByObject_Name
+```
+Remove-CMSecurityScopeFromAdministrativeUser -AdministrativeUserName <String> [-Force]
+ -SecurityScope <IResultObject> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -135,21 +142,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -DisableWildcardHandling
 DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
@@ -201,7 +193,7 @@ To obtain a security scope object, use the [Get-CMSecurityScope](Get-CMSecurityS
 
 ```yaml
 Type: IResultObject
-Parameter Sets: RemoveScopeFromAdminByObject_Id, RemoveScopeFromAdminByObject_Name, RemoveScopeFromAdminByObject_Object
+Parameter Sets: RemoveScopeFromAdminByObject_Object, RemoveScopeFromAdminByObject_Id, RemoveScopeFromAdminByObject_Name
 Aliases:
 
 Required: True
@@ -216,7 +208,7 @@ Specifies the ID of a security scope.
 
 ```yaml
 Type: String
-Parameter Sets: RemoveScopeFromAdminById_Id, RemoveScopeFromAdminById_Name, RemoveScopeFromAdminById_Object
+Parameter Sets: RemoveScopeFromAdminById_Object, RemoveScopeFromAdminById_Id, RemoveScopeFromAdminById_Name
 Aliases:
 
 Required: True
@@ -232,12 +224,27 @@ A security scope name can be Default or the name of a custom security scope.
 
 ```yaml
 Type: String
-Parameter Sets: RemoveScopeFromAdminByName_Name, RemoveScopeFromAdminByName_Id, RemoveScopeFromAdminByName_Object
+Parameter Sets: RemoveScopeFromAdminByName_Name, RemoveScopeFromAdminByName_Object, RemoveScopeFromAdminByName_Id
 Aliases:
 
 Required: True
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

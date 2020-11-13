@@ -1,4 +1,4 @@
----
+﻿---
 description: Retires devices.
 external help file: AdminUI.PS.Oob.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,19 +16,19 @@ Retires devices.
 
 ### SearchByValueMandatory (Default)
 ```
-Invoke-CMDeviceRetire -InputObject <IResultObject> [-Force] [-Cancel] [-DisableWildcardHandling]
+Invoke-CMDeviceRetire [-Cancel] [-Force] -InputObject <IResultObject> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### SearchByNameMandatory
-```
-Invoke-CMDeviceRetire -Name <String> [-Force] [-Cancel] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory
 ```
-Invoke-CMDeviceRetire -Id <Int32> [-Force] [-Cancel] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Invoke-CMDeviceRetire [-Cancel] [-Force] -Id <Int32> [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SearchByNameMandatory
+```
+Invoke-CMDeviceRetire [-Cancel] [-Force] -Name <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -63,21 +63,6 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -165,6 +150,21 @@ Aliases: DeviceName
 Required: True
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

@@ -1,4 +1,4 @@
----
+﻿---
 description: Changes configuration settings of OS upgrade packages.
 external help file: AdminUI.PS.Osd.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,41 +16,41 @@ Changes configuration settings of OS upgrade packages.
 
 ### SetById (Default)
 ```
-Set-CMOperatingSystemInstaller -Id <String> [-Reload] [-NewName <String>] [-Path <String>] [-Version <String>]
- [-Description <String>] [-DistributionPointUpdateSchedule <IResultObject>]
- [-DisconnectUserFromDistributionPoint <Boolean>] [-DisconnectUserFromDistributionPointRetryCount <UInt32>]
- [-DisconnectUserFromDistributionPointMins <UInt32>] [-CustomPackageShareName <String>]
- [-CopyToPackageShareOnDistributionPoint <Boolean>] [-MulticastAllow <Boolean>] [-MulticastEncrypt <Boolean>]
- [-MulticastTransferOnly <Boolean>] [-Priority <Priority>] [-SendToPreferredDistributionPoint <Boolean>]
- [-PrestageBehavior <PrestageBehavior>] [-PersistContentInCache <Boolean>]
- [-EnableBinaryDeltaReplication <Boolean>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### SetByName
-```
-Set-CMOperatingSystemInstaller -Name <String> [-Reload] [-NewName <String>] [-Path <String>]
- [-Version <String>] [-Description <String>] [-DistributionPointUpdateSchedule <IResultObject>]
- [-DisconnectUserFromDistributionPoint <Boolean>] [-DisconnectUserFromDistributionPointRetryCount <UInt32>]
- [-DisconnectUserFromDistributionPointMins <UInt32>] [-CustomPackageShareName <String>]
- [-CopyToPackageShareOnDistributionPoint <Boolean>] [-MulticastAllow <Boolean>] [-MulticastEncrypt <Boolean>]
- [-MulticastTransferOnly <Boolean>] [-Priority <Priority>] [-SendToPreferredDistributionPoint <Boolean>]
- [-PrestageBehavior <PrestageBehavior>] [-PersistContentInCache <Boolean>]
- [-EnableBinaryDeltaReplication <Boolean>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMOperatingSystemInstaller [-CopyToPackageShareOnDistributionPoint <Boolean>]
+ [-CustomPackageShareName <String>] [-Description <String>] [-DisconnectUserFromDistributionPoint <Boolean>]
+ [-DisconnectUserFromDistributionPointMins <UInt32>] [-DisconnectUserFromDistributionPointRetryCount <UInt32>]
+ [-DistributionPointUpdateSchedule <IResultObject>] [-EnableBinaryDeltaReplication <Boolean>] -Id <String>
+ [-MulticastAllow <Boolean>] [-MulticastEncrypt <Boolean>] [-MulticastTransferOnly <Boolean>]
+ [-NewName <String>] [-PassThru] [-Path <String>] [-PersistContentInCache <Boolean>]
+ [-PrestageBehavior <PrestageBehavior>] [-Priority <Priority>] [-Reload]
+ [-SendToPreferredDistributionPoint <Boolean>] [-Version <String>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetByValueMandatory
 ```
-Set-CMOperatingSystemInstaller -InputObject <IResultObject> [-Reload] [-NewName <String>] [-Path <String>]
- [-Version <String>] [-Description <String>] [-DistributionPointUpdateSchedule <IResultObject>]
- [-DisconnectUserFromDistributionPoint <Boolean>] [-DisconnectUserFromDistributionPointRetryCount <UInt32>]
- [-DisconnectUserFromDistributionPointMins <UInt32>] [-CustomPackageShareName <String>]
- [-CopyToPackageShareOnDistributionPoint <Boolean>] [-MulticastAllow <Boolean>] [-MulticastEncrypt <Boolean>]
- [-MulticastTransferOnly <Boolean>] [-Priority <Priority>] [-SendToPreferredDistributionPoint <Boolean>]
- [-PrestageBehavior <PrestageBehavior>] [-PersistContentInCache <Boolean>]
- [-EnableBinaryDeltaReplication <Boolean>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMOperatingSystemInstaller [-CopyToPackageShareOnDistributionPoint <Boolean>]
+ [-CustomPackageShareName <String>] [-Description <String>] [-DisconnectUserFromDistributionPoint <Boolean>]
+ [-DisconnectUserFromDistributionPointMins <UInt32>] [-DisconnectUserFromDistributionPointRetryCount <UInt32>]
+ [-DistributionPointUpdateSchedule <IResultObject>] [-EnableBinaryDeltaReplication <Boolean>]
+ -InputObject <IResultObject> [-MulticastAllow <Boolean>] [-MulticastEncrypt <Boolean>]
+ [-MulticastTransferOnly <Boolean>] [-NewName <String>] [-PassThru] [-Path <String>]
+ [-PersistContentInCache <Boolean>] [-PrestageBehavior <PrestageBehavior>] [-Priority <Priority>] [-Reload]
+ [-SendToPreferredDistributionPoint <Boolean>] [-Version <String>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SetByName
+```
+Set-CMOperatingSystemInstaller [-CopyToPackageShareOnDistributionPoint <Boolean>]
+ [-CustomPackageShareName <String>] [-Description <String>] [-DisconnectUserFromDistributionPoint <Boolean>]
+ [-DisconnectUserFromDistributionPointMins <UInt32>] [-DisconnectUserFromDistributionPointRetryCount <UInt32>]
+ [-DistributionPointUpdateSchedule <IResultObject>] [-EnableBinaryDeltaReplication <Boolean>]
+ [-MulticastAllow <Boolean>] [-MulticastEncrypt <Boolean>] [-MulticastTransferOnly <Boolean>] -Name <String>
+ [-NewName <String>] [-PassThru] [-Path <String>] [-PersistContentInCache <Boolean>]
+ [-PrestageBehavior <PrestageBehavior>] [-Priority <Priority>] [-Reload]
+ [-SendToPreferredDistributionPoint <Boolean>] [-Version <String>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -89,21 +89,6 @@ Set-CMOperatingSystemInstaller -SecurityScopeAction RemoveMembership -SecuritySc
 ```
 
 ## PARAMETERS
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -CopyToPackageShareOnDistributionPoint
 ```yaml
@@ -456,6 +441,21 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

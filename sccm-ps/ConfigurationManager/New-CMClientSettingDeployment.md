@@ -1,4 +1,4 @@
----
+﻿---
 description: Creates a client setting deployment.
 external help file: AdminUI.PS.Deployments.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,23 +16,23 @@ Creates a client setting deployment.
 
 ### SearchByClientSettingName (Default)
 ```
-New-CMClientSettingDeployment -Name <String> [-CollectionName <String>] [-CollectionId <String>]
- [-Collection <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+New-CMClientSettingDeployment -Name <String> [-Collection <IResultObject>] [-CollectionId <String>]
+ [-CollectionName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ### SearchByClientSettingId
 ```
-New-CMClientSettingDeployment -Id <String> [-CollectionName <String>] [-CollectionId <String>]
- [-Collection <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+New-CMClientSettingDeployment -Id <String> [-Collection <IResultObject>] [-CollectionId <String>]
+ [-CollectionName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ### SearchByClientSettingValue
 ```
-New-CMClientSettingDeployment -InputObject <IResultObject> [-CollectionName <String>] [-CollectionId <String>]
- [-Collection <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+New-CMClientSettingDeployment -InputObject <IResultObject> [-Collection <IResultObject>]
+ [-CollectionId <String>] [-CollectionName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -82,21 +82,6 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: (All)
 Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
 
 Required: False
 Position: Named
@@ -168,6 +153,21 @@ Parameter Sets: SearchByClientSettingName
 Aliases: ClientSettingName
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False

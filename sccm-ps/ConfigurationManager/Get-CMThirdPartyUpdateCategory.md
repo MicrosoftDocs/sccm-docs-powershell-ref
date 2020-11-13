@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Sum.dll-Help.xml
 Module Name: ConfigurationManager
 online version:
@@ -15,22 +15,20 @@ Use this cmdlet to get third-party update categories.
 
 ### SearchByName (Default)
 ```
-Get-CMThirdPartyUpdateCategory [[-CatalogName] <String>] [-Id <String>] [-Name <String>]
- [-PublishOption <PublishOptionType>] [-ParentId <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [<CommonParameters>]
-```
-
-### SearchByValue
-```
-Get-CMThirdPartyUpdateCategory -InputObject <IResultObject> [-Id <String>] [-Name <String>]
- [-PublishOption <PublishOptionType>] [-ParentId <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [<CommonParameters>]
+Get-CMThirdPartyUpdateCategory [[-CatalogName] <String>] [-Id <String>] [-Name <String>] [-ParentId <String>]
+ [-PublishOption <PublishOptionType>] [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ### SearchById
 ```
-Get-CMThirdPartyUpdateCategory [-CatalogId] <String> [-Id <String>] [-Name <String>]
- [-PublishOption <PublishOptionType>] [-ParentId <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Get-CMThirdPartyUpdateCategory [-CatalogId] <String> [-Id <String>] [-Name <String>] [-ParentId <String>]
+ [-PublishOption <PublishOptionType>] [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
+```
+
+### SearchByValue
+```
+Get-CMThirdPartyUpdateCategory [-Id <String>] -InputObject <IResultObject> [-Name <String>]
+ [-ParentId <String>] [-PublishOption <PublishOptionType>] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [<CommonParameters>]
 ```
 

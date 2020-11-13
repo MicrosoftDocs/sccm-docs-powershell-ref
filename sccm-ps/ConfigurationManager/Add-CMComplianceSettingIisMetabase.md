@@ -1,4 +1,4 @@
----
+﻿---
 description: Adds a compliance setting iis metabase.
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 Module Name: ConfigurationManager
@@ -26,7 +26,7 @@ Add-CMComplianceSettingIisMetabase -DataType <SettingDataType> -Path <String> -P
 Add-CMComplianceSettingIisMetabase -DataType <SettingDataType> -Path <String> -PropertyId <UInt32>
  [-Description <String>] -Existence <ExistenceType> [-ExistentialRule] [-ExpectedValue <String[]>]
  [-ExpressionOperator <RuleExpressionOperator>] -InputObject <PSObject> -Name <String>
- [-NoncomplianceSeverity <NoncomplianceSeverity>] [-RuleDescription <String>] -RuleName <String> [-PassThru]
+ [-NoncomplianceSeverity <NoncomplianceSeverity>] [-PassThru] [-RuleDescription <String>] -RuleName <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -34,8 +34,8 @@ Add-CMComplianceSettingIisMetabase -DataType <SettingDataType> -Path <String> -P
 ```
 Add-CMComplianceSettingIisMetabase -DataType <SettingDataType> -Path <String> -PropertyId <UInt32>
  [-Description <String>] -ExpectedValue <String[]> -ExpressionOperator <RuleExpressionOperator>
- -InputObject <PSObject> -Name <String> [-NoncomplianceSeverity <NoncomplianceSeverity>] [-ReportNoncompliance]
- [-RuleDescription <String>] -RuleName <String> [-ValueRule] [-PassThru] [-DisableWildcardHandling]
+ -InputObject <PSObject> -Name <String> [-NoncomplianceSeverity <NoncomplianceSeverity>] [-PassThru]
+ [-ReportNoncompliance] [-RuleDescription <String>] -RuleName <String> [-ValueRule] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -54,21 +54,6 @@ PS XYZ:\>
 ```
 
 ## PARAMETERS
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -DataType
 ```yaml
@@ -232,11 +217,12 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -NoRule
+### -NoncomplianceSeverity
 ```yaml
-Type: SwitchParameter
-Parameter Sets: EmptyRule
-Aliases: NoRules
+Type: NoncomplianceSeverity
+Parameter Sets: ExistentialRule, ValueRule
+Aliases:
+Accepted values: None, Informational, Warning, Critical, CriticalWithEvent
 
 Required: False
 Position: Named
@@ -245,12 +231,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -NoncomplianceSeverity
+### -NoRule
 ```yaml
-Type: NoncomplianceSeverity
-Parameter Sets: ExistentialRule, ValueRule
-Aliases:
-Accepted values: None, Informational, Warning, Critical, CriticalWithEvent
+Type: SwitchParameter
+Parameter Sets: EmptyRule
+Aliases: NoRules
 
 Required: False
 Position: Named
@@ -346,6 +331,21 @@ Parameter Sets: ValueRule
 Aliases:
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False

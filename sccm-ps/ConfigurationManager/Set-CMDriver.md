@@ -1,4 +1,4 @@
----
+﻿---
 description: Changes the settings of a device driver.
 external help file: AdminUI.PS.Osd.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,40 +16,40 @@ Changes the settings of a device driver.
 
 ### SetDriverByResultObject (Default)
 ```
-Set-CMDriver -InputObject <IResultObject> [-NewName <String>] [-Description <String>] [-DriverSource <String>]
- [-EnableAndAllowInstall <Boolean>] [-AdministrativeCategory <IResultObject[]>]
- [-AddAdministrativeCategory <IResultObject[]>] [-RemoveAdministrativeCategory <IResultObject[]>]
- [-ClearAdministrativeCategory] [-RunOnAnyPlatform] [-SupportedPlatformName <String[]>]
- [-AddSupportedPlatformName <String[]>] [-RemoveSupportedPlatformName <String[]>] [-ClearSupportedPlatformName]
- [-AddDriverPackage <IResultObject[]>] [-RemoveDriverPackage <IResultObject[]>]
- [-UpdateDriverDistributionPoint <Boolean>] [-AddBootImagePackage <IResultObject[]>]
- [-RemoveBootImagePackage <IResultObject[]>] [-UpdateBootImageDistributionPoint <Boolean>] [-PassThru]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### SetDriverByName
-```
-Set-CMDriver -Name <String> [-NewName <String>] [-Description <String>] [-DriverSource <String>]
- [-EnableAndAllowInstall <Boolean>] [-AdministrativeCategory <IResultObject[]>]
- [-AddAdministrativeCategory <IResultObject[]>] [-RemoveAdministrativeCategory <IResultObject[]>]
- [-ClearAdministrativeCategory] [-RunOnAnyPlatform] [-SupportedPlatformName <String[]>]
- [-AddSupportedPlatformName <String[]>] [-RemoveSupportedPlatformName <String[]>] [-ClearSupportedPlatformName]
- [-AddDriverPackage <IResultObject[]>] [-RemoveDriverPackage <IResultObject[]>]
- [-UpdateDriverDistributionPoint <Boolean>] [-AddBootImagePackage <IResultObject[]>]
- [-RemoveBootImagePackage <IResultObject[]>] [-UpdateBootImageDistributionPoint <Boolean>] [-PassThru]
+Set-CMDriver [-AddAdministrativeCategory <IResultObject[]>] [-AddBootImagePackage <IResultObject[]>]
+ [-AddDriverPackage <IResultObject[]>] [-AddSupportedPlatformName <String[]>]
+ [-AdministrativeCategory <IResultObject[]>] [-ClearAdministrativeCategory] [-ClearSupportedPlatformName]
+ [-Description <String>] [-DriverSource <String>] [-EnableAndAllowInstall <Boolean>]
+ -InputObject <IResultObject> [-NewName <String>] [-PassThru] [-RemoveAdministrativeCategory <IResultObject[]>]
+ [-RemoveBootImagePackage <IResultObject[]>] [-RemoveDriverPackage <IResultObject[]>]
+ [-RemoveSupportedPlatformName <String[]>] [-RunOnAnyPlatform] [-SupportedPlatformName <String[]>]
+ [-UpdateBootImageDistributionPoint <Boolean>] [-UpdateDriverDistributionPoint <Boolean>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetDriverById
 ```
-Set-CMDriver -Id <String> [-NewName <String>] [-Description <String>] [-DriverSource <String>]
- [-EnableAndAllowInstall <Boolean>] [-AdministrativeCategory <IResultObject[]>]
- [-AddAdministrativeCategory <IResultObject[]>] [-RemoveAdministrativeCategory <IResultObject[]>]
- [-ClearAdministrativeCategory] [-RunOnAnyPlatform] [-SupportedPlatformName <String[]>]
- [-AddSupportedPlatformName <String[]>] [-RemoveSupportedPlatformName <String[]>] [-ClearSupportedPlatformName]
- [-AddDriverPackage <IResultObject[]>] [-RemoveDriverPackage <IResultObject[]>]
- [-UpdateDriverDistributionPoint <Boolean>] [-AddBootImagePackage <IResultObject[]>]
- [-RemoveBootImagePackage <IResultObject[]>] [-UpdateBootImageDistributionPoint <Boolean>] [-PassThru]
+Set-CMDriver [-AddAdministrativeCategory <IResultObject[]>] [-AddBootImagePackage <IResultObject[]>]
+ [-AddDriverPackage <IResultObject[]>] [-AddSupportedPlatformName <String[]>]
+ [-AdministrativeCategory <IResultObject[]>] [-ClearAdministrativeCategory] [-ClearSupportedPlatformName]
+ [-Description <String>] [-DriverSource <String>] [-EnableAndAllowInstall <Boolean>] -Id <String>
+ [-NewName <String>] [-PassThru] [-RemoveAdministrativeCategory <IResultObject[]>]
+ [-RemoveBootImagePackage <IResultObject[]>] [-RemoveDriverPackage <IResultObject[]>]
+ [-RemoveSupportedPlatformName <String[]>] [-RunOnAnyPlatform] [-SupportedPlatformName <String[]>]
+ [-UpdateBootImageDistributionPoint <Boolean>] [-UpdateDriverDistributionPoint <Boolean>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SetDriverByName
+```
+Set-CMDriver [-AddAdministrativeCategory <IResultObject[]>] [-AddBootImagePackage <IResultObject[]>]
+ [-AddDriverPackage <IResultObject[]>] [-AddSupportedPlatformName <String[]>]
+ [-AdministrativeCategory <IResultObject[]>] [-ClearAdministrativeCategory] [-ClearSupportedPlatformName]
+ [-Description <String>] [-DriverSource <String>] [-EnableAndAllowInstall <Boolean>] -Name <String>
+ [-NewName <String>] [-PassThru] [-RemoveAdministrativeCategory <IResultObject[]>]
+ [-RemoveBootImagePackage <IResultObject[]>] [-RemoveDriverPackage <IResultObject[]>]
+ [-RemoveSupportedPlatformName <String[]>] [-RunOnAnyPlatform] [-SupportedPlatformName <String[]>]
+ [-UpdateBootImageDistributionPoint <Boolean>] [-UpdateDriverDistributionPoint <Boolean>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -195,21 +195,6 @@ Aliases: ClearSupportedPlatformNames
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -488,6 +473,21 @@ Aliases: UpdateDistributionPointsForDriverPackage, UpdateDriverDistributionPoint
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

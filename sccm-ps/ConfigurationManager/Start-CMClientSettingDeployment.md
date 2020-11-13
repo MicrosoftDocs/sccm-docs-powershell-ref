@@ -1,4 +1,4 @@
----
+﻿---
 description: Deploys client settings to devices in a collection.
 external help file: AdminUI.PS.ClientSettings.dll-Help.xml
 Module Name: ConfigurationManager
@@ -20,16 +20,22 @@ Start-CMClientSettingDeployment -ClientSettingName <String> -Collection <IResult
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### SearchByClientSettingName_CollectionId
+### SearchByClientSettingValue_CollectionId
 ```
-Start-CMClientSettingDeployment -ClientSettingName <String> -CollectionId <String> [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Start-CMClientSettingDeployment -ClientSetting <IResultObject> -CollectionId <String>
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### SearchByClientSettingName_CollectionName
+### SearchByClientSettingValue_CollectionName
 ```
-Start-CMClientSettingDeployment -ClientSettingName <String> -CollectionName <String> [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Start-CMClientSettingDeployment -ClientSetting <IResultObject> -CollectionName <String>
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SearchByClientSettingValue_CollectionValue
+```
+Start-CMClientSettingDeployment -ClientSetting <IResultObject> -Collection <IResultObject>
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByClientSettingId_CollectionId
@@ -50,22 +56,16 @@ Start-CMClientSettingDeployment -ClientSettingId <String> -Collection <IResultOb
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### SearchByClientSettingValue_CollectionId
+### SearchByClientSettingName_CollectionId
 ```
-Start-CMClientSettingDeployment -ClientSetting <IResultObject> -CollectionId <String>
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### SearchByClientSettingValue_CollectionName
-```
-Start-CMClientSettingDeployment -ClientSetting <IResultObject> -CollectionName <String>
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Start-CMClientSettingDeployment -ClientSettingName <String> -CollectionId <String> [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### SearchByClientSettingValue_CollectionValue
+### SearchByClientSettingName_CollectionName
 ```
-Start-CMClientSettingDeployment -ClientSetting <IResultObject> -Collection <IResultObject>
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Start-CMClientSettingDeployment -ClientSettingName <String> -CollectionName <String> [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -154,7 +154,7 @@ Configuration Manager applies the client settings to the members of this collect
 
 ```yaml
 Type: IResultObject
-Parameter Sets: SearchByClientSettingName_CollectionValue, SearchByClientSettingId_CollectionValue, SearchByClientSettingValue_CollectionValue
+Parameter Sets: SearchByClientSettingName_CollectionValue, SearchByClientSettingValue_CollectionValue, SearchByClientSettingId_CollectionValue
 Aliases:
 
 Required: True
@@ -170,7 +170,7 @@ Configuration Manager applies the client settings to the members of this collect
 
 ```yaml
 Type: String
-Parameter Sets: SearchByClientSettingName_CollectionId, SearchByClientSettingId_CollectionId, SearchByClientSettingValue_CollectionId
+Parameter Sets: SearchByClientSettingValue_CollectionId, SearchByClientSettingId_CollectionId, SearchByClientSettingName_CollectionId
 Aliases:
 
 Required: True
@@ -186,27 +186,12 @@ Configuration Manager applies the client settings to the members of this collect
 
 ```yaml
 Type: String
-Parameter Sets: SearchByClientSettingName_CollectionName, SearchByClientSettingId_CollectionName, SearchByClientSettingValue_CollectionName
+Parameter Sets: SearchByClientSettingValue_CollectionName, SearchByClientSettingId_CollectionName, SearchByClientSettingName_CollectionName
 Aliases:
 
 Required: True
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -237,6 +222,21 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

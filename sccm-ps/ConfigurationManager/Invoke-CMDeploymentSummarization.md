@@ -1,4 +1,4 @@
----
+﻿---
 description: Runs a Configuration Manager deployment summarization.
 external help file: AdminUI.PS.Deployments.dll-Help.xml
 Module Name: ConfigurationManager
@@ -20,21 +20,21 @@ Invoke-CMDeploymentSummarization -CollectionId <String> [-SoftwareName <String>]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### SearchByIdMandatory
-```
-Invoke-CMDeploymentSummarization -DeploymentId <String> [-SoftwareName <String>] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
 ### SearchByCollectionNameMandatory
 ```
 Invoke-CMDeploymentSummarization -CollectionName <String> [-SoftwareName <String>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
+### SearchByIdMandatory
+```
+Invoke-CMDeploymentSummarization -DeploymentId <String> [-SoftwareName <String>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
 ### SearchByValueMandatory
 ```
-Invoke-CMDeploymentSummarization [-SoftwareName <String>] -InputObject <IResultObject>
+Invoke-CMDeploymentSummarization -InputObject <IResultObject> [-SoftwareName <String>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -86,21 +86,6 @@ Aliases:
 Required: True
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -174,6 +159,21 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

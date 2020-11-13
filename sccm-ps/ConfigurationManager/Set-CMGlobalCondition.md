@@ -1,4 +1,4 @@
----
+﻿---
 description: Modifies settings for a Configuration Manager global condition.
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 Module Name: ConfigurationManager
@@ -17,94 +17,95 @@ Modifies settings for a Configuration Manager global condition.
 
 ### SetGeneral (Default)
 ```
-Set-CMGlobalCondition -Name <String> [-NewName <String>] [-Description <String>] [-PassThru]
+Set-CMGlobalCondition [-Description <String>] -Name <String> [-NewName <String>] [-PassThru]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### SetADQuery
-```
-Set-CMGlobalCondition -Name <String> [-LdapPrefix <String>] [-DistinguishedName <String>]
- [-LdapFilter <String>] [-SearchScope <SearchScope>] [-Property <String>] [-PassThru]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### SetWqlQuery
-```
-Set-CMGlobalCondition -Name <String> [-Property <String>] [-Namespace <String>] [-Class <String>]
- [-WhereClause <String>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
 ```
 
 ### SetAssembly
 ```
-Set-CMGlobalCondition -Name <String> [-AssemblyName <String>] [-PassThru] [-DisableWildcardHandling]
+Set-CMGlobalCondition [-AssemblyName <String>] -Name <String> [-PassThru] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### SetFileSystem
+### SetWqlQuery
 ```
-Set-CMGlobalCondition -Name <String> [-Path <String>] [-FileOrFolderName <String>]
- [-IncludeSubfolder <Boolean>] [-Is64Bit <Boolean>] [-PassThru] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### SetFileSystemFile
-```
-Set-CMGlobalCondition -Name <String> [-FilePath <String>] [-IncludeSubfolder <Boolean>] [-Is64Bit <Boolean>]
- [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### SetScript
-```
-Set-CMGlobalCondition -Name <String> [-FilePath <String>] [-ScriptLanguage <ScriptingLanguage>]
- [-UseLoggedOnUserCredential <Boolean>] [-Use32BitHost <Boolean>] [-PassThru] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMGlobalCondition [-Class <String>] -Name <String> [-Namespace <String>] [-PassThru] [-Property <String>]
+ [-WhereClause <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### SetSqlQueryDefaultInstance
 ```
-Set-CMGlobalCondition -Name <String> [-FilePath <String>] [-UseDefaultInstance] [-Database <String>]
- [-Column <String>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+Set-CMGlobalCondition [-Column <String>] [-Database <String>] [-FilePath <String>] -Name <String> [-PassThru]
+ [-UseDefaultInstance] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ### SetSqlQueryAllInstances
 ```
-Set-CMGlobalCondition -Name <String> [-FilePath <String>] [-UseAllInstances] [-Database <String>]
- [-Column <String>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+Set-CMGlobalCondition [-Column <String>] [-Database <String>] [-FilePath <String>] -Name <String> [-PassThru]
+ [-UseAllInstances] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ### SetSqlQuerySpecificInstance
 ```
-Set-CMGlobalCondition -Name <String> [-FilePath <String>] [-InstanceName <String>] [-Database <String>]
- [-Column <String>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+Set-CMGlobalCondition [-Column <String>] [-Database <String>] [-FilePath <String>] [-InstanceName <String>]
+ -Name <String> [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
+```
+
+### SetADQuery
+```
+Set-CMGlobalCondition [-DistinguishedName <String>] [-LdapFilter <String>] [-LdapPrefix <String>]
+ -Name <String> [-PassThru] [-Property <String>] [-SearchScope <SearchScope>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SetFileSystem
+```
+Set-CMGlobalCondition [-FileOrFolderName <String>] [-IncludeSubfolder <Boolean>] [-Is64Bit <Boolean>]
+ -Name <String> [-PassThru] [-Path <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
+```
+
+### SetFileSystemFile
+```
+Set-CMGlobalCondition [-FilePath <String>] [-IncludeSubfolder <Boolean>] [-Is64Bit <Boolean>] -Name <String>
+ [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SetScript
+```
+Set-CMGlobalCondition [-FilePath <String>] -Name <String> [-PassThru] [-ScriptLanguage <ScriptingLanguage>]
+ [-Use32BitHost <Boolean>] [-UseLoggedOnUserCredential <Boolean>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetXPathQuery
 ```
-Set-CMGlobalCondition -Name <String> [-FilePath <String>] [-IncludeSubfolder <Boolean>] [-Is64Bit <Boolean>]
- [-XmlFilePath <String>] [-XPathQuery <String>] [-XmlNamespace <String[]>] [-PassThru]
+Set-CMGlobalCondition [-FilePath <String>] [-IncludeSubfolder <Boolean>] [-Is64Bit <Boolean>] -Name <String>
+ [-PassThru] [-XmlFilePath <String>] [-XmlNamespace <String[]>] [-XPathQuery <String>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetRegistryKey
 ```
-Set-CMGlobalCondition -Name <String> [-Is64Bit <Boolean>] [-RegistryHive <RegistryRootKey>] [-KeyName <String>]
- [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMGlobalCondition [-Is64Bit <Boolean>] [-KeyName <String>] -Name <String> [-PassThru]
+ [-RegistryHive <RegistryRootKey>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### SetRegistryValue
 ```
-Set-CMGlobalCondition -Name <String> [-Is64Bit <Boolean>] [-RegistryHive <RegistryRootKey>] [-KeyName <String>]
- [-ValueName <String>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Set-CMGlobalCondition [-Is64Bit <Boolean>] [-KeyName <String>] -Name <String> [-PassThru]
+ [-RegistryHive <RegistryRootKey>] [-ValueName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetIisMetabase
 ```
-Set-CMGlobalCondition -Name <String> [-MetabasePath <String>] [-PropertyId <String>] [-PassThru]
+Set-CMGlobalCondition [-MetabasePath <String>] -Name <String> [-PassThru] [-PropertyId <String>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -203,22 +204,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Database
 
 Specifies the name of a database.
@@ -306,7 +291,7 @@ Specifies a file path for the file that the condition assesses for compliance.
 
 ```yaml
 Type: String
-Parameter Sets: SetFileSystemFile, SetScript, SetSqlQueryDefaultInstance, SetSqlQueryAllInstances, SetSqlQuerySpecificInstance, SetXPathQuery
+Parameter Sets: SetSqlQueryDefaultInstance, SetSqlQueryAllInstances, SetSqlQuerySpecificInstance, SetFileSystemFile, SetScript, SetXPathQuery
 Aliases:
 
 Required: False
@@ -553,7 +538,7 @@ Specifies the property of the AD DS object used to assess compliance on client c
 
 ```yaml
 Type: String
-Parameter Sets: SetADQuery, SetWqlQuery
+Parameter Sets: SetWqlQuery, SetADQuery
 Aliases:
 
 Required: False
@@ -732,23 +717,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhatIf
-
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -WhereClause
 
 Specifies a WQL query WHERE clause to apply to the specified namespace, class, and property on client computers.
@@ -756,22 +724,6 @@ Specifies a WQL query WHERE clause to apply to the specified namespace, class, a
 ```yaml
 Type: String
 Parameter Sets: SetWqlQuery
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -XPathQuery
-
-Specifies a XPath query.
-
-```yaml
-Type: String
-Parameter Sets: SetXPathQuery
 Aliases:
 
 Required: False
@@ -809,6 +761,55 @@ Aliases: XmlNamespaces
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -XPathQuery
+
+Specifies a XPath query.
+
+```yaml
+Type: String
+Parameter Sets: SetXPathQuery
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

@@ -1,4 +1,4 @@
----
+﻿---
 description: Gets a Configuration Manager task sequence group.
 external help file: AdminUI.PS.Osd.dll-Help.xml
 Module Name: ConfigurationManager
@@ -23,13 +23,13 @@ Get-CMTaskSequenceGroup -InputObject <IResultObject> [-StepName <String>] [-Disa
 
 ### ById
 ```
-Get-CMTaskSequenceGroup -TaskSequenceId <String> [-StepName <String>] [-DisableWildcardHandling]
+Get-CMTaskSequenceGroup [-StepName <String>] -TaskSequenceId <String> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ### ByName
 ```
-Get-CMTaskSequenceGroup -TaskSequenceName <String> [-StepName <String>] [-DisableWildcardHandling]
+Get-CMTaskSequenceGroup [-StepName <String>] -TaskSequenceName <String> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [<CommonParameters>]
 ```
 

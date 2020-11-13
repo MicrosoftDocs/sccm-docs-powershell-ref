@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.AppMan.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 07/31/2020
@@ -16,65 +16,66 @@ Configure a task sequence deployment type on an application.
 
 ### ByAppName (Default)
 ```
-Set-CMTaskSequenceDeploymentType -InstallTaskSequenceId <String> [-UninstallTaskSequenceId <String>]
- [-AddDetectionClause <DetectionClause[]>] [-RemoveDetectionClause <String[]>]
- [-GroupDetectionClauses <String[]>] [-DetectionClauseConnector <Hashtable[]>] [-EstimatedRuntimeMins <Int32>]
- [-UserInteractionMode <UserInteractionMode>] [-LogonRequirementType <LogonRequirementType>]
- [-MaximumRuntimeMins <Int32>] [-RequireUserInteraction <Boolean>]
- [-SlowNetworkDeploymentMode <ContentHandlingMode>] [-ProductCode <String>] [-ScriptText <String>]
- [-ScriptFile <String>] [-ForceScriptDetection32Bit <Boolean>] [-ScriptLanguage <ScriptLanguage>]
- [-InstallationBehaviorType <InstallationBehaviorType>] [-RebootBehavior <PostExecutionBehavior>]
- [-AddRequirement <Rule[]>] -ApplicationName <String> -DeploymentTypeName <String> [-NewName <String>]
- [-RemoveRequirement <Rule[]>] [-RemoveLanguage <String[]>] [-PassThru] [-AddLanguage <String[]>]
- [-Comment <String>] [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
-```
-
-### ByAppId
-```
-Set-CMTaskSequenceDeploymentType -InstallTaskSequenceId <String> [-UninstallTaskSequenceId <String>]
- [-AddDetectionClause <DetectionClause[]>] [-RemoveDetectionClause <String[]>]
- [-GroupDetectionClauses <String[]>] [-DetectionClauseConnector <Hashtable[]>] [-EstimatedRuntimeMins <Int32>]
- [-UserInteractionMode <UserInteractionMode>] [-LogonRequirementType <LogonRequirementType>]
- [-MaximumRuntimeMins <Int32>] [-RequireUserInteraction <Boolean>]
- [-SlowNetworkDeploymentMode <ContentHandlingMode>] [-ProductCode <String>] [-ScriptText <String>]
- [-ScriptFile <String>] [-ForceScriptDetection32Bit <Boolean>] [-ScriptLanguage <ScriptLanguage>]
- [-InstallationBehaviorType <InstallationBehaviorType>] [-RebootBehavior <PostExecutionBehavior>]
- [-AddRequirement <Rule[]>] -ApplicationId <Int32> -DeploymentTypeName <String> [-NewName <String>]
- [-RemoveRequirement <Rule[]>] [-RemoveLanguage <String[]>] [-PassThru] [-AddLanguage <String[]>]
- [-Comment <String>] [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Set-CMTaskSequenceDeploymentType [-AddDetectionClause <DetectionClause[]>]
+ [-DetectionClauseConnector <Hashtable[]>] [-EstimatedRuntimeMins <Int32>]
+ [-ForceScriptDetection32Bit <Boolean>] [-GroupDetectionClauses <String[]>]
+ [-InstallationBehaviorType <InstallationBehaviorType>] -InstallTaskSequenceId <String>
+ [-LogonRequirementType <LogonRequirementType>] [-MaximumRuntimeMins <Int32>] [-ProductCode <String>]
+ [-RebootBehavior <PostExecutionBehavior>] [-RemoveDetectionClause <String[]>]
+ [-RequireUserInteraction <Boolean>] [-ScriptFile <String>] [-ScriptLanguage <ScriptLanguage>]
+ [-ScriptText <String>] [-SlowNetworkDeploymentMode <ContentHandlingMode>] [-UninstallTaskSequenceId <String>]
+ [-UserInteractionMode <UserInteractionMode>] [-AddRequirement <Rule[]>] -ApplicationName <String>
+ -DeploymentTypeName <String> [-NewName <String>] [-PassThru] [-RemoveLanguage <String[]>]
+ [-RemoveRequirement <Rule[]>] [-AddLanguage <String[]>] [-Comment <String>] [-Force]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByAppValue
 ```
-Set-CMTaskSequenceDeploymentType -InstallTaskSequenceId <String> [-UninstallTaskSequenceId <String>]
- [-AddDetectionClause <DetectionClause[]>] [-RemoveDetectionClause <String[]>]
- [-GroupDetectionClauses <String[]>] [-DetectionClauseConnector <Hashtable[]>] [-EstimatedRuntimeMins <Int32>]
- [-UserInteractionMode <UserInteractionMode>] [-LogonRequirementType <LogonRequirementType>]
- [-MaximumRuntimeMins <Int32>] [-RequireUserInteraction <Boolean>]
- [-SlowNetworkDeploymentMode <ContentHandlingMode>] [-ProductCode <String>] [-ScriptText <String>]
- [-ScriptFile <String>] [-ForceScriptDetection32Bit <Boolean>] [-ScriptLanguage <ScriptLanguage>]
- [-InstallationBehaviorType <InstallationBehaviorType>] [-RebootBehavior <PostExecutionBehavior>]
- [-AddRequirement <Rule[]>] -DeploymentTypeName <String> -Application <IResultObject> [-NewName <String>]
- [-RemoveRequirement <Rule[]>] [-RemoveLanguage <String[]>] [-PassThru] [-AddLanguage <String[]>]
- [-Comment <String>] [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Set-CMTaskSequenceDeploymentType [-AddDetectionClause <DetectionClause[]>]
+ [-DetectionClauseConnector <Hashtable[]>] [-EstimatedRuntimeMins <Int32>]
+ [-ForceScriptDetection32Bit <Boolean>] [-GroupDetectionClauses <String[]>]
+ [-InstallationBehaviorType <InstallationBehaviorType>] -InstallTaskSequenceId <String>
+ [-LogonRequirementType <LogonRequirementType>] [-MaximumRuntimeMins <Int32>] [-ProductCode <String>]
+ [-RebootBehavior <PostExecutionBehavior>] [-RemoveDetectionClause <String[]>]
+ [-RequireUserInteraction <Boolean>] [-ScriptFile <String>] [-ScriptLanguage <ScriptLanguage>]
+ [-ScriptText <String>] [-SlowNetworkDeploymentMode <ContentHandlingMode>] [-UninstallTaskSequenceId <String>]
+ [-UserInteractionMode <UserInteractionMode>] [-AddRequirement <Rule[]>] -Application <IResultObject>
+ -DeploymentTypeName <String> [-NewName <String>] [-PassThru] [-RemoveLanguage <String[]>]
+ [-RemoveRequirement <Rule[]>] [-AddLanguage <String[]>] [-Comment <String>] [-Force]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### ByAppId
+```
+Set-CMTaskSequenceDeploymentType [-AddDetectionClause <DetectionClause[]>]
+ [-DetectionClauseConnector <Hashtable[]>] [-EstimatedRuntimeMins <Int32>]
+ [-ForceScriptDetection32Bit <Boolean>] [-GroupDetectionClauses <String[]>]
+ [-InstallationBehaviorType <InstallationBehaviorType>] -InstallTaskSequenceId <String>
+ [-LogonRequirementType <LogonRequirementType>] [-MaximumRuntimeMins <Int32>] [-ProductCode <String>]
+ [-RebootBehavior <PostExecutionBehavior>] [-RemoveDetectionClause <String[]>]
+ [-RequireUserInteraction <Boolean>] [-ScriptFile <String>] [-ScriptLanguage <ScriptLanguage>]
+ [-ScriptText <String>] [-SlowNetworkDeploymentMode <ContentHandlingMode>] [-UninstallTaskSequenceId <String>]
+ [-UserInteractionMode <UserInteractionMode>] [-AddRequirement <Rule[]>] -ApplicationId <Int32>
+ -DeploymentTypeName <String> [-NewName <String>] [-PassThru] [-RemoveLanguage <String[]>]
+ [-RemoveRequirement <Rule[]>] [-AddLanguage <String[]>] [-Comment <String>] [-Force]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByDTValue
 ```
-Set-CMTaskSequenceDeploymentType -InstallTaskSequenceId <String> [-UninstallTaskSequenceId <String>]
- [-AddDetectionClause <DetectionClause[]>] [-RemoveDetectionClause <String[]>]
- [-GroupDetectionClauses <String[]>] [-DetectionClauseConnector <Hashtable[]>] [-EstimatedRuntimeMins <Int32>]
- [-UserInteractionMode <UserInteractionMode>] [-LogonRequirementType <LogonRequirementType>]
- [-MaximumRuntimeMins <Int32>] [-RequireUserInteraction <Boolean>]
- [-SlowNetworkDeploymentMode <ContentHandlingMode>] [-ProductCode <String>] [-ScriptText <String>]
- [-ScriptFile <String>] [-ForceScriptDetection32Bit <Boolean>] [-ScriptLanguage <ScriptLanguage>]
- [-InstallationBehaviorType <InstallationBehaviorType>] [-RebootBehavior <PostExecutionBehavior>]
- [-AddRequirement <Rule[]>] -InputObject <IResultObject> [-NewName <String>] [-RemoveRequirement <Rule[]>]
- [-RemoveLanguage <String[]>] [-PassThru] [-AddLanguage <String[]>] [-Comment <String>] [-Force]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMTaskSequenceDeploymentType [-AddDetectionClause <DetectionClause[]>]
+ [-DetectionClauseConnector <Hashtable[]>] [-EstimatedRuntimeMins <Int32>]
+ [-ForceScriptDetection32Bit <Boolean>] [-GroupDetectionClauses <String[]>]
+ [-InstallationBehaviorType <InstallationBehaviorType>] -InstallTaskSequenceId <String>
+ [-LogonRequirementType <LogonRequirementType>] [-MaximumRuntimeMins <Int32>] [-ProductCode <String>]
+ [-RebootBehavior <PostExecutionBehavior>] [-RemoveDetectionClause <String[]>]
+ [-RequireUserInteraction <Boolean>] [-ScriptFile <String>] [-ScriptLanguage <ScriptLanguage>]
+ [-ScriptText <String>] [-SlowNetworkDeploymentMode <ContentHandlingMode>] [-UninstallTaskSequenceId <String>]
+ [-UserInteractionMode <UserInteractionMode>] [-AddRequirement <Rule[]>] -InputObject <IResultObject>
+ [-NewName <String>] [-PassThru] [-RemoveLanguage <String[]>] [-RemoveRequirement <Rule[]>]
+ [-AddLanguage <String[]>] [-Comment <String>] [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -212,29 +213,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -DeploymentTypeName
 
 Specify the name of the deployment type to configure.
 
 ```yaml
 Type: String
-Parameter Sets: ByAppName, ByAppId, ByAppValue
+Parameter Sets: ByAppName, ByAppValue, ByAppId
 Aliases:
 
 Required: True
@@ -370,22 +355,6 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### -InstallTaskSequenceId
-
-The ID of the task sequence to install the app
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -InstallationBehaviorType
 
 Specifies the installation behavior of the deployment type.
@@ -402,6 +371,22 @@ Aliases:
 Accepted values: InstallForUser, InstallForSystem, InstallForSystemIfResourceIsDeviceOtherwiseInstallForUser
 
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InstallTaskSequenceId
+
+The ID of the task sequence to install the app
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -688,6 +673,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 
 Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
@@ -714,7 +715,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
-
 ## NOTES
 
 ## RELATED LINKS

@@ -1,4 +1,4 @@
----
+﻿---
 description: Invokes a Configuration Manager query.
 external help file: AdminUI.PS.SystemStatus.dll-Help.xml
 Module Name: ConfigurationManager
@@ -20,16 +20,16 @@ Invoke-CMQuery -InputObject <IResultObject> [-LimitToCollectionId <String>] [-Di
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### SearchByNameMandatory
-```
-Invoke-CMQuery -Name <String> [-LimitToCollectionId <String>] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
 ### SearchByIdMandatory
 ```
 Invoke-CMQuery -Id <String> [-LimitToCollectionId <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SearchByNameMandatory
+```
+Invoke-CMQuery [-LimitToCollectionId <String>] -Name <String> [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -51,21 +51,6 @@ PS XYZ:\> Invoke-CMQuery -Name 'My Systems'
 This command runs a query with the name "My Systems".
 
 ## PARAMETERS
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -DisableWildcardHandling
 DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
@@ -143,6 +128,21 @@ Parameter Sets: SearchByNameMandatory
 Aliases:
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False

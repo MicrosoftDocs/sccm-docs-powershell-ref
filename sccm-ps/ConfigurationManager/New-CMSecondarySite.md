@@ -1,4 +1,4 @@
----
+﻿---
 description: Creates a secondary site in Configuration Manager.
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,59 +16,58 @@ Creates a secondary site in Configuration Manager.
 
 ### NewDistributionPointByHTTPAndCreateCertificate (Default)
 ```
-New-CMSecondarySite -SecondarySiteCode <String> -ServerName <String> -SiteName <String>
- [-InstallationFolder <String>] [-PrimarySiteCode <String>] -InstallationSourceFile <IResultObject[]>
- -SqlServerSetting <IResultObject[]> [-BoundaryGroup <IResultObject[]>] [-AllowFallbackForContent <Boolean>]
- [-InstallInternetServer <Boolean>] [-EnableBranchCache] [-Http] [-EnableAnonymous <Boolean>]
- [-CreateSelfSignedCertificate] -CertificateExpirationTimeUtc <DateTime> [-AllowPreStaging <Boolean>]
- [-MinFreeSpaceMB <Int32>] [-PrimaryContentLibraryLocation <DriveType>]
- [-SecondaryContentLibraryLocation <DriveType>] [-PrimaryPackageShareLocation <DriveType>]
- [-SecondaryPackageShareLocation <DriveType>] [-ValidateContentSchedule <IResultObject>]
- [-ContentMonitoringPriority <Priority>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+New-CMSecondarySite [-AllowFallbackForContent <Boolean>] [-AllowPreStaging <Boolean>]
+ [-BoundaryGroup <IResultObject[]>] -CertificateExpirationTimeUtc <DateTime>
+ [-ContentMonitoringPriority <Priority>] [-CreateSelfSignedCertificate] [-EnableAnonymous <Boolean>]
+ [-EnableBranchCache] [-Http] [-InstallationFolder <String>] -InstallationSourceFile <IResultObject[]>
+ [-InstallInternetServer <Boolean>] [-MinFreeSpaceMB <Int32>] [-PrimaryContentLibraryLocation <DriveType>]
+ [-PrimaryPackageShareLocation <DriveType>] [-PrimarySiteCode <String>]
+ [-SecondaryContentLibraryLocation <DriveType>] [-SecondaryPackageShareLocation <DriveType>]
+ -SecondarySiteCode <String> -ServerName <String> -SiteName <String> -SqlServerSetting <IResultObject[]>
+ [-ValidateContentSchedule <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
  [-Confirm] [<CommonParameters>]
-```
-
-### NewDistributionPointByHTTPAndImportCertificate
-```
-New-CMSecondarySite -SecondarySiteCode <String> -ServerName <String> -SiteName <String>
- [-InstallationFolder <String>] [-PrimarySiteCode <String>] -InstallationSourceFile <IResultObject[]>
- -SqlServerSetting <IResultObject[]> [-BoundaryGroup <IResultObject[]>] [-AllowFallbackForContent <Boolean>]
- [-InstallInternetServer <Boolean>] [-EnableBranchCache] [-Http] [-EnableAnonymous <Boolean>]
- [-ImportCertificate] -CertificatePath <String> -CertificatePassword <SecureString>
- [-ForceWhenDuplicateCertificate <Boolean>] [-AllowPreStaging <Boolean>] [-MinFreeSpaceMB <Int32>]
- [-PrimaryContentLibraryLocation <DriveType>] [-SecondaryContentLibraryLocation <DriveType>]
- [-PrimaryPackageShareLocation <DriveType>] [-SecondaryPackageShareLocation <DriveType>]
- [-ValidateContentSchedule <IResultObject>] [-ContentMonitoringPriority <Priority>] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### NewDistributionPointByHTTPSAndCreateCertificate
 ```
-New-CMSecondarySite -SecondarySiteCode <String> -ServerName <String> -SiteName <String>
- [-InstallationFolder <String>] [-PrimarySiteCode <String>] -InstallationSourceFile <IResultObject[]>
- -SqlServerSetting <IResultObject[]> [-BoundaryGroup <IResultObject[]>] [-AllowFallbackForContent <Boolean>]
- [-InstallInternetServer <Boolean>] [-EnableBranchCache] [-Https]
- [-ClientConnectionType <ClientConnectionTypes>] [-CreateSelfSignedCertificate]
- -CertificateExpirationTimeUtc <DateTime> [-AllowPreStaging <Boolean>] [-MinFreeSpaceMB <Int32>]
- [-PrimaryContentLibraryLocation <DriveType>] [-SecondaryContentLibraryLocation <DriveType>]
- [-PrimaryPackageShareLocation <DriveType>] [-SecondaryPackageShareLocation <DriveType>]
- [-ValidateContentSchedule <IResultObject>] [-ContentMonitoringPriority <Priority>] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+New-CMSecondarySite [-AllowFallbackForContent <Boolean>] [-AllowPreStaging <Boolean>]
+ [-BoundaryGroup <IResultObject[]>] -CertificateExpirationTimeUtc <DateTime>
+ [-ClientConnectionType <ClientConnectionTypes>] [-ContentMonitoringPriority <Priority>]
+ [-CreateSelfSignedCertificate] [-EnableBranchCache] [-Https] [-InstallationFolder <String>]
+ -InstallationSourceFile <IResultObject[]> [-InstallInternetServer <Boolean>] [-MinFreeSpaceMB <Int32>]
+ [-PrimaryContentLibraryLocation <DriveType>] [-PrimaryPackageShareLocation <DriveType>]
+ [-PrimarySiteCode <String>] [-SecondaryContentLibraryLocation <DriveType>]
+ [-SecondaryPackageShareLocation <DriveType>] -SecondarySiteCode <String> -ServerName <String>
+ -SiteName <String> -SqlServerSetting <IResultObject[]> [-ValidateContentSchedule <IResultObject>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### NewDistributionPointByHTTPSAndImportCertificate
 ```
-New-CMSecondarySite -SecondarySiteCode <String> -ServerName <String> -SiteName <String>
- [-InstallationFolder <String>] [-PrimarySiteCode <String>] -InstallationSourceFile <IResultObject[]>
- -SqlServerSetting <IResultObject[]> [-BoundaryGroup <IResultObject[]>] [-AllowFallbackForContent <Boolean>]
- [-InstallInternetServer <Boolean>] [-EnableBranchCache] [-Https]
- [-ClientConnectionType <ClientConnectionTypes>] [-ImportCertificate] -CertificatePath <String>
- -CertificatePassword <SecureString> [-ForceWhenDuplicateCertificate <Boolean>] [-AllowPreStaging <Boolean>]
- [-MinFreeSpaceMB <Int32>] [-PrimaryContentLibraryLocation <DriveType>]
- [-SecondaryContentLibraryLocation <DriveType>] [-PrimaryPackageShareLocation <DriveType>]
- [-SecondaryPackageShareLocation <DriveType>] [-ValidateContentSchedule <IResultObject>]
- [-ContentMonitoringPriority <Priority>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+New-CMSecondarySite [-AllowFallbackForContent <Boolean>] [-AllowPreStaging <Boolean>]
+ [-BoundaryGroup <IResultObject[]>] -CertificatePassword <SecureString> -CertificatePath <String>
+ [-ClientConnectionType <ClientConnectionTypes>] [-ContentMonitoringPriority <Priority>] [-EnableBranchCache]
+ [-ForceWhenDuplicateCertificate <Boolean>] [-Https] [-ImportCertificate] [-InstallationFolder <String>]
+ -InstallationSourceFile <IResultObject[]> [-InstallInternetServer <Boolean>] [-MinFreeSpaceMB <Int32>]
+ [-PrimaryContentLibraryLocation <DriveType>] [-PrimaryPackageShareLocation <DriveType>]
+ [-PrimarySiteCode <String>] [-SecondaryContentLibraryLocation <DriveType>]
+ [-SecondaryPackageShareLocation <DriveType>] -SecondarySiteCode <String> -ServerName <String>
+ -SiteName <String> -SqlServerSetting <IResultObject[]> [-ValidateContentSchedule <IResultObject>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### NewDistributionPointByHTTPAndImportCertificate
+```
+New-CMSecondarySite [-AllowFallbackForContent <Boolean>] [-AllowPreStaging <Boolean>]
+ [-BoundaryGroup <IResultObject[]>] -CertificatePassword <SecureString> -CertificatePath <String>
+ [-ContentMonitoringPriority <Priority>] [-EnableAnonymous <Boolean>] [-EnableBranchCache]
+ [-ForceWhenDuplicateCertificate <Boolean>] [-Http] [-ImportCertificate] [-InstallationFolder <String>]
+ -InstallationSourceFile <IResultObject[]> [-InstallInternetServer <Boolean>] [-MinFreeSpaceMB <Int32>]
+ [-PrimaryContentLibraryLocation <DriveType>] [-PrimaryPackageShareLocation <DriveType>]
+ [-PrimarySiteCode <String>] [-SecondaryContentLibraryLocation <DriveType>]
+ [-SecondaryPackageShareLocation <DriveType>] -SecondarySiteCode <String> -ServerName <String>
+ -SiteName <String> -SqlServerSetting <IResultObject[]> [-ValidateContentSchedule <IResultObject>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -159,7 +158,7 @@ Specifies the password for the PKI imported certificate for the distribution poi
 
 ```yaml
 Type: SecureString
-Parameter Sets: NewDistributionPointByHTTPAndImportCertificate, NewDistributionPointByHTTPSAndImportCertificate
+Parameter Sets: NewDistributionPointByHTTPSAndImportCertificate, NewDistributionPointByHTTPAndImportCertificate
 Aliases:
 
 Required: True
@@ -175,7 +174,7 @@ This parameter applies when the secondary site has installed and configured IIS 
 
 ```yaml
 Type: String
-Parameter Sets: NewDistributionPointByHTTPAndImportCertificate, NewDistributionPointByHTTPSAndImportCertificate
+Parameter Sets: NewDistributionPointByHTTPSAndImportCertificate, NewDistributionPointByHTTPAndImportCertificate
 Aliases:
 
 Required: True
@@ -202,21 +201,6 @@ Accepted values: Intranet, Internet, InternetAndIntranet
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -311,7 +295,7 @@ Indicates whether Configuration Manager overwrites a duplicate certificate when 
 
 ```yaml
 Type: Boolean
-Parameter Sets: NewDistributionPointByHTTPAndImportCertificate, NewDistributionPointByHTTPSAndImportCertificate
+Parameter Sets: NewDistributionPointByHTTPSAndImportCertificate, NewDistributionPointByHTTPAndImportCertificate
 Aliases:
 
 Required: False
@@ -375,26 +359,10 @@ Indicates that the cmdlet imports a PKI certificate instead of using a self-sign
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: NewDistributionPointByHTTPAndImportCertificate, NewDistributionPointByHTTPSAndImportCertificate
+Parameter Sets: NewDistributionPointByHTTPSAndImportCertificate, NewDistributionPointByHTTPAndImportCertificate
 Aliases:
 
 Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InstallInternetServer
-Specifies whether to install and configure IIS if Configuration Manager requires it.
-This parameter must be $True before the cmdlet installs the site system role for the distribution point on the secondary site.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-
-Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -426,6 +394,22 @@ Parameter Sets: (All)
 Aliases:
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InstallInternetServer
+Specifies whether to install and configure IIS if Configuration Manager requires it.
+This parameter must be $True before the cmdlet installs the site system role for the distribution point on the secondary site.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -611,6 +595,21 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

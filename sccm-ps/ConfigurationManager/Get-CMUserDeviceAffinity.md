@@ -1,4 +1,4 @@
----
+﻿---
 description: Get the relationships between a device and its primary users.
 external help file: AdminUI.PS.Collections.dll-Help.xml
 Module Name: ConfigurationManager
@@ -21,15 +21,15 @@ Get-CMUserDeviceAffinity -UserName <String[]> [-DisableWildcardHandling] [-Force
  [<CommonParameters>]
 ```
 
-### SearchByDeviceNameMandatory
-```
-Get-CMUserDeviceAffinity -DeviceName <String[]> [-DisableWildcardHandling] [-ForceWildcardHandling]
- [<CommonParameters>]
-```
-
 ### SearchByDeviceIdMandatory
 ```
 Get-CMUserDeviceAffinity -DeviceId <Int32[]> [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [<CommonParameters>]
+```
+
+### SearchByDeviceNameMandatory
+```
+Get-CMUserDeviceAffinity -DeviceName <String[]> [-DisableWildcardHandling] [-ForceWildcardHandling]
  [<CommonParameters>]
 ```
 
@@ -225,7 +225,6 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -237,8 +236,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### IResultObject[]#SMS_UserMachineRelationship
 
 ### IResultObject#SMS_UserMachineRelationship
-
-For more information on this return object and its properties, see [SMS_UserMachineRelationship server WMI class](/mem/configmgr/develop/reference/core/clients/manage/sms_usermachinerelationship-server-wmi-class).
 
 ## NOTES
 

@@ -1,9 +1,9 @@
----
+﻿---
 external help file: AdminUI.PS.Osd.dll-Help.xml
 Module Name: ConfigurationManager
+ms.date: 10/28/2020
 online version:
 schema: 2.0.0
-ms.date: 10/28/2020
 ---
 
 # New-CMTSStepDownloadPackageContent
@@ -14,9 +14,9 @@ Add the **Download Package Content** step to a task sequence.
 ## SYNTAX
 
 ```
-New-CMTSStepDownloadPackageContent -AddPackage <IResultObject[]> [-LocationOption <LocationType>]
- [-Path <String>] [-DestinationVariable <String>] [-ContinueDownload <Boolean>] -Name <String>
- [-Description <String>] [-ContinueOnError] [-Disable] [-Condition <IResultObject[]>]
+New-CMTSStepDownloadPackageContent -AddPackage <IResultObject[]> [-ContinueDownload <Boolean>]
+ [-DestinationVariable <String>] [-LocationOption <LocationType>] [-Path <String>]
+ [-Condition <IResultObject[]>] [-ContinueOnError] [-Description <String>] [-Disable] -Name <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -70,21 +70,6 @@ Specify a condition object to use with this step. To get a condition object, use
 Type: IResultObject[]
 Parameter Sets: (All)
 Aliases: Conditions
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
 
 Required: False
 Position: Named
@@ -236,6 +221,21 @@ If you set the **LocationOption** parameter to **CustomPath**, use this paramete
 Type: String
 Parameter Sets: (All)
 Aliases: DestinationCustomPath
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
 
 Required: False
 Position: Named

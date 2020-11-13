@@ -1,4 +1,4 @@
----
+﻿---
 description: Creates a t s step run power shell script.
 external help file: AdminUI.PS.Osd.dll-Help.xml
 Module Name: ConfigurationManager
@@ -17,28 +17,27 @@ Creates a t s step run power shell script.
 
 ### ByName (Default)
 ```
-New-CMTSStepRunPowerShellScript -Name <String> [-SuccessCode <Int32[]>] [-Description <String>]
- [-ContinueOnError] [-Disable] [-Condition <IResultObject[]>] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+New-CMTSStepRunPowerShellScript -Name <String> [-SuccessCode <Int32[]>] [-Condition <IResultObject[]>]
+ [-ContinueOnError] [-Description <String>] [-Disable] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### RunScriptFromSource
 ```
-New-CMTSStepRunPowerShellScript -Name <String> -SourceScript <String> [-WorkingDirectory <String>]
- [-TimeoutMins <Int32>] [-UserName <String>] [-UserPassword <SecureString>] [-OutputVariableName <String>]
- [-Parameter <String>] [-SuccessCode <Int32[]>] [-ExecutionPolicy <ExecutionPolicyType>]
- [-Description <String>] [-ContinueOnError] [-Disable] [-Condition <IResultObject[]>]
+New-CMTSStepRunPowerShellScript [-ExecutionPolicy <ExecutionPolicyType>] -Name <String>
+ [-OutputVariableName <String>] [-Parameter <String>] -SourceScript <String> [-SuccessCode <Int32[]>]
+ [-TimeoutMins <Int32>] [-UserName <String>] [-UserPassword <SecureString>] [-WorkingDirectory <String>]
+ [-Condition <IResultObject[]>] [-ContinueOnError] [-Description <String>] [-Disable]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### RunScriptFromPackage
 ```
-New-CMTSStepRunPowerShellScript -Name <String> -PackageId <String> -ScriptName <String>
- [-WorkingDirectory <String>] [-TimeoutMins <Int32>] [-UserName <String>] [-UserPassword <SecureString>]
- [-OutputVariableName <String>] [-Parameter <String>] [-SuccessCode <Int32[]>]
- [-ExecutionPolicy <ExecutionPolicyType>] [-Description <String>] [-ContinueOnError] [-Disable]
- [-Condition <IResultObject[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+New-CMTSStepRunPowerShellScript [-ExecutionPolicy <ExecutionPolicyType>] -Name <String>
+ [-OutputVariableName <String>] -PackageId <String> [-Parameter <String>] -ScriptName <String>
+ [-SuccessCode <Int32[]>] [-TimeoutMins <Int32>] [-UserName <String>] [-UserPassword <SecureString>]
+ [-WorkingDirectory <String>] [-Condition <IResultObject[]>] [-ContinueOnError] [-Description <String>]
+ [-Disable] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -62,21 +61,6 @@ PS XYZ:\>
 Type: IResultObject[]
 Parameter Sets: (All)
 Aliases: Conditions
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
 
 Required: False
 Position: Named
@@ -310,14 +294,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+### -WorkingDirectory
+{{ Fill WorkingDirectory Description }}
 
 ```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
+Type: String
+Parameter Sets: RunScriptFromSource, RunScriptFromPackage
+Aliases: StartIn
 
 Required: False
 Position: Named
@@ -326,13 +309,29 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WorkingDirectory
-{{ Fill WorkingDirectory Description }}
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: String
-Parameter Sets: RunScriptFromSource, RunScriptFromPackage
-Aliases: StartIn
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
 
 Required: False
 Position: Named

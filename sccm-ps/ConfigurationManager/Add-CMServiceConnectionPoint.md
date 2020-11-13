@@ -1,4 +1,4 @@
----
+﻿---
 description: Adds a service connection point to a site system server.
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,7 +16,7 @@ Adds a service connection point to a site system server.
 
 ### ByValue (Default)
 ```
-Add-CMServiceConnectionPoint -Mode <ServiceConnectionPointMode> -InputObject <IResultObject>
+Add-CMServiceConnectionPoint -InputObject <IResultObject> -Mode <ServiceConnectionPointMode>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -64,21 +64,6 @@ PS XYZ:\> Get-CMSiteSystemServer -SiteCode PS1 -SiteSystemServerName "TestServer
 This command gets the site system server object named TestServer03.Contoso.com with the site code PS1 and uses the pipeline operator to pass the object to **Add-CMServiceConnectionPoint**, which adds the service connection point site system role to the site system server object and sets the mode to online.
 
 ## PARAMETERS
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -DisableWildcardHandling
 DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
@@ -172,6 +157,21 @@ Aliases: Name, ServerName
 Required: True
 Position: 0
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

@@ -1,4 +1,4 @@
----
+﻿---
 description: Gets WinPE optional component information.
 external help file: AdminUI.PS.Osd.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,7 +16,7 @@ Gets WinPE optional component information.
 
 ### SearchByName (Default)
 ```
-Get-CMWinPEOptionalComponentInfo [-Name <String>] -Architecture <String> [-LanguageId <UInt32>]
+Get-CMWinPEOptionalComponentInfo -Architecture <String> [-LanguageId <UInt32>] [-Name <String>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 

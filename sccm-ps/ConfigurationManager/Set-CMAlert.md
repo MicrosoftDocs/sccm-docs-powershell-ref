@@ -1,4 +1,4 @@
----
+﻿---
 description: Changes properties of Configuration Manager alerts.
 external help file: AdminUI.PS.Alerts.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,22 +16,22 @@ Changes properties of Configuration Manager alerts.
 
 ### SetByValue (Default)
 ```
-Set-CMAlert -InputObject <IResultObject> [-NewName <String>] [-Severity <Severities>]
- [-ParameterValue <String>] [-Comment <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
-```
-
-### SetByName
-```
-Set-CMAlert -Name <String> [-NewName <String>] [-Severity <Severities>] [-ParameterValue <String>]
- [-Comment <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+Set-CMAlert [-Comment <String>] -InputObject <IResultObject> [-NewName <String>] [-ParameterValue <String>]
+ [-Severity <Severities>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ### SetById
 ```
-Set-CMAlert -Id <String> [-NewName <String>] [-Severity <Severities>] [-ParameterValue <String>]
- [-Comment <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+Set-CMAlert [-Comment <String>] -Id <String> [-NewName <String>] [-ParameterValue <String>]
+ [-Severity <Severities>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### SetByName
+```
+Set-CMAlert [-Comment <String>] -Name <String> [-NewName <String>] [-ParameterValue <String>]
+ [-Severity <Severities>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
@@ -73,21 +73,6 @@ Aliases: Comments
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -215,6 +200,21 @@ Accepted values: Error, Warning, Informational
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

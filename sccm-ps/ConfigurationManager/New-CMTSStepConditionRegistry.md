@@ -1,4 +1,4 @@
----
+﻿---
 description: Creates a t s step condition registry.
 external help file: AdminUI.PS.Osd.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,9 +16,9 @@ Creates a t s step condition registry.
 ## SYNTAX
 
 ```
-New-CMTSStepConditionRegistry -RootKey <RegistryRootKeyType> -RegistryKey <String>
- -RegistryOperator <VariableOperatorType> [-RegistryValueName <String>] [-ValueType <RegistryValueType>]
- [-RegistryValueData <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+New-CMTSStepConditionRegistry -RegistryKey <String> -RegistryOperator <VariableOperatorType>
+ [-RegistryValueData <String>] [-RegistryValueName <String>] -RootKey <RegistryRootKeyType>
+ [-ValueType <RegistryValueType>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
@@ -37,21 +37,6 @@ PS XYZ:\>
 ```
 
 ## PARAMETERS
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -DisableWildcardHandling
 DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
@@ -156,6 +141,21 @@ Type: RegistryValueType
 Parameter Sets: (All)
 Aliases:
 Accepted values: RegistrySZ, RegistryExpandSZ, RegistryDWord
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
 
 Required: False
 Position: Named

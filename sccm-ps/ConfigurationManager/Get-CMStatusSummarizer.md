@@ -1,4 +1,4 @@
----
+﻿---
 description: Gets a status summarizer object for Configuration Manager.
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -22,7 +22,7 @@ Get-CMStatusSummarizer -StatusSummarizerType <StatusSummarizerType> [-DisableWil
 
 ### SearchByNameOrSiteCode
 ```
-Get-CMStatusSummarizer [-SiteCode <String>] [-Name <String>] [-DisableWildcardHandling]
+Get-CMStatusSummarizer [-Name <String>] [-SiteCode <String>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [<CommonParameters>]
 ```
 

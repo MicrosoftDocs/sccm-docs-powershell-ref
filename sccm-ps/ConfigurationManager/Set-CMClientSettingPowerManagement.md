@@ -1,4 +1,4 @@
----
+﻿---
 description: Sets a client setting power management.
 external help file: AdminUI.PS.ClientSettings.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,30 +16,29 @@ Sets a client setting power management.
 
 ### SetCustomSettingByName (Default)
 ```
-Set-CMClientSettingPowerManagement [-Enable <Boolean>] [-AllowUserToOptOutFromPowerPlan <Boolean>]
- [-EnableWakeupProxy <Boolean>] [-WakeupProxyPort <Int32>] [-WakeOnLanPort <Int32>]
- [-FirewallExceptionForWakeupProxy <WakeUpProxyFirewallExceptionTypes>]
- [-WakeupProxyDirectAccessPrefix <String>] [-NetworkWakeupOption <NetworkWakeupType>] -Name <String>
- [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMClientSettingPowerManagement [-AllowUserToOptOutFromPowerPlan <Boolean>] [-Enable <Boolean>]
+ [-EnableWakeupProxy <Boolean>] [-FirewallExceptionForWakeupProxy <WakeUpProxyFirewallExceptionTypes>]
+ [-NetworkWakeupOption <NetworkWakeupType>] [-WakeOnLanPort <Int32>] [-WakeupProxyDirectAccessPrefix <String>]
+ [-WakeupProxyPort <Int32>] -Name <String> [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetDefaultSetting
 ```
-Set-CMClientSettingPowerManagement [-Enable <Boolean>] [-AllowUserToOptOutFromPowerPlan <Boolean>]
- [-EnableWakeupProxy <Boolean>] [-WakeupProxyPort <Int32>] [-WakeOnLanPort <Int32>]
- [-FirewallExceptionForWakeupProxy <WakeUpProxyFirewallExceptionTypes>]
- [-WakeupProxyDirectAccessPrefix <String>] [-NetworkWakeupOption <NetworkWakeupType>] [-DefaultSetting]
- [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMClientSettingPowerManagement [-AllowUserToOptOutFromPowerPlan <Boolean>] [-Enable <Boolean>]
+ [-EnableWakeupProxy <Boolean>] [-FirewallExceptionForWakeupProxy <WakeUpProxyFirewallExceptionTypes>]
+ [-NetworkWakeupOption <NetworkWakeupType>] [-WakeOnLanPort <Int32>] [-WakeupProxyDirectAccessPrefix <String>]
+ [-WakeupProxyPort <Int32>] [-DefaultSetting] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetCustomSettingByValue
 ```
-Set-CMClientSettingPowerManagement [-Enable <Boolean>] [-AllowUserToOptOutFromPowerPlan <Boolean>]
- [-EnableWakeupProxy <Boolean>] [-WakeupProxyPort <Int32>] [-WakeOnLanPort <Int32>]
- [-FirewallExceptionForWakeupProxy <WakeUpProxyFirewallExceptionTypes>]
- [-WakeupProxyDirectAccessPrefix <String>] [-NetworkWakeupOption <NetworkWakeupType>]
- -InputObject <IResultObject> [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Set-CMClientSettingPowerManagement [-AllowUserToOptOutFromPowerPlan <Boolean>] [-Enable <Boolean>]
+ [-EnableWakeupProxy <Boolean>] [-FirewallExceptionForWakeupProxy <WakeUpProxyFirewallExceptionTypes>]
+ [-NetworkWakeupOption <NetworkWakeupType>] [-WakeOnLanPort <Int32>] [-WakeupProxyDirectAccessPrefix <String>]
+ [-WakeupProxyPort <Int32>] -InputObject <IResultObject> [-PassThru] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -64,21 +63,6 @@ Set-CMClientSettingPowerManagement -Name "test settings" -AllowUserToOptOutFromP
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
 
 Required: False
 Position: Named
@@ -258,6 +242,21 @@ Accept wildcard characters: False
 Type: Int32
 Parameter Sets: (All)
 Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
 
 Required: False
 Position: Named

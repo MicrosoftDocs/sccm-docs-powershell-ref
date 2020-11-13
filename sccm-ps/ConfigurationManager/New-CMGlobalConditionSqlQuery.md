@@ -1,4 +1,4 @@
----
+﻿---
 description: Creates a SQL Query type global condition in Configuration Manager.
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 Module Name: ConfigurationManager
@@ -17,16 +17,16 @@ Creates a SQL Query type global condition in Configuration Manager.
 
 ### NewQueryFromFile (Default)
 ```
-New-CMGlobalConditionSqlQuery -DataType <GlobalConditionDataType> -FilePath <String> [-AllInstances]
- [-InstanceName <String>] -Database <String> -Column <String> -Name <String> [-Description <String>]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
+New-CMGlobalConditionSqlQuery [-AllInstances] -Column <String> -Database <String>
+ -DataType <GlobalConditionDataType> -FilePath <String> [-InstanceName <String>] [-Description <String>]
+ -Name <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ### NewQueryFromText
 ```
-New-CMGlobalConditionSqlQuery -DataType <GlobalConditionDataType> -QueryText <String> [-AllInstances]
- [-InstanceName <String>] -Database <String> -Column <String> -Name <String> [-Description <String>]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
+New-CMGlobalConditionSqlQuery [-AllInstances] -Column <String> -Database <String>
+ -DataType <GlobalConditionDataType> [-InstanceName <String>] -QueryText <String> [-Description <String>]
+ -Name <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -86,6 +86,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Database
+
+Specifies a database name.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -DataType
 
 Specifies a data type.
@@ -95,22 +111,6 @@ Type: GlobalConditionDataType
 Parameter Sets: (All)
 Aliases:
 Accepted values: String, DateTime, Integer, FloatingPoint, Version, Boolean
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Database
-
-Specifies a database name.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
 
 Required: True
 Position: Named

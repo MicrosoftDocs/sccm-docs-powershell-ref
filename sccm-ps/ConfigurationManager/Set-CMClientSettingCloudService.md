@@ -1,4 +1,4 @@
----
+﻿---
 description: Sets a client setting cloud service.
 external help file: AdminUI.PS.ClientSettings.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,23 +16,23 @@ Sets a client setting cloud service.
 
 ### SetCustomSettingByName (Default)
 ```
-Set-CMClientSettingCloudService [-AllowCloudDistributionPoint <Boolean>] [-AutoAzureADJoin <Boolean>]
- [-AllowCloudManagementGateway <Boolean>] -Name <String> [-PassThru] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMClientSettingCloudService [-AllowCloudDistributionPoint <Boolean>]
+ [-AllowCloudManagementGateway <Boolean>] [-AutoAzureADJoin <Boolean>] -Name <String> [-PassThru]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetDefaultSetting
 ```
-Set-CMClientSettingCloudService [-AllowCloudDistributionPoint <Boolean>] [-AutoAzureADJoin <Boolean>]
- [-AllowCloudManagementGateway <Boolean>] [-DefaultSetting] [-PassThru] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMClientSettingCloudService [-AllowCloudDistributionPoint <Boolean>]
+ [-AllowCloudManagementGateway <Boolean>] [-AutoAzureADJoin <Boolean>] [-DefaultSetting] [-PassThru]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetCustomSettingByValue
 ```
-Set-CMClientSettingCloudService [-AllowCloudDistributionPoint <Boolean>] [-AutoAzureADJoin <Boolean>]
- [-AllowCloudManagementGateway <Boolean>] -InputObject <IResultObject> [-PassThru] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMClientSettingCloudService [-AllowCloudDistributionPoint <Boolean>]
+ [-AllowCloudManagementGateway <Boolean>] [-AutoAzureADJoin <Boolean>] -InputObject <IResultObject> [-PassThru]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -82,21 +82,6 @@ Accept wildcard characters: False
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
 
 Required: False
 Position: Named
@@ -181,6 +166,21 @@ Returns an object representing the item with which you are working. By default, 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
 
 Required: False
 Position: Named

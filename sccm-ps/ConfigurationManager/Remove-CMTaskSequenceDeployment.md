@@ -1,4 +1,4 @@
----
+﻿---
 description: Removes a task sequence deployment from Configuration Manager.
 external help file: AdminUI.PS.Deployments.dll-Help.xml
 Module Name: ConfigurationManager
@@ -17,29 +17,29 @@ Removes a task sequence deployment from Configuration Manager.
 
 ### SearchByValue (Default)
 ```
-Remove-CMTaskSequenceDeployment -InputObject <IResultObject> [-Force] [-CollectionName <String>]
- [-CollectionId <String>] [-Collection <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### SearchByName
-```
-Remove-CMTaskSequenceDeployment [-Name <String>] [-Force] [-CollectionName <String>] [-CollectionId <String>]
- [-Collection <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
-```
-
-### SearchById
-```
-Remove-CMTaskSequenceDeployment [-TaskSequenceId <String>] [-Force] [-CollectionName <String>]
- [-CollectionId <String>] [-Collection <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Remove-CMTaskSequenceDeployment -InputObject <IResultObject> [-Force] [-Collection <IResultObject>]
+ [-CollectionId <String>] [-CollectionName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByDeploymentId
 ```
-Remove-CMTaskSequenceDeployment [-DeploymentId <String>] [-Force] [-CollectionName <String>]
- [-CollectionId <String>] [-Collection <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Remove-CMTaskSequenceDeployment [-DeploymentId <String>] [-Force] [-Collection <IResultObject>]
+ [-CollectionId <String>] [-CollectionName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SearchByName
+```
+Remove-CMTaskSequenceDeployment [-Name <String>] [-Force] [-Collection <IResultObject>]
+ [-CollectionId <String>] [-CollectionName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SearchById
+```
+Remove-CMTaskSequenceDeployment [-TaskSequenceId <String>] [-Force] [-Collection <IResultObject>]
+ [-CollectionId <String>] [-CollectionName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -106,22 +106,6 @@ A collection is a group of client computers.
 Type: String
 Parameter Sets: (All)
 Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
 
 Required: False
 Position: Named
@@ -235,6 +219,22 @@ Specifies the ID of a task sequence.
 Type: String
 Parameter Sets: SearchById
 Aliases: Id, TaskSequencePackageId
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
 
 Required: False
 Position: Named

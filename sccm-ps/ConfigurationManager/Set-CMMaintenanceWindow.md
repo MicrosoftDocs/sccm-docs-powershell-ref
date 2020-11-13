@@ -1,4 +1,4 @@
----
+﻿---
 description: Modifies a maintenance window.
 external help file: AdminUI.PS.Collections.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,49 +16,49 @@ Modifies a maintenance window.
 
 ### ByValueMWValue (Default)
 ```
-Set-CMMaintenanceWindow [-ApplyTo <MaintenanceWindowApplyTo>] -InputObject <IResultObject>
- [-IsEnabled <Boolean>] [-Schedule <IResultObject>] -MaintenanceWindow <IResultObject>
- [-ApplyToTaskSequenceOnly] [-ApplyToSoftwareUpdateOnly] [-PassThru] [-IsUtc <Boolean>]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### ByValueMWName
-```
-Set-CMMaintenanceWindow [-ApplyTo <MaintenanceWindowApplyTo>] -InputObject <IResultObject>
- [-IsEnabled <Boolean>] [-Schedule <IResultObject>] -MaintenanceWindowName <String> [-ApplyToTaskSequenceOnly]
- [-ApplyToSoftwareUpdateOnly] [-PassThru] [-IsUtc <Boolean>] [-DisableWildcardHandling]
+Set-CMMaintenanceWindow [-ApplyTo <MaintenanceWindowApplyTo>] [-ApplyToSoftwareUpdateOnly]
+ [-ApplyToTaskSequenceOnly] -InputObject <IResultObject> [-IsEnabled <Boolean>] [-IsUtc <Boolean>]
+ -MaintenanceWindow <IResultObject> [-PassThru] [-Schedule <IResultObject>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByCollectionIdMWName
 ```
-Set-CMMaintenanceWindow [-ApplyTo <MaintenanceWindowApplyTo>] -CollectionId <String> [-IsEnabled <Boolean>]
- [-Schedule <IResultObject>] -MaintenanceWindowName <String> [-ApplyToTaskSequenceOnly]
- [-ApplyToSoftwareUpdateOnly] [-PassThru] [-IsUtc <Boolean>] [-DisableWildcardHandling]
+Set-CMMaintenanceWindow [-ApplyTo <MaintenanceWindowApplyTo>] [-ApplyToSoftwareUpdateOnly]
+ [-ApplyToTaskSequenceOnly] -CollectionId <String> [-IsEnabled <Boolean>] [-IsUtc <Boolean>]
+ -MaintenanceWindowName <String> [-PassThru] [-Schedule <IResultObject>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByCollectionIdMWValue
 ```
-Set-CMMaintenanceWindow [-ApplyTo <MaintenanceWindowApplyTo>] -CollectionId <String> [-IsEnabled <Boolean>]
- [-Schedule <IResultObject>] -MaintenanceWindow <IResultObject> [-ApplyToTaskSequenceOnly]
- [-ApplyToSoftwareUpdateOnly] [-PassThru] [-IsUtc <Boolean>] [-DisableWildcardHandling]
+Set-CMMaintenanceWindow [-ApplyTo <MaintenanceWindowApplyTo>] [-ApplyToSoftwareUpdateOnly]
+ [-ApplyToTaskSequenceOnly] -CollectionId <String> [-IsEnabled <Boolean>] [-IsUtc <Boolean>]
+ -MaintenanceWindow <IResultObject> [-PassThru] [-Schedule <IResultObject>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByCollectionNameMWName
 ```
-Set-CMMaintenanceWindow [-ApplyTo <MaintenanceWindowApplyTo>] -CollectionName <String> [-IsEnabled <Boolean>]
- [-Schedule <IResultObject>] -MaintenanceWindowName <String> [-ApplyToTaskSequenceOnly]
- [-ApplyToSoftwareUpdateOnly] [-PassThru] [-IsUtc <Boolean>] [-DisableWildcardHandling]
+Set-CMMaintenanceWindow [-ApplyTo <MaintenanceWindowApplyTo>] [-ApplyToSoftwareUpdateOnly]
+ [-ApplyToTaskSequenceOnly] -CollectionName <String> [-IsEnabled <Boolean>] [-IsUtc <Boolean>]
+ -MaintenanceWindowName <String> [-PassThru] [-Schedule <IResultObject>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByCollectionNameMWValue
 ```
-Set-CMMaintenanceWindow [-ApplyTo <MaintenanceWindowApplyTo>] -CollectionName <String> [-IsEnabled <Boolean>]
- [-Schedule <IResultObject>] -MaintenanceWindow <IResultObject> [-ApplyToTaskSequenceOnly]
- [-ApplyToSoftwareUpdateOnly] [-PassThru] [-IsUtc <Boolean>] [-DisableWildcardHandling]
+Set-CMMaintenanceWindow [-ApplyTo <MaintenanceWindowApplyTo>] [-ApplyToSoftwareUpdateOnly]
+ [-ApplyToTaskSequenceOnly] -CollectionName <String> [-IsEnabled <Boolean>] [-IsUtc <Boolean>]
+ -MaintenanceWindow <IResultObject> [-PassThru] [-Schedule <IResultObject>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### ByValueMWName
+```
+Set-CMMaintenanceWindow [-ApplyTo <MaintenanceWindowApplyTo>] [-ApplyToSoftwareUpdateOnly]
+ [-ApplyToTaskSequenceOnly] -InputObject <IResultObject> [-IsEnabled <Boolean>] [-IsUtc <Boolean>]
+ -MaintenanceWindowName <String> [-PassThru] [-Schedule <IResultObject>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -157,21 +157,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -DisableWildcardHandling
 DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
@@ -259,7 +244,7 @@ Specifies the name of the maintenance window.
 
 ```yaml
 Type: String
-Parameter Sets: ByValueMWName, ByCollectionIdMWName, ByCollectionNameMWName
+Parameter Sets: ByCollectionIdMWName, ByCollectionNameMWName, ByValueMWName
 Aliases: Name
 
 Required: True
@@ -298,6 +283,21 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

@@ -1,4 +1,4 @@
----
+﻿---
 description: Creates a t s step install update.
 external help file: AdminUI.PS.Osd.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,8 +16,8 @@ Creates a t s step install update.
 ## SYNTAX
 
 ```
-New-CMTSStepInstallUpdate [-Target <TargetType>] [-UseCache <Boolean>] [-RetryCount <Int32>] -Name <String>
- [-Description <String>] [-ContinueOnError] [-Disable] [-Condition <IResultObject[]>]
+New-CMTSStepInstallUpdate [-RetryCount <Int32>] [-Target <TargetType>] [-UseCache <Boolean>]
+ [-Condition <IResultObject[]>] [-ContinueOnError] [-Description <String>] [-Disable] -Name <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -42,21 +42,6 @@ PS XYZ:\>
 Type: IResultObject[]
 Parameter Sets: (All)
 Aliases: Conditions
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
 
 Required: False
 Position: Named
@@ -179,6 +164,21 @@ Accept wildcard characters: False
 Type: Boolean
 Parameter Sets: (All)
 Aliases: EnableEvaluateFromCache
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
 
 Required: False
 Position: Named

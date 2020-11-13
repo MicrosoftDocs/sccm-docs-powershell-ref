@@ -1,4 +1,4 @@
----
+﻿---
 description: Modifies an object that collects software inventory data on files.
 external help file: AdminUI.PS.AssetIntelligence.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,25 +16,25 @@ Modifies an object that collects software inventory data on files.
 
 ### SetById (Default)
 ```
-Set-CMSoftwareInventory -Id <String> [-NewName <String>] [-Publisher <String>] [-FamilyId <Int32>]
- [-CategoryId <Int32>] [-Tag1Id <Int32>] [-Tag2Id <Int32>] [-Tag3Id <Int32>] [-CleanTag1] [-CleanTag2]
- [-CleanTag3] [-ParentSoftwareId <String>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Set-CMSoftwareInventory [-CategoryId <Int32>] [-CleanTag1] [-CleanTag2] [-CleanTag3] [-FamilyId <Int32>]
+ -Id <String> [-NewName <String>] [-ParentSoftwareId <String>] [-PassThru] [-Publisher <String>]
+ [-Tag1Id <Int32>] [-Tag2Id <Int32>] [-Tag3Id <Int32>] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetByName
 ```
-Set-CMSoftwareInventory -Name <String[]> [-NewName <String>] [-Publisher <String>] [-FamilyId <Int32>]
- [-CategoryId <Int32>] [-Tag1Id <Int32>] [-Tag2Id <Int32>] [-Tag3Id <Int32>] [-CleanTag1] [-CleanTag2]
- [-CleanTag3] [-ParentSoftwareId <String>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Set-CMSoftwareInventory [-CategoryId <Int32>] [-CleanTag1] [-CleanTag2] [-CleanTag3] [-FamilyId <Int32>]
+ -Name <String[]> [-NewName <String>] [-ParentSoftwareId <String>] [-PassThru] [-Publisher <String>]
+ [-Tag1Id <Int32>] [-Tag2Id <Int32>] [-Tag3Id <Int32>] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetByValueMandatory
 ```
-Set-CMSoftwareInventory -InputObject <IResultObject> [-NewName <String>] [-Publisher <String>]
- [-FamilyId <Int32>] [-CategoryId <Int32>] [-Tag1Id <Int32>] [-Tag2Id <Int32>] [-Tag3Id <Int32>] [-CleanTag1]
- [-CleanTag2] [-CleanTag3] [-ParentSoftwareId <String>] [-PassThru] [-DisableWildcardHandling]
+Set-CMSoftwareInventory [-CategoryId <Int32>] [-CleanTag1] [-CleanTag2] [-CleanTag3] [-FamilyId <Int32>]
+ -InputObject <IResultObject> [-NewName <String>] [-ParentSoftwareId <String>] [-PassThru]
+ [-Publisher <String>] [-Tag1Id <Int32>] [-Tag2Id <Int32>] [-Tag3Id <Int32>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -113,21 +113,6 @@ Aliases: CleanLabel3
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -322,6 +307,21 @@ Aliases: Label3Id
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

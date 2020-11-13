@@ -1,4 +1,4 @@
----
+﻿---
 description: Creates a Configuration Manager task sequence group.
 external help file: AdminUI.PS.Osd.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,9 +16,9 @@ Creates a Configuration Manager task sequence group.
 ## SYNTAX
 
 ```
-New-CMTaskSequenceGroup [-Step <IResultObject[]>] -Name <String> [-Description <String>] [-ContinueOnError]
- [-Disable] [-Condition <IResultObject[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+New-CMTaskSequenceGroup [-Step <IResultObject[]>] [-Condition <IResultObject[]>] [-ContinueOnError]
+ [-Description <String>] [-Disable] -Name <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -50,22 +50,6 @@ Specifies condition objects.
 Type: IResultObject[]
 Parameter Sets: (All)
 Aliases: Conditions
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
 
 Required: False
 Position: Named
@@ -178,6 +162,22 @@ Specifies the step objects.
 Type: IResultObject[]
 Parameter Sets: (All)
 Aliases: Steps
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
 
 Required: False
 Position: Named

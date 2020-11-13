@@ -1,4 +1,4 @@
----
+﻿---
 description: Creates a t s step condition variable.
 external help file: AdminUI.PS.Osd.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,8 +16,8 @@ Creates a t s step condition variable.
 ## SYNTAX
 
 ```
-New-CMTSStepConditionVariable -OperatorType <VariableOperatorType> -ConditionVariableName <String>
- [-ConditionVariableValue <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+New-CMTSStepConditionVariable -ConditionVariableName <String> [-ConditionVariableValue <String>]
+ -OperatorType <VariableOperatorType> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
@@ -55,21 +55,6 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: (All)
 Aliases: Value
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
 
 Required: False
 Position: Named
@@ -116,6 +101,21 @@ Aliases: Condition
 Accepted values: Exists, NotExists, Equals, NotEquals, Greater, GreaterEqual, Less, LessEqual, Like
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False

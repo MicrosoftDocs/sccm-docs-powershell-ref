@@ -1,4 +1,4 @@
----
+﻿---
 description: Gets cloud-based distribution points.
 external help file: AdminUI.PS.Content.dll-Help.xml
 Module Name: ConfigurationManager
@@ -20,6 +20,18 @@ Get-CMCloudDistributionPoint -DistributionPointGroupName <String> [-DisableWildc
  [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
+### SearchByGroup
+```
+Get-CMCloudDistributionPoint -DistributionPointGroup <IResultObject> [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [<CommonParameters>]
+```
+
+### SearchByGroupId
+```
+Get-CMCloudDistributionPoint -DistributionPointGroupId <String> [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [<CommonParameters>]
+```
+
 ### SearchByIdMandatory
 ```
 Get-CMCloudDistributionPoint -Id <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
@@ -30,18 +42,6 @@ Get-CMCloudDistributionPoint -Id <String> [-DisableWildcardHandling] [-ForceWild
 ```
 Get-CMCloudDistributionPoint [-Name <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [<CommonParameters>]
-```
-
-### SearchByGroupId
-```
-Get-CMCloudDistributionPoint -DistributionPointGroupId <String> [-DisableWildcardHandling]
- [-ForceWildcardHandling] [<CommonParameters>]
-```
-
-### SearchByGroup
-```
-Get-CMCloudDistributionPoint -DistributionPointGroup <IResultObject> [-DisableWildcardHandling]
- [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

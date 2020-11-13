@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.ClientSettings.dll-Help.xml
 Module Name: ConfigurationManager
 online version:
@@ -14,25 +14,25 @@ schema: 2.0.0
 
 ### SetCustomSettingByName (Default)
 ```
-Set-CMClientSettingWindowsAnalytics [-Enable <Boolean>] [-CommercialIdKey <String>]
- [-Win10Telemetry <Win10TelemetryLevelType>] [-EnableEarlierTelemetry <Boolean>]
- [-IEDataCollectionOption <InternetExplorerTelemetryLevelType>] -Name <String> [-PassThru]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMClientSettingWindowsAnalytics [-CommercialIdKey <String>] [-Enable <Boolean>]
+ [-EnableEarlierTelemetry <Boolean>] [-IEDataCollectionOption <InternetExplorerTelemetryLevelType>]
+ [-Win10Telemetry <Win10TelemetryLevelType>] -Name <String> [-PassThru] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetDefaultSetting
 ```
-Set-CMClientSettingWindowsAnalytics [-Enable <Boolean>] [-CommercialIdKey <String>]
- [-Win10Telemetry <Win10TelemetryLevelType>] [-EnableEarlierTelemetry <Boolean>]
- [-IEDataCollectionOption <InternetExplorerTelemetryLevelType>] [-DefaultSetting] [-PassThru]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMClientSettingWindowsAnalytics [-CommercialIdKey <String>] [-Enable <Boolean>]
+ [-EnableEarlierTelemetry <Boolean>] [-IEDataCollectionOption <InternetExplorerTelemetryLevelType>]
+ [-Win10Telemetry <Win10TelemetryLevelType>] [-DefaultSetting] [-PassThru] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetCustomSettingByValue
 ```
-Set-CMClientSettingWindowsAnalytics [-Enable <Boolean>] [-CommercialIdKey <String>]
- [-Win10Telemetry <Win10TelemetryLevelType>] [-EnableEarlierTelemetry <Boolean>]
- [-IEDataCollectionOption <InternetExplorerTelemetryLevelType>] -InputObject <IResultObject> [-PassThru]
+Set-CMClientSettingWindowsAnalytics [-CommercialIdKey <String>] [-Enable <Boolean>]
+ [-EnableEarlierTelemetry <Boolean>] [-IEDataCollectionOption <InternetExplorerTelemetryLevelType>]
+ [-Win10Telemetry <Win10TelemetryLevelType>] -InputObject <IResultObject> [-PassThru]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -62,21 +62,6 @@ PS XYZ:\> {{ Add example code here }}
 Type: String
 Parameter Sets: (All)
 Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
 
 Required: False
 Position: Named
@@ -221,22 +206,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Win10Telemetry
 {{ Fill Win10Telemetry Description }}
 
@@ -245,6 +214,37 @@ Type: Win10TelemetryLevelType
 Parameter Sets: (All)
 Aliases: Windows10Telemetry
 Accepted values: Basic, EnhancedLimited, Enhanced, Full
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
 
 Required: False
 Position: Named

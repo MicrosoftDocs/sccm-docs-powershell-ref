@@ -1,4 +1,4 @@
----
+﻿---
 description: Sends a notification to client computers to trigger an immediate client action.
 external help file: AdminUI.PS.Collections.dll-Help.xml
 Module Name: ConfigurationManager
@@ -15,49 +15,49 @@ Sends a notification to client computers to trigger an immediate client action.
 
 ## SYNTAX
 
-### SearchByDeviceValueMandatory (Default)
+### SearchByValueMandatory (Default)
 ```
-Invoke-CMClientAction -Device <IResultObject> [-NotificationType <ClientNotificationType>]
- [-ActionType <ClientActionType>] [-ParentCollectionId <String>] [-ParentCollectionName <String>]
- [-ParentCollection <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Invoke-CMClientAction [-ActionType <ClientActionType>] -Collection <IResultObject>
+ [-NotificationType <ClientNotificationType>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByDeviceNameMandatory
 ```
-Invoke-CMClientAction -DeviceName <String> [-NotificationType <ClientNotificationType>]
- [-ActionType <ClientActionType>] [-ParentCollectionId <String>] [-ParentCollectionName <String>]
- [-ParentCollection <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Invoke-CMClientAction [-ActionType <ClientActionType>] -DeviceName <String>
+ [-NotificationType <ClientNotificationType>] [-ParentCollection <IResultObject>]
+ [-ParentCollectionId <String>] [-ParentCollectionName <String>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByDeviceIdMandatory
 ```
-Invoke-CMClientAction -DeviceId <String> [-NotificationType <ClientNotificationType>]
- [-ActionType <ClientActionType>] [-ParentCollectionId <String>] [-ParentCollectionName <String>]
- [-ParentCollection <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Invoke-CMClientAction [-ActionType <ClientActionType>] -DeviceId <String>
+ [-NotificationType <ClientNotificationType>] [-ParentCollection <IResultObject>]
+ [-ParentCollectionId <String>] [-ParentCollectionName <String>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SearchByDeviceValueMandatory
+```
+Invoke-CMClientAction [-ActionType <ClientActionType>] -Device <IResultObject>
+ [-NotificationType <ClientNotificationType>] [-ParentCollection <IResultObject>]
+ [-ParentCollectionId <String>] [-ParentCollectionName <String>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByNameMandatory
 ```
-Invoke-CMClientAction -CollectionName <String> [-NotificationType <ClientNotificationType>]
- [-ActionType <ClientActionType>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Invoke-CMClientAction [-ActionType <ClientActionType>] -CollectionName <String>
+ [-NotificationType <ClientNotificationType>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory
 ```
-Invoke-CMClientAction -CollectionId <String> [-NotificationType <ClientNotificationType>]
- [-ActionType <ClientActionType>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
-```
-
-### SearchByValueMandatory
-```
-Invoke-CMClientAction -Collection <IResultObject> [-NotificationType <ClientNotificationType>]
- [-ActionType <ClientActionType>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Invoke-CMClientAction [-ActionType <ClientActionType>] -CollectionId <String>
+ [-NotificationType <ClientNotificationType>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -148,22 +148,6 @@ Parameter Sets: SearchByNameMandatory
 Aliases: DeviceCollectionName
 
 Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -273,7 +257,7 @@ Applies to version 1906 and later. Use this parameter to support waking up a mac
 
 ```yaml
 Type: IResultObject
-Parameter Sets: SearchByDeviceValueMandatory, SearchByDeviceNameMandatory, SearchByDeviceIdMandatory
+Parameter Sets: SearchByDeviceNameMandatory, SearchByDeviceIdMandatory, SearchByDeviceValueMandatory
 Aliases: ParentDeviceCollection
 
 Required: False
@@ -289,7 +273,7 @@ Applies to version 1906 and later. Use this parameter to support waking up a mac
 
 ```yaml
 Type: String
-Parameter Sets: SearchByDeviceValueMandatory, SearchByDeviceNameMandatory, SearchByDeviceIdMandatory
+Parameter Sets: SearchByDeviceNameMandatory, SearchByDeviceIdMandatory, SearchByDeviceValueMandatory
 Aliases: ParentDeviceCollectionId
 
 Required: False
@@ -305,8 +289,24 @@ Applies to version 1906 and later. Use this parameter to support waking up a mac
 
 ```yaml
 Type: String
-Parameter Sets: SearchByDeviceValueMandatory, SearchByDeviceNameMandatory, SearchByDeviceIdMandatory
+Parameter Sets: SearchByDeviceNameMandatory, SearchByDeviceIdMandatory, SearchByDeviceValueMandatory
 Aliases: ParentDeviceCollectionName
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
 
 Required: False
 Position: Named
@@ -341,7 +341,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
-
 ## NOTES
 
 Cmdlet aliases: **Invoke-CMClientNotification**

@@ -1,4 +1,4 @@
----
+﻿---
 description: Sets hierarchy settings in Configuration Manager.
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -15,15 +15,15 @@ Sets hierarchy settings in Configuration Manager.
 ## SYNTAX
 
 ```
-Set-CMHierarchySetting [-UseFallbackSite <Boolean>] [-FallbackSiteCode <String>]
- [-ApprovalMethod <ApprovalMethodType>] [-AutoResolveClientConflict <Boolean>]
- [-EnableAutoClientUpgrade <Boolean>] [-AutoUpgradeDays <Int32>] [-AllowPrestage <Boolean>]
- [-ExcludeServer <Boolean>] [-EnablePreProduction <Boolean>] [-TargetCollectionId <String>]
- [-TargetCollectionName <String>] [-TargetCollection <IResultObject>] [-UnlimitTargetCollectionMember]
- [-EnableExclusionCollection <Boolean>] [-ExclusionCollectionId <String>] [-ExclusionCollectionName <String>]
- [-ExclusionCollection <IResultObject>] [-Force] [-PassThru] [-EnablePrereleaseFeature]
- [-PreferBoundaryGroupManagementPoint <Boolean>] [-TelemetryLevel <TelemetryLevelType>]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMHierarchySetting [-AllowPrestage <Boolean>] [-ApprovalMethod <ApprovalMethodType>]
+ [-AutoResolveClientConflict <Boolean>] [-AutoUpgradeDays <Int32>] [-EnableAutoClientUpgrade <Boolean>]
+ [-EnableExclusionCollection <Boolean>] [-EnablePreProduction <Boolean>] [-EnablePrereleaseFeature]
+ [-ExcludeServer <Boolean>] [-ExclusionCollection <IResultObject>] [-ExclusionCollectionId <String>]
+ [-ExclusionCollectionName <String>] [-FallbackSiteCode <String>] [-Force] [-PassThru]
+ [-PreferBoundaryGroupManagementPoint <Boolean>] [-TargetCollection <IResultObject>]
+ [-TargetCollectionId <String>] [-TargetCollectionName <String>] [-TelemetryLevel <TelemetryLevelType>]
+ [-UnlimitTargetCollectionMember] [-UseFallbackSite <Boolean>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -104,21 +104,6 @@ Aliases: AutomaticallyUpgradeDays
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -397,6 +382,21 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

@@ -1,4 +1,4 @@
----
+﻿---
 description: Sets how often Configuration Manager summarizes the status of updates.
 external help file: AdminUI.PS.Sum.dll-Help.xml
 Module Name: ConfigurationManager
@@ -15,7 +15,7 @@ Sets how often Configuration Manager summarizes the status of updates.
 ## SYNTAX
 
 ```
-Set-CMSoftwareUpdateSummarizationSchedule -Interval <Int32> -Unit <SummarizationScheduleUnit> [-PassThru]
+Set-CMSoftwareUpdateSummarizationSchedule -Interval <Int32> [-PassThru] -Unit <SummarizationScheduleUnit>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -47,21 +47,6 @@ This command changes the interval for the update summarization schedule to seven
 The command does not change the unit.
 
 ## PARAMETERS
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -DisableWildcardHandling
 DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
@@ -147,6 +132,21 @@ Accepted values: Days, Hours, Minutes
 Required: True
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

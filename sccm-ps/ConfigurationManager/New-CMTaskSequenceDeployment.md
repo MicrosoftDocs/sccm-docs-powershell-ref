@@ -1,4 +1,4 @@
----
+﻿---
 description: Create a task sequence deployment
 external help file: AdminUI.PS.Deployments.dll-Help.xml
 Module Name: ConfigurationManager
@@ -17,36 +17,34 @@ Create a task sequence deployment.
 
 ### SearchByValueMandatory (Default)
 ```
-New-CMTaskSequenceDeployment [-InputObject] <IResultObject> [-DeadlineDateTime <DateTime>]
- [-DeployPurpose <DeployPurposeType>] [-Availability <MakeAvailableToType>]
- [-UseUtcForAvailableSchedule <Boolean>] [-UseUtcForExpireSchedule <Boolean>]
- [-ScheduleEvent <ScheduleEventType[]>] [-Schedule <IResultObject[]>] [-RerunBehavior <RerunBehaviorType>]
- [-RunFromSoftwareCenter <Boolean>] [-ShowTaskSequenceProgress <Boolean>] [-SoftwareInstallation <Boolean>]
- [-SystemRestart <Boolean>] [-InternetOption <Boolean>] [-PercentSuccess <Int32>] [-AlertDateTime <DateTime>]
- [-PercentFailure <Int32>] [-DeploymentOption <DeploymentOptionType>] [-AllowSharedContent <Boolean>]
- [-AllowFallback <Boolean>] [-DistributeContent] [-DistributeCollectionName <String>]
- [-DistributionPointGroupName <String>] [-DistributionPointName <String>] [-Comment <String>]
- [-AvailableDateTime <DateTime>] [-UseMeteredNetwork <Boolean>] [-PersistOnWriteFilterDevice <Boolean>]
- [-SendWakeupPacket <Boolean>] [-CollectionName <String>] [-CollectionId <String>]
- [-Collection <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+New-CMTaskSequenceDeployment [-AlertDateTime <DateTime>] [-AllowFallback <Boolean>]
+ [-AllowSharedContent <Boolean>] [-Availability <MakeAvailableToType>] [-DeadlineDateTime <DateTime>]
+ [-DeploymentOption <DeploymentOptionType>] [-DeployPurpose <DeployPurposeType>] [-InputObject] <IResultObject>
+ [-InternetOption <Boolean>] [-PercentFailure <Int32>] [-PercentSuccess <Int32>]
+ [-RerunBehavior <RerunBehaviorType>] [-RunFromSoftwareCenter <Boolean>] [-Schedule <IResultObject[]>]
+ [-ScheduleEvent <ScheduleEventType[]>] [-ShowTaskSequenceProgress <Boolean>] [-SoftwareInstallation <Boolean>]
+ [-SystemRestart <Boolean>] [-UseUtcForAvailableSchedule <Boolean>] [-UseUtcForExpireSchedule <Boolean>]
+ [-DistributeCollectionName <String>] [-DistributeContent] [-DistributionPointGroupName <String>]
+ [-DistributionPointName <String>] [-AvailableDateTime <DateTime>] [-Comment <String>]
+ [-PersistOnWriteFilterDevice <Boolean>] [-SendWakeupPacket <Boolean>] [-UseMeteredNetwork <Boolean>]
+ [-Collection <IResultObject>] [-CollectionId <String>] [-CollectionName <String>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchPackageByIdMandatory
 ```
-New-CMTaskSequenceDeployment [-DeadlineDateTime <DateTime>] [-TaskSequencePackageId] <String>
- [-DeployPurpose <DeployPurposeType>] [-Availability <MakeAvailableToType>]
- [-UseUtcForAvailableSchedule <Boolean>] [-UseUtcForExpireSchedule <Boolean>]
- [-ScheduleEvent <ScheduleEventType[]>] [-Schedule <IResultObject[]>] [-RerunBehavior <RerunBehaviorType>]
- [-RunFromSoftwareCenter <Boolean>] [-ShowTaskSequenceProgress <Boolean>] [-SoftwareInstallation <Boolean>]
- [-SystemRestart <Boolean>] [-InternetOption <Boolean>] [-PercentSuccess <Int32>] [-AlertDateTime <DateTime>]
- [-PercentFailure <Int32>] [-DeploymentOption <DeploymentOptionType>] [-AllowSharedContent <Boolean>]
- [-AllowFallback <Boolean>] [-DistributeContent] [-DistributeCollectionName <String>]
- [-DistributionPointGroupName <String>] [-DistributionPointName <String>] [-Comment <String>]
- [-AvailableDateTime <DateTime>] [-UseMeteredNetwork <Boolean>] [-PersistOnWriteFilterDevice <Boolean>]
- [-SendWakeupPacket <Boolean>] [-CollectionName <String>] [-CollectionId <String>]
- [-Collection <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+New-CMTaskSequenceDeployment [-AlertDateTime <DateTime>] [-AllowFallback <Boolean>]
+ [-AllowSharedContent <Boolean>] [-Availability <MakeAvailableToType>] [-DeadlineDateTime <DateTime>]
+ [-DeploymentOption <DeploymentOptionType>] [-DeployPurpose <DeployPurposeType>] [-InternetOption <Boolean>]
+ [-PercentFailure <Int32>] [-PercentSuccess <Int32>] [-RerunBehavior <RerunBehaviorType>]
+ [-RunFromSoftwareCenter <Boolean>] [-Schedule <IResultObject[]>] [-ScheduleEvent <ScheduleEventType[]>]
+ [-ShowTaskSequenceProgress <Boolean>] [-SoftwareInstallation <Boolean>] [-SystemRestart <Boolean>]
+ [-TaskSequencePackageId] <String> [-UseUtcForAvailableSchedule <Boolean>] [-UseUtcForExpireSchedule <Boolean>]
+ [-DistributeCollectionName <String>] [-DistributeContent] [-DistributionPointGroupName <String>]
+ [-DistributionPointName <String>] [-AvailableDateTime <DateTime>] [-Comment <String>]
+ [-PersistOnWriteFilterDevice <Boolean>] [-SendWakeupPacket <Boolean>] [-UseMeteredNetwork <Boolean>]
+ [-Collection <IResultObject>] [-CollectionId <String>] [-CollectionName <String>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -229,22 +227,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -DeadlineDateTime
 
 Use this parameter to specify when the deployment _expires_.
@@ -263,23 +245,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -DeployPurpose
-
-Specify whether this deployment is available for users to install, or it's required to install at the deadline.
-
-```yaml
-Type: DeployPurposeType
-Parameter Sets: (All)
-Aliases:
-Accepted values: Available, Required
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -DeploymentOption
 
 Specify how clients interact with the distribution points to get content for the task sequence. Not all options are available in specific scenarios. For more information, see [Deploy a task sequence - Deployment options](/mem/configmgr/osd/deploy-use/deploy-a-task-sequence#bkmk_deploy-options).
@@ -289,6 +254,23 @@ Type: DeploymentOptionType
 Parameter Sets: (All)
 Aliases:
 Accepted values: DownloadContentLocallyWhenNeededByRunningTaskSequence, DownloadAllContentLocallyBeforeStartingTaskSequence, RunFromDistributionPoint
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DeployPurpose
+
+Specify whether this deployment is available for users to install, or it's required to install at the deadline.
+
+```yaml
+Type: DeployPurposeType
+Parameter Sets: (All)
+Aliases:
+Accepted values: Available, Required
 
 Required: False
 Position: Named
@@ -674,6 +656,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 
 Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
@@ -691,7 +689,6 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS

@@ -1,4 +1,4 @@
----
+﻿---
 description: Invokes a content redistribution.
 external help file: AdminUI.PS.Content.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,16 +16,10 @@ Invokes a content redistribution.
 
 ### SearchByValue (Default)
 ```
-Invoke-CMContentRedistribution [-DistributionPointName <String[]>] [-DistributionPointGroupName <String[]>]
- [-DistributionPoint <IResultObject[]>] [-DistributionPointGroup <IResultObject[]>]
- [-InputObject <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
-```
-
-### SearchByDP
-```
-Invoke-CMContentRedistribution [-DistributionPointName <String[]>] [-DistributionPointGroupName <String[]>]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Invoke-CMContentRedistribution [-DistributionPoint <IResultObject[]>]
+ [-DistributionPointGroup <IResultObject[]>] [-DistributionPointGroupName <String[]>]
+ [-DistributionPointName <String[]>] [-InputObject <IResultObject>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByDPName
@@ -33,6 +27,12 @@ Invoke-CMContentRedistribution [-DistributionPointName <String[]>] [-Distributio
 Invoke-CMContentRedistribution [-DistributionPoint <IResultObject[]>]
  [-DistributionPointGroup <IResultObject[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
  [-Confirm] [<CommonParameters>]
+```
+
+### SearchByDP
+```
+Invoke-CMContentRedistribution [-DistributionPointGroupName <String[]>] [-DistributionPointName <String[]>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -50,21 +50,6 @@ PS XYZ:\>
 ```
 
 ## PARAMETERS
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -DisableWildcardHandling
 DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
@@ -158,6 +143,21 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

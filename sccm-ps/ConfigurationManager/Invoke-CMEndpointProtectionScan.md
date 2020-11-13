@@ -1,4 +1,4 @@
----
+﻿---
 description: Invokes a scan to detect malware on one or more devices in the Configuration Manager hierarchy.
 external help file: AdminUI.PS.Collections.dll-Help.xml
 Module Name: ConfigurationManager
@@ -20,21 +20,15 @@ Invoke-CMEndpointProtectionScan -DeviceCollection <IResultObject> [-ScanType <Sc
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### SearchByDeviceNameMandatory
-```
-Invoke-CMEndpointProtectionScan -DeviceName <String> [-ScanType <ScanType>] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### SearchByDeviceIdMandatory
-```
-Invoke-CMEndpointProtectionScan -DeviceId <String> [-ScanType <ScanType>] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
 ### SearchByDeviceValueMandatory
 ```
 Invoke-CMEndpointProtectionScan -Device <IResultObject> [-ScanType <ScanType>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SearchByIdMandatory
+```
+Invoke-CMEndpointProtectionScan -DeviceCollectionId <String> [-ScanType <ScanType>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -44,9 +38,15 @@ Invoke-CMEndpointProtectionScan -DeviceCollectionName <String> [-ScanType <ScanT
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### SearchByIdMandatory
+### SearchByDeviceIdMandatory
 ```
-Invoke-CMEndpointProtectionScan -DeviceCollectionId <String> [-ScanType <ScanType>] [-DisableWildcardHandling]
+Invoke-CMEndpointProtectionScan -DeviceId <String> [-ScanType <ScanType>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SearchByDeviceNameMandatory
+```
+Invoke-CMEndpointProtectionScan -DeviceName <String> [-ScanType <ScanType>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -71,21 +71,6 @@ PS XYZ:\>Invoke-CMEndpointProtectionScan -DeviceName "CMCEN-DIST02" -ScanType Fu
 This command invokes a full Endpoint Protection scan of the device named CMCEN-DIST02.
 
 ## PARAMETERS
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -Device
 Specifies the device that is scanned for malware.
@@ -222,6 +207,21 @@ Accepted values: Full, Quick
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

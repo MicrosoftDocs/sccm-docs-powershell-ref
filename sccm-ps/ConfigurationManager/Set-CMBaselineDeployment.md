@@ -1,4 +1,4 @@
----
+﻿---
 description: Changes settings for a Configuration Manager baseline deployment.
 external help file: AdminUI.PS.Deployments.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,28 +16,28 @@ Changes settings for a Configuration Manager baseline deployment.
 
 ### SetBaselineDeploymentByValueMandatory (Default)
 ```
-Set-CMBaselineDeployment -InputObject <IResultObject> [-EnableEnforcement <Boolean>]
- [-OverrideServiceWindow <Boolean>] [-GenerateAlert <Boolean>] [-ParameterValue <Int32>]
- [-PostponeDateTime <DateTime>] [-MonitoredByScom <Boolean>] [-Schedule <IResultObject>] [-PassThru]
- [-CollectionName <String>] [-CollectionId <String>] [-Collection <IResultObject>] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### SetBaselineDeploymentByNameMandatory
-```
-Set-CMBaselineDeployment -BaselineName <String> [-EnableEnforcement <Boolean>]
- [-OverrideServiceWindow <Boolean>] [-GenerateAlert <Boolean>] [-ParameterValue <Int32>]
- [-PostponeDateTime <DateTime>] [-MonitoredByScom <Boolean>] [-Schedule <IResultObject>] [-PassThru]
- [-CollectionName <String>] [-CollectionId <String>] [-Collection <IResultObject>] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMBaselineDeployment [-EnableEnforcement <Boolean>] [-GenerateAlert <Boolean>] -InputObject <IResultObject>
+ [-MonitoredByScom <Boolean>] [-OverrideServiceWindow <Boolean>] [-ParameterValue <Int32>]
+ [-PostponeDateTime <DateTime>] [-Schedule <IResultObject>] [-PassThru] [-Collection <IResultObject>]
+ [-CollectionId <String>] [-CollectionName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetBaselineDeploymentByIdMandatory
 ```
-Set-CMBaselineDeployment -BaselineId <String> [-EnableEnforcement <Boolean>] [-OverrideServiceWindow <Boolean>]
- [-GenerateAlert <Boolean>] [-ParameterValue <Int32>] [-PostponeDateTime <DateTime>]
- [-MonitoredByScom <Boolean>] [-Schedule <IResultObject>] [-PassThru] [-CollectionName <String>]
- [-CollectionId <String>] [-Collection <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Set-CMBaselineDeployment -BaselineId <String> [-EnableEnforcement <Boolean>] [-GenerateAlert <Boolean>]
+ [-MonitoredByScom <Boolean>] [-OverrideServiceWindow <Boolean>] [-ParameterValue <Int32>]
+ [-PostponeDateTime <DateTime>] [-Schedule <IResultObject>] [-PassThru] [-Collection <IResultObject>]
+ [-CollectionId <String>] [-CollectionName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SetBaselineDeploymentByNameMandatory
+```
+Set-CMBaselineDeployment -BaselineName <String> [-EnableEnforcement <Boolean>] [-GenerateAlert <Boolean>]
+ [-MonitoredByScom <Boolean>] [-OverrideServiceWindow <Boolean>] [-ParameterValue <Int32>]
+ [-PostponeDateTime <DateTime>] [-Schedule <IResultObject>] [-PassThru] [-Collection <IResultObject>]
+ [-CollectionId <String>] [-CollectionName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -146,21 +146,6 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -325,6 +310,21 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

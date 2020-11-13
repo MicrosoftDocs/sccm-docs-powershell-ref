@@ -1,4 +1,4 @@
----
+﻿---
 description: Create a Configuration Manager schedule token.
 external help file: AdminUI.PS.Common.dll-Help.xml
 Module Name: ConfigurationManager
@@ -17,123 +17,123 @@ Create a Configuration Manager schedule token.
 
 ### RecurrenceNone (Default)
 ```
-New-CMSchedule [-ScheduleString] [-Start <DateTime>] [-IsUtc] [-Nonrecurring] [-DisableWildcardHandling]
+New-CMSchedule [-IsUtc] [-Nonrecurring] [-ScheduleString] [-Start <DateTime>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### RecurrenceNoneWithEnd
+### RecurrenceMonthlyByDate
 ```
-New-CMSchedule [-ScheduleString] [-Start <DateTime>] -End <DateTime> [-IsUtc] [-Nonrecurring]
+New-CMSchedule -DayOfMonth <Int32> [-IsUtc] [-RecurCount <Int32>] [-ScheduleString] [-Start <DateTime>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### RecurrenceWeeklyWithEnd
+### RecurrenceMonthlyByDateWithDuration
 ```
-New-CMSchedule [-ScheduleString] [-Start <DateTime>] -End <DateTime> [-IsUtc] [-RecurCount <Int32>]
- -DayOfWeek <DayOfWeek> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+New-CMSchedule -DayOfMonth <Int32> -DurationCount <Int32> -DurationInterval <ScheduleInterval> [-IsUtc]
+ [-RecurCount <Int32>] [-ScheduleString] [-Start <DateTime>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### RecurrenceMonthlyByDateWithEnd
 ```
-New-CMSchedule [-ScheduleString] [-Start <DateTime>] -End <DateTime> [-IsUtc] [-RecurCount <Int32>]
- -DayOfMonth <Int32> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+New-CMSchedule -DayOfMonth <Int32> -End <DateTime> [-IsUtc] [-RecurCount <Int32>] [-ScheduleString]
+ [-Start <DateTime>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
-### RecurMonthlyLastDayOfMonthWithEnd
+### RecurrenceWeekly
 ```
-New-CMSchedule [-ScheduleString] [-Start <DateTime>] -End <DateTime> [-IsUtc] [-RecurCount <Int32>]
- [-LastDayOfMonth] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+New-CMSchedule -DayOfWeek <DayOfWeek> [-IsUtc] [-RecurCount <Int32>] [-ScheduleString] [-Start <DateTime>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### RecurrenceWeeklyWithDuration
+```
+New-CMSchedule -DayOfWeek <DayOfWeek> -DurationCount <Int32> -DurationInterval <ScheduleInterval> [-IsUtc]
+ [-RecurCount <Int32>] [-ScheduleString] [-Start <DateTime>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### RecurrenceWeeklyWithEnd
+```
+New-CMSchedule -DayOfWeek <DayOfWeek> -End <DateTime> [-IsUtc] [-RecurCount <Int32>] [-ScheduleString]
+ [-Start <DateTime>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### RecurMonthlyByWeekday
+```
+New-CMSchedule -DayOfWeek <DayOfWeek> [-IsUtc] [-OffsetDay <Int32>] [-RecurCount <Int32>] [-ScheduleString]
+ [-Start <DateTime>] -WeekOrder <ScheduleWeekOrder> [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### RecurMonthlyByWeekdayWithDuration
+```
+New-CMSchedule -DayOfWeek <DayOfWeek> -DurationCount <Int32> -DurationInterval <ScheduleInterval> [-IsUtc]
+ [-OffsetDay <Int32>] [-RecurCount <Int32>] [-ScheduleString] [-Start <DateTime>]
+ -WeekOrder <ScheduleWeekOrder> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ### RecurMonthlyByWeekdayWithEnd
 ```
-New-CMSchedule [-ScheduleString] [-Start <DateTime>] -End <DateTime> [-IsUtc] [-RecurCount <Int32>]
- -DayOfWeek <DayOfWeek> -WeekOrder <ScheduleWeekOrder> [-OffsetDay <Int32>] [-DisableWildcardHandling]
+New-CMSchedule -DayOfWeek <DayOfWeek> -End <DateTime> [-IsUtc] [-OffsetDay <Int32>] [-RecurCount <Int32>]
+ [-ScheduleString] [-Start <DateTime>] -WeekOrder <ScheduleWeekOrder> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### RecurrenceIntervalWithEnd
-```
-New-CMSchedule [-ScheduleString] [-Start <DateTime>] -End <DateTime> [-IsUtc] -RecurCount <Int32>
- -RecurInterval <ScheduleInterval> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
 ```
 
 ### RecurrenceNoneWithDuration
 ```
-New-CMSchedule [-ScheduleString] [-Start <DateTime>] [-IsUtc] -DurationInterval <ScheduleInterval>
- -DurationCount <Int32> [-Nonrecurring] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
-```
-
-### RecurrenceWeeklyWithDuration
-```
-New-CMSchedule [-ScheduleString] [-Start <DateTime>] [-IsUtc] -DurationInterval <ScheduleInterval>
- -DurationCount <Int32> [-RecurCount <Int32>] -DayOfWeek <DayOfWeek> [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### RecurrenceMonthlyByDateWithDuration
-```
-New-CMSchedule [-ScheduleString] [-Start <DateTime>] [-IsUtc] -DurationInterval <ScheduleInterval>
- -DurationCount <Int32> [-RecurCount <Int32>] -DayOfMonth <Int32> [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+New-CMSchedule -DurationCount <Int32> -DurationInterval <ScheduleInterval> [-IsUtc] [-Nonrecurring]
+ [-ScheduleString] [-Start <DateTime>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### RecurMonthlyLastDayOfMonthWithDuration
 ```
-New-CMSchedule [-ScheduleString] [-Start <DateTime>] [-IsUtc] -DurationInterval <ScheduleInterval>
- -DurationCount <Int32> [-RecurCount <Int32>] [-LastDayOfMonth] [-DisableWildcardHandling]
+New-CMSchedule -DurationCount <Int32> -DurationInterval <ScheduleInterval> [-IsUtc] [-LastDayOfMonth]
+ [-RecurCount <Int32>] [-ScheduleString] [-Start <DateTime>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### RecurMonthlyByWeekdayWithDuration
-```
-New-CMSchedule [-ScheduleString] [-Start <DateTime>] [-IsUtc] -DurationInterval <ScheduleInterval>
- -DurationCount <Int32> [-RecurCount <Int32>] -DayOfWeek <DayOfWeek> -WeekOrder <ScheduleWeekOrder>
- [-OffsetDay <Int32>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
 ```
 
 ### RecurrenceIntervalWithDuration
 ```
-New-CMSchedule [-ScheduleString] [-Start <DateTime>] [-IsUtc] -DurationInterval <ScheduleInterval>
- -DurationCount <Int32> -RecurCount <Int32> -RecurInterval <ScheduleInterval> [-DisableWildcardHandling]
+New-CMSchedule -DurationCount <Int32> -DurationInterval <ScheduleInterval> [-IsUtc] -RecurCount <Int32>
+ -RecurInterval <ScheduleInterval> [-ScheduleString] [-Start <DateTime>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### RecurrenceWeekly
+### RecurrenceNoneWithEnd
 ```
-New-CMSchedule [-ScheduleString] [-Start <DateTime>] [-IsUtc] [-RecurCount <Int32>] -DayOfWeek <DayOfWeek>
+New-CMSchedule -End <DateTime> [-IsUtc] [-Nonrecurring] [-ScheduleString] [-Start <DateTime>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### RecurrenceMonthlyByDate
+### RecurMonthlyLastDayOfMonthWithEnd
 ```
-New-CMSchedule [-ScheduleString] [-Start <DateTime>] [-IsUtc] [-RecurCount <Int32>] -DayOfMonth <Int32>
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+New-CMSchedule -End <DateTime> [-IsUtc] [-LastDayOfMonth] [-RecurCount <Int32>] [-ScheduleString]
+ [-Start <DateTime>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### RecurrenceIntervalWithEnd
+```
+New-CMSchedule -End <DateTime> [-IsUtc] -RecurCount <Int32> -RecurInterval <ScheduleInterval> [-ScheduleString]
+ [-Start <DateTime>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### RecurMonthlyLastDayOfMonth
 ```
-New-CMSchedule [-ScheduleString] [-Start <DateTime>] [-IsUtc] [-RecurCount <Int32>] [-LastDayOfMonth]
+New-CMSchedule [-IsUtc] [-LastDayOfMonth] [-RecurCount <Int32>] [-ScheduleString] [-Start <DateTime>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### RecurMonthlyByWeekday
-```
-New-CMSchedule [-ScheduleString] [-Start <DateTime>] [-IsUtc] [-RecurCount <Int32>] -DayOfWeek <DayOfWeek>
- -WeekOrder <ScheduleWeekOrder> [-OffsetDay <Int32>] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### RecurrenceInterval
 ```
-New-CMSchedule [-ScheduleString] [-Start <DateTime>] [-IsUtc] -RecurCount <Int32>
- -RecurInterval <ScheduleInterval> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+New-CMSchedule [-IsUtc] -RecurCount <Int32> -RecurInterval <ScheduleInterval> [-ScheduleString]
+ [-Start <DateTime>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
@@ -178,29 +178,13 @@ New-CMSchedule -DurationInterval Days -DurationCount 0 -RecurInterval Days -Recu
 
 ## PARAMETERS
 
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -DayOfMonth
 
 Specifies the day of the month when the event occurs. Valid values range from 0 through 31. The default value is `0`, which indicates the last day of the month.
 
 ```yaml
 Type: Int32
-Parameter Sets: RecurrenceMonthlyByDateWithEnd, RecurrenceMonthlyByDateWithDuration, RecurrenceMonthlyByDate
+Parameter Sets: RecurrenceMonthlyByDate, RecurrenceMonthlyByDateWithDuration, RecurrenceMonthlyByDateWithEnd
 Aliases:
 
 Required: True
@@ -216,7 +200,7 @@ Specifies the day of the week when the event occurs.
 
 ```yaml
 Type: DayOfWeek
-Parameter Sets: RecurrenceWeeklyWithEnd, RecurMonthlyByWeekdayWithEnd, RecurrenceWeeklyWithDuration, RecurMonthlyByWeekdayWithDuration, RecurrenceWeekly, RecurMonthlyByWeekday
+Parameter Sets: RecurrenceWeekly, RecurrenceWeeklyWithDuration, RecurrenceWeeklyWithEnd, RecurMonthlyByWeekday, RecurMonthlyByWeekdayWithDuration, RecurMonthlyByWeekdayWithEnd
 Aliases:
 Accepted values: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
 
@@ -249,7 +233,7 @@ Specifies the number of days during which the scheduled event occurs. Valid valu
 
 ```yaml
 Type: Int32
-Parameter Sets: RecurrenceNoneWithDuration, RecurrenceWeeklyWithDuration, RecurrenceMonthlyByDateWithDuration, RecurMonthlyLastDayOfMonthWithDuration, RecurMonthlyByWeekdayWithDuration, RecurrenceIntervalWithDuration
+Parameter Sets: RecurrenceMonthlyByDateWithDuration, RecurrenceWeeklyWithDuration, RecurMonthlyByWeekdayWithDuration, RecurrenceNoneWithDuration, RecurMonthlyLastDayOfMonthWithDuration, RecurrenceIntervalWithDuration
 Aliases:
 
 Required: True
@@ -265,7 +249,7 @@ Specifies the time when the event occurs.
 
 ```yaml
 Type: ScheduleInterval
-Parameter Sets: RecurrenceNoneWithDuration, RecurrenceWeeklyWithDuration, RecurrenceMonthlyByDateWithDuration, RecurMonthlyLastDayOfMonthWithDuration, RecurMonthlyByWeekdayWithDuration, RecurrenceIntervalWithDuration
+Parameter Sets: RecurrenceMonthlyByDateWithDuration, RecurrenceWeeklyWithDuration, RecurMonthlyByWeekdayWithDuration, RecurrenceNoneWithDuration, RecurMonthlyLastDayOfMonthWithDuration, RecurrenceIntervalWithDuration
 Aliases:
 Accepted values: Minutes, Hours, Days
 
@@ -282,7 +266,7 @@ Specifies the date and time when the scheduled event ends.
 
 ```yaml
 Type: DateTime
-Parameter Sets: RecurrenceNoneWithEnd, RecurrenceWeeklyWithEnd, RecurrenceMonthlyByDateWithEnd, RecurMonthlyLastDayOfMonthWithEnd, RecurMonthlyByWeekdayWithEnd, RecurrenceIntervalWithEnd
+Parameter Sets: RecurrenceMonthlyByDateWithEnd, RecurrenceWeeklyWithEnd, RecurMonthlyByWeekdayWithEnd, RecurrenceNoneWithEnd, RecurMonthlyLastDayOfMonthWithEnd, RecurrenceIntervalWithEnd
 Aliases:
 
 Required: True
@@ -330,7 +314,7 @@ Indicates that the event occurs monthly on the last day of the month.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: RecurMonthlyLastDayOfMonthWithEnd, RecurMonthlyLastDayOfMonthWithDuration, RecurMonthlyLastDayOfMonth
+Parameter Sets: RecurMonthlyLastDayOfMonthWithDuration, RecurMonthlyLastDayOfMonthWithEnd, RecurMonthlyLastDayOfMonth
 Aliases:
 
 Required: True
@@ -346,7 +330,7 @@ Indicates that the scheduled event doesn't recur.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: RecurrenceNone, RecurrenceNoneWithEnd, RecurrenceNoneWithDuration
+Parameter Sets: RecurrenceNone, RecurrenceNoneWithDuration, RecurrenceNoneWithEnd
 Aliases:
 
 Required: True
@@ -362,7 +346,7 @@ Starting in version 1906, use this parameter to configure an offset such as mont
 
 ```yaml
 Type: Int32
-Parameter Sets: RecurMonthlyByWeekdayWithEnd, RecurMonthlyByWeekdayWithDuration, RecurMonthlyByWeekday
+Parameter Sets: RecurMonthlyByWeekday, RecurMonthlyByWeekdayWithDuration, RecurMonthlyByWeekdayWithEnd
 Aliases:
 
 Required: False
@@ -378,7 +362,7 @@ Specifies the number of recurrences of the scheduled event.
 
 ```yaml
 Type: Int32
-Parameter Sets: RecurrenceWeeklyWithEnd, RecurrenceMonthlyByDateWithEnd, RecurMonthlyLastDayOfMonthWithEnd, RecurMonthlyByWeekdayWithEnd, RecurrenceWeeklyWithDuration, RecurrenceMonthlyByDateWithDuration, RecurMonthlyLastDayOfMonthWithDuration, RecurMonthlyByWeekdayWithDuration, RecurrenceWeekly, RecurrenceMonthlyByDate, RecurMonthlyLastDayOfMonth, RecurMonthlyByWeekday
+Parameter Sets: RecurrenceMonthlyByDate, RecurrenceMonthlyByDateWithDuration, RecurrenceMonthlyByDateWithEnd, RecurrenceWeekly, RecurrenceWeeklyWithDuration, RecurrenceWeeklyWithEnd, RecurMonthlyByWeekday, RecurMonthlyByWeekdayWithDuration, RecurMonthlyByWeekdayWithEnd, RecurMonthlyLastDayOfMonthWithDuration, RecurMonthlyLastDayOfMonthWithEnd, RecurMonthlyLastDayOfMonth
 Aliases:
 
 Required: False
@@ -390,7 +374,7 @@ Accept wildcard characters: False
 
 ```yaml
 Type: Int32
-Parameter Sets: RecurrenceIntervalWithEnd, RecurrenceIntervalWithDuration, RecurrenceInterval
+Parameter Sets: RecurrenceIntervalWithDuration, RecurrenceIntervalWithEnd, RecurrenceInterval
 Aliases:
 
 Required: True
@@ -406,7 +390,7 @@ Specifies the time when the scheduled event recurs.
 
 ```yaml
 Type: ScheduleInterval
-Parameter Sets: RecurrenceIntervalWithEnd, RecurrenceIntervalWithDuration, RecurrenceInterval
+Parameter Sets: RecurrenceIntervalWithDuration, RecurrenceIntervalWithEnd, RecurrenceInterval
 Aliases:
 Accepted values: Minutes, Hours, Days
 
@@ -455,13 +439,29 @@ Specifies the week of the month when the event occurs. The default value is `Las
 
 ```yaml
 Type: ScheduleWeekOrder
-Parameter Sets: RecurMonthlyByWeekdayWithEnd, RecurMonthlyByWeekdayWithDuration, RecurMonthlyByWeekday
+Parameter Sets: RecurMonthlyByWeekday, RecurMonthlyByWeekdayWithDuration, RecurMonthlyByWeekdayWithEnd
 Aliases:
 Accepted values: Last, First, Second, Third, Fourth
 
 Required: True
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -483,7 +483,6 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -493,8 +492,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### IResultObject#SMS_ScheduleToken
-
-For more information on this return object and its properties, see [SMS_ScheduleToken server WMI class](https://docs.microsoft.com/mem/configmgr/develop/reference/core/servers/configure/sms_scheduletoken-server-wmi-class).
 
 ### System.String
 

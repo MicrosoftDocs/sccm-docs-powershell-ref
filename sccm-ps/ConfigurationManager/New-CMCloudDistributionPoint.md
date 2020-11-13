@@ -1,4 +1,4 @@
----
+﻿---
 description: Creates a cloud distribution point.
 external help file: AdminUI.PS.Content.dll-Help.xml
 Module Name: ConfigurationManager
@@ -15,13 +15,13 @@ Creates a cloud distribution point.
 ## SYNTAX
 
 ```
-New-CMCloudDistributionPoint -SubscriptionId <String> [-SiteCode <String>] -ManagementCertificatePath <String>
- [-Description <String>] -ServiceCName <String> -ServiceCertificatePath <String> [-StorageQuotaGB <Int32>]
- [-StorageWarningThreshold <Int32>] [-StorageCriticalThreshold <Int32>] [-TrafficOutGB <Int32>]
- [-TrafficWarningThreshold <Int32>] [-TrafficCriticalThreshold <Int32>]
- [-ManagementCertificatePassword <SecureString>] [-ServiceCertificatePassword <SecureString>]
- -Region <AzureRegion> [-EnvironmentSetting <AzureEnvironment>] [-PassThru] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+New-CMCloudDistributionPoint [-Description <String>] [-EnvironmentSetting <AzureEnvironment>]
+ [-ManagementCertificatePassword <SecureString>] -ManagementCertificatePath <String> [-PassThru]
+ -Region <AzureRegion> [-ServiceCertificatePassword <SecureString>] -ServiceCertificatePath <String>
+ -ServiceCName <String> [-SiteCode <String>] [-StorageCriticalThreshold <Int32>] [-StorageQuotaGB <Int32>]
+ [-StorageWarningThreshold <Int32>] -SubscriptionId <String> [-TrafficCriticalThreshold <Int32>]
+ [-TrafficOutGB <Int32>] [-TrafficWarningThreshold <Int32>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -47,21 +47,6 @@ This command creates a distribution with the canonical name server.contoso.com.
 The distribution point is located in the WestUS Azure region and is associated with the Azure subscription 81c87063-04a3-4abf-8e4c-736569bc1f60.
 
 ## PARAMETERS
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -Description
 Specifies a description for a cloud distribution point.
@@ -200,21 +185,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ServiceCName
-Specifies an alias, or CName, for a service.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -ServiceCertificatePassword
 Specifies a password for a service certificate.
 
@@ -237,6 +207,21 @@ Specifies a location for a service certificate.
 Type: String
 Parameter Sets: (All)
 Aliases: ServiceCertificate
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ServiceCName
+Specifies an alias, or CName, for a service.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
 
 Required: True
 Position: Named
@@ -362,6 +347,21 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

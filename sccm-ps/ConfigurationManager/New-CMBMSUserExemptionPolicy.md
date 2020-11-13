@@ -1,9 +1,9 @@
----
+﻿---
 external help file: AdminUI.PS.EP.dll-Help.xml
 Module Name: ConfigurationManager
+ms.date: 08/13/2020
 online version:
 schema: 2.0.0
-ms.date: 08/13/2020
 ---
 
 # New-CMBMSUserExemptionPolicy
@@ -68,7 +68,7 @@ Based on the **-ContactMethod** parameter, use this parameter to specify the spe
 
 - The email address format is `"alias@domain.tld"` 
 
-    BitLocker automatically creates a link with the following format: `mailto: xyz@abc.com?subject=Request exemption from BitLocker protection”`
+    BitLocker automatically creates a link with the following format: `mailto: xyz@abc.com?subject=Request exemption from BitLocker protection"`
 
 - The phone number format is as necessary for your local standard. For example, in the United States: `"123-456-7890"`
 
@@ -173,7 +173,6 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS

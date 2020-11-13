@@ -1,4 +1,4 @@
----
+﻿---
 description: Sets a migration job.
 external help file: AdminUI.PS.Migration.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,23 +16,24 @@ Sets a migration job.
 
 ### SetByValue (Default)
 ```
-Set-CMMigrationJob -InputObject <IResultObject> [-NewName <String>] [-Description <String>]
- [-UtcTime <Boolean>] [-MigrationJobSchedule <DateTime>] [-OverwriteAllObject <Boolean>]
- [-MigrateWithFolder <Boolean>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
-```
-
-### SetByName
-```
-Set-CMMigrationJob -Name <String> [-NewName <String>] [-Description <String>] [-UtcTime <Boolean>]
- [-MigrationJobSchedule <DateTime>] [-OverwriteAllObject <Boolean>] [-MigrateWithFolder <Boolean>] [-PassThru]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMMigrationJob [-Description <String>] -InputObject <IResultObject> [-MigrateWithFolder <Boolean>]
+ [-MigrationJobSchedule <DateTime>] [-NewName <String>] [-OverwriteAllObject <Boolean>] [-PassThru]
+ [-UtcTime <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### SetById
 ```
-Set-CMMigrationJob -Id <Int32> [-NewName <String>] [-Description <String>] [-UtcTime <Boolean>]
- [-MigrationJobSchedule <DateTime>] [-OverwriteAllObject <Boolean>] [-MigrateWithFolder <Boolean>] [-PassThru]
+Set-CMMigrationJob [-Description <String>] -Id <Int32> [-MigrateWithFolder <Boolean>]
+ [-MigrationJobSchedule <DateTime>] [-NewName <String>] [-OverwriteAllObject <Boolean>] [-PassThru]
+ [-UtcTime <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### SetByName
+```
+Set-CMMigrationJob [-Description <String>] [-MigrateWithFolder <Boolean>] [-MigrationJobSchedule <DateTime>]
+ -Name <String> [-NewName <String>] [-OverwriteAllObject <Boolean>] [-PassThru] [-UtcTime <Boolean>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -51,21 +52,6 @@ PS XYZ:\>
 ```
 
 ## PARAMETERS
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -Description
 ```yaml
@@ -221,6 +207,21 @@ Accept wildcard characters: False
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
 
 Required: False
 Position: Named

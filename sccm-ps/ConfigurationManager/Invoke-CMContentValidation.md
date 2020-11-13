@@ -1,4 +1,4 @@
----
+﻿---
 description: Validates packages on a distribution point.
 external help file: AdminUI.PS.Sum.dll-Help.xml
 Module Name: ConfigurationManager
@@ -17,13 +17,6 @@ Validates packages on a distribution point.
 ### SearchByValueMandatory_Application (Default)
 ```
 Invoke-CMContentValidation [-CollectionName <String[]>] [-DisableContentDependencyDetection]
- [-DistributionPointGroupName <String[]>] [-DistributionPointName <String[]>] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### SearchByValueMandatory
-```
-Invoke-CMContentValidation -InputObject <IResultObject> [-CollectionName <String[]>]
  [-DistributionPointGroupName <String[]>] [-DistributionPointName <String[]>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
@@ -83,6 +76,13 @@ Invoke-CMContentValidation [-CollectionName <String[]>] [-DistributionPointGroup
 ```
 Invoke-CMContentValidation [-CollectionName <String[]>] [-DistributionPointGroupName <String[]>]
  [-DistributionPointName <String[]>] -DriverPackageName <String[]> [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SearchByValueMandatory
+```
+Invoke-CMContentValidation [-CollectionName <String[]>] [-DistributionPointGroupName <String[]>]
+ [-DistributionPointName <String[]>] -InputObject <IResultObject> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -245,28 +245,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -DeploymentPackageId
 Specifies an array of IDs of deployment packages.
 
 ```yaml
 Type: String[]
 Parameter Sets: SearchByIdMandatory_DeploymentPackage
-Aliases: DeploymentPackageIds
+Aliases: DeploymentPackageIds, SoftwareUpdatesPackageId, SoftwareUpdatesPackageIds
 
 Required: True
 Position: Named
@@ -281,7 +266,7 @@ Specifies an array of names of deployment packages.
 ```yaml
 Type: String[]
 Parameter Sets: SearchByNameMandatory_DeploymentPackage
-Aliases: DeploymentPackageNames
+Aliases: DeploymentPackageNames, SoftwareUpdatesPackageName, SoftwareUpdatesPackageNames
 
 Required: True
 Position: Named
@@ -538,6 +523,21 @@ Aliases: TaskSequenceNames
 Required: True
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

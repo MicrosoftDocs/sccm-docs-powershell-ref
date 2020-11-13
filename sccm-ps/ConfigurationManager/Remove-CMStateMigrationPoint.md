@@ -1,4 +1,4 @@
----
+﻿---
 description: Removes a state migration point from a Configuration Manager site.
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -22,7 +22,7 @@ Remove-CMStateMigrationPoint [-Force] -InputObject <IResultObject> [-DisableWild
 
 ### SearchByNameMandatory
 ```
-Remove-CMStateMigrationPoint [-SiteCode <String>] [-Force] [-SiteSystemServerName] <String>
+Remove-CMStateMigrationPoint [-Force] [-SiteCode <String>] [-SiteSystemServerName] <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -59,21 +59,6 @@ The first command uses the Get-CMStateMigrationPoint to get a state migration po
 The second command removes the state migration point stored in the $CMSMP variable.
 
 ## PARAMETERS
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -DisableWildcardHandling
 DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
@@ -166,6 +151,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
@@ -191,7 +191,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-###  
+### 
 
 ## NOTES
 

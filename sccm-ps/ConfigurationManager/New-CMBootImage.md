@@ -1,4 +1,4 @@
----
+﻿---
 description: Adds a new operating system boot image.
 external help file: AdminUI.PS.Osd.dll-Help.xml
 Module Name: ConfigurationManager
@@ -15,7 +15,7 @@ Adds a new operating system boot image.
 ## SYNTAX
 
 ```
-New-CMBootImage -Path <String> -Index <Int32> -Name <String> [-Version <String>] [-Description <String>]
+New-CMBootImage [-Description <String>] -Index <Int32> -Name <String> -Path <String> [-Version <String>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -44,21 +44,6 @@ PS XYZ:\> New-CMBootImage -Path "\\Server99.Contoso.com\SMS_CCC\osd\boot\i386\bo
 This command creates a new boot image object and provides it with a source path for its WIM file, an index value, a name, an operating system version, and a description.
 
 ## PARAMETERS
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -Description
 Specifies a description of the boot image.
@@ -162,6 +147,21 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

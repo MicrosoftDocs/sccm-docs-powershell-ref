@@ -1,4 +1,4 @@
----
+﻿---
 description: Removes an update group deployment.
 external help file: AdminUI.PS.Deployments.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,29 +16,29 @@ Removes an update group deployment.
 
 ### SearchByValue (Default)
 ```
-Remove-CMUpdateGroupDeployment -InputObject <IResultObject> [-Force] [-CollectionName <String>]
- [-CollectionId <String>] [-Collection <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### SearchByName
-```
-Remove-CMUpdateGroupDeployment [-Name <String>] [-DeploymentName <String>] [-Force] [-CollectionName <String>]
- [-CollectionId <String>] [-Collection <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### SearchBySmsObjectId
-```
-Remove-CMUpdateGroupDeployment [-SmsObjectId <Int32>] [-Force] [-CollectionName <String>]
- [-CollectionId <String>] [-Collection <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Remove-CMUpdateGroupDeployment -InputObject <IResultObject> [-Force] [-Collection <IResultObject>]
+ [-CollectionId <String>] [-CollectionName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByDeploymentId
 ```
-Remove-CMUpdateGroupDeployment [-DeploymentId <String>] [-Force] [-CollectionName <String>]
- [-CollectionId <String>] [-Collection <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Remove-CMUpdateGroupDeployment [-DeploymentId <String>] [-Force] [-Collection <IResultObject>]
+ [-CollectionId <String>] [-CollectionName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SearchByName
+```
+Remove-CMUpdateGroupDeployment [-DeploymentName <String>] [-Name <String>] [-Force]
+ [-Collection <IResultObject>] [-CollectionId <String>] [-CollectionName <String>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SearchBySmsObjectId
+```
+Remove-CMUpdateGroupDeployment [-SmsObjectId <Int32>] [-Force] [-Collection <IResultObject>]
+ [-CollectionId <String>] [-CollectionName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -89,21 +89,6 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: (All)
 Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
 
 Required: False
 Position: Named
@@ -212,6 +197,21 @@ Accept wildcard characters: False
 Type: Int32
 Parameter Sets: SearchBySmsObjectId
 Aliases: CI_ID, UpdateGroupID, SoftwareUpdateGroupID
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
 
 Required: False
 Position: Named

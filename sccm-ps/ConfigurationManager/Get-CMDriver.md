@@ -1,4 +1,4 @@
----
+﻿---
 description: Gets a device driver.
 external help file: AdminUI.PS.Osd.dll-Help.xml
 Module Name: ConfigurationManager
@@ -19,11 +19,6 @@ Gets a device driver.
 Get-CMDriver [-Name <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
-### SearchByIdMandatory
-```
-Get-CMDriver -Id <Int32> [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
-```
-
 ### SearchByDriverPackageIdMandatory
 ```
 Get-CMDriver -DriverPackageId <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
@@ -33,6 +28,11 @@ Get-CMDriver -DriverPackageId <String> [-DisableWildcardHandling] [-ForceWildcar
 ```
 Get-CMDriver -DriverPackageName <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
  [<CommonParameters>]
+```
+
+### SearchByIdMandatory
+```
+Get-CMDriver -Id <Int32> [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ### SearchByDriverPackage

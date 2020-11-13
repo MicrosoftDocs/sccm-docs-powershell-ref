@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Osd.dll-Help.xml
 Module Name: ConfigurationManager
 online version:
@@ -13,10 +13,10 @@ schema: 2.0.0
 ## SYNTAX
 
 ```
-New-CMTSStepCaptureSystemImage -Path <String> [-ImageDescription <String>] [-ImageVersion <String>]
- [-ImageCreator <String>] -UserName <String> [-Password <SecureString>] -Name <String> [-Description <String>]
- [-ContinueOnError] [-Disable] [-Condition <IResultObject[]>] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+New-CMTSStepCaptureSystemImage [-ImageCreator <String>] [-ImageDescription <String>] [-ImageVersion <String>]
+ [-Password <SecureString>] -Path <String> -UserName <String> [-Condition <IResultObject[]>] [-ContinueOnError]
+ [-Description <String>] [-Disable] -Name <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -45,21 +45,6 @@ Specify a condition object to use with this step.
 Type: IResultObject[]
 Parameter Sets: (All)
 Aliases: Conditions
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
 
 Required: False
 Position: Named
@@ -242,6 +227,21 @@ Parameter Sets: (All)
 Aliases: CaptureUserName
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False

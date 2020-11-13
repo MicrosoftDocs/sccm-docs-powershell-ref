@@ -1,4 +1,4 @@
----
+﻿---
 description: Invokes a secondary site upgrade.
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,19 +16,19 @@ Invokes a secondary site upgrade.
 
 ### SearchBySiteCodeMandatory (Default)
 ```
-Invoke-CMSecondarySiteUpgrade -SecondarySiteCode <String> [-Force] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### SearchByNameMandatory
-```
-Invoke-CMSecondarySiteUpgrade -SecondarySiteName <String> [-Force] [-DisableWildcardHandling]
+Invoke-CMSecondarySiteUpgrade [-Force] -SecondarySiteCode <String> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByValueMandatory
 ```
-Invoke-CMSecondarySiteUpgrade -InputObject <IResultObject> [-Force] [-DisableWildcardHandling]
+Invoke-CMSecondarySiteUpgrade [-Force] -InputObject <IResultObject> [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SearchByNameMandatory
+```
+Invoke-CMSecondarySiteUpgrade [-Force] -SecondarySiteName <String> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -52,21 +52,6 @@ This command invokes a secondary site upgrade from a site named ClientSecSiteUpg
 Because the *Force* parameter is specified, Configuration Manager invokes the update automatically and does not prompt you for confirmation.
 
 ## PARAMETERS
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -DisableWildcardHandling
 DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
@@ -154,6 +139,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
@@ -179,7 +179,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-###  
+### 
 
 ## NOTES
 

@@ -1,4 +1,4 @@
----
+﻿---
 description: Add a distribution point role
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -17,76 +17,78 @@ Add a distribution point role.
 
 ### DistributionPointWithSelfCertByValue (Default)
 ```
-Add-CMDistributionPoint -InputObject <IResultObject> [-InstallInternetServer]
- [-ClientConnectionType <ClientConnectionTypes>] [-AllowProxyTraffic] [-Description <String>]
- [-EnableAnonymous] -CertificateExpirationTimeUtc <DateTime> [-AllowPreStaging] [-MinimumFreeSpaceMB <Int32>]
- [-PrimaryContentLibraryLocation <DriveType>] [-SecondaryContentLibraryLocation <DriveType>]
- [-PrimaryPackageShareLocation <DriveType>] [-SecondaryPackageShareLocation <DriveType>] [-EnablePxe]
- [-AllowPxeResponse] [-EnableUnknownComputerSupport] [-EnableNonWdsPxe] [-PxePassword <SecureString>]
- [-UserDeviceAffinity <UserDeviceAffinityType>] [-MacAddressForRespondingPxeRequest <String[]>]
- [-PxeServerResponseDelaySec <Int32>] [-EnableMulticast] [-UserName <String>] [-StartIPAddress <String>]
- [-EndIPAddress <String>] [-StartUdpPort <Int32>] [-EndUdpPort <Int32>] [-MulticastMaximumClientCount <Int32>]
- [-EnableScheduledMulticast <Boolean>] [-SessionStartDelayMins <Int32>] [-MinimumSessionSize <Int32>]
- [-EnableContentValidation] [-ContentValidationSchedule <IResultObject>]
- [-ContentMonitoringPriority <Priority>] [-EnablePullDP] [-SourceDistributionPoint <String[]>]
- [-SourceDPRank <Int32[]>] [-EnableSsl] [-EnableBranchCache] [-EnableLedbat] [-AllowFallbackForContent]
- [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### DistributionPointwithUserSpecifiedCertByValue
-```
-Add-CMDistributionPoint -InputObject <IResultObject> [-InstallInternetServer]
- [-ClientConnectionType <ClientConnectionTypes>] [-AllowProxyTraffic] [-Description <String>]
- [-EnableAnonymous] -CertificatePath <String> -CertificatePassword <SecureString> [-AllowPreStaging]
- [-MinimumFreeSpaceMB <Int32>] [-PrimaryContentLibraryLocation <DriveType>]
- [-SecondaryContentLibraryLocation <DriveType>] [-PrimaryPackageShareLocation <DriveType>]
- [-SecondaryPackageShareLocation <DriveType>] [-EnablePxe] [-AllowPxeResponse] [-EnableUnknownComputerSupport]
- [-EnableNonWdsPxe] [-PxePassword <SecureString>] [-UserDeviceAffinity <UserDeviceAffinityType>]
- [-MacAddressForRespondingPxeRequest <String[]>] [-PxeServerResponseDelaySec <Int32>] [-EnableMulticast]
- [-UserName <String>] [-StartIPAddress <String>] [-EndIPAddress <String>] [-StartUdpPort <Int32>]
- [-EndUdpPort <Int32>] [-MulticastMaximumClientCount <Int32>] [-EnableScheduledMulticast <Boolean>]
- [-SessionStartDelayMins <Int32>] [-MinimumSessionSize <Int32>] [-EnableContentValidation]
- [-ContentValidationSchedule <IResultObject>] [-ContentMonitoringPriority <Priority>] [-EnablePullDP]
- [-SourceDistributionPoint <String[]>] [-SourceDPRank <Int32[]>] [-EnableSsl] [-EnableBranchCache]
- [-EnableLedbat] [-AllowFallbackForContent] [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+Add-CMDistributionPoint [-AllowFallbackForContent] [-AllowPreStaging] [-AllowProxyTraffic] [-AllowPxeResponse]
+ -CertificateExpirationTimeUtc <DateTime> [-ClientConnectionType <ClientConnectionTypes>]
+ [-ContentMonitoringPriority <Priority>] [-ContentValidationSchedule <IResultObject>] [-Description <String>]
+ [-EnableAnonymous] [-EnableBranchCache] [-EnableContentValidation] [-EnableLedbat] [-EnableMulticast]
+ [-EnableNonWdsPxe] [-EnablePullDP] [-EnablePxe] [-EnableScheduledMulticast <Boolean>] [-EnableSsl]
+ [-EnableUnknownComputerSupport] [-EndIPAddress <String>] [-EndUdpPort <Int32>] [-Force]
+ -InputObject <IResultObject> [-InstallInternetServer] [-MacAddressForRespondingPxeRequest <String[]>]
+ [-MinimumFreeSpaceMB <Int32>] [-MinimumSessionSize <Int32>] [-MulticastMaximumClientCount <Int32>]
+ [-PrimaryContentLibraryLocation <DriveType>] [-PrimaryPackageShareLocation <DriveType>]
+ [-PxePassword <SecureString>] [-PxeServerResponseDelaySec <Int32>]
+ [-SecondaryContentLibraryLocation <DriveType>] [-SecondaryPackageShareLocation <DriveType>]
+ [-SessionStartDelayMins <Int32>] [-SourceDistributionPoint <String[]>] [-SourceDPRank <Int32[]>]
+ [-StartIPAddress <String>] [-StartUdpPort <Int32>] [-UserDeviceAffinity <UserDeviceAffinityType>]
+ [-UserName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### DistributionPointWithSelfCert
 ```
-Add-CMDistributionPoint [-SiteSystemServerName] <String> [-SiteCode <String>] [-InstallInternetServer]
- [-ClientConnectionType <ClientConnectionTypes>] [-AllowProxyTraffic] [-Description <String>]
- [-EnableAnonymous] -CertificateExpirationTimeUtc <DateTime> [-AllowPreStaging] [-MinimumFreeSpaceMB <Int32>]
- [-PrimaryContentLibraryLocation <DriveType>] [-SecondaryContentLibraryLocation <DriveType>]
- [-PrimaryPackageShareLocation <DriveType>] [-SecondaryPackageShareLocation <DriveType>] [-EnablePxe]
- [-AllowPxeResponse] [-EnableUnknownComputerSupport] [-EnableNonWdsPxe] [-PxePassword <SecureString>]
- [-UserDeviceAffinity <UserDeviceAffinityType>] [-MacAddressForRespondingPxeRequest <String[]>]
- [-PxeServerResponseDelaySec <Int32>] [-EnableMulticast] [-UserName <String>] [-StartIPAddress <String>]
- [-EndIPAddress <String>] [-StartUdpPort <Int32>] [-EndUdpPort <Int32>] [-MulticastMaximumClientCount <Int32>]
- [-EnableScheduledMulticast <Boolean>] [-SessionStartDelayMins <Int32>] [-MinimumSessionSize <Int32>]
- [-EnableContentValidation] [-ContentValidationSchedule <IResultObject>]
- [-ContentMonitoringPriority <Priority>] [-EnablePullDP] [-SourceDistributionPoint <String[]>]
- [-SourceDPRank <Int32[]>] [-EnableSsl] [-EnableBranchCache] [-EnableLedbat] [-AllowFallbackForContent]
- [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Add-CMDistributionPoint [-AllowFallbackForContent] [-AllowPreStaging] [-AllowProxyTraffic] [-AllowPxeResponse]
+ -CertificateExpirationTimeUtc <DateTime> [-ClientConnectionType <ClientConnectionTypes>]
+ [-ContentMonitoringPriority <Priority>] [-ContentValidationSchedule <IResultObject>] [-Description <String>]
+ [-EnableAnonymous] [-EnableBranchCache] [-EnableContentValidation] [-EnableLedbat] [-EnableMulticast]
+ [-EnableNonWdsPxe] [-EnablePullDP] [-EnablePxe] [-EnableScheduledMulticast <Boolean>] [-EnableSsl]
+ [-EnableUnknownComputerSupport] [-EndIPAddress <String>] [-EndUdpPort <Int32>] [-Force]
+ [-InstallInternetServer] [-MacAddressForRespondingPxeRequest <String[]>] [-MinimumFreeSpaceMB <Int32>]
+ [-MinimumSessionSize <Int32>] [-MulticastMaximumClientCount <Int32>]
+ [-PrimaryContentLibraryLocation <DriveType>] [-PrimaryPackageShareLocation <DriveType>]
+ [-PxePassword <SecureString>] [-PxeServerResponseDelaySec <Int32>]
+ [-SecondaryContentLibraryLocation <DriveType>] [-SecondaryPackageShareLocation <DriveType>]
+ [-SessionStartDelayMins <Int32>] [-SiteCode <String>] [-SiteSystemServerName] <String>
+ [-SourceDistributionPoint <String[]>] [-SourceDPRank <Int32[]>] [-StartIPAddress <String>]
+ [-StartUdpPort <Int32>] [-UserDeviceAffinity <UserDeviceAffinityType>] [-UserName <String>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### DistributionPointwithUserSpecifiedCert
 ```
-Add-CMDistributionPoint [-SiteSystemServerName] <String> [-SiteCode <String>] [-InstallInternetServer]
- [-ClientConnectionType <ClientConnectionTypes>] [-AllowProxyTraffic] [-Description <String>]
- [-EnableAnonymous] -CertificatePath <String> -CertificatePassword <SecureString> [-AllowPreStaging]
- [-MinimumFreeSpaceMB <Int32>] [-PrimaryContentLibraryLocation <DriveType>]
- [-SecondaryContentLibraryLocation <DriveType>] [-PrimaryPackageShareLocation <DriveType>]
- [-SecondaryPackageShareLocation <DriveType>] [-EnablePxe] [-AllowPxeResponse] [-EnableUnknownComputerSupport]
- [-EnableNonWdsPxe] [-PxePassword <SecureString>] [-UserDeviceAffinity <UserDeviceAffinityType>]
- [-MacAddressForRespondingPxeRequest <String[]>] [-PxeServerResponseDelaySec <Int32>] [-EnableMulticast]
- [-UserName <String>] [-StartIPAddress <String>] [-EndIPAddress <String>] [-StartUdpPort <Int32>]
- [-EndUdpPort <Int32>] [-MulticastMaximumClientCount <Int32>] [-EnableScheduledMulticast <Boolean>]
- [-SessionStartDelayMins <Int32>] [-MinimumSessionSize <Int32>] [-EnableContentValidation]
- [-ContentValidationSchedule <IResultObject>] [-ContentMonitoringPriority <Priority>] [-EnablePullDP]
- [-SourceDistributionPoint <String[]>] [-SourceDPRank <Int32[]>] [-EnableSsl] [-EnableBranchCache]
- [-EnableLedbat] [-AllowFallbackForContent] [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+Add-CMDistributionPoint [-AllowFallbackForContent] [-AllowPreStaging] [-AllowProxyTraffic] [-AllowPxeResponse]
+ -CertificatePassword <SecureString> -CertificatePath <String> [-ClientConnectionType <ClientConnectionTypes>]
+ [-ContentMonitoringPriority <Priority>] [-ContentValidationSchedule <IResultObject>] [-Description <String>]
+ [-EnableAnonymous] [-EnableBranchCache] [-EnableContentValidation] [-EnableLedbat] [-EnableMulticast]
+ [-EnableNonWdsPxe] [-EnablePullDP] [-EnablePxe] [-EnableScheduledMulticast <Boolean>] [-EnableSsl]
+ [-EnableUnknownComputerSupport] [-EndIPAddress <String>] [-EndUdpPort <Int32>] [-Force]
+ [-InstallInternetServer] [-MacAddressForRespondingPxeRequest <String[]>] [-MinimumFreeSpaceMB <Int32>]
+ [-MinimumSessionSize <Int32>] [-MulticastMaximumClientCount <Int32>]
+ [-PrimaryContentLibraryLocation <DriveType>] [-PrimaryPackageShareLocation <DriveType>]
+ [-PxePassword <SecureString>] [-PxeServerResponseDelaySec <Int32>]
+ [-SecondaryContentLibraryLocation <DriveType>] [-SecondaryPackageShareLocation <DriveType>]
+ [-SessionStartDelayMins <Int32>] [-SiteCode <String>] [-SiteSystemServerName] <String>
+ [-SourceDistributionPoint <String[]>] [-SourceDPRank <Int32[]>] [-StartIPAddress <String>]
+ [-StartUdpPort <Int32>] [-UserDeviceAffinity <UserDeviceAffinityType>] [-UserName <String>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### DistributionPointwithUserSpecifiedCertByValue
+```
+Add-CMDistributionPoint [-AllowFallbackForContent] [-AllowPreStaging] [-AllowProxyTraffic] [-AllowPxeResponse]
+ -CertificatePassword <SecureString> -CertificatePath <String> [-ClientConnectionType <ClientConnectionTypes>]
+ [-ContentMonitoringPriority <Priority>] [-ContentValidationSchedule <IResultObject>] [-Description <String>]
+ [-EnableAnonymous] [-EnableBranchCache] [-EnableContentValidation] [-EnableLedbat] [-EnableMulticast]
+ [-EnableNonWdsPxe] [-EnablePullDP] [-EnablePxe] [-EnableScheduledMulticast <Boolean>] [-EnableSsl]
+ [-EnableUnknownComputerSupport] [-EndIPAddress <String>] [-EndUdpPort <Int32>] [-Force]
+ -InputObject <IResultObject> [-InstallInternetServer] [-MacAddressForRespondingPxeRequest <String[]>]
+ [-MinimumFreeSpaceMB <Int32>] [-MinimumSessionSize <Int32>] [-MulticastMaximumClientCount <Int32>]
+ [-PrimaryContentLibraryLocation <DriveType>] [-PrimaryPackageShareLocation <DriveType>]
+ [-PxePassword <SecureString>] [-PxeServerResponseDelaySec <Int32>]
+ [-SecondaryContentLibraryLocation <DriveType>] [-SecondaryPackageShareLocation <DriveType>]
+ [-SessionStartDelayMins <Int32>] [-SourceDistributionPoint <String[]>] [-SourceDPRank <Int32[]>]
+ [-StartIPAddress <String>] [-StartUdpPort <Int32>] [-UserDeviceAffinity <UserDeviceAffinityType>]
+ [-UserName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -209,7 +211,7 @@ Specifies, as a secure string, the password for a PKI client certificate.
 
 ```yaml
 Type: SecureString
-Parameter Sets: DistributionPointwithUserSpecifiedCertByValue, DistributionPointwithUserSpecifiedCert
+Parameter Sets: DistributionPointwithUserSpecifiedCert, DistributionPointwithUserSpecifiedCertByValue
 Aliases:
 
 Required: True
@@ -224,7 +226,7 @@ Specifies the import path for a PKI client certificate.
 
 ```yaml
 Type: String
-Parameter Sets: DistributionPointwithUserSpecifiedCertByValue, DistributionPointwithUserSpecifiedCert
+Parameter Sets: DistributionPointwithUserSpecifiedCert, DistributionPointwithUserSpecifiedCertByValue
 Aliases:
 
 Required: True
@@ -247,21 +249,6 @@ Accepted values: Intranet, Internet, InternetAndIntranet
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -805,14 +792,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -SourceDPRank
-Specifies an array containing the priorities for the distribution point sources from which this distribution point can pull content.
-Source distribution points with the same priority are randomly selected.
+### -SourceDistributionPoint
+Specifies an array of distribution point sources from which this distribution point can pull content.
 
 ```yaml
-Type: Int32[]
+Type: String[]
 Parameter Sets: (All)
-Aliases: SourceDPRanks
+Aliases: SourceDistributionPoints
 
 Required: False
 Position: Named
@@ -821,13 +807,14 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -SourceDistributionPoint
-Specifies an array of distribution point sources from which this distribution point can pull content.
+### -SourceDPRank
+Specifies an array containing the priorities for the distribution point sources from which this distribution point can pull content.
+Source distribution points with the same priority are randomly selected.
 
 ```yaml
-Type: String[]
+Type: Int32[]
 Parameter Sets: (All)
-Aliases: SourceDistributionPoints
+Aliases: SourceDPRanks
 
 Required: False
 Position: Named
@@ -898,6 +885,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 
 Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
@@ -915,7 +917,6 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -925,8 +926,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### IResultObject#SMS_SCI_SysResUse
-
-For more information on this return object and its properties, see [SMS_SCI_SysResUse server WMI class](https://docs.microsoft.com/mem/configmgr/develop/reference/core/servers/configure/sms_sci_sysresuse-server-wmi-class).
 
 ## NOTES
 

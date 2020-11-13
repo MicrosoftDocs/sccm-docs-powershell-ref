@@ -1,4 +1,4 @@
----
+﻿---
 description: Creates a cloud management gateway.
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -14,13 +14,28 @@ Creates a cloud management gateway.
 
 ## SYNTAX
 
+### Interactive
 ```
-New-CMCloudManagementGateway -SubscriptionId <String> [-GovernmentSubscription <Boolean>]
- -ManagementCertificatePath <String> [-Description <String>] -ServiceCName <String>
- -ServiceCertificatePath <String> -RootCertificatePath <String> [-TrafficOutGB <Int32>]
- [-TrafficWarningPct <Int32>] [-TrafficCriticalPct <Int32>] [-ManagementCertificatePassword <SecureString>]
- [-ServiceCertificatePassword <SecureString>] -Region <AzureRegion> [-VMInstanceCount <Int32>]
- [-CheckClientCertRevocation <Boolean>] [-EnvironmentSetting <AzureEnvironment>] [-PassThru]
+New-CMCloudManagementGateway [-CARootCert <Hashtable>] [-CheckClientCertRevocation <Boolean>]
+ [-Description <String>] [-EnableCloudDPFunction <Boolean>] [-EnableStorageQuota <Boolean>]
+ [-EnableTrafficOut <Boolean>] [-EnforceProtocol <Boolean>] [-EnvironmentSetting <AzureEnvironment>] [-Force]
+ [-GroupName <String>] [-IsUsingExistingGroup <Boolean>] [-Region <AzureRegion>]
+ [-ServiceCertPassword <SecureString>] -ServiceCertPath <String> [-ServiceName <String>]
+ [-StorageCriticalPct <Int32>] [-StorageQuotaGB <Int32>] [-StorageWarningPct <Int32>]
+ [-SubscriptionId <String>] [-TrafficCriticalPct <Int32>] [-TrafficOutGB <Int32>]
+ [-TrafficOutStopService <Boolean>] [-TrafficWarningPct <Int32>] [-VMInstanceCount <Int32>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### Non-Interactive
+```
+New-CMCloudManagementGateway [-CARootCert <Hashtable>] [-CheckClientCertRevocation <Boolean>]
+ [-Description <String>] [-EnableCloudDPFunction <Boolean>] [-EnableStorageQuota <Boolean>]
+ [-EnableTrafficOut <Boolean>] [-EnforceProtocol <Boolean>] [-EnvironmentSetting <AzureEnvironment>] [-Force]
+ -GroupName <String> [-Region <AzureRegion>] -ServerAppClientId <String> [-ServiceCertPassword <SecureString>]
+ -ServiceCertPath <String> [-ServiceName <String>] [-StorageCriticalPct <Int32>] [-StorageQuotaGB <Int32>]
+ [-StorageWarningPct <Int32>] -SubscriptionId <String> [-TrafficCriticalPct <Int32>] [-TrafficOutGB <Int32>]
+ [-TrafficOutStopService <Boolean>] [-TrafficWarningPct <Int32>] [-VMInstanceCount <Int32>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -40,11 +55,13 @@ PS XYZ:\>
 
 ## PARAMETERS
 
-### -CheckClientCertRevocation
+### -CARootCert
+{{ Fill CARootCert Description }}
+
 ```yaml
-Type: Boolean
+Type: Hashtable
 Parameter Sets: (All)
-Aliases:
+Aliases: CARootCertification, CARootCertifications
 
 Required: False
 Position: Named
@@ -53,13 +70,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
+### -CheckClientCertRevocation
 ```yaml
-Type: SwitchParameter
+Type: Boolean
 Parameter Sets: (All)
-Aliases: cf
+Aliases: VerifyClientCertificateRevocation
 
 Required: False
 Position: Named
@@ -96,14 +111,89 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -EnableCloudDPFunction
+{{ Fill EnableCloudDPFunction Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableStorageQuota
+{{ Fill EnableStorageQuota Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableTrafficOut
+{{ Fill EnableTrafficOut Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnforceProtocol
+{{ Fill EnforceProtocol Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -EnvironmentSetting
 {{ Fill EnvironmentSetting Description }}
 
 ```yaml
 Type: AzureEnvironment
 Parameter Sets: (All)
-Aliases:
+Aliases: AzureEnvironmentOption
 Accepted values: AzurePublicCloud, AzureUSGovernmentCloud
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Force
+{{ Fill Force Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named
@@ -127,37 +217,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -GovernmentSubscription
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
+### -GroupName
+{{ Fill GroupName Description }}
 
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ManagementCertificatePassword
-```yaml
-Type: SecureString
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ManagementCertificatePath
 ```yaml
 Type: String
-Parameter Sets: (All)
-Aliases: ManagementCertificate
+Parameter Sets: Interactive
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+```yaml
+Type: String
+Parameter Sets: Non-Interactive
+Aliases:
 
 Required: True
 Position: Named
@@ -166,12 +244,12 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -PassThru
-Returns an object representing the item with which you are working. By default, this cmdlet may not generate any output.
+### -IsUsingExistingGroup
+{{ Fill IsUsingExistingGroup Description }}
 
 ```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
+Type: Boolean
+Parameter Sets: Interactive
 Aliases:
 
 Required: False
@@ -186,20 +264,22 @@ Accept wildcard characters: False
 Type: AzureRegion
 Parameter Sets: (All)
 Aliases:
-Accepted values: AnywhereAsia, AnywhereEurope, AnywhereUS, EastAsia, EastUS, NorthCentralUS, NorthEurope, SouthCentralUS, SoutheastAsia, WestEurope, WestUS, WestUS2, WestCentralUS, USGovernmentIowa, USGovernmentVirginia, USGovernmentArizona, USGovernmentTexas, USDoDCentral, USDoDEast, AustraliaEast, AustraliaSoutheast, BrazilSouth, CanadaCentral, CanadaEast, CentralIndia, CentralUS, EastUS2, JapanEast, JapanWest, SouthIndia, UKSouth, UKWest, WestIndia, FranceSouth, FranceCentral, KoreaSouth, KoreaCentral, AustraliaCentral, AustraliaCentral2, ChinaEast, ChinaNorth, GermanyCentral, GermanyNortheast, SouthAfricaNorth, SouthAfricaWest
+Accepted values: EastUS, SouthCentralUS, WestEurope, SoutheastAsia, WestUS2, WestCentralUS
 
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -RootCertificatePath
+### -ServerAppClientId
+{{ Fill ServerAppClientId Description }}
+
 ```yaml
 Type: String
-Parameter Sets: (All)
-Aliases: RootCertificate
+Parameter Sets: Non-Interactive
+Aliases: ServerApplicationClientId
 
 Required: True
 Position: Named
@@ -208,22 +288,41 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ServiceCName
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
+### -ServiceCertPassword
+{{ Fill ServiceCertPassword Description }}
 
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ServiceCertificatePassword
 ```yaml
 Type: SecureString
+Parameter Sets: (All)
+Aliases: ServiceCertificatePassword
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ServiceCertPath
+{{ Fill ServiceCertPath Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: ServiceCertificatePath
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ServiceName
+{{ Fill ServiceName Description }}
+
+```yaml
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -234,13 +333,45 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ServiceCertificatePath
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: ServiceCertificate
+### -StorageCriticalPct
+{{ Fill StorageCriticalPct Description }}
 
-Required: True
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases: StorageCriticalPercent
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -StorageQuotaGB
+{{ Fill StorageQuotaGB Description }}
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -StorageWarningPct
+{{ Fill StorageWarningPct Description }}
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases: StorageWarningPercent
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -250,7 +381,19 @@ Accept wildcard characters: False
 ### -SubscriptionId
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: Interactive
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+```yaml
+Type: String
+Parameter Sets: Non-Interactive
 Aliases:
 
 Required: True
@@ -264,7 +407,7 @@ Accept wildcard characters: False
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases:
+Aliases: TrafficCriticalPercent
 
 Required: False
 Position: Named
@@ -286,11 +429,26 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -TrafficOutStopService
+{{ Fill TrafficOutStopService Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -TrafficWarningPct
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases:
+Aliases: TrafficWarningPercent
 
 Required: False
 Position: Named
@@ -304,6 +462,21 @@ Accept wildcard characters: False
 Type: Int32
 Parameter Sets: (All)
 Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
 
 Required: False
 Position: Named
@@ -338,12 +511,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### IResultObject#SMS_AzureService
-
-### IResultObject[]#SMS_SCI_SysResUse
-
-### IResultObject[]#SMS_Alert
-
-### IResultObject#SMS_Alert
 
 ## NOTES
 

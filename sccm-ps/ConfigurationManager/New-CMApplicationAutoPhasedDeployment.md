@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Deployments.dll-Help.xml
 Module Name: ConfigurationManager
 online version:
@@ -15,34 +15,34 @@ Use this cmdlet to create a phased deployment for an application by generating t
 
 ### SearchByValueMandatory
 ```
-New-CMApplicationAutoPhasedDeployment [-Application] <IResultObject> [-FirstCollection <IResultObject>]
- [-FirstCollectionId <String>] [-FirstCollectionName <String>] [-SecondCollection <IResultObject>]
- [-SecondCollectionId <String>] [-SecondCollectionName <String>] [-CriteriaOption <CriteriaType>]
- [-CriteriaValue <Int32>] [-BeginCondition <BeginConditionType>] [-DaysAfterPreviousPhaseSuccess <Int32>]
- [-ThrottlingDays <Int32>] [-InstallationChoice <InstallationChoiceType>] [-DeadlineUnit <TimeUnitType>]
- [-DeadlineValue <Int32>] -Name <String> [-Description <String>] [-DisableWildcardHandling]
+New-CMApplicationAutoPhasedDeployment [-Application] <IResultObject> [-BeginCondition <BeginConditionType>]
+ [-CriteriaOption <CriteriaType>] [-CriteriaValue <Int32>] [-DaysAfterPreviousPhaseSuccess <Int32>]
+ [-DeadlineUnit <TimeUnitType>] [-DeadlineValue <Int32>] [-FirstCollection <IResultObject>]
+ [-FirstCollectionId <String>] [-FirstCollectionName <String>] [-InstallationChoice <InstallationChoiceType>]
+ [-SecondCollection <IResultObject>] [-SecondCollectionId <String>] [-SecondCollectionName <String>]
+ [-ThrottlingDays <Int32>] [-Description <String>] -Name <String> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory
 ```
-New-CMApplicationAutoPhasedDeployment [-ApplicationId] <String> [-FirstCollection <IResultObject>]
- [-FirstCollectionId <String>] [-FirstCollectionName <String>] [-SecondCollection <IResultObject>]
- [-SecondCollectionId <String>] [-SecondCollectionName <String>] [-CriteriaOption <CriteriaType>]
- [-CriteriaValue <Int32>] [-BeginCondition <BeginConditionType>] [-DaysAfterPreviousPhaseSuccess <Int32>]
- [-ThrottlingDays <Int32>] [-InstallationChoice <InstallationChoiceType>] [-DeadlineUnit <TimeUnitType>]
- [-DeadlineValue <Int32>] -Name <String> [-Description <String>] [-DisableWildcardHandling]
+New-CMApplicationAutoPhasedDeployment [-ApplicationId] <String> [-BeginCondition <BeginConditionType>]
+ [-CriteriaOption <CriteriaType>] [-CriteriaValue <Int32>] [-DaysAfterPreviousPhaseSuccess <Int32>]
+ [-DeadlineUnit <TimeUnitType>] [-DeadlineValue <Int32>] [-FirstCollection <IResultObject>]
+ [-FirstCollectionId <String>] [-FirstCollectionName <String>] [-InstallationChoice <InstallationChoiceType>]
+ [-SecondCollection <IResultObject>] [-SecondCollectionId <String>] [-SecondCollectionName <String>]
+ [-ThrottlingDays <Int32>] [-Description <String>] -Name <String> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByNameMandatory
 ```
-New-CMApplicationAutoPhasedDeployment [-ApplicationName] <String> [-FirstCollection <IResultObject>]
- [-FirstCollectionId <String>] [-FirstCollectionName <String>] [-SecondCollection <IResultObject>]
- [-SecondCollectionId <String>] [-SecondCollectionName <String>] [-CriteriaOption <CriteriaType>]
- [-CriteriaValue <Int32>] [-BeginCondition <BeginConditionType>] [-DaysAfterPreviousPhaseSuccess <Int32>]
- [-ThrottlingDays <Int32>] [-InstallationChoice <InstallationChoiceType>] [-DeadlineUnit <TimeUnitType>]
- [-DeadlineValue <Int32>] -Name <String> [-Description <String>] [-DisableWildcardHandling]
+New-CMApplicationAutoPhasedDeployment [-ApplicationName] <String> [-BeginCondition <BeginConditionType>]
+ [-CriteriaOption <CriteriaType>] [-CriteriaValue <Int32>] [-DaysAfterPreviousPhaseSuccess <Int32>]
+ [-DeadlineUnit <TimeUnitType>] [-DeadlineValue <Int32>] [-FirstCollection <IResultObject>]
+ [-FirstCollectionId <String>] [-FirstCollectionName <String>] [-InstallationChoice <InstallationChoiceType>]
+ [-SecondCollection <IResultObject>] [-SecondCollectionId <String>] [-SecondCollectionName <String>]
+ [-ThrottlingDays <Int32>] [-Description <String>] -Name <String> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -134,22 +134,6 @@ Type: BeginConditionType
 Parameter Sets: (All)
 Aliases:
 Accepted values: AfterPeriod, Manually
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
 
 Required: False
 Position: Named
@@ -439,6 +423,22 @@ Specify an integer value for the number of days to gradually make this software 
 Type: Int32
 Parameter Sets: (All)
 Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
 
 Required: False
 Position: Named

@@ -1,4 +1,4 @@
----
+﻿---
 description: Updates a certificate.
 external help file: AdminUI.PS.Certificates.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,19 +16,19 @@ Updates a certificate.
 
 ### ByValue (Default)
 ```
-Update-CMCertificate -Path <String> -InputObject <IResultObject> [-Force] [-DisableWildcardHandling]
+Update-CMCertificate [-Force] -InputObject <IResultObject> -Path <String> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ById
 ```
-Update-CMCertificate -Path <String> -Id <String> [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Update-CMCertificate [-Force] -Id <String> -Path <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByCertificate
 ```
-Update-CMCertificate -InputObject <IResultObject> -X509Certificate <X509Certificate> [-Force]
+Update-CMCertificate [-Force] -InputObject <IResultObject> -X509Certificate <X509Certificate>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -51,21 +51,6 @@ This command modifies the certificate path for the certificate with the ID Manag
 In this example, the path is changed to C:\Certificates\Management.pfx.
 
 ## PARAMETERS
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -DisableWildcardHandling
 DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
@@ -155,6 +140,34 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -X509Certificate
+```yaml
+Type: X509Certificate
+Parameter Sets: ByCertificate
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
@@ -168,19 +181,6 @@ Required: False
 Position: Named
 Default value: False
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -X509Certificate
-```yaml
-Type: X509Certificate
-Parameter Sets: ByCertificate
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 

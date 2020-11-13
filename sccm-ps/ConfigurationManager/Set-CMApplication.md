@@ -1,4 +1,4 @@
----
+﻿---
 description: Configure the properties of an application.
 external help file: AdminUI.PS.AppMan.dll-Help.xml
 Module Name: ConfigurationManager
@@ -17,74 +17,74 @@ Configure the properties of an application.
 
 ### SetByValue (Default)
 ```
-Set-CMApplication [-InputObject] <IResultObject> [-Description <String>] [-Publisher <String>]
- [-SoftwareVersion <String>] [-NewName <String>] [-OptionalReference <String>] [-ReleaseDate <DateTime>]
- [-AutoInstall <Boolean>] [-Owner <String>] [-AddOwner <String[]>] [-RemoveOwner <String[]>] [-ClearOwner]
- [-SupportContact <String>] [-AddSupportContact <String[]>] [-RemoveSupportContact <String[]>]
- [-ClearSupportContact] [-LocalizedApplicationName <String>] [-UserDocumentation <String>] [-LinkText <String>]
- [-LocalizedDescription <String>] [-Keyword <String[]>] [-DistributionPriority <DistributionPriorityType>]
- [-SendToProtectedDistributionPoint <Boolean>] [-DistributionPointSetting <DistributionPointSettingType>]
- [-UserCategory <String[]>] [-AddUserCategory <IResultObject[]>] [-RemoveUserCategoryName <String[]>]
- [-CleanUserCategory] [-AppCategory <String[]>] [-AddAppCategory <IResultObject[]>]
- [-RemoveAppCategoryName <String[]>] [-CleanAppCategory] [-PrivacyUrl <String>] [-IsFeatured <Boolean>]
- [-IconLocationFile <String>] [-DisplaySupersedenceInApplicationCatalog <Boolean>] [-PassThru]
- [-ClearAppCatalog] [-RemoveAppCatalog <Int32[]>] [-AddAppCatalog <AppDisplayInfo[]>]
- [-ApplyToLanguageById <Int32>] [-DefaultLanguageId <Int32>] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMApplication [-AddAppCatalog <AppDisplayInfo[]>] [-AddAppCategory <IResultObject[]>]
+ [-AddOwner <String[]>] [-AddSupportContact <String[]>] [-AddUserCategory <IResultObject[]>]
+ [-AppCategory <String[]>] [-ApplyToLanguageById <Int32>] [-AutoInstall <Boolean>] [-CleanAppCategory]
+ [-CleanUserCategory] [-ClearAppCatalog] [-ClearOwner] [-ClearSupportContact] [-DefaultLanguageId <Int32>]
+ [-Description <String>] [-DisplaySupersedenceInApplicationCatalog <Boolean>]
+ [-DistributionPointSetting <DistributionPointSettingType>] [-DistributionPriority <DistributionPriorityType>]
+ [-IconLocationFile <String>] [-InputObject] <IResultObject> [-IsFeatured <Boolean>] [-Keyword <String[]>]
+ [-LinkText <String>] [-LocalizedApplicationName <String>] [-LocalizedDescription <String>] [-NewName <String>]
+ [-OptionalReference <String>] [-Owner <String>] [-PassThru] [-PrivacyUrl <String>] [-Publisher <String>]
+ [-ReleaseDate <DateTime>] [-RemoveAppCatalog <Int32[]>] [-RemoveAppCategoryName <String[]>]
+ [-RemoveOwner <String[]>] [-RemoveSupportContact <String[]>] [-RemoveUserCategoryName <String[]>]
+ [-SendToProtectedDistributionPoint <Boolean>] [-SoftwareVersion <String>] [-SupportContact <String>]
+ [-UserCategory <String[]>] [-UserDocumentation <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetById
 ```
-Set-CMApplication [-Id] <Int32> [-Description <String>] [-Publisher <String>] [-SoftwareVersion <String>]
- [-NewName <String>] [-OptionalReference <String>] [-ReleaseDate <DateTime>] [-AutoInstall <Boolean>]
- [-Owner <String>] [-AddOwner <String[]>] [-RemoveOwner <String[]>] [-ClearOwner] [-SupportContact <String>]
- [-AddSupportContact <String[]>] [-RemoveSupportContact <String[]>] [-ClearSupportContact]
- [-LocalizedApplicationName <String>] [-UserDocumentation <String>] [-LinkText <String>]
- [-LocalizedDescription <String>] [-Keyword <String[]>] [-DistributionPriority <DistributionPriorityType>]
- [-SendToProtectedDistributionPoint <Boolean>] [-DistributionPointSetting <DistributionPointSettingType>]
- [-UserCategory <String[]>] [-AddUserCategory <IResultObject[]>] [-RemoveUserCategoryName <String[]>]
- [-CleanUserCategory] [-AppCategory <String[]>] [-AddAppCategory <IResultObject[]>]
- [-RemoveAppCategoryName <String[]>] [-CleanAppCategory] [-PrivacyUrl <String>] [-IsFeatured <Boolean>]
- [-IconLocationFile <String>] [-DisplaySupersedenceInApplicationCatalog <Boolean>] [-PassThru]
- [-ClearAppCatalog] [-RemoveAppCatalog <Int32[]>] [-AddAppCatalog <AppDisplayInfo[]>]
- [-ApplyToLanguageById <Int32>] [-DefaultLanguageId <Int32>] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### SetByName
-```
-Set-CMApplication [-Name] <String> [-Description <String>] [-Publisher <String>] [-SoftwareVersion <String>]
- [-NewName <String>] [-OptionalReference <String>] [-ReleaseDate <DateTime>] [-AutoInstall <Boolean>]
- [-Owner <String>] [-AddOwner <String[]>] [-RemoveOwner <String[]>] [-ClearOwner] [-SupportContact <String>]
- [-AddSupportContact <String[]>] [-RemoveSupportContact <String[]>] [-ClearSupportContact]
- [-LocalizedApplicationName <String>] [-UserDocumentation <String>] [-LinkText <String>]
- [-LocalizedDescription <String>] [-Keyword <String[]>] [-DistributionPriority <DistributionPriorityType>]
- [-SendToProtectedDistributionPoint <Boolean>] [-DistributionPointSetting <DistributionPointSettingType>]
- [-UserCategory <String[]>] [-AddUserCategory <IResultObject[]>] [-RemoveUserCategoryName <String[]>]
- [-CleanUserCategory] [-AppCategory <String[]>] [-AddAppCategory <IResultObject[]>]
- [-RemoveAppCategoryName <String[]>] [-CleanAppCategory] [-PrivacyUrl <String>] [-IsFeatured <Boolean>]
- [-IconLocationFile <String>] [-DisplaySupersedenceInApplicationCatalog <Boolean>] [-PassThru]
- [-ClearAppCatalog] [-RemoveAppCatalog <Int32[]>] [-AddAppCatalog <AppDisplayInfo[]>]
- [-ApplyToLanguageById <Int32>] [-DefaultLanguageId <Int32>] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMApplication [-AddAppCatalog <AppDisplayInfo[]>] [-AddAppCategory <IResultObject[]>]
+ [-AddOwner <String[]>] [-AddSupportContact <String[]>] [-AddUserCategory <IResultObject[]>]
+ [-AppCategory <String[]>] [-ApplyToLanguageById <Int32>] [-AutoInstall <Boolean>] [-CleanAppCategory]
+ [-CleanUserCategory] [-ClearAppCatalog] [-ClearOwner] [-ClearSupportContact] [-DefaultLanguageId <Int32>]
+ [-Description <String>] [-DisplaySupersedenceInApplicationCatalog <Boolean>]
+ [-DistributionPointSetting <DistributionPointSettingType>] [-DistributionPriority <DistributionPriorityType>]
+ [-IconLocationFile <String>] [-Id] <Int32> [-IsFeatured <Boolean>] [-Keyword <String[]>] [-LinkText <String>]
+ [-LocalizedApplicationName <String>] [-LocalizedDescription <String>] [-NewName <String>]
+ [-OptionalReference <String>] [-Owner <String>] [-PassThru] [-PrivacyUrl <String>] [-Publisher <String>]
+ [-ReleaseDate <DateTime>] [-RemoveAppCatalog <Int32[]>] [-RemoveAppCategoryName <String[]>]
+ [-RemoveOwner <String[]>] [-RemoveSupportContact <String[]>] [-RemoveUserCategoryName <String[]>]
+ [-SendToProtectedDistributionPoint <Boolean>] [-SoftwareVersion <String>] [-SupportContact <String>]
+ [-UserCategory <String[]>] [-UserDocumentation <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetByModelName
 ```
-Set-CMApplication -ModelName <String> [-Description <String>] [-Publisher <String>] [-SoftwareVersion <String>]
- [-NewName <String>] [-OptionalReference <String>] [-ReleaseDate <DateTime>] [-AutoInstall <Boolean>]
- [-Owner <String>] [-AddOwner <String[]>] [-RemoveOwner <String[]>] [-ClearOwner] [-SupportContact <String>]
- [-AddSupportContact <String[]>] [-RemoveSupportContact <String[]>] [-ClearSupportContact]
- [-LocalizedApplicationName <String>] [-UserDocumentation <String>] [-LinkText <String>]
- [-LocalizedDescription <String>] [-Keyword <String[]>] [-DistributionPriority <DistributionPriorityType>]
- [-SendToProtectedDistributionPoint <Boolean>] [-DistributionPointSetting <DistributionPointSettingType>]
- [-UserCategory <String[]>] [-AddUserCategory <IResultObject[]>] [-RemoveUserCategoryName <String[]>]
- [-CleanUserCategory] [-AppCategory <String[]>] [-AddAppCategory <IResultObject[]>]
- [-RemoveAppCategoryName <String[]>] [-CleanAppCategory] [-PrivacyUrl <String>] [-IsFeatured <Boolean>]
- [-IconLocationFile <String>] [-DisplaySupersedenceInApplicationCatalog <Boolean>] [-PassThru]
- [-ClearAppCatalog] [-RemoveAppCatalog <Int32[]>] [-AddAppCatalog <AppDisplayInfo[]>]
- [-ApplyToLanguageById <Int32>] [-DefaultLanguageId <Int32>] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMApplication [-AddAppCatalog <AppDisplayInfo[]>] [-AddAppCategory <IResultObject[]>]
+ [-AddOwner <String[]>] [-AddSupportContact <String[]>] [-AddUserCategory <IResultObject[]>]
+ [-AppCategory <String[]>] [-ApplyToLanguageById <Int32>] [-AutoInstall <Boolean>] [-CleanAppCategory]
+ [-CleanUserCategory] [-ClearAppCatalog] [-ClearOwner] [-ClearSupportContact] [-DefaultLanguageId <Int32>]
+ [-Description <String>] [-DisplaySupersedenceInApplicationCatalog <Boolean>]
+ [-DistributionPointSetting <DistributionPointSettingType>] [-DistributionPriority <DistributionPriorityType>]
+ [-IconLocationFile <String>] [-IsFeatured <Boolean>] [-Keyword <String[]>] [-LinkText <String>]
+ [-LocalizedApplicationName <String>] [-LocalizedDescription <String>] -ModelName <String> [-NewName <String>]
+ [-OptionalReference <String>] [-Owner <String>] [-PassThru] [-PrivacyUrl <String>] [-Publisher <String>]
+ [-ReleaseDate <DateTime>] [-RemoveAppCatalog <Int32[]>] [-RemoveAppCategoryName <String[]>]
+ [-RemoveOwner <String[]>] [-RemoveSupportContact <String[]>] [-RemoveUserCategoryName <String[]>]
+ [-SendToProtectedDistributionPoint <Boolean>] [-SoftwareVersion <String>] [-SupportContact <String>]
+ [-UserCategory <String[]>] [-UserDocumentation <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SetByName
+```
+Set-CMApplication [-AddAppCatalog <AppDisplayInfo[]>] [-AddAppCategory <IResultObject[]>]
+ [-AddOwner <String[]>] [-AddSupportContact <String[]>] [-AddUserCategory <IResultObject[]>]
+ [-AppCategory <String[]>] [-ApplyToLanguageById <Int32>] [-AutoInstall <Boolean>] [-CleanAppCategory]
+ [-CleanUserCategory] [-ClearAppCatalog] [-ClearOwner] [-ClearSupportContact] [-DefaultLanguageId <Int32>]
+ [-Description <String>] [-DisplaySupersedenceInApplicationCatalog <Boolean>]
+ [-DistributionPointSetting <DistributionPointSettingType>] [-DistributionPriority <DistributionPriorityType>]
+ [-IconLocationFile <String>] [-IsFeatured <Boolean>] [-Keyword <String[]>] [-LinkText <String>]
+ [-LocalizedApplicationName <String>] [-LocalizedDescription <String>] [-Name] <String> [-NewName <String>]
+ [-OptionalReference <String>] [-Owner <String>] [-PassThru] [-PrivacyUrl <String>] [-Publisher <String>]
+ [-ReleaseDate <DateTime>] [-RemoveAppCatalog <Int32[]>] [-RemoveAppCategoryName <String[]>]
+ [-RemoveOwner <String[]>] [-RemoveSupportContact <String[]>] [-RemoveUserCategoryName <String[]>]
+ [-SendToProtectedDistributionPoint <Boolean>] [-SoftwareVersion <String>] [-SupportContact <String>]
+ [-UserCategory <String[]>] [-UserDocumentation <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -301,21 +301,6 @@ Aliases: CleanSupportContacts
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -859,6 +844,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
@@ -876,7 +876,6 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -886,8 +885,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### IResultObject#SMS_Application
-
-For more information on this return object and its properties, see [SMS_Application server WMI class](https://docs.microsoft.com/mem/configmgr/develop/reference/apps/sms_application-server-wmi-class).
 
 ## NOTES
 

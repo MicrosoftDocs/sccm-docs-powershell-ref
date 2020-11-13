@@ -1,4 +1,4 @@
----
+﻿---
 description: Removes Configuration Manager software metering rules.
 external help file: AdminUI.PS.AssetIntelligence.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,19 +16,19 @@ Removes Configuration Manager software metering rules.
 
 ### SearchByValueMandatory (Default)
 ```
-Remove-CMSoftwareMeteringRule -InputObject <IResultObject> [-Force] [-DisableWildcardHandling]
+Remove-CMSoftwareMeteringRule [-Force] -InputObject <IResultObject> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory
 ```
-Remove-CMSoftwareMeteringRule -Id <String> [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Remove-CMSoftwareMeteringRule [-Force] -Id <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByNameMandatory
 ```
-Remove-CMSoftwareMeteringRule -ProductName <String> [-Force] [-DisableWildcardHandling]
+Remove-CMSoftwareMeteringRule [-Force] -ProductName <String> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -67,21 +67,6 @@ In this example, there are two rules for that product.
 The command does not include the *Force* parameter, so the cmdlet prompts for confirmation for both rules.
 
 ## PARAMETERS
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -DisableWildcardHandling
 DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
@@ -170,6 +155,21 @@ Aliases:
 Required: True
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

@@ -1,4 +1,4 @@
----
+﻿---
 description: Adds a software update point for Configuration Manager.
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,20 +16,20 @@ Adds a software update point for Configuration Manager.
 
 ### SumPByValueWithWsus (Default)
 ```
-Add-CMSoftwareUpdatePoint -InputObject <IResultObject> [-WsusIisPort <Int32>] [-WsusIisSslPort <Int32>]
- [-ClientConnectionType <ClientConnectionTypes>] [-EnableCloudGateway] [-WsusSsl <Boolean>]
- [-UseProxy <Boolean>] [-UseProxyForAutoDeploymentRule <Boolean>] [-AnonymousWsusAccess]
- [-ConnectionAccountUserName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+Add-CMSoftwareUpdatePoint [-AnonymousWsusAccess] [-ClientConnectionType <ClientConnectionTypes>]
+ [-ConnectionAccountUserName <String>] [-EnableCloudGateway] -InputObject <IResultObject> [-UseProxy <Boolean>]
+ [-UseProxyForAutoDeploymentRule <Boolean>] [-WsusIisPort <Int32>] [-WsusIisSslPort <Int32>]
+ [-WsusSsl <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ### SumPWithWsus
 ```
-Add-CMSoftwareUpdatePoint [-WsusIisPort <Int32>] [-WsusIisSslPort <Int32>] [-SiteSystemServerName] <String>
- [-SiteCode <String>] [-ClientConnectionType <ClientConnectionTypes>] [-EnableCloudGateway]
- [-WsusSsl <Boolean>] [-UseProxy <Boolean>] [-UseProxyForAutoDeploymentRule <Boolean>] [-AnonymousWsusAccess]
- [-ConnectionAccountUserName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Add-CMSoftwareUpdatePoint [-AnonymousWsusAccess] [-ClientConnectionType <ClientConnectionTypes>]
+ [-ConnectionAccountUserName <String>] [-EnableCloudGateway] [-SiteCode <String>]
+ [-SiteSystemServerName] <String> [-UseProxy <Boolean>] [-UseProxyForAutoDeploymentRule <Boolean>]
+ [-WsusIisPort <Int32>] [-WsusIisSslPort <Int32>] [-WsusSsl <Boolean>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -84,21 +84,6 @@ Accepted values: Intranet, Internet, InternetAndIntranet
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -235,22 +220,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -WsusIisPort
 Specifies a port to use for unsecured access to the WSUS server.
 
@@ -292,6 +261,37 @@ Aliases: SslWsus
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

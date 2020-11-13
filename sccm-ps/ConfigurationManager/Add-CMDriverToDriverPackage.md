@@ -1,4 +1,4 @@
----
+﻿---
 description: Adds a device driver to a Configuration Manager driver package.
 external help file: AdminUI.PS.Osd.dll-Help.xml
 Module Name: ConfigurationManager
@@ -17,6 +17,20 @@ Adds a device driver to a Configuration Manager driver package.
 ### AddDriverToDriverPackageByObject_Object (Default)
 ```
 Add-CMDriverToDriverPackage -Driver <IResultObject> -DriverPackage <IResultObject>
+ [-UpdateDistributionPoints <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### AddDriverToDriverPackageByObject_Id
+```
+Add-CMDriverToDriverPackage -Driver <IResultObject> -DriverPackageId <String>
+ [-UpdateDistributionPoints <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### AddDriverToDriverPackageByObject_Name
+```
+Add-CMDriverToDriverPackage -Driver <IResultObject> -DriverPackageName <String>
  [-UpdateDistributionPoints <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
@@ -61,20 +75,6 @@ Add-CMDriverToDriverPackage -DriverName <String> -DriverPackage <IResultObject>
  [<CommonParameters>]
 ```
 
-### AddDriverToDriverPackageByObject_Id
-```
-Add-CMDriverToDriverPackage -Driver <IResultObject> -DriverPackageId <String>
- [-UpdateDistributionPoints <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
-```
-
-### AddDriverToDriverPackageByObject_Name
-```
-Add-CMDriverToDriverPackage -Driver <IResultObject> -DriverPackageName <String>
- [-UpdateDistributionPoints <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
-```
-
 ## DESCRIPTION
 The **Add-CMDriverToDriverPackage** cmdlet adds a device driver to a Configuration Manager driver package.
 
@@ -98,21 +98,6 @@ PS XYZ:\>Add-CMDriverToDriverPackage -DriverName "Adaptec Embedded SCSI HostRAID
 This command adds the driver named Adaptec Embedded SCSI HostRAID Controller to the driver package named DrvPkg01.
 
 ## PARAMETERS
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -DisableWildcardHandling
 DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
@@ -196,7 +181,7 @@ Specifies the ID of a driver package.
 
 ```yaml
 Type: String
-Parameter Sets: AddDriverToDriverPackageById_Id, AddDriverToDriverPackageByName_Id, AddDriverToDriverPackageByObject_Id
+Parameter Sets: AddDriverToDriverPackageByObject_Id, AddDriverToDriverPackageById_Id, AddDriverToDriverPackageByName_Id
 Aliases:
 
 Required: True
@@ -211,7 +196,7 @@ Specifies the name of a driver package.
 
 ```yaml
 Type: String
-Parameter Sets: AddDriverToDriverPackageById_Name, AddDriverToDriverPackageByName_Name, AddDriverToDriverPackageByObject_Name
+Parameter Sets: AddDriverToDriverPackageByObject_Name, AddDriverToDriverPackageById_Name, AddDriverToDriverPackageByName_Name
 Aliases:
 
 Required: True
@@ -247,6 +232,21 @@ Aliases: UpdateDistributionPoint, UpdateDistributionPointForDriverPackage, Updat
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

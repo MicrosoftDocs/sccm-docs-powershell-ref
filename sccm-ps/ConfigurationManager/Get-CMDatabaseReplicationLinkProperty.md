@@ -1,4 +1,4 @@
----
+﻿---
 description: Gets a replication link between a Configuration Manager parent site and child site.
 external help file: AdminUI.PS.DatabaseReplication.dll-Help.xml
 Module Name: ConfigurationManager
@@ -15,7 +15,7 @@ Gets a replication link between a Configuration Manager parent site and child si
 ## SYNTAX
 
 ```
-Get-CMDatabaseReplicationLinkProperty -ParentSiteCode <String> -ChildSiteCode <String>
+Get-CMDatabaseReplicationLinkProperty -ChildSiteCode <String> -ParentSiteCode <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 

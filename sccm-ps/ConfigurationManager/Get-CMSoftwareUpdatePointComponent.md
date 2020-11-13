@@ -1,4 +1,4 @@
----
+﻿---
 description: Retrieves a software update point component in Configuration Manager.
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -15,7 +15,7 @@ Retrieves a software update point component in Configuration Manager.
 ## SYNTAX
 
 ```
-Get-CMSoftwareUpdatePointComponent [-SiteSystemServerName <String>] [-SiteCode <String>] [-WsusSyncManager]
+Get-CMSoftwareUpdatePointComponent [-SiteCode <String>] [-SiteSystemServerName <String>] [-WsusSyncManager]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 

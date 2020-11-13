@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Deployments.dll-Help.xml
 Module Name: ConfigurationManager
 online version:
@@ -13,45 +13,45 @@ Use this cmdlet to create a phased deployment for software updates.
 
 ## SYNTAX
 
-### SearchByValueMandatory
-```
-New-CMSoftwareUpdateManualPhasedDeployment [-SoftwareUpdates] <IResultObject[]> -AddPhases <Phase[]>
- -Name <String> [-Description <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
-```
-
-### SearchByIdMandatory
-```
-New-CMSoftwareUpdateManualPhasedDeployment [-SoftwareUpdateIds] <String[]> -AddPhases <Phase[]> -Name <String>
- [-Description <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
-```
-
-### SearchByNameMandatory
-```
-New-CMSoftwareUpdateManualPhasedDeployment [-SoftwareUpdateNames] <String[]> -AddPhases <Phase[]>
- -Name <String> [-Description <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
-```
-
 ### SearchByGroupMandatory
 ```
 New-CMSoftwareUpdateManualPhasedDeployment [-SoftwareUpdateGroup] <IResultObject> -AddPhases <Phase[]>
- -Name <String> [-Description <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+ [-Description <String>] -Name <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
  [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByGroupIdMandatory
 ```
 New-CMSoftwareUpdateManualPhasedDeployment [-SoftwareUpdateGroupId] <String> -AddPhases <Phase[]>
- -Name <String> [-Description <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+ [-Description <String>] -Name <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
  [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByGroupNameMandatory
 ```
 New-CMSoftwareUpdateManualPhasedDeployment [-SoftwareUpdateGroupName] <String> -AddPhases <Phase[]>
- -Name <String> [-Description <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+ [-Description <String>] -Name <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
+```
+
+### SearchByIdMandatory
+```
+New-CMSoftwareUpdateManualPhasedDeployment [-SoftwareUpdateIds] <String[]> -AddPhases <Phase[]>
+ [-Description <String>] -Name <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
+```
+
+### SearchByNameMandatory
+```
+New-CMSoftwareUpdateManualPhasedDeployment [-SoftwareUpdateNames] <String[]> -AddPhases <Phase[]>
+ [-Description <String>] -Name <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
+```
+
+### SearchByValueMandatory
+```
+New-CMSoftwareUpdateManualPhasedDeployment [-SoftwareUpdates] <IResultObject[]> -AddPhases <Phase[]>
+ [-Description <String>] -Name <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
  [-Confirm] [<CommonParameters>]
 ```
 
@@ -92,22 +92,6 @@ Parameter Sets: (All)
 Aliases:
 
 Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -270,6 +254,22 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 
 Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
@@ -291,9 +291,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject[]
-
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
+### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject[]
 
 ## OUTPUTS
 

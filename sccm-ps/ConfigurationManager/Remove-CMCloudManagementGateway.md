@@ -1,4 +1,4 @@
----
+﻿---
 description: Removes a cloud management gateway.
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,19 +16,19 @@ Removes a cloud management gateway.
 
 ### SearchByValueMandatory (Default)
 ```
-Remove-CMCloudManagementGateway -InputObject <IResultObject> [-Force] [-DisableWildcardHandling]
+Remove-CMCloudManagementGateway [-Force] -InputObject <IResultObject> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory
 ```
-Remove-CMCloudManagementGateway -Id <String> [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Remove-CMCloudManagementGateway [-Force] -Id <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByNameMandatory
 ```
-Remove-CMCloudManagementGateway -Name <String> [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Remove-CMCloudManagementGateway [-Force] -Name <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -47,21 +47,6 @@ PS XYZ:\>
 ```
 
 ## PARAMETERS
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -DisableWildcardHandling
 DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
@@ -139,6 +124,21 @@ Parameter Sets: SearchByNameMandatory
 Aliases:
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False

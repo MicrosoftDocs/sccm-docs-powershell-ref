@@ -1,4 +1,4 @@
----
+﻿---
 description: Gets a software update.
 external help file: AdminUI.PS.Sum.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,36 +16,36 @@ Gets a software update.
 
 ### SearchByName (Default)
 ```
-Get-CMSoftwareUpdate [-Name <String>] [-DatePostedMin <DateTime>] [-DatePostedMax <DateTime>]
- [-DateRevisedMin <DateTime>] [-DateRevisedMax <DateTime>] [-Severity <CustomSeverityType>]
- [-IsDeployed <Boolean>] [-IsContentProvisioned <Boolean>] [-EulaExist <Boolean>] [-IsExpired <Boolean>]
- [-IsOfflineServiceable <Boolean>] [-CategoryName <String[]>] [-IsSuperseded <Boolean>] [-IsLatest <Boolean>]
- [-IsUserDefined <Boolean>] [-Category <IResultObject[]>] [-ArticleId <String>] [-BulletinId <String>]
- [-OnlyExpired] [-IncludeUpgrade] [-Fast] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [<CommonParameters>]
+Get-CMSoftwareUpdate [-ArticleId <String>] [-BulletinId <String>] [-Category <IResultObject[]>]
+ [-CategoryName <String[]>] [-DatePostedMax <DateTime>] [-DatePostedMin <DateTime>]
+ [-DateRevisedMax <DateTime>] [-DateRevisedMin <DateTime>] [-EulaExist <Boolean>] [-Fast] [-IncludeUpgrade]
+ [-IsContentProvisioned <Boolean>] [-IsDeployed <Boolean>] [-IsExpired <Boolean>] [-IsLatest <Boolean>]
+ [-IsOfflineServiceable <Boolean>] [-IsSuperseded <Boolean>] [-IsUserDefined <Boolean>] [-Name <String>]
+ [-OnlyExpired] [-Severity <CustomSeverityType>] [-Vendor <String>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
-### SearchByUpdateGroupIdMandatory
+### SearchById
 ```
-Get-CMSoftwareUpdate -UpdateGroupId <String[]> [-Fast] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [<CommonParameters>]
-```
-
-### SearchByUpdateGroupNameMandatory
-```
-Get-CMSoftwareUpdate -UpdateGroupName <String[]> [-Fast] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Get-CMSoftwareUpdate [-Fast] -Id <Int32> [-DisableWildcardHandling] [-ForceWildcardHandling]
  [<CommonParameters>]
 ```
 
 ### SearchByUpdateGroup
 ```
-Get-CMSoftwareUpdate -UpdateGroup <IResultObject> [-Fast] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Get-CMSoftwareUpdate [-Fast] -UpdateGroup <IResultObject> [-DisableWildcardHandling] [-ForceWildcardHandling]
  [<CommonParameters>]
 ```
 
-### SearchById
+### SearchByUpdateGroupIdMandatory
 ```
-Get-CMSoftwareUpdate -Id <Int32> [-Fast] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Get-CMSoftwareUpdate [-Fast] -UpdateGroupId <String[]> [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [<CommonParameters>]
+```
+
+### SearchByUpdateGroupNameMandatory
+```
+Get-CMSoftwareUpdate [-Fast] -UpdateGroupName <String[]> [-DisableWildcardHandling] [-ForceWildcardHandling]
  [<CommonParameters>]
 ```
 
@@ -484,6 +484,21 @@ Parameter Sets: SearchByUpdateGroupNameMandatory
 Aliases:
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Vendor
+{{ Fill Vendor Description }}
+
+```yaml
+Type: String
+Parameter Sets: SearchByName
+Aliases:
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False

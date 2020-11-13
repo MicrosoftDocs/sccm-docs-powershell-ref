@@ -1,4 +1,4 @@
----
+﻿---
 description: Configures a new Exchange Server connector.
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,29 +16,29 @@ Configures a new Exchange Server connector.
 
 ### NewOnPrem (Default)
 ```
-New-CMExchangeServer [-SiteCode <String>] -ServerAddress <String> [-IsHosted <Boolean>] [-OnPrem]
- [-ExchangeClientAccessServer <Dictionary`2[]>] [-UserName <String>] [-NotificationUserName <String>]
- [-FullSyncSchedule <IResultObject>] [-DeltaSyncMins <Int32>] [-MaximumInactiveDay <Int32>]
- [-ActiveDirectoryContainer <String[]>] [-GeneralSetting <ExchangeConnectorGeneralSetting>]
- [-PasswordSetting <ExchangeConnectorPasswordSetting>]
- [-EmailManagementSetting <ExchangeConnectorEmailManagementSetting>]
- [-SecuritySetting <ExchangeConnectorSecuritySetting>]
- [-ApplicationSetting <ExchangeConnectorApplicationSetting>] [-AllowExternalDeviceManagement <Boolean>]
- [-EnableAccessRule <Boolean>] [-AccessLevel <AccessLevelType>] [-EmailAddress <String[]>]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+New-CMExchangeServer [-AccessLevel <AccessLevelType>] [-ActiveDirectoryContainer <String[]>]
+ [-AllowExternalDeviceManagement <Boolean>] [-ApplicationSetting <ExchangeConnectorApplicationSetting>]
+ [-DeltaSyncMins <Int32>] [-EmailAddress <String[]>]
+ [-EmailManagementSetting <ExchangeConnectorEmailManagementSetting>] [-EnableAccessRule <Boolean>]
+ [-ExchangeClientAccessServer <Dictionary`2[]>] [-FullSyncSchedule <IResultObject>]
+ [-GeneralSetting <ExchangeConnectorGeneralSetting>] [-IsHosted <Boolean>] [-MaximumInactiveDay <Int32>]
+ [-NotificationUserName <String>] [-OnPrem] [-PasswordSetting <ExchangeConnectorPasswordSetting>]
+ [-SecuritySetting <ExchangeConnectorSecuritySetting>] -ServerAddress <String> [-SiteCode <String>]
+ [-UserName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### NewHosted
 ```
-New-CMExchangeServer [-SiteCode <String>] -ServerAddress <String> [-IsHosted <Boolean>] [-Hosted]
- -UserName <String> [-NotificationUserName <String>] [-FullSyncSchedule <IResultObject>]
- [-DeltaSyncMins <Int32>] [-MaximumInactiveDay <Int32>] [-ActiveDirectoryContainer <String[]>]
- [-GeneralSetting <ExchangeConnectorGeneralSetting>] [-PasswordSetting <ExchangeConnectorPasswordSetting>]
- [-EmailManagementSetting <ExchangeConnectorEmailManagementSetting>]
- [-SecuritySetting <ExchangeConnectorSecuritySetting>]
- [-ApplicationSetting <ExchangeConnectorApplicationSetting>] [-AllowExternalDeviceManagement <Boolean>]
- [-EnableAccessRule <Boolean>] [-AccessLevel <AccessLevelType>] [-EmailAddress <String[]>]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+New-CMExchangeServer [-AccessLevel <AccessLevelType>] [-ActiveDirectoryContainer <String[]>]
+ [-AllowExternalDeviceManagement <Boolean>] [-ApplicationSetting <ExchangeConnectorApplicationSetting>]
+ [-DeltaSyncMins <Int32>] [-EmailAddress <String[]>]
+ [-EmailManagementSetting <ExchangeConnectorEmailManagementSetting>] [-EnableAccessRule <Boolean>]
+ [-FullSyncSchedule <IResultObject>] [-GeneralSetting <ExchangeConnectorGeneralSetting>] [-Hosted]
+ [-IsHosted <Boolean>] [-MaximumInactiveDay <Int32>] [-NotificationUserName <String>]
+ [-PasswordSetting <ExchangeConnectorPasswordSetting>] [-SecuritySetting <ExchangeConnectorSecuritySetting>]
+ -ServerAddress <String> [-SiteCode <String>] -UserName <String> [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -126,21 +126,6 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -467,6 +452,21 @@ Aliases:
 Required: True
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

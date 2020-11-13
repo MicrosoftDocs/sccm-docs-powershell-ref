@@ -1,4 +1,4 @@
----
+﻿---
 description: Gets a certificate registration point.
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,7 +16,7 @@ Gets a certificate registration point.
 
 ### SearchByName (Default)
 ```
-Get-CMCertificateRegistrationPoint [-SiteCode <String>] [[-SiteSystemServerName] <String>] [-AllSite]
+Get-CMCertificateRegistrationPoint [-AllSite] [-SiteCode <String>] [[-SiteSystemServerName] <String>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 

@@ -1,4 +1,4 @@
----
+﻿---
 description: Modifies settings for a state migration point in Configuration Manager.
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,22 +16,20 @@ Modifies settings for a state migration point in Configuration Manager.
 
 ### SetByValue (Default)
 ```
-Set-CMStateMigrationPoint [-AddStorageFolder <StorageDirectoryData[]>]
- [-RemoveStorageFolder <StorageDirectoryData[]>] [-DeleteImmediately] [-TimeDeleteAfter <Int32>]
- [-TimeUnit <IntervalType>] [-EnableRestoreOnlyMode <Boolean>]
- [-AllowFallbackSourceLocationForContent <Boolean>] [-AddBoundaryGroupName <String[]>]
- [-RemoveBoundaryGroupName <String[]>] -InputObject <IResultObject> [-PassThru] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMStateMigrationPoint [-AddBoundaryGroupName <String[]>] [-AddStorageFolder <StorageDirectoryData[]>]
+ [-AllowFallbackSourceLocationForContent <Boolean>] [-DeleteImmediately] [-EnableRestoreOnlyMode <Boolean>]
+ -InputObject <IResultObject> [-PassThru] [-RemoveBoundaryGroupName <String[]>]
+ [-RemoveStorageFolder <StorageDirectoryData[]>] [-TimeDeleteAfter <Int32>] [-TimeUnit <IntervalType>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetByName
 ```
-Set-CMStateMigrationPoint [-SiteCode <String>] [-SiteSystemServerName] <String>
- [-AddStorageFolder <StorageDirectoryData[]>] [-RemoveStorageFolder <StorageDirectoryData[]>]
- [-DeleteImmediately] [-TimeDeleteAfter <Int32>] [-TimeUnit <IntervalType>] [-EnableRestoreOnlyMode <Boolean>]
- [-AllowFallbackSourceLocationForContent <Boolean>] [-AddBoundaryGroupName <String[]>]
- [-RemoveBoundaryGroupName <String[]>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMStateMigrationPoint [-AddBoundaryGroupName <String[]>] [-AddStorageFolder <StorageDirectoryData[]>]
+ [-AllowFallbackSourceLocationForContent <Boolean>] [-DeleteImmediately] [-EnableRestoreOnlyMode <Boolean>]
+ [-PassThru] [-RemoveBoundaryGroupName <String[]>] [-RemoveStorageFolder <StorageDirectoryData[]>]
+ [-SiteCode <String>] [-SiteSystemServerName] <String> [-TimeDeleteAfter <Int32>] [-TimeUnit <IntervalType>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -131,21 +129,6 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -338,6 +321,21 @@ Accepted values: Hours, Days
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

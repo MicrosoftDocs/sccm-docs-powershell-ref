@@ -1,4 +1,4 @@
----
+﻿---
 description: Configure a distribution point
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -17,48 +17,50 @@ Configure a distribution point.
 
 ### SetByValue (Default)
 ```
-Set-CMDistributionPoint [-InputObject] <IResultObject> [-Description <String>]
+Set-CMDistributionPoint [-AddBoundaryGroupName <String[]>] [-AddMacAddressForRespondingPxeRequest <String[]>]
+ [-AllowFallbackForContent <Boolean>] [-AllowPreStaging <Boolean>] [-AllowProxyTraffic <Boolean>]
+ [-AllowPxeResponse <Boolean>] [-CertificateExpirationTimeUtc <DateTime>] [-CertificatePassword <SecureString>]
+ [-CertificatePath <String>] [-ClearMacAddressForRespondingPxeRequest]
  [-ClientCommunicationType <ComputerCommunicationType>] [-ClientConnectionType <ClientConnectionTypes>]
- [-AllowProxyTraffic <Boolean>] [-EnableAnonymous <Boolean>] [-CertificateExpirationTimeUtc <DateTime>]
- [-CertificatePath <String>] [-CertificatePassword <SecureString>] [-AllowPreStaging <Boolean>]
- [-EnablePxe <Boolean>] [-KeepWds <Boolean>] [-AllowPxeResponse <Boolean>]
- [-EnableUnknownComputerSupport <Boolean>] [-EnableNonWdsPxe <Boolean>] [-PxePassword <SecureString>]
- [-UserDeviceAffinity <UserDeviceAffinityType>] [-RespondToAllNetwork]
- [-MacAddressForRespondingPxeRequest <String[]>] [-AddMacAddressForRespondingPxeRequest <String[]>]
- [-RemoveMacAddressForRespondingPxeRequest <String[]>] [-ClearMacAddressForRespondingPxeRequest]
- [-PxeServerResponseDelaySec <Int32>] [-EnableMulticast <Boolean>] [-UseComputerAccount] [-UserName <String>]
- [-UseAnyRangeIP] [-StartIPAddress <String>] [-EndIPAddress <String>] [-StartUdpPort <Int32>]
- [-EndUdpPort <Int32>] [-ClientTransferRate <NetworkProfile>] [-MulticastMaximumClientCount <Int32>]
- [-EnableScheduledMulticast <Boolean>] [-SessionStartDelayMins <Int32>] [-MinimumSessionSize <Int32>]
- [-EnableContentValidation <Boolean>] [-ContentValidationSchedule <IResultObject>]
- [-ContentMonitoringPriority <Priority>] [-EnablePullDP <Boolean>] [-SourceDistributionPoint <String[]>]
- [-SourceDPRank <Int32[]>] [-AllowFallbackForContent <Boolean>] [-AddBoundaryGroupName <String[]>]
- [-RemoveBoundaryGroupName <String[]>] [-EnableBranchCache <Boolean>] [-PassThru] [-EnableLedbat <Boolean>]
- [-ReassignSiteCode <String>] [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-ClientTransferRate <NetworkProfile>] [-ContentMonitoringPriority <Priority>]
+ [-ContentValidationSchedule <IResultObject>] [-Description <String>] [-EnableAnonymous <Boolean>]
+ [-EnableBranchCache <Boolean>] [-EnableContentValidation <Boolean>] [-EnableLedbat <Boolean>]
+ [-EnableMulticast <Boolean>] [-EnableNonWdsPxe <Boolean>] [-EnablePullDP <Boolean>] [-EnablePxe <Boolean>]
+ [-EnableScheduledMulticast <Boolean>] [-EnableUnknownComputerSupport <Boolean>] [-EndIPAddress <String>]
+ [-EndUdpPort <Int32>] [-Force] [-InputObject] <IResultObject> [-KeepWds <Boolean>]
+ [-MacAddressForRespondingPxeRequest <String[]>] [-MinimumSessionSize <Int32>]
+ [-MulticastMaximumClientCount <Int32>] [-PassThru] [-PxePassword <SecureString>]
+ [-PxeServerResponseDelaySec <Int32>] [-ReassignSiteCode <String>] [-RemoveBoundaryGroupName <String[]>]
+ [-RemoveMacAddressForRespondingPxeRequest <String[]>] [-RespondToAllNetwork] [-SessionStartDelayMins <Int32>]
+ [-SourceDistributionPoint <String[]>] [-SourceDPRank <Int32[]>] [-StartIPAddress <String>]
+ [-StartUdpPort <Int32>] [-UseAnyRangeIP] [-UseComputerAccount] [-UserDeviceAffinity <UserDeviceAffinityType>]
+ [-UserName <String>] [-EnableDoinc <Boolean>] [-DiskSpaceUnit <DiskSpaceEnum>] [-DiskSpaceDoinc <Int32>]
+ [-LocalDriveDoinc <String>] [-RetainDoincCache <Boolean>] [-AgreeDoincLicense <Boolean>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetByName
 ```
-Set-CMDistributionPoint [-SiteSystemServerName] <String> [-SiteCode <String>] [-Description <String>]
+Set-CMDistributionPoint [-AddBoundaryGroupName <String[]>] [-AddMacAddressForRespondingPxeRequest <String[]>]
+ [-AllowFallbackForContent <Boolean>] [-AllowPreStaging <Boolean>] [-AllowProxyTraffic <Boolean>]
+ [-AllowPxeResponse <Boolean>] [-CertificateExpirationTimeUtc <DateTime>] [-CertificatePassword <SecureString>]
+ [-CertificatePath <String>] [-ClearMacAddressForRespondingPxeRequest]
  [-ClientCommunicationType <ComputerCommunicationType>] [-ClientConnectionType <ClientConnectionTypes>]
- [-AllowProxyTraffic <Boolean>] [-EnableAnonymous <Boolean>] [-CertificateExpirationTimeUtc <DateTime>]
- [-CertificatePath <String>] [-CertificatePassword <SecureString>] [-AllowPreStaging <Boolean>]
- [-EnablePxe <Boolean>] [-KeepWds <Boolean>] [-AllowPxeResponse <Boolean>]
- [-EnableUnknownComputerSupport <Boolean>] [-EnableNonWdsPxe <Boolean>] [-PxePassword <SecureString>]
- [-UserDeviceAffinity <UserDeviceAffinityType>] [-RespondToAllNetwork]
- [-MacAddressForRespondingPxeRequest <String[]>] [-AddMacAddressForRespondingPxeRequest <String[]>]
- [-RemoveMacAddressForRespondingPxeRequest <String[]>] [-ClearMacAddressForRespondingPxeRequest]
- [-PxeServerResponseDelaySec <Int32>] [-EnableMulticast <Boolean>] [-UseComputerAccount] [-UserName <String>]
- [-UseAnyRangeIP] [-StartIPAddress <String>] [-EndIPAddress <String>] [-StartUdpPort <Int32>]
- [-EndUdpPort <Int32>] [-ClientTransferRate <NetworkProfile>] [-MulticastMaximumClientCount <Int32>]
- [-EnableScheduledMulticast <Boolean>] [-SessionStartDelayMins <Int32>] [-MinimumSessionSize <Int32>]
- [-EnableContentValidation <Boolean>] [-ContentValidationSchedule <IResultObject>]
- [-ContentMonitoringPriority <Priority>] [-EnablePullDP <Boolean>] [-SourceDistributionPoint <String[]>]
- [-SourceDPRank <Int32[]>] [-AllowFallbackForContent <Boolean>] [-AddBoundaryGroupName <String[]>]
- [-RemoveBoundaryGroupName <String[]>] [-EnableBranchCache <Boolean>] [-PassThru] [-EnableLedbat <Boolean>]
- [-ReassignSiteCode <String>] [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-ClientTransferRate <NetworkProfile>] [-ContentMonitoringPriority <Priority>]
+ [-ContentValidationSchedule <IResultObject>] [-Description <String>] [-EnableAnonymous <Boolean>]
+ [-EnableBranchCache <Boolean>] [-EnableContentValidation <Boolean>] [-EnableLedbat <Boolean>]
+ [-EnableMulticast <Boolean>] [-EnableNonWdsPxe <Boolean>] [-EnablePullDP <Boolean>] [-EnablePxe <Boolean>]
+ [-EnableScheduledMulticast <Boolean>] [-EnableUnknownComputerSupport <Boolean>] [-EndIPAddress <String>]
+ [-EndUdpPort <Int32>] [-Force] [-KeepWds <Boolean>] [-MacAddressForRespondingPxeRequest <String[]>]
+ [-MinimumSessionSize <Int32>] [-MulticastMaximumClientCount <Int32>] [-PassThru] [-PxePassword <SecureString>]
+ [-PxeServerResponseDelaySec <Int32>] [-ReassignSiteCode <String>] [-RemoveBoundaryGroupName <String[]>]
+ [-RemoveMacAddressForRespondingPxeRequest <String[]>] [-RespondToAllNetwork] [-SessionStartDelayMins <Int32>]
+ [-SiteCode <String>] [-SiteSystemServerName] <String> [-SourceDistributionPoint <String[]>]
+ [-SourceDPRank <Int32[]>] [-StartIPAddress <String>] [-StartUdpPort <Int32>] [-UseAnyRangeIP]
+ [-UseComputerAccount] [-UserDeviceAffinity <UserDeviceAffinityType>] [-UserName <String>]
+ [-EnableDoinc <Boolean>] [-DiskSpaceUnit <DiskSpaceEnum>] [-DiskSpaceDoinc <Int32>]
+ [-LocalDriveDoinc <String>] [-RetainDoincCache <Boolean>] [-AgreeDoincLicense <Boolean>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -116,6 +118,21 @@ Adds an array of media access control (MAC) addresses that respond to Pre-boot e
 
 ```yaml
 Type: String[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AgreeDoincLicense
+{{ Fill AgreeDoincLicense Description }}
+
+```yaml
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 
@@ -298,21 +315,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -ContentMonitoringPriority
 
 Specifies the content monitoring priority.
@@ -377,6 +379,37 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -DiskSpaceDoinc
+{{ Fill DiskSpaceDoinc Description }}
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DiskSpaceUnit
+{{ Fill DiskSpaceUnit Description }}
+
+```yaml
+Type: DiskSpaceEnum
+Parameter Sets: (All)
+Aliases:
+Accepted values: GB, Percentage
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -EnableAnonymous
 Indicates that the distribution point permits anonymous connections from Configuration Manager clients to the content library.
 
@@ -415,6 +448,21 @@ Indicates that content validation is enabled for this distribution point.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: EnableValidateContent
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableDoinc
+{{ Fill EnableDoinc Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named
@@ -630,6 +678,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -LocalDriveDoinc
+{{ Fill LocalDriveDoinc Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Accepted values: Automatic, A:, B:, C:, D:, E:, F:, G:, H:, I:, J:, K:, L:, M:, N:, O:, P:, Q:, R:, S:, T:, U:, V:, W:, X:, Y:, Z:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -MacAddressForRespondingPxeRequest
 Specifies an array of MAC addresses that the distribution point uses to respond to PXE requests.
 
@@ -782,6 +846,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -RetainDoincCache
+{{ Fill RetainDoincCache Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -SessionStartDelayMins
 Specifies the number of minutes that Configuration Manager waits before it responds to the first deployment request.
 
@@ -827,14 +906,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -SourceDPRank
-Specifies an array that contains the priorities for the distribution point sources from which this distribution point can pull content.
-Source distribution points that have the same priority are randomly selected.
+### -SourceDistributionPoint
+Specifies an array of distribution point sources from which this distribution point can pull content.
 
 ```yaml
-Type: Int32[]
+Type: String[]
 Parameter Sets: (All)
-Aliases: SourceDPRanks
+Aliases: SourceDistributionPoints
 
 Required: False
 Position: Named
@@ -843,13 +921,14 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -SourceDistributionPoint
-Specifies an array of distribution point sources from which this distribution point can pull content.
+### -SourceDPRank
+Specifies an array that contains the priorities for the distribution point sources from which this distribution point can pull content.
+Source distribution points that have the same priority are randomly selected.
 
 ```yaml
-Type: String[]
+Type: Int32[]
 Parameter Sets: (All)
-Aliases: SourceDistributionPoints
+Aliases: SourceDPRanks
 
 Required: False
 Position: Named
@@ -954,6 +1033,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 
 Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
@@ -971,7 +1065,6 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -981,8 +1074,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### IResultObject#SMS_SCI_SysResUse
-
-For more information on this return object and its properties, see [SMS_SCI_SysResUse server WMI class](https://docs.microsoft.com/mem/configmgr/develop/reference/core/servers/configure/sms_sci_sysresuse-server-wmi-class).
 
 ## NOTES
 

@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Osd.dll-Help.xml
 Module Name: ConfigurationManager
 online version:
@@ -14,218 +14,219 @@ schema: 2.0.0
 
 ### ByValue (Default)
 ```
-Set-CMTSStepCaptureUserState [-Package <IResultObject>] [-ModeOption <ModeType>] [-ConfigFile <String[]>]
- [-AddConfigFile <String[]>] [-RemoveConfigFile <String[]>] [-CleanConfigFile] [-VerboseLogging <Boolean>]
- [-SkipEncryptedFile <Boolean>] [-FileAccessOption <FileAccessType>] [-ContinueOnLockedFile <Boolean>]
- [-UseHardLinks <Boolean>] [-OfflineUserState <Boolean>] -InputObject <IResultObject> [-StepName <String>]
- [-NewStepName <String>] [-Description <String>] [-IsContinueOnError <Boolean>] [-IsEnabled <Boolean>]
- [-AddCondition <IResultObject[]>] [-ClearCondition] [-StepOrder <ReorderType>] [-MoveToIndex <Int32>]
- [-RemoveConditionIfStatement] [-RemoveConditionQueryWmi] [-RemoveConditionVariable]
- [-RemoveConditionOperatingSystem] [-RemoveConditionFile] [-RemoveConditionFolder] [-RemoveConditionRegistry]
- [-RemoveConditionSoftware] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Set-CMTSStepCaptureUserState [-AddConfigFile <String[]>] [-CleanConfigFile] [-ConfigFile <String[]>]
+ [-ContinueOnLockedFile <Boolean>] [-FileAccessOption <FileAccessType>] [-ModeOption <ModeType>]
+ [-OfflineUserState <Boolean>] [-Package <IResultObject>] [-RemoveConfigFile <String[]>]
+ [-SkipEncryptedFile <Boolean>] [-UseHardLinks <Boolean>] [-VerboseLogging <Boolean>]
+ [-AddCondition <IResultObject[]>] [-ClearCondition] [-Description <String>] -InputObject <IResultObject>
+ [-IsContinueOnError <Boolean>] [-IsEnabled <Boolean>] [-MoveToIndex <Int32>] [-NewStepName <String>]
+ [-RemoveConditionFile] [-RemoveConditionFolder] [-RemoveConditionIfStatement]
+ [-RemoveConditionOperatingSystem] [-RemoveConditionQueryWmi] [-RemoveConditionRegistry]
+ [-RemoveConditionSoftware] [-RemoveConditionVariable] [-StepName <String>] [-StepOrder <ReorderType>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ById
 ```
-Set-CMTSStepCaptureUserState [-Package <IResultObject>] [-ModeOption <ModeType>] [-ConfigFile <String[]>]
- [-AddConfigFile <String[]>] [-RemoveConfigFile <String[]>] [-CleanConfigFile] [-VerboseLogging <Boolean>]
- [-SkipEncryptedFile <Boolean>] [-FileAccessOption <FileAccessType>] [-ContinueOnLockedFile <Boolean>]
- [-UseHardLinks <Boolean>] [-OfflineUserState <Boolean>] -TaskSequenceId <String> [-StepName <String>]
- [-NewStepName <String>] [-Description <String>] [-IsContinueOnError <Boolean>] [-IsEnabled <Boolean>]
- [-AddCondition <IResultObject[]>] [-ClearCondition] [-StepOrder <ReorderType>] [-MoveToIndex <Int32>]
- [-RemoveConditionIfStatement] [-RemoveConditionQueryWmi] [-RemoveConditionVariable]
- [-RemoveConditionOperatingSystem] [-RemoveConditionFile] [-RemoveConditionFolder] [-RemoveConditionRegistry]
- [-RemoveConditionSoftware] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Set-CMTSStepCaptureUserState [-AddConfigFile <String[]>] [-CleanConfigFile] [-ConfigFile <String[]>]
+ [-ContinueOnLockedFile <Boolean>] [-FileAccessOption <FileAccessType>] [-ModeOption <ModeType>]
+ [-OfflineUserState <Boolean>] [-Package <IResultObject>] [-RemoveConfigFile <String[]>]
+ [-SkipEncryptedFile <Boolean>] [-UseHardLinks <Boolean>] [-VerboseLogging <Boolean>]
+ [-AddCondition <IResultObject[]>] [-ClearCondition] [-Description <String>] [-IsContinueOnError <Boolean>]
+ [-IsEnabled <Boolean>] [-MoveToIndex <Int32>] [-NewStepName <String>] [-RemoveConditionFile]
+ [-RemoveConditionFolder] [-RemoveConditionIfStatement] [-RemoveConditionOperatingSystem]
+ [-RemoveConditionQueryWmi] [-RemoveConditionRegistry] [-RemoveConditionSoftware] [-RemoveConditionVariable]
+ [-StepName <String>] [-StepOrder <ReorderType>] -TaskSequenceId <String> [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByName
 ```
-Set-CMTSStepCaptureUserState [-Package <IResultObject>] [-ModeOption <ModeType>] [-ConfigFile <String[]>]
- [-AddConfigFile <String[]>] [-RemoveConfigFile <String[]>] [-CleanConfigFile] [-VerboseLogging <Boolean>]
- [-SkipEncryptedFile <Boolean>] [-FileAccessOption <FileAccessType>] [-ContinueOnLockedFile <Boolean>]
- [-UseHardLinks <Boolean>] [-OfflineUserState <Boolean>] -TaskSequenceName <String> [-StepName <String>]
- [-NewStepName <String>] [-Description <String>] [-IsContinueOnError <Boolean>] [-IsEnabled <Boolean>]
- [-AddCondition <IResultObject[]>] [-ClearCondition] [-StepOrder <ReorderType>] [-MoveToIndex <Int32>]
- [-RemoveConditionIfStatement] [-RemoveConditionQueryWmi] [-RemoveConditionVariable]
- [-RemoveConditionOperatingSystem] [-RemoveConditionFile] [-RemoveConditionFolder] [-RemoveConditionRegistry]
- [-RemoveConditionSoftware] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Set-CMTSStepCaptureUserState [-AddConfigFile <String[]>] [-CleanConfigFile] [-ConfigFile <String[]>]
+ [-ContinueOnLockedFile <Boolean>] [-FileAccessOption <FileAccessType>] [-ModeOption <ModeType>]
+ [-OfflineUserState <Boolean>] [-Package <IResultObject>] [-RemoveConfigFile <String[]>]
+ [-SkipEncryptedFile <Boolean>] [-UseHardLinks <Boolean>] [-VerboseLogging <Boolean>]
+ [-AddCondition <IResultObject[]>] [-ClearCondition] [-Description <String>] [-IsContinueOnError <Boolean>]
+ [-IsEnabled <Boolean>] [-MoveToIndex <Int32>] [-NewStepName <String>] [-RemoveConditionFile]
+ [-RemoveConditionFolder] [-RemoveConditionIfStatement] [-RemoveConditionOperatingSystem]
+ [-RemoveConditionQueryWmi] [-RemoveConditionRegistry] [-RemoveConditionSoftware] [-RemoveConditionVariable]
+ [-StepName <String>] [-StepOrder <ReorderType>] -TaskSequenceName <String> [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByIdSetConditionIfStatement
 ```
-Set-CMTSStepCaptureUserState -TaskSequenceId <String> [-StepName <String>] [-SetConditionIfStatement]
- [-StatementType <ConditionStatementType>] [-Condition <IResultObject[]>] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### ByIdSetConditionQueryWmi
-```
-Set-CMTSStepCaptureUserState -TaskSequenceId <String> [-StepName <String>] [-SetConditionQueryWmi]
- [-Namespace <String[]>] [-Query <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
-```
-
-### ByIdSetConditionVariable
-```
-Set-CMTSStepCaptureUserState -TaskSequenceId <String> [-StepName <String>] [-SetConditionVariable]
- [-OperatorType <VariableOperatorType>] [-ConditionVariableName <String>] [-ConditionVariableValue <String>]
+Set-CMTSStepCaptureUserState [-Condition <IResultObject[]>] [-SetConditionIfStatement]
+ [-StatementType <ConditionStatementType>] [-StepName <String>] -TaskSequenceId <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### ByIdSetConditionOperatingSystem
-```
-Set-CMTSStepCaptureUserState -TaskSequenceId <String> [-StepName <String>] [-SetConditionOperatingSystem]
- [-SupportedPlatform <IResultObject[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
-```
-
-### ByIdSetConditionFile
-```
-Set-CMTSStepCaptureUserState -TaskSequenceId <String> [-StepName <String>] [-SetConditionFile]
- [-FilePath <String>] [-FileVersion <String>] [-FileTimestamp <DateTime>]
- [-FileDateTimeOperator <VariableOperatorType>] [-VersionOperator <VariableOperatorType>]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### ByIdSetConditionFolder
-```
-Set-CMTSStepCaptureUserState -TaskSequenceId <String> [-StepName <String>] [-SetConditionFolder]
- [-FolderPath <String>] [-FolderTimestamp <DateTime>] [-FolderDateTimeOperator <VariableOperatorType>]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### ByIdSetConditionRegistry
-```
-Set-CMTSStepCaptureUserState -TaskSequenceId <String> [-StepName <String>] [-SetConditionRegistry]
- [-RootKey <RegistryRootKeyType>] [-RegistryKey <String>] [-RegistryOperator <VariableOperatorType>]
- [-RegistryValueName <String>] [-ValueType <RegistryValueType>] [-RegistryValueData <String>]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### ByIdSetConditionSoftware
-```
-Set-CMTSStepCaptureUserState -TaskSequenceId <String> [-StepName <String>] [-SetConditionSoftware]
- [-MsiFilePath <String>] [-IsAnyVersion <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByNameSetConditionIfStatement
 ```
-Set-CMTSStepCaptureUserState -TaskSequenceName <String> [-StepName <String>] [-SetConditionIfStatement]
- [-StatementType <ConditionStatementType>] [-Condition <IResultObject[]>] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMTSStepCaptureUserState [-Condition <IResultObject[]>] [-SetConditionIfStatement]
+ [-StatementType <ConditionStatementType>] [-StepName <String>] -TaskSequenceName <String>
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### ByNameSetConditionQueryWmi
+### ByValueSetConditionIfStatement
 ```
-Set-CMTSStepCaptureUserState -TaskSequenceName <String> [-StepName <String>] [-SetConditionQueryWmi]
- [-Namespace <String[]>] [-Query <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Set-CMTSStepCaptureUserState [-Condition <IResultObject[]>] -InputObject <IResultObject>
+ [-SetConditionIfStatement] [-StatementType <ConditionStatementType>] [-StepName <String>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### ByIdSetConditionVariable
+```
+Set-CMTSStepCaptureUserState [-ConditionVariableName <String>] [-ConditionVariableValue <String>]
+ [-OperatorType <VariableOperatorType>] [-SetConditionVariable] [-StepName <String>] -TaskSequenceId <String>
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByNameSetConditionVariable
 ```
-Set-CMTSStepCaptureUserState -TaskSequenceName <String> [-StepName <String>] [-SetConditionVariable]
- [-OperatorType <VariableOperatorType>] [-ConditionVariableName <String>] [-ConditionVariableValue <String>]
+Set-CMTSStepCaptureUserState [-ConditionVariableName <String>] [-ConditionVariableValue <String>]
+ [-OperatorType <VariableOperatorType>] [-SetConditionVariable] [-StepName <String>] -TaskSequenceName <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### ByNameSetConditionOperatingSystem
+### ByValueSetConditionVariable
 ```
-Set-CMTSStepCaptureUserState -TaskSequenceName <String> [-StepName <String>] [-SetConditionOperatingSystem]
- [-SupportedPlatform <IResultObject[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Set-CMTSStepCaptureUserState [-ConditionVariableName <String>] [-ConditionVariableValue <String>]
+ -InputObject <IResultObject> [-OperatorType <VariableOperatorType>] [-SetConditionVariable]
+ [-StepName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### ByIdSetConditionFile
+```
+Set-CMTSStepCaptureUserState [-FileDateTimeOperator <VariableOperatorType>] [-FilePath <String>]
+ [-FileTimestamp <DateTime>] [-FileVersion <String>] [-SetConditionFile] [-StepName <String>]
+ -TaskSequenceId <String> [-VersionOperator <VariableOperatorType>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByNameSetConditionFile
 ```
-Set-CMTSStepCaptureUserState -TaskSequenceName <String> [-StepName <String>] [-SetConditionFile]
- [-FilePath <String>] [-FileVersion <String>] [-FileTimestamp <DateTime>]
- [-FileDateTimeOperator <VariableOperatorType>] [-VersionOperator <VariableOperatorType>]
+Set-CMTSStepCaptureUserState [-FileDateTimeOperator <VariableOperatorType>] [-FilePath <String>]
+ [-FileTimestamp <DateTime>] [-FileVersion <String>] [-SetConditionFile] [-StepName <String>]
+ -TaskSequenceName <String> [-VersionOperator <VariableOperatorType>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### ByValueSetConditionFile
+```
+Set-CMTSStepCaptureUserState [-FileDateTimeOperator <VariableOperatorType>] [-FilePath <String>]
+ [-FileTimestamp <DateTime>] [-FileVersion <String>] -InputObject <IResultObject> [-SetConditionFile]
+ [-StepName <String>] [-VersionOperator <VariableOperatorType>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### ByIdSetConditionFolder
+```
+Set-CMTSStepCaptureUserState [-FolderDateTimeOperator <VariableOperatorType>] [-FolderPath <String>]
+ [-FolderTimestamp <DateTime>] [-SetConditionFolder] [-StepName <String>] -TaskSequenceId <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByNameSetConditionFolder
 ```
-Set-CMTSStepCaptureUserState -TaskSequenceName <String> [-StepName <String>] [-SetConditionFolder]
- [-FolderPath <String>] [-FolderTimestamp <DateTime>] [-FolderDateTimeOperator <VariableOperatorType>]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### ByNameSetConditionRegistry
-```
-Set-CMTSStepCaptureUserState -TaskSequenceName <String> [-StepName <String>] [-SetConditionRegistry]
- [-RootKey <RegistryRootKeyType>] [-RegistryKey <String>] [-RegistryOperator <VariableOperatorType>]
- [-RegistryValueName <String>] [-ValueType <RegistryValueType>] [-RegistryValueData <String>]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### ByNameSetConditionSoftware
-```
-Set-CMTSStepCaptureUserState -TaskSequenceName <String> [-StepName <String>] [-SetConditionSoftware]
- [-MsiFilePath <String>] [-IsAnyVersion <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### ByValueSetConditionIfStatement
-```
-Set-CMTSStepCaptureUserState -InputObject <IResultObject> [-StepName <String>] [-SetConditionIfStatement]
- [-StatementType <ConditionStatementType>] [-Condition <IResultObject[]>] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### ByValueSetConditionQueryWmi
-```
-Set-CMTSStepCaptureUserState -InputObject <IResultObject> [-StepName <String>] [-SetConditionQueryWmi]
- [-Namespace <String[]>] [-Query <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
-```
-
-### ByValueSetConditionVariable
-```
-Set-CMTSStepCaptureUserState -InputObject <IResultObject> [-StepName <String>] [-SetConditionVariable]
- [-OperatorType <VariableOperatorType>] [-ConditionVariableName <String>] [-ConditionVariableValue <String>]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### ByValueSetConditionOperatingSystem
-```
-Set-CMTSStepCaptureUserState -InputObject <IResultObject> [-StepName <String>] [-SetConditionOperatingSystem]
- [-SupportedPlatform <IResultObject[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
-```
-
-### ByValueSetConditionFile
-```
-Set-CMTSStepCaptureUserState -InputObject <IResultObject> [-StepName <String>] [-SetConditionFile]
- [-FilePath <String>] [-FileVersion <String>] [-FileTimestamp <DateTime>]
- [-FileDateTimeOperator <VariableOperatorType>] [-VersionOperator <VariableOperatorType>]
+Set-CMTSStepCaptureUserState [-FolderDateTimeOperator <VariableOperatorType>] [-FolderPath <String>]
+ [-FolderTimestamp <DateTime>] [-SetConditionFolder] [-StepName <String>] -TaskSequenceName <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByValueSetConditionFolder
 ```
-Set-CMTSStepCaptureUserState -InputObject <IResultObject> [-StepName <String>] [-SetConditionFolder]
- [-FolderPath <String>] [-FolderTimestamp <DateTime>] [-FolderDateTimeOperator <VariableOperatorType>]
+Set-CMTSStepCaptureUserState [-FolderDateTimeOperator <VariableOperatorType>] [-FolderPath <String>]
+ [-FolderTimestamp <DateTime>] -InputObject <IResultObject> [-SetConditionFolder] [-StepName <String>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### ByValueSetConditionQueryWmi
+```
+Set-CMTSStepCaptureUserState -InputObject <IResultObject> [-Namespace <String[]>] [-Query <String>]
+ [-SetConditionQueryWmi] [-StepName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
+```
+
+### ByValueSetConditionOperatingSystem
+```
+Set-CMTSStepCaptureUserState -InputObject <IResultObject> [-SetConditionOperatingSystem] [-StepName <String>]
+ [-SupportedPlatform <IResultObject[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ### ByValueSetConditionRegistry
 ```
-Set-CMTSStepCaptureUserState -InputObject <IResultObject> [-StepName <String>] [-SetConditionRegistry]
- [-RootKey <RegistryRootKeyType>] [-RegistryKey <String>] [-RegistryOperator <VariableOperatorType>]
- [-RegistryValueName <String>] [-ValueType <RegistryValueType>] [-RegistryValueData <String>]
+Set-CMTSStepCaptureUserState -InputObject <IResultObject> [-RegistryKey <String>]
+ [-RegistryOperator <VariableOperatorType>] [-RegistryValueData <String>] [-RegistryValueName <String>]
+ [-RootKey <RegistryRootKeyType>] [-SetConditionRegistry] [-StepName <String>] [-ValueType <RegistryValueType>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByValueSetConditionSoftware
 ```
-Set-CMTSStepCaptureUserState -InputObject <IResultObject> [-StepName <String>] [-SetConditionSoftware]
- [-MsiFilePath <String>] [-IsAnyVersion <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMTSStepCaptureUserState -InputObject <IResultObject> [-IsAnyVersion <Boolean>] [-MsiFilePath <String>]
+ [-SetConditionSoftware] [-StepName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
+```
+
+### ByIdSetConditionSoftware
+```
+Set-CMTSStepCaptureUserState [-IsAnyVersion <Boolean>] [-MsiFilePath <String>] [-SetConditionSoftware]
+ [-StepName <String>] -TaskSequenceId <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
+```
+
+### ByNameSetConditionSoftware
+```
+Set-CMTSStepCaptureUserState [-IsAnyVersion <Boolean>] [-MsiFilePath <String>] [-SetConditionSoftware]
+ [-StepName <String>] -TaskSequenceName <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
+```
+
+### ByIdSetConditionQueryWmi
+```
+Set-CMTSStepCaptureUserState [-Namespace <String[]>] [-Query <String>] [-SetConditionQueryWmi]
+ [-StepName <String>] -TaskSequenceId <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
+```
+
+### ByNameSetConditionQueryWmi
+```
+Set-CMTSStepCaptureUserState [-Namespace <String[]>] [-Query <String>] [-SetConditionQueryWmi]
+ [-StepName <String>] -TaskSequenceName <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
+```
+
+### ByIdSetConditionRegistry
+```
+Set-CMTSStepCaptureUserState [-RegistryKey <String>] [-RegistryOperator <VariableOperatorType>]
+ [-RegistryValueData <String>] [-RegistryValueName <String>] [-RootKey <RegistryRootKeyType>]
+ [-SetConditionRegistry] [-StepName <String>] -TaskSequenceId <String> [-ValueType <RegistryValueType>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### ByNameSetConditionRegistry
+```
+Set-CMTSStepCaptureUserState [-RegistryKey <String>] [-RegistryOperator <VariableOperatorType>]
+ [-RegistryValueData <String>] [-RegistryValueName <String>] [-RootKey <RegistryRootKeyType>]
+ [-SetConditionRegistry] [-StepName <String>] -TaskSequenceName <String> [-ValueType <RegistryValueType>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### ByIdSetConditionOperatingSystem
+```
+Set-CMTSStepCaptureUserState [-SetConditionOperatingSystem] [-StepName <String>]
+ [-SupportedPlatform <IResultObject[]>] -TaskSequenceId <String> [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### ByNameSetConditionOperatingSystem
+```
+Set-CMTSStepCaptureUserState [-SetConditionOperatingSystem] [-StepName <String>]
+ [-SupportedPlatform <IResultObject[]>] -TaskSequenceName <String> [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -360,21 +361,6 @@ Accept wildcard characters: False
 Type: String[]
 Parameter Sets: ByValue, ById, ByName
 Aliases: ConfigFiles
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
 
 Required: False
 Position: Named
@@ -571,7 +557,7 @@ Accept wildcard characters: False
 
 ```yaml
 Type: IResultObject
-Parameter Sets: ByValue, ByValueSetConditionIfStatement, ByValueSetConditionQueryWmi, ByValueSetConditionVariable, ByValueSetConditionOperatingSystem, ByValueSetConditionFile, ByValueSetConditionFolder, ByValueSetConditionRegistry, ByValueSetConditionSoftware
+Parameter Sets: ByValue, ByValueSetConditionIfStatement, ByValueSetConditionVariable, ByValueSetConditionFile, ByValueSetConditionFolder, ByValueSetConditionQueryWmi, ByValueSetConditionOperatingSystem, ByValueSetConditionRegistry, ByValueSetConditionSoftware
 Aliases: TaskSequence
 
 Required: True
@@ -586,7 +572,7 @@ Accept wildcard characters: False
 
 ```yaml
 Type: Boolean
-Parameter Sets: ByIdSetConditionSoftware, ByNameSetConditionSoftware, ByValueSetConditionSoftware
+Parameter Sets: ByValueSetConditionSoftware, ByIdSetConditionSoftware, ByNameSetConditionSoftware
 Aliases:
 
 Required: False
@@ -662,7 +648,7 @@ Specify the path to a Windows Installer file for an software condition.
 
 ```yaml
 Type: String
-Parameter Sets: ByIdSetConditionSoftware, ByNameSetConditionSoftware, ByValueSetConditionSoftware
+Parameter Sets: ByValueSetConditionSoftware, ByIdSetConditionSoftware, ByNameSetConditionSoftware
 Aliases:
 
 Required: False
@@ -677,7 +663,7 @@ Specify the namespace for a WMI query condition.
 
 ```yaml
 Type: String[]
-Parameter Sets: ByIdSetConditionQueryWmi, ByNameSetConditionQueryWmi, ByValueSetConditionQueryWmi
+Parameter Sets: ByValueSetConditionQueryWmi, ByIdSetConditionQueryWmi, ByNameSetConditionQueryWmi
 Aliases:
 
 Required: False
@@ -753,7 +739,7 @@ Specify a WMI query string to use for a condition.
 
 ```yaml
 Type: String
-Parameter Sets: ByIdSetConditionQueryWmi, ByNameSetConditionQueryWmi, ByValueSetConditionQueryWmi
+Parameter Sets: ByValueSetConditionQueryWmi, ByIdSetConditionQueryWmi, ByNameSetConditionQueryWmi
 Aliases:
 
 Required: False
@@ -768,7 +754,7 @@ Specify the key to use with a registry condition.
 
 ```yaml
 Type: String
-Parameter Sets: ByIdSetConditionRegistry, ByNameSetConditionRegistry, ByValueSetConditionRegistry
+Parameter Sets: ByValueSetConditionRegistry, ByIdSetConditionRegistry, ByNameSetConditionRegistry
 Aliases:
 
 Required: False
@@ -783,7 +769,7 @@ Specify an operator to use with a registry condition.
 
 ```yaml
 Type: VariableOperatorType
-Parameter Sets: ByIdSetConditionRegistry, ByNameSetConditionRegistry, ByValueSetConditionRegistry
+Parameter Sets: ByValueSetConditionRegistry, ByIdSetConditionRegistry, ByNameSetConditionRegistry
 Aliases:
 Accepted values: Exists, NotExists, Equals, NotEquals, Greater, GreaterEqual, Less, LessEqual
 
@@ -799,7 +785,7 @@ Specify the value data to use with a registry condition.
 
 ```yaml
 Type: String
-Parameter Sets: ByIdSetConditionRegistry, ByNameSetConditionRegistry, ByValueSetConditionRegistry
+Parameter Sets: ByValueSetConditionRegistry, ByIdSetConditionRegistry, ByNameSetConditionRegistry
 Aliases:
 
 Required: False
@@ -814,7 +800,7 @@ Specify the value name to use with a registry condition.
 
 ```yaml
 Type: String
-Parameter Sets: ByIdSetConditionRegistry, ByNameSetConditionRegistry, ByValueSetConditionRegistry
+Parameter Sets: ByValueSetConditionRegistry, ByIdSetConditionRegistry, ByNameSetConditionRegistry
 Aliases:
 
 Required: False
@@ -964,7 +950,7 @@ Specify the root key to use with a registry condition.
 
 ```yaml
 Type: RegistryRootKeyType
-Parameter Sets: ByIdSetConditionRegistry, ByNameSetConditionRegistry, ByValueSetConditionRegistry
+Parameter Sets: ByValueSetConditionRegistry, ByIdSetConditionRegistry, ByNameSetConditionRegistry
 Aliases:
 Accepted values: HKeyCurrentUser, HKeyLocalMachine, HKeyUsers, HKeyCurrentConfig
 
@@ -1025,7 +1011,7 @@ Add a new OS condition.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: ByIdSetConditionOperatingSystem, ByNameSetConditionOperatingSystem, ByValueSetConditionOperatingSystem
+Parameter Sets: ByValueSetConditionOperatingSystem, ByIdSetConditionOperatingSystem, ByNameSetConditionOperatingSystem
 Aliases:
 
 Required: True
@@ -1040,7 +1026,7 @@ Add a new WMI query condition.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: ByIdSetConditionQueryWmi, ByNameSetConditionQueryWmi, ByValueSetConditionQueryWmi
+Parameter Sets: ByValueSetConditionQueryWmi, ByIdSetConditionQueryWmi, ByNameSetConditionQueryWmi
 Aliases:
 
 Required: True
@@ -1055,7 +1041,7 @@ Add a new registry condition.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: ByIdSetConditionRegistry, ByNameSetConditionRegistry, ByValueSetConditionRegistry
+Parameter Sets: ByValueSetConditionRegistry, ByIdSetConditionRegistry, ByNameSetConditionRegistry
 Aliases:
 
 Required: True
@@ -1070,7 +1056,7 @@ Add a new software condition.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: ByIdSetConditionSoftware, ByNameSetConditionSoftware, ByValueSetConditionSoftware
+Parameter Sets: ByValueSetConditionSoftware, ByIdSetConditionSoftware, ByNameSetConditionSoftware
 Aliases:
 
 Required: True
@@ -1162,7 +1148,7 @@ Use this parameter to specify the platforms for an OS condition.
 
 ```yaml
 Type: IResultObject[]
-Parameter Sets: ByIdSetConditionOperatingSystem, ByNameSetConditionOperatingSystem, ByValueSetConditionOperatingSystem
+Parameter Sets: ByValueSetConditionOperatingSystem, ByIdSetConditionOperatingSystem, ByNameSetConditionOperatingSystem
 Aliases: SupportedPlatforms
 
 Required: False
@@ -1177,7 +1163,7 @@ Specify the ID of the task sequence to target for changes.
 
 ```yaml
 Type: String
-Parameter Sets: ById, ByIdSetConditionIfStatement, ByIdSetConditionQueryWmi, ByIdSetConditionVariable, ByIdSetConditionOperatingSystem, ByIdSetConditionFile, ByIdSetConditionFolder, ByIdSetConditionRegistry, ByIdSetConditionSoftware
+Parameter Sets: ById, ByIdSetConditionIfStatement, ByIdSetConditionVariable, ByIdSetConditionFile, ByIdSetConditionFolder, ByIdSetConditionSoftware, ByIdSetConditionQueryWmi, ByIdSetConditionRegistry, ByIdSetConditionOperatingSystem
 Aliases: Id, TaskSequencePackageId
 
 Required: True
@@ -1192,7 +1178,7 @@ Specify the name of the task sequence to target for changes.
 
 ```yaml
 Type: String
-Parameter Sets: ByName, ByNameSetConditionIfStatement, ByNameSetConditionQueryWmi, ByNameSetConditionVariable, ByNameSetConditionOperatingSystem, ByNameSetConditionFile, ByNameSetConditionFolder, ByNameSetConditionRegistry, ByNameSetConditionSoftware
+Parameter Sets: ByName, ByNameSetConditionIfStatement, ByNameSetConditionVariable, ByNameSetConditionFile, ByNameSetConditionFolder, ByNameSetConditionSoftware, ByNameSetConditionQueryWmi, ByNameSetConditionRegistry, ByNameSetConditionOperatingSystem
 Aliases:
 
 Required: True
@@ -1222,7 +1208,7 @@ Specify the type of value for a registry condition.
 
 ```yaml
 Type: RegistryValueType
-Parameter Sets: ByIdSetConditionRegistry, ByNameSetConditionRegistry, ByValueSetConditionRegistry
+Parameter Sets: ByValueSetConditionRegistry, ByIdSetConditionRegistry, ByNameSetConditionRegistry
 Aliases:
 Accepted values: RegistrySZ, RegistryExpandSZ, RegistryDWord
 
@@ -1256,6 +1242,21 @@ Type: VariableOperatorType
 Parameter Sets: ByIdSetConditionFile, ByNameSetConditionFile, ByValueSetConditionFile
 Aliases:
 Accepted values: Equals, NotEquals, Greater, GreaterEqual, Less, LessEqual
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
 
 Required: False
 Position: Named

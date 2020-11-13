@@ -1,4 +1,4 @@
----
+﻿---
 description: Modifies properties for an application deployment in Configuration Manager.
 external help file: AdminUI.PS.Deployments.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,44 +16,46 @@ Modifies properties for an application deployment in Configuration Manager.
 
 ### SetApplicationDeploymentByValueMandatory (Default)
 ```
-Set-CMApplicationDeployment -InputObject <IResultObject> [-Comment <String>] [-RequireApproval <Boolean>]
- [-PreDeploy <Boolean>] [-SendWakeUpPacket <Boolean>] [-UseMeteredNetwork <Boolean>] [-TimeBaseOn <TimeType>]
- [-AvailableDateTime <DateTime>] [-DeadlineDateTime <DateTime>] [-UserNotification <UserNotificationType>]
- [-OverrideServiceWindow <Boolean>] [-RebootOutsideServiceWindow <Boolean>]
- [-PersistOnWriteFilterDevice <Boolean>] [-CreateAlertBaseOnPercentSuccess <Boolean>]
- [-SuccessParameterValue <Int32>] [-PostponeDateTime <DateTime>] [-CreateAlertBaseOnPercentFailure <Boolean>]
- [-FailParameterValue <Int32>] [-EnableMomAlert <Boolean>] [-RaiseMomAlertsOnFailure <Boolean>]
- [-EnableSoftDeadline <Boolean>] [-ReplaceToastNotificationWithDialog <Boolean>] [-AllowRepairApp <Boolean>]
- [-PassThru] [-CollectionName <String>] [-CollectionId <String>] [-Collection <IResultObject>]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### SetApplicationDeploymentByNameMandatory
-```
-Set-CMApplicationDeployment -ApplicationName <String> [-Comment <String>] [-RequireApproval <Boolean>]
- [-PreDeploy <Boolean>] [-SendWakeUpPacket <Boolean>] [-UseMeteredNetwork <Boolean>] [-TimeBaseOn <TimeType>]
- [-AvailableDateTime <DateTime>] [-DeadlineDateTime <DateTime>] [-UserNotification <UserNotificationType>]
- [-OverrideServiceWindow <Boolean>] [-RebootOutsideServiceWindow <Boolean>]
- [-PersistOnWriteFilterDevice <Boolean>] [-CreateAlertBaseOnPercentSuccess <Boolean>]
- [-SuccessParameterValue <Int32>] [-PostponeDateTime <DateTime>] [-CreateAlertBaseOnPercentFailure <Boolean>]
- [-FailParameterValue <Int32>] [-EnableMomAlert <Boolean>] [-RaiseMomAlertsOnFailure <Boolean>]
- [-EnableSoftDeadline <Boolean>] [-ReplaceToastNotificationWithDialog <Boolean>] [-AllowRepairApp <Boolean>]
- [-PassThru] [-CollectionName <String>] [-CollectionId <String>] [-Collection <IResultObject>]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMApplicationDeployment [-AllowRepairApp <Boolean>] [-AvailableDateTime <DateTime>] [-Comment <String>]
+ [-CreateAlertBaseOnPercentFailure <Boolean>] [-CreateAlertBaseOnPercentSuccess <Boolean>]
+ [-DeadlineDateTime <DateTime>] [-EnableMomAlert <Boolean>] [-EnableSoftDeadline <Boolean>]
+ [-FailParameterValue <Int32>] -InputObject <IResultObject> [-OverrideServiceWindow <Boolean>]
+ [-PersistOnWriteFilterDevice <Boolean>] [-PostponeDateTime <DateTime>] [-PreDeploy <Boolean>]
+ [-RaiseMomAlertsOnFailure <Boolean>] [-RebootOutsideServiceWindow <Boolean>]
+ [-ReplaceToastNotificationWithDialog <Boolean>] [-RequireApproval <Boolean>] [-SendWakeUpPacket <Boolean>]
+ [-SuccessParameterValue <Int32>] [-TimeBaseOn <TimeType>] [-UseMeteredNetwork <Boolean>]
+ [-UserNotification <UserNotificationType>] [-PassThru] [-Collection <IResultObject>] [-CollectionId <String>]
+ [-CollectionName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### SetApplicationDeploymentByIdMandatory
 ```
-Set-CMApplicationDeployment -ApplicationId <String> [-Comment <String>] [-RequireApproval <Boolean>]
- [-PreDeploy <Boolean>] [-SendWakeUpPacket <Boolean>] [-UseMeteredNetwork <Boolean>] [-TimeBaseOn <TimeType>]
- [-AvailableDateTime <DateTime>] [-DeadlineDateTime <DateTime>] [-UserNotification <UserNotificationType>]
- [-OverrideServiceWindow <Boolean>] [-RebootOutsideServiceWindow <Boolean>]
- [-PersistOnWriteFilterDevice <Boolean>] [-CreateAlertBaseOnPercentSuccess <Boolean>]
- [-SuccessParameterValue <Int32>] [-PostponeDateTime <DateTime>] [-CreateAlertBaseOnPercentFailure <Boolean>]
- [-FailParameterValue <Int32>] [-EnableMomAlert <Boolean>] [-RaiseMomAlertsOnFailure <Boolean>]
- [-EnableSoftDeadline <Boolean>] [-ReplaceToastNotificationWithDialog <Boolean>] [-AllowRepairApp <Boolean>]
- [-PassThru] [-CollectionName <String>] [-CollectionId <String>] [-Collection <IResultObject>]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMApplicationDeployment [-AllowRepairApp <Boolean>] -ApplicationId <String> [-AvailableDateTime <DateTime>]
+ [-Comment <String>] [-CreateAlertBaseOnPercentFailure <Boolean>] [-CreateAlertBaseOnPercentSuccess <Boolean>]
+ [-DeadlineDateTime <DateTime>] [-EnableMomAlert <Boolean>] [-EnableSoftDeadline <Boolean>]
+ [-FailParameterValue <Int32>] [-OverrideServiceWindow <Boolean>] [-PersistOnWriteFilterDevice <Boolean>]
+ [-PostponeDateTime <DateTime>] [-PreDeploy <Boolean>] [-RaiseMomAlertsOnFailure <Boolean>]
+ [-RebootOutsideServiceWindow <Boolean>] [-ReplaceToastNotificationWithDialog <Boolean>]
+ [-RequireApproval <Boolean>] [-SendWakeUpPacket <Boolean>] [-SuccessParameterValue <Int32>]
+ [-TimeBaseOn <TimeType>] [-UseMeteredNetwork <Boolean>] [-UserNotification <UserNotificationType>] [-PassThru]
+ [-Collection <IResultObject>] [-CollectionId <String>] [-CollectionName <String>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SetApplicationDeploymentByNameMandatory
+```
+Set-CMApplicationDeployment [-AllowRepairApp <Boolean>] -ApplicationName <String>
+ [-AvailableDateTime <DateTime>] [-Comment <String>] [-CreateAlertBaseOnPercentFailure <Boolean>]
+ [-CreateAlertBaseOnPercentSuccess <Boolean>] [-DeadlineDateTime <DateTime>] [-EnableMomAlert <Boolean>]
+ [-EnableSoftDeadline <Boolean>] [-FailParameterValue <Int32>] [-OverrideServiceWindow <Boolean>]
+ [-PersistOnWriteFilterDevice <Boolean>] [-PostponeDateTime <DateTime>] [-PreDeploy <Boolean>]
+ [-RaiseMomAlertsOnFailure <Boolean>] [-RebootOutsideServiceWindow <Boolean>]
+ [-ReplaceToastNotificationWithDialog <Boolean>] [-RequireApproval <Boolean>] [-SendWakeUpPacket <Boolean>]
+ [-SuccessParameterValue <Int32>] [-TimeBaseOn <TimeType>] [-UseMeteredNetwork <Boolean>]
+ [-UserNotification <UserNotificationType>] [-PassThru] [-Collection <IResultObject>] [-CollectionId <String>]
+ [-CollectionName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -191,21 +193,6 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -573,6 +560,21 @@ Accepted values: DisplayAll, DisplaySoftwareCenterOnly, HideAll
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

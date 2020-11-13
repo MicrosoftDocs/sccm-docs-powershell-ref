@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Deployments.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 07/30/2020
@@ -16,22 +16,22 @@ Use this cmdlet to get a deployment phase for a specific instance or a phased de
 
 ### SearchByPhasedDeployment
 ```
-Get-CMPhase [-InputObject] <IResultObject> [-Order <Int32>] [-Id <String>] [-Name <String>]
- [-Collection <IResultObject>] [-CollectionId <String>] [-CollectionName <String>] [-DisableWildcardHandling]
+Get-CMPhase [-Collection <IResultObject>] [-CollectionId <String>] [-CollectionName <String>] [-Id <String>]
+ [-InputObject] <IResultObject> [-Name <String>] [-Order <Int32>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ### SearchByPhasedDeploymentId
 ```
-Get-CMPhase [-PhasedDeploymentId] <String> [-Order <Int32>] [-Id <String>] [-Name <String>]
- [-Collection <IResultObject>] [-CollectionId <String>] [-CollectionName <String>] [-DisableWildcardHandling]
+Get-CMPhase [-Collection <IResultObject>] [-CollectionId <String>] [-CollectionName <String>] [-Id <String>]
+ [-Name <String>] [-Order <Int32>] [-PhasedDeploymentId] <String> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ### SearchByPhasedDeploymentName
 ```
-Get-CMPhase [-PhasedDeploymentName] <String> [-Order <Int32>] [-Id <String>] [-Name <String>]
- [-Collection <IResultObject>] [-CollectionId <String>] [-CollectionName <String>] [-DisableWildcardHandling]
+Get-CMPhase [-Collection <IResultObject>] [-CollectionId <String>] [-CollectionName <String>] [-Id <String>]
+ [-Name <String>] [-Order <Int32>] [-PhasedDeploymentName] <String> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [<CommonParameters>]
 ```
 

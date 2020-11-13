@@ -1,4 +1,4 @@
----
+﻿---
 description: Sets a Script type global condition in Configuration Manager.
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 Module Name: ConfigurationManager
@@ -18,14 +18,14 @@ Sets a Script type global condition in Configuration Manager.
 ### SetScriptFromFile (Default)
 ```
 Set-CMGlobalConditionScript [-FilePath <String>] [-ScriptLanguage <ScriptingLanguage>]
- [-UseLoggedOnUserCredential <Boolean>] [-Use32BitHost <Boolean>] -Name <String> [-PassThru]
+ [-Use32BitHost <Boolean>] [-UseLoggedOnUserCredential <Boolean>] -Name <String> [-PassThru]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetScriptFromText
 ```
-Set-CMGlobalConditionScript [-ScriptText <String>] [-ScriptLanguage <ScriptingLanguage>]
- [-UseLoggedOnUserCredential <Boolean>] [-Use32BitHost <Boolean>] -Name <String> [-PassThru]
+Set-CMGlobalConditionScript [-ScriptLanguage <ScriptingLanguage>] [-ScriptText <String>]
+ [-Use32BitHost <Boolean>] [-UseLoggedOnUserCredential <Boolean>] -Name <String> [-PassThru]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -49,22 +49,6 @@ PS XYZ:\> $GlobalScript = Set-CMGlobalConditionScript -DataType String -ScriptTe
 This command sets a Script type global condition in Configuration Manager.
 
 ## PARAMETERS
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -DisableWildcardHandling
 
@@ -204,6 +188,22 @@ If you enable this option, the script will run on client computers by using the 
 Type: Boolean
 Parameter Sets: (All)
 Aliases: UseLoggedOnUserCredentials
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
 
 Required: False
 Position: Named

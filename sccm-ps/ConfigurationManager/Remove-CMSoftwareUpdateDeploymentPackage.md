@@ -1,4 +1,4 @@
----
+﻿---
 description: Removes a deployment package.
 external help file: AdminUI.PS.Sum.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,19 +16,19 @@ Removes a deployment package.
 
 ### SearchByValueMandatory (Default)
 ```
-Remove-CMSoftwareUpdateDeploymentPackage -InputObject <IResultObject> [-Force] [-DisableWildcardHandling]
+Remove-CMSoftwareUpdateDeploymentPackage [-Force] -InputObject <IResultObject> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory
 ```
-Remove-CMSoftwareUpdateDeploymentPackage -Id <String> [-Force] [-DisableWildcardHandling]
+Remove-CMSoftwareUpdateDeploymentPackage [-Force] -Id <String> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByNameMandatory
 ```
-Remove-CMSoftwareUpdateDeploymentPackage -Name <String> [-Force] [-DisableWildcardHandling]
+Remove-CMSoftwareUpdateDeploymentPackage [-Force] -Name <String> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -52,21 +52,6 @@ PS XYZ:\> Remove-CMSoftwareUpdateDeploymentPackage -PackageID "ST10000C"
 This command removes the software package that has the ID ST10000C.
 
 ## PARAMETERS
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -DisableWildcardHandling
 DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
@@ -155,6 +140,21 @@ Aliases:
 Required: True
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

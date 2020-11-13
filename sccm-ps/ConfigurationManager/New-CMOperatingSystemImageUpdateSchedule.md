@@ -1,4 +1,4 @@
----
+﻿---
 description: Creates an operating system image update schedule.
 external help file: AdminUI.PS.Osd.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,54 +16,55 @@ Creates an operating system image update schedule.
 
 ### NewScheduleByInputObject (Default)
 ```
-New-CMOperatingSystemImageUpdateSchedule [-ContinueOnError <Boolean>] [-RemoveSupersededUpdates <Boolean>]
- [-CustomSchedule <DateTime>] -InputObject <IResultObject> -SoftwareUpdate <IResultObject[]>
+New-CMOperatingSystemImageUpdateSchedule [-ContinueOnError <Boolean>] [-CustomSchedule <DateTime>]
+ -InputObject <IResultObject> [-RemoveSupersededUpdates <Boolean>] -SoftwareUpdate <IResultObject[]>
  [-UpdateDistributionPoint <Boolean>] [-Utc <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### NewScheduleByNameRunNow
-```
-New-CMOperatingSystemImageUpdateSchedule -Name <String> [-ContinueOnError <Boolean>]
- [-RemoveSupersededUpdates <Boolean>] [-RunNow] -SoftwareUpdate <IResultObject[]>
- [-UpdateDistributionPoint <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
-```
-
-### NewScheduleByIdRunNow
-```
-New-CMOperatingSystemImageUpdateSchedule -Id <String> [-ContinueOnError <Boolean>]
- [-RemoveSupersededUpdates <Boolean>] [-RunNow] -SoftwareUpdate <IResultObject[]>
- [-UpdateDistributionPoint <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
-```
-
 ### NewScheduleByName
 ```
-New-CMOperatingSystemImageUpdateSchedule [-ContinueOnError <Boolean>] [-RemoveSupersededUpdates <Boolean>]
- [-CustomSchedule <DateTime>] -SoftwareUpdate <IResultObject[]> [-UpdateDistributionPoint <Boolean>]
+New-CMOperatingSystemImageUpdateSchedule [-ContinueOnError <Boolean>] [-CustomSchedule <DateTime>]
+ [-RemoveSupersededUpdates <Boolean>] -SoftwareUpdate <IResultObject[]> [-UpdateDistributionPoint <Boolean>]
  [-Utc <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### NewScheduleById
 ```
-New-CMOperatingSystemImageUpdateSchedule [-ContinueOnError <Boolean>] [-RemoveSupersededUpdates <Boolean>]
- [-CustomSchedule <DateTime>] -SoftwareUpdate <IResultObject[]> [-UpdateDistributionPoint <Boolean>]
+New-CMOperatingSystemImageUpdateSchedule [-ContinueOnError <Boolean>] [-CustomSchedule <DateTime>]
+ [-RemoveSupersededUpdates <Boolean>] -SoftwareUpdate <IResultObject[]> [-UpdateDistributionPoint <Boolean>]
  [-Utc <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### NewScheduleByScheduleInputObject
 ```
-New-CMOperatingSystemImageUpdateSchedule [-ContinueOnError <Boolean>] [-RemoveSupersededUpdates <Boolean>]
- [-CustomSchedule <DateTime>] -SoftwareUpdate <IResultObject[]> [-UpdateDistributionPoint <Boolean>]
+New-CMOperatingSystemImageUpdateSchedule [-ContinueOnError <Boolean>] [-CustomSchedule <DateTime>]
+ [-RemoveSupersededUpdates <Boolean>] -SoftwareUpdate <IResultObject[]> [-UpdateDistributionPoint <Boolean>]
  [-Utc <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### NewScheduleByIdRunNow
+```
+New-CMOperatingSystemImageUpdateSchedule [-ContinueOnError <Boolean>] -Id <String>
+ [-RemoveSupersededUpdates <Boolean>] [-RunNow] -SoftwareUpdate <IResultObject[]>
+ [-UpdateDistributionPoint <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### NewScheduleByInputObjectRunNow
 ```
-New-CMOperatingSystemImageUpdateSchedule [-ContinueOnError <Boolean>] [-RemoveSupersededUpdates <Boolean>]
- -InputObject <IResultObject> [-RunNow] -SoftwareUpdate <IResultObject[]> [-UpdateDistributionPoint <Boolean>]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+New-CMOperatingSystemImageUpdateSchedule [-ContinueOnError <Boolean>] -InputObject <IResultObject>
+ [-RemoveSupersededUpdates <Boolean>] [-RunNow] -SoftwareUpdate <IResultObject[]>
+ [-UpdateDistributionPoint <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### NewScheduleByNameRunNow
+```
+New-CMOperatingSystemImageUpdateSchedule [-ContinueOnError <Boolean>] -Name <String>
+ [-RemoveSupersededUpdates <Boolean>] [-RunNow] -SoftwareUpdate <IResultObject[]>
+ [-UpdateDistributionPoint <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### NewScheduleByScheduleInputObjectRunNow
@@ -98,21 +99,6 @@ The last command creates an operating system image update schedule to update the
 The update will run now, and will continue to apply the updates even if an error is encountered.
 
 ## PARAMETERS
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -ContinueOnError
 Indicates whether software updates should be applied to the image even when there is an error.
@@ -240,7 +226,7 @@ Indicates that the update should run now.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: NewScheduleByNameRunNow, NewScheduleByIdRunNow, NewScheduleByInputObjectRunNow, NewScheduleByScheduleInputObjectRunNow
+Parameter Sets: NewScheduleByIdRunNow, NewScheduleByInputObjectRunNow, NewScheduleByNameRunNow, NewScheduleByScheduleInputObjectRunNow
 Aliases:
 
 Required: False
@@ -292,6 +278,21 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

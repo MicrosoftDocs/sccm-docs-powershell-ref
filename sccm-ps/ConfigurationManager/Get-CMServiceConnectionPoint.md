@@ -1,4 +1,4 @@
----
+﻿---
 description: Gets a service connection point.
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,7 +16,7 @@ Gets a service connection point.
 
 ### SearchByName (Default)
 ```
-Get-CMServiceConnectionPoint [-SiteCode <String>] [[-SiteSystemServerName] <String>] [-AllSite]
+Get-CMServiceConnectionPoint [-AllSite] [-SiteCode <String>] [[-SiteSystemServerName] <String>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 

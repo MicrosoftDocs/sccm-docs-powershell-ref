@@ -1,4 +1,4 @@
----
+﻿---
 description: Gets a cloud management gateway connection point.
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,7 +16,7 @@ Gets a cloud management gateway connection point.
 
 ### SearchByName (Default)
 ```
-Get-CMCloudManagementGatewayConnectionPoint [-SiteCode <String>] [[-SiteSystemServerName] <String>] [-AllSite]
+Get-CMCloudManagementGatewayConnectionPoint [-AllSite] [-SiteCode <String>] [[-SiteSystemServerName] <String>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 

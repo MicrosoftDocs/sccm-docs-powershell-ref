@@ -1,4 +1,4 @@
----
+﻿---
 description: Gets Configuration Manager PowerShell scripts.
 external help file: AdminUI.PS.ClientOperations.dll-Help.xml
 Module Name: ConfigurationManager
@@ -15,8 +15,15 @@ Gets Configuration Manager PowerShell scripts.
 
 ## SYNTAX
 
+### ByName (Default)
 ```
-Get-CMScript [-Author <String>] [-ScriptName <String>] [-Fast] [-DisableWildcardHandling]
+Get-CMScript [-Author <String>] [-Fast] [-ScriptName <String>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [<CommonParameters>]
+```
+
+### ById
+```
+Get-CMScript [-Author <String>] [-Fast] -ScriptGuid <String> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
@@ -118,13 +125,28 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ScriptGuid
+{{ Fill ScriptGuid Description }}
+
+```yaml
+Type: String
+Parameter Sets: ById
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ScriptName
 
 Specifies a script name.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: ByName
 Aliases:
 
 Required: False

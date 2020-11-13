@@ -1,4 +1,4 @@
----
+﻿---
 description: Gets Configuration Manager configuration items.
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 Module Name: ConfigurationManager
@@ -17,13 +17,13 @@ Gets Configuration Manager configuration items.
 
 ### SearchByName (Default)
 ```
-Get-CMConfigurationItem [[-Name] <String>] [-Fast] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Get-CMConfigurationItem [-Fast] [[-Name] <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory
 ```
-Get-CMConfigurationItem [-Id] <Int32> [-Fast] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Get-CMConfigurationItem [-Fast] [-Id] <Int32> [-DisableWildcardHandling] [-ForceWildcardHandling]
  [<CommonParameters>]
 ```
 

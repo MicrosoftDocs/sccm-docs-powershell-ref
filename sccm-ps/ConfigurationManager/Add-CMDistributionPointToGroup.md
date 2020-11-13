@@ -1,4 +1,4 @@
----
+﻿---
 description: Adds a distribution point to a distribution point group.
 external help file: AdminUI.PS.Content.dll-Help.xml
 Module Name: ConfigurationManager
@@ -20,42 +20,6 @@ Add-CMDistributionPointToGroup -DistributionPoint <IResultObject> -DistributionP
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### AddDistributionPointToGroupById_Id
-```
-Add-CMDistributionPointToGroup -DistributionPointId <String> -DistributionPointGroupId <String>
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### AddDistributionPointToGroupById_Name
-```
-Add-CMDistributionPointToGroup -DistributionPointId <String> -DistributionPointGroupName <String>
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### AddDistributionPointToGroupById_Object
-```
-Add-CMDistributionPointToGroup -DistributionPointId <String> -DistributionPointGroup <IResultObject>
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### AddDistributionPointToGroupByName_Id
-```
-Add-CMDistributionPointToGroup -DistributionPointName <String> -DistributionPointGroupId <String>
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### AddDistributionPointToGroupByName_Name
-```
-Add-CMDistributionPointToGroup -DistributionPointName <String> -DistributionPointGroupName <String>
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### AddDistributionPointToGroupByName_Object
-```
-Add-CMDistributionPointToGroup -DistributionPointName <String> -DistributionPointGroup <IResultObject>
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
 ### AddDistributionPointToGroupByObject_Id
 ```
 Add-CMDistributionPointToGroup -DistributionPoint <IResultObject> -DistributionPointGroupId <String>
@@ -65,6 +29,42 @@ Add-CMDistributionPointToGroup -DistributionPoint <IResultObject> -DistributionP
 ### AddDistributionPointToGroupByObject_Name
 ```
 Add-CMDistributionPointToGroup -DistributionPoint <IResultObject> -DistributionPointGroupName <String>
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### AddDistributionPointToGroupById_Object
+```
+Add-CMDistributionPointToGroup -DistributionPointGroup <IResultObject> -DistributionPointId <String>
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### AddDistributionPointToGroupByName_Object
+```
+Add-CMDistributionPointToGroup -DistributionPointGroup <IResultObject> -DistributionPointName <String>
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### AddDistributionPointToGroupById_Id
+```
+Add-CMDistributionPointToGroup -DistributionPointGroupId <String> -DistributionPointId <String>
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### AddDistributionPointToGroupByName_Id
+```
+Add-CMDistributionPointToGroup -DistributionPointGroupId <String> -DistributionPointName <String>
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### AddDistributionPointToGroupById_Name
+```
+Add-CMDistributionPointToGroup -DistributionPointGroupName <String> -DistributionPointId <String>
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### AddDistributionPointToGroupByName_Name
+```
+Add-CMDistributionPointToGroup -DistributionPointGroupName <String> -DistributionPointName <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -90,21 +90,6 @@ PS XYZ:\>Add-CMDistributionPointToGroup -DistributionPointGroupName "DPG01" -Id 
 This command adds the distribution point that has the Id FA921CF2-89C9-407D-A21D-FE6947F2C00A to the distribution point group named DPG01.
 
 ## PARAMETERS
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -DisableWildcardHandling
 DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
@@ -158,7 +143,7 @@ Specifies the ID of a distribution point group.
 
 ```yaml
 Type: String
-Parameter Sets: AddDistributionPointToGroupById_Id, AddDistributionPointToGroupByName_Id, AddDistributionPointToGroupByObject_Id
+Parameter Sets: AddDistributionPointToGroupByObject_Id, AddDistributionPointToGroupById_Id, AddDistributionPointToGroupByName_Id
 Aliases:
 
 Required: True
@@ -173,7 +158,7 @@ Specifies the name of a distribution point group.
 
 ```yaml
 Type: String
-Parameter Sets: AddDistributionPointToGroupById_Name, AddDistributionPointToGroupByName_Name, AddDistributionPointToGroupByObject_Name
+Parameter Sets: AddDistributionPointToGroupByObject_Name, AddDistributionPointToGroupById_Name, AddDistributionPointToGroupByName_Name
 Aliases:
 
 Required: True
@@ -188,7 +173,7 @@ Specifies the ID of a distribution point.
 
 ```yaml
 Type: String
-Parameter Sets: AddDistributionPointToGroupById_Id, AddDistributionPointToGroupById_Name, AddDistributionPointToGroupById_Object
+Parameter Sets: AddDistributionPointToGroupById_Object, AddDistributionPointToGroupById_Id, AddDistributionPointToGroupById_Name
 Aliases:
 
 Required: True
@@ -203,7 +188,7 @@ Specifies the name of a distribution point.
 
 ```yaml
 Type: String
-Parameter Sets: AddDistributionPointToGroupByName_Id, AddDistributionPointToGroupByName_Name, AddDistributionPointToGroupByName_Object
+Parameter Sets: AddDistributionPointToGroupByName_Object, AddDistributionPointToGroupByName_Id, AddDistributionPointToGroupByName_Name
 Aliases:
 
 Required: True
@@ -224,6 +209,21 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

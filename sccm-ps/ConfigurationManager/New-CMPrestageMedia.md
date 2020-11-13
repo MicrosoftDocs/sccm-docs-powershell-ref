@@ -1,4 +1,4 @@
----
+﻿---
 description: Create an OS deployment prestaged media file.
 external help file: AdminUI.PS.Osd.dll-Help.xml
 Module Name: ConfigurationManager
@@ -17,15 +17,15 @@ Create an OS deployment prestaged media file.
 
 ```
 New-CMPrestageMedia [-Application <IResultObject[]>] [-Comment <String>] [-CreatedBy <String>]
- [-DriverPackage <IResultObject[]>] -OperatingSystemImage <IResultObject> [-OperatingSystemImageIndex <Int32>]
- [-Package <IResultObject[]>] [-Version <String>] [-IncludeApplicationDependency] -TaskSequence <IResultObject>
- [-AllowUacPrompt] [-AllowUnattended] [-AllowUnknownMachine] -BootImage <IResultObject>
+ [-DriverPackage <IResultObject[]>] [-IncludeApplicationDependency] -OperatingSystemImage <IResultObject>
+ [-OperatingSystemImageIndex <Int32>] [-Package <IResultObject[]>] -TaskSequence <IResultObject>
+ [-Version <String>] [-AllowUacPrompt] [-AllowUnattended] [-AllowUnknownMachine] -BootImage <IResultObject>
  [-CertificateExpireTime <DateTime>] [-CertificatePassword <SecureString>] [-CertificatePath <String>]
  [-CertificateStartTime <DateTime>] -DistributionPoint <IResultObject[]> [-Force]
- -ManagementPoint <IResultObject[]> -MediaMode <MediaMode> [-MediaPassword <SecureString>] -Path <String>
- [-TemporaryFolder <String>] [-NoAutoRun] [-PrestartCommand <String>] [-PrestartPackage <IResultObject>]
- [-UserDeviceAffinity <UserDeviceAffinityType>] [-Variable <Hashtable>] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ -ManagementPoint <IResultObject[]> [-SiteCode <String>] -MediaMode <MediaMode> [-MediaPassword <SecureString>]
+ [-NoAutoRun] -Path <String> [-PrestartCommand <String>] [-PrestartPackage <IResultObject>]
+ [-TemporaryFolder <String>] [-UserDeviceAffinity <UserDeviceAffinityType>] [-Variable <Hashtable>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -206,22 +206,6 @@ An optional string to provide further details about the media. It's useful to de
 Type: String
 Parameter Sets: (All)
 Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
 
 Required: False
 Position: Named
@@ -507,6 +491,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -SiteCode
+{{ Fill SiteCode Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -TaskSequence
 
 Specify a task sequence object for this media to run.
@@ -592,6 +591,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 
 Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
@@ -618,7 +633,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
-
 ## NOTES
 
 Cmdlet aliases: **New-CMPrestagedMedia**

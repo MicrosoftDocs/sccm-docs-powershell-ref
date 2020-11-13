@@ -1,4 +1,4 @@
----
+﻿---
 description: Gets the security scope associated with a Configuration Manager object.
 external help file: AdminUI.PS.Common.dll-Help.xml
 Module Name: ConfigurationManager
@@ -22,7 +22,7 @@ Get-CMObjectSecurityScope -InputObject <IResultObject> [-Name <String>] [-Disabl
 
 ### FilterById
 ```
-Get-CMObjectSecurityScope -InputObject <IResultObject> [-Id <String>] [-DisableWildcardHandling]
+Get-CMObjectSecurityScope [-Id <String>] -InputObject <IResultObject> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [<CommonParameters>]
 ```
 

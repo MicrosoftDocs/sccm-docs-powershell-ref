@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 Module Name: ConfigurationManager
 online version:
@@ -13,9 +13,9 @@ schema: 2.0.0
 ## SYNTAX
 
 ```
-New-CMRequirementRuleExpression [-AddRequirementRule <Rule[]>] [-AddExpression <ExpressionBase[]>]
- [-RootExpression <ExpressionBase>] [-ClauseOperator <ConnectOperator>] [-GroupOperator <ConnectOperator>]
- [-AddAsGroup] [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
+New-CMRequirementRuleExpression [-AddAsGroup] [-AddExpression <ExpressionBase[]>]
+ [-AddRequirementRule <Rule[]>] [-ClauseOperator <ConnectOperator>] [-GroupOperator <ConnectOperator>]
+ [-RootExpression <ExpressionBase>] [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Deployments.dll-Help.xml
 Module Name: ConfigurationManager
 online version:
@@ -12,6 +12,12 @@ schema: 2.0.0
 Use this cmdlet to remove a phased deployment for software updates.
 
 ## SYNTAX
+
+### SearchBySoftwareUpdate
+```
+Remove-CMSoftwareUpdatePhasedDeployment -SoftwareUpdate <IResultObject> [-Force] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
 
 ### SearchBySoftwareUpdateGroup
 ```
@@ -31,12 +37,6 @@ Remove-CMSoftwareUpdatePhasedDeployment -SoftwareUpdateGroupName <String> [-Forc
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### SearchBySoftwareUpdate
-```
-Remove-CMSoftwareUpdatePhasedDeployment -SoftwareUpdate <IResultObject> [-Force] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
 ### SearchBySoftwareUpdateId
 ```
 Remove-CMSoftwareUpdatePhasedDeployment -SoftwareUpdateId <String> [-Force] [-DisableWildcardHandling]
@@ -51,7 +51,7 @@ Remove-CMSoftwareUpdatePhasedDeployment -SoftwareUpdateName <String> [-Force] [-
 
 ### SearchByValue
 ```
-Remove-CMSoftwareUpdatePhasedDeployment -InputObject <IResultObject> [-Force] [-DisableWildcardHandling]
+Remove-CMSoftwareUpdatePhasedDeployment [-Force] -InputObject <IResultObject> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -106,22 +106,6 @@ $myPhasedDeployment | Remove-CMSoftwareUpdatePhasedDeployment -Force
 ```
 
 ## PARAMETERS
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -DisableWildcardHandling
 
@@ -309,6 +293,22 @@ Parameter Sets: SearchBySoftwareUpdateName
 Aliases:
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False

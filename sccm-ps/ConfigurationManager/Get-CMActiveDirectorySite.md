@@ -1,4 +1,4 @@
----
+﻿---
 description: Gets Configuration Manager sites that publish data to AD DS.
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -20,11 +20,6 @@ Get-CMActiveDirectorySite [-Name <String>] [-DisableWildcardHandling] [-ForceWil
  [<CommonParameters>]
 ```
 
-### SearchByIdMandatory
-```
-Get-CMActiveDirectorySite -Id <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
-```
-
 ### SearchByForestName
 ```
 Get-CMActiveDirectorySite -ForestFqdn <String[]> [-DisableWildcardHandling] [-ForceWildcardHandling]
@@ -35,6 +30,11 @@ Get-CMActiveDirectorySite -ForestFqdn <String[]> [-DisableWildcardHandling] [-Fo
 ```
 Get-CMActiveDirectorySite -ForestId <String[]> [-DisableWildcardHandling] [-ForceWildcardHandling]
  [<CommonParameters>]
+```
+
+### SearchByIdMandatory
+```
+Get-CMActiveDirectorySite -Id <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

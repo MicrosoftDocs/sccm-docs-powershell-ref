@@ -1,4 +1,4 @@
----
+﻿---
 description: Changes configuration settings for software update groups in Configuration Manager.
 external help file: AdminUI.PS.Sum.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,25 +16,25 @@ Changes configuration settings for software update groups in Configuration Manag
 
 ### SetById (Default)
 ```
-Set-CMSoftwareUpdateGroup -Id <Int32> [-NewName <String>] [-Description <String>]
- [-AddSoftwareUpdate <IResultObject[]>] [-RemoveSoftwareUpdate <IResultObject[]>] [-ClearSoftwareUpdate]
- [-ClearExpiredSoftwareUpdate] [-ClearSupersededSoftwareUpdate] [-PassThru] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### SetByName
-```
-Set-CMSoftwareUpdateGroup -Name <String> [-NewName <String>] [-Description <String>]
- [-AddSoftwareUpdate <IResultObject[]>] [-RemoveSoftwareUpdate <IResultObject[]>] [-ClearSoftwareUpdate]
- [-ClearExpiredSoftwareUpdate] [-ClearSupersededSoftwareUpdate] [-PassThru] [-DisableWildcardHandling]
+Set-CMSoftwareUpdateGroup [-AddSoftwareUpdate <IResultObject[]>] [-ClearExpiredSoftwareUpdate]
+ [-ClearSoftwareUpdate] [-ClearSupersededSoftwareUpdate] [-Description <String>] -Id <Int32>
+ [-NewName <String>] [-PassThru] [-RemoveSoftwareUpdate <IResultObject[]>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetByValueMandatory
 ```
-Set-CMSoftwareUpdateGroup -InputObject <IResultObject> [-NewName <String>] [-Description <String>]
- [-AddSoftwareUpdate <IResultObject[]>] [-RemoveSoftwareUpdate <IResultObject[]>] [-ClearSoftwareUpdate]
- [-ClearExpiredSoftwareUpdate] [-ClearSupersededSoftwareUpdate] [-PassThru] [-DisableWildcardHandling]
+Set-CMSoftwareUpdateGroup [-AddSoftwareUpdate <IResultObject[]>] [-ClearExpiredSoftwareUpdate]
+ [-ClearSoftwareUpdate] [-ClearSupersededSoftwareUpdate] [-Description <String>] -InputObject <IResultObject>
+ [-NewName <String>] [-PassThru] [-RemoveSoftwareUpdate <IResultObject[]>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SetByName
+```
+Set-CMSoftwareUpdateGroup [-AddSoftwareUpdate <IResultObject[]>] [-ClearExpiredSoftwareUpdate]
+ [-ClearSoftwareUpdate] [-ClearSupersededSoftwareUpdate] [-Description <String>] -Name <String>
+ [-NewName <String>] [-PassThru] [-RemoveSoftwareUpdate <IResultObject[]>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -116,21 +116,6 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -267,6 +252,21 @@ Aliases: RemoveSoftwareUpdates
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

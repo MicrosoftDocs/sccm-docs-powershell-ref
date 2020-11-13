@@ -1,4 +1,4 @@
----
+﻿---
 description: Creates a XPath Query type global condition in Configuration Manager.
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 Module Name: ConfigurationManager
@@ -17,17 +17,17 @@ Creates a XPath Query type global condition in Configuration Manager.
 
 ### NewQueryFromFile (Default)
 ```
-New-CMGlobalConditionXPathQuery -DataType <GlobalConditionDataType> -XmlFilePath <String>
- -XPathQueryFilePath <String> [-IncludeSubfolder <Boolean>] [-Is64Bit <Boolean>] [-XmlNamespace <String[]>]
- -Name <String> [-Description <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+New-CMGlobalConditionXPathQuery -DataType <GlobalConditionDataType> [-IncludeSubfolder <Boolean>]
+ [-Is64Bit <Boolean>] -XmlFilePath <String> [-XmlNamespace <String[]>] -XPathQueryFilePath <String>
+ [-Description <String>] -Name <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
  [<CommonParameters>]
 ```
 
 ### NewQueryFromText
 ```
-New-CMGlobalConditionXPathQuery -DataType <GlobalConditionDataType> -XmlFilePath <String>
- [-IncludeSubfolder <Boolean>] [-Is64Bit <Boolean>] [-XmlNamespace <String[]>] -XPathQuery <String>
- -Name <String> [-Description <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+New-CMGlobalConditionXPathQuery -DataType <GlobalConditionDataType> [-IncludeSubfolder <Boolean>]
+ [-Is64Bit <Boolean>] -XmlFilePath <String> [-XmlNamespace <String[]>] -XPathQuery <String>
+ [-Description <String>] -Name <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
  [<CommonParameters>]
 ```
 
@@ -167,38 +167,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -XPathQuery
-
-Specifies a valid full XML path language (XPath) query to use to assess compliance on client computers.
-
-```yaml
-Type: String
-Parameter Sets: NewQueryFromText
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -XPathQueryFilePath
-
-Specifies an XPath query file path.
-
-```yaml
-Type: String
-Parameter Sets: NewQueryFromFile
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -XmlFilePath
 
 Specifies the path to the XML file on client computers that will be used to assess compliance. Configuration Manager supports the use of all Windows system environment variables and the %USERPROFILE% user variable in the path name.
@@ -225,6 +193,38 @@ Parameter Sets: (All)
 Aliases: XmlNamespaces
 
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -XPathQuery
+
+Specifies a valid full XML path language (XPath) query to use to assess compliance on client computers.
+
+```yaml
+Type: String
+Parameter Sets: NewQueryFromText
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -XPathQueryFilePath
+
+Specifies an XPath query file path.
+
+```yaml
+Type: String
+Parameter Sets: NewQueryFromFile
+Aliases:
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False

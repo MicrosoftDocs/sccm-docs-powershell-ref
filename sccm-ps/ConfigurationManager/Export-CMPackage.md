@@ -1,4 +1,4 @@
----
+﻿---
 description: Exports a Configuration Manager package.
 external help file: AdminUI.PS.AppModel.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,22 +16,22 @@ Exports a Configuration Manager package.
 
 ### SearchByValue (Default)
 ```
-Export-CMPackage -InputObject <IResultObject> -FileName <String> [-WithDependence <Boolean>]
- [-WithContent <Boolean>] [-Comment <String>] [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Export-CMPackage [-Comment <String>] -FileName <String> [-Force] -InputObject <IResultObject>
+ [-WithContent <Boolean>] [-WithDependence <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchPackageByIdMandatory
 ```
-Export-CMPackage -Id <String> -FileName <String> [-WithDependence <Boolean>] [-WithContent <Boolean>]
- [-Comment <String>] [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+Export-CMPackage [-Comment <String>] -FileName <String> [-Force] -Id <String> [-WithContent <Boolean>]
+ [-WithDependence <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ### SearchPackageByNameMandatory
 ```
-Export-CMPackage -Name <String> -FileName <String> [-WithDependence <Boolean>] [-WithContent <Boolean>]
- [-Comment <String>] [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+Export-CMPackage [-Comment <String>] -FileName <String> [-Force] -Name <String> [-WithContent <Boolean>]
+ [-WithDependence <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
@@ -74,21 +74,6 @@ Aliases: Comments
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -197,22 +182,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -WithContent
 Indicates whether to include content in the package.
 
@@ -239,6 +208,37 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

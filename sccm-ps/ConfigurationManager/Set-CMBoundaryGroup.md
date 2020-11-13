@@ -1,4 +1,4 @@
----
+﻿---
 description: Modify the properties of a boundary group.
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -17,32 +17,32 @@ Modify the properties of a boundary group.
 
 ### SetByValueMandatory (Default)
 ```
-Set-CMBoundaryGroup -InputObject <IResultObject> [-NewName <String>] [-Description <String>]
- [-DefaultSiteCode <String>] [-AddSiteSystemServer <IResultObject[]>] [-AddSiteSystemServerName <String[]>]
- [-RemoveSiteSystemServer <IResultObject[]>] [-RemoveSiteSystemServerName <String[]>] [-ClearSiteSystemServer]
- [-AllowPeerDownload <Boolean>] [-SubnetPeerDownloadOnly <Boolean>] [-PreferDPOverPeer <Boolean>]
- [-PreferCloudDPOverDP <Boolean>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Set-CMBoundaryGroup [-AddSiteSystemServer <IResultObject[]>] [-AddSiteSystemServerName <String[]>]
+ [-AllowPeerDownload <Boolean>] [-ClearSiteSystemServer] [-DefaultSiteCode <String>] [-Description <String>]
+ -InputObject <IResultObject> [-NewName <String>] [-PassThru] [-PreferCloudDPOverDP <Boolean>]
+ [-PreferDPOverPeer <Boolean>] [-RemoveSiteSystemServer <IResultObject[]>]
+ [-RemoveSiteSystemServerName <String[]>] [-SubnetPeerDownloadOnly <Boolean>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetById
 ```
-Set-CMBoundaryGroup -Id <String> [-NewName <String>] [-Description <String>] [-DefaultSiteCode <String>]
- [-AddSiteSystemServer <IResultObject[]>] [-AddSiteSystemServerName <String[]>]
- [-RemoveSiteSystemServer <IResultObject[]>] [-RemoveSiteSystemServerName <String[]>] [-ClearSiteSystemServer]
- [-AllowPeerDownload <Boolean>] [-SubnetPeerDownloadOnly <Boolean>] [-PreferDPOverPeer <Boolean>]
- [-PreferCloudDPOverDP <Boolean>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Set-CMBoundaryGroup [-AddSiteSystemServer <IResultObject[]>] [-AddSiteSystemServerName <String[]>]
+ [-AllowPeerDownload <Boolean>] [-ClearSiteSystemServer] [-DefaultSiteCode <String>] [-Description <String>]
+ -Id <String> [-NewName <String>] [-PassThru] [-PreferCloudDPOverDP <Boolean>] [-PreferDPOverPeer <Boolean>]
+ [-RemoveSiteSystemServer <IResultObject[]>] [-RemoveSiteSystemServerName <String[]>]
+ [-SubnetPeerDownloadOnly <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### SetByName
 ```
-Set-CMBoundaryGroup -Name <String> [-NewName <String>] [-Description <String>] [-DefaultSiteCode <String>]
- [-AddSiteSystemServer <IResultObject[]>] [-AddSiteSystemServerName <String[]>]
- [-RemoveSiteSystemServer <IResultObject[]>] [-RemoveSiteSystemServerName <String[]>] [-ClearSiteSystemServer]
- [-AllowPeerDownload <Boolean>] [-SubnetPeerDownloadOnly <Boolean>] [-PreferDPOverPeer <Boolean>]
- [-PreferCloudDPOverDP <Boolean>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Set-CMBoundaryGroup [-AddSiteSystemServer <IResultObject[]>] [-AddSiteSystemServerName <String[]>]
+ [-AllowPeerDownload <Boolean>] [-ClearSiteSystemServer] [-DefaultSiteCode <String>] [-Description <String>]
+ -Name <String> [-NewName <String>] [-PassThru] [-PreferCloudDPOverDP <Boolean>] [-PreferDPOverPeer <Boolean>]
+ [-RemoveSiteSystemServer <IResultObject[]>] [-RemoveSiteSystemServerName <String[]>]
+ [-SubnetPeerDownloadOnly <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -146,22 +146,6 @@ Aliases: ClearSiteSystemServers
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -394,6 +378,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 
 Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
@@ -411,7 +411,6 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -421,8 +420,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### IResultObject#SMS_BoundaryGroup
-
-For more information on this return object and its properties, see [SMS_BoundaryGroup](https://docs.microsoft.com/mem/configmgr/develop/reference/core/servers/configure/sms_boundarygroup-server-wmi-class).
 
 ## NOTES
 

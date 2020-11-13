@@ -1,4 +1,4 @@
----
+﻿---
 description: Creates a t s step setup windows and config mgr.
 external help file: AdminUI.PS.Osd.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,9 +16,9 @@ Creates a t s step setup windows and config mgr.
 ## SYNTAX
 
 ```
-New-CMTSStepSetupWindowsAndConfigMgr -PackageId <String> [-PreproductionPackageId <String>]
- [-InstallationProperty <String>] -Name <String> [-Description <String>] [-ContinueOnError] [-Disable]
- [-Condition <IResultObject[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+New-CMTSStepSetupWindowsAndConfigMgr [-InstallationProperty <String>] -PackageId <String>
+ [-PreproductionPackageId <String>] [-Condition <IResultObject[]>] [-ContinueOnError] [-Description <String>]
+ [-Disable] -Name <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
@@ -43,21 +43,6 @@ PS XYZ:\>
 Type: IResultObject[]
 Parameter Sets: (All)
 Aliases: Conditions
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
 
 Required: False
 Position: Named
@@ -179,6 +164,21 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: (All)
 Aliases: PreproductionClientPackageId
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
 
 Required: False
 Position: Named

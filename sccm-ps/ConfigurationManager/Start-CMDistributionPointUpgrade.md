@@ -1,4 +1,4 @@
----
+﻿---
 description: Upgrade a shared distribution point.
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -17,36 +17,35 @@ Upgrades a shared distribution point.
 ### UseImportCertificate (Default)
 ```
 Start-CMDistributionPointUpgrade [-AllowFallbackForContent <Boolean>] [-AllowPreStaging <Boolean>]
- [-AllowRespondIncomingPxeRequest <Boolean>] [-ClientConnectionType <ClientConnectionTypes>]
- [-ClientCommunicationMode <ComputerCommunicationType>] [-PxePassword <SecureString>]
- [-ContentValidationPriority <Priority>] [-EnableAnonymous <Boolean>] [-EnablePxeSupport <Boolean>]
- [-EnableUnknownComputerSupport <Boolean>] [-EnableNonWdsPxe <Boolean>] [-InitiateConnection <Boolean>]
- [-InstallIis <Boolean>] [-MacAddressForRespondingPxeRequest <String[]>] [-PublicFqdn <String>]
- [-PxeServerResponseDelaySec <Int32>] [-UserDeviceAffinity <UserDeviceAffinityType>]
- [-ValidateContentSchedule <IResultObject>] [-CertificatePassword <SecureString>] -CertificatePath <String>
- -DestinationSiteCode <String> [-ForceWhenDuplicateCertificate <Boolean>]
- [-InstallationAccount <IResultObject>] [-MinFreeSpaceMB <Int32>] [-PathForSavingMigratedPackage <String>]
- [-PrimaryContentLibraryLocation <DriveType>] [-PrimaryPackageShareLocation <DriveType>]
+ [-AllowRespondIncomingPxeRequest <Boolean>] [-CertificatePassword <SecureString>] -CertificatePath <String>
+ [-ClientCommunicationMode <ComputerCommunicationType>] [-ClientConnectionType <ClientConnectionTypes>]
+ [-ContentValidationPriority <Priority>] -DestinationSiteCode <String> [-EnableAnonymous <Boolean>]
+ [-EnableNonWdsPxe <Boolean>] [-EnablePxeSupport <Boolean>] [-EnableUnknownComputerSupport <Boolean>]
+ [-ForceWhenDuplicateCertificate <Boolean>] [-InitiateConnection <Boolean>] -InputObject <IResultObject>
+ [-InstallationAccount <IResultObject>] [-InstallIis <Boolean>] [-MacAddressForRespondingPxeRequest <String[]>]
+ [-MinFreeSpaceMB <Int32>] [-PathForSavingMigratedPackage <String>]
+ [-PrimaryContentLibraryLocation <DriveType>] [-PrimaryPackageShareLocation <DriveType>] [-PublicFqdn <String>]
+ [-PxePassword <SecureString>] [-PxeServerResponseDelaySec <Int32>]
  [-SecondaryContentLibraryLocation <DriveType>] [-SecondaryPackageShareLocation <DriveType>]
- -InputObject <IResultObject> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-UserDeviceAffinity <UserDeviceAffinityType>] [-ValidateContentSchedule <IResultObject>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### UseSelfSignedCertificate
 ```
 Start-CMDistributionPointUpgrade [-AllowFallbackForContent <Boolean>] [-AllowPreStaging <Boolean>]
- [-AllowRespondIncomingPxeRequest <Boolean>] [-ClientConnectionType <ClientConnectionTypes>]
- [-ClientCommunicationMode <ComputerCommunicationType>] [-PxePassword <SecureString>]
- [-ContentValidationPriority <Priority>] [-EnableAnonymous <Boolean>] [-EnablePxeSupport <Boolean>]
- [-EnableUnknownComputerSupport <Boolean>] [-EnableNonWdsPxe <Boolean>] [-InitiateConnection <Boolean>]
- [-InstallIis <Boolean>] [-MacAddressForRespondingPxeRequest <String[]>] [-PublicFqdn <String>]
- [-PxeServerResponseDelaySec <Int32>] [-UserDeviceAffinity <UserDeviceAffinityType>]
- [-ValidateContentSchedule <IResultObject>] -CertificateExpirationTimeUtc <DateTime>
- -DestinationSiteCode <String> [-InstallationAccount <IResultObject>] [-MinFreeSpaceMB <Int32>]
+ [-AllowRespondIncomingPxeRequest <Boolean>] -CertificateExpirationTimeUtc <DateTime>
+ [-ClientCommunicationMode <ComputerCommunicationType>] [-ClientConnectionType <ClientConnectionTypes>]
+ [-ContentValidationPriority <Priority>] -DestinationSiteCode <String> [-EnableAnonymous <Boolean>]
+ [-EnableNonWdsPxe <Boolean>] [-EnablePxeSupport <Boolean>] [-EnableUnknownComputerSupport <Boolean>]
+ [-InitiateConnection <Boolean>] -InputObject <IResultObject> [-InstallationAccount <IResultObject>]
+ [-InstallIis <Boolean>] [-MacAddressForRespondingPxeRequest <String[]>] [-MinFreeSpaceMB <Int32>]
  [-PathForSavingMigratedPackage <String>] [-PrimaryContentLibraryLocation <DriveType>]
- [-PrimaryPackageShareLocation <DriveType>] [-SecondaryContentLibraryLocation <DriveType>]
- [-SecondaryPackageShareLocation <DriveType>] -InputObject <IResultObject> [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-PrimaryPackageShareLocation <DriveType>] [-PublicFqdn <String>] [-PxePassword <SecureString>]
+ [-PxeServerResponseDelaySec <Int32>] [-SecondaryContentLibraryLocation <DriveType>]
+ [-SecondaryPackageShareLocation <DriveType>] [-UserDeviceAffinity <UserDeviceAffinityType>]
+ [-ValidateContentSchedule <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -199,21 +198,6 @@ Accepted values: Intranet, Internet, InternetAndIntranet
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -394,19 +378,6 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### -InstallIis
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases: InstallInternetServer
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -InstallationAccount
 Specifies a Site System Installation Account.
 Configuration Manager 2007 Site Component Manager service uses Site System Installation Accounts to install, reinstall, uninstall, and configure site systems.
@@ -415,6 +386,19 @@ Configuration Manager 2007 Site Component Manager service uses Site System Insta
 Type: IResultObject
 Parameter Sets: (All)
 Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InstallIis
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: InstallInternetServer
 
 Required: False
 Position: Named
@@ -630,6 +614,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
@@ -654,6 +653,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
 
 ## OUTPUTS
+
+### 
 
 ## NOTES
 

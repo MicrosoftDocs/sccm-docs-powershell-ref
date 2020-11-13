@@ -1,4 +1,4 @@
----
+﻿---
 description: Modifies a user data and profile configuration item.
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,84 +16,83 @@ Modifies a user data and profile configuration item.
 
 ### SetByValue (Default)
 ```
-Set-CMUserDataAndProfileConfigurationItem [-InputObject] <IResultObject>
+Set-CMUserDataAndProfileConfigurationItem [-AccessPolicy <Boolean>] [-AddAdminGroupToRupEnabled <Boolean>]
+ [-AllowAllDevice <Boolean>] [-AllowCrossForestUserPolicy <Boolean>] [-AppDataRoaming <FolderRedirectionType>]
+ [-BackgroundSynchronization <SynchronizationType>] [-BackgroundUploadHour <Int32>]
  [-ConfigureFolderRedirection <Boolean>] [-ConfigureOfflineFile <Boolean>]
- [-ConfigureRoamingUserProfile <Boolean>] [-DeviceType <DeviceType>] [-Desktop <FolderRedirectionType>]
- [-StartMenu <FolderRedirectionType>] [-Document <FolderRedirectionType>] [-Music <FolderRedirectionType>]
- [-Video <FolderRedirectionType>] [-Favorite <FolderRedirectionType>] [-Contact <FolderRedirectionType>]
- [-Download <FolderRedirectionType>] [-Link <FolderRedirectionType>] [-Search <FolderRedirectionType>]
- [-SavedGame <FolderRedirectionType>] [-AppDataRoaming <FolderRedirectionType>]
- [-Picture <FolderRedirectionType>] [-UseSpecifiedLocation <Boolean>] [-SpecifiedLocation <String>]
- [-ManageAdvancedSetting <Boolean>] [-GrantExclusiveRight <Boolean>] [-MoveContent <Boolean>]
- [-LeaveFolderNewLocation <Boolean>] [-MoveCachedFolder <Boolean>] [-UseCommonAlert <Boolean>]
- [-ErrorDays <Int32>] [-WarningDays <Int32>] [-EnableOfflineFile <Boolean>]
- [-BackgroundSynchronization <SynchronizationType>] [-FileSynchronization <SynchronizationType>]
- [-OfflineFile <String[]>] [-EnableSlowLink <Boolean>] [-SlowLink <Int32>] [-SyncMins <Int32>]
- [-DisableWorkOffline <Boolean>] [-DisableMakeOffline <Boolean>] [-LimitDisk <Int32>]
- [-AllowAllDevice <Boolean>] [-ExcludeList <String[]>] [-SynchronizationList <String[]>]
- [-ManageSlowLink <Boolean>] [-DetectSlowLink <Boolean>] [-TimeOut <Int32>] [-ConnectionTransferRate <Int32>]
- [-SlowLinkUIEnabled <Boolean>] [-WaitForNetworkSec <Int32>] [-AccessPolicy <Boolean>]
- [-OwnerCheckDisabled <Boolean>] [-AddAdminGroupToRupEnabled <Boolean>] [-AllowCrossForestUserPolicy <Boolean>]
- [-TempProfileLogonBlocked <Boolean>] [-OnlyAllowLocalProfile <Boolean>] [-SynchronizationPolicy <Boolean>]
- [-SpecifyTime <String>] [-BackgroundUploadHour <Int32>] [-SpecifyTimeMin <Int32>]
- [-DeleteRoamingCacheEnabled <Boolean>] [-DeleteProfileOlderDays <Int32>] [-ForceUnloadDisabled <Boolean>]
- [-ProfileUploadDisabled <Boolean>] [-Description <String>] [-Digest <ConfigurationItem>]
+ [-ConfigureRoamingUserProfile <Boolean>] [-ConnectionTransferRate <Int32>] [-Contact <FolderRedirectionType>]
+ [-DeleteProfileOlderDays <Int32>] [-DeleteRoamingCacheEnabled <Boolean>] [-Desktop <FolderRedirectionType>]
+ [-DetectSlowLink <Boolean>] [-DeviceType <DeviceType>] [-DisableMakeOffline <Boolean>]
+ [-DisableWorkOffline <Boolean>] [-Document <FolderRedirectionType>] [-Download <FolderRedirectionType>]
+ [-EnableOfflineFile <Boolean>] [-EnableSlowLink <Boolean>] [-ErrorDays <Int32>] [-ExcludeList <String[]>]
+ [-Favorite <FolderRedirectionType>] [-FileSynchronization <SynchronizationType>]
+ [-ForceUnloadDisabled <Boolean>] [-GrantExclusiveRight <Boolean>] [-InputObject] <IResultObject>
+ [-LeaveFolderNewLocation <Boolean>] [-LimitDisk <Int32>] [-Link <FolderRedirectionType>]
+ [-ManageAdvancedSetting <Boolean>] [-ManageSlowLink <Boolean>] [-MoveCachedFolder <Boolean>]
+ [-MoveContent <Boolean>] [-Music <FolderRedirectionType>] [-OfflineFile <String[]>]
+ [-OnlyAllowLocalProfile <Boolean>] [-OwnerCheckDisabled <Boolean>] [-Picture <FolderRedirectionType>]
+ [-ProfileUploadDisabled <Boolean>] [-SavedGame <FolderRedirectionType>] [-Search <FolderRedirectionType>]
+ [-SlowLink <Int32>] [-SlowLinkUIEnabled <Boolean>] [-SpecifiedLocation <String>] [-SpecifyTime <String>]
+ [-SpecifyTimeMin <Int32>] [-StartMenu <FolderRedirectionType>] [-SynchronizationList <String[]>]
+ [-SynchronizationPolicy <Boolean>] [-SyncMins <Int32>] [-TempProfileLogonBlocked <Boolean>] [-TimeOut <Int32>]
+ [-UseCommonAlert <Boolean>] [-UseSpecifiedLocation <Boolean>] [-Video <FolderRedirectionType>]
+ [-WaitForNetworkSec <Int32>] [-WarningDays <Int32>] [-Description <String>] [-Digest <ConfigurationItem>]
  [-DigestPath <String>] [-DigestXml <String>] [-NewName <String>] [-PassThru] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetById
 ```
-Set-CMUserDataAndProfileConfigurationItem [-ConfigureFolderRedirection <Boolean>]
- [-ConfigureOfflineFile <Boolean>] [-ConfigureRoamingUserProfile <Boolean>] [-DeviceType <DeviceType>]
- [-Desktop <FolderRedirectionType>] [-StartMenu <FolderRedirectionType>] [-Document <FolderRedirectionType>]
- [-Music <FolderRedirectionType>] [-Video <FolderRedirectionType>] [-Favorite <FolderRedirectionType>]
- [-Contact <FolderRedirectionType>] [-Download <FolderRedirectionType>] [-Link <FolderRedirectionType>]
- [-Search <FolderRedirectionType>] [-SavedGame <FolderRedirectionType>]
- [-AppDataRoaming <FolderRedirectionType>] [-Picture <FolderRedirectionType>] [-UseSpecifiedLocation <Boolean>]
- [-SpecifiedLocation <String>] [-ManageAdvancedSetting <Boolean>] [-GrantExclusiveRight <Boolean>]
- [-MoveContent <Boolean>] [-LeaveFolderNewLocation <Boolean>] [-MoveCachedFolder <Boolean>]
- [-UseCommonAlert <Boolean>] [-ErrorDays <Int32>] [-WarningDays <Int32>] [-EnableOfflineFile <Boolean>]
- [-BackgroundSynchronization <SynchronizationType>] [-FileSynchronization <SynchronizationType>]
- [-OfflineFile <String[]>] [-EnableSlowLink <Boolean>] [-SlowLink <Int32>] [-SyncMins <Int32>]
- [-DisableWorkOffline <Boolean>] [-DisableMakeOffline <Boolean>] [-LimitDisk <Int32>]
- [-AllowAllDevice <Boolean>] [-ExcludeList <String[]>] [-SynchronizationList <String[]>]
- [-ManageSlowLink <Boolean>] [-DetectSlowLink <Boolean>] [-TimeOut <Int32>] [-ConnectionTransferRate <Int32>]
- [-SlowLinkUIEnabled <Boolean>] [-WaitForNetworkSec <Int32>] [-AccessPolicy <Boolean>]
- [-OwnerCheckDisabled <Boolean>] [-AddAdminGroupToRupEnabled <Boolean>] [-AllowCrossForestUserPolicy <Boolean>]
- [-TempProfileLogonBlocked <Boolean>] [-OnlyAllowLocalProfile <Boolean>] [-SynchronizationPolicy <Boolean>]
- [-SpecifyTime <String>] [-BackgroundUploadHour <Int32>] [-SpecifyTimeMin <Int32>]
- [-DeleteRoamingCacheEnabled <Boolean>] [-DeleteProfileOlderDays <Int32>] [-ForceUnloadDisabled <Boolean>]
- [-ProfileUploadDisabled <Boolean>] [-Description <String>] [-Digest <ConfigurationItem>]
- [-DigestPath <String>] [-DigestXml <String>] [-Id] <Int32> [-NewName <String>] [-PassThru]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMUserDataAndProfileConfigurationItem [-AccessPolicy <Boolean>] [-AddAdminGroupToRupEnabled <Boolean>]
+ [-AllowAllDevice <Boolean>] [-AllowCrossForestUserPolicy <Boolean>] [-AppDataRoaming <FolderRedirectionType>]
+ [-BackgroundSynchronization <SynchronizationType>] [-BackgroundUploadHour <Int32>]
+ [-ConfigureFolderRedirection <Boolean>] [-ConfigureOfflineFile <Boolean>]
+ [-ConfigureRoamingUserProfile <Boolean>] [-ConnectionTransferRate <Int32>] [-Contact <FolderRedirectionType>]
+ [-DeleteProfileOlderDays <Int32>] [-DeleteRoamingCacheEnabled <Boolean>] [-Desktop <FolderRedirectionType>]
+ [-DetectSlowLink <Boolean>] [-DeviceType <DeviceType>] [-DisableMakeOffline <Boolean>]
+ [-DisableWorkOffline <Boolean>] [-Document <FolderRedirectionType>] [-Download <FolderRedirectionType>]
+ [-EnableOfflineFile <Boolean>] [-EnableSlowLink <Boolean>] [-ErrorDays <Int32>] [-ExcludeList <String[]>]
+ [-Favorite <FolderRedirectionType>] [-FileSynchronization <SynchronizationType>]
+ [-ForceUnloadDisabled <Boolean>] [-GrantExclusiveRight <Boolean>] [-LeaveFolderNewLocation <Boolean>]
+ [-LimitDisk <Int32>] [-Link <FolderRedirectionType>] [-ManageAdvancedSetting <Boolean>]
+ [-ManageSlowLink <Boolean>] [-MoveCachedFolder <Boolean>] [-MoveContent <Boolean>]
+ [-Music <FolderRedirectionType>] [-OfflineFile <String[]>] [-OnlyAllowLocalProfile <Boolean>]
+ [-OwnerCheckDisabled <Boolean>] [-Picture <FolderRedirectionType>] [-ProfileUploadDisabled <Boolean>]
+ [-SavedGame <FolderRedirectionType>] [-Search <FolderRedirectionType>] [-SlowLink <Int32>]
+ [-SlowLinkUIEnabled <Boolean>] [-SpecifiedLocation <String>] [-SpecifyTime <String>] [-SpecifyTimeMin <Int32>]
+ [-StartMenu <FolderRedirectionType>] [-SynchronizationList <String[]>] [-SynchronizationPolicy <Boolean>]
+ [-SyncMins <Int32>] [-TempProfileLogonBlocked <Boolean>] [-TimeOut <Int32>] [-UseCommonAlert <Boolean>]
+ [-UseSpecifiedLocation <Boolean>] [-Video <FolderRedirectionType>] [-WaitForNetworkSec <Int32>]
+ [-WarningDays <Int32>] [-Description <String>] [-Digest <ConfigurationItem>] [-DigestPath <String>]
+ [-DigestXml <String>] [-Id] <Int32> [-NewName <String>] [-PassThru] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetByName
 ```
-Set-CMUserDataAndProfileConfigurationItem [-ConfigureFolderRedirection <Boolean>]
- [-ConfigureOfflineFile <Boolean>] [-ConfigureRoamingUserProfile <Boolean>] [-DeviceType <DeviceType>]
- [-Desktop <FolderRedirectionType>] [-StartMenu <FolderRedirectionType>] [-Document <FolderRedirectionType>]
- [-Music <FolderRedirectionType>] [-Video <FolderRedirectionType>] [-Favorite <FolderRedirectionType>]
- [-Contact <FolderRedirectionType>] [-Download <FolderRedirectionType>] [-Link <FolderRedirectionType>]
- [-Search <FolderRedirectionType>] [-SavedGame <FolderRedirectionType>]
- [-AppDataRoaming <FolderRedirectionType>] [-Picture <FolderRedirectionType>] [-UseSpecifiedLocation <Boolean>]
- [-SpecifiedLocation <String>] [-ManageAdvancedSetting <Boolean>] [-GrantExclusiveRight <Boolean>]
- [-MoveContent <Boolean>] [-LeaveFolderNewLocation <Boolean>] [-MoveCachedFolder <Boolean>]
- [-UseCommonAlert <Boolean>] [-ErrorDays <Int32>] [-WarningDays <Int32>] [-EnableOfflineFile <Boolean>]
- [-BackgroundSynchronization <SynchronizationType>] [-FileSynchronization <SynchronizationType>]
- [-OfflineFile <String[]>] [-EnableSlowLink <Boolean>] [-SlowLink <Int32>] [-SyncMins <Int32>]
- [-DisableWorkOffline <Boolean>] [-DisableMakeOffline <Boolean>] [-LimitDisk <Int32>]
- [-AllowAllDevice <Boolean>] [-ExcludeList <String[]>] [-SynchronizationList <String[]>]
- [-ManageSlowLink <Boolean>] [-DetectSlowLink <Boolean>] [-TimeOut <Int32>] [-ConnectionTransferRate <Int32>]
- [-SlowLinkUIEnabled <Boolean>] [-WaitForNetworkSec <Int32>] [-AccessPolicy <Boolean>]
- [-OwnerCheckDisabled <Boolean>] [-AddAdminGroupToRupEnabled <Boolean>] [-AllowCrossForestUserPolicy <Boolean>]
- [-TempProfileLogonBlocked <Boolean>] [-OnlyAllowLocalProfile <Boolean>] [-SynchronizationPolicy <Boolean>]
- [-SpecifyTime <String>] [-BackgroundUploadHour <Int32>] [-SpecifyTimeMin <Int32>]
- [-DeleteRoamingCacheEnabled <Boolean>] [-DeleteProfileOlderDays <Int32>] [-ForceUnloadDisabled <Boolean>]
- [-ProfileUploadDisabled <Boolean>] [-Description <String>] [-Digest <ConfigurationItem>]
- [-DigestPath <String>] [-DigestXml <String>] [-Name] <String> [-NewName <String>] [-PassThru]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMUserDataAndProfileConfigurationItem [-AccessPolicy <Boolean>] [-AddAdminGroupToRupEnabled <Boolean>]
+ [-AllowAllDevice <Boolean>] [-AllowCrossForestUserPolicy <Boolean>] [-AppDataRoaming <FolderRedirectionType>]
+ [-BackgroundSynchronization <SynchronizationType>] [-BackgroundUploadHour <Int32>]
+ [-ConfigureFolderRedirection <Boolean>] [-ConfigureOfflineFile <Boolean>]
+ [-ConfigureRoamingUserProfile <Boolean>] [-ConnectionTransferRate <Int32>] [-Contact <FolderRedirectionType>]
+ [-DeleteProfileOlderDays <Int32>] [-DeleteRoamingCacheEnabled <Boolean>] [-Desktop <FolderRedirectionType>]
+ [-DetectSlowLink <Boolean>] [-DeviceType <DeviceType>] [-DisableMakeOffline <Boolean>]
+ [-DisableWorkOffline <Boolean>] [-Document <FolderRedirectionType>] [-Download <FolderRedirectionType>]
+ [-EnableOfflineFile <Boolean>] [-EnableSlowLink <Boolean>] [-ErrorDays <Int32>] [-ExcludeList <String[]>]
+ [-Favorite <FolderRedirectionType>] [-FileSynchronization <SynchronizationType>]
+ [-ForceUnloadDisabled <Boolean>] [-GrantExclusiveRight <Boolean>] [-LeaveFolderNewLocation <Boolean>]
+ [-LimitDisk <Int32>] [-Link <FolderRedirectionType>] [-ManageAdvancedSetting <Boolean>]
+ [-ManageSlowLink <Boolean>] [-MoveCachedFolder <Boolean>] [-MoveContent <Boolean>]
+ [-Music <FolderRedirectionType>] [-OfflineFile <String[]>] [-OnlyAllowLocalProfile <Boolean>]
+ [-OwnerCheckDisabled <Boolean>] [-Picture <FolderRedirectionType>] [-ProfileUploadDisabled <Boolean>]
+ [-SavedGame <FolderRedirectionType>] [-Search <FolderRedirectionType>] [-SlowLink <Int32>]
+ [-SlowLinkUIEnabled <Boolean>] [-SpecifiedLocation <String>] [-SpecifyTime <String>] [-SpecifyTimeMin <Int32>]
+ [-StartMenu <FolderRedirectionType>] [-SynchronizationList <String[]>] [-SynchronizationPolicy <Boolean>]
+ [-SyncMins <Int32>] [-TempProfileLogonBlocked <Boolean>] [-TimeOut <Int32>] [-UseCommonAlert <Boolean>]
+ [-UseSpecifiedLocation <Boolean>] [-Video <FolderRedirectionType>] [-WaitForNetworkSec <Int32>]
+ [-WarningDays <Int32>] [-Description <String>] [-Digest <ConfigurationItem>] [-DigestPath <String>]
+ [-DigestXml <String>] [-Name] <String> [-NewName <String>] [-PassThru] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -267,21 +266,6 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -1058,19 +1042,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -SyncMins
-```yaml
-Type: Int32
-Parameter Sets: (All)
-Aliases: SynchronizationInterval
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -SynchronizationList
 Specifies an array of folders.
 The configuration item specifies these subfolders of Appdata\Roaming to synchronize only at logon and logoff.
@@ -1094,6 +1065,19 @@ Indicates whether to use a synchronization policy.
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SyncMins
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases: SynchronizationInterval
 
 Required: False
 Position: Named
@@ -1200,6 +1184,21 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

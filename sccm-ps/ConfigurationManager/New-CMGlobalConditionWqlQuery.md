@@ -1,4 +1,4 @@
----
+﻿---
 description: Creates a WQL Query type global condition in Configuration Manager.
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,8 +16,8 @@ Creates a WQL Query type global condition in Configuration Manager.
 ## SYNTAX
 
 ```
-New-CMGlobalConditionWqlQuery -DataType <GlobalConditionDataType> [-Namespace <String>] -Class <String>
- -Property <String> [-WhereClause <String>] -Name <String> [-Description <String>] [-DisableWildcardHandling]
+New-CMGlobalConditionWqlQuery -Class <String> -DataType <GlobalConditionDataType> [-Namespace <String>]
+ -Property <String> [-WhereClause <String>] [-Description <String>] -Name <String> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [<CommonParameters>]
 ```
 

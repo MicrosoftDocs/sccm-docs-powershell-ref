@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Sum.dll-Help.xml
 Module Name: ConfigurationManager
 online version:
@@ -15,30 +15,30 @@ Use this cmdlet to modify third-party update categories.
 
 ### SearchByName (Default)
 ```
-Set-CMThirdPartyUpdateCategory [[-CatalogName] <String>] [-Id <String>] [-Name <String>] [-ParentId <String>]
- [-PublishOption <PublishOptionType>] [-EnableCategory <Boolean>] [-PassThru] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### SearchByValue
-```
-Set-CMThirdPartyUpdateCategory -InputObject <IResultObject> [-Id <String>] [-Name <String>]
- [-ParentId <String>] [-PublishOption <PublishOptionType>] [-EnableCategory <Boolean>] [-PassThru]
+Set-CMThirdPartyUpdateCategory [[-CatalogName] <String>] [-EnableCategory <Boolean>] [-Id <String>]
+ [-Name <String>] [-ParentId <String>] [-PassThru] [-PublishOption <PublishOptionType>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchById
 ```
-Set-CMThirdPartyUpdateCategory [[-CatalogId] <String>] [-Id <String>] [-Name <String>] [-ParentId <String>]
- [-PublishOption <PublishOptionType>] [-EnableCategory <Boolean>] [-PassThru] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMThirdPartyUpdateCategory [[-CatalogId] <String>] [-EnableCategory <Boolean>] [-Id <String>]
+ [-Name <String>] [-ParentId <String>] [-PassThru] [-PublishOption <PublishOptionType>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByCategory
 ```
-Set-CMThirdPartyUpdateCategory [-Category] <IResultObject[]> [-PublishOption <PublishOptionType>]
- [-EnableCategory <Boolean>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Set-CMThirdPartyUpdateCategory [-Category] <IResultObject[]> [-EnableCategory <Boolean>] [-PassThru]
+ [-PublishOption <PublishOptionType>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### SearchByValue
+```
+Set-CMThirdPartyUpdateCategory [-EnableCategory <Boolean>] [-Id <String>] -InputObject <IResultObject>
+ [-Name <String>] [-ParentId <String>] [-PassThru] [-PublishOption <PublishOptionType>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -107,22 +107,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -DisableWildcardHandling
 
 This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
@@ -177,7 +161,7 @@ Specify the category ID for the third-party update catalog.
 
 ```yaml
 Type: String
-Parameter Sets: SearchByName, SearchByValue, SearchById
+Parameter Sets: SearchByName, SearchById, SearchByValue
 Aliases: CategoryId
 
 Required: False
@@ -209,7 +193,7 @@ Specify the category name for the third-party update catalog.
 
 ```yaml
 Type: String
-Parameter Sets: SearchByName, SearchByValue, SearchById
+Parameter Sets: SearchByName, SearchById, SearchByValue
 Aliases: CategoryName
 
 Required: False
@@ -225,7 +209,7 @@ Specify the parent ID of the the third-party update catalog category.
 
 ```yaml
 Type: String
-Parameter Sets: SearchByName, SearchByValue, SearchById
+Parameter Sets: SearchByName, SearchById, SearchByValue
 Aliases:
 
 Required: False
@@ -256,6 +240,22 @@ Type: PublishOptionType
 Parameter Sets: (All)
 Aliases:
 Accepted values: Skip, MetadataOnly, FullContent
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
 
 Required: False
 Position: Named

@@ -1,4 +1,4 @@
----
+﻿---
 description: Removes a deployment.
 external help file: AdminUI.PS.Deployments.dll-Help.xml
 Module Name: ConfigurationManager
@@ -22,13 +22,13 @@ Remove-CMDeployment [-Force] -InputObject <IResultObject> [-DisableWildcardHandl
 
 ### SearchByIdMandatory
 ```
-Remove-CMDeployment -DeploymentId <String> [-Force] -ApplicationName <String> [-DisableWildcardHandling]
+Remove-CMDeployment -ApplicationName <String> -DeploymentId <String> [-Force] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByNameMandatory
 ```
-Remove-CMDeployment -CollectionName <String> [-Force] -ApplicationName <String> [-DisableWildcardHandling]
+Remove-CMDeployment -ApplicationName <String> -CollectionName <String> [-Force] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -97,21 +97,6 @@ Aliases:
 Required: True
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -189,6 +174,21 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

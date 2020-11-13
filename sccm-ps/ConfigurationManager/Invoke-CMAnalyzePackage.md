@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.AppModel.dll-Help.xml
 Module Name: ConfigurationManager
 online version:
@@ -26,7 +26,7 @@ Invoke-CMAnalyzePackage -Id <String[]> [-DisableWildcardHandling] [-ForceWildcar
 
 ### SetByValue
 ```
-Invoke-CMAnalyzePackage -Package <IResultObject[]> [-DisableWildcardHandling] [-ForceWildcardHandling]
+Invoke-CMAnalyzePackage -InputObject <IResultObject[]> [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -48,21 +48,6 @@ PS XYZ:\> {{ Add example code here }}
 {{ Add example description here }}
 
 ## PARAMETERS
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -DisableWildcardHandling
 This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
@@ -109,6 +94,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -InputObject
+{{ Fill InputObject Description }}
+
+```yaml
+Type: IResultObject[]
+Parameter Sets: SetByValue
+Aliases: Packages, Package
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
 ### -Name
 {{ Fill Name Description }}
 
@@ -124,15 +124,15 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Package
-{{ Fill Package Description }}
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: IResultObject[]
-Parameter Sets: SetByValue
-Aliases: Packages
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
 
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -160,7 +160,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### None
+### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject[]
 
 ## OUTPUTS
 

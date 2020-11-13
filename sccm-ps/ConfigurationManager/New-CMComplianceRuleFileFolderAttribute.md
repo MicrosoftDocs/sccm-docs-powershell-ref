@@ -1,4 +1,4 @@
----
+﻿---
 description: Creates a compliance rule file folder attribute.
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,8 +16,8 @@ Creates a compliance rule file folder attribute.
 
 ```
 New-CMComplianceRuleFileFolderAttribute [-Archive <Boolean>] [-Compressed <Boolean>] [-Encrypted <Boolean>]
- [-Hidden <Boolean>] [-ReadOnly <Boolean>] [-System <Boolean>] [-ReportNoncompliance] -RuleName <String>
- -InputObject <ConfigurationItemSetting> [-NoncomplianceSeverity <NoncomplianceSeverity>]
+ [-Hidden <Boolean>] [-ReadOnly <Boolean>] [-System <Boolean>] [-ReportNoncompliance]
+ -InputObject <ConfigurationItemSetting> -RuleName <String> [-NoncomplianceSeverity <NoncomplianceSeverity>]
  [-RuleDescription <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
@@ -56,21 +56,6 @@ Accept wildcard characters: False
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
 
 Required: False
 Position: Named
@@ -219,6 +204,21 @@ Accept wildcard characters: False
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
 
 Required: False
 Position: Named

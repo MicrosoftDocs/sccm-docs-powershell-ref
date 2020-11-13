@@ -1,4 +1,4 @@
----
+﻿---
 description: Sets an update group deployment.
 external help file: AdminUI.PS.Deployments.dll-Help.xml
 Module Name: ConfigurationManager
@@ -20,9 +20,27 @@ Set-CMUpdateGroupDeployment [-Enable] -UpdateGroupDeployment <IResultObject> [-D
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
+### ByDeploymentSummaryValueEnable
+```
+Set-CMUpdateGroupDeployment -Deployment <IResultObject> [-Enable] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### ByDeploymentSummaryValueDisable
+```
+Set-CMUpdateGroupDeployment -Deployment <IResultObject> [-Disable] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### ByNameEnable
+```
+Set-CMUpdateGroupDeployment [-DeploymentName <String>] [-Enable] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
 ### ByNameDisable
 ```
-Set-CMUpdateGroupDeployment [-Disable] [-DeploymentName <String>] [-DisableWildcardHandling]
+Set-CMUpdateGroupDeployment [-DeploymentName <String>] [-Disable] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -38,27 +56,9 @@ Set-CMUpdateGroupDeployment [-Disable] -UpdateGroupDeployment <IResultObject> [-
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### ByDeploymentSummaryValueDisable
-```
-Set-CMUpdateGroupDeployment [-Disable] -Deployment <IResultObject> [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### ByNameEnable
-```
-Set-CMUpdateGroupDeployment [-Enable] [-DeploymentName <String>] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
 ### ByIdEnable
 ```
 Set-CMUpdateGroupDeployment [-Enable] -UpdateGroupDeploymentId <Int32> [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### ByDeploymentSummaryValueEnable
-```
-Set-CMUpdateGroupDeployment [-Enable] -Deployment <IResultObject> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -78,25 +78,10 @@ PS XYZ:\>
 
 ## PARAMETERS
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Deployment
 ```yaml
 Type: IResultObject
-Parameter Sets: ByDeploymentSummaryValueDisable, ByDeploymentSummaryValueEnable
+Parameter Sets: ByDeploymentSummaryValueEnable, ByDeploymentSummaryValueDisable
 Aliases:
 
 Required: True
@@ -109,7 +94,7 @@ Accept wildcard characters: False
 ### -DeploymentName
 ```yaml
 Type: String
-Parameter Sets: ByNameDisable, ByNameEnable
+Parameter Sets: ByNameEnable, ByNameDisable
 Aliases: Name, UpdateGroupDeploymentName
 
 Required: False
@@ -122,7 +107,7 @@ Accept wildcard characters: False
 ### -Disable
 ```yaml
 Type: SwitchParameter
-Parameter Sets: ByNameDisable, ByIdDisable, ByValueDisable, ByDeploymentSummaryValueDisable
+Parameter Sets: ByDeploymentSummaryValueDisable, ByNameDisable, ByIdDisable, ByValueDisable
 Aliases:
 
 Required: False
@@ -150,7 +135,7 @@ Accept wildcard characters: False
 ### -Enable
 ```yaml
 Type: SwitchParameter
-Parameter Sets: ByValueEnable, ByNameEnable, ByIdEnable, ByDeploymentSummaryValueEnable
+Parameter Sets: ByValueEnable, ByDeploymentSummaryValueEnable, ByNameEnable, ByIdEnable
 Aliases:
 
 Required: False
@@ -195,6 +180,21 @@ Parameter Sets: ByIdDisable, ByIdEnable
 Aliases: Id
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False

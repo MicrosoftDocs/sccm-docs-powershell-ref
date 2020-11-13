@@ -1,4 +1,4 @@
----
+﻿---
 description: Removes a Configuration Manager collection membership rule.
 external help file: AdminUI.PS.Collections.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,22 +16,22 @@ Removes a Configuration Manager collection membership rule.
 
 ### ByName (Default)
 ```
-Remove-CMCollectionMembershipRule [-CollectionType <CollectionType>] -CollectionName <String>
- -RuleClassName <String> -ChildSearchCriteria <SmsProviderSearch> [-Force] [-ExtraArguments <Object>]
+Remove-CMCollectionMembershipRule -ChildSearchCriteria <SmsProviderSearch> -CollectionName <String>
+ [-CollectionType <CollectionType>] [-ExtraArguments <Object>] [-Force] -RuleClassName <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ById
 ```
-Remove-CMCollectionMembershipRule [-CollectionType <CollectionType>] -CollectionId <String>
- -RuleClassName <String> -ChildSearchCriteria <SmsProviderSearch> [-Force] [-ExtraArguments <Object>]
+Remove-CMCollectionMembershipRule -ChildSearchCriteria <SmsProviderSearch> -CollectionId <String>
+ [-CollectionType <CollectionType>] [-ExtraArguments <Object>] [-Force] -RuleClassName <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByValue
 ```
-Remove-CMCollectionMembershipRule [-CollectionType <CollectionType>] -InputObject <IResultObject>
- -RuleClassName <String> -ChildSearchCriteria <SmsProviderSearch> [-Force] [-ExtraArguments <Object>]
+Remove-CMCollectionMembershipRule -ChildSearchCriteria <SmsProviderSearch> [-CollectionType <CollectionType>]
+ [-ExtraArguments <Object>] [-Force] -InputObject <IResultObject> -RuleClassName <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -92,21 +92,6 @@ Type: CollectionType
 Parameter Sets: (All)
 Aliases:
 Accepted values: User, Device
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
 
 Required: False
 Position: Named
@@ -197,6 +182,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
@@ -218,9 +218,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
-
 ### System.Object
+
+### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
 
 ## OUTPUTS
 

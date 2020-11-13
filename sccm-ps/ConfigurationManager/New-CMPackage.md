@@ -1,4 +1,4 @@
----
+﻿---
 description: Creates a Configuration Manager package.
 external help file: AdminUI.PS.AppModel.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,8 +16,8 @@ Creates a Configuration Manager package.
 
 ### New (Default)
 ```
-New-CMPackage -Name <String> [-Description <String>] [-Manufacturer <String>] [-Language <String>]
- [-Version <String>] [-Path <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+New-CMPackage [-Description <String>] [-Language <String>] [-Manufacturer <String>] -Name <String>
+ [-Path <String>] [-Version <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
@@ -29,21 +29,21 @@ New-CMPackage [-FromDefinition] -PackageDefinitionName <String> [-PackageNoSourc
 
 ### NewPackageByDefinitionNoSourceFileWithNew
 ```
-New-CMPackage [-FromDefinition] -PackagePath <String> [-PackageNoSourceFile] [-DisableWildcardHandling]
+New-CMPackage [-FromDefinition] [-PackageNoSourceFile] -PackagePath <String> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### NewPackageByDefinitionSourceFileWithExisted
 ```
 New-CMPackage [-FromDefinition] -PackageDefinitionName <String> -SourceFileType <SourceFileType>
- -SourceFolderPathType <SourceFolderPathType> -SourceFolderPath <String> [-DisableWildcardHandling]
+ -SourceFolderPath <String> -SourceFolderPathType <SourceFolderPathType> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### NewPackageByDefinitionSourceFileWithNew
 ```
 New-CMPackage [-FromDefinition] -PackagePath <String> -SourceFileType <SourceFileType>
- -SourceFolderPathType <SourceFolderPathType> -SourceFolderPath <String> [-DisableWildcardHandling]
+ -SourceFolderPath <String> -SourceFolderPathType <SourceFolderPathType> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -73,21 +73,6 @@ PS XYZ:\> New-CMPackage -Name "ScriptsPackage02" -Description "This package depl
 This command creates a Configuration Manager package named ScriptsPackage02 and adds the specified description to the package.
 
 ## PARAMETERS
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -Description
 Specifies a description for the package.
@@ -328,6 +313,21 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

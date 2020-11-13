@@ -1,4 +1,4 @@
----
+﻿---
 description: Removes a device collection variable.
 external help file: AdminUI.PS.Collections.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,19 +16,19 @@ Removes a device collection variable.
 
 ### SearchByValueMandatory (Default)
 ```
-Remove-CMDeviceCollectionVariable -Collection <IResultObject> -VariableName <String> [-Force]
+Remove-CMDeviceCollectionVariable -Collection <IResultObject> [-Force] -VariableName <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory
 ```
-Remove-CMDeviceCollectionVariable -CollectionId <String> -VariableName <String> [-Force]
+Remove-CMDeviceCollectionVariable -CollectionId <String> [-Force] -VariableName <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByNameMandatory
 ```
-Remove-CMDeviceCollectionVariable -CollectionName <String> -VariableName <String> [-Force]
+Remove-CMDeviceCollectionVariable -CollectionName <String> [-Force] -VariableName <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -109,21 +109,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -DisableWildcardHandling
 DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
@@ -180,6 +165,21 @@ Aliases:
 Required: True
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

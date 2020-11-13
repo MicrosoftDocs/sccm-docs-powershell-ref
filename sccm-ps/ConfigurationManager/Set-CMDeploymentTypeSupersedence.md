@@ -1,4 +1,4 @@
----
+﻿---
 description: Sets a deployment type supersedence in Configuration Manager.
 external help file: AdminUI.PS.AppMan.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,9 +16,9 @@ Sets a deployment type supersedence in Configuration Manager.
 ## SYNTAX
 
 ```
-Set-CMDeploymentTypeSupersedence -InputObject <IResultObject> [-IsUninstall <Boolean>]
- -SupersedingDeploymentType <IResultObject> [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMDeploymentTypeSupersedence -InputObject <IResultObject> [-IsUninstall <Boolean>] [-PassThru]
+ -SupersedingDeploymentType <IResultObject> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -39,22 +39,6 @@ PS XYZ:\>  Get-CMDeploymentType -ApplicationName MyApp | Set-CMDeploymentTypeSup
 ```
 
 ## PARAMETERS
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -DisableWildcardHandling
 
@@ -144,6 +128,22 @@ Parameter Sets: (All)
 Aliases:
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False

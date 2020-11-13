@@ -1,4 +1,4 @@
----
+﻿---
 description: Copies content to distribution points.
 external help file: AdminUI.PS.Sum.dll-Help.xml
 Module Name: ConfigurationManager
@@ -17,13 +17,6 @@ Copies content to distribution points.
 ### SearchByValueMandatory_Application (Default)
 ```
 Start-CMContentDistribution [-CollectionName <String[]>] [-DisableContentDependencyDetection]
- [-DistributionPointGroupName <String[]>] [-DistributionPointName <String[]>] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### SearchByValueMandatory
-```
-Start-CMContentDistribution -InputObject <IResultObject> [-CollectionName <String[]>]
  [-DistributionPointGroupName <String[]>] [-DistributionPointName <String[]>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
@@ -83,6 +76,13 @@ Start-CMContentDistribution [-CollectionName <String[]>] [-DistributionPointGrou
 ```
 Start-CMContentDistribution [-CollectionName <String[]>] [-DistributionPointGroupName <String[]>]
  [-DistributionPointName <String[]>] -DriverPackageName <String[]> [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SearchByValueMandatory
+```
+Start-CMContentDistribution [-CollectionName <String[]>] [-DistributionPointGroupName <String[]>]
+ [-DistributionPointName <String[]>] -InputObject <IResultObject> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -302,28 +302,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -DeploymentPackageId
 Specifies an array of IDs of deployment packages.
 
 ```yaml
 Type: String[]
 Parameter Sets: SearchByIdMandatory_DeploymentPackage
-Aliases: DeploymentPackageIds
+Aliases: DeploymentPackageIds, SoftwareUpdatesPackageId, SoftwareUpdatesPackageIds
 
 Required: True
 Position: Named
@@ -338,7 +323,7 @@ Specifies an array of names of deployment packages.
 ```yaml
 Type: String[]
 Parameter Sets: SearchByNameMandatory_DeploymentPackage
-Aliases: DeploymentPackageNames
+Aliases: DeploymentPackageNames, SoftwareUpdatesPackageName, SoftwareUpdatesPackageNames
 
 Required: True
 Position: Named
@@ -595,6 +580,21 @@ Aliases: TaskSequenceNames
 Required: True
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

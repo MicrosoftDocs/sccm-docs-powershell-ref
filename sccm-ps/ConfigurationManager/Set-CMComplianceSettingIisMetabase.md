@@ -1,4 +1,4 @@
----
+﻿---
 description: Sets a compliance setting iis metabase.
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,7 +16,7 @@ Sets a compliance setting iis metabase.
 
 ```
 Set-CMComplianceSettingIisMetabase [-Path <String>] [-PropertyId <UInt32>] [-Description <String>]
- -InputObject <PSObject> -SettingName <String> [-NewSettingName <String>] [-PassThru]
+ -InputObject <PSObject> [-NewSettingName <String>] [-PassThru] -SettingName <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -35,21 +35,6 @@ PS XYZ:\>
 ```
 
 ## PARAMETERS
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -Description
 ```yaml
@@ -168,6 +153,21 @@ Parameter Sets: (All)
 Aliases: Name
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False

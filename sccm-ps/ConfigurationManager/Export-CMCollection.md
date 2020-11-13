@@ -1,4 +1,4 @@
----
+﻿---
 description: Exports a Configuration Manager collection.
 external help file: AdminUI.PS.Collections.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,19 +16,19 @@ Exports a Configuration Manager collection.
 
 ### SearchByNameMandatory (Default)
 ```
-Export-CMCollection -Name <String> -ExportFilePath <String> [-ExportComment <String>] [-Force]
+Export-CMCollection [-ExportComment <String>] -ExportFilePath <String> [-Force] -Name <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory
 ```
-Export-CMCollection -CollectionId <String> -ExportFilePath <String> [-ExportComment <String>] [-Force]
+Export-CMCollection -CollectionId <String> [-ExportComment <String>] -ExportFilePath <String> [-Force]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByValueMandatory
 ```
-Export-CMCollection -InputObject <IResultObject> -ExportFilePath <String> [-ExportComment <String>] [-Force]
+Export-CMCollection [-ExportComment <String>] -ExportFilePath <String> [-Force] -InputObject <IResultObject>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -72,21 +72,6 @@ Aliases:
 Required: True
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -194,6 +179,21 @@ Aliases:
 Required: True
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

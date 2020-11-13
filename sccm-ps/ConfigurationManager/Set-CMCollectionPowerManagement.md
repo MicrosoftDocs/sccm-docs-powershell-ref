@@ -1,4 +1,4 @@
----
+﻿---
 description: Configures power management settings for a device collection.
 external help file: AdminUI.PS.Collections.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,28 +16,23 @@ Configures power management settings for a device collection.
 
 ### ByValueApply (Default)
 ```
-Set-CMCollectionPowerManagement -InputObject <IResultObject> [-Apply] [-PeakStartTime <DateTime>]
- [-PeakEndTime <DateTime>] [-WakeupTime <DateTime>] [-PeakPlan <PowerSchema>] [-NonPeakPlan <PowerSchema>]
- [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### ByNameNone
-```
-Set-CMCollectionPowerManagement -CollectionName <String> [-None] [-PassThru] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### ByNameNever
-```
-Set-CMCollectionPowerManagement -CollectionName <String> [-NeverApply] [-PassThru] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMCollectionPowerManagement [-Apply] -InputObject <IResultObject> [-NonPeakPlan <PowerSchema>] [-PassThru]
+ [-PeakEndTime <DateTime>] [-PeakPlan <PowerSchema>] [-PeakStartTime <DateTime>] [-WakeupTime <DateTime>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByNameApply
 ```
-Set-CMCollectionPowerManagement -CollectionName <String> [-Apply] [-PeakStartTime <DateTime>]
- [-PeakEndTime <DateTime>] [-WakeupTime <DateTime>] [-PeakPlan <PowerSchema>] [-NonPeakPlan <PowerSchema>]
- [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMCollectionPowerManagement [-Apply] -CollectionName <String> [-NonPeakPlan <PowerSchema>] [-PassThru]
+ [-PeakEndTime <DateTime>] [-PeakPlan <PowerSchema>] [-PeakStartTime <DateTime>] [-WakeupTime <DateTime>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### ByIdApply
+```
+Set-CMCollectionPowerManagement [-Apply] -CollectionId <String> [-NonPeakPlan <PowerSchema>] [-PassThru]
+ [-PeakEndTime <DateTime>] [-PeakPlan <PowerSchema>] [-PeakStartTime <DateTime>] [-WakeupTime <DateTime>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByIdNone
@@ -52,11 +47,16 @@ Set-CMCollectionPowerManagement -CollectionId <String> [-NeverApply] [-PassThru]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### ByIdApply
+### ByNameNone
 ```
-Set-CMCollectionPowerManagement -CollectionId <String> [-Apply] [-PeakStartTime <DateTime>]
- [-PeakEndTime <DateTime>] [-WakeupTime <DateTime>] [-PeakPlan <PowerSchema>] [-NonPeakPlan <PowerSchema>]
- [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMCollectionPowerManagement -CollectionName <String> [-None] [-PassThru] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### ByNameNever
+```
+Set-CMCollectionPowerManagement -CollectionName <String> [-NeverApply] [-PassThru] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByValueNone
@@ -121,7 +121,7 @@ Specifies the collection ID of the device collection.
 
 ```yaml
 Type: String
-Parameter Sets: ByIdNone, ByIdNever, ByIdApply
+Parameter Sets: ByIdApply, ByIdNone, ByIdNever
 Aliases:
 
 Required: True
@@ -136,27 +136,12 @@ Specifies the name of the device collection.
 
 ```yaml
 Type: String
-Parameter Sets: ByNameNone, ByNameNever, ByNameApply
+Parameter Sets: ByNameApply, ByNameNone, ByNameNever
 Aliases:
 
 Required: True
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -212,7 +197,22 @@ Indicates that power management settings will never be applied to computers in t
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: ByNameNever, ByIdNever, ByValueNever
+Parameter Sets: ByIdNever, ByNameNever, ByValueNever
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -None
+Indicates that no power management settings are set for the specified collection.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: ByIdNone, ByNameNone, ByValueNone
 Aliases:
 
 Required: True
@@ -233,21 +233,6 @@ Parameter Sets: ByValueApply, ByNameApply, ByIdApply
 Aliases:
 
 Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -None
-Indicates that no power management settings are set for the specified collection.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: ByNameNone, ByIdNone, ByValueNone
-Aliases:
-
-Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -328,6 +313,21 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

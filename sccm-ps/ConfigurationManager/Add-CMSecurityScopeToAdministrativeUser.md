@@ -1,4 +1,4 @@
----
+﻿---
 description: Adds a security scope to an administrative user or group in Configuration Manager.
 external help file: AdminUI.PS.Rba.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,55 +16,55 @@ Adds a security scope to an administrative user or group in Configuration Manage
 
 ### AddScopeToAdminByName_Name (Default)
 ```
-Add-CMSecurityScopeToAdministrativeUser -SecurityScopeName <String> -AdministrativeUserName <String>
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### AddScopeToAdminById_Id
-```
-Add-CMSecurityScopeToAdministrativeUser -SecurityScopeId <String> -AdministrativeUserId <Int32>
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### AddScopeToAdminById_Name
-```
-Add-CMSecurityScopeToAdministrativeUser -SecurityScopeId <String> -AdministrativeUserName <String>
+Add-CMSecurityScopeToAdministrativeUser -AdministrativeUserName <String> -SecurityScopeName <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### AddScopeToAdminById_Object
 ```
-Add-CMSecurityScopeToAdministrativeUser -SecurityScopeId <String> -AdministrativeUser <IResultObject>
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### AddScopeToAdminByName_Id
-```
-Add-CMSecurityScopeToAdministrativeUser -SecurityScopeName <String> -AdministrativeUserId <Int32>
+Add-CMSecurityScopeToAdministrativeUser -AdministrativeUser <IResultObject> -SecurityScopeId <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### AddScopeToAdminByName_Object
 ```
-Add-CMSecurityScopeToAdministrativeUser -SecurityScopeName <String> -AdministrativeUser <IResultObject>
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### AddScopeToAdminByObject_Id
-```
-Add-CMSecurityScopeToAdministrativeUser -SecurityScope <IResultObject> -AdministrativeUserId <Int32>
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### AddScopeToAdminByObject_Name
-```
-Add-CMSecurityScopeToAdministrativeUser -SecurityScope <IResultObject> -AdministrativeUserName <String>
+Add-CMSecurityScopeToAdministrativeUser -AdministrativeUser <IResultObject> -SecurityScopeName <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### AddScopeToAdminByObject_Object
 ```
-Add-CMSecurityScopeToAdministrativeUser -SecurityScope <IResultObject> -AdministrativeUser <IResultObject>
+Add-CMSecurityScopeToAdministrativeUser -AdministrativeUser <IResultObject> -SecurityScope <IResultObject>
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### AddScopeToAdminById_Id
+```
+Add-CMSecurityScopeToAdministrativeUser -AdministrativeUserId <Int32> -SecurityScopeId <String>
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### AddScopeToAdminByName_Id
+```
+Add-CMSecurityScopeToAdministrativeUser -AdministrativeUserId <Int32> -SecurityScopeName <String>
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### AddScopeToAdminByObject_Id
+```
+Add-CMSecurityScopeToAdministrativeUser -AdministrativeUserId <Int32> -SecurityScope <IResultObject>
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### AddScopeToAdminById_Name
+```
+Add-CMSecurityScopeToAdministrativeUser -AdministrativeUserName <String> -SecurityScopeId <String>
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### AddScopeToAdminByObject_Name
+```
+Add-CMSecurityScopeToAdministrativeUser -AdministrativeUserName <String> -SecurityScope <IResultObject>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -145,21 +145,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -DisableWildcardHandling
 DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
@@ -196,7 +181,7 @@ To obtain a security scope object, use the [Get-CMSecurityScope](Get-CMSecurityS
 
 ```yaml
 Type: IResultObject
-Parameter Sets: AddScopeToAdminByObject_Id, AddScopeToAdminByObject_Name, AddScopeToAdminByObject_Object
+Parameter Sets: AddScopeToAdminByObject_Object, AddScopeToAdminByObject_Id, AddScopeToAdminByObject_Name
 Aliases:
 
 Required: True
@@ -211,7 +196,7 @@ Specifies the ID of a security scope.
 
 ```yaml
 Type: String
-Parameter Sets: AddScopeToAdminById_Id, AddScopeToAdminById_Name, AddScopeToAdminById_Object
+Parameter Sets: AddScopeToAdminById_Object, AddScopeToAdminById_Id, AddScopeToAdminById_Name
 Aliases:
 
 Required: True
@@ -227,12 +212,27 @@ A security scope name can be Default or the name of a custom security scope.
 
 ```yaml
 Type: String
-Parameter Sets: AddScopeToAdminByName_Name, AddScopeToAdminByName_Id, AddScopeToAdminByName_Object
+Parameter Sets: AddScopeToAdminByName_Name, AddScopeToAdminByName_Object, AddScopeToAdminByName_Id
 Aliases:
 
 Required: True
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

@@ -1,4 +1,4 @@
----
+﻿---
 description: Adds a query membership rule to one or more Configuration Manager device collections.
 external help file: AdminUI.PS.Collections.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,23 +16,23 @@ Adds a query membership rule to one or more Configuration Manager device collect
 
 ### ByCollectionId (Default)
 ```
-Add-CMDeviceCollectionQueryMembershipRule -CollectionId <String> -RuleName <String> -QueryExpression <String>
- [-ValidateQueryHasResult] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Add-CMDeviceCollectionQueryMembershipRule -CollectionId <String> [-PassThru] -QueryExpression <String>
+ -RuleName <String> [-ValidateQueryHasResult] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ### ByCollectionName
 ```
-Add-CMDeviceCollectionQueryMembershipRule -CollectionName <String> -RuleName <String> -QueryExpression <String>
- [-ValidateQueryHasResult] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Add-CMDeviceCollectionQueryMembershipRule -CollectionName <String> [-PassThru] -QueryExpression <String>
+ -RuleName <String> [-ValidateQueryHasResult] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ### ByCollectionValue
 ```
-Add-CMDeviceCollectionQueryMembershipRule -InputObject <IResultObject> -RuleName <String>
- -QueryExpression <String> [-ValidateQueryHasResult] [-PassThru] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Add-CMDeviceCollectionQueryMembershipRule -InputObject <IResultObject> [-PassThru] -QueryExpression <String>
+ -RuleName <String> [-ValidateQueryHasResult] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -86,21 +86,6 @@ Aliases:
 Required: True
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -207,6 +192,21 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

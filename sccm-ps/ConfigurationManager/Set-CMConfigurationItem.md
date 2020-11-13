@@ -1,4 +1,4 @@
----
+﻿---
 description: Changes settings for a Configuration Manager configuration item.
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 Module Name: ConfigurationManager
@@ -17,24 +17,26 @@ Changes settings for a Configuration Manager configuration item.
 
 ### SetByIdMandatory (Default)
 ```
-Set-CMConfigurationItem [-Id] <Int32> [-NewName <String>] [-Description <String>] [-AddCategory <String[]>]
- [-RemoveCategory <String[]>] [-DigestPath <String>] [-DigestXml <String>] [-Digest <ConfigurationItem>]
- [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMConfigurationItem [-AddCategory <String[]>] [-Description <String>] [-Digest <ConfigurationItem>]
+ [-DigestPath <String>] [-DigestXml <String>] [-Id] <Int32> [-NewName <String>] [-PassThru]
+ [-RemoveCategory <String[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### SetByNameMandatory
 ```
-Set-CMConfigurationItem [-Name] <String> [-NewName <String>] [-Description <String>] [-AddCategory <String[]>]
- [-RemoveCategory <String[]>] [-DigestPath <String>] [-DigestXml <String>] [-Digest <ConfigurationItem>]
- [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMConfigurationItem [-AddCategory <String[]>] [-Description <String>] [-Digest <ConfigurationItem>]
+ [-DigestPath <String>] [-DigestXml <String>] [-Name] <String> [-NewName <String>] [-PassThru]
+ [-RemoveCategory <String[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### SetByValueMandatory
 ```
-Set-CMConfigurationItem [-InputObject] <IResultObject> [-NewName <String>] [-Description <String>]
- [-AddCategory <String[]>] [-RemoveCategory <String[]>] [-DigestPath <String>] [-DigestXml <String>]
- [-Digest <ConfigurationItem>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Set-CMConfigurationItem [-AddCategory <String[]>] [-Description <String>] [-Digest <ConfigurationItem>]
+ [-DigestPath <String>] [-DigestXml <String>] [-InputObject] <IResultObject> [-NewName <String>] [-PassThru]
+ [-RemoveCategory <String[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -90,22 +92,6 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -301,6 +287,22 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

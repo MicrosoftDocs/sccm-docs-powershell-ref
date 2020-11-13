@@ -1,4 +1,4 @@
----
+﻿---
 description: Changes the settings of configuration baselines.
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,45 +16,46 @@ Changes the settings of configuration baselines.
 
 ### SetByIdMandatory (Default)
 ```
-Set-CMBaseline -Id <Int32> [-NewName <String>] [-Description <String>] [-AddCategory <String[]>]
- [-RemoveCategory <String[]>] [-DesiredConfigurationDigestPath <String>] [-ClearRequiredConfigurationItem]
- [-ClearProhibitedConfigurationItem] [-ClearOptionalConfigurationItem] [-ClearOSConfigurationItem]
- [-ClearSoftwareUpdate] [-ClearBaseline] [-RemoveRequiredConfigurationItem <String[]>]
- [-RemoveProhibitedConfigurationItem <String[]>] [-RemoveOptionalConfigurationItem <String[]>]
- [-RemoveOSConfigurationItem <String[]>] [-RemoveSoftwareUpdate <String[]>] [-RemoveBaseline <String[]>]
- [-AddRequiredConfigurationItem <String[]>] [-AddProhibitedConfigurationItem <String[]>]
- [-AddOptionalConfigurationItem <String[]>] [-AddOSConfigurationItem <String[]>]
- [-AddSoftwareUpdate <String[]>] [-AddBaseline <String[]>] [-AllowComanagedClients <Boolean>] [-PassThru]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMBaseline [-AddBaseline <String[]>] [-AddCategory <String[]>] [-AddOptionalConfigurationItem <String[]>]
+ [-AddOSConfigurationItem <String[]>] [-AddProhibitedConfigurationItem <String[]>]
+ [-AddRequiredConfigurationItem <String[]>] [-AddSoftwareUpdate <String[]>] [-AllowComanagedClients <Boolean>]
+ [-ClearBaseline] [-ClearOptionalConfigurationItem] [-ClearOSConfigurationItem]
+ [-ClearProhibitedConfigurationItem] [-ClearRequiredConfigurationItem] [-ClearSoftwareUpdate]
+ [-Description <String>] [-DesiredConfigurationDigestPath <String>] -Id <Int32> [-NewName <String>] [-PassThru]
+ [-RemoveBaseline <String[]>] [-RemoveCategory <String[]>] [-RemoveOptionalConfigurationItem <String[]>]
+ [-RemoveOSConfigurationItem <String[]>] [-RemoveProhibitedConfigurationItem <String[]>]
+ [-RemoveRequiredConfigurationItem <String[]>] [-RemoveSoftwareUpdate <String[]>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetByNameMandatory
 ```
-Set-CMBaseline -Name <String> [-NewName <String>] [-Description <String>] [-AddCategory <String[]>]
- [-RemoveCategory <String[]>] [-DesiredConfigurationDigestPath <String>] [-ClearRequiredConfigurationItem]
- [-ClearProhibitedConfigurationItem] [-ClearOptionalConfigurationItem] [-ClearOSConfigurationItem]
- [-ClearSoftwareUpdate] [-ClearBaseline] [-RemoveRequiredConfigurationItem <String[]>]
- [-RemoveProhibitedConfigurationItem <String[]>] [-RemoveOptionalConfigurationItem <String[]>]
- [-RemoveOSConfigurationItem <String[]>] [-RemoveSoftwareUpdate <String[]>] [-RemoveBaseline <String[]>]
- [-AddRequiredConfigurationItem <String[]>] [-AddProhibitedConfigurationItem <String[]>]
- [-AddOptionalConfigurationItem <String[]>] [-AddOSConfigurationItem <String[]>]
- [-AddSoftwareUpdate <String[]>] [-AddBaseline <String[]>] [-AllowComanagedClients <Boolean>] [-PassThru]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMBaseline [-AddBaseline <String[]>] [-AddCategory <String[]>] [-AddOptionalConfigurationItem <String[]>]
+ [-AddOSConfigurationItem <String[]>] [-AddProhibitedConfigurationItem <String[]>]
+ [-AddRequiredConfigurationItem <String[]>] [-AddSoftwareUpdate <String[]>] [-AllowComanagedClients <Boolean>]
+ [-ClearBaseline] [-ClearOptionalConfigurationItem] [-ClearOSConfigurationItem]
+ [-ClearProhibitedConfigurationItem] [-ClearRequiredConfigurationItem] [-ClearSoftwareUpdate]
+ [-Description <String>] [-DesiredConfigurationDigestPath <String>] -Name <String> [-NewName <String>]
+ [-PassThru] [-RemoveBaseline <String[]>] [-RemoveCategory <String[]>]
+ [-RemoveOptionalConfigurationItem <String[]>] [-RemoveOSConfigurationItem <String[]>]
+ [-RemoveProhibitedConfigurationItem <String[]>] [-RemoveRequiredConfigurationItem <String[]>]
+ [-RemoveSoftwareUpdate <String[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### SetByValueMandatory
 ```
-Set-CMBaseline -InputObject <IResultObject> [-NewName <String>] [-Description <String>]
- [-AddCategory <String[]>] [-RemoveCategory <String[]>] [-DesiredConfigurationDigestPath <String>]
- [-ClearRequiredConfigurationItem] [-ClearProhibitedConfigurationItem] [-ClearOptionalConfigurationItem]
- [-ClearOSConfigurationItem] [-ClearSoftwareUpdate] [-ClearBaseline]
- [-RemoveRequiredConfigurationItem <String[]>] [-RemoveProhibitedConfigurationItem <String[]>]
+Set-CMBaseline [-AddBaseline <String[]>] [-AddCategory <String[]>] [-AddOptionalConfigurationItem <String[]>]
+ [-AddOSConfigurationItem <String[]>] [-AddProhibitedConfigurationItem <String[]>]
+ [-AddRequiredConfigurationItem <String[]>] [-AddSoftwareUpdate <String[]>] [-AllowComanagedClients <Boolean>]
+ [-ClearBaseline] [-ClearOptionalConfigurationItem] [-ClearOSConfigurationItem]
+ [-ClearProhibitedConfigurationItem] [-ClearRequiredConfigurationItem] [-ClearSoftwareUpdate]
+ [-Description <String>] [-DesiredConfigurationDigestPath <String>] -InputObject <IResultObject>
+ [-NewName <String>] [-PassThru] [-RemoveBaseline <String[]>] [-RemoveCategory <String[]>]
  [-RemoveOptionalConfigurationItem <String[]>] [-RemoveOSConfigurationItem <String[]>]
- [-RemoveSoftwareUpdate <String[]>] [-RemoveBaseline <String[]>] [-AddRequiredConfigurationItem <String[]>]
- [-AddProhibitedConfigurationItem <String[]>] [-AddOptionalConfigurationItem <String[]>]
- [-AddOSConfigurationItem <String[]>] [-AddSoftwareUpdate <String[]>] [-AddBaseline <String[]>]
- [-AllowComanagedClients <Boolean>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+ [-RemoveProhibitedConfigurationItem <String[]>] [-RemoveRequiredConfigurationItem <String[]>]
+ [-RemoveSoftwareUpdate <String[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -111,11 +112,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AddOSConfigurationItem
+### -AddOptionalConfigurationItem
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: AddOSConfigurationItems
+Aliases: AddOptionalConfigurationItems
 
 Required: False
 Position: Named
@@ -124,11 +125,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AddOptionalConfigurationItem
+### -AddOSConfigurationItem
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: AddOptionalConfigurationItems
+Aliases: AddOSConfigurationItems
 
 Required: False
 Position: Named
@@ -205,7 +206,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ClearOSConfigurationItem
+### -ClearOptionalConfigurationItem
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -218,7 +219,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ClearOptionalConfigurationItem
+### -ClearOSConfigurationItem
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -266,21 +267,6 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -450,11 +436,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -RemoveOSConfigurationItem
+### -RemoveOptionalConfigurationItem
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: RemoveOSConfigurationItems
+Aliases: RemoveOptionalConfigurationItems
 
 Required: False
 Position: Named
@@ -463,11 +449,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -RemoveOptionalConfigurationItem
+### -RemoveOSConfigurationItem
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: RemoveOptionalConfigurationItems
+Aliases: RemoveOSConfigurationItems
 
 Required: False
 Position: Named
@@ -511,6 +497,21 @@ Aliases: RemoveSoftwareUpdates
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

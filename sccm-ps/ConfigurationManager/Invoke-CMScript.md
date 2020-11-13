@@ -1,4 +1,4 @@
----
+﻿---
 description: Invokes a script in Configuration Manager.
 external help file: AdminUI.PS.ClientOperations.dll-Help.xml
 Module Name: ConfigurationManager
@@ -18,15 +18,15 @@ Invokes a script in Configuration Manager.
 ### ByInputObject
 ```
 Invoke-CMScript [-Collection <IResultObject>] [-CollectionId <String>] [-CollectionName <String>]
- [-Device <IResultObject[]>] -InputObject <IResultObject> [-PassThru] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-Device <IResultObject[]>] -InputObject <IResultObject> [-PassThru] [-ScriptParameter <Hashtable>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByGuid
 ```
 Invoke-CMScript [-Collection <IResultObject>] [-CollectionId <String>] [-CollectionName <String>]
- [-Device <IResultObject[]>] [-PassThru] -ScriptGuid <String> [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-Device <IResultObject[]>] [-PassThru] -ScriptGuid <String> [-ScriptParameter <Hashtable>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -101,22 +101,6 @@ Specifies the name of a collection.
 Type: String
 Parameter Sets: (All)
 Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
 
 Required: False
 Position: Named
@@ -218,6 +202,37 @@ Parameter Sets: ByGuid
 Aliases:
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ScriptParameter
+{{ Fill ScriptParameter Description }}
+
+```yaml
+Type: Hashtable
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False

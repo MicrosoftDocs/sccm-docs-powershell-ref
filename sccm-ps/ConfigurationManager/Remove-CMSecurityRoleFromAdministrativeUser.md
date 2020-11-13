@@ -1,4 +1,4 @@
----
+﻿---
 description: Removes the association between a security role and an administrative user.
 external help file: AdminUI.PS.Rba.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,55 +16,55 @@ Removes the association between a security role and an administrative user.
 
 ### RemoveRoleFromAdminByName_Name (Default)
 ```
-Remove-CMSecurityRoleFromAdministrativeUser -RoleName <String> -AdministrativeUserName <String> [-Force]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### RemoveRoleFromAdminById_Id
-```
-Remove-CMSecurityRoleFromAdministrativeUser -RoleId <String> -AdministrativeUserId <Int32> [-Force]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### RemoveRoleFromAdminById_Name
-```
-Remove-CMSecurityRoleFromAdministrativeUser -RoleId <String> -AdministrativeUserName <String> [-Force]
+Remove-CMSecurityRoleFromAdministrativeUser -AdministrativeUserName <String> [-Force] -RoleName <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### RemoveRoleFromAdminById_Object
 ```
-Remove-CMSecurityRoleFromAdministrativeUser -RoleId <String> -AdministrativeUser <IResultObject> [-Force]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### RemoveRoleFromAdminByName_Id
-```
-Remove-CMSecurityRoleFromAdministrativeUser -RoleName <String> -AdministrativeUserId <Int32> [-Force]
+Remove-CMSecurityRoleFromAdministrativeUser -AdministrativeUser <IResultObject> [-Force] -RoleId <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### RemoveRoleFromAdminByName_Object
 ```
-Remove-CMSecurityRoleFromAdministrativeUser -RoleName <String> -AdministrativeUser <IResultObject> [-Force]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### RemoveRoleFromAdminByObject_Id
-```
-Remove-CMSecurityRoleFromAdministrativeUser -Role <IResultObject> -AdministrativeUserId <Int32> [-Force]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### RemoveRoleFromAdminByObject_Name
-```
-Remove-CMSecurityRoleFromAdministrativeUser -Role <IResultObject> -AdministrativeUserName <String> [-Force]
+Remove-CMSecurityRoleFromAdministrativeUser -AdministrativeUser <IResultObject> [-Force] -RoleName <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### RemoveRoleFromAdminByObject_Object
 ```
-Remove-CMSecurityRoleFromAdministrativeUser -Role <IResultObject> -AdministrativeUser <IResultObject> [-Force]
+Remove-CMSecurityRoleFromAdministrativeUser -AdministrativeUser <IResultObject> [-Force] -Role <IResultObject>
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### RemoveRoleFromAdminById_Id
+```
+Remove-CMSecurityRoleFromAdministrativeUser -AdministrativeUserId <Int32> [-Force] -RoleId <String>
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### RemoveRoleFromAdminByName_Id
+```
+Remove-CMSecurityRoleFromAdministrativeUser -AdministrativeUserId <Int32> [-Force] -RoleName <String>
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### RemoveRoleFromAdminByObject_Id
+```
+Remove-CMSecurityRoleFromAdministrativeUser -AdministrativeUserId <Int32> [-Force] -Role <IResultObject>
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### RemoveRoleFromAdminById_Name
+```
+Remove-CMSecurityRoleFromAdministrativeUser -AdministrativeUserName <String> [-Force] -RoleId <String>
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### RemoveRoleFromAdminByObject_Name
+```
+Remove-CMSecurityRoleFromAdministrativeUser -AdministrativeUserName <String> [-Force] -Role <IResultObject>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -134,21 +134,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -DisableWildcardHandling
 DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
@@ -200,7 +185,7 @@ To obtain a **CMSecurityRole** object, use the [Get-CMSecurityRole](Get-CMSecuri
 
 ```yaml
 Type: IResultObject
-Parameter Sets: RemoveRoleFromAdminByObject_Id, RemoveRoleFromAdminByObject_Name, RemoveRoleFromAdminByObject_Object
+Parameter Sets: RemoveRoleFromAdminByObject_Object, RemoveRoleFromAdminByObject_Id, RemoveRoleFromAdminByObject_Name
 Aliases:
 
 Required: True
@@ -215,7 +200,7 @@ Specifies the ID of a role.
 
 ```yaml
 Type: String
-Parameter Sets: RemoveRoleFromAdminById_Id, RemoveRoleFromAdminById_Name, RemoveRoleFromAdminById_Object
+Parameter Sets: RemoveRoleFromAdminById_Object, RemoveRoleFromAdminById_Id, RemoveRoleFromAdminById_Name
 Aliases:
 
 Required: True
@@ -230,12 +215,27 @@ Specifies the name of a role.
 
 ```yaml
 Type: String
-Parameter Sets: RemoveRoleFromAdminByName_Name, RemoveRoleFromAdminByName_Id, RemoveRoleFromAdminByName_Object
+Parameter Sets: RemoveRoleFromAdminByName_Name, RemoveRoleFromAdminByName_Object, RemoveRoleFromAdminByName_Id
 Aliases:
 
 Required: True
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

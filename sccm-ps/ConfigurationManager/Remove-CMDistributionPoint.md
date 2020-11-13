@@ -1,4 +1,4 @@
----
+﻿---
 description: Removes a distribution point.
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -22,7 +22,7 @@ Remove-CMDistributionPoint [-Force] -InputObject <IResultObject> [-DisableWildca
 
 ### SearchByNameMandatory
 ```
-Remove-CMDistributionPoint [-SiteCode <String>] [-Force] [-SiteSystemServerName] <String>
+Remove-CMDistributionPoint [-Force] [-SiteCode <String>] [-SiteSystemServerName] <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -57,21 +57,6 @@ The second command removes the distribution point stored in $DP.
 Specifying the *Force* parameter indicates that the user is not prompted before the distribution point is removed.
 
 ## PARAMETERS
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -DisableWildcardHandling
 DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
@@ -164,6 +149,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
@@ -189,7 +189,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-###  
+### 
 
 ## NOTES
 

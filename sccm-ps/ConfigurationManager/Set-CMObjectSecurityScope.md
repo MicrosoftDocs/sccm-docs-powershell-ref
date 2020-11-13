@@ -1,4 +1,4 @@
----
+﻿---
 description: Sets the security scopes for Configuration Manager objects.
 external help file: AdminUI.PS.Common.dll-Help.xml
 Module Name: ConfigurationManager
@@ -15,7 +15,7 @@ Sets the security scopes for Configuration Manager objects.
 ## SYNTAX
 
 ```
-Set-CMObjectSecurityScope -InputObject <IResultObject[]> -Action <SecurityScopeActionType> -Name <String>
+Set-CMObjectSecurityScope -Action <SecurityScopeActionType> -InputObject <IResultObject[]> -Name <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -65,21 +65,6 @@ Accepted values: AddMembership, RemoveMembership
 Required: True
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -140,6 +125,21 @@ Aliases: SecurityScopeName
 Required: True
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

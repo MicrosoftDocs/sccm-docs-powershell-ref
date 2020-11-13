@@ -1,4 +1,4 @@
----
+﻿---
 description: Creates a Registry Key type global condition in Configuration Manager.
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,8 +16,8 @@ Creates a Registry Key type global condition in Configuration Manager.
 ## SYNTAX
 
 ```
-New-CMGlobalConditionRegistryKey [-Is64Bit <Boolean>] [-RegistryHive <RegistryRootKey>] -KeyName <String>
- -Name <String> [-Description <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+New-CMGlobalConditionRegistryKey [-Is64Bit <Boolean>] -KeyName <String> [-RegistryHive <RegistryRootKey>]
+ [-Description <String>] -Name <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
  [<CommonParameters>]
 ```
 

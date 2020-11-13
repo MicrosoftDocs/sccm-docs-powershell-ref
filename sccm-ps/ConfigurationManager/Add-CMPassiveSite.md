@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
 online version:
@@ -14,18 +14,17 @@ Use this cmdlet to add a site server in passive mode.
 
 ### AddByInputObjectMandatory (Default)
 ```
-Add-CMPassiveSite -InputObject <IResultObject> -InstallDirectory <String>
- -SourceFilePathOption <PassiveSiteSourceFileType> [-LocalSourceDirectory <String>]
- [-NetworkSourceDirectory <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Add-CMPassiveSite -InputObject <IResultObject> -InstallDirectory <String> [-LocalSourceDirectory <String>]
+ [-NetworkSourceDirectory <String>] -SourceFilePathOption <PassiveSiteSourceFileType>
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### AddBySiteCodeMandatory
 ```
-Add-CMPassiveSite -SiteCode <String> -SiteSystemServerName <String> -InstallDirectory <String>
- -SourceFilePathOption <PassiveSiteSourceFileType> [-LocalSourceDirectory <String>]
- [-NetworkSourceDirectory <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Add-CMPassiveSite -InstallDirectory <String> [-LocalSourceDirectory <String>]
+ [-NetworkSourceDirectory <String>] -SiteCode <String> -SiteSystemServerName <String>
+ -SourceFilePathOption <PassiveSiteSourceFileType> [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -46,21 +45,6 @@ Add-CMPassiveSite -SiteCode $SiteCode -SiteSystemServerName $SiteSystemServerNam
 ```
 
 ## PARAMETERS
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -DisableWildcardHandling
 This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
@@ -192,6 +176,21 @@ Aliases:
 Accepted values: CopySourceFileFromActiveSite, UseLocalSourceDirectory, UseNetworkSourceDirectory
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False

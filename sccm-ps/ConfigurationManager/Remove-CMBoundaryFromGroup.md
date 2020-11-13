@@ -1,4 +1,4 @@
----
+﻿---
 description: Removes a Configuration Manager boundary from a boundary group.
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,57 +16,56 @@ Removes a Configuration Manager boundary from a boundary group.
 
 ### RemoveBoundaryFromGroupById_Id (Default)
 ```
-Remove-CMBoundaryFromGroup [-Force] -BoundaryId <Int32> -BoundaryGroupId <Int32> [-DisableWildcardHandling]
+Remove-CMBoundaryFromGroup -BoundaryGroupId <Int32> -BoundaryId <Int32> [-Force] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### RemoveBoundaryFromGroupById_Name
-```
-Remove-CMBoundaryFromGroup [-Force] -BoundaryId <Int32> -BoundaryGroupName <String> [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### RemoveBoundaryFromGroupById_Object
-```
-Remove-CMBoundaryFromGroup [-Force] -BoundaryId <Int32> -BoundaryGroupInputObject <IResultObject>
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### RemoveBoundaryFromGroupByName_Id
 ```
-Remove-CMBoundaryFromGroup [-Force] -BoundaryName <String> -BoundaryGroupId <Int32> [-DisableWildcardHandling]
+Remove-CMBoundaryFromGroup -BoundaryGroupId <Int32> -BoundaryName <String> [-Force] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### RemoveBoundaryFromGroupByName_Name
+### RemoveBoundaryFromGroupByObject_Id
 ```
-Remove-CMBoundaryFromGroup [-Force] -BoundaryName <String> -BoundaryGroupName <String>
+Remove-CMBoundaryFromGroup -BoundaryGroupId <Int32> -BoundaryInputObject <IResultObject> [-Force]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### RemoveBoundaryFromGroupById_Object
+```
+Remove-CMBoundaryFromGroup -BoundaryGroupInputObject <IResultObject> -BoundaryId <Int32> [-Force]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### RemoveBoundaryFromGroupByName_Object
 ```
-Remove-CMBoundaryFromGroup [-Force] -BoundaryName <String> -BoundaryGroupInputObject <IResultObject>
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### RemoveBoundaryFromGroupByObject_Id
-```
-Remove-CMBoundaryFromGroup [-Force] -BoundaryInputObject <IResultObject> -BoundaryGroupId <Int32>
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### RemoveBoundaryFromGroupByObject_Name
-```
-Remove-CMBoundaryFromGroup [-Force] -BoundaryInputObject <IResultObject> -BoundaryGroupName <String>
+Remove-CMBoundaryFromGroup -BoundaryGroupInputObject <IResultObject> -BoundaryName <String> [-Force]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### RemoveBoundaryFromGroupByObject_Object
 ```
-Remove-CMBoundaryFromGroup [-Force] -BoundaryInputObject <IResultObject>
- -BoundaryGroupInputObject <IResultObject> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Remove-CMBoundaryFromGroup -BoundaryGroupInputObject <IResultObject> -BoundaryInputObject <IResultObject>
+ [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### RemoveBoundaryFromGroupById_Name
+```
+Remove-CMBoundaryFromGroup -BoundaryGroupName <String> -BoundaryId <Int32> [-Force] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### RemoveBoundaryFromGroupByName_Name
+```
+Remove-CMBoundaryFromGroup -BoundaryGroupName <String> -BoundaryName <String> [-Force]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### RemoveBoundaryFromGroupByObject_Name
+```
+Remove-CMBoundaryFromGroup -BoundaryGroupName <String> -BoundaryInputObject <IResultObject> [-Force]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -149,7 +148,7 @@ Specifies an ID for the boundary that this cmdlet removes.
 
 ```yaml
 Type: Int32
-Parameter Sets: RemoveBoundaryFromGroupById_Id, RemoveBoundaryFromGroupById_Name, RemoveBoundaryFromGroupById_Object
+Parameter Sets: RemoveBoundaryFromGroupById_Id, RemoveBoundaryFromGroupById_Object, RemoveBoundaryFromGroupById_Name
 Aliases:
 
 Required: True
@@ -162,7 +161,7 @@ Accept wildcard characters: False
 ### -BoundaryInputObject
 ```yaml
 Type: IResultObject
-Parameter Sets: RemoveBoundaryFromGroupByObject_Id, RemoveBoundaryFromGroupByObject_Name, RemoveBoundaryFromGroupByObject_Object
+Parameter Sets: RemoveBoundaryFromGroupByObject_Id, RemoveBoundaryFromGroupByObject_Object, RemoveBoundaryFromGroupByObject_Name
 Aliases: Boundary
 
 Required: True
@@ -177,27 +176,12 @@ Specifies a name for the boundary that this cmdlet removes.
 
 ```yaml
 Type: String
-Parameter Sets: RemoveBoundaryFromGroupByName_Id, RemoveBoundaryFromGroupByName_Name, RemoveBoundaryFromGroupByName_Object
+Parameter Sets: RemoveBoundaryFromGroupByName_Id, RemoveBoundaryFromGroupByName_Object, RemoveBoundaryFromGroupByName_Name
 Aliases:
 
 Required: True
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -247,6 +231,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
@@ -272,7 +271,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-###  
+### 
 
 ## NOTES
 

@@ -1,4 +1,4 @@
----
+﻿---
 description: Gets an Endpoint Protection point.
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,7 +16,7 @@ Gets an Endpoint Protection point.
 
 ### SearchByName (Default)
 ```
-Get-CMEndpointProtectionPoint [-SiteCode <String>] [[-SiteSystemServerName] <String>] [-AllSite]
+Get-CMEndpointProtectionPoint [-AllSite] [-SiteCode <String>] [[-SiteSystemServerName] <String>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 

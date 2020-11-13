@@ -1,4 +1,4 @@
----
+﻿---
 description: Adds a driver to a boot image or removes a driver from a boot image.
 external help file: AdminUI.PS.Osd.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,65 +16,65 @@ Adds a driver to a boot image or removes a driver from a boot image.
 
 ### SetDriverBootImagesById_Id (Default)
 ```
-Set-CMDriverBootImage -SetDriveBootImageAction <SetDriveBootImageActionType> -DriverId <Int32>
- -BootImageId <String> [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
-```
-
-### SetDriverBootImagesById_Name
-```
-Set-CMDriverBootImage -SetDriveBootImageAction <SetDriveBootImageActionType> -DriverId <Int32>
- -BootImageName <String> [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Set-CMDriverBootImage -BootImageId <String> -DriverId <Int32> [-PassThru]
+ -SetDriveBootImageAction <SetDriveBootImageActionType> [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetDriverBootImagesById_Object
 ```
-Set-CMDriverBootImage -SetDriveBootImageAction <SetDriveBootImageActionType> -DriverId <Int32>
- -BootImage <IResultObject> [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
-```
-
-### SetDriverBootImagesByName_Id
-```
-Set-CMDriverBootImage -SetDriveBootImageAction <SetDriveBootImageActionType> -DriverName <String>
- -BootImageId <String> [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
-```
-
-### SetDriverBootImagesByName_Name
-```
-Set-CMDriverBootImage -SetDriveBootImageAction <SetDriveBootImageActionType> -DriverName <String>
- -BootImageName <String> [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Set-CMDriverBootImage -BootImage <IResultObject> -DriverId <Int32> [-PassThru]
+ -SetDriveBootImageAction <SetDriveBootImageActionType> [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetDriverBootImagesByName_Object
 ```
-Set-CMDriverBootImage -SetDriveBootImageAction <SetDriveBootImageActionType> -DriverName <String>
- -BootImage <IResultObject> [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
-```
-
-### SetDriverBootImagesByObject_Id
-```
-Set-CMDriverBootImage -SetDriveBootImageAction <SetDriveBootImageActionType> -Driver <IResultObject>
- -BootImageId <String> [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
-```
-
-### SetDriverBootImagesByObject_Name
-```
-Set-CMDriverBootImage -SetDriveBootImageAction <SetDriveBootImageActionType> -Driver <IResultObject>
- -BootImageName <String> [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Set-CMDriverBootImage -BootImage <IResultObject> -DriverName <String> [-PassThru]
+ -SetDriveBootImageAction <SetDriveBootImageActionType> [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetDriverBootImagesByObject_Object
 ```
-Set-CMDriverBootImage -SetDriveBootImageAction <SetDriveBootImageActionType> -Driver <IResultObject>
- -BootImage <IResultObject> [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Set-CMDriverBootImage -BootImage <IResultObject> -Driver <IResultObject> [-PassThru]
+ -SetDriveBootImageAction <SetDriveBootImageActionType> [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SetDriverBootImagesByName_Id
+```
+Set-CMDriverBootImage -BootImageId <String> -DriverName <String> [-PassThru]
+ -SetDriveBootImageAction <SetDriveBootImageActionType> [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SetDriverBootImagesByObject_Id
+```
+Set-CMDriverBootImage -BootImageId <String> -Driver <IResultObject> [-PassThru]
+ -SetDriveBootImageAction <SetDriveBootImageActionType> [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SetDriverBootImagesById_Name
+```
+Set-CMDriverBootImage -BootImageName <String> -DriverId <Int32> [-PassThru]
+ -SetDriveBootImageAction <SetDriveBootImageActionType> [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SetDriverBootImagesByName_Name
+```
+Set-CMDriverBootImage -BootImageName <String> -DriverName <String> [-PassThru]
+ -SetDriveBootImageAction <SetDriveBootImageActionType> [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SetDriverBootImagesByObject_Name
+```
+Set-CMDriverBootImage -BootImageName <String> -Driver <IResultObject> [-PassThru]
+ -SetDriveBootImageAction <SetDriveBootImageActionType> [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -151,21 +151,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -DisableWildcardHandling
 DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
@@ -187,7 +172,7 @@ To obtain a **CMDriver** object, use the [Get-CMDriver](Get-CMDriver.md) cmdlet.
 
 ```yaml
 Type: IResultObject
-Parameter Sets: SetDriverBootImagesByObject_Id, SetDriverBootImagesByObject_Name, SetDriverBootImagesByObject_Object
+Parameter Sets: SetDriverBootImagesByObject_Object, SetDriverBootImagesByObject_Id, SetDriverBootImagesByObject_Name
 Aliases:
 
 Required: True
@@ -202,7 +187,7 @@ Specifies the ID of a driver.
 
 ```yaml
 Type: Int32
-Parameter Sets: SetDriverBootImagesById_Id, SetDriverBootImagesById_Name, SetDriverBootImagesById_Object
+Parameter Sets: SetDriverBootImagesById_Id, SetDriverBootImagesById_Object, SetDriverBootImagesById_Name
 Aliases: Id, CIId, CI_ID
 
 Required: True
@@ -217,7 +202,7 @@ Specifies the name of a driver.
 
 ```yaml
 Type: String
-Parameter Sets: SetDriverBootImagesByName_Id, SetDriverBootImagesByName_Name, SetDriverBootImagesByName_Object
+Parameter Sets: SetDriverBootImagesByName_Object, SetDriverBootImagesByName_Id, SetDriverBootImagesByName_Name
 Aliases:
 
 Required: True
@@ -274,6 +259,21 @@ Accepted values: AddDriverToBootImage, RemoveDriverFromBootImage
 Required: True
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

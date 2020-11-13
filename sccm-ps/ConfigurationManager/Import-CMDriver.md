@@ -1,4 +1,4 @@
----
+﻿---
 description: Import a device driver into the driver catalog.
 external help file: AdminUI.PS.Osd.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,12 +16,12 @@ Import a device driver into the driver catalog.
 ## SYNTAX
 
 ```
-Import-CMDriver -Path <String> [-ImportFolder] [-ImportDuplicateDriverOption <ImportDuplicateDriverOption>]
- [-EnableAndAllowInstall <Boolean>] [-AdministrativeCategory <IResultObject[]>]
- [-SupportedPlatformName <String[]>] [-SupportedPlatform <IResultObject[]>] [-DriverPackage <IResultObject[]>]
- [-UpdateDriverPackageDistributionPoint <Boolean>] [-BootImagePackage <IResultObject[]>]
- [-UpdateBootImageDistributionPoint <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Import-CMDriver [-AdministrativeCategory <IResultObject[]>] [-AdministrativeCategoryName <String[]>]
+ [-BootImagePackage <IResultObject[]>] [-DriverPackage <IResultObject[]>] [-EnableAndAllowInstall <Boolean>]
+ [-ImportDuplicateDriverOption <ImportDuplicateDriverOption>] [-ImportFolder] -Path <String>
+ [-SupportedPlatform <IResultObject[]>] [-SupportedPlatformName <String[]>]
+ [-UpdateBootImageDistributionPoint <Boolean>] [-UpdateDriverPackageDistributionPoint <Boolean>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -83,6 +83,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -AdministrativeCategoryName
+{{ Fill AdministrativeCategoryName Description }}
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases: AdministrativeCategoryNames
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -BootImagePackage
 
 Specify an array of boot image objects. To get this object, use the [Get-CMBootImage](Get-CMBootImage.md) cmdlet.
@@ -107,22 +122,6 @@ Aliases: BootImagePackages
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -313,6 +312,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 
 Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
@@ -330,7 +345,6 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -340,8 +354,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### IResultObject#SMS_Driver
-
-For more information on this return object and its properties, see [SMS_Driver server WMI class](/mem/configmgr/develop/reference/osd/sms_driver-server-wmi-class).
 
 ## NOTES
 

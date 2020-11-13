@@ -1,4 +1,4 @@
----
+﻿---
 description: Imports computer information into a Configuration Manager database.
 external help file: AdminUI.PS.Oob.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,17 +16,17 @@ Imports computer information into a Configuration Manager database.
 
 ### ImportSingleComputer (Default)
 ```
-Import-CMComputerInformation [-CollectionName <String[]>] -ComputerName <String> [-MacAddress <String>]
- [-SMBiosGuid <String>] [-SourceComputerName <String>] [-WindowsToGoUniqueKey <String>]
- [-CollectionId <String[]>] [-InputObject <IResultObject[]>] [-UserName <String[]>]
- [-UserAccountMigrationBehavior <MigrationBehavior>] [-MergeIfExist] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Import-CMComputerInformation [-CollectionId <String[]>] [-CollectionName <String[]>] -ComputerName <String>
+ [-InputObject <IResultObject[]>] [-MacAddress <String>] [-MergeIfExist] [-SMBiosGuid <String>]
+ [-SourceComputerName <String>] [-UserAccountMigrationBehavior <MigrationBehavior>] [-UserName <String[]>]
+ [-WindowsToGoUniqueKey <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### ImportComputerByUsingFile
 ```
-Import-CMComputerInformation [-CollectionName <String[]>] [-EnableColumnHeading <Boolean>] -FileName <String>
- [-VariableName <String>] [-CollectionId <String[]>] [-InputObject <IResultObject[]>]
+Import-CMComputerInformation [-CollectionId <String[]>] [-CollectionName <String[]>]
+ [-EnableColumnHeading <Boolean>] -FileName <String> [-InputObject <IResultObject[]>] [-VariableName <String>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -118,21 +118,6 @@ Aliases:
 Required: True
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -316,6 +301,34 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -WindowsToGoUniqueKey
+```yaml
+Type: String
+Parameter Sets: ImportSingleComputer
+Aliases: WtgUniqueKey
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
@@ -328,19 +341,6 @@ Aliases: wi
 Required: False
 Position: Named
 Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WindowsToGoUniqueKey
-```yaml
-Type: String
-Parameter Sets: ImportSingleComputer
-Aliases: WtgUniqueKey
-
-Required: False
-Position: Named
-Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

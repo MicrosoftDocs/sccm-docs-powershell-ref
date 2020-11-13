@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Deployments.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 07/31/2020
@@ -16,50 +16,50 @@ Use this cmdlet to create a deployment phase for software update.
 
 ### SearchByCollection
 ```
-New-CMSoftwareUpdatePhase [-UserNotificationOption <UserNotificationType>] [-SoftwareInstallation <Boolean>]
- [-AllowSystemRestart <Boolean>] [-WriteFilterCommit <Boolean>] [-PhaseDescription <String>]
- [-EnableWakeOnLan <Boolean>] [-StateMessageVerbosity <VerbosityLevelType>]
- [-ServerRestartSuppression <Boolean>] [-WorkstationRestartSuppression <Boolean>]
- [-RequirePostRebootFullScan <Boolean>] [-EnableAlert <Boolean>] [-AlertThresholdPercentage <Int32>]
- [-AlertDelta <Int32>] [-AlertUnit <TimeUnitType>] [-DisableScomAlert <Boolean>]
- [-GenerateScomAlertOnFailure <Boolean>] [-UseNeighborDP <Boolean>] [-UseSiteDefaultDP <Boolean>]
- [-AllowWumuFallback <Boolean>] [-AllowMeteredConnection <Boolean>] -PhaseName <String>
- [-Collection] <IResultObject> [-CriteriaOption <CriteriaType>] [-CriteriaValue <Int32>]
- [-BeginCondition <BeginConditionType>] [-DaysAfterPreviousPhaseSuccess <Int32>] [-ThrottlingDays <Int32>]
- [-InstallationChoice <InstallationChoiceType>] [-DeadlineUnit <TimeUnitType>] [-DeadlineValue <Int32>]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+New-CMSoftwareUpdatePhase [-AlertDelta <Int32>] [-AlertThresholdPercentage <Int32>] [-AlertUnit <TimeUnitType>]
+ [-AllowMeteredConnection <Boolean>] [-AllowSystemRestart <Boolean>] [-AllowWumuFallback <Boolean>]
+ [-BeginCondition <BeginConditionType>] [-Collection] <IResultObject> [-CriteriaOption <CriteriaType>]
+ [-CriteriaValue <Int32>] [-DaysAfterPreviousPhaseSuccess <Int32>] [-DeadlineUnit <TimeUnitType>]
+ [-DeadlineValue <Int32>] [-DisableScomAlert <Boolean>] [-EnableAlert <Boolean>] [-EnableWakeOnLan <Boolean>]
+ [-GenerateScomAlertOnFailure <Boolean>] [-InstallationChoice <InstallationChoiceType>]
+ [-PhaseDescription <String>] -PhaseName <String> [-RequirePostRebootFullScan <Boolean>]
+ [-ServerRestartSuppression <Boolean>] [-SoftwareInstallation <Boolean>]
+ [-StateMessageVerbosity <VerbosityLevelType>] [-ThrottlingDays <Int32>] [-UseNeighborDP <Boolean>]
+ [-UserNotificationOption <UserNotificationType>] [-UseSiteDefaultDP <Boolean>]
+ [-WorkstationRestartSuppression <Boolean>] [-WriteFilterCommit <Boolean>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByCollectionId
 ```
-New-CMSoftwareUpdatePhase [-UserNotificationOption <UserNotificationType>] [-SoftwareInstallation <Boolean>]
- [-AllowSystemRestart <Boolean>] [-WriteFilterCommit <Boolean>] [-PhaseDescription <String>]
- [-EnableWakeOnLan <Boolean>] [-StateMessageVerbosity <VerbosityLevelType>]
- [-ServerRestartSuppression <Boolean>] [-WorkstationRestartSuppression <Boolean>]
- [-RequirePostRebootFullScan <Boolean>] [-EnableAlert <Boolean>] [-AlertThresholdPercentage <Int32>]
- [-AlertDelta <Int32>] [-AlertUnit <TimeUnitType>] [-DisableScomAlert <Boolean>]
- [-GenerateScomAlertOnFailure <Boolean>] [-UseNeighborDP <Boolean>] [-UseSiteDefaultDP <Boolean>]
- [-AllowWumuFallback <Boolean>] [-AllowMeteredConnection <Boolean>] -PhaseName <String>
- [-CollectionId] <String> [-CriteriaOption <CriteriaType>] [-CriteriaValue <Int32>]
- [-BeginCondition <BeginConditionType>] [-DaysAfterPreviousPhaseSuccess <Int32>] [-ThrottlingDays <Int32>]
- [-InstallationChoice <InstallationChoiceType>] [-DeadlineUnit <TimeUnitType>] [-DeadlineValue <Int32>]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+New-CMSoftwareUpdatePhase [-AlertDelta <Int32>] [-AlertThresholdPercentage <Int32>] [-AlertUnit <TimeUnitType>]
+ [-AllowMeteredConnection <Boolean>] [-AllowSystemRestart <Boolean>] [-AllowWumuFallback <Boolean>]
+ [-BeginCondition <BeginConditionType>] [-CollectionId] <String> [-CriteriaOption <CriteriaType>]
+ [-CriteriaValue <Int32>] [-DaysAfterPreviousPhaseSuccess <Int32>] [-DeadlineUnit <TimeUnitType>]
+ [-DeadlineValue <Int32>] [-DisableScomAlert <Boolean>] [-EnableAlert <Boolean>] [-EnableWakeOnLan <Boolean>]
+ [-GenerateScomAlertOnFailure <Boolean>] [-InstallationChoice <InstallationChoiceType>]
+ [-PhaseDescription <String>] -PhaseName <String> [-RequirePostRebootFullScan <Boolean>]
+ [-ServerRestartSuppression <Boolean>] [-SoftwareInstallation <Boolean>]
+ [-StateMessageVerbosity <VerbosityLevelType>] [-ThrottlingDays <Int32>] [-UseNeighborDP <Boolean>]
+ [-UserNotificationOption <UserNotificationType>] [-UseSiteDefaultDP <Boolean>]
+ [-WorkstationRestartSuppression <Boolean>] [-WriteFilterCommit <Boolean>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByCollectionName
 ```
-New-CMSoftwareUpdatePhase [-UserNotificationOption <UserNotificationType>] [-SoftwareInstallation <Boolean>]
- [-AllowSystemRestart <Boolean>] [-WriteFilterCommit <Boolean>] [-PhaseDescription <String>]
- [-EnableWakeOnLan <Boolean>] [-StateMessageVerbosity <VerbosityLevelType>]
- [-ServerRestartSuppression <Boolean>] [-WorkstationRestartSuppression <Boolean>]
- [-RequirePostRebootFullScan <Boolean>] [-EnableAlert <Boolean>] [-AlertThresholdPercentage <Int32>]
- [-AlertDelta <Int32>] [-AlertUnit <TimeUnitType>] [-DisableScomAlert <Boolean>]
- [-GenerateScomAlertOnFailure <Boolean>] [-UseNeighborDP <Boolean>] [-UseSiteDefaultDP <Boolean>]
- [-AllowWumuFallback <Boolean>] [-AllowMeteredConnection <Boolean>] -PhaseName <String>
- [-CollectionName] <String> [-CriteriaOption <CriteriaType>] [-CriteriaValue <Int32>]
- [-BeginCondition <BeginConditionType>] [-DaysAfterPreviousPhaseSuccess <Int32>] [-ThrottlingDays <Int32>]
- [-InstallationChoice <InstallationChoiceType>] [-DeadlineUnit <TimeUnitType>] [-DeadlineValue <Int32>]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+New-CMSoftwareUpdatePhase [-AlertDelta <Int32>] [-AlertThresholdPercentage <Int32>] [-AlertUnit <TimeUnitType>]
+ [-AllowMeteredConnection <Boolean>] [-AllowSystemRestart <Boolean>] [-AllowWumuFallback <Boolean>]
+ [-BeginCondition <BeginConditionType>] [-CollectionName] <String> [-CriteriaOption <CriteriaType>]
+ [-CriteriaValue <Int32>] [-DaysAfterPreviousPhaseSuccess <Int32>] [-DeadlineUnit <TimeUnitType>]
+ [-DeadlineValue <Int32>] [-DisableScomAlert <Boolean>] [-EnableAlert <Boolean>] [-EnableWakeOnLan <Boolean>]
+ [-GenerateScomAlertOnFailure <Boolean>] [-InstallationChoice <InstallationChoiceType>]
+ [-PhaseDescription <String>] -PhaseName <String> [-RequirePostRebootFullScan <Boolean>]
+ [-ServerRestartSuppression <Boolean>] [-SoftwareInstallation <Boolean>]
+ [-StateMessageVerbosity <VerbosityLevelType>] [-ThrottlingDays <Int32>] [-UseNeighborDP <Boolean>]
+ [-UserNotificationOption <UserNotificationType>] [-UseSiteDefaultDP <Boolean>]
+ [-WorkstationRestartSuppression <Boolean>] [-WriteFilterCommit <Boolean>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -244,22 +244,6 @@ Aliases:
 
 Required: True
 Position: 0
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -613,25 +597,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -UseSiteDefaultDP
-
-This parameter is the same as the following setting on the **Download Settings** page of the **Add Phase Wizard** in the console: **When software updates are not available on any distribution points in current or neighbor boundary group, client can download and install software updates from distribution points in site default boundary group**. Specify the following values:
-
-- `$true`: Download and install software updates from the distribution points in site default boundary group
-- `$false`: Do not install software updates
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -UserNotificationOption
 
 This parameter is the same as the following setting on the **User Experience** page of the **Add Phase Wizard** in the console: **Specify user experience setting for this deployment** with the following values:
@@ -653,14 +618,17 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhatIf
+### -UseSiteDefaultDP
 
-Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
+This parameter is the same as the following setting on the **Download Settings** page of the **Add Phase Wizard** in the console: **When software updates are not available on any distribution points in current or neighbor boundary group, client can download and install software updates from distribution points in site default boundary group**. Specify the following values:
+
+- `$true`: Download and install software updates from the distribution points in site default boundary group
+- `$false`: Do not install software updates
 
 ```yaml
-Type: SwitchParameter
+Type: Boolean
 Parameter Sets: (All)
-Aliases: wi
+Aliases:
 
 Required: False
 Position: Named
@@ -693,6 +661,38 @@ This parameter is the same as the following setting on the **User Experience** p
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+
+Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
 
 Required: False
 Position: Named

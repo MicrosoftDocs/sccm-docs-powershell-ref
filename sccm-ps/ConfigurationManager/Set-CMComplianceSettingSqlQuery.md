@@ -1,4 +1,4 @@
----
+﻿---
 description: Sets a compliance setting sql query.
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,8 +16,8 @@ Sets a compliance setting sql query.
 
 ```
 Set-CMComplianceSettingSqlQuery [-ColumnName <String>] [-DatabaseName <String>] [-InstanceName <String>]
- [-SqlStatementFile <String>] [-SqlStatementText <String>] [-InstanceType <TargetSqlInstance>]
- [-Description <String>] -InputObject <PSObject> -SettingName <String> [-NewSettingName <String>] [-PassThru]
+ [-InstanceType <TargetSqlInstance>] [-SqlStatementFile <String>] [-SqlStatementText <String>]
+ [-Description <String>] -InputObject <PSObject> [-NewSettingName <String>] [-PassThru] -SettingName <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -42,21 +42,6 @@ PS XYZ:\>
 Type: String
 Parameter Sets: (All)
 Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
 
 Required: False
 Position: Named
@@ -220,6 +205,21 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: (All)
 Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
 
 Required: False
 Position: Named

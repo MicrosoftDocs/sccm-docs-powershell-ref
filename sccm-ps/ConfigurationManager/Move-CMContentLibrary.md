@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
 online version:
@@ -21,7 +21,7 @@ Move-CMContentLibrary -InputObject <IResultObject> -NewLocation <String> [-Disab
 
 ### MoveBySiteCodeMandatory
 ```
-Move-CMContentLibrary -SiteCode <String> -NewLocation <String> [-DisableWildcardHandling]
+Move-CMContentLibrary -NewLocation <String> -SiteCode <String> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -48,22 +48,6 @@ Move-CMContentLibrary -SiteCode $SiteCode -NewLocation $NewLocationPath
 ```
 
 ## PARAMETERS
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -DisableWildcardHandling
 
@@ -141,6 +125,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 
 Shows what would happen if the cmdlet runs. The cmdlet isn't run.
@@ -167,7 +167,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
-
 ## NOTES
 
 ## RELATED LINKS

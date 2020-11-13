@@ -1,4 +1,4 @@
----
+﻿---
 description: Get the status of classic software distribution deployments.
 external help file: AdminUI.PS.Deployments.dll-Help.xml
 Module Name: ConfigurationManager
@@ -27,15 +27,15 @@ Get-CMPackageDeploymentStatus -DeploymentId <String> [-StatusType <PackageDeploy
  [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
-### SearchByPackageId
+### SearchByValue
 ```
-Get-CMPackageDeploymentStatus -PackageId <String> [-StatusType <PackageDeploymentStatusType>]
+Get-CMPackageDeploymentStatus -InputObject <IResultObject> [-StatusType <PackageDeploymentStatusType>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
-### SearchByValue
+### SearchByPackageId
 ```
-Get-CMPackageDeploymentStatus [-StatusType <PackageDeploymentStatusType>] -InputObject <IResultObject>
+Get-CMPackageDeploymentStatus -PackageId <String> [-StatusType <PackageDeploymentStatusType>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
@@ -181,7 +181,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
-
 ## NOTES
 
 Cmdlet aliases: **Get-CMDeploymentStatus**
