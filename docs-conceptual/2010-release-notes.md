@@ -96,10 +96,10 @@ The following changes have been made to existing cmdlets in this version. Change
 <!-- Template
 ### Cmdlet name
 For more information, see [](/powershell/module/configurationmanager/).
-#### Breaking changes
-#### Bugs that were fixed
-#### Non-breaking changes
-#### Deprecations
+**Breaking changes**
+**Bugs that were fixed**
+**Non-breaking changes**
+**Deprecations**
 -->
 
 ### Add-CMComplianceSettingRegistryKeyValue
