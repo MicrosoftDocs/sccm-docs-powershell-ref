@@ -1,0 +1,552 @@
+---
+title: Version 2010 release notes
+titleSuffix: Configuration Manager
+description: Release notes for the changes to PowerShell cmdlets in Configuration Manager version 2010. 
+ms.date: 11/20/2020
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+---
+
+# Configuration Manager cmdlet library changes for version 2010
+
+*Applies to: Configuration Manager (current branch)*
+
+These release notes summarize changes to the Configuration Manager cmdlet library in version 2010.
+
+> [!NOTE]  
+> Configuration Manager current branch version 2002 is the baseline for these changes. For more information, see [Configuration Manager cmdlet library changes for version 2006](2006-release-notes.md).
+
+## New cmdlets
+
+<!-- - [<cmdlet>](/powershell/module/configurationmanager/) -->
+
+### Application management
+
+- [Add-CMCIDetectionMethod](/powershell/module/configurationmanager/Add-CMCIDetectionMethod): Specify how the client detects an application.
+- [Get-CMApplicationGroupDeployment](/powershell/module/configurationmanager/Get-CMApplicationGroupDeployment): Get the deployment of an application group.
+- [New-CMApplicationGroupDeployment](/powershell/module/configurationmanager/New-CMApplicationGroupDeployment): Create a deployment for an application group.
+- [Remove-CMApplicationGroupDeployment](/powershell/module/configurationmanager/Remove-CMApplicationGroupDeployment): Remove the deployment of an application group.
+- [Set-CMApplicationGroupDeployment](/powershell/module/configurationmanager/Set-CMApplicationGroupDeployment): Configure the deployment of an application group.
+
+### Cloud services
+
+- [Get-CMAADApplication](/powershell/module/configurationmanager/Get-CMAADApplication): Get the Azure Active Directory (Azure AD) app object from the site.
+- [Get-CMAzureService](/powershell/module/configurationmanager/Get-CMAzureService): Get the Azure service.
+- [Import-CMAADClientApplication](/powershell/module/configurationmanager/Import-CMAADClientApplication): Import the client app from Azure AD, and define it for the Configuration Manager site.
+- [Import-CMAADServerApplication](/powershell/module/configurationmanager/Import-CMAADServerApplication): Import the web/server app from Azure AD, and define it for the Configuration Manager site.
+- [New-CMCloudManagementAzureService](/powershell/module/configurationmanager/New-CMCloudManagementAzureService): Create the Azure service for **Cloud Management** in Configuration Manager.
+- [Remove-CMAzureService](/powershell/module/configurationmanager/Remove-CMAzureService): Remove the Azure service.
+- [Set-CMCloudManagementAzureService](/powershell/module/configurationmanager/Set-CMCloudManagementAzureService): Modify the settings of the Azure service for **Cloud Management** in Configuration Manager.
+
+### Collection management
+
+- [Get-CMCollectionDependency](/powershell/module/configurationmanager/Get-CMCollectionDependency): Get the limiting collection for the target collection.
+- [Get-CMCollectionDependent](/powershell/module/configurationmanager/Get-CMCollectionDependent): Get a collection's dependent relationships.
+- [Get-CMCollectionEvaluationStatus](/powershell/module/configurationmanager/Get-CMCollectionEvaluationStatus): Get the status of collection evaluation.
+- [Get-CMCollectionFullEvaluationStatus](/powershell/module/configurationmanager/Get-CMCollectionFullEvaluationStatus): Get the status of full evaluation of a collection.
+- [Get-CMCollectionIncrementalEvaluationStatus](/powershell/module/configurationmanager/Get-CMCollectionIncrementalEvaluationStatus): Get the status of incremental evaluation of a collection.
+- [Get-CMCollectionInfoFromEvaluationQueue](/powershell/module/configurationmanager/Get-CMCollectionInfoFromEvaluationQueue): Get collection information from the evaluation queue.
+- [Get-CMCollectionInfoFromFullEvaluationQueue](/powershell/module/configurationmanager/Get-CMCollectionInfoFromFullEvaluationQueue): Get collection information from the full evaluation queue.
+- [Get-CMCollectionInfoFromIncrementalEvaluationQueue](/powershell/module/configurationmanager/Get-CMCollectionInfoFromIncrementalEvaluationQueue): Get collection information from the incremental evaluation queue.
+- [Get-CMCollectionInfoFromManualEvaluationQueue](/powershell/module/configurationmanager/Get-CMCollectionInfoFromManualEvaluationQueue): Get collection information from the manual evaluation queue.
+- [Get-CMCollectionInfoFromNewEvaluationQueue](/powershell/module/configurationmanager/Get-CMCollectionInfoFromNewEvaluationQueue): Get collection information from the new evaluation queue.
+
+### Windows 10 edition upgrade
+
+- [New-CMWindows10EditionUpgrade](/powershell/module/configurationmanager/new-CMWindows10EditionUpgrade): Create a Windows 10 edition upgrade policy.
+- [Remove-CMWindows10EditionUpgrade](/powershell/module/configurationmanager/Remove-CMWindows10EditionUpgrade): Remove a Windows 10 edition upgrade policy.
+- [Set-CMWindows10EditionUpgrade](/powershell/module/configurationmanager/Set-CMWindows10EditionUpgrade): Configure a Windows 10 edition upgrade policy.
+
+### Microsoft Edge browser profiles
+
+- [Get-CMMicrosoftEdgeBrowserProfiles](/powershell/module/configurationmanager/Get-CMMicrosoftEdgeBrowserProfiles): Get a policy for a Microsoft Edge Legacy browser profile.
+- [New-CMMicrosoftEdgeBrowserProfiles](/powershell/module/configurationmanager/New-CMMicrosoftEdgeBrowserProfiles): Create a policy to manage Microsoft Edge Legacy browser settings.
+- [Set-CMMicrosoftEdgeBrowserProfiles](/powershell/module/configurationmanager/Set-CMMicrosoftEdgeBrowserProfiles): Configure a policy for a Microsoft Edge Legacy browser profile.
+
+### OneDrive for Business profiles
+
+- [Get-CMOneDriveBusinessProfile](/powershell/module/configurationmanager/Get-CMOneDriveBusinessProfile): Get a policy for a OneDrive for Business profile.
+- [New-CMOneDriveBusinessProfile](/powershell/module/configurationmanager/New-CMOneDriveBusinessProfile): Create a OneDrive for Business profile policy.
+- [Set-CMOneDriveBusinessProfile](/powershell/module/configurationmanager/Set-CMOneDriveBusinessProfile): Configure a OneDrive for Business profile policy.
+
+## Deprecated cmdlets
+
+- Add-CMAndroidDeploymentType
+- Add-CMGooglePlayDeploymentType
+- Add-CMIosAppStoreDeploymentType
+- Add-CMIosDeploymentType
+- Get-CMClientSetting
+- Set-CMAndroidDeploymentType
+- Set-CMGooglePlayDeploymentType
+- Set-CMIosAppStoreDeploymentType
+- Set-CMIosDeploymentType
+
+## Known issues
+
+None
+
+## Cmdlet changes
+
+The following changes have been made to existing cmdlets in this version. Changes may be new functionality, bug fixes, or deprecation. Some changes may be breaking. If you use one of the cmdlets or feature areas listed in this section, carefully review the changes to understand how they may affect your use.
+
+<!-- Template
+### Cmdlet name
+For more information, see [](/powershell/module/configurationmanager/).
+#### Breaking changes
+#### Bugs that were fixed
+#### Non-breaking changes
+#### Deprecations
+-->
+
+### Add-CMComplianceSettingRegistryKeyValue
+
+For more information, see [Add-CMComplianceSettingRegistryKeyValue](/powershell/module/configurationmanager/Add-CMComplianceSettingRegistryKeyValue).
+
+**Non-breaking changes**
+
+Parameter **ExpectedValue** can accept an empty value.
+
+### Add-CMDistributionPoint
+
+For more information, see [Add-CMDistributionPoint](/powershell/module/configurationmanager/Add-CMDistributionPoint).
+
+**Bugs that were fixed**
+
+Fixed an issue for distribution point creation.
+
+### Add-CMDeviceCollectionDirectMembershipRule
+
+For more information, see [Add-CMDeviceCollectionDirectMembershipRule](/powershell/module/configurationmanager/Add-CMDeviceCollectionDirectMembershipRule).
+
+**Bugs that were fixed**
+
+Fixed an issue for duplicated device number check.
+
+### Add-CMManagementPoint
+
+For more information, see [Add-CMManagementPoint](/powershell/module/configurationmanager/Add-CMManagementPoint).
+
+**Bugs that were fixed**
+
+Fixed an issue for cloud management gateway support.
+
+### Add-CMWindowsAppxDeploymentType
+
+For more information, see [Add-CMWindowsAppxDeploymentType](/powershell/module/configurationmanager/Add-CMWindowsAppxDeploymentType).
+
+**Non-breaking changes**
+
+Added function to support MSIX.
+
+### Approve-CMDevice
+
+For more information, see [Approve-CMDevice](/powershell/module/configurationmanager/Approve-CMDevice).
+
+**Non-breaking changes**
+
+Fixed an issue when working with **Get-CMDevice**.
+
+### Get-CMSoftwareUpdate
+
+For more information, see [Get-CMSoftwareUpdate](/powershell/module/configurationmanager/Get-CMSoftwareUpdate).
+
+**Non-breaking changes**
+
+Added new parameter **Vendor** to specify the source of the software update.
+
+**Example:**
+
+```powershell
+Get-CMSoftwareUpdate -Name $Update -Vendor Microsoft​
+```
+
+### Get-CMStatusMessageQuery
+
+For more information, see [Get-CMStatusMessageQuery](/powershell/module/configurationmanager/Get-CMStatusMessageQuery).
+
+**Bugs that were fixed**
+
+Fixed an issue for parameter **ShowMessage**.
+
+### Import-CMDriver
+
+For more information, see [Import-CMDriver](/powershell/module/configurationmanager/Import-CMDriver).
+
+**Non-breaking changes**
+
+Added new parameter **AdministrativeCategoryName** to specify a name for the driver category.
+
+**Example:**
+
+```PowerShell
+Import-CMDriver -UncFileLocation $DriverFolder -ImportFolder -ImportDuplicateDriverOption AppendCategory -AdministrativeCategory "Video drivers"
+```
+
+### Invoke-CMAnalyzePackage
+
+For more information, see [Invoke-CMAnalyzePackage](/powershell/module/configurationmanager/Invoke-CMAnalyzePackage).
+
+**Non-breaking changes**
+
+Added pipeline support.
+
+**Example:**
+
+```PowerShell
+$pkg | Invoke-CMAnalyzePackage
+```
+
+### Invoke-CMClientAction
+
+For more information, see [Invoke-CMClientAction](/powershell/module/configurationmanager/Invoke-CMClientAction).
+
+**Bugs that were fixed**
+
+Fixed pipeline issue for parameter **Collection**.
+
+**Example:**
+
+```PowerShell
+Get-CMCollection -Name "deviceCol1" | Invoke-CMClientAction -ActionType ClientNotificationRequestUsersPolicyNow
+```
+
+### Invoke-CMConvertPackage
+
+For more information, see [Invoke-CMConvertPackage](/powershell/module/configurationmanager/Invoke-CMConvertPackage).
+
+**Non-breaking changes**
+
+Added pipeline support.
+
+**Example:**
+
+```powershell
+$pkg | Invoke-CMConvertPackage
+```
+
+### Invoke-CMReport
+
+For more information, see [Invoke-CMReport](/powershell/module/configurationmanager/Invoke-CMReport).
+
+**Bugs that were fixed**
+
+Fixed an issue for parameter **Path**.
+
+### Invoke-CMScript
+
+For more information, see [Invoke-CMScript](/powershell/module/configurationmanager/Invoke-CMScript).
+
+**Non-breaking changes**
+
+Add parameter **ScriptParameter** to pass parameters to the target script.
+
+**Example:**
+
+```PowerShell
+$Hash = @{"FolderName"="c:\test\test1"; "FileName"="test2"}
+
+Invoke-CMScript -ScriptGuid $scriptGuid -Device (Get-CMDevice -Name $targetPCName) -ScriptParameter $Hash -Pass
+```
+
+### New-CMComplianceRuleFileFolderDate
+
+For more information, see [New-CMComplianceRuleFileFolderDate](/powershell/module/configurationmanager/New-CMComplianceRuleFileFolderDate).
+
+**Breaking changes**
+
+Changed the type of the parameter **PropertyType** from _FileFolderProperty_ to _SimpleFileFolderProperty_ type.
+
+### New-CMComplianceRuleFileFolderSimple
+
+For more information, see [New-CMComplianceRuleFileFolderSimple](/powershell/module/configurationmanager/New-CMComplianceRuleFileFolderSimple).
+
+**Breaking changes**
+
+Changed the type of the parameter **PropertyType** from _FileFolderProperty_ to _SimpleFileFolderProperty_ type.
+
+### New-CMDetectionClauseMacBundle
+
+For more information, see [New-CMDetectionClauseMacBundle](/powershell/module/configurationmanager/New-CMDetectionClauseMacBundle).
+
+**Bugs that were fixed**
+
+Fixed an issue for parameter **PropertyType**.
+
+### New-CMDriverPackage
+
+For more information, see [New-CMDriverPackage](/powershell/module/configurationmanager/New-CMDriverPackage).
+
+**Bugs that were fixed**
+
+Fixed an issue for parameter **DriverModel**.
+
+### New-CM*PhasedDeployment
+
+For more information, see the following articles:
+
+- [New-CMApplicationAutoPhasedDeployment](/powershell/module/configurationmanager/New-CMApplicationAutoPhasedDeployment)
+- [New-CMSoftwareUpdateAutoPhasedDeployment](/powershell/module/configurationmanager/New-CMSoftwareUpdateAutoPhasedDeployment)
+- [New-CMSoftwareUpdateManualPhasedDeployment](/powershell/module/configurationmanager/New-CMSoftwareUpdateManualPhasedDeployment)
+- [New-CMTaskSequenceAutoPhasedDeployment](/powershell/module/configurationmanager/New-CMTaskSequenceAutoPhasedDeployment)
+- [New-CMTaskSequenceManualPhasedDeployment](/powershell/module/configurationmanager/New-CMTaskSequenceManualPhasedDeployment)
+
+**Bugs that were fixed**
+
+Fixed an issue for parameter **WhatIf**.
+
+**Non-breaking changes**
+
+Added validation for duplicated phase name.
+
+### New-CMProgram
+
+For more information, see [New-CMProgram](/powershell/module/configurationmanager/New-CMProgram).
+
+**Breaking changes**
+
+Renamed the type `RenameWithUnc` to `RunWithUnc` for parameter **DriveMode**.
+
+### New-CMSoftwareUpdateDeployment
+
+For more information, see [New-CMSoftwareUpdateDeployment](/powershell/module/configurationmanager/New-CMSoftwareUpdateDeployment).
+
+**Non-breaking changes**
+
+Added new parameter **DeployWithNoPackage** for non-downloaded software update.
+
+### New-CMStandaloneMedia
+
+For more information, see [New-CMStandaloneMedia](/powershell/module/configurationmanager/New-CMStandaloneMedia).
+
+**Bugs that were fixed**
+
+Fixed an issue for parameter **PrestartPackage**
+
+### New-CMTaskSequenceDeployment
+
+For more information, see [New-CMTaskSequenceDeployment](/powershell/module/configurationmanager/New-CMTaskSequenceDeployment).
+
+**Bugs that were fixed**
+
+Fixed an issue for parameter **AllowFallback**.
+
+**Non-breaking changes**
+
+Added validation for parameter **Schedule** to avoid duplicated value with existing assignment.
+
+### New-CMTSPartitionSetting
+
+For more information, see [New-CMTSPartitionSetting](/powershell/module/configurationmanager/New-CMTSPartitionSetting).
+
+**Bugs that were fixed**
+
+Fixed an issue for parameter **EnableQuickFormat**.
+
+### Set-CM*PhasedDeployment
+
+For more information, see the following articles:
+
+- [Set-CMApplicationAutoPhasedDeployment](/powershell/module/configurationmanager/Set-CMApplicationAutoPhasedDeployment)
+- [Set-CMSoftwareUpdateAutoPhasedDeployment](/powershell/module/configurationmanager/Set-CMSoftwareUpdateAutoPhasedDeployment)
+- [Set-CMSoftwareUpdateManualPhasedDeployment](/powershell/module/configurationmanager/Set-CMSoftwareUpdateManualPhasedDeployment)
+- [Set-CMTaskSequenceAutoPhasedDeployment](/powershell/module/configurationmanager/Set-CMTaskSequenceAutoPhasedDeployment)
+- [Set-CMTaskSequenceManualPhasedDeployment](/powershell/module/configurationmanager/Set-CMTaskSequenceManualPhasedDeployment)
+
+**Bugs that were fixed**
+
+Fixed an issue for parameter **WhatIf**.
+
+### Set-CMClientSettingSoftwareUpdate
+
+For more information, see [Set-CMClientSettingSoftwareUpdate](/powershell/module/configurationmanager/Set-CMClientSettingSoftwareUpdate).
+
+**Non-breaking changes**
+
+Added parameters:
+
+- **EnableInstallation**
+- **ThreadPriority**
+- **EnableDynamicUpdate**
+
+**Example:**
+
+```powershell
+Set-CMClientSettingSoftwareUpdate -InputObject $testsetting -Enable $true -ScanSchedule $Sch1 -DeploymentEvaluationSchedule $Sch2 -BatchingTimeout 3 -TimeUnit Days -EnforceMandatory $true -Office365ManagementType $false -EnableThirdPartyUpdates $true -EnableDeltaDownload $true -EnableInstallation $true -ThreadPriority Normal -EnableDynamicUpdate $true
+```
+
+### Set-CMCloudManagementGateway
+
+For more information, see [Set-CMCloudManagementGateway](/powershell/module/configurationmanager/Set-CMCloudManagementGateway).
+
+**Non-breaking changes**
+
+Added parameters:
+
+- **ServiceCertPath**
+- **ServiceCertPassword**
+- **Force**
+
+**Example:**
+
+```powershell
+Set-CMCloudManagementGateway -InputObject $cmg1 -TrafficOutGB 1335 -ServiceCertPath "C:\Share\WebCMG.pfx" -ServiceCertPassword $password
+```
+
+### Set-CMDiscoveryMethod
+
+For more information, see [Set-CMDiscoveryMethod](/powershell/module/configurationmanager/Set-CMDiscoveryMethod).
+
+**Bugs that were fixed**
+
+Fixed an issue for parameter **AddGroupDiscoveryScope**.
+
+### Set-CMDistributionPoint
+
+For more information, see [Set-CMDistributionPoint](/powershell/module/configurationmanager/Set-CMDistributionPoint).
+
+**Non-breaking changes**
+
+Added parameters to support Microsoft Connected Cache:
+
+- **EnableDoinc**
+- **DiskSpaceUnit**
+- **DiskSpaceDoinc**
+- **LocalDriveDoinc**
+- **RetainDoincCache**
+- **AgreeDoincLicense**
+
+**Example:**
+
+```powershell
+$dp | Set-CMDistributionPoint -EnableDoinc $true -AgreeDoincLicense $true
+
+$dp | Set-CMDistributionPoint -RetainDoincCache $true -EnableDoinc $true -AgreeDoincLicense $true
+
+$dp | Set-CMDistributionPoint -LocalDriveDoinc "Z:" -DiskSpaceDoinc 9000 -DiskSpaceUnit GB
+```
+
+### Set-CMDriverPackage
+
+For more information, see [Set-CMDriverPackage](/powershell/module/configurationmanager/Set-CMDriverPackage).
+
+**Bugs that were fixed**
+
+Fixed an issue for parameter **DriverModel**.
+
+### Set-CMManagementPoint
+
+For more information, see [Set-CMManagementPoint](/powershell/module/configurationmanager/Set-CMManagementPoint).
+
+**Bugs that were fixed**
+
+Fixed an issue for cloud management gateway support.
+
+### Set-CMProgram
+
+For more information, see [Set-CMProgram](/powershell/module/configurationmanager/Set-CMProgram).
+
+**Breaking changes**
+
+Renamed the type `RenameWithUnc` to `RunWithUnc` for parameter **DriveMode**.
+
+### Set-CMSiteMaintenanceTask
+
+For more information, see [Set-CMSiteMaintenanceTask](/powershell/module/configurationmanager/Set-CMSiteMaintenanceTask).
+
+**Bugs that were fixed**
+
+Fixed an issue when configuring **Site Backup destination** and **SQL backup destination** for environments with a remote SMS Provider.
+
+### Set-CMSoftwareUpdateAutoDeploymentRule
+
+For more information, see [Set-CMSoftwareUpdateAutoDeploymentRule](/powershell/module/configurationmanager/Set-CMSoftwareUpdateAutoDeploymentRule).
+
+**Bugs that were fixed**
+
+Fixed an issue for input object from **Get-CMSoftwareUpdateAutoDeploymentRule** with **Fast** option.
+
+### Set-CMSoftwareUpdateDeploymentPackage
+
+For more information, see [Set-CMSoftwareUpdateDeploymentPackage](/powershell/module/configurationmanager/Set-CMSoftwareUpdateDeploymentPackage).
+
+**Bugs that were fixed**
+
+Fixed an issue for parameters **RemoveExpired** and **RemoveSuperceded**.
+
+### Set-CMSoftwareUpdateGroup
+
+For more information, see [Set-CMSoftwareUpdateGroup](/powershell/module/configurationmanager/Set-CMSoftwareUpdateGroup).
+
+**Bugs that were fixed**
+
+Fixed an issue for adding non-downloaded software update.
+
+### Set-CMStatusFilterRule
+
+For more information, see [Set-CMStatusFilterRule](/powershell/module/configurationmanager/Set-CMStatusFilterRule).
+
+**Bugs that were fixed**
+
+Fixed an issue for **Name** parameter to make sure it consists with **Get-CMStatusFilterRule**.
+
+### Set-CMTaskSequenceDeployment
+
+For more information, see [Set-CMTaskSequenceDeployment](/powershell/module/configurationmanager/Set-CMTaskSequenceDeployment).
+
+**Bugs that were fixed**
+
+Fixed an issue for parameter **ScheduleEvent**.
+
+Fixed an issue for parameter **AllowFallback**.
+
+**Non-breaking changes**
+
+Added validation for parameter **Schedule** to avoid duplicated value with existing assignment.
+
+Added new parameters to configure Schedule:
+
+- **ClearSchedule**
+- **RemoveSchedule**
+- **AddSchedule**
+
+Added new parameters to configure ScheduleEvent:
+
+- **ClearScheduleEvent**
+- **RemoveScheduleEvent**
+- **AddScheduleEvent**
+
+**Example:**
+
+```powershell
+$ReferenceDeployment | Set-CMTaskSequenceDeployment -AddSchedule $schedule1, $schedule2
+
+$ReferenceDeployment | Set-CMTaskSequenceDeployment -AddScheduleEvent LogOn, LogOff
+```
+
+### Set-CMWindowsAppxDeploymentType
+
+For more information, see [Set-CMWindowsAppxDeploymentType](/powershell/module/configurationmanager/Set-CMWindowsAppxDeploymentType).
+
+**Non-breaking changes**
+
+Added function to support MSIX.
+
+### Start-CMContentDistribution
+
+For more information, see [Start-CMContentDistribution](/powershell/module/configurationmanager/Start-CMContentDistribution).
+
+**Non-breaking changes**
+
+Added aliases for parameter **DeploymentPackageId** and **DeploymentPackageName** for better understanding.
+
+## How to provide feedback or report issues
+
+Many of the fixes and improvements described in this article are a result of your feedback.
+
+To send feedback, use the Configuration Manager console. For more information, see [Feedback for PowerShell](/mem/configmgr/core/understand/product-feedback#feedback-for-powershell).
+
+To submit new feature requests, see the PowerShell group of [Configuration Manager on UserVoice](https://configurationmanager.uservoice.com).
