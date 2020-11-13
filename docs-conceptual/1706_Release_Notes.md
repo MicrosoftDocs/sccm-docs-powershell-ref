@@ -21,7 +21,7 @@ ROBOTS: NOINDEX
 
 ### Documentation library updates
 
-For the latest cmdlet library documentation, see [ConfigurationManager module reference](https://docs.microsoft.com/powershell/module/configurationmanager/?view=sccm-ps).
+For the latest cmdlet library documentation, see [ConfigurationManager module reference](https://docs.microsoft.com/powershell/module/configurationmanager/).
 
 ### Administrator console Integrated Scripting Environment (ISE) experience improvements
 The script that is generated when launching ISE from the administrator console has been updated to allow for more customization and reusability. 
