@@ -97,6 +97,31 @@ After you update the Configuration Manager cmdlet help, you can get help about t
 Get-Help Get-CMSite
 ```
 
+## Feedback for PowerShell
+
+If you have feedback on the Configuration Manager PowerShell cmdlets, use the same options in the Configuration Manager console to send feedback. For more information, see [Product feedback](/mem/configmgr/core/understand/product-feedback).
+
+When you send a frown, include the following additional information specific to PowerShell:
+
+- The exact script or command syntax that you used so that Microsoft can try to reproduce the issue.
+
+- What behavior you expected compared to the actual behavior.
+
+- The full output when you run it with the [Verbose](/powershell/module/microsoft.powershell.core/about/about_commonparameters#verbose) common parameter.
+
+- The version and path of the **ConfigurationManager** module. For example, include the output of the following commands:
+
+    ```powershell
+    (Get-Module -Name ConfigurationManager).Version
+    (Get-Module -Name ConfigurationManager).Path
+    ```
+
+- If a cmdlet returns an error, use the following command to get exception details:
+
+    ```powershell
+    $Error[0].Exception | Format-List * -Force
+    ```
+
 ## Next steps
 
 For more information about what's changed in the most recent release of Configuration Manager, select the latest **Release Notes** from the table of contents.

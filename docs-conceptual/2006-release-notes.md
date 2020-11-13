@@ -333,4 +333,6 @@ Fixed a blocking issue when user specified a value for the **OSArchitecture** pa
 
 Many of the fixes and improvements described in this article are a result of your feedback.
 
-To submit bug reports, use [send a smile in the Configuration Manager console](/mem/configmgr/core/understand/find-help#product-feedback). For new feature requests, use [UserVoice](https://configurationmanager.uservoice.com).
+To send feedback, use the Configuration Manager console. For more information, see [Feedback for PowerShell](/mem/configmgr/core/understand/product-feedback#feedback-for-powershell).
+
+To submit new feature requests, see the PowerShell group of [Configuration Manager on UserVoice](https://configurationmanager.uservoice.com).
