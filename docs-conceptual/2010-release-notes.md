@@ -17,6 +17,8 @@ manager: dougeby
 
 These release notes summarize changes to the Configuration Manager cmdlet library in version 2010.
 
+Starting in version 2010, the Configuration Manager PowerShell cmdlet library now offers support for PowerShell 7. For more information, see [Support for PowerShell version 7](overview.md#support-for-powershell-version-7).<!--6023299-->
+
 > [!NOTE]  
 > Configuration Manager current branch version 2002 is the baseline for these changes. For more information, see [Configuration Manager cmdlet library changes for version 2006](2006-release-notes.md).
 

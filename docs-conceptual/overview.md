@@ -1,10 +1,10 @@
 ---
 title: Configuration Manager PowerShell cmdlets
 description: Manage your Configuration Manager hierarchy using Windows PowerShell. 
-ms.date: 08/24/2020
+ms.date: 11/20/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: overview
 ms.assetid: 63712bbf-0f8a-4cdb-8998-e7d41257981e
 author: aczechowski
 ms.author: aaroncz
@@ -15,14 +15,14 @@ manager: dougeby
 
 *Applies to: Configuration Manager (current branch)*
 
-Use Windows PowerShell to manage your Configuration Manager hierarchy. You can use PowerShell scripts to automate or extend Configuration Manager similar to other documented approaches using WMI and C#. For more information, see [Configuration Manager SDK](https://docs.microsoft.com/mem/configmgr/develop/).
+Use Windows PowerShell to manage your Configuration Manager hierarchy. You can use PowerShell scripts to automate or extend Configuration Manager similar to other documented approaches using WMI and C#. For more information, see [Configuration Manager SDK](/mem/configmgr/develop/).
 
 Run Configuration Manager cmdlets and scripts in PowerShell from the Configuration Manager console or from a Windows PowerShell session. When you run Configuration Manager cmdlets by using the Configuration Manager console, your session automatically runs in the context of the site.
 
 > [!NOTE]
-> Configuration Manager current branch supports Windows PowerShell version 5.1. If you've already installed PowerShell version 7, you can still use PowerShell version 5.1. For more information, see [Using PowerShell 7 side-by-side with Windows PowerShell 5.1](https://docs.microsoft.com/powershell/scripting/install/migrating-from-windows-powershell-51-to-powershell-7?view=powershell-7#using-powershell-7-side-by-side-with-windows-powershell-51).
+> All currently supported versions of Configuration Manager current branch support Windows PowerShell version 5.1. If you've already installed PowerShell version 7, you can still use PowerShell version 5.1. For more information, see [Using PowerShell 7 side-by-side with Windows PowerShell 5.1](/powershell/scripting/install/migrating-from-windows-powershell-51-to-powershell-7#using-powershell-7-side-by-side-with-windows-powershell-51).
 >
-> For more information about support for PowerShell version 7, see [Features in Configuration Manager technical preview version 2004](https://docs.microsoft.com/mem/configmgr/core/get-started/2020/technical-preview-2004#bkmk_pwsh7).
+> Starting in version 2010, the Configuration Manager PowerShell cmdlet library supports PowerShell 7. For more information, see [Support for PowerShell version 7](#support-for-powershell-version-7).<!--6023299-->
 
 ## PowerShell from the Configuration Manager console
 
@@ -97,6 +97,23 @@ After you update the Configuration Manager cmdlet help, you can get help about t
 Get-Help Get-CMSite
 ```
 
+## Support for PowerShell version 7
+
+<!--6023299-->
+
+Starting in version 2010, the Configuration Manager PowerShell cmdlet library supports PowerShell version 7. For more information on PowerShell 7, including directions on how to download and install it, see [Install PowerShell on Windows](/powershell/scripting/install/installing-powershell-core-on-windows).
+
+> [!TIP]
+> PowerShell 7 runs as `pwsh.exe`. Earlier versions of PowerShell run as `powershell.exe`.
+
+### Known issues with PowerShell version 7
+
+- You can't launch PowerShell 7 directly from the Configuration Manager console. Manually start PowerShell 7, and then [import the Configuration Manager module](#import-the-configuration-manager-powershell-module).
+
+- Configuration Manager cmdlets with **Import-** and **Export-** verbs may not function as expected.
+
+- Current support is only for the Configuration Manager cmdlets. Other features of Configuration Manager that rely on PowerShell may not support version 7. For example, [Run Scripts](/mem/configmgr/apps/deploy-use/create-deploy-scripts), [CMPivot](/mem/configmgr/core/servers/manage/cmpivot), or the [Run PowerShell Script](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_RunPowerShellScript) task sequence step.
+
 ## Feedback for PowerShell
 
 If you have feedback on the Configuration Manager PowerShell cmdlets, use the same options in the Configuration Manager console to send feedback. For more information, see [Product feedback](/mem/configmgr/core/understand/product-feedback).
@@ -126,6 +143,6 @@ When you send a frown, include the following additional information specific to 
 
 For more information about what's changed in the most recent release of Configuration Manager, select the latest **Release Notes** from the table of contents.
 
-For more information on individual cmdlets, see the [Configuration Manager cmdlet reference](https://docs.microsoft.com/powershell/module/configurationmanager/).
+For more information on individual cmdlets, see the [Configuration Manager cmdlet reference](/powershell/module/configurationmanager/).
 
-For more information on learning and getting started with Windows PowerShell, see [PowerShell 101](https://docs.microsoft.com/powershell/scripting/learn/ps101/00-introduction?view=powershell-7).
+For more information on learning and getting started with Windows PowerShell, see [PowerShell 101](/powershell/scripting/learn/ps101/00-introduction).
