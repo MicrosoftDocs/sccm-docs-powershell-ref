@@ -22,6 +22,55 @@ Starting in version 2010, the Configuration Manager PowerShell cmdlet library no
 > [!NOTE]  
 > Configuration Manager current branch version 2002 is the baseline for these changes. For more information, see [Configuration Manager cmdlet library changes for version 2006](2006-release-notes.md).
 
+## Cloud management gateway
+
+<!--6978300-->
+
+With more customers managing remote devices now, this release includes several new and improved Windows PowerShell cmdlets for the [cloud management gateway (CMG)](/mem/configmgr/core/clients/manage/cmg/overview). You can use these cmdlets to automate the creation, configuration, and management of the CMG service and Azure Active Directory (Azure AD) requirements.
+
+> [!NOTE]
+> While some of the new cmdlets might work with other Azure services, they're only tested with the **Cloud management** connection to support the CMG.
+
+For example, an Azure administrator first creates the two required apps in Azure Active Directory (Azure AD). Then you write a script that uses the following cmdlets to deploy a CMG:
+
+1. **Import-CMAADServerApplication**: Create the Azure AD server app definition in Configuration Manager.
+1. **Import-CMAADClientApplication**: Create the Azure AD client app definition in Configuration Manager.
+1. Use **Get-CMAADApplication** to get the app objects, and then pass to **New-CMCloudManagementAzureService** to create the Azure service connection in Configuration Manager.
+1. **New-CMCloudManagementGateway**: Create the CMG service in Azure.
+1. **Add-CMCloudManagementGatewayConnectionPoint**: Create the CMG connection point site system.
+
+### New cmdlets for CMG
+
+- [Get-CMAADApplication](/powershell/module/configurationmanager/Get-CMAADApplication): Get the Azure Active Directory (Azure AD) app object from the site.
+- [Get-CMAzureService](/powershell/module/configurationmanager/Get-CMAzureService): Get the Azure service.
+- [Import-CMAADClientApplication](/powershell/module/configurationmanager/Import-CMAADClientApplication): Import the client app from Azure AD, and define it for the Configuration Manager site.
+- [Import-CMAADServerApplication](/powershell/module/configurationmanager/Import-CMAADServerApplication): Import the web/server app from Azure AD, and define it for the Configuration Manager site.
+- [New-CMCloudManagementAzureService](/powershell/module/configurationmanager/New-CMCloudManagementAzureService): Create the Azure service for **Cloud Management** in Configuration Manager.
+- [Remove-CMAzureService](/powershell/module/configurationmanager/Remove-CMAzureService): Remove the Azure service.
+- [Set-CMCloudManagementAzureService](/powershell/module/configurationmanager/Set-CMCloudManagementAzureService): Modify the settings of the Azure service for **Cloud Management** in Configuration Manager.
+
+### Updated cmdlets for CMG
+
+The following existing cmdlets have significant improvements. For more information, see the following release notes:
+
+- [New-CMCloudManagementGateway](#new-cmcloudmanagementgateway)
+- [Set-CMCloudManagementGateway](#set-cmcloudmanagementgateway)
+
+### Existing cmdlets for CMG
+
+You can continue to use the following existing CMG cmdlets:
+
+- [Add-CMCloudManagementGatewayConnectionPoint](/powershell/module/configurationmanager/Add-CMCloudManagementGatewayConnectionPoint)
+- [Get-CMCloudManagementGateway](/powershell/module/configurationmanager/Get-CMCloudManagementGateway)
+- [Get-CMCloudManagementGatewayConnectionPoint](/powershell/module/configurationmanager/Get-CMCloudManagementGatewayConnectionPoint)
+- [New-CMCloudManagementGateway](/powershell/module/configurationmanager/New-CMCloudManagementGateway)
+- [Remove-CMCloudManagementGateway](/powershell/module/configurationmanager/Remove-CMCloudManagementGateway)
+- [Remove-CMCloudManagementGatewayConnectionPoint](/powershell/module/configurationmanager/Remove-CMCloudManagementGatewayConnectionPoint)
+- [Set-CMCloudManagementGateway](/powershell/module/configurationmanager/Set-CMCloudManagementGateway)
+- [Set-CMCloudManagementGatewayConnectionPoint](/powershell/module/configurationmanager/Set-CMCloudManagementGatewayConnectionPoint)
+- [Start-CMCloudManagementGateway](/powershell/module/configurationmanager/Start-CMCloudManagementGateway)
+- [Stop-CMCloudManagementGateway](/powershell/module/configurationmanager/Stop-CMCloudManagementGateway)
+
 ## New cmdlets
 
 <!-- - [<cmdlet>](/powershell/module/configurationmanager/) -->
@@ -33,16 +82,6 @@ Starting in version 2010, the Configuration Manager PowerShell cmdlet library no
 - [New-CMApplicationGroupDeployment](/powershell/module/configurationmanager/New-CMApplicationGroupDeployment): Create a deployment for an application group.
 - [Remove-CMApplicationGroupDeployment](/powershell/module/configurationmanager/Remove-CMApplicationGroupDeployment): Remove the deployment of an application group.
 - [Set-CMApplicationGroupDeployment](/powershell/module/configurationmanager/Set-CMApplicationGroupDeployment): Configure the deployment of an application group.
-
-### Cloud services
-
-- [Get-CMAADApplication](/powershell/module/configurationmanager/Get-CMAADApplication): Get the Azure Active Directory (Azure AD) app object from the site.
-- [Get-CMAzureService](/powershell/module/configurationmanager/Get-CMAzureService): Get the Azure service.
-- [Import-CMAADClientApplication](/powershell/module/configurationmanager/Import-CMAADClientApplication): Import the client app from Azure AD, and define it for the Configuration Manager site.
-- [Import-CMAADServerApplication](/powershell/module/configurationmanager/Import-CMAADServerApplication): Import the web/server app from Azure AD, and define it for the Configuration Manager site.
-- [New-CMCloudManagementAzureService](/powershell/module/configurationmanager/New-CMCloudManagementAzureService): Create the Azure service for **Cloud Management** in Configuration Manager.
-- [Remove-CMAzureService](/powershell/module/configurationmanager/Remove-CMAzureService): Remove the Azure service.
-- [Set-CMCloudManagementAzureService](/powershell/module/configurationmanager/Set-CMCloudManagementAzureService): Modify the settings of the Azure service for **Cloud Management** in Configuration Manager.
 
 ### Collection management
 
