@@ -114,17 +114,24 @@ You can continue to use the following existing CMG cmdlets:
 - [New-CMOneDriveBusinessProfile](/powershell/module/configurationmanager/New-CMOneDriveBusinessProfile): Create a OneDrive for Business profile policy.
 - [Set-CMOneDriveBusinessProfile](/powershell/module/configurationmanager/Set-CMOneDriveBusinessProfile): Configure a OneDrive for Business profile policy.
 
-## Deprecated cmdlets
+## Deprecated and removed cmdlets
+
+The following cmdlets for Configuration Manager hybrid environments are no longer available:
 
 - Add-CMAndroidDeploymentType
 - Add-CMGooglePlayDeploymentType
 - Add-CMIosAppStoreDeploymentType
 - Add-CMIosDeploymentType
-- Get-CMClientSetting
 - Set-CMAndroidDeploymentType
 - Set-CMGooglePlayDeploymentType
 - Set-CMIosAppStoreDeploymentType
 - Set-CMIosDeploymentType
+
+For more information, see [What happened to hybrid MDM?](/mem/configmgr/mdm/understand/what-happened-to-hybrid)
+
+The following cmdlet is deprecated:
+
+- [Set-CMClientSetting](/powershell/module/configurationmanager/Set-CMClientSetting)
 
 ## Known issues
 

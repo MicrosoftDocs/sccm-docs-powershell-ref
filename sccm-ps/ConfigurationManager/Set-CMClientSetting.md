@@ -2,7 +2,7 @@
 description: Change client settings for Configuration Manager devices and users.
 external help file: AdminUI.PS.ClientSettings.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 07/31/2020
+ms.date: 11/20/2020
 schema: 2.0.0
 title: Set-CMClientSetting
 ---
@@ -179,6 +179,9 @@ Set-CMClientSetting -Name <String> [-PassThru] [-Schedule <IResultObject>] [-Sof
 ## DESCRIPTION
 
 The **Set-CMClientSetting** cmdlet changes client settings for Configuration Manager devices and users. Configuration Manager provides default values for all client settings, but you can use this cmdlet to modify settings objects. Settings objects determine settings for individual clients. For more information, see [About client settings](/mem/configmgr/core/clients/deploy/about-client-settings).
+
+> [!IMPORTANT]
+> Starting in version 2010, this cmdlet is deprecated. Use one of the cmdlets specific to the client settings group, listed in the [Related links](#related-links).
 
 To modify a client setting, specify it by name.
 
@@ -1914,7 +1917,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
+
+Starting in version 2010, this cmdlet is deprecated. Use one of the cmdlets specific to the client settings group, listed in the [Related links](#related-links).
 
 ## RELATED LINKS
 
@@ -1927,3 +1933,26 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-CMClientSetting](Remove-CMClientSetting.md)
 
 [New-CMSchedule](New-CMSchedule.md)
+
+[Set-CMClientSettingBackgroundIntelligentTransfer](Set-CMClientSettingBackgroundIntelligentTransfer.md)
+[Set-CMClientSettingClientCache](Set-CMClientSettingClientCache.md)
+[Set-CMClientSettingClientPolicy](Set-CMClientSettingClientPolicy.md)
+[Set-CMClientSettingCloudService](Set-CMClientSettingCloudService.md)
+[Set-CMClientSettingComplianceSetting](Set-CMClientSettingComplianceSetting.md)
+[Set-CMClientSettingComputerAgent](Set-CMClientSettingComputerAgent.md)
+[Set-CMClientSettingComputerRestart](Set-CMClientSettingComputerRestart.md)
+[Set-CMClientSettingDeliveryOptimization](Set-CMClientSettingDeliveryOptimization.md)
+[Set-CMClientSettingEndpointProtection](Set-CMClientSettingEndpointProtection.md)
+[Set-CMClientSettingEnrollment](Set-CMClientSettingEnrollment.md)
+[Set-CMClientSettingGeneral](Set-CMClientSettingGeneral.md)
+[Set-CMClientSettingHardwareInventory](Set-CMClientSettingHardwareInventory.md)
+[Set-CMClientSettingMeteredInternetConnection](Set-CMClientSettingMeteredInternetConnection.md)
+[Set-CMClientSettingPowerManagement](Set-CMClientSettingPowerManagement.md)
+[Set-CMClientSettingRemoteTool](Set-CMClientSettingRemoteTool.md)
+[Set-CMClientSettingSoftwareCenter](Set-CMClientSettingSoftwareCenter.md)
+[Set-CMClientSettingSoftwareDeployment](Set-CMClientSettingSoftwareDeployment.md)
+[Set-CMClientSettingSoftwareInventory](Set-CMClientSettingSoftwareInventory.md)
+[Set-CMClientSettingSoftwareMetering](Set-CMClientSettingSoftwareMetering.md)
+[Set-CMClientSettingSoftwareUpdate](Set-CMClientSettingSoftwareUpdate.md)
+[Set-CMClientSettingStateMessaging](Set-CMClientSettingStateMessaging.md)
+[Set-CMClientSettingUserAndDeviceAffinity](Set-CMClientSettingUserAndDeviceAffinity.md)

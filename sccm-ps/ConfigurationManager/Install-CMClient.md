@@ -275,17 +275,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
-
-[Get-CMClientSetting](Get-CMClientSetting.md)
-
-[New-CMClientSetting](New-CMClientSetting.md)
-
-[Remove-CMClientSetting](Remove-CMClientSetting.md)
-
-[Set-CMClientSetting](Set-CMClientSetting.md)
 
 [Set-CMClientStatusSetting](Set-CMClientStatusSetting.md)
 
@@ -294,5 +287,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-CMDevice](Get-CMDevice.md)
 
 [Get-CMBaseline](Get-CMBaseline.md)
-
-
