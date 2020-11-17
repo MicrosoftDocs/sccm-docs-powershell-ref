@@ -2,13 +2,15 @@
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
 online version:
+ms.date: 11/20/2020
 schema: 2.0.0
 ---
 
 # Import-CMAADClientApplication
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Create the Azure Active Directory (Azure AD) client app definition in Configuration Manager.
 
 ## SYNTAX
 
@@ -25,21 +27,37 @@ Import-CMAADClientApplication -AppName <String> -ClientId <String> -TenantId <St
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+Use this cmdlet to import the client app from Azure AD, and define it for the Configuration Manager site. It assumes that an Azure administrator already created the app in Azure AD. In Azure AD, this app is known as a _native_ app registration.
+
+For more information on how to use this cmdlet to create a cloud management gateway (CMG), see [2010 release notes: Cloud management gateway](/powershell/sccm/2010-release-notes#cloud-management-gateway).
+
+For more information about Azure AD apps in Configuration Manager, see [Configure Azure services](/mem/configmgr/core/servers/deploy/configure/azure-services-wizard).
+
+> [!NOTE]
+> This cmdlet might work with other Azure services, but it's only tested with the **Cloud management** connection to support the cloud management gateway (CMG).
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Import the client app based on the tenant ID
+
 ```powershell
-PS C:\> {{ Add example code here }}
+Import-CMAADClientApplication -TenantId "05a349fa-298a-4427-8771-9efcdb73431e" -AppName "CmgClientApp" -ClientId "cf114f48-88db-4829-ac45-0c186e86dbf6"
 ```
 
-{{ Add example description here }}
+### Example 2: Import the client app based on the server app
+
+```powershell
+$serverApp = Get-CMAADApplication -TenantName "Contoso" -AppType ServerApplication -AppName "CmgServerApp"
+
+Import-CMAADClientApplication -ServerApp $serverApp -AppName "CmgClientApp" -ClientId "cf114f48-88db-4829-ac45-0c186e86dbf6"
+```
 
 ## PARAMETERS
 
 ### -AppName
-{{ Fill AppName Description }}
+
+Specify the name of the app in Azure AD.
 
 ```yaml
 Type: String
@@ -54,7 +72,8 @@ Accept wildcard characters: False
 ```
 
 ### -ClientId
-{{ Fill ClientId Description }}
+
+Specify the **Application (client) ID** value of the app registration in Azure AD. The format is a standard GUID.
 
 ```yaml
 Type: String
@@ -69,7 +88,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-{{ Fill DisableWildcardHandling Description }}
+
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -84,7 +104,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-{{ Fill ForceWildcardHandling Description }}
+
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -99,7 +120,8 @@ Accept wildcard characters: False
 ```
 
 ### -ServerApp
-{{ Fill ServerApp Description }}
+
+Specify an object for the server app. To get the server app, use the [Get-CMAADApplication](Get-CMAADApplication.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -114,7 +136,8 @@ Accept wildcard characters: False
 ```
 
 ### -TenantId
-{{ Fill TenantId Description }}
+
+Specify the GUID of your Azure AD tenant.
 
 ```yaml
 Type: String
@@ -129,6 +152,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -144,8 +168,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+
+Shows what would happen if the cmdlet runs. The cmdlet isn't run.
 
 ```yaml
 Type: SwitchParameter
@@ -160,6 +184,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -173,3 +198,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-CMAADApplication](Get-CMAADApplication.md)
+
+[Import-CMAADServerApplication](Import-CMAADServerApplication.md)
+
+[Configure Azure services](/mem/configmgr/core/servers/deploy/configure/azure-services-wizard)

@@ -293,6 +293,53 @@ $Hash = @{"FolderName"="c:\test\test1"; "FileName"="test2"}
 Invoke-CMScript -ScriptGuid $scriptGuid -Device (Get-CMDevice -Name $targetPCName) -ScriptParameter $Hash -Pass
 ```
 
+### New-CMCloudManagementGateway
+
+For more information, see [New-CMCloudManagementGateway](/powershell/module/configurationmanager/New-CMCloudManagementGateway).
+
+**Non-breaking changes**
+
+The following parameters are new:
+
+- CARootCert
+- EnableCloudDPFunction
+- EnableStorageQuota
+- EnableTrafficOut
+- EnforceProtocol
+- Force
+- GroupName
+- IsUsingExistingGroup
+- ServerAppClientID
+- ServiceCertPassword
+- ServiceCertPath
+- ServiceName
+- StorageCriticalPct
+- StorageQuotaGB
+- StorageWarningPct
+- TrafficOutStopService
+
+The following parameters are updated:
+
+- CheckClientCertRevocation
+- EnvironmentSetting
+- Region
+- SubscriptionId
+- TrafficCriticalPct
+- TrafficWarningPct
+
+**Breaking changes**
+
+The following parameters are removed from this cmdlet:
+
+- GovernmentSubscription
+- ManagementCertificatePassword
+- ManagementCertificatePath
+- PassThru
+- RootCertificatePath
+- ServiceCertificatePassword
+- ServiceCertificatePath
+- ServiceCName
+
 ### New-CMComplianceRuleFileFolderDate
 
 For more information, see [New-CMComplianceRuleFileFolderDate](/powershell/module/configurationmanager/New-CMComplianceRuleFileFolderDate).
@@ -425,17 +472,25 @@ For more information, see [Set-CMCloudManagementGateway](/powershell/module/conf
 
 **Non-breaking changes**
 
-Added parameters:
+The following parameters are new:
 
-- **ServiceCertPath**
-- **ServiceCertPassword**
-- **Force**
+- CARootCert
+- EnableCloudDPFunction
+- EnableStorageQuota
+- EnableTrafficOut
+- EnforceProtocol
+- RemoveCertThumbprints
+- StorageCriticalPct
+- StorageQuotaGB
+- StorageWarningPct
+- TrafficOutStopService
+- VMInstanceCount
 
-**Example:**
+**Breaking changes**
 
-```powershell
-Set-CMCloudManagementGateway -InputObject $cmg1 -TrafficOutGB 1335 -ServiceCertPath "C:\Share\WebCMG.pfx" -ServiceCertPassword $password
-```
+The following parameters are removed from this cmdlet:
+
+- VMInstancesCount
 
 ### Set-CMDiscoveryMethod
 

@@ -2,7 +2,7 @@
 description: Configure a cloud management gateway (CMG).
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 07/31/2020
+ms.date: 11/20/2020
 schema: 2.0.0
 title: Set-CMCloudManagementGateway
 ---
@@ -53,14 +53,22 @@ Set-CMCloudManagementGateway [-CARootCert <Hashtable>] [-CheckClientCertRevocati
 
 ## DESCRIPTION
 
-Configure a cloud management gateway (CMG).
+Use this cmdlet to configure a cloud management gateway (CMG).
+
+For more information, see [CMG Overview](/mem/configmgr/core/clients/manage/cmg/overview).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
-### Example 1: Change the number of virtual machines for the CMG service
+### Example 1: Change the CMG alerts configuration
+
+```powershell
+Set-CMCloudManagementGateway -Name "GraniteFalls" -EnableTrafficOut $true -TrafficOutGB 10000 -TrafficWarningPct 50 –TrafficCriticalPct 90 -EnableStorageQuota $true -StorageQuotaGB 2000 -StorageWarningPct 50 -StorageCriticalPct 90
+```
+
+### Example 2: Change the number of virtual machines for the CMG service
 
 This example targets the CMG named **GraniteFalls** and changes the number of VMs to `4`.
 
@@ -68,7 +76,27 @@ This example targets the CMG named **GraniteFalls** and changes the number of VM
 Set-CMCloudManagementGateway -Name "GraniteFalls" -VMInstancesCount 4
 ```
 
-### Example 2: Update the CMG server authentication certificate
+### Example 3: Enable the CMG to serve content from Azure storage
+
+```powershell
+Set-CMCloudManagementGateway -Name "GraniteFalls" -EnableCloudDPFunction $true
+```
+
+### Example 4: Add two new certificate authorities
+
+```powershell
+$path1 = "folder\root.cer"
+$type1 = [Microsoft.ConfigurationManagement.AdminConsole.AzureServices.CertificateStore]::RootCA
+
+$path2 = "folder\intermediate.cer"
+$type2 = [Microsoft.ConfigurationManagement.AdminConsole.AzureServices.CertificateStore]::IntermediateCA
+
+$cert = @{$path1 = $type1; $path2 = $type2}
+
+Set-CMCloudManagementGateway -Name "GraniteFalls" -CARootCert $cert
+```
+
+### Example 5: Update the CMG server authentication certificate
 
 This example targets the CMG named **GraniteFalls** and updates the CMG server authentication certificate.
 
@@ -76,10 +104,17 @@ This example targets the CMG named **GraniteFalls** and updates the CMG server a
 Set-CMCloudManagementGateway -Name "GraniteFalls" -ServiceCertPath "c:\TestPath\NewServiceCert.pfx" -ServiceCertPassword (ConvertTo-SecureString -String "tX*xJ11Nuo^B" -AsPlainText -Force)
 ```
 
+### Example 6: Remove a root certificate from a CMG
+
+```powershell
+Set-CMCloudManagementGateway -Name "GraniteFalls" -RemoveCertThumbprints "A7CBA0014DEF847593569D05003D5B96A1D6A627"
+```
+
 ## PARAMETERS
 
 ### -CARootCert
-{{ Fill CARootCert Description }}
+
+Add root certificates to the cloud service.
 
 ```yaml
 Type: Hashtable
@@ -142,7 +177,8 @@ Accept wildcard characters: False
 ```
 
 ### -EnableCloudDPFunction
-{{ Fill EnableCloudDPFunction Description }}
+
+Applies to version 2010 and later. Enable or disable the option to **Allow CMG to function as a cloud distribution point and serve content from Azure storage**.
 
 ```yaml
 Type: Boolean
@@ -157,7 +193,8 @@ Accept wildcard characters: False
 ```
 
 ### -EnableStorageQuota
-{{ Fill EnableStorageQuota Description }}
+
+Applies to version 2010 and later. Enable or disable the option to **Specify storage alert threshold**.
 
 ```yaml
 Type: Boolean
@@ -172,7 +209,8 @@ Accept wildcard characters: False
 ```
 
 ### -EnableTrafficOut
-{{ Fill EnableTrafficOut Description }}
+
+Applies to version 2010 and later. Enable or disable the option to **Turn on 14-day threshold and alerts for monitoring outbound data transfer**.
 
 ```yaml
 Type: Boolean
@@ -187,7 +225,8 @@ Accept wildcard characters: False
 ```
 
 ### -EnforceProtocol
-{{ Fill EnforceProtocol Description }}
+
+Applies to version 2010 and later. Enable or disable the option to **Enforce TLS 1.2**.
 
 ```yaml
 Type: Boolean
@@ -202,6 +241,8 @@ Accept wildcard characters: False
 ```
 
 ### -Force
+
+Run the command without asking for confirmation. If the service certificate contains multiple DNS names, use this parameter to avoid warnings from the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -233,7 +274,7 @@ Accept wildcard characters: False
 
 ### -Id
 
-Specify the Azure service ID of the CMG to configure.
+Specify the site's ID for the Azure service. The **Id** is the integer value stored in the site database for the service. For example, run the following SQL query, and look at the **ID** column: `select * from Azure_CloudService`.
 
 ```yaml
 Type: String
@@ -249,7 +290,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 
-Specify a CMG object to configure.
+Specify a CMG object to configure. To get this object, use the [Get-CMCloudManagementGateway](Get-CMCloudManagementGateway.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -296,7 +337,8 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveCertThumbprints
-{{ Fill RemoveCertThumbprints Description }}
+
+Applies to version 2010 and later. Specify one or more certificate thumbprints to remove them as root or intermediate certificate authorities from the CMG.
 
 ```yaml
 Type: String[]
@@ -328,7 +370,7 @@ Accept wildcard characters: False
 
 ### -ServiceCertPath
 
-Applies to version 2006 and later. Specify the path to the CMG server authentication certificate in PFX format. For more information, see [Certificates for CMG](/mem/configmgr/core/clients/manage/cmg/certificates-for-cloud-management-gateway).
+Applies to version 2006 and later. Specify the path to the service certificate. For more information, see [CMG server authentication certificate](/mem/configmgr/core/clients/manage/cmg/server-auth-cert).
 
 ```yaml
 Type: String
@@ -343,7 +385,8 @@ Accept wildcard characters: False
 ```
 
 ### -StorageCriticalPct
-{{ Fill StorageCriticalPct Description }}
+
+Applies to version 2010 and later. Specify an integer value for the **Generate Critical alert (% of storage alert threshold)**. For example, `90`.
 
 ```yaml
 Type: Int32
@@ -358,7 +401,8 @@ Accept wildcard characters: False
 ```
 
 ### -StorageQuotaGB
-{{ Fill StorageQuotaGB Description }}
+
+Applies to version 2010 and later. Specify an integer value for the **Storage alert threshold (GB)**. For example, `2`.
 
 ```yaml
 Type: Int32
@@ -373,7 +417,8 @@ Accept wildcard characters: False
 ```
 
 ### -StorageWarningPct
-{{ Fill StorageWarningPct Description }}
+
+Applies to version 2010 and later. Specify an integer value for the **Generate Warning alert (% of storage alert threshold)**. For example, `50`.
 
 ```yaml
 Type: Int32
@@ -420,7 +465,8 @@ Accept wildcard characters: False
 ```
 
 ### -TrafficOutStopService
-{{ Fill TrafficOutStopService Description }}
+
+Applies to version 2010 and later. Enable or disable the option to **Stop this service when the critical threshold is exceeded**.
 
 ```yaml
 Type: Boolean
@@ -451,7 +497,8 @@ Accept wildcard characters: False
 ```
 
 ### -VMInstanceCount
-{{ Fill VMInstanceCount Description }}
+
+Applies to version 2010 and later. Specify the instance count of virtual machines.
 
 ```yaml
 Type: Int32
@@ -498,6 +545,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -507,8 +555,15 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
 
-[Plan for the cloud management gateway](/mem/configmgr/core/clients/manage/cmg/plan-cloud-management-gateway)
+[Get-CMCloudManagementGateway](Get-CMCloudManagementGateway.md)
+[New-CMCloudManagementGateway](New-CMCloudManagementGateway.md)
+[Remove-CMCloudManagementGateway](Remove-CMCloudManagementGateway.md)
+[Start-CMCloudManagementGateway](Start-CMCloudManagementGateway.md)
+[Stop-CMCloudManagementGateway](Stop-CMCloudManagementGateway.md)
+
+[CMG Overview](/mem/configmgr/core/clients/manage/cmg/overview)

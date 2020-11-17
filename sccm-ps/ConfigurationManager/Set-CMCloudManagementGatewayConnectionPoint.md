@@ -1,8 +1,8 @@
 ﻿---
-description: Sets a cloud management gateway connection point
+description: Configure a cloud management gateway connection point
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/07/2019
+ms.date: 11/20/2020
 schema: 2.0.0
 title: Set-CMCloudManagementGatewayConnectionPoint
 ---
@@ -10,7 +10,8 @@ title: Set-CMCloudManagementGatewayConnectionPoint
 # Set-CMCloudManagementGatewayConnectionPoint
 
 ## SYNOPSIS
-Sets a cloud management gateway connection point
+
+Configure a cloud management gateway connection point.
 
 ## SYNTAX
 
@@ -29,21 +30,29 @@ Set-CMCloudManagementGatewayConnectionPoint -CloudManagementGatewayName <String>
 
 ## DESCRIPTION
 
+Use this cmdlet to configure a cloud management gateway (CMG) connection point role on a site system server.
+
+For more information on CMG, see [CMG Overview](/mem/configmgr/core/clients/manage/cmg/overview).
+
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
 ### Example 1
-```
-PS XYZ:\>
+
+This example changes the CMG that the site system server connects to.
+
+```powershell
+Set-CMCloudManagementGatewayConnectionPoint -CloudManagementGatewayName "GraniteFalls-new.cloudapp.net" -SiteSystemServerName "cmgcp.contoso.com"
 ```
 
 ## PARAMETERS
 
 ### -CloudManagementGatewayName
+
+Specify the service name of the CMG in Azure.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -57,7 +66,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
+
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -72,7 +82,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
+
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -87,6 +98,9 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
+
+Specify a CMG connection point object to configure. To get the object, use the [Get-CMCloudManagementGatewayConnectionPoint](Get-CMCloudManagementGatewayConnectionPoint.md) cmdlet.
+
 ```yaml
 Type: IResultObject
 Parameter Sets: SetByValue
@@ -100,7 +114,8 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Returns an object representing the item with which you are working. By default, this cmdlet may not generate any output.
+
+Returns an object representing the item with which you're working. By default, this cmdlet may not generate any output.
 
 ```yaml
 Type: SwitchParameter
@@ -115,6 +130,9 @@ Accept wildcard characters: False
 ```
 
 ### -SiteCode
+
+Specify the site code for this site system role.
+
 ```yaml
 Type: String
 Parameter Sets: SetByName
@@ -128,6 +146,9 @@ Accept wildcard characters: False
 ```
 
 ### -SiteSystemServerName
+
+Specify the FQDN of the server as the target for this role.
+
 ```yaml
 Type: String
 Parameter Sets: SetByName
@@ -141,6 +162,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -156,8 +178,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+
+Shows what would happen if the cmdlet runs. The cmdlet isn't run.
 
 ```yaml
 Type: SwitchParameter
@@ -172,6 +194,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -182,6 +205,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### IResultObject#SMS_SCI_SysResUse
 
+For more information on this return object and its properties, see [SMS_SCI_SysResUse server WMI class](/mem/configmgr/develop/reference/core/servers/configure/sms_sci_sysresuse-server-wmi-class).
+
 ## NOTES
 
 ## RELATED LINKS
+
+[Add-CMCloudManagementGatewayConnectionPoint](Add-CMCloudManagementGatewayConnectionPoint.md)
+
+[Get-CMCloudManagementGatewayConnectionPoint](Get-CMCloudManagementGatewayConnectionPoint.md)
+
+[Remove-CMCloudManagementGatewayConnectionPoint](Remove-CMCloudManagementGatewayConnectionPoint.md)

@@ -2,13 +2,15 @@
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
 online version:
+ms.date: 11/20/2020
 schema: 2.0.0
 ---
 
 # Set-CMCloudManagementAzureService
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Modify the settings of the Azure service for **Cloud Management** in Configuration Manager.
 
 ## SYNTAX
 
@@ -43,21 +45,26 @@ Set-CMCloudManagementAzureService [-AddGroupName <String[]>] [-DeleteGroupName <
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+Use this cmdlet to modify the settings of an Azure service in Configuration Manager for **Cloud Management**.
+
+For more information about the **Cloud Management** service, see [CMG Overview](/mem/configmgr/core/clients/manage/cmg/overview).
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
-```
 
-{{ Add example description here }}
+This example first uses the **Get-CMAzureService** cmdlet to get the service from the site. It then passes that object with the pipeline operator to **Set-CMCloudManagementAzureService**, which renames it and sets the description.
+
+```powershell
+Get-CMAzureService -Name "Contoso" | Set-CMCloudManagementAzureService -NewName "CMG service" -Description "ConfigMgr connection to Contoso tenant for CMG"
+```
 
 ## PARAMETERS
 
 ### -AddGroupName
-{{ Fill AddGroupName Description }}
+
+Specify an Azure Active Directory (Azure AD) group name to discover. Use this parameter with the **EnableGroupDiscovery** parameter.
 
 ```yaml
 Type: String[]
@@ -72,7 +79,8 @@ Accept wildcard characters: False
 ```
 
 ### -DeleteGroupName
-{{ Fill DeleteGroupName Description }}
+
+Specify an Azure AD group name to remove from discovery.
 
 ```yaml
 Type: String[]
@@ -87,7 +95,8 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-{{ Fill Description Description }}
+
+Specify an optional description for the service.
 
 ```yaml
 Type: String
@@ -102,7 +111,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-{{ Fill DisableWildcardHandling Description }}
+
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -117,7 +127,8 @@ Accept wildcard characters: False
 ```
 
 ### -EnableAADGroupSync
-{{ Fill EnableAADGroupSync Description }}
+
+Enable Configuration Manager to sync collections to groups in Azure AD. For more information, see [Synchronize members to Azure AD groups](/mem/configmgr/core/clients/manage/collections/create-collections#bkmk_aadcollsync).
 
 ```yaml
 Type: Boolean
@@ -132,7 +143,8 @@ Accept wildcard characters: False
 ```
 
 ### -EnableGroupDeltaDiscovery
-{{ Fill EnableGroupDeltaDiscovery Description }}
+
+Set this parameter to `true` to enable delta discovery for Azure AD group discovery. Use this parameter with the **EnableGroupDiscovery** parameter. Use the **GroupDeltaDiscoveryMins** parameter to configure the delta discovery interval.
 
 ```yaml
 Type: Boolean
@@ -147,7 +159,16 @@ Accept wildcard characters: False
 ```
 
 ### -EnableGroupDiscovery
-{{ Fill EnableGroupDiscovery Description }}
+
+Set this parameter to `true` to enable Azure AD group discovery. When you enable this discovery method, also configure the following parameters:
+
+- **AddGroupName**: Add Azure AD groups to discover
+- **EnableGroupDeltaDiscovery**: Configure delta discovery
+- **GroupDeltaDiscoveryMins**: Delta discovery interval
+- **GroupDiscoverySchedule**: Full polling schedule
+
+For more information on this discovery method, see [Azure Active Directory user group discovery](/mem/configmgr/core/servers/deploy/configure/about-discovery-methods#bkmk_azuregroupdisco).
+
 
 ```yaml
 Type: Boolean
@@ -162,7 +183,8 @@ Accept wildcard characters: False
 ```
 
 ### -EnableUserDeltaDiscovery
-{{ Fill EnableUserDeltaDiscovery Description }}
+
+Set this parameter to `true` to enable delta discovery for Azure AD user discovery. Use this parameter with the **EnableUserDiscovery** parameter.
 
 ```yaml
 Type: Boolean
@@ -177,7 +199,14 @@ Accept wildcard characters: False
 ```
 
 ### -EnableUserDiscovery
-{{ Fill EnableUserDiscovery Description }}
+
+Set this parameter to `true` to enable Azure AD user discovery. When you enable this discovery method, also configure the following parameters:
+
+- **EnableUserDeltaDiscovery**: Configure delta discovery
+- **UserDeltaDiscoveryMins**: Delta discovery interval
+- **UserDiscoverySchedule**: Full polling schedule
+
+For more information on this discovery method, see [Azure Active Directory user discovery](/mem/configmgr/core/servers/deploy/configure/about-discovery-methods#azureaddisc).
 
 ```yaml
 Type: Boolean
@@ -192,7 +221,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-{{ Fill ForceWildcardHandling Description }}
+
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -207,7 +237,8 @@ Accept wildcard characters: False
 ```
 
 ### -GroupDeltaDiscoveryMins
-{{ Fill GroupDeltaDiscoveryMins Description }}
+
+When you enable delta discovery for Azure AD group discovery with the **EnableGroupDeltaDiscovery** parameter, use this parameter to configure the delta discovery interval. The integer value you specify is the polling interval in minutes.
 
 ```yaml
 Type: Int32
@@ -222,7 +253,8 @@ Accept wildcard characters: False
 ```
 
 ### -GroupDiscoverySchedule
-{{ Fill GroupDiscoverySchedule Description }}
+
+Specify a schedule object for the Azure AD group discovery full polling schedule. To get this object, use the [New-CMSchedule](New-CMSchedule.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -237,7 +269,8 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-{{ Fill Id Description }}
+
+Specify the site's ID for the Azure service. The **Id** is the integer value stored in the site database for the service. For example, run the following SQL query, and look at the **ID** column: `select * from Azure_CloudService`.
 
 ```yaml
 Type: Int32
@@ -252,7 +285,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{ Fill InputObject Description }}
+
+Specify an Azure service object to configure. To get this object, use the [Get-CMAzureService](Get-CMAzureService.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -267,7 +301,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{ Fill Name Description }}
+
+Specify a name to distinguish the **Cloud Management** service in Configuration Manager.
 
 ```yaml
 Type: String
@@ -282,7 +317,8 @@ Accept wildcard characters: False
 ```
 
 ### -NewName
-{{ Fill NewName Description }}
+
+Use this parameter to rename the **Cloud Management** service in Configuration Manager.
 
 ```yaml
 Type: String
@@ -297,7 +333,8 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-{{ Fill PassThru Description }}
+
+Returns an object representing the item with which you're working. By default, this cmdlet may not generate any output.
 
 ```yaml
 Type: SwitchParameter
@@ -312,7 +349,8 @@ Accept wildcard characters: False
 ```
 
 ### -UserDeltaDiscoveryMins
-{{ Fill UserDeltaDiscoveryMins Description }}
+
+When you enable delta discovery for Azure AD user discovery with the **EnableUserDeltaDiscovery** parameter, use this parameter to configure the delta discovery interval. The integer value you specify is the polling interval in minutes.
 
 ```yaml
 Type: Int32
@@ -327,7 +365,8 @@ Accept wildcard characters: False
 ```
 
 ### -UserDiscoverySchedule
-{{ Fill UserDiscoverySchedule Description }}
+
+Specify a schedule object for the Azure AD user discovery full polling schedule. To get this object, use the [New-CMSchedule](New-CMSchedule.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -342,6 +381,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -357,8 +397,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+
+Shows what would happen if the cmdlet runs. The cmdlet isn't run.
 
 ```yaml
 Type: SwitchParameter
@@ -373,6 +413,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -382,6 +423,19 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
+
+[Import-CMAADServerApplication](Import-CMAADServerApplication.md)
+
+[Import-CMAADClientApplication](Import-CMAADClientApplication.md)
+
+[New-CMCloudManagementAzureService](New-CMCloudManagementAzureService.md)
+
+[New-CMCloudManagementGateway](New-CMCloudManagementGateway.md)
+
+[Add-CMCloudManagementGatewayConnectionPoint](Add-CMCloudManagementGatewayConnectionPoint.md)
+
+[CMG Overview](/mem/configmgr/core/clients/manage/cmg/overview)

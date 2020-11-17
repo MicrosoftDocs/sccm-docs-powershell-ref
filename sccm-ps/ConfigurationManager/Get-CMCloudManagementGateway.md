@@ -1,8 +1,8 @@
 ---
-description: Gets a cloud management gateway.
+description: Get a cloud management gateway.
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/02/2019
+ms.date: 11/20/2020
 schema: 2.0.0
 title: Get-CMCloudManagementGateway
 ---
@@ -10,7 +10,8 @@ title: Get-CMCloudManagementGateway
 # Get-CMCloudManagementGateway
 
 ## SYNOPSIS
-Gets a cloud management gateway.
+
+Get a cloud management gateway (CMG).
 
 ## SYNTAX
 
@@ -28,22 +29,26 @@ Get-CMCloudManagementGateway -Id <String> [-DisableWildcardHandling] [-ForceWild
 
 ## DESCRIPTION
 
+Use this cmdlet to get an object for a cloud management gateway (CMG) that's configured for the site.
+
+For more information, see [CMG Overview](/mem/configmgr/core/clients/manage/cmg/overview).
+
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
 ### Example 1
-```
-PS XYZ:\>
+
+```powershell
+Get-CMCloudManagementGateway -Name "GraniteFalls.cloudapp.net"
 ```
 
 ## PARAMETERS
 
 ### -DisableWildcardHandling
-DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
+
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -58,7 +63,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
+
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -73,6 +79,9 @@ Accept wildcard characters: False
 ```
 
 ### -Id
+
+Specify the site's ID for the Azure service. The **Id** is the integer value stored in the site database for the service. For example, run the following SQL query, and look at the **ID** column: `select * from Azure_CloudService`.
+
 ```yaml
 Type: String
 Parameter Sets: SearchByIdMandatory
@@ -86,6 +95,9 @@ Accept wildcard characters: False
 ```
 
 ### -Name
+
+Specify the service name for the CMG in Azure.
+
 ```yaml
 Type: String
 Parameter Sets: SearchByName
@@ -99,6 +111,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -112,3 +125,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[New-CMCloudManagementGateway](New-CMCloudManagementGateway.md)
+[Remove-CMCloudManagementGateway](Remove-CMCloudManagementGateway.md)
+[Set-CMCloudManagementGateway](Set-CMCloudManagementGateway.md)
+[Start-CMCloudManagementGateway](Start-CMCloudManagementGateway.md)
+[Stop-CMCloudManagementGateway](Stop-CMCloudManagementGateway.md)
+
+[CMG Overview](/mem/configmgr/core/clients/manage/cmg/overview)

@@ -2,13 +2,15 @@
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
 online version:
+ms.date: 11/20/2020
 schema: 2.0.0
 ---
 
 # Get-CMAADApplication
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Get the Azure Active Directory (Azure AD) app object from the site.
 
 ## SYNTAX
 
@@ -19,21 +21,43 @@ Get-CMAADApplication [-AppName <String>] [-AppType <CloudApplicationType>] [-Cli
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+Use this cmdlet to get the Azure AD app object from the site. It's commonly used with the [New-CMCloudManagementAzureService](New-CMCloudManagementAzureService.md) cmdlet.
+
+For more information about Azure AD apps in Configuration Manager, see [Configure Azure services](/mem/configmgr/core/servers/deploy/configure/azure-services-wizard).
+
+> [!NOTE]
+> While some of the new cmdlets might work with other Azure services, they're only tested with the **Cloud management** connection to support the cloud management gateway (CMG).
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Get Azure AD client apps by tenant name
+
+This example returns all client apps in the specified tenant.
+
 ```powershell
-PS C:\> {{ Add example code here }}
+Get-CMAADApplication -TenantName "Contoso" -AppType ClientApplication
 ```
 
-{{ Add example description here }}
+### Example 2: Get Azure AD server apps by tenant ID
+
+This example returns all server apps in the specified tenant.
+
+```powershell
+Get-CMAADApplication -TenantId "05a349fa-298a-4427-8771-9efcdb73431e" -AppType ServerApplication
+```
+
+### Example 3: Get an Azure AD app by its name
+
+```powershell
+Get-CMAADApplication -AppName "CmgServerApp"
+```
 
 ## PARAMETERS
 
 ### -AppName
-{{ Fill AppName Description }}
+
+Specify the name of the app in Azure AD.
 
 ```yaml
 Type: String
@@ -48,7 +72,10 @@ Accept wildcard characters: False
 ```
 
 ### -AppType
-{{ Fill AppType Description }}
+
+Specify whether to target the server or client app.
+
+In Azure AD, the server app is known as a _web_ app registration, and the client app is known as a _native_ app registration.
 
 ```yaml
 Type: CloudApplicationType
@@ -64,7 +91,8 @@ Accept wildcard characters: False
 ```
 
 ### -ClientId
-{{ Fill ClientId Description }}
+
+Specify the **Application (client) ID** value of the app registration in Azure AD. The format is a standard GUID.
 
 ```yaml
 Type: String
@@ -79,7 +107,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-{{ Fill DisableWildcardHandling Description }}
+
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -94,7 +123,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-{{ Fill ForceWildcardHandling Description }}
+
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -109,7 +139,8 @@ Accept wildcard characters: False
 ```
 
 ### -TenantId
-{{ Fill TenantId Description }}
+
+Specify the GUID of your Azure AD tenant.
 
 ```yaml
 Type: String
@@ -124,7 +155,8 @@ Accept wildcard characters: False
 ```
 
 ### -TenantName
-{{ Fill TenantName Description }}
+
+Specify the name of your Azure AD tenant.
 
 ```yaml
 Type: String
@@ -139,6 +171,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -152,3 +185,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[New-CMCloudManagementAzureService](New-CMCloudManagementAzureService.md)
+
+[Get-CMAzureService](Get-CMAzureService.md)
+
+[Configure Azure services](/mem/configmgr/core/servers/deploy/configure/azure-services-wizard)
