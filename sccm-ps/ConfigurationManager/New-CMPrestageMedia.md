@@ -1,4 +1,4 @@
-﻿---
+---
 description: Create an OS deployment prestaged media file.
 external help file: AdminUI.PS.Osd.dll-Help.xml
 Module Name: ConfigurationManager
@@ -146,9 +146,9 @@ If you create a self-signed media certificate for HTTP communication, this param
 
 For example:
 
-```powershell
+
+
 $date = [datetime]::parseexact("11/16/2021", 'MM/dd/yyyy', $null)
-```
 
 ```yaml
 Type: DateTime
@@ -200,9 +200,9 @@ To create a self-signed certificate for HTTP communication, this parameter speci
 
 For example:
 
-```powershell
+
+
 $date = [datetime]::parseexact("11/16/2020", 'MM/dd/yyyy', $null)
-```
 
 ```yaml
 Type: DateTime
@@ -224,6 +224,22 @@ An optional string to provide further details about the media. It's useful to de
 Type: String
 Parameter Sets: (All)
 Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
 
 Required: False
 Position: Named
@@ -615,22 +631,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -WhatIf
 
 Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
@@ -648,7 +648,6 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS

@@ -1,4 +1,4 @@
-﻿---
+---
 description: Sets a security scope.
 external help file: AdminUI.PS.Rba.dll-Help.xml
 Module Name: ConfigurationManager
@@ -60,6 +60,21 @@ PS XYZ:\> Get-CMSecurityScope -Name "Scope" | Set-CMSecurityScope -NewName "newS
 This command gets the security scope object named Scope and uses the pipeline operator to pass the object to **Set-CMSecurityScope**, which changes the name of the security scope to newScope.
 
 ## PARAMETERS
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -Description
 Specifies a description for the security scope.
@@ -163,21 +178,6 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

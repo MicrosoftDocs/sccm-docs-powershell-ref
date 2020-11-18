@@ -1,4 +1,4 @@
-﻿---
+---
 description: Adds a device driver to a Configuration Manager driver package.
 external help file: AdminUI.PS.Osd.dll-Help.xml
 Module Name: ConfigurationManager
@@ -98,6 +98,21 @@ PS XYZ:\>Add-CMDriverToDriverPackage -DriverName "Adaptec Embedded SCSI HostRAID
 This command adds the driver named Adaptec Embedded SCSI HostRAID Controller to the driver package named DrvPkg01.
 
 ## PARAMETERS
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -DisableWildcardHandling
 DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
@@ -232,21 +247,6 @@ Aliases: UpdateDistributionPoint, UpdateDistributionPointForDriverPackage, Updat
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

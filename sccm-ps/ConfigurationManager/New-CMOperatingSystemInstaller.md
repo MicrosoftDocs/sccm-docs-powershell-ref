@@ -1,4 +1,4 @@
-﻿---
+---
 description: Adds an operating system installer.
 external help file: AdminUI.PS.Osd.dll-Help.xml
 Module Name: ConfigurationManager
@@ -38,6 +38,21 @@ PS XYZ:\> New-CMOperatingSystemInstaller -Name "INSTALL01" -Path "\\Contoso01\CM
 This command adds an operating system installer named INSTALL01 and specifies the network path to the installation source files of the operating system installer.
 
 ## PARAMETERS
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -Description
 Specifies a description for an operating system installer.
@@ -125,21 +140,6 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 Module Name: ConfigurationManager
 online version:
@@ -99,6 +99,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -DCWorkloadEnabled
 {{ Fill DCWorkloadEnabled Description }}
 
@@ -189,36 +204,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WufbWorkloadEnabled
-{{ Fill WufbWorkloadEnabled Description }}
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
@@ -227,6 +212,21 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WufbWorkloadEnabled
+{{ Fill WufbWorkloadEnabled Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named

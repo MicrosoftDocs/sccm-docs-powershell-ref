@@ -1,4 +1,4 @@
-﻿---
+---
 description: Removes a software update from group.
 external help file: AdminUI.PS.Sum.dll-Help.xml
 Module Name: ConfigurationManager
@@ -84,6 +84,21 @@ PS XYZ:\>
 ```
 
 ## PARAMETERS
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -DisableWildcardHandling
 DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
@@ -200,21 +215,6 @@ Parameter Sets: ByName_Object, ByName_Id, ByName_Name
 Aliases: SoftwareUpdateNames
 
 Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False

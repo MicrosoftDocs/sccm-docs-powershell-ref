@@ -1,4 +1,4 @@
-﻿---
+---
 description: Distributes the content that a task sequence uses to a distribution point.
 external help file: AdminUI.PS.Sum.dll-Help.xml
 Module Name: ConfigurationManager
@@ -54,6 +54,21 @@ PS XYZ:\>Publish-CMPrestageContentTaskSequence -DistributionPointName "distribut
 This command copies content required by the task sequence ContosoDeploymentSequence to the distribution point distribution-server.contoso.com.
 
 ## PARAMETERS
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -Description
 Specifies a description for the content to prestage.
@@ -186,21 +201,6 @@ Aliases: TaskSequenceNames
 Required: True
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

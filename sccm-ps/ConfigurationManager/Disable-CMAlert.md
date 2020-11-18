@@ -1,4 +1,4 @@
-﻿---
+---
 description: Disables alerts in Configuration Manager.
 external help file: AdminUI.PS.Alerts.dll-Help.xml
 Module Name: ConfigurationManager
@@ -66,6 +66,22 @@ The first command gets an alert object that has the ID 16777221, and then stores
 The second command disables the alert stored in the $AlertObj variable.
 
 ## PARAMETERS
+
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -DisableWildcardHandling
 
@@ -160,22 +176,6 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

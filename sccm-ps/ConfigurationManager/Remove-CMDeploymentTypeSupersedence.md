@@ -1,4 +1,4 @@
-﻿---
+---
 description: Removes a deployment type supersedence in Configuration Manager.
 external help file: AdminUI.PS.AppMan.dll-Help.xml
 Module Name: ConfigurationManager
@@ -39,6 +39,22 @@ PS XYZ:\>  Get-CMDeploymentType -ApplicationName MyApp | Remove-CMDeploymentType
 ```
 
 ## PARAMETERS
+
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -DisableWildcardHandling
 
@@ -115,22 +131,6 @@ Aliases:
 
 Required: True
 Position: 0
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

@@ -1,4 +1,4 @@
-﻿---
+---
 description: Removes configuration baselines.
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 Module Name: ConfigurationManager
@@ -59,6 +59,21 @@ PS XYZ:\> Remove-CMBaseline -Id "16777366"
 This command removes the configuration baseline that has the ID 16777366.
 
 ## PARAMETERS
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -DisableWildcardHandling
 DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
@@ -147,21 +162,6 @@ Aliases: LocalizedDisplayName
 Required: True
 Position: 0
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

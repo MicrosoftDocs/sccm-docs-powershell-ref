@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: AdminUI.PS.Deployments.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 07/31/2020
@@ -57,6 +57,22 @@ Set-CMApplicationPhasedDeployment -Id "3b107e52-471b-4c9c-a034-928bcc5f6fc0" -De
 ```
 
 ## PARAMETERS
+
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -Description
 
@@ -178,22 +194,6 @@ Returns an object representing the item with which you're working. By default, t
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
 
 Required: False
 Position: Named

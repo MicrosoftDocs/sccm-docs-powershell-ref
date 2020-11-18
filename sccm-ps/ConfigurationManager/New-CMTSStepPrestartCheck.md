@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: AdminUI.PS.Osd.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 07/31/2020
@@ -43,6 +43,21 @@ Add the **Check Readiness** step to a task sequence. Use this step to verify tha
 ```
 
 ## PARAMETERS
+
+### -CMClientMinVersion
+Use this parameter to configure the specific client version. Specify the client version in the following format: `5.00.8913.1005`. Use the parameter **CheckCMClientMinVersion** to enable or disable the check.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: ClientMinVersion
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -CheckCMClientMinVersion
 Use this parameter to enable or disable the following setting in the **Check Readiness** task sequence step: **Minimum client version**. Use the parameter **CMClientMinVersion** to set the specific client version number.
@@ -239,13 +254,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -CMClientMinVersion
-Use this parameter to configure the specific client version. Specify the client version in the following format: `5.00.8913.1005`. Use the parameter **CheckCMClientMinVersion** to enable or disable the check.
+### -Condition
+Specify a condition object to use with this step.
 
 ```yaml
-Type: String
+Type: IResultObject[]
 Parameter Sets: (All)
-Aliases: ClientMinVersion
+Aliases: Conditions
 
 Required: False
 Position: Named
@@ -254,13 +269,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Condition
-Specify a condition object to use with this step.
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: IResultObject[]
+Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: Conditions
+Aliases: cf
 
 Required: False
 Position: Named
@@ -473,21 +488,6 @@ Use this parameter to configure the specific speed for the minimum processor spe
 Type: Int32
 Parameter Sets: (All)
 Aliases: MinimumProcessorSpeed
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
 
 Required: False
 Position: Named

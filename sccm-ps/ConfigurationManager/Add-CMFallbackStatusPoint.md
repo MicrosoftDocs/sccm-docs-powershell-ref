@@ -1,4 +1,4 @@
-﻿---
+---
 description: Adds a fallback status point to a Configuration Manager site.
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -54,6 +54,21 @@ The specified computer hosts the role.
 The command also specifies number of messages and throttle time period for the fallback status point.
 
 ## PARAMETERS
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -DisableWildcardHandling
 DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
@@ -168,21 +183,6 @@ Aliases: ThrottleIntervalSeconds, ThrottleInterval
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

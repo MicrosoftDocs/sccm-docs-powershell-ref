@@ -1,4 +1,4 @@
-﻿---
+---
 description: Creates an operating system image.
 external help file: AdminUI.PS.Osd.dll-Help.xml
 Module Name: ConfigurationManager
@@ -38,6 +38,21 @@ PS XYZ:\> New-CMOperatingSystemImage -Name "STANDARD_WIN7" -Path "\\Contoso01\CM
 This command creates the operating system image named STANDARD_WIN7 and specifies the network path to the installation source files of the operating system image.
 
 ## PARAMETERS
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -Description
 Specifies a description for the operating system image.
@@ -125,21 +140,6 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

@@ -1,4 +1,4 @@
-﻿---
+---
 description: Import a set of exported queries to Configuration Manager.
 external help file: AdminUI.PS.SystemStatus.dll-Help.xml
 Module Name: ConfigurationManager
@@ -38,6 +38,22 @@ Import-CMQuery -ImportFilePath "C:\Export\Query.nof"
 ```
 
 ## PARAMETERS
+
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -DisableWildcardHandling
 
@@ -82,22 +98,6 @@ Aliases: Path
 
 Required: True
 Position: 0
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

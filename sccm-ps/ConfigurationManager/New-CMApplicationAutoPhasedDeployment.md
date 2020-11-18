@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: AdminUI.PS.Deployments.dll-Help.xml
 Module Name: ConfigurationManager
 online version:
@@ -134,6 +134,22 @@ Type: BeginConditionType
 Parameter Sets: (All)
 Aliases:
 Accepted values: AfterPeriod, Manually
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
 
 Required: False
 Position: Named
@@ -423,22 +439,6 @@ Specify an integer value for the number of days to gradually make this software 
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
 
 Required: False
 Position: Named

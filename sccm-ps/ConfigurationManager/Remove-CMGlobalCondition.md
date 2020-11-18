@@ -1,4 +1,4 @@
-﻿---
+---
 description: Removes a Configuration Manager global condition object.
 external help file: AdminUI.PS.AppModel.dll-Help.xml
 Module Name: ConfigurationManager
@@ -76,6 +76,22 @@ The second command removes the global condition stored in that variable.
 This command does not use the *Force* parameter, so it prompts you for confirmation before it removes the global condition.
 
 ## PARAMETERS
+
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -DisableWildcardHandling
 
@@ -172,22 +188,6 @@ Aliases: LocalizedDisplayName
 Required: True
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

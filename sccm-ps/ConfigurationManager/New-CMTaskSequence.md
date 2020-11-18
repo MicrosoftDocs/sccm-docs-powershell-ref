@@ -1,4 +1,4 @@
-﻿---
+---
 description: Creates a task sequence in Configuration Manager.
 external help file: AdminUI.PS.Osd.dll-Help.xml
 Module Name: ConfigurationManager
@@ -308,6 +308,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -CreatedBy
 
 Specifies the name of the user that created the operating system image that the task sequence captures.
@@ -539,6 +555,38 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -InstallOperatingSystemImage
+
+Indicates that the task sequence installs an operating system image.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: NewInstallOSImage
+Aliases: InstallOperatingSystemImageOption
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InstallOperatingSystemImageVhd
+
+Indicates that the task sequence installs an existing operating system image to a virtual hard disk.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: NewInstallOSImageVhd
+Aliases: InstallOperatingSystemImageVhdOption
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -InstallationLicensingMode
 
 Specifies the Windows Server license mode that the task sequence uses.
@@ -576,38 +624,6 @@ Parameter Sets: NewBuildOSImage, NewInstallOSImage, NewInstallOSImageVhd
 Aliases:
 
 Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InstallOperatingSystemImage
-
-Indicates that the task sequence installs an operating system image.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: NewInstallOSImage
-Aliases: InstallOperatingSystemImageOption
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InstallOperatingSystemImageVhd
-
-Indicates that the task sequence installs an existing operating system image to a virtual hard disk.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: NewInstallOSImageVhd
-Aliases: InstallOperatingSystemImageVhdOption
-
-Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -901,39 +917,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WorkgroupName
-
-Specifies the name of a workgroup.
-Specify this parameter if you use the WorkgroupType value for the *JoinDomain* parameter.
-
-```yaml
-Type: String
-Parameter Sets: NewBuildOSImage, NewInstallOSImage, NewInstallOSImageVhd
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -WhatIf
 
 Shows what would happen if the cmdlet runs.
@@ -947,6 +930,23 @@ Aliases: wi
 Required: False
 Position: Named
 Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WorkgroupName
+
+Specifies the name of a workgroup.
+Specify this parameter if you use the WorkgroupType value for the *JoinDomain* parameter.
+
+```yaml
+Type: String
+Parameter Sets: NewBuildOSImage, NewInstallOSImage, NewInstallOSImageVhd
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

@@ -1,4 +1,4 @@
-﻿---
+---
 description: Changes settings for a management point in Configuration Manager.
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -105,6 +105,21 @@ Accepted values: Internet, Intranet, InternetAndIntranet
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -302,21 +317,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -UserName
-Specifies a domain user account that the management point uses to access site information.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -UseSiteDatabase
 Indicates whether the management point queries a site database instead of a site database replica for information.
 
@@ -332,17 +332,17 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
+### -UserName
+Specifies a domain user account that the management point uses to access site information.
 
 ```yaml
-Type: SwitchParameter
+Type: String
 Parameter Sets: (All)
-Aliases: cf
+Aliases:
 
 Required: False
 Position: Named
-Default value: False
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

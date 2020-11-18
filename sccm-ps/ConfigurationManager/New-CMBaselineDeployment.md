@@ -1,4 +1,4 @@
-﻿---
+---
 description: Create a baseline deployment
 external help file: AdminUI.PS.Deployments.dll-Help.xml
 Module Name: ConfigurationManager
@@ -117,6 +117,22 @@ Specify the name of the collection as the target of the deployment.
 Type: String
 Parameter Sets: (All)
 Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
 
 Required: False
 Position: Named
@@ -309,22 +325,6 @@ Specify a schedule object for when the client evaluates this configuration basel
 Type: IResultObject
 Parameter Sets: (All)
 Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
 
 Required: False
 Position: Named

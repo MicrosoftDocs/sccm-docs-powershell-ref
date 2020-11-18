@@ -32,6 +32,21 @@ PS C:\> {{ Add example code here }}
 
 ## PARAMETERS
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Description
 {{ Fill Description Description }}
 
@@ -137,37 +152,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WindowsEdition
-{{ Fill WindowsEdition Description }}
-
-```yaml
-Type: WindowsEditionType
-Parameter Sets: (All)
-Aliases:
-Accepted values: Windows10Enterprise, Windows10Education, Windows10EnterpriseN, Windows10EducationN, WindowsPhone10, HolographicEnterprise
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
@@ -176,6 +160,22 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WindowsEdition
+{{ Fill WindowsEdition Description }}
+
+```yaml
+Type: WindowsEditionType
+Parameter Sets: (All)
+Aliases:
+Accepted values: Windows10Enterprise, Windows10Education, Windows10EnterpriseN, Windows10EducationN, WindowsPhone10, HolographicEnterprise
 
 Required: False
 Position: Named

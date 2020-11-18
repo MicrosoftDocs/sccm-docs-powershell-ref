@@ -1,4 +1,4 @@
-﻿---
+---
 description: Creates an email profile.
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 Module Name: ConfigurationManager
@@ -144,6 +144,21 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -370,21 +385,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -SynchronizeRecentlyUsed
-Indicates that the list of email addresses that have been recently used on the device is synchronized.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -SyncSchedule
 Specifies the schedule by which devices will synchronize data from the Exchange Server.
 
@@ -407,17 +407,17 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
+### -SynchronizeRecentlyUsed
+Indicates that the list of email addresses that have been recently used on the device is synchronized.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: cf
+Aliases:
 
 Required: False
 Position: Named
-Default value: False
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

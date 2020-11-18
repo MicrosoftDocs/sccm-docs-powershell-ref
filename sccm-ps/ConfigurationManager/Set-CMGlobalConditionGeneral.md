@@ -1,4 +1,4 @@
-﻿---
+---
 description: Modifies general settings for a Configuration Manager global condition.
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 Module Name: ConfigurationManager
@@ -40,6 +40,22 @@ PS XYZ:\> Set-CMGlobalConditionGeneral -Name newscript -NewName newscript2 -Desc
 This command modifies the name and the description.
 
 ## PARAMETERS
+
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -Description
 
@@ -130,22 +146,6 @@ By default, this cmdlet does not generate any output.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
 
 Required: False
 Position: Named

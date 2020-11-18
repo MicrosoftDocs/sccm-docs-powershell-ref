@@ -1,4 +1,4 @@
-﻿---
+---
 Module Name: ConfigurationManager
 Module Guid: 7f590131-5253-4425-8b32-eeab51a4c393
 Download Help Link: https://aka.ms/configmgrps-help
@@ -32,8 +32,11 @@ Assigns boundaries to a boundary group in Configuration Manager.
 ### [Add-CMCertificateRegistrationPoint](Add-CMCertificateRegistrationPoint.md)
 Adds a certificate registration point role to a site system server.
 
+### [Add-CMCIDetectionMethod](Add-CMCIDetectionMethod.md)
+{{ Fill in the Synopsis }}
+
 ### [Add-CMCloudManagementGatewayConnectionPoint](Add-CMCloudManagementGatewayConnectionPoint.md)
-Adds a cloud management gateway connection point
+Add a cloud management gateway connection point.
 
 ### [Add-CMCollectionMembershipRule](Add-CMCollectionMembershipRule.md)
 Adds a Configuration Manager collection membership rule.
@@ -390,6 +393,9 @@ Exports a security role to an XML file.
 ### [Export-CMTaskSequence](Export-CMTaskSequence.md)
 Exports a Configuration Manager task sequence.
 
+### [Get-CMAADApplication](Get-CMAADApplication.md)
+Get the Azure Active Directory (Azure AD) app object from the site.
+
 ### [Get-CMAccessAccount](Get-CMAccessAccount.md)
 Gets an access account.
 
@@ -435,6 +441,9 @@ Gets an application deployment.
 ### [Get-CMApplicationDeploymentStatus](Get-CMApplicationDeploymentStatus.md)
 Gets an application deployment status.
 
+### [Get-CMApplicationGroupDeployment](Get-CMApplicationGroupDeployment.md)
+{{ Fill in the Synopsis }}
+
 ### [Get-CMApplicationPhasedDeployment](Get-CMApplicationPhasedDeployment.md)
 Use this cmdlet to get a phased deployment for an application.
 
@@ -458,6 +467,9 @@ Gets asset intelligence synchronization points.
 
 ### [Get-CMAutoDeploymentRuleDeployment](Get-CMAutoDeploymentRuleDeployment.md)
 Gets the deployments associated with an automatic deployment rule.
+
+### [Get-CMAzureService](Get-CMAzureService.md)
+Get an Azure service.
 
 ### [Get-CMBaseline](Get-CMBaseline.md)
 Gets configuration baselines.
@@ -538,22 +550,52 @@ Gets a schedule interval of the client status update task.
 Gets cloud-based distribution points.
 
 ### [Get-CMCloudManagementGateway](Get-CMCloudManagementGateway.md)
-Gets a cloud management gateway.
+Get a cloud management gateway (CMG).
 
 ### [Get-CMCloudManagementGatewayConnectionPoint](Get-CMCloudManagementGatewayConnectionPoint.md)
-Gets a cloud management gateway connection point.
+Get a cloud management gateway connection point.
 
 ### [Get-CMCollection](Get-CMCollection.md)
 Gets a Configuration Manager collection.
 
+### [Get-CMCollectionDependency](Get-CMCollectionDependency.md)
+{{ Fill in the Synopsis }}
+
+### [Get-CMCollectionDependent](Get-CMCollectionDependent.md)
+{{ Fill in the Synopsis }}
+
 ### [Get-CMCollectionDirectMembershipRule](Get-CMCollectionDirectMembershipRule.md)
 Gets a collection direct membership rule.
+
+### [Get-CMCollectionEvaluationStatus](Get-CMCollectionEvaluationStatus.md)
+{{ Fill in the Synopsis }}
 
 ### [Get-CMCollectionExcludeMembershipRule](Get-CMCollectionExcludeMembershipRule.md)
 Gets a collection exclude membership rule.
 
+### [Get-CMCollectionFullEvaluationStatus](Get-CMCollectionFullEvaluationStatus.md)
+{{ Fill in the Synopsis }}
+
 ### [Get-CMCollectionIncludeMembershipRule](Get-CMCollectionIncludeMembershipRule.md)
 Gets a collection include membership rule.
+
+### [Get-CMCollectionIncrementalEvaluationStatus](Get-CMCollectionIncrementalEvaluationStatus.md)
+{{ Fill in the Synopsis }}
+
+### [Get-CMCollectionInfoFromEvaluationQueue](Get-CMCollectionInfoFromEvaluationQueue.md)
+{{ Fill in the Synopsis }}
+
+### [Get-CMCollectionInfoFromFullEvaluationQueue](Get-CMCollectionInfoFromFullEvaluationQueue.md)
+{{ Fill in the Synopsis }}
+
+### [Get-CMCollectionInfoFromIncrementalEvaluationQueue](Get-CMCollectionInfoFromIncrementalEvaluationQueue.md)
+{{ Fill in the Synopsis }}
+
+### [Get-CMCollectionInfoFromManualEvaluationQueue](Get-CMCollectionInfoFromManualEvaluationQueue.md)
+{{ Fill in the Synopsis }}
+
+### [Get-CMCollectionInfoFromNewEvaluationQueue](Get-CMCollectionInfoFromNewEvaluationQueue.md)
+{{ Fill in the Synopsis }}
 
 ### [Get-CMCollectionMember](Get-CMCollectionMember.md)
 Get members of a collection.
@@ -759,6 +801,9 @@ Gets a management point.
 ### [Get-CMManagementPointComponent](Get-CMManagementPointComponent.md)
 Gets a component for a Configuration Manager management point.
 
+### [Get-CMMicrosoftEdgeBrowserProfiles](Get-CMMicrosoftEdgeBrowserProfiles.md)
+{{ Fill in the Synopsis }}
+
 ### [Get-CMMigrationCollection](Get-CMMigrationCollection.md)
 Gets collections selected for migration.
 
@@ -782,6 +827,9 @@ Gets object lock details.
 
 ### [Get-CMObjectSecurityScope](Get-CMObjectSecurityScope.md)
 Gets the security scope associated with a Configuration Manager object.
+
+### [Get-CMOneDriveBusinessProfile](Get-CMOneDriveBusinessProfile.md)
+{{ Fill in the Synopsis }}
 
 ### [Get-CMOperatingSystemImage](Get-CMOperatingSystemImage.md)
 Gets OS images.
@@ -841,7 +889,7 @@ Get a Configuration Manager resource.
 Gets a resultant settings.
 
 ### [Get-CMScript](Get-CMScript.md)
-Gets Configuration Manager PowerShell scripts.
+Get Configuration Manager PowerShell scripts.
 
 ### [Get-CMSecurityRole](Get-CMSecurityRole.md)
 Gets security roles.
@@ -907,7 +955,7 @@ Gets Configuration Manager software metering rules.
 Gets Configuration Manager software metering settings.
 
 ### [Get-CMSoftwareUpdate](Get-CMSoftwareUpdate.md)
-Gets a software update.
+Get a software update.
 
 ### [Get-CMSoftwareUpdateAutoDeploymentRule](Get-CMSoftwareUpdateAutoDeploymentRule.md)
 Get an automatic deployment rule for software updates.
@@ -1188,6 +1236,12 @@ Gets a wireless profile.
 ### [Get-CMWirelessProfileConfigurationItem](Get-CMWirelessProfileConfigurationItem.md)
 Gets a wireless profile configuration item.
 
+### [Import-CMAADClientApplication](Import-CMAADClientApplication.md)
+Create the Azure Active Directory (Azure AD) client app definition in Configuration Manager.
+
+### [Import-CMAADServerApplication](Import-CMAADServerApplication.md)
+Create the Azure Active Directory (Azure AD) server app definition in Configuration Manager.
+
 ### [Import-CMAntimalwarePolicy](Import-CMAntimalwarePolicy.md)
 Imports an antimalware policy for Endpoint Protection.
 
@@ -1246,7 +1300,7 @@ Installs a Configuration Manager client.
 Installs a site update.
 
 ### [Invoke-CMAnalyzePackage](Invoke-CMAnalyzePackage.md)
-{{ Fill in the Synopsis }}
+Analyze a package to convert to an application.
 
 ### [Invoke-CMBaselineSummarization](Invoke-CMBaselineSummarization.md)
 Updates configuration baseline data.
@@ -1267,7 +1321,7 @@ Invokes a content redistribution.
 Validates packages on a distribution point.
 
 ### [Invoke-CMConvertPackage](Invoke-CMConvertPackage.md)
-{{ Fill in the Synopsis }}
+Convert a package to an application.
 
 ### [Invoke-CMDeploymentSummarization](Invoke-CMDeploymentSummarization.md)
 Runs a Configuration Manager deployment summarization.
@@ -1303,7 +1357,7 @@ Enables remote control on computers.
 Invokes a report about data and operations in Configuration Manager.
 
 ### [Invoke-CMScript](Invoke-CMScript.md)
-Invokes a script in Configuration Manager.
+Invoke a script in Configuration Manager.
 
 ### [Invoke-CMSecondarySiteUpgrade](Invoke-CMSecondarySiteUpgrade.md)
 Invokes a secondary site upgrade.
@@ -1398,6 +1452,9 @@ Create an application deployment.
 ### [New-CMApplicationDisplayInfo](New-CMApplicationDisplayInfo.md)
 {{ Fill in the Synopsis }}
 
+### [New-CMApplicationGroupDeployment](New-CMApplicationGroupDeployment.md)
+{{ Fill in the Synopsis }}
+
 ### [New-CMAppVVirtualEnvironment](New-CMAppVVirtualEnvironment.md)
 Creates an App-V virtual environment.
 
@@ -1435,7 +1492,7 @@ Create a policy to manage whether to encrypt the OS drive with BitLocker.
 Create a policy to configure instructions for users to request exemption from BitLocker protection.
 
 ### [New-CMBootableMedia](New-CMBootableMedia.md)
-Creates bootable media.
+Create bootable media.
 
 ### [New-CMBootImage](New-CMBootImage.md)
 Adds a new operating system boot image.
@@ -1476,8 +1533,11 @@ Creates a client setting deployment.
 ### [New-CMCloudDistributionPoint](New-CMCloudDistributionPoint.md)
 Creates a cloud distribution point.
 
+### [New-CMCloudManagementAzureService](New-CMCloudManagementAzureService.md)
+Create the Azure service for **Cloud Management** in Configuration Manager.
+
 ### [New-CMCloudManagementGateway](New-CMCloudManagementGateway.md)
-Creates a cloud management gateway.
+Create a cloud management gateway.
 
 ### [New-CMCollection](New-CMCollection.md)
 Creates a Configuration Manager collection.
@@ -1501,7 +1561,7 @@ Creates a compliance rule file folder date.
 Creates a compliance rule file folder permission.
 
 ### [New-CMComplianceRuleFileFolderSimple](New-CMComplianceRuleFileFolderSimple.md)
-Creates a compliance rule file folder simple.
+Create a compliance rule for a simple file folder.
 
 ### [New-CMComplianceRuleFileFolderSize](New-CMComplianceRuleFileFolderSize.md)
 Creates a compliance rule file folder size.
@@ -1677,6 +1737,9 @@ Creates an installation source file for Configuration Manager.
 ### [New-CMMaintenanceWindow](New-CMMaintenanceWindow.md)
 Creates a maintenance window for a collection.
 
+### [New-CMMicrosoftEdgeBrowserProfiles](New-CMMicrosoftEdgeBrowserProfiles.md)
+{{ Fill in the Synopsis }}
+
 ### [New-CMMigrationJob](New-CMMigrationJob.md)
 Creates a migration job in Configuration Manager.
 
@@ -1685,6 +1748,9 @@ Create a policy to specify the **Security Policy** link that BitLocker displays 
 
 ### [New-CMNoOverwritePolicy](New-CMNoOverwritePolicy.md)
 Create a policy to control computer restart performance at the risk of exposing BitLocker secrets.
+
+### [New-CMOneDriveBusinessProfile](New-CMOneDriveBusinessProfile.md)
+{{ Fill in the Synopsis }}
 
 ### [New-CMOperatingSystemImage](New-CMOperatingSystemImage.md)
 Creates an operating system image.
@@ -1717,7 +1783,7 @@ Configure the recovery message that the pre-boot key recovery screen displays wh
 Create an OS deployment prestaged media file.
 
 ### [New-CMProgram](New-CMProgram.md)
-Creates a new program in Configuration Manager.
+Create a new program for a package.
 
 ### [New-CMQuery](New-CMQuery.md)
 Creates a Configuration Manager query.
@@ -2049,6 +2115,9 @@ Creates a VPN profile.
 ### [New-CMWdacSetting](New-CMWdacSetting.md)
 Create a Microsoft Defender Application Control settings policy object.
 
+### [New-CMWindows10EditionUpgrade](New-CMWindows10EditionUpgrade.md)
+{{ Fill in the Synopsis }}
+
 ### [New-CMWindowsFirewallPolicy](New-CMWindowsFirewallPolicy.md)
 Creates a new Windows Firewall policy in Configuration Manager.
 
@@ -2103,6 +2172,9 @@ Removes a Configuration Manager Application Catalog website point.
 ### [Remove-CMApplicationDeployment](Remove-CMApplicationDeployment.md)
 Removes an application deployment.
 
+### [Remove-CMApplicationGroupDeployment](Remove-CMApplicationGroupDeployment.md)
+{{ Fill in the Synopsis }}
+
 ### [Remove-CMApplicationPhasedDeployment](Remove-CMApplicationPhasedDeployment.md)
 Use this cmdlet to remove a phased deployment for an application.
 
@@ -2120,6 +2192,9 @@ Removes an Asset Intelligence synchronization point.
 
 ### [Remove-CMAutoDeploymentRuleDeployment](Remove-CMAutoDeploymentRuleDeployment.md)
 Removes a deployment from an auto deployment rule.
+
+### [Remove-CMAzureService](Remove-CMAzureService.md)
+Remove the Azure service.
 
 ### [Remove-CMBaseline](Remove-CMBaseline.md)
 Removes configuration baselines.
@@ -2164,10 +2239,10 @@ Removes client settings.
 Removes cloud-based distribution points.
 
 ### [Remove-CMCloudManagementGateway](Remove-CMCloudManagementGateway.md)
-Removes a cloud management gateway.
+Remove a cloud management gateway.
 
 ### [Remove-CMCloudManagementGatewayConnectionPoint](Remove-CMCloudManagementGatewayConnectionPoint.md)
-Removes a cloud management gateway connection point.
+Remove a cloud management gateway connection point.
 
 ### [Remove-CMCollection](Remove-CMCollection.md)
 Removes a Configuration Manager collection.
@@ -2556,6 +2631,9 @@ Removes VHD images.
 ### [Remove-CMWdacSetting](Remove-CMWdacSetting.md)
 Delete a Microsoft Defender Application Control policy from the site.
 
+### [Remove-CMWindows10EditionUpgrade](Remove-CMWindows10EditionUpgrade.md)
+{{ Fill in the Synopsis }}
+
 ### [Rename-CMCategory](Rename-CMCategory.md)
 Renames a category.
 
@@ -2612,6 +2690,9 @@ Changes the settings of an Application Catalog website point.
 
 ### [Set-CMApplicationDeployment](Set-CMApplicationDeployment.md)
 Modifies properties for an application deployment in Configuration Manager.
+
+### [Set-CMApplicationGroupDeployment](Set-CMApplicationGroupDeployment.md)
+{{ Fill in the Synopsis }}
 
 ### [Set-CMApplicationPhasedDeployment](Set-CMApplicationPhasedDeployment.md)
 Configure a phased deployment for an application.
@@ -2746,7 +2827,7 @@ Sets a client setting software inventory.
 Sets a client setting software metering.
 
 ### [Set-CMClientSettingSoftwareUpdate](Set-CMClientSettingSoftwareUpdate.md)
-Sets a client setting software update.
+Configure client settings for software updates.
 
 ### [Set-CMClientSettingStateMessaging](Set-CMClientSettingStateMessaging.md)
 Sets a client setting state messaging.
@@ -2766,11 +2847,14 @@ Modifies the schedule interval of the client status update task.
 ### [Set-CMCloudDistributionPoint](Set-CMCloudDistributionPoint.md)
 Changes settings for a cloud-based distribution point.
 
+### [Set-CMCloudManagementAzureService](Set-CMCloudManagementAzureService.md)
+Modify the settings of the Azure service for **Cloud Management** in Configuration Manager.
+
 ### [Set-CMCloudManagementGateway](Set-CMCloudManagementGateway.md)
 Configure a cloud management gateway (CMG).
 
 ### [Set-CMCloudManagementGatewayConnectionPoint](Set-CMCloudManagementGatewayConnectionPoint.md)
-Sets a cloud management gateway connection point
+Configure a cloud management gateway connection point.
 
 ### [Set-CMCollection](Set-CMCollection.md)
 Sets a Configuration Manager collection.
@@ -2988,6 +3072,9 @@ Changes settings for a management point in Configuration Manager.
 ### [Set-CMManagementPointComponent](Set-CMManagementPointComponent.md)
 Sets a component for a management point in Configuration Manager.
 
+### [Set-CMMicrosoftEdgeBrowserProfiles](Set-CMMicrosoftEdgeBrowserProfiles.md)
+{{ Fill in the Synopsis }}
+
 ### [Set-CMMigrationExclusionList](Set-CMMigrationExclusionList.md)
 Edits the global exclusion list for migration jobs.
 
@@ -3009,6 +3096,9 @@ Sets a multicast service point.
 ### [Set-CMObjectSecurityScope](Set-CMObjectSecurityScope.md)
 Sets the security scopes for Configuration Manager objects.
 
+### [Set-CMOneDriveBusinessProfile](Set-CMOneDriveBusinessProfile.md)
+{{ Fill in the Synopsis }}
+
 ### [Set-CMOperatingSystemImage](Set-CMOperatingSystemImage.md)
 Changes configuration settings of OS images.
 
@@ -3022,7 +3112,7 @@ Changes configuration settings for Configuration Manager packages.
 Changes values that define how Configuration Manager deploys a software package.
 
 ### [Set-CMProgram](Set-CMProgram.md)
-Modifies a program in Configuration Manager.
+Modify a program in Configuration Manager.
 
 ### [Set-CMQuery](Set-CMQuery.md)
 Configure a Configuration Manager query.
@@ -3061,7 +3151,7 @@ Configure an existing settings policy deployment.
 Configure a Configuration Manager site.
 
 ### [Set-CMSiteMaintenanceTask](Set-CMSiteMaintenanceTask.md)
-Changes settings for a Configuration Manager maintenance task.
+Change settings for a Configuration Manager maintenance task.
 
 ### [Set-CMSiteSummaryTask](Set-CMSiteSummaryTask.md)
 Sets a site summary task.
@@ -3276,6 +3366,9 @@ Modify an existing Microsoft Defender Application Control policy.
 ### [Set-CMWebApplicationDeploymentType](Set-CMWebApplicationDeploymentType.md)
 Sets a web application deployment type.
 
+### [Set-CMWindows10EditionUpgrade](Set-CMWindows10EditionUpgrade.md)
+{{ Fill in the Synopsis }}
+
 ### [Set-CMWindowsAppxDeploymentType](Set-CMWindowsAppxDeploymentType.md)
 Sets a Windows app package deployment type.
 
@@ -3316,7 +3409,7 @@ Deploys client settings to devices in a collection.
 Starts the cloud distribution point service.
 
 ### [Start-CMCloudManagementGateway](Start-CMCloudManagementGateway.md)
-Starts a cloud management gateway.
+Start a cloud management gateway service in Azure.
 
 ### [Start-CMConfigurationPolicyDeployment](Start-CMConfigurationPolicyDeployment.md)
 Deploys policies for a Configuration Manager collection.
@@ -3343,7 +3436,7 @@ Starts a task sequence deployment in Configuration Manager.
 Stops the cloud distribution point service.
 
 ### [Stop-CMCloudManagementGateway](Stop-CMCloudManagementGateway.md)
-Stops a cloud management gateway.
+Stop a cloud management gateway service in Azure.
 
 ### [Stop-CMMigrationSource](Stop-CMMigrationSource.md)
 Stops a migration source.

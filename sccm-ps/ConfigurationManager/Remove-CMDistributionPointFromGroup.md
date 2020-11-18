@@ -1,4 +1,4 @@
-﻿---
+---
 description: Removes a Configuration Manager distribution point from a distribution point group.
 external help file: AdminUI.PS.Content.dll-Help.xml
 Module Name: ConfigurationManager
@@ -98,6 +98,21 @@ This command removes a distribution point, specified by its name, from a distrib
 This command uses the *Force* parameter, therefore, it does not prompt you before it removes the distribution point.
 
 ## PARAMETERS
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -DisableWildcardHandling
 DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
@@ -232,21 +247,6 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

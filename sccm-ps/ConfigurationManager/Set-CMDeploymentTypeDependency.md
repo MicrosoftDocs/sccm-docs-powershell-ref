@@ -1,4 +1,4 @@
-﻿---
+---
 description: Sets a deployment type dependency in Configuration Manager.
 external help file: AdminUI.PS.AppMan.dll-Help.xml
 Module Name: ConfigurationManager
@@ -48,6 +48,22 @@ The **Set-CMDeploymentTypeDependency** sets a deployment type as a dependency to
 ## EXAMPLES
 
 ## PARAMETERS
+
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -DecreasePriority
 
@@ -169,22 +185,6 @@ Returns an object representing the item with which you are working. By default, 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
 
 Required: False
 Position: Named

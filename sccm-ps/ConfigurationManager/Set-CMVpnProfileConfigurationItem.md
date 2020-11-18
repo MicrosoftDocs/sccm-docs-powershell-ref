@@ -1,4 +1,4 @@
-﻿---
+---
 description: Modifies a VPN profile.
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 Module Name: ConfigurationManager
@@ -55,6 +55,21 @@ This command modifies the VPN profile configuration item with the ID AAA0004D.
 In this case, the digest path is changed to C:\Digests\Vpn2.xml.
 
 ## PARAMETERS
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -Description
 Specifies the description of the VPN profile that this cmdlet modifies.
@@ -213,21 +228,6 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

@@ -1,4 +1,4 @@
-﻿---
+---
 description: Create a Configuration Manager schedule token.
 external help file: AdminUI.PS.Common.dll-Help.xml
 Module Name: ConfigurationManager
@@ -177,6 +177,22 @@ New-CMSchedule -DurationInterval Days -DurationCount 0 -RecurInterval Days -Recu
 ```
 
 ## PARAMETERS
+
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -DayOfMonth
 
@@ -446,22 +462,6 @@ Accepted values: Last, First, Second, Third, Fourth
 Required: True
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

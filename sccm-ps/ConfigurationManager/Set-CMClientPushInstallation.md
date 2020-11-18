@@ -1,4 +1,4 @@
-﻿---
+---
 description: Changes settings of a client push installation.
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -118,6 +118,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -DisableWildcardHandling
 DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
@@ -224,6 +239,21 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
+### -InstallClientToDomainController
+Indicates whether to use automatic site-wide client push installation to install the Configuration Manager client software on domain controllers.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -InstallationProperty
 Specifies any installation properties to use when installing the Configuration Manager client.
 
@@ -240,21 +270,6 @@ For Configuration Manager SP1: You can specify installation properties for the W
 
 ```yaml
 Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InstallClientToDomainController
-Indicates whether to use automatic site-wide client push installation to install the Configuration Manager client software on domain controllers.
-
-```yaml
-Type: Boolean
 Parameter Sets: (All)
 Aliases:
 
@@ -308,21 +323,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
@@ -348,7 +348,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### 
+###  
 
 ## NOTES
 

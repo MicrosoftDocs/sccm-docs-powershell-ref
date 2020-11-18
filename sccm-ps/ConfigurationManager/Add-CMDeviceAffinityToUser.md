@@ -1,4 +1,4 @@
-﻿---
+---
 description: Adds device affinity to a Configuration Manager user.
 external help file: AdminUI.PS.Collections.dll-Help.xml
 Module Name: ConfigurationManager
@@ -50,6 +50,21 @@ PS XYZ:\>Add-CMDeviceAffinityToUser -UserName "Patti Fuller" -DeviceName "WestDi
 This command adds affinity to the device named WestDivUpdates05 for the user named Patti Fuller.
 
 ## PARAMETERS
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -DeviceId
 Specifies a device by using an ID.
@@ -137,21 +152,6 @@ Aliases: UniqueUserName
 Required: True
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

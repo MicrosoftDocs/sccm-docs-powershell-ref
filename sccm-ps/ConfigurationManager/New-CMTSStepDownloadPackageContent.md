@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: AdminUI.PS.Osd.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 10/28/2020
@@ -70,6 +70,21 @@ Specify a condition object to use with this step. To get a condition object, use
 Type: IResultObject[]
 Parameter Sets: (All)
 Aliases: Conditions
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
 
 Required: False
 Position: Named
@@ -221,21 +236,6 @@ If you set the **LocationOption** parameter to **CustomPath**, use this paramete
 Type: String
 Parameter Sets: (All)
 Aliases: DestinationCustomPath
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
 
 Required: False
 Position: Named

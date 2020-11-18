@@ -1,4 +1,4 @@
-﻿---
+---
 description: Adds a Windows Installer deployment type.
 external help file: AdminUI.PS.AppMan.dll-Help.xml
 Module Name: ConfigurationManager
@@ -286,6 +286,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ContentFallback
 Indicates that a client can use a fallback location provided by a management point.
 A fallback location point provides an alternate location for source content when the content for the deployment type is not available on any of the preferred distribution points.
@@ -510,27 +525,6 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### -InstallationBehaviorType
-Specifies the installation behavior of the deployment type.
-Valid values are:
-
-- InstallForUser
-- InstallForSystem
-- InstallForSystemIfResourceIsDeviceOtherwiseInstallForUser
-
-```yaml
-Type: InstallationBehaviorType
-Parameter Sets: (All)
-Aliases:
-Accepted values: InstallForUser, InstallForSystem, InstallForSystemIfResourceIsDeviceOtherwiseInstallForUser
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -InstallCommand
 Specifies the command to use to install the Windows Installer package from the command line.
 
@@ -566,6 +560,27 @@ This folder can be an absolute path on the client, or a path to the distribution
 Type: String
 Parameter Sets: (All)
 Aliases: InstallationStartIn, InstallFolder
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InstallationBehaviorType
+Specifies the installation behavior of the deployment type.
+Valid values are:
+
+- InstallForUser
+- InstallForSystem
+- InstallForSystemIfResourceIsDeviceOtherwiseInstallForUser
+
+```yaml
+Type: InstallationBehaviorType
+Parameter Sets: (All)
+Aliases:
+Accepted values: InstallForUser, InstallForSystem, InstallForSystemIfResourceIsDeviceOtherwiseInstallForUser
 
 Required: False
 Position: Named
@@ -888,21 +903,6 @@ Accepted values: Normal, Minimized, Maximized, Hidden
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

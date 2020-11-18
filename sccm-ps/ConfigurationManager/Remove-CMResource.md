@@ -1,4 +1,4 @@
-﻿---
+---
 description: Removes a Configuration Manager resource.
 external help file: AdminUI.PS.Collections.dll-Help.xml
 Module Name: ConfigurationManager
@@ -53,6 +53,21 @@ PS XYZ:\> Remove-CMResource -ResourceID 2097152000
 This command removes the resource with the ID of 2097152000.
 
 ## PARAMETERS
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -DisableWildcardHandling
 DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
@@ -126,21 +141,6 @@ Aliases:
 Required: True
 Position: 0
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

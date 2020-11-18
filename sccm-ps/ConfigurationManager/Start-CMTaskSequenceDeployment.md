@@ -1,4 +1,4 @@
-﻿---
+---
 description: Starts a task sequence deployment in Configuration Manager.
 external help file: AdminUI.PS.Osd.dll-Help.xml
 Module Name: ConfigurationManager
@@ -250,6 +250,44 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DeployPurpose
+
+Specifies a task sequence as either required or available.
+A required task sequence installation is mandatory.
+The acceptable values for this parameter are:
+
+- Available
+- Required
+
+```yaml
+Type: DeployPurposeType
+Parameter Sets: (All)
+Aliases:
+Accepted values: Available, Required
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -DeploymentAvailableDateTime
 
 Specifies a date and time when a deployment becomes available to clients.
@@ -366,28 +404,6 @@ Type: DeploymentOptionType
 Parameter Sets: (All)
 Aliases:
 Accepted values: DownloadContentLocallyWhenNeededByRunningTaskSequence, DownloadAllContentLocallyBeforeStartingTaskSequence, RunFromDistributionPoint
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DeployPurpose
-
-Specifies a task sequence as either required or available.
-A required task sequence installation is mandatory.
-The acceptable values for this parameter are:
-
-- Available
-- Required
-
-```yaml
-Type: DeployPurposeType
-Parameter Sets: (All)
-Aliases:
-Accepted values: Available, Required
 
 Required: False
 Position: Named
@@ -734,22 +750,6 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
