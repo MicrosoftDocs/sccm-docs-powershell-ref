@@ -1,8 +1,8 @@
 ﻿---
-description: Gets a software update.
+description: Get a software update.
 external help file: AdminUI.PS.Sum.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/02/2019
+ms.date: 11/20/2020
 schema: 2.0.0
 title: Get-CMSoftwareUpdate
 ---
@@ -10,7 +10,8 @@ title: Get-CMSoftwareUpdate
 # Get-CMSoftwareUpdate
 
 ## SYNOPSIS
-Gets a software update.
+
+Get a software update.
 
 ## SYNTAX
 
@@ -50,34 +51,37 @@ Get-CMSoftwareUpdate [-Fast] -UpdateGroupName <String[]> [-DisableWildcardHandli
 ```
 
 ## DESCRIPTION
-The **Get-CMSoftwareUpdate** cmdlet gets one or more software updates.
-Clients receive a software update object when manually or automatically deploying a software update.
+
+Use this cmdlet to get one or more software updates.
+
+For more information, see [Software update management documentation](/mem/configmgr/sum/) in the core docs.
 
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
-### Example 1: Get software updates that have been downloaded
-```
-PS XYZ:\> Get-CMSoftwareUpdate -IsContentProvisioned $True
-```
+### Example 1: Get downloaded software updates
 
-This command gets all software updates that have been downloaded.
+This command gets all software updates that the site has downloaded.
+
+```powershell
+Get-CMSoftwareUpdate -IsContentProvisioned $True
+```
 
 ### Example 2: Get software updates by update group
-```
-PS XYZ:\> Get-CMSoftwareUpdateGroup -Name "TestSUgroup10" | Get-CMSoftwareUpdate
-```
 
-This command gets the software update group object named TestSUgroup10 and uses the pipeline operator to pass the object to **Get-CMSoftwareUpdate**, which gets all software updates for the software update group object.
+This command first gets the software update group object named **TestSUgroup10**. It then uses the pipeline operator to pass the object to **Get-CMSoftwareUpdate**. The result is the list of all software updates for the software update group.
+
+```powershell
+Get-CMSoftwareUpdateGroup -Name "TestSUgroup10" | Get-CMSoftwareUpdate
+```
 
 ## PARAMETERS
 
 ### -ArticleId
-Specifies the article ID of a software update.
+
+Specify the **Article ID** of a software update. For example, `4571687`.
 
 ```yaml
 Type: String
@@ -92,7 +96,8 @@ Accept wildcard characters: False
 ```
 
 ### -BulletinId
-Specifies the bulletin ID of a software update.
+
+Specify the **Bulletin ID** of a software update. For example, `MS18-952`.
 
 ```yaml
 Type: String
@@ -107,8 +112,8 @@ Accept wildcard characters: False
 ```
 
 ### -Category
-Specifies the category of a software update.
-To obtain a category object, use the Get-CMSoftwareUpdateCategory cmdlet.
+
+Specify the category of a software update. To get a category object, use the [Get-CMSoftwareUpdateCategory](Get-CMSoftwareUpdateCategory.md) cmdlet.
 
 ```yaml
 Type: IResultObject[]
@@ -123,7 +128,8 @@ Accept wildcard characters: False
 ```
 
 ### -CategoryName
-Specifies an array of category names for software updates.
+
+Specify an array of category names for software updates.
 
 ```yaml
 Type: String[]
@@ -138,7 +144,8 @@ Accept wildcard characters: False
 ```
 
 ### -DatePostedMax
-Specifies the latest date that a software update was released.
+
+Specify the latest date that a software update was released.
 
 ```yaml
 Type: DateTime
@@ -153,7 +160,8 @@ Accept wildcard characters: False
 ```
 
 ### -DatePostedMin
-Specifies the earliest date that a software update was released.
+
+Specify the earliest date that a software update was released.
 
 ```yaml
 Type: DateTime
@@ -168,7 +176,8 @@ Accept wildcard characters: False
 ```
 
 ### -DateRevisedMax
-Specifies the latest date that a software update was revised.
+
+Specify the latest date that a software update was revised.
 
 ```yaml
 Type: DateTime
@@ -183,7 +192,8 @@ Accept wildcard characters: False
 ```
 
 ### -DateRevisedMin
-Specifies the earliest date that a software update was revised.
+
+Specify the earliest date that a software update was revised.
 
 ```yaml
 Type: DateTime
@@ -198,7 +208,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
+
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -213,6 +224,9 @@ Accept wildcard characters: False
 ```
 
 ### -EulaExist
+
+Set this parameter to `$true` to filter results for all updates that have a license agreement.
+
 ```yaml
 Type: Boolean
 Parameter Sets: SearchByName
@@ -226,10 +240,10 @@ Accept wildcard characters: False
 ```
 
 ### -Fast
-Indicates that the cmdlet does not automatically refresh lazy properties.
 
-Lazy properties contain values that are relatively inefficient to retrieve which can cause additional network traffic and decrease cmdlet performance.
-If lazy properties are not used, this parameter should be specified.
+Add this parameter to not automatically refresh lazy properties. Lazy properties contain values that are relatively inefficient to retrieve. Getting these properties can cause additional network traffic and decrease cmdlet performance.
+
+If you don't use this parameter, the cmdlet displays a warning. To disable this warning, set `$CMPSSuppressFastNotUsedCheck = $true`.
 
 ```yaml
 Type: SwitchParameter
@@ -244,7 +258,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
+
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -259,7 +274,8 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-Specifies the ID of a software update.
+
+Specifies the ID of a software update. This value is the **CI_ID**, for example `143404`.
 
 ```yaml
 Type: Int32
@@ -274,6 +290,9 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeUpgrade
+
+Add this parameter to include software updates in the upgrade category.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: SearchByName
@@ -287,7 +306,8 @@ Accept wildcard characters: False
 ```
 
 ### -IsContentProvisioned
-Indicates whether the software update is downloaded.
+
+Set this parameter to `$true` to filter results for all updates for which the site has downloaded content.
 
 ```yaml
 Type: Boolean
@@ -302,7 +322,8 @@ Accept wildcard characters: False
 ```
 
 ### -IsDeployed
-Indicates whether the software update is deployed.
+
+Set this parameter to `$true` to filter results for all updates that are deployed.
 
 ```yaml
 Type: Boolean
@@ -317,7 +338,8 @@ Accept wildcard characters: False
 ```
 
 ### -IsExpired
-Indicates whether the software update has expired.
+
+Set this parameter to `$true` to filter results for all updates that are expired.
 
 ```yaml
 Type: Boolean
@@ -332,7 +354,8 @@ Accept wildcard characters: False
 ```
 
 ### -IsLatest
-Indicates whether the software update is the latest version.
+
+Set this parameter to `$true` to filter results for the latest version of the software update.
 
 ```yaml
 Type: Boolean
@@ -347,7 +370,8 @@ Accept wildcard characters: False
 ```
 
 ### -IsOfflineServiceable
-Indicates whether the software update is offline-serviceable.
+
+Set this parameter to `$true` to filter results for all updates that are offline-serviceable. You can use the DISM command-line tool to inject these updates into an OS image.
 
 ```yaml
 Type: Boolean
@@ -362,7 +386,8 @@ Accept wildcard characters: False
 ```
 
 ### -IsSuperseded
-Indicates whether the software update is superseded.
+
+Set this parameter to `$true` to filter results for all updates that are superseded.
 
 ```yaml
 Type: Boolean
@@ -377,7 +402,8 @@ Accept wildcard characters: False
 ```
 
 ### -IsUserDefined
-Indicates whether the software update is user-defined.
+
+Set this parameter to `$true` to filter results for all updates that are user-defined.
 
 ```yaml
 Type: Boolean
@@ -392,7 +418,13 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies the name of a software update.
+
+Specify the name of a software update. This parameter compares against the localized display name attribute.
+
+You can use wildcard characters:
+
+- `*`: Multiple characters
+- `?`: Single character
 
 ```yaml
 Type: String
@@ -407,7 +439,8 @@ Accept wildcard characters: False
 ```
 
 ### -OnlyExpired
-Indicates that the cmdlet only searches for expired software updates.
+
+Add this parameter to only search for expired software updates.
 
 ```yaml
 Type: SwitchParameter
@@ -422,14 +455,8 @@ Accept wildcard characters: False
 ```
 
 ### -Severity
-Specifies the severity of software update.
-Valid values are:
 
-- None
-- Low
-- Moderate
-- Important
-- Critical
+Specify the severity of the software update.
 
 ```yaml
 Type: CustomSeverityType
@@ -445,8 +472,8 @@ Accept wildcard characters: False
 ```
 
 ### -UpdateGroup
-Specifies a software update group object.
-To obtain an update group object, use the [Get-CMSoftwareUpdateGroup](Get-CMSoftwareUpdateGroup.md) cmdlet.
+
+Specify software update group object. To get this object, use the [Get-CMSoftwareUpdateGroup](Get-CMSoftwareUpdateGroup.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -461,7 +488,8 @@ Accept wildcard characters: False
 ```
 
 ### -UpdateGroupId
-Specifies an array of IDs of software update groups.
+
+Specify an array of IDs of software update groups. This value is the **CI_ID** or **Config Item ID** of the software update group. For example, `107078`.
 
 ```yaml
 Type: String[]
@@ -476,7 +504,8 @@ Accept wildcard characters: False
 ```
 
 ### -UpdateGroupName
-Specifies an array of names of software update groups.
+
+Specify an array of names of software update groups.
 
 ```yaml
 Type: String[]
@@ -491,7 +520,8 @@ Accept wildcard characters: False
 ```
 
 ### -Vendor
-{{ Fill Vendor Description }}
+
+Applies to version 2010 and later. Specify the name of the software update vendor. The vendor for most software updates is `"Microsoft"`. If you configure third-party software updates, use this value to filter on other update vendors.
 
 ```yaml
 Type: String
@@ -506,6 +536,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -520,6 +551,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### IResultObject#SMS_SoftwareUpdate
 
+For more information on this return object and its properties, see [SMS_SoftwareUpdate server WMI class](/mem/configmgr/develop/reference/sum/sms_softwareupdate-server-wmi-class).
+
 ## NOTES
 
 ## RELATED LINKS
@@ -532,4 +565,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Sync-CMSoftwareUpdate](Sync-CMSoftwareUpdate.md)
 
+[Get-CMSoftwareUpdateCategory](Get-CMSoftwareUpdateCategory.md)
 
+[Get-CMSoftwareUpdateGroup](Get-CMSoftwareUpdateGroup.md)

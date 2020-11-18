@@ -2,7 +2,7 @@
 description: Create an OS deployment prestaged media file.
 external help file: AdminUI.PS.Osd.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 07/30/2020
+ms.date: 11/20/2020
 schema: 2.0.0
 title: New-CMPrestageMedia
 ---
@@ -61,6 +61,9 @@ New-CMPrestageMedia -MediaMode Dynamic -Path "\\server\share\PrestagedMedia.wim"
 ## PARAMETERS
 
 ### -AllowUacPrompt
+
+Add this parameter to allow Windows to prompt you to elevate your administrator permissions with User Account Control (UAC). This cmdlet requires elevated permissions to run.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -74,6 +77,9 @@ Accept wildcard characters: False
 ```
 
 ### -AllowUnattended
+
+Add this parameter to allow an unattended OS deployment. An unattended OS deployment doesn't prompt for network configuration or optional task sequences.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -88,7 +94,7 @@ Accept wildcard characters: False
 
 ### -AllowUnknownMachine
 
-Add this parameter to enable unknown computer support, which allows provisioning a computer that's not yet discovered by Configuration Manager.
+Add this parameter to allow Configuration Manager to provision unknown computers. An unknown computer is a computer that the site hasn't discovered yet.
 
 ```yaml
 Type: SwitchParameter
@@ -104,7 +110,7 @@ Accept wildcard characters: False
 
 ### -Application
 
-Specify an array of application objects to include as part of the media file. If the task sequence references this content, it looks locally for the content. If the content isn't in the media, the task sequence tries to download it from the network as normal.
+Specify an array of application objects to include as part of the media file. If the task sequence references this content, it first looks locally for the content. If the content isn't in the media, the task sequence tries to download it from the network as normal. To get an application object, use the [Get-CMApplication](Get-CMApplication.md) cmdlet.
 
 ```yaml
 Type: IResultObject[]
@@ -120,7 +126,7 @@ Accept wildcard characters: False
 
 ### -BootImage
 
-Specify the boot image object that's run from this media.
+Specify a boot image object. To get this object, use the [Get-CMBootImage](Get-CMBootImage.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -136,7 +142,13 @@ Accept wildcard characters: False
 
 ### -CertificateExpireTime
 
-To create a self-signed certificate for HTTP communication, specify the expiration date/time for the certificate validity. Use the **-CertificateStartTime** parameter to set the start date.
+If you create a self-signed media certificate for HTTP communication, this parameter specifies the certificate's expiration date and time. Specify a datetime sufficiently in the future. When this certificate expires, you can't use the bootable media. Use the **-CertificateStartTime** parameter to set the start date.
+
+For example:
+
+```powershell
+$date = [datetime]::parseexact("11/16/2021", 'MM/dd/yyyy', $null)
+```
 
 ```yaml
 Type: DateTime
@@ -152,7 +164,7 @@ Accept wildcard characters: False
 
 ### -CertificatePassword
 
-If you use the **-CertificatePath** parameter to import a PKI certificate, use this parameter to specify the password for the certificate file.
+If you use the **-CertificatePath** parameter to import a PKI certificate for HTTPS communication, use this parameter to specify the password for the certificate file.
 
 ```yaml
 Type: SecureString
@@ -184,7 +196,13 @@ Accept wildcard characters: False
 
 ### -CertificateStartTime
 
-To create a self-signed certificate for HTTP communication, specify the start date/time for the certificate validity. Use the **-CertificateExpireTime** parameter to set the expiration date.
+To create a self-signed certificate for HTTP communication, this parameter specifies the certificate's start date and time. Use the **-CertificateExpireTime** parameter to set the expiration date. You can't use the bootable media until this date.
+
+For example:
+
+```powershell
+$date = [datetime]::parseexact("11/16/2020", 'MM/dd/yyyy', $null)
+```
 
 ```yaml
 Type: DateTime
@@ -248,7 +266,7 @@ Accept wildcard characters: False
 
 ### -DistributionPoint
 
-Specify an array of distribution point objects to download the content for this media.
+Specify one or more distribution point objects to which you distributed the content for this media. To get this object, use the [Get-CMDistributionPoint](Get-CMDistributionPoint.md) cmdlet.
 
 ```yaml
 Type: IResultObject[]
@@ -264,7 +282,7 @@ Accept wildcard characters: False
 
 ### -DriverPackage
 
-Specify an array of driver package objects to include as part of the media file. If the task sequence references this content, it looks locally for the content. If the content isn't in the media, the task sequence tries to download it from the network as normal.
+Specify an array of driver package objects to include as part of the media file. If the task sequence references this content, it looks locally for the content. If the content isn't in the media, the task sequence tries to download it from the network as normal. To get this object, use the [Get-CMDriverPackage](Get-CMDriverPackage.md) cmdlet.
 
 ```yaml
 Type: IResultObject[]
@@ -279,6 +297,9 @@ Accept wildcard characters: False
 ```
 
 ### -Force
+
+Run the command without asking for confirmation.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -325,7 +346,7 @@ Accept wildcard characters: False
 
 ### -ManagementPoint
 
-Specify an array of management point objects that the media uses in initial communication. Use the **-MediaMode** parameter to determine how the media communicates when it runs.
+Specify one or more management point objects that the media uses in initial communication. Use the **-MediaMode** parameter to determine how the media communicates when it runs. To get this object, use the [Get-CMManagementPoint](Get-CMManagementPoint.md) cmdlet.
 
 ```yaml
 Type: IResultObject[]
@@ -362,7 +383,7 @@ Accept wildcard characters: False
 
 ### -MediaPassword
 
-Specify a password to protect this task sequence media. You can't use the media unless you first enter this password.
+Specify a secure string password to protect the task sequence media. When you boot a device with this media, you have to enter the password to continue.
 
 ```yaml
 Type: SecureString
@@ -378,7 +399,7 @@ Accept wildcard characters: False
 
 ### -NoAutoRun
 
-Applies to version 1906 and later. Use this parameter to configure the following option from the create task sequence media wizard: **Include autorun.inf file on media**
+Add this parameter to include the autorun.inf file on the media. Configuration Manager doesn't add it by default. This file is commonly blocked by antimalware products. For more information on the AutoRun feature of Windows, see [Creating an AutoRun-enabled CD-ROM Application](/windows/desktop/shell/autoplay). If still necessary for your scenario, add this parameter to include the file.
 
 ```yaml
 Type: SwitchParameter
@@ -394,7 +415,7 @@ Accept wildcard characters: False
 
 ### -OperatingSystemImage
 
-Specify an OS image package object to include for this media. Use the **-OperatingSystemImageIndex** parameter to specify the image index in the image package.
+Specify an OS image package object to include for this media. Use the **OperatingSystemImageIndex** parameter to specify the image index in the image package. To get this object, use the [Get-CMOperatingSystemImage](Get-CMOperatingSystemImage.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -410,7 +431,7 @@ Accept wildcard characters: False
 
 ### -OperatingSystemImageIndex
 
-Specify the image index in the image package from the **-OperatingSystemImage** parameter.
+Specify the image index in the image package from the **OperatingSystemImage** parameter.
 
 ```yaml
 Type: Int32
@@ -426,7 +447,7 @@ Accept wildcard characters: False
 
 ### -Package
 
-Specify an array of package objects to include as part of the media file. If the task sequence references this content, it looks locally for the content. If the content isn't in the media, the task sequence tries to download it from the network as normal.
+Specify an array of package objects to include in the media file. If the task sequence references this content, it looks locally for the content. If the content isn't in the media, the task sequence tries to download it from the network as normal. To get this object, use the [Get-CMPackage](Get-CMPackage.md) cmdlet.
 
 ```yaml
 Type: IResultObject[]
@@ -477,7 +498,7 @@ Accept wildcard characters: False
 
 ### -PrestartPackage
 
-If you specify a **-PrestartCommand**, use this parameter to specify a package for prestart content if needed.
+If you specify a **PrestartCommand**, use this parameter to specify a package for prestart content if needed.
 
 ```yaml
 Type: IResultObject
@@ -492,7 +513,8 @@ Accept wildcard characters: False
 ```
 
 ### -SiteCode
-{{ Fill SiteCode Description }}
+
+Applies to version 2010 and later. Use this parameter with the **ManagementPoint** parameter to specify the site code.
 
 ```yaml
 Type: String
@@ -508,7 +530,7 @@ Accept wildcard characters: False
 
 ### -TaskSequence
 
-Specify a task sequence object for this media to run.
+Specify a task sequence object for this media to run. To get this object, use the [Get-CMTaskSequence](Get-CMTaskSequence.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -524,7 +546,7 @@ Accept wildcard characters: False
 
 ### -TemporaryFolder
 
-Specify a custom location for staging temporary data. By default it uses the current user's `$env:temp` directory. For example, `C:\Users\jqpublic\AppData\Local\Temp\`.
+The media creation process can require much temporary drive space. By default, Configuration Manager uses the temporary directory of the current user: `$env:temp`. For example, `C:\Users\jqpublic\AppData\Local\Temp\`. To give you greater flexibility with where to store these temporary files, specify a custom location for staging temporary data.
 
 ```yaml
 Type: String
@@ -540,11 +562,13 @@ Accept wildcard characters: False
 
 ### -UserDeviceAffinity
 
-Configure how the media deployment handles user device affinity:
+To support user-centric management in Configuration Manager, specify how you want the media to associate users with the destination computer. For more information about how OS deployment supports user device affinity, see [Associate users with a destination computer](/mem/configmgr/osd/get-started/associate-users-with-a-destination-computer).
 
-- `DoNotAllow`: Do not allow user device affinity
-- `AdministratorApproval`: Allow user device affinity pending administrator approval
-- `AutoApproval`: Allow user device affinity with auto-approval
+- `DoNotAllow`: Don't allow user device affinity. The media doesn't associate users with the destination computer. In this scenario, the task sequence doesn't associate users with the destination computer when it deploys the OS.
+
+- `AdministratorApproval`: Allow user device affinity pending administrator approval. The media associates users with the destination computer after you grant approval. This functionality is based on the scope of the task sequence that deploys the OS. In this scenario, the task sequence creates a relationship between the specified users and the destination computer. It then waits for approval from an administrative user before it deploys the OS.
+
+- `AutoApproval`: Allow user device affinity with auto-approval. The media automatically associates users with the destination computer. This functionality is based on the actions of the task sequence that deploys the OS. In this scenario, the task sequence creates a relationship between the specified users and destination computer when it deploys the OS to the destination computer.
 
 ```yaml
 Type: UserDeviceAffinityType
@@ -624,6 +648,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -633,6 +658,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 Cmdlet aliases: **New-CMPrestagedMedia**

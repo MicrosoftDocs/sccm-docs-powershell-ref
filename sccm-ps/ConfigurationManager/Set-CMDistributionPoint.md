@@ -2,7 +2,7 @@
 description: Configure a distribution point
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 08/24/2020
+ms.date: 11/20/2020
 schema: 2.0.0
 title: Set-CMDistributionPoint
 ---
@@ -64,6 +64,7 @@ Set-CMDistributionPoint [-AddBoundaryGroupName <String[]>] [-AddMacAddressForRes
 ```
 
 ## DESCRIPTION
+
 The **Set-CMDistributionPoint** cmdlet modifies a distribution point on a site system server.
 
 > [!NOTE]
@@ -99,6 +100,7 @@ Set-CMDistributionPoint -SiteSystemServerName "MyDP.TestDOM.net" -ReassignSiteCo
 ## PARAMETERS
 
 ### -AddBoundaryGroupName
+
 Adds an array of boundary groups, by name, to a distribution point.
 
 ```yaml
@@ -114,7 +116,8 @@ Accept wildcard characters: False
 ```
 
 ### -AddMacAddressForRespondingPxeRequest
-Adds an array of media access control (MAC) addresses that respond to Pre-boot eXecution Environment (PXE) requests for a PXE-enabled distribution point.
+
+Adds an array of MAC addresses that respond to PXE requests for a PXE-enabled distribution point.
 
 ```yaml
 Type: String[]
@@ -129,7 +132,8 @@ Accept wildcard characters: False
 ```
 
 ### -AgreeDoincLicense
-{{ Fill AgreeDoincLicense Description }}
+
+When you use the **EnableDoinc** parameter, set this parameter to `$true` to accept the Microsoft Connected Cache server license terms. For more information, [download the license terms](https://go.microsoft.com/fwlink/?linkid=2093422).
 
 ```yaml
 Type: Boolean
@@ -144,6 +148,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowFallbackForContent
+
 Indicates whether clients outside of the boundary groups associated with a site system can fall back and use this site system as a source location for content when no other site systems are available.
 
 ```yaml
@@ -159,6 +164,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowPreStaging
+
 Indicates whether the distribution point is enabled for prestaged content.
 
 ```yaml
@@ -190,6 +196,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowPxeResponse
+
 Indicates whether the distribution point can respond to PXE requests.
 
 ```yaml
@@ -205,7 +212,8 @@ Accept wildcard characters: False
 ```
 
 ### -CertificateExpirationTimeUtc
-Specifies, in UTC format, the date and time when the certificate expires.
+
+Specify a date and time when the self-signed certificate expires.
 
 ```yaml
 Type: DateTime
@@ -220,7 +228,8 @@ Accept wildcard characters: False
 ```
 
 ### -CertificatePassword
-Specifies, as a secure string, the password for a PKI client certificate.
+
+Specify a secure string password for a PKI client certificate specified in **CertificatePath**.
 
 ```yaml
 Type: SecureString
@@ -235,7 +244,8 @@ Accept wildcard characters: False
 ```
 
 ### -CertificatePath
-Specifies the import path for a PKI client certificate.
+
+Specify the path for a PKI client certificate to import for HTTPS communication. Use the **CertificatePassword** parameter for the certificate's password.
 
 ```yaml
 Type: String
@@ -250,7 +260,8 @@ Accept wildcard characters: False
 ```
 
 ### -ClearMacAddressForRespondingPxeRequest
-Indicates that the cmdlet removes the array of MAC addresses that the distribution point uses to respond to PXE requests.
+
+Add this parameter to remove the array of MAC addresses that the distribution point uses to respond to PXE requests.
 
 ```yaml
 Type: SwitchParameter
@@ -266,7 +277,7 @@ Accept wildcard characters: False
 
 ### -ClientCommunicationType
 
-Specifies how clients or devices communicate with the distribution point.
+Specifies how clients or devices communicate with the distribution point. If you specify `Https`, use the **CertificatePath** and **CertificatePassword** parameters to specify the PKI certificate to use.
 
 ```yaml
 Type: ComputerCommunicationType
@@ -300,7 +311,7 @@ Accept wildcard characters: False
 
 ### -ClientTransferRate
 
-Specifies the client transfer rate.
+Specify the client transfer rate.
 
 ```yaml
 Type: NetworkProfile
@@ -317,7 +328,7 @@ Accept wildcard characters: False
 
 ### -ContentMonitoringPriority
 
-Specifies the content monitoring priority.
+Specify the content monitoring priority.
 
 ```yaml
 Type: Priority
@@ -333,8 +344,8 @@ Accept wildcard characters: False
 ```
 
 ### -ContentValidationSchedule
-Specifies a schedule token object that the distribution point uses to validate content on a scheduled basis.
-To create a schedule token object, use the [New-CMSchedule](New-CMSchedule.md) cmdlet.
+
+If you use the **EnableContentValidation** parameter, use this parameter to specify the schedule when the distribution point validates content. To create a schedule token object, use the [New-CMSchedule](New-CMSchedule.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -349,7 +360,8 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-Specifies a description for the distribution point.
+
+Specify an optional description for the distribution point.
 
 ```yaml
 Type: String
@@ -380,7 +392,8 @@ Accept wildcard characters: False
 ```
 
 ### -DiskSpaceDoinc
-{{ Fill DiskSpaceDoinc Description }}
+
+When you use the **EnableDoinc** parameter, use this parameter to specify the amount of disk space to be used for Microsoft Connected Cache. Use the **DiskSpaceUnit** parameter to determine if this value is disk space in GB or a percentage value.
 
 ```yaml
 Type: Int32
@@ -395,7 +408,8 @@ Accept wildcard characters: False
 ```
 
 ### -DiskSpaceUnit
-{{ Fill DiskSpaceUnit Description }}
+
+Use this parameter with **DiskSpaceDoinc** to determine if that value is disk space in GB or a percentage value.
 
 ```yaml
 Type: DiskSpaceEnum
@@ -411,6 +425,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableAnonymous
+
 Indicates that the distribution point permits anonymous connections from Configuration Manager clients to the content library.
 
 ```yaml
@@ -426,8 +441,8 @@ Accept wildcard characters: False
 ```
 
 ### -EnableBranchCache
-Indicates that clients that use Windows BranchCache are allowed to download content from an on-premises distribution point.
-Content downloads from cloud-based distribution points can always be shared by clients that use Windows BranchCache.
+
+Indicates that clients that use Windows BranchCache are allowed to download content from this on-premises distribution point.
 
 ```yaml
 Type: Boolean
@@ -442,7 +457,8 @@ Accept wildcard characters: False
 ```
 
 ### -EnableContentValidation
-Indicates that content validation is enabled for this distribution point.
+
+Indicates that content validation is enabled for this distribution point. Use the **ContentValidationSchedule** parameter to specify the schedule.
 
 ```yaml
 Type: Boolean
@@ -457,7 +473,8 @@ Accept wildcard characters: False
 ```
 
 ### -EnableDoinc
-{{ Fill EnableDoinc Description }}
+
+Set this parameter to `$true` to enable this distribution point to be used as a Microsoft Connected Cache server. For more information, see [Microsoft Connected Cache in Configuration Manager](/mem/configmgr/core/plan-design/hierarchy/microsoft-connected-cache).
 
 ```yaml
 Type: Boolean
@@ -488,7 +505,8 @@ Accept wildcard characters: False
 ```
 
 ### -EnableMulticast
-Indicates whether multicast is enabled for the distribution point.
+
+Enable multicast for the distribution point.
 
 ```yaml
 Type: Boolean
@@ -503,7 +521,8 @@ Accept wildcard characters: False
 ```
 
 ### -EnableNonWdsPxe
-Indicates whether the Configuration Manager PXE responder is enabled on the distribution point. When you enable a PXE responder without Windows Deployment Service (WDS), Configuration Manager installs its PXE responder service on the distribution point.
+
+Enable the Configuration Manager PXE responder on the distribution point. When you enable a PXE responder without Windows Deployment Service (WDS), Configuration Manager installs its PXE responder service on the distribution point.
 
 For more information, see [enable PXE on the distribution point](/mem/configmgr/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_config-pxe).
 
@@ -521,7 +540,7 @@ Accept wildcard characters: False
 
 ### -EnablePullDP
 
-When set to `$True`, the distribution point is able to pull content from other distribution points.
+When set to `$True`, the distribution point can pull content from other distribution points. Use this parameter with the **SourceDPRank** and **SourceDistributionPoint** parameters.
 
 ```yaml
 Type: Boolean
@@ -536,11 +555,8 @@ Accept wildcard characters: False
 ```
 
 ### -EnablePxe
-Indicates whether PXE is enabled on the distribution point.
 
-When you enable PXE, Configuration Manager installs Windows Deployment Services (WDS) on the server, if required.
-Windows Deployment Services is the service that performs the PXE boot to install operating systems.
-After you create the distribution point, Configuration Manager installs a provider in Windows Deployment Services that uses the PXE boot functions.
+Enable PXE on the distribution point. When you enable PXE, Configuration Manager installs Windows Deployment Services (WDS) on the server, if it's not already installed. WDS is the service that supports PXE boot to install Windows images over the network.
 
 ```yaml
 Type: Boolean
@@ -555,7 +571,8 @@ Accept wildcard characters: False
 ```
 
 ### -EnableScheduledMulticast
-Indicates whether you can schedule when Configuration Manager deploys the operating system image from the distribution point.
+
+Indicates whether you can schedule when Configuration Manager deploys the OS image from the distribution point.
 
 ```yaml
 Type: Boolean
@@ -570,8 +587,8 @@ Accept wildcard characters: False
 ```
 
 ### -EnableUnknownComputerSupport
-Indicates whether support for unknown computers is enabled.
-Unknown computers are computers that are not managed by Configuration Manager.
+
+Enable support for unknown computers. Unknown computers are devices that Configuration Manager hasn't yet discovered.
 
 ```yaml
 Type: Boolean
@@ -586,6 +603,7 @@ Accept wildcard characters: False
 ```
 
 ### -EndIPAddress
+
 Specifies the ending IP address in a range of multicast addresses that Configuration Manager uses to send data to clients.
 
 ```yaml
@@ -601,6 +619,7 @@ Accept wildcard characters: False
 ```
 
 ### -EndUdpPort
+
 Specifies the ending UDP port in a range of multicast UDP ports that Configuration Manager uses to send data to clients.
 
 ```yaml
@@ -617,7 +636,7 @@ Accept wildcard characters: False
 
 ### -Force
 
-Starting in version 1910, use this parameter to add a duplicate certificate without asking for confirmation.
+Applies to version 1910 and later. Use this parameter to add a duplicate certificate without asking for confirmation.
 
 ```yaml
 Type: SwitchParameter
@@ -648,8 +667,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies a distribution point object.
-To obtain a distribution point object, use the [Get-CMDistributionPoint](Get-CMDistributionPoint.md) cmdlet.
+
+Specify a distribution point object to configure. To get this object, use the [Get-CMDistributionPoint](Get-CMDistributionPoint.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -664,7 +683,8 @@ Accept wildcard characters: False
 ```
 
 ### -KeepWds
-Indicates whether the distribution point keeps Windows Deployment Services (WDS) or removes WDS when PXE is disabled.
+
+Indicates whether the distribution point keeps Windows Deployment Services (WDS) or removes it if you disable PXE.
 
 ```yaml
 Type: Boolean
@@ -679,7 +699,8 @@ Accept wildcard characters: False
 ```
 
 ### -LocalDriveDoinc
-{{ Fill LocalDriveDoinc Description }}
+
+When you use the **EnableDoinc** parameter, use this parameter to select the drive to be used for the Microsoft Connected Cache. If you specify `Automatic`, Configuration Manager selects the drive with the most free space.
 
 ```yaml
 Type: String
@@ -695,7 +716,8 @@ Accept wildcard characters: False
 ```
 
 ### -MacAddressForRespondingPxeRequest
-Specifies an array of MAC addresses that the distribution point uses to respond to PXE requests.
+
+Specify an array of MAC addresses that the distribution point uses to respond to PXE requests.
 
 ```yaml
 Type: String[]
@@ -710,7 +732,8 @@ Accept wildcard characters: False
 ```
 
 ### -MinimumSessionSize
-Specifies how many client requests must be received before a scheduled multicast starts to deploy the operating system.
+
+Specifies how many client requests must be received before a scheduled multicast starts to deploy an OS.
 
 ```yaml
 Type: Int32
@@ -725,7 +748,8 @@ Accept wildcard characters: False
 ```
 
 ### -MulticastMaximumClientCount
-Specifies the maximum number of clients that can download the operating system from this distribution point.
+
+Specifies the maximum number of clients that can download the OS from this distribution point.
 
 ```yaml
 Type: Int32
@@ -756,7 +780,8 @@ Accept wildcard characters: False
 ```
 
 ### -PxePassword
-Specifies, as a secure string, the PXE password.
+
+Specify the PXE password as a secure string.
 
 ```yaml
 Type: SecureString
@@ -771,8 +796,8 @@ Accept wildcard characters: False
 ```
 
 ### -PxeServerResponseDelaySec
-Specifies, in seconds, how long the distribution point delays before it responds to computer requests when you are using multiple PXE-enabled distribution points.
-By default, the Configuration Manager PXE service point responds first to network PXE requests.
+
+Specifies how long the distribution point delays before it responds to computer requests when you use multiple PXE-enabled distribution points. By default, the Configuration Manager PXE service point responds first to network PXE requests. This integer value is in seconds.
 
 ```yaml
 Type: Int32
@@ -787,7 +812,8 @@ Accept wildcard characters: False
 ```
 
 ### -ReassignSiteCode
-Starting in version 1906, use the following parameter to reassign the distribution point to a new site. Specify the three-letter site code as a string value.
+
+Starting in version 1906, use this parameter to reassign the distribution point to a new site. Specify the three-letter site code as a string value.
 
 ```yaml
 Type: String
@@ -802,7 +828,8 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveBoundaryGroupName
-Removes an array of boundary groups, by name, from the distribution point.
+
+Removes an array of boundary groups by name from the distribution point.
 
 ```yaml
 Type: String[]
@@ -817,6 +844,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveMacAddressForRespondingPxeRequest
+
 Removes an array of MAC addresses that the distribution point uses to respond to PXE requests.
 
 ```yaml
@@ -832,6 +860,7 @@ Accept wildcard characters: False
 ```
 
 ### -RespondToAllNetwork
+
 Indicates that the distribution point responds to PXE requests that arrive on any of its network interfaces.
 
 ```yaml
@@ -847,7 +876,8 @@ Accept wildcard characters: False
 ```
 
 ### -RetainDoincCache
-{{ Fill RetainDoincCache Description }}
+
+When you use the **EnableDoinc** parameter, use this parameter to keep the content on the server when you disable the Microsoft Connected Cache.
 
 ```yaml
 Type: Boolean
@@ -862,7 +892,8 @@ Accept wildcard characters: False
 ```
 
 ### -SessionStartDelayMins
-Specifies the number of minutes that Configuration Manager waits before it responds to the first deployment request.
+
+Specifies the number of minutes that Configuration Manager waits before it responds to the first multicast deployment request.
 
 ```yaml
 Type: Int32
@@ -877,7 +908,8 @@ Accept wildcard characters: False
 ```
 
 ### -SiteCode
-Specifies the site code for the Configuration Manager site that hosts this site system role.
+
+Specify the three-character code for the Configuration Manager site that hosts this site system role.
 
 ```yaml
 Type: String
@@ -892,7 +924,8 @@ Accept wildcard characters: False
 ```
 
 ### -SiteSystemServerName
-Specifies the name of a server that hosts a site system role.
+
+Specify the FQDN of the server that hosts this site system role.
 
 ```yaml
 Type: String
@@ -907,7 +940,8 @@ Accept wildcard characters: False
 ```
 
 ### -SourceDistributionPoint
-Specifies an array of distribution point sources from which this distribution point can pull content.
+
+When you use the **EnablePullDP** parameter, use this parameter to specify an array of distribution point sources. This distribution point pulls content from the specified sources. Use the **SourceDPRank** parameter to prioritize these sources.
 
 ```yaml
 Type: String[]
@@ -922,8 +956,8 @@ Accept wildcard characters: False
 ```
 
 ### -SourceDPRank
-Specifies an array that contains the priorities for the distribution point sources from which this distribution point can pull content.
-Source distribution points that have the same priority are randomly selected.
+
+Specify an array that contains the priorities for the distribution point sources from which this distribution point can pull content. When source distribution points have the same priority, the pull distribution point randomly selects a source. Use this parameter with the **EnablePullDP** and **SourceDistributionPoint** parameters.
 
 ```yaml
 Type: Int32[]
@@ -938,6 +972,7 @@ Accept wildcard characters: False
 ```
 
 ### -StartIPAddress
+
 Specifies the starting IP address in a range of multicast addresses that Configuration Manager uses to send data to clients.
 
 ```yaml
@@ -953,6 +988,7 @@ Accept wildcard characters: False
 ```
 
 ### -StartUdpPort
+
 Specifies the starting UDP port in a range of multicast UDP ports that Configuration Manager uses to send data to clients.
 
 ```yaml
@@ -1018,8 +1054,7 @@ Accept wildcard characters: False
 
 ### -UserName
 
-Specifies the name of the user that the distribution point uses to connect to the primary site database.
-Use the format domain\username.
+Specify the name of the user that the distribution point uses to connect to the primary site database. Use the format `domain\username`.
 
 ```yaml
 Type: String
@@ -1034,6 +1069,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -1065,6 +1101,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -1074,6 +1111,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### IResultObject#SMS_SCI_SysResUse
+
+For more information on this return object and its properties, see [SMS_SCI_SysResUse server WMI class](/mem/configmgr/develop/reference/core/servers/configure/sms_sci_sysresuse-server-wmi-class).
 
 ## NOTES
 

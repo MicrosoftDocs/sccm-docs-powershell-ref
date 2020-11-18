@@ -2,7 +2,7 @@
 description: Import a device driver into the driver catalog.
 external help file: AdminUI.PS.Osd.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 08/26/2020
+ms.date: 11/20/2020
 schema: 2.0.0
 title: Import-CMDriver
 ---
@@ -84,7 +84,8 @@ Accept wildcard characters: False
 ```
 
 ### -AdministrativeCategoryName
-{{ Fill AdministrativeCategoryName Description }}
+
+Instead of getting and specifying an object for a category with the **AdministrativeCategory** parameter, use this parameter to simply specify the name of a category. You can also use an array of category names.
 
 ```yaml
 Type: String[]
@@ -345,6 +346,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS

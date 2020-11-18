@@ -1,8 +1,8 @@
 ﻿---
-description: Sets a client setting software update.
+description: Configure client settings for software updates.
 external help file: AdminUI.PS.ClientSettings.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/07/2019
+ms.date: 11/20/2020
 schema: 2.0.0
 title: Set-CMClientSettingSoftwareUpdate
 ---
@@ -10,7 +10,8 @@ title: Set-CMClientSettingSoftwareUpdate
 # Set-CMClientSettingSoftwareUpdate
 
 ## SYNOPSIS
-Sets a client setting software update.
+
+Configure client settings for software updates.
 
 ## SYNTAX
 
@@ -46,31 +47,38 @@ Set-CMClientSettingSoftwareUpdate [-BatchingTimeout <Int32>] [-DeltaDownloadPort
 
 ## DESCRIPTION
 
+Use this cmdlet to configure settings in the **Software updates** group of client settings. For more information, see [About client settings: Software updates](/mem/configmgr/core/clients/deploy/about-client-settings#software-updates).
+
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
 ### Example 1: Enable third-party updates in the default client settings
 
-```
-PowerShell
+```powershell
 Set-CMClientSettingSoftwareUpdate -DefaultSetting -Enable $true -EnableThirdPartyUpdates $true
 ```
 
 ### Example 2: Enable third-party updates in a custom device setting
 
-```
-PowerShell
+```powershell
 $clientDeviceSettingName = "Dev device settings"
 Set-CMClientSettingSoftwareUpdate -Name $clientDeviceSettingName -Enable $true -EnableThirdPartyUpdates $true
+```
+
+### Example 3: Configure multiple settings
+
+```powershell
+Set-CMClientSettingSoftwareUpdate -InputObject $testsetting -Enable $true -ScanSchedule $Sch1 -DeploymentEvaluationSchedule $Sch2 -BatchingTimeout 3 -TimeUnit Days -EnforceMandatory $true -Office365ManagementType $false -EnableThirdPartyUpdates $true -EnableDeltaDownload $true -EnableInstallation $true -ThreadPriority Normal -EnableDynamicUpdate $true
 ```
 
 ## PARAMETERS
 
 ### -BatchingTimeout
+
+Specify the period of time for which all pending deployments with a deadline in this time will also be installed. Use this parameter with the **EnforceMandatory** parameter. You can enter a value from 1 to 23 hours, and from 1 to 365 days. By default, this setting is configured for seven days. Use the **TimeUnit** parameter to specify hours or days.
+
 ```yaml
 Type: Int32
 Parameter Sets: (All)
@@ -84,6 +92,9 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultSetting
+
+Add this parameter to configure software update settings in the default client settings.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: SetDefaultSetting
@@ -97,7 +108,8 @@ Accept wildcard characters: False
 ```
 
 ### -DeltaDownloadPort
-Use this parameter to configure the network port value for the following client setting in the **Software Updates** group: **Port that clients use to receive requests for delta content**. Use the **EnableDeltaDownload** parameter to enable the behavior.
+
+Use this parameter to configure the network port that clients use to receive requests for delta content. Use the **EnableDeltaDownload** parameter to enable the behavior. The default value is `8005`.
 
 ```yaml
 Type: Int32
@@ -112,6 +124,9 @@ Accept wildcard characters: False
 ```
 
 ### -DeploymentEvaluationSchedule
+
+Specify how often the software updates client agent reevaluates software updates for installation status on Configuration Manager client computers. To create a new schedule token, use the [New-CMSchedule](New-CMSchedule.md) cmdlet.
+
 ```yaml
 Type: IResultObject
 Parameter Sets: (All)
@@ -125,7 +140,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
+
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -140,7 +156,8 @@ Accept wildcard characters: False
 ```
 
 ### -Enable
-Use this parameter to enable or disable the following client setting in the **Software Updates** group: **Enable software updates on clients**.
+
+Set this parameter to `$true` to enable software updates on clients.
 
 ```yaml
 Type: Boolean
@@ -156,7 +173,7 @@ Accept wildcard characters: False
 
 ### -EnableDeltaDownload
 
-Use this parameter to enable or disable the following client setting in the **Software Updates** group: **Allow clients to download delta content when available**. Use the **DeltaDownloadPort** parameter to configure the network port.
+Set this parameter to `$true` to allow clients to download delta content when available. To configure the network port, use the **DeltaDownloadPort** parameter.
 
 ```yaml
 Type: Boolean
@@ -171,7 +188,8 @@ Accept wildcard characters: False
 ```
 
 ### -EnableDynamicUpdate
-{{ Fill EnableDynamicUpdate Description }}
+
+Applies to version 2010 and later. Set this parameter to `$true` to enable dynamic update for Windows 10 feature updates. Dynamic update installs language packs, features on demand, drivers, and cumulative updates during Windows setup. It directs the client to download these updates from the internet.
 
 ```yaml
 Type: Boolean
@@ -186,7 +204,8 @@ Accept wildcard characters: False
 ```
 
 ### -EnableInstallation
-{{ Fill EnableInstallation Description }}
+
+Applies to version 2010 and later. Set this parameter to `$true` to enable installation of software updates in the "All deployments" maintenance window when the "Software Update" maintenance window is available.
 
 ```yaml
 Type: Boolean
@@ -201,7 +220,8 @@ Accept wildcard characters: False
 ```
 
 ### -EnableThirdPartyUpdates
-Starting in version 1910, use this parameter to enable or disable the following client setting in the **Software Updates** group: **Enable third party software updates**.
+
+Applies to version 1910 and later. Set this parameter to `$true` to enable third-party software updates.
 
 ```yaml
 Type: Boolean
@@ -216,6 +236,9 @@ Accept wildcard characters: False
 ```
 
 ### -EnforceMandatory
+
+When any software update deployment deadline is reached, install all other software update deployments with deadline coming within a specified period of time. Use the **BatchingTimeout** parameter to specify the period of time.
+
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
@@ -229,7 +252,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
+
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -244,6 +268,9 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
+
+This cmdlet adds the software update settings to the client settings object that you specify with this parameter. To get this object, use the [Get-CMClientSetting](Get-CMClientSetting.md) cmdlet.
+
 ```yaml
 Type: IResultObject
 Parameter Sets: SetCustomSettingByValue
@@ -257,6 +284,9 @@ Accept wildcard characters: False
 ```
 
 ### -Name
+
+This cmdlet adds the software update settings to the client settings object that this parameter names.
+
 ```yaml
 Type: String
 Parameter Sets: SetCustomSettingByName
@@ -270,6 +300,9 @@ Accept wildcard characters: False
 ```
 
 ### -Office365ManagementType
+
+Set this parameter to `$true` to enable management of the Microsoft 365 Apps client agent and installation settings.
+
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
@@ -283,7 +316,8 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Returns an object representing the item with which you are working. By default, this cmdlet may not generate any output.
+
+Returns an object representing the item with which you're working. By default, this cmdlet may not generate any output.
 
 ```yaml
 Type: SwitchParameter
@@ -298,6 +332,9 @@ Accept wildcard characters: False
 ```
 
 ### -ScanSchedule
+
+Specify how often the software updates client agent starts a compliance assessment scan. This scan determines the state for software updates on the client. To create a new schedule token, use the [New-CMSchedule](New-CMSchedule.md) cmdlet.
+
 ```yaml
 Type: IResultObject
 Parameter Sets: (All)
@@ -311,7 +348,12 @@ Accept wildcard characters: False
 ```
 
 ### -ThreadPriority
-{{ Fill ThreadPriority Description }}
+
+Applies to version 2010 and later. Specify a thread priority for Windows 10 feature updates.
+
+- `Normal`: Windows Setup uses more system resources and updates faster. It uses more processor time, so the total installation time is shorter, but the user's outage is longer. This value is the default.
+
+- `Low`: You can continue to work on the device while it downloads and updates in the background. The total installation time is longer, but the user's outage is shorter. You may need to increase the update max run time to avoid a time-out when you use this option.
 
 ```yaml
 Type: ThreadPriorityType
@@ -327,6 +369,9 @@ Accept wildcard characters: False
 ```
 
 ### -TimeUnit
+
+Use with the **BatchingTimeout** parameter to specify the period of time for which all pending deployments with a deadline in this time will also be installed.
+
 ```yaml
 Type: BatchingTimeoutType
 Parameter Sets: (All)
@@ -341,6 +386,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -356,8 +402,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+
+Shows what would happen if the cmdlet runs. The cmdlet isn't run.
 
 ```yaml
 Type: SwitchParameter
@@ -372,6 +418,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -381,6 +428,15 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-CMClientSetting](Get-CMClientSetting.md)
+
+[Remove-CMClientSetting](Remove-CMClientSetting.md)
+
+[New-CMSchedule](New-CMSchedule.md)
+
+[About client settings: Software updates](/mem/configmgr/core/clients/deploy/about-client-settings#software-updates)

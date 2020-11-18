@@ -2,7 +2,7 @@
 description: Create a software update deployment.
 external help file: AdminUI.PS.Deployments.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 08/25/2020
+ms.date: 11/20/2020
 schema: 2.0.0
 title: New-CMSoftwareUpdateDeployment
 ---
@@ -289,7 +289,8 @@ Accept wildcard characters: False
 ```
 
 ### -DeployWithNoPackage
-{{ Fill DeployWithNoPackage Description }}
+
+Set this parameter to `$true` to not use a deployment package. Clients download software update content from peers or the Microsoft cloud.
 
 ```yaml
 Type: Boolean
@@ -891,6 +892,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -900,6 +902,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS

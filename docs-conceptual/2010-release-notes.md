@@ -198,6 +198,14 @@ For more information, see [Approve-CMDevice](/powershell/module/configurationman
 
 Fixed an issue when working with **Get-CMDevice**.
 
+### Get-CMScript
+
+For more information, see [Get-CMScript](/powershell/module/configurationmanager/Get-CMScript).
+
+**Non-breaking changes**
+
+Added new parameter **ScriptGuid** to support query by script GUID.
+
 ### Get-CMSoftwareUpdate
 
 For more information, see [Get-CMSoftwareUpdate](/powershell/module/configurationmanager/Get-CMSoftwareUpdate).
@@ -209,7 +217,7 @@ Added new parameter **Vendor** to specify the source of the software update.
 **Example:**
 
 ```powershell
-Get-CMSoftwareUpdate -Name $Update -Vendor Microsoft​
+Get-CMSoftwareUpdate -Name $Update -Vendor "Microsoft​"
 ```
 
 ### Get-CMStatusMessageQuery
@@ -238,9 +246,13 @@ Import-CMDriver -UncFileLocation $DriverFolder -ImportFolder -ImportDuplicateDri
 
 For more information, see [Invoke-CMAnalyzePackage](/powershell/module/configurationmanager/Invoke-CMAnalyzePackage).
 
+**Breaking changes**
+
+Removed **Package** parameter. Pipe the package object, or use the **InputObject** parameter.
+
 **Non-breaking changes**
 
-Added pipeline support.
+Added pipeline support and the **InputObject** parameter.
 
 **Example:**
 
@@ -266,9 +278,13 @@ Get-CMCollection -Name "deviceCol1" | Invoke-CMClientAction -ActionType ClientNo
 
 For more information, see [Invoke-CMConvertPackage](/powershell/module/configurationmanager/Invoke-CMConvertPackage).
 
+**Breaking changes**
+
+Removed **Package** parameter. Pipe the package object, or use the **InputObject** parameter.
+
 **Non-breaking changes**
 
-Added pipeline support.
+Added pipeline support and the **InputObject** parameter.
 
 **Example:**
 
@@ -297,8 +313,16 @@ Add parameter **ScriptParameter** to pass parameters to the target script.
 ```PowerShell
 $Hash = @{"FolderName"="c:\test\test1"; "FileName"="test2"}
 
-Invoke-CMScript -ScriptGuid $scriptGuid -Device (Get-CMDevice -Name $targetPCName) -ScriptParameter $Hash -Pass
+Invoke-CMScript -ScriptGuid $scriptGuid -Device (Get-CMDevice -Name $targetPCName) -ScriptParameter $Hash
 ```
+
+### New-CMBootableMedia
+
+For more information, see [New-CMBootableMedia](/powershell/module/configurationmanager/New-CMBootableMedia).
+
+**Non-breaking changes**
+
+Add parameter **SiteCode**.
 
 ### New-CMCloudManagementGateway
 
@@ -351,9 +375,9 @@ The following parameters are removed from this cmdlet:
 
 For more information, see [New-CMComplianceRuleFileFolderDate](/powershell/module/configurationmanager/New-CMComplianceRuleFileFolderDate).
 
-**Breaking changes**
+**Non-breaking changes**
 
-Changed the type of the parameter **PropertyType** from _FileFolderProperty_ to _SimpleFileFolderProperty_ type.
+Adjusted the cmdlet logic to process the values from parameters **Modification** and **Creation** to align with other cmdlets.
 
 ### New-CMComplianceRuleFileFolderSimple
 
@@ -396,6 +420,14 @@ Fixed an issue for parameter **WhatIf**.
 **Non-breaking changes**
 
 Added validation for duplicated phase name.
+
+### New-CMPrestageMedia
+
+For more information, see [New-CMPrestageMedia](/powershell/module/configurationmanager/New-CMPrestageMedia).
+
+**Non-breaking changes**
+
+Add parameter **SiteCode**.
 
 ### New-CMProgram
 
@@ -560,9 +592,18 @@ Renamed the type `RenameWithUnc` to `RunWithUnc` for parameter **DriveMode**.
 
 For more information, see [Set-CMSiteMaintenanceTask](/powershell/module/configurationmanager/Set-CMSiteMaintenanceTask).
 
-**Bugs that were fixed**
+**Non-breaking changes**
 
-Fixed an issue when configuring **Site Backup destination** and **SQL backup destination** for environments with a remote SMS Provider.
+Added the following new parameters for configuring **Site backup destination** and **SQL backup destination** for environments with a remote SMS Provider:
+
+- **SiteBackupPath**
+- **SqlBackupPath**
+
+**Example:**
+
+```powershell
+Set-CMSiteMaintenanceTask -Name $TaskName  -SiteBackupPath "c:\site-backup" -SqlBackupPath "c:\sql-backup" -BeginTime (Get-Date) -DaysOfWeek Sunday,Monday -EnableAlert $true -Enabled $true
+```
 
 ### Set-CMSoftwareUpdateAutoDeploymentRule
 

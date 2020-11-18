@@ -2,13 +2,15 @@
 external help file: AdminUI.PS.AppModel.dll-Help.xml
 Module Name: ConfigurationManager
 online version:
+ms.date: 11/20/2020
 schema: 2.0.0
 ---
 
 # Invoke-CMAnalyzePackage
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Analyze a package to convert to an application.
 
 ## SYNTAX
 
@@ -31,25 +33,24 @@ Invoke-CMAnalyzePackage -InputObject <IResultObject[]> [-DisableWildcardHandling
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+Use this cmdlet to analyze a package to convert to an application. This cmdlet invokes the package conversion manager tools that are integrated with Configuration Manager. For more information, see [Package Conversion Manager](/mem/configmgr/apps/pcm/package-conversion-manager).
 
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS XYZ:\> {{ Add example code here }}
-```
 
-{{ Add example description here }}
+```powershell
+Invoke-CMAnalyzePackage -Name $packageName
+```
 
 ## PARAMETERS
 
 ### -DisableWildcardHandling
+
 This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
@@ -65,6 +66,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
+
 This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
@@ -80,7 +82,8 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-{{ Fill Id Description }}
+
+Specify a package ID to analyze. For example, `XYZ006C5`.
 
 ```yaml
 Type: String[]
@@ -95,7 +98,10 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{ Fill InputObject Description }}
+
+Applies to version 2010 and later. Specify a package object to analyze. To get this object, use the [Get-CMPackage](Get-CMPackage.md) cmdlet.
+
+This parameter replaces the previous **Package** parameter.
 
 ```yaml
 Type: IResultObject[]
@@ -110,7 +116,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{ Fill Name Description }}
+
+Specify a package name to analyze.
 
 ```yaml
 Type: String[]
@@ -125,6 +132,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -140,8 +148,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+
+Shows what would happen if the cmdlet runs. The cmdlet isn't run.
 
 ```yaml
 Type: SwitchParameter
@@ -156,6 +164,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -165,6 +174,15 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
+Starting in version 2010, the **Package** parameter was removed from this cmdlet. Pipe the package object, or use the **InputObject** parameter.
+
 ## RELATED LINKS
+
+[Invoke-CMConvertPackage](Invoke-CMConvertPackage.md)
+
+[Get-CMPackage](Get-CMPackage.md)
+
+[Package Conversion Manager](/mem/configmgr/apps/pcm/package-conversion-manager)

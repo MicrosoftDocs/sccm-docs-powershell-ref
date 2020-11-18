@@ -2,7 +2,7 @@
 description: Configure a task sequence deployment.
 external help file: AdminUI.PS.Deployments.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 07/31/2020
+ms.date: 11/20/2020
 schema: 2.0.0
 title: Set-CMTaskSequenceDeployment
 ---
@@ -111,7 +111,8 @@ Set-CMTaskSequenceDeployment -TaskSequenceName "Task Sequence 1333" -CollectionN
 ## PARAMETERS
 
 ### -AddSchedule
-{{ Fill AddSchedule Description }}
+
+Specify a schedule token object to add to the deployment. To create a schedule object, use the [New-CMSchedule](New-CMSchedule.md) cmdlet.
 
 ```yaml
 Type: IResultObject[]
@@ -126,7 +127,8 @@ Accept wildcard characters: False
 ```
 
 ### -AddScheduleEvent
-{{ Fill AddScheduleEvent Description }}
+
+Specify one of the accepted schedule events to add to the deployment.
 
 ```yaml
 Type: ScheduleEventType[]
@@ -206,7 +208,8 @@ Accept wildcard characters: False
 ```
 
 ### -ClearSchedule
-{{ Fill ClearSchedule Description }}
+
+Add this parameter to remove all schedules from the deployment.
 
 ```yaml
 Type: SwitchParameter
@@ -221,7 +224,8 @@ Accept wildcard characters: False
 ```
 
 ### -ClearScheduleEvent
-{{ Fill ClearScheduleEvent Description }}
+
+Add this parameter to remove all schedule events from the deployment.
 
 ```yaml
 Type: SwitchParameter
@@ -526,7 +530,8 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveSchedule
-{{ Fill RemoveSchedule Description }}
+
+Specify a schedule token object to remove from the deployment. To create a schedule object, use the [New-CMSchedule](New-CMSchedule.md) cmdlet.
 
 ```yaml
 Type: IResultObject[]
@@ -541,7 +546,8 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveScheduleEvent
-{{ Fill RemoveScheduleEvent Description }}
+
+Specify one of the accepted schedule events to remove from the deployment.
 
 ```yaml
 Type: ScheduleEventType[]
