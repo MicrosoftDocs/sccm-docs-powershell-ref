@@ -85,17 +85,25 @@ Connect to Configuration Manager from an existing Windows PowerShell session by 
 
 ## Update help
 
-Update Windows PowerShell help by using the **Update-Help** cmdlet. This action can also update the help for the Configuration Manager cmdlets. If your computer is connected to the internet, go to your Windows PowerShell window, and type the following command:
+<!--7774961-->
+
+To get the latest information for the Configuration Manager PowerShell module, use the [Update-Help](/powershell/module/microsoft.powershell.core/update-help) cmdlet. Starting in November 2020, this content is the same as what's published on docs.microsoft.com for the [ConfigurationManager module](/powershell/module/configurationmanager/).
+
+The computer on which you run this cmdlet needs internet access, specifically `pshelpprod.blob.core.windows.net`. Then run the following command:
 
 ```powershell
 Update-Help –Module ConfigurationManager
 ```
 
-After you update the Configuration Manager cmdlet help, you can get help about the cmdlets by using the **Get-Help** cmdlet. For example:
+After you update the Configuration Manager cmdlet help, you can get help about the cmdlets by using the [Get-Help](/powershell/module/microsoft.powershell.core/get-help) cmdlet. For example:
 
 ```powershell
-Get-Help Get-CMSite
+Get-Help Get-CMDevice
+Get-Help Get-CMDevice -Examples
+Get-Help Get-CMDevice -Parameter *
 ```
+
+For more information, see the following PowerShell blog post: [You’ve got Help!](https://devblogs.microsoft.com/powershell/youve-got-help/).
 
 ## Support for PowerShell version 7
 
