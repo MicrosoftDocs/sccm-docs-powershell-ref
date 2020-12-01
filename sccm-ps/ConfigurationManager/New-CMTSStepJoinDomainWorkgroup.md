@@ -13,10 +13,10 @@ schema: 2.0.0
 ## SYNTAX
 
 ```
-New-CMTSStepJoinDomainWorkgroup [-WorkgroupName <String>] [-DomainName <String>] [-OU <String>]
- [-UserName <String>] [-UserPassword <SecureString>] -Name <String> [-Description <String>] [-ContinueOnError]
- [-Disable] [-Condition <IResultObject[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+New-CMTSStepJoinDomainWorkgroup [-DomainName <String>] [-OU <String>] [-UserName <String>]
+ [-UserPassword <SecureString>] [-WorkgroupName <String>] [-Condition <IResultObject[]>] [-ContinueOnError]
+ [-Description <String>] [-Disable] -Name <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

@@ -16,44 +16,47 @@ Sets a client setting computer agent.
 
 ### SetCustomSettingByName (Default)
 ```
-Set-CMClientSettingComputerAgent [-InitialReminderHr <Int32>] [-InterimReminderHr <Int32>]
- [-FinalReminderMins <Int32>] [-PortalUrl <String>] [-AddPortalToTrustedSiteList <Boolean>]
- [-AllowPortalToHaveElevatedTrust <Boolean>] [-SelectWebsitePoint <ApplicationCatalogWebsitePointType>]
- [-WebsitePointServerName <String>] [-BrandingTitle <String>] [-UseNewSoftwareCenter <Boolean>]
- [-InstallRestriction <InstallRestrictionType>] [-SuspendBitLocker <SuspendBitLockerType>]
- [-EnableThirdPartyOrchestration <EnableThirdPartyOrchestrationType>]
- [-PowerShellExecutionPolicy <PowerShellExecutionPolicyType>] [-DisplayNewProgramNotification <Boolean>]
- [-DisableDeadlineRandom <Boolean>] [-EnableHealthAttestation <Boolean>]
- [-UseOnPremisesHealthAttestation <Boolean>] [-HealthAttestationUrl <String>] -Name <String> [-PassThru]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMClientSettingComputerAgent [-AddPortalToTrustedSiteList <Boolean>]
+ [-AllowPortalToHaveElevatedTrust <Boolean>] [-BrandingTitle <String>] [-DisableDeadlineRandom <Boolean>]
+ [-DisplayNewProgramNotification <Boolean>] [-EnableHealthAttestation <Boolean>]
+ [-EnableThirdPartyOrchestration <EnableThirdPartyOrchestrationType>] [-FinalReminderMins <Int32>]
+ [-HealthAttestationUrl <String>] [-InitialReminderHr <Int32>] [-InstallRestriction <InstallRestrictionType>]
+ [-InterimReminderHr <Int32>] [-PortalUrl <String>]
+ [-PowerShellExecutionPolicy <PowerShellExecutionPolicyType>]
+ [-SelectWebsitePoint <ApplicationCatalogWebsitePointType>] [-SuspendBitLocker <SuspendBitLockerType>]
+ [-UseNewSoftwareCenter <Boolean>] [-UseOnPremisesHealthAttestation <Boolean>]
+ [-WebsitePointServerName <String>] -Name <String> [-PassThru] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetDefaultSetting
 ```
-Set-CMClientSettingComputerAgent [-InitialReminderHr <Int32>] [-InterimReminderHr <Int32>]
- [-FinalReminderMins <Int32>] [-PortalUrl <String>] [-AddPortalToTrustedSiteList <Boolean>]
- [-AllowPortalToHaveElevatedTrust <Boolean>] [-SelectWebsitePoint <ApplicationCatalogWebsitePointType>]
- [-WebsitePointServerName <String>] [-BrandingTitle <String>] [-UseNewSoftwareCenter <Boolean>]
- [-InstallRestriction <InstallRestrictionType>] [-SuspendBitLocker <SuspendBitLockerType>]
- [-EnableThirdPartyOrchestration <EnableThirdPartyOrchestrationType>]
- [-PowerShellExecutionPolicy <PowerShellExecutionPolicyType>] [-DisplayNewProgramNotification <Boolean>]
- [-DisableDeadlineRandom <Boolean>] [-EnableHealthAttestation <Boolean>]
- [-UseOnPremisesHealthAttestation <Boolean>] [-HealthAttestationUrl <String>] [-DefaultSetting] [-PassThru]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMClientSettingComputerAgent [-AddPortalToTrustedSiteList <Boolean>]
+ [-AllowPortalToHaveElevatedTrust <Boolean>] [-BrandingTitle <String>] [-DisableDeadlineRandom <Boolean>]
+ [-DisplayNewProgramNotification <Boolean>] [-EnableHealthAttestation <Boolean>]
+ [-EnableThirdPartyOrchestration <EnableThirdPartyOrchestrationType>] [-FinalReminderMins <Int32>]
+ [-HealthAttestationUrl <String>] [-InitialReminderHr <Int32>] [-InstallRestriction <InstallRestrictionType>]
+ [-InterimReminderHr <Int32>] [-PortalUrl <String>]
+ [-PowerShellExecutionPolicy <PowerShellExecutionPolicyType>]
+ [-SelectWebsitePoint <ApplicationCatalogWebsitePointType>] [-SuspendBitLocker <SuspendBitLockerType>]
+ [-UseNewSoftwareCenter <Boolean>] [-UseOnPremisesHealthAttestation <Boolean>]
+ [-WebsitePointServerName <String>] [-DefaultSetting] [-PassThru] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetCustomSettingByValue
 ```
-Set-CMClientSettingComputerAgent [-InitialReminderHr <Int32>] [-InterimReminderHr <Int32>]
- [-FinalReminderMins <Int32>] [-PortalUrl <String>] [-AddPortalToTrustedSiteList <Boolean>]
- [-AllowPortalToHaveElevatedTrust <Boolean>] [-SelectWebsitePoint <ApplicationCatalogWebsitePointType>]
- [-WebsitePointServerName <String>] [-BrandingTitle <String>] [-UseNewSoftwareCenter <Boolean>]
- [-InstallRestriction <InstallRestrictionType>] [-SuspendBitLocker <SuspendBitLockerType>]
- [-EnableThirdPartyOrchestration <EnableThirdPartyOrchestrationType>]
- [-PowerShellExecutionPolicy <PowerShellExecutionPolicyType>] [-DisplayNewProgramNotification <Boolean>]
- [-DisableDeadlineRandom <Boolean>] [-EnableHealthAttestation <Boolean>]
- [-UseOnPremisesHealthAttestation <Boolean>] [-HealthAttestationUrl <String>] -InputObject <IResultObject>
- [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMClientSettingComputerAgent [-AddPortalToTrustedSiteList <Boolean>]
+ [-AllowPortalToHaveElevatedTrust <Boolean>] [-BrandingTitle <String>] [-DisableDeadlineRandom <Boolean>]
+ [-DisplayNewProgramNotification <Boolean>] [-EnableHealthAttestation <Boolean>]
+ [-EnableThirdPartyOrchestration <EnableThirdPartyOrchestrationType>] [-FinalReminderMins <Int32>]
+ [-HealthAttestationUrl <String>] [-InitialReminderHr <Int32>] [-InstallRestriction <InstallRestrictionType>]
+ [-InterimReminderHr <Int32>] [-PortalUrl <String>]
+ [-PowerShellExecutionPolicy <PowerShellExecutionPolicyType>]
+ [-SelectWebsitePoint <ApplicationCatalogWebsitePointType>] [-SuspendBitLocker <SuspendBitLockerType>]
+ [-UseNewSoftwareCenter <Boolean>] [-UseOnPremisesHealthAttestation <Boolean>]
+ [-WebsitePointServerName <String>] -InputObject <IResultObject> [-PassThru] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

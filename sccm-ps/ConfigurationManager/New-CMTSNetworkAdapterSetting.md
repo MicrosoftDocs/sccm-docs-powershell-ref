@@ -13,11 +13,12 @@ schema: 2.0.0
 ## SYNTAX
 
 ```
-New-CMTSNetworkAdapterSetting -Name <String> [-IpAddress <Hashtable[]>] [-Gateway <String[]>] [-Metric <Int32>]
- [-Dns <String[]>] [-EnableDnsRegistration] [-EnableFullDnsRegistration] [-Wins <String[]>] [-EnableLmHosts]
- [-TcpIpNetbiosOption <NetbiosOption>] [-EnableTcpFiltering] [-EnableUdpFiltering] [-EnableIpProtocolFiltering]
- [-TcpFilterPortList <Int32[]>] [-UdpFilterPortList <Int32[]>] [-IpProtocolFilterList <String[]>]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+New-CMTSNetworkAdapterSetting [-Dns <String[]>] [-EnableDnsRegistration] [-EnableFullDnsRegistration]
+ [-EnableIpProtocolFiltering] [-EnableLmHosts] [-EnableTcpFiltering] [-EnableUdpFiltering]
+ [-Gateway <String[]>] [-IpAddress <Hashtable[]>] [-IpProtocolFilterList <String[]>] [-Metric <Int32>]
+ -Name <String> [-TcpFilterPortList <Int32[]>] [-TcpIpNetbiosOption <NetbiosOption>]
+ [-UdpFilterPortList <Int32[]>] [-Wins <String[]>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

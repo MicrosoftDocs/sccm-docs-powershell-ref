@@ -14,18 +14,17 @@ Use this cmdlet to add a site server in passive mode.
 
 ### AddByInputObjectMandatory (Default)
 ```
-Add-CMPassiveSite -InputObject <IResultObject> -InstallDirectory <String>
- -SourceFilePathOption <PassiveSiteSourceFileType> [-LocalSourceDirectory <String>]
- [-NetworkSourceDirectory <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Add-CMPassiveSite -InputObject <IResultObject> -InstallDirectory <String> [-LocalSourceDirectory <String>]
+ [-NetworkSourceDirectory <String>] -SourceFilePathOption <PassiveSiteSourceFileType>
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### AddBySiteCodeMandatory
 ```
-Add-CMPassiveSite -SiteCode <String> -SiteSystemServerName <String> -InstallDirectory <String>
- -SourceFilePathOption <PassiveSiteSourceFileType> [-LocalSourceDirectory <String>]
- [-NetworkSourceDirectory <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Add-CMPassiveSite -InstallDirectory <String> [-LocalSourceDirectory <String>]
+ [-NetworkSourceDirectory <String>] -SiteCode <String> -SiteSystemServerName <String>
+ -SourceFilePathOption <PassiveSiteSourceFileType> [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -228,4 +227,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Site server high availability](https://docs.microsoft.com/mem/configmgr/core/servers/deploy/configure/site-server-high-availability)
+[Site server high availability](/mem/configmgr/core/servers/deploy/configure/site-server-high-availability)

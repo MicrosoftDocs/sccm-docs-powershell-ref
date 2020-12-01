@@ -16,7 +16,7 @@ Sets a Registry Value type global condition in Configuration Manager.
 ## SYNTAX
 
 ```
-Set-CMGlobalConditionRegistryValue [-Is64Bit <Boolean>] [-RegistryHive <RegistryRootKey>] [-KeyName <String>]
+Set-CMGlobalConditionRegistryValue [-Is64Bit <Boolean>] [-KeyName <String>] [-RegistryHive <RegistryRootKey>]
  [-ValueName <String>] -Name <String> [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
  [-Confirm] [<CommonParameters>]
 ```

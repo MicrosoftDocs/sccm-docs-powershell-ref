@@ -15,8 +15,8 @@ Changes the component status message count to zero.
 ## SYNTAX
 
 ```
-Clear-CMComponentStatusMessageCount -ComponentName <String> [-ComputerName <String>] [-SiteCode <String>]
- -Severity <Severity> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+Clear-CMComponentStatusMessageCount -ComponentName <String> [-ComputerName <String>] -Severity <Severity>
+ [-SiteCode <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 

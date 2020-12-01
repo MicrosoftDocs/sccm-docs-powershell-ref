@@ -15,17 +15,16 @@ Changes settings for an Exchange server.
 ## SYNTAX
 
 ```
-Set-CMExchangeServer [-SiteCode <String>] -ServerAddress <String> [-NewServerAddress <String>]
- [-IsHosted <Boolean>] [-ExchangeClientAccessServer <Dictionary`2[]>] [-UserName <String>]
- [-NotificationUserName <String>] [-FullSyncSchedule <IResultObject>] [-DeltaSyncMins <Int32>]
- [-MaximumInactiveDays <Int32>] [-FindAll] [-ActiveDirectoryContainer <String[]>]
- [-GeneralSetting <ExchangeConnectorGeneralSetting>] [-PasswordSetting <ExchangeConnectorPasswordSetting>]
- [-EmailManagementSetting <ExchangeConnectorEmailManagementSetting>]
- [-SecuritySetting <ExchangeConnectorSecuritySetting>]
- [-ApplicationSetting <ExchangeConnectorApplicationSetting>] [-AllowExternalDeviceManagement <Boolean>]
- [-EnableAccessRule <Boolean>] [-AccessLevel <AccessLevelType>] [-AccessRule <ExchangeConnectorAccessRule[]>]
- [-EmailAddress <String[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Set-CMExchangeServer [-AccessLevel <AccessLevelType>] [-AccessRule <ExchangeConnectorAccessRule[]>]
+ [-ActiveDirectoryContainer <String[]>] [-AllowExternalDeviceManagement <Boolean>]
+ [-ApplicationSetting <ExchangeConnectorApplicationSetting>] [-DeltaSyncMins <Int32>]
+ [-EmailAddress <String[]>] [-EmailManagementSetting <ExchangeConnectorEmailManagementSetting>]
+ [-EnableAccessRule <Boolean>] [-ExchangeClientAccessServer <Dictionary`2[]>] [-FindAll]
+ [-FullSyncSchedule <IResultObject>] [-GeneralSetting <ExchangeConnectorGeneralSetting>] [-IsHosted <Boolean>]
+ [-MaximumInactiveDays <Int32>] [-NewServerAddress <String>] [-NotificationUserName <String>]
+ [-PasswordSetting <ExchangeConnectorPasswordSetting>] [-SecuritySetting <ExchangeConnectorSecuritySetting>]
+ -ServerAddress <String> [-SiteCode <String>] [-UserName <String>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

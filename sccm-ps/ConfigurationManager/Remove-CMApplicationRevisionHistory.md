@@ -16,25 +16,25 @@ Removes a revision history from a Configuration Manager application.
 
 ### SearchByRevisionMandatory (Default)
 ```
-Remove-CMApplicationRevisionHistory -InputObject <IResultObject> [-Force] [-DisableWildcardHandling]
+Remove-CMApplicationRevisionHistory [-Force] -InputObject <IResultObject> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### SearchBySingleNameMandatory
-```
-Remove-CMApplicationRevisionHistory -Name <String> [-Force] -Revision <UInt32> [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### SearchByValueMandatory
-```
-Remove-CMApplicationRevisionHistory -InputObject <IResultObject> [-Force] -Revision <UInt32>
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchBySingleIdMandatory
 ```
 Remove-CMApplicationRevisionHistory [-Force] -Id <UInt32> -Revision <UInt32> [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SearchByValueMandatory
+```
+Remove-CMApplicationRevisionHistory [-Force] -InputObject <IResultObject> -Revision <UInt32>
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SearchBySingleNameMandatory
+```
+Remove-CMApplicationRevisionHistory [-Force] -Name <String> -Revision <UInt32> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -169,7 +169,7 @@ Specifies the version number of the revision that you delete from the history.
 
 ```yaml
 Type: UInt32
-Parameter Sets: SearchBySingleNameMandatory, SearchByValueMandatory, SearchBySingleIdMandatory
+Parameter Sets: SearchBySingleIdMandatory, SearchByValueMandatory, SearchBySingleNameMandatory
 Aliases:
 
 Required: True

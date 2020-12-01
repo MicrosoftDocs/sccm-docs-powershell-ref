@@ -16,22 +16,22 @@ Creates a device collection variable.
 
 ### NewByValueMandatory (Default)
 ```
-New-CMDeviceCollectionVariable -InputObject <IResultObject> -VariableName <String> [-Value <String>]
- [-IsMask <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+New-CMDeviceCollectionVariable -InputObject <IResultObject> [-IsMask <Boolean>] [-Value <String>]
+ -VariableName <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ### NewByIdMandatory
 ```
-New-CMDeviceCollectionVariable -CollectionId <String> -VariableName <String> [-Value <String>]
- [-IsMask <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+New-CMDeviceCollectionVariable -CollectionId <String> [-IsMask <Boolean>] [-Value <String>]
+ -VariableName <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ### NewByNameMandatory
 ```
-New-CMDeviceCollectionVariable -CollectionName <String> -VariableName <String> [-Value <String>]
- [-IsMask <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+New-CMDeviceCollectionVariable -CollectionName <String> [-IsMask <Boolean>] [-Value <String>]
+ -VariableName <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
@@ -228,7 +228,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Planning a Task Sequence Strategy in Configuration Manager](https://docs.microsoft.com/mem/configmgr/osd/plan-design/planning-considerations-for-automating-tasks)
+[Planning a Task Sequence Strategy in Configuration Manager](/mem/configmgr/osd/plan-design/planning-considerations-for-automating-tasks)
 
 [Get-CMCollection](Get-CMCollection.md)
 

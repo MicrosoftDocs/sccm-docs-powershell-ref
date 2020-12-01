@@ -16,41 +16,41 @@ Changes configuration settings of OS images.
 
 ### SetByValueMandatory (Default)
 ```
-Set-CMOperatingSystemImage -InputObject <IResultObject> [-Reload] [-NewName <String>] [-Path <String>]
- [-Version <String>] [-Description <String>] [-DistributionPointUpdateSchedule <IResultObject>]
- [-DisconnectUserFromDistributionPoint <Boolean>] [-DisconnectUserFromDistributionPointRetryCount <UInt32>]
- [-DisconnectUserFromDistributionPointMins <UInt32>] [-CustomPackageShareName <String>]
- [-CopyToPackageShareOnDistributionPoint <Boolean>] [-MulticastAllow <Boolean>] [-MulticastEncrypt <Boolean>]
- [-MulticastTransferOnly <Boolean>] [-Priority <Priority>] [-SendToPreferredDistributionPoint <Boolean>]
- [-PrestageBehavior <PrestageBehavior>] [-PersistContentInCache <Boolean>]
- [-EnableBinaryDeltaReplication <Boolean>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMOperatingSystemImage [-CopyToPackageShareOnDistributionPoint <Boolean>]
+ [-CustomPackageShareName <String>] [-Description <String>] [-DisconnectUserFromDistributionPoint <Boolean>]
+ [-DisconnectUserFromDistributionPointMins <UInt32>] [-DisconnectUserFromDistributionPointRetryCount <UInt32>]
+ [-DistributionPointUpdateSchedule <IResultObject>] [-EnableBinaryDeltaReplication <Boolean>]
+ -InputObject <IResultObject> [-MulticastAllow <Boolean>] [-MulticastEncrypt <Boolean>]
+ [-MulticastTransferOnly <Boolean>] [-NewName <String>] [-PassThru] [-Path <String>]
+ [-PersistContentInCache <Boolean>] [-PrestageBehavior <PrestageBehavior>] [-Priority <Priority>] [-Reload]
+ [-SendToPreferredDistributionPoint <Boolean>] [-Version <String>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetById
 ```
-Set-CMOperatingSystemImage -Id <String> [-Reload] [-NewName <String>] [-Path <String>] [-Version <String>]
- [-Description <String>] [-DistributionPointUpdateSchedule <IResultObject>]
- [-DisconnectUserFromDistributionPoint <Boolean>] [-DisconnectUserFromDistributionPointRetryCount <UInt32>]
- [-DisconnectUserFromDistributionPointMins <UInt32>] [-CustomPackageShareName <String>]
- [-CopyToPackageShareOnDistributionPoint <Boolean>] [-MulticastAllow <Boolean>] [-MulticastEncrypt <Boolean>]
- [-MulticastTransferOnly <Boolean>] [-Priority <Priority>] [-SendToPreferredDistributionPoint <Boolean>]
- [-PrestageBehavior <PrestageBehavior>] [-PersistContentInCache <Boolean>]
- [-EnableBinaryDeltaReplication <Boolean>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMOperatingSystemImage [-CopyToPackageShareOnDistributionPoint <Boolean>]
+ [-CustomPackageShareName <String>] [-Description <String>] [-DisconnectUserFromDistributionPoint <Boolean>]
+ [-DisconnectUserFromDistributionPointMins <UInt32>] [-DisconnectUserFromDistributionPointRetryCount <UInt32>]
+ [-DistributionPointUpdateSchedule <IResultObject>] [-EnableBinaryDeltaReplication <Boolean>] -Id <String>
+ [-MulticastAllow <Boolean>] [-MulticastEncrypt <Boolean>] [-MulticastTransferOnly <Boolean>]
+ [-NewName <String>] [-PassThru] [-Path <String>] [-PersistContentInCache <Boolean>]
+ [-PrestageBehavior <PrestageBehavior>] [-Priority <Priority>] [-Reload]
+ [-SendToPreferredDistributionPoint <Boolean>] [-Version <String>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetByName
 ```
-Set-CMOperatingSystemImage -Name <String> [-Reload] [-NewName <String>] [-Path <String>] [-Version <String>]
- [-Description <String>] [-DistributionPointUpdateSchedule <IResultObject>]
- [-DisconnectUserFromDistributionPoint <Boolean>] [-DisconnectUserFromDistributionPointRetryCount <UInt32>]
- [-DisconnectUserFromDistributionPointMins <UInt32>] [-CustomPackageShareName <String>]
- [-CopyToPackageShareOnDistributionPoint <Boolean>] [-MulticastAllow <Boolean>] [-MulticastEncrypt <Boolean>]
- [-MulticastTransferOnly <Boolean>] [-Priority <Priority>] [-SendToPreferredDistributionPoint <Boolean>]
- [-PrestageBehavior <PrestageBehavior>] [-PersistContentInCache <Boolean>]
- [-EnableBinaryDeltaReplication <Boolean>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMOperatingSystemImage [-CopyToPackageShareOnDistributionPoint <Boolean>]
+ [-CustomPackageShareName <String>] [-Description <String>] [-DisconnectUserFromDistributionPoint <Boolean>]
+ [-DisconnectUserFromDistributionPointMins <UInt32>] [-DisconnectUserFromDistributionPointRetryCount <UInt32>]
+ [-DistributionPointUpdateSchedule <IResultObject>] [-EnableBinaryDeltaReplication <Boolean>]
+ [-MulticastAllow <Boolean>] [-MulticastEncrypt <Boolean>] [-MulticastTransferOnly <Boolean>] -Name <String>
+ [-NewName <String>] [-PassThru] [-Path <String>] [-PersistContentInCache <Boolean>]
+ [-PrestageBehavior <PrestageBehavior>] [-Priority <Priority>] [-Reload]
+ [-SendToPreferredDistributionPoint <Boolean>] [-Version <String>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

@@ -14,7 +14,7 @@ schema: 2.0.0
 
 ```
 New-CMTSStepCaptureNetworkSettings [-MigrateAdapterSettings <Boolean>] [-MigrateNetworkMembership <Boolean>]
- -Name <String> [-Description <String>] [-ContinueOnError] [-Disable] [-Condition <IResultObject[]>]
+ [-Condition <IResultObject[]>] [-ContinueOnError] [-Description <String>] [-Disable] -Name <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

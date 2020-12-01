@@ -16,19 +16,19 @@ Changes configuration settings of a security role.
 
 ### SetByValue (Default)
 ```
-Set-CMSecurityRole -InputObject <IResultObject> [-NewName <String>] [-Description <String>]
+Set-CMSecurityRole [-Description <String>] -InputObject <IResultObject> [-NewName <String>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetById
 ```
-Set-CMSecurityRole -Id <String> [-NewName <String>] [-Description <String>] [-DisableWildcardHandling]
+Set-CMSecurityRole [-Description <String>] -Id <String> [-NewName <String>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetByName
 ```
-Set-CMSecurityRole -Name <String> [-NewName <String>] [-Description <String>] [-DisableWildcardHandling]
+Set-CMSecurityRole [-Description <String>] -Name <String> [-NewName <String>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

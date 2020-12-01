@@ -15,14 +15,13 @@ Creates a rule in Configuration Manager.
 ## SYNTAX
 
 ```
-New-CMStatusFilterRule [-SiteCode <String>] -Name <String> [-Source <String>]
- [-StatusFilterRuleSiteCode <String>] [-SiteSystemServerName <String>] [-ComponentName <String>]
- [-MessageType <MessageType>] [-SeverityType <SeverityType>] [-MessageId <Int32>] [-PropertyId <String>]
- [-PropertyValue <String>] [-WriteToDatabase <Boolean>] [-AllowDeleteAfterDays <Int32>]
- [-ReportToEventLog <Boolean>] [-ReplicateToParentSite <Boolean>] [-ReplicationPriority <ReplicationPriority>]
- [-RunProgram <Boolean>] [-ProgramPath <String>] [-ForwardToStatusSummarizer <Boolean>]
- [-ProcessLowerPriorityRule <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+New-CMStatusFilterRule [-AllowDeleteAfterDays <Int32>] [-ComponentName <String>]
+ [-ForwardToStatusSummarizer <Boolean>] [-MessageId <Int32>] [-MessageType <MessageType>] -Name <String>
+ [-ProcessLowerPriorityRule <Boolean>] [-ProgramPath <String>] [-PropertyId <String>] [-PropertyValue <String>]
+ [-ReplicateToParentSite <Boolean>] [-ReplicationPriority <ReplicationPriority>] [-ReportToEventLog <Boolean>]
+ [-RunProgram <Boolean>] [-SeverityType <SeverityType>] [-SiteCode <String>] [-SiteSystemServerName <String>]
+ [-Source <String>] [-StatusFilterRuleSiteCode <String>] [-WriteToDatabase <Boolean>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -410,7 +409,6 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS

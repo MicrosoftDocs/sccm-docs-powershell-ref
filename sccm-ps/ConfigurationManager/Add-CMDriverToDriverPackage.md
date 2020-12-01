@@ -21,6 +21,20 @@ Add-CMDriverToDriverPackage -Driver <IResultObject> -DriverPackage <IResultObjec
  [<CommonParameters>]
 ```
 
+### AddDriverToDriverPackageByObject_Id
+```
+Add-CMDriverToDriverPackage -Driver <IResultObject> -DriverPackageId <String>
+ [-UpdateDistributionPoints <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### AddDriverToDriverPackageByObject_Name
+```
+Add-CMDriverToDriverPackage -Driver <IResultObject> -DriverPackageName <String>
+ [-UpdateDistributionPoints <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
 ### AddDriverToDriverPackageById_Id
 ```
 Add-CMDriverToDriverPackage -DriverId <Int32> -DriverPackageId <String> [-UpdateDistributionPoints <Boolean>]
@@ -57,20 +71,6 @@ Add-CMDriverToDriverPackage -DriverName <String> -DriverPackageName <String>
 ### AddDriverToDriverPackageByName_Object
 ```
 Add-CMDriverToDriverPackage -DriverName <String> -DriverPackage <IResultObject>
- [-UpdateDistributionPoints <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
-```
-
-### AddDriverToDriverPackageByObject_Id
-```
-Add-CMDriverToDriverPackage -Driver <IResultObject> -DriverPackageId <String>
- [-UpdateDistributionPoints <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
-```
-
-### AddDriverToDriverPackageByObject_Name
-```
-Add-CMDriverToDriverPackage -Driver <IResultObject> -DriverPackageName <String>
  [-UpdateDistributionPoints <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
@@ -196,7 +196,7 @@ Specifies the ID of a driver package.
 
 ```yaml
 Type: String
-Parameter Sets: AddDriverToDriverPackageById_Id, AddDriverToDriverPackageByName_Id, AddDriverToDriverPackageByObject_Id
+Parameter Sets: AddDriverToDriverPackageByObject_Id, AddDriverToDriverPackageById_Id, AddDriverToDriverPackageByName_Id
 Aliases:
 
 Required: True
@@ -211,7 +211,7 @@ Specifies the name of a driver package.
 
 ```yaml
 Type: String
-Parameter Sets: AddDriverToDriverPackageById_Name, AddDriverToDriverPackageByName_Name, AddDriverToDriverPackageByObject_Name
+Parameter Sets: AddDriverToDriverPackageByObject_Name, AddDriverToDriverPackageById_Name, AddDriverToDriverPackageByName_Name
 Aliases:
 
 Required: True

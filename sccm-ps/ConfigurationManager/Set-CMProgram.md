@@ -1,8 +1,8 @@
 ---
-description: Modifies a program in Configuration Manager.
+description: Modify a program in Configuration Manager.
 external help file: AdminUI.PS.AppModel.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/07/2019
+ms.date: 11/20/2020
 schema: 2.0.0
 title: Set-CMProgram
 ---
@@ -10,134 +10,133 @@ title: Set-CMProgram
 # Set-CMProgram
 
 ## SYNOPSIS
-Modifies a program in Configuration Manager.
+
+Modify a program in Configuration Manager.
 
 ## SYNTAX
 
 ### SetStandardProgramByProgramValue (Default)
 ```
-Set-CMProgram -InputObject <IResultObject> [-StandardProgram] [-Comment <String>] [-CommandLine <String>]
- [-WorkingDirectory <String>] [-RunType <RunType>] [-AfterRunningType <AfterRunningType>] [-Category <String>]
- [-DiskSpaceRequirement <String>] [-DiskSpaceUnit <DiskSpaceUnitType>] [-Duration <Int32>]
- [-Requirement <String>] [-ProgramRunType <ProgramRunType>] [-RunMode <RunModeType>]
- [-UserInteraction <Boolean>] [-DriveMode <DriveModeType>] [-DriveLetter <String>] [-Reconnect <Boolean>]
- [-ProgramAssignedType <ProgramAssignedType>] [-SuppressProgramNotification <Boolean>]
- [-DisableProgram <Boolean>] [-EnableTaskSequence <Boolean>] [-DisableMomAlertOnRun <Boolean>]
- [-GenerateMomAlertOnFail <Boolean>] [-AddSupportedOperatingSystemPlatform <IResultObject[]>]
- [-RemoveSupportedOperatingSystemPlatform <IResultObject[]>] [-RunOnAnyPlatform] [-PassThru]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMProgram [-AddSupportedOperatingSystemPlatform <IResultObject[]>] [-AfterRunningType <AfterRunningType>]
+ [-Category <String>] [-CommandLine <String>] [-Comment <String>] [-DisableMomAlertOnRun <Boolean>]
+ [-DisableProgram <Boolean>] [-DiskSpaceRequirement <String>] [-DiskSpaceUnit <DiskSpaceUnitType>]
+ [-DriveLetter <String>] [-DriveMode <DriveModeType>] [-Duration <Int32>] [-EnableTaskSequence <Boolean>]
+ [-GenerateMomAlertOnFail <Boolean>] -InputObject <IResultObject> [-PassThru]
+ [-ProgramAssignedType <ProgramAssignedType>] [-ProgramRunType <ProgramRunType>] [-Reconnect <Boolean>]
+ [-RemoveSupportedOperatingSystemPlatform <IResultObject[]>] [-Requirement <String>] [-RunMode <RunModeType>]
+ [-RunOnAnyPlatform] [-RunType <RunType>] [-StandardProgram] [-SuppressProgramNotification <Boolean>]
+ [-UserInteraction <Boolean>] [-WorkingDirectory <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetStandardProgramByName
 ```
-Set-CMProgram -PackageName <String> [-StandardProgram] -ProgramName <String> [-Comment <String>]
- [-CommandLine <String>] [-WorkingDirectory <String>] [-RunType <RunType>]
- [-AfterRunningType <AfterRunningType>] [-Category <String>] [-DiskSpaceRequirement <String>]
- [-DiskSpaceUnit <DiskSpaceUnitType>] [-Duration <Int32>] [-Requirement <String>]
- [-ProgramRunType <ProgramRunType>] [-RunMode <RunModeType>] [-UserInteraction <Boolean>]
- [-DriveMode <DriveModeType>] [-DriveLetter <String>] [-Reconnect <Boolean>]
- [-ProgramAssignedType <ProgramAssignedType>] [-SuppressProgramNotification <Boolean>]
- [-DisableProgram <Boolean>] [-EnableTaskSequence <Boolean>] [-DisableMomAlertOnRun <Boolean>]
- [-GenerateMomAlertOnFail <Boolean>] [-AddSupportedOperatingSystemPlatform <IResultObject[]>]
- [-RemoveSupportedOperatingSystemPlatform <IResultObject[]>] [-RunOnAnyPlatform] [-PassThru]
+Set-CMProgram [-AddSupportedOperatingSystemPlatform <IResultObject[]>] [-AfterRunningType <AfterRunningType>]
+ [-Category <String>] [-CommandLine <String>] [-Comment <String>] [-DisableMomAlertOnRun <Boolean>]
+ [-DisableProgram <Boolean>] [-DiskSpaceRequirement <String>] [-DiskSpaceUnit <DiskSpaceUnitType>]
+ [-DriveLetter <String>] [-DriveMode <DriveModeType>] [-Duration <Int32>] [-EnableTaskSequence <Boolean>]
+ [-GenerateMomAlertOnFail <Boolean>] -PackageName <String> [-PassThru]
+ [-ProgramAssignedType <ProgramAssignedType>] -ProgramName <String> [-ProgramRunType <ProgramRunType>]
+ [-Reconnect <Boolean>] [-RemoveSupportedOperatingSystemPlatform <IResultObject[]>] [-Requirement <String>]
+ [-RunMode <RunModeType>] [-RunOnAnyPlatform] [-RunType <RunType>] [-StandardProgram]
+ [-SuppressProgramNotification <Boolean>] [-UserInteraction <Boolean>] [-WorkingDirectory <String>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SetStandardProgramById
+```
+Set-CMProgram [-AddSupportedOperatingSystemPlatform <IResultObject[]>] [-AfterRunningType <AfterRunningType>]
+ [-Category <String>] [-CommandLine <String>] [-Comment <String>] [-DisableMomAlertOnRun <Boolean>]
+ [-DisableProgram <Boolean>] [-DiskSpaceRequirement <String>] [-DiskSpaceUnit <DiskSpaceUnitType>]
+ [-DriveLetter <String>] [-DriveMode <DriveModeType>] [-Duration <Int32>] [-EnableTaskSequence <Boolean>]
+ [-GenerateMomAlertOnFail <Boolean>] -PackageId <String> [-PassThru]
+ [-ProgramAssignedType <ProgramAssignedType>] -ProgramName <String> [-ProgramRunType <ProgramRunType>]
+ [-Reconnect <Boolean>] [-RemoveSupportedOperatingSystemPlatform <IResultObject[]>] [-Requirement <String>]
+ [-RunMode <RunModeType>] [-RunOnAnyPlatform] [-RunType <RunType>] [-StandardProgram]
+ [-SuppressProgramNotification <Boolean>] [-UserInteraction <Boolean>] [-WorkingDirectory <String>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SetStandardProgramByValue
+```
+Set-CMProgram [-AddSupportedOperatingSystemPlatform <IResultObject[]>] [-AfterRunningType <AfterRunningType>]
+ [-Category <String>] [-CommandLine <String>] [-Comment <String>] [-DisableMomAlertOnRun <Boolean>]
+ [-DisableProgram <Boolean>] [-DiskSpaceRequirement <String>] [-DiskSpaceUnit <DiskSpaceUnitType>]
+ [-DriveLetter <String>] [-DriveMode <DriveModeType>] [-Duration <Int32>] [-EnableTaskSequence <Boolean>]
+ [-GenerateMomAlertOnFail <Boolean>] -InputObject <IResultObject> [-PassThru]
+ [-ProgramAssignedType <ProgramAssignedType>] -ProgramName <String> [-ProgramRunType <ProgramRunType>]
+ [-Reconnect <Boolean>] [-RemoveSupportedOperatingSystemPlatform <IResultObject[]>] [-Requirement <String>]
+ [-RunMode <RunModeType>] [-RunOnAnyPlatform] [-RunType <RunType>] [-StandardProgram]
+ [-SuppressProgramNotification <Boolean>] [-UserInteraction <Boolean>] [-WorkingDirectory <String>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetDeviceProgramByName
 ```
-Set-CMProgram -PackageName <String> [-DeviceProgram] -ProgramName <String> [-Comment <String>]
- [-CommandLine <String>] [-WorkingDirectory <String>] [-DiskSpaceRequirement <String>]
- [-DiskSpaceUnit <DiskSpaceUnitType>] [-Requirement <String>] [-CommandLineFolder <String>]
- [-DownloadProgramType <DownloadProgramType>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Set-CMProgram [-CommandLine <String>] [-CommandLineFolder <String>] [-Comment <String>] [-DeviceProgram]
+ [-DiskSpaceRequirement <String>] [-DiskSpaceUnit <DiskSpaceUnitType>]
+ [-DownloadProgramType <DownloadProgramType>] -PackageName <String> [-PassThru] -ProgramName <String>
+ [-Requirement <String>] [-WorkingDirectory <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### SetStandardProgramById
-```
-Set-CMProgram -PackageId <String> [-StandardProgram] -ProgramName <String> [-Comment <String>]
- [-CommandLine <String>] [-WorkingDirectory <String>] [-RunType <RunType>]
- [-AfterRunningType <AfterRunningType>] [-Category <String>] [-DiskSpaceRequirement <String>]
- [-DiskSpaceUnit <DiskSpaceUnitType>] [-Duration <Int32>] [-Requirement <String>]
- [-ProgramRunType <ProgramRunType>] [-RunMode <RunModeType>] [-UserInteraction <Boolean>]
- [-DriveMode <DriveModeType>] [-DriveLetter <String>] [-Reconnect <Boolean>]
- [-ProgramAssignedType <ProgramAssignedType>] [-SuppressProgramNotification <Boolean>]
- [-DisableProgram <Boolean>] [-EnableTaskSequence <Boolean>] [-DisableMomAlertOnRun <Boolean>]
- [-GenerateMomAlertOnFail <Boolean>] [-AddSupportedOperatingSystemPlatform <IResultObject[]>]
- [-RemoveSupportedOperatingSystemPlatform <IResultObject[]>] [-RunOnAnyPlatform] [-PassThru]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetDeviceProgramById
 ```
-Set-CMProgram -PackageId <String> [-DeviceProgram] -ProgramName <String> [-Comment <String>]
- [-CommandLine <String>] [-WorkingDirectory <String>] [-DiskSpaceRequirement <String>]
- [-DiskSpaceUnit <DiskSpaceUnitType>] [-Requirement <String>] [-CommandLineFolder <String>]
- [-DownloadProgramType <DownloadProgramType>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Set-CMProgram [-CommandLine <String>] [-CommandLineFolder <String>] [-Comment <String>] [-DeviceProgram]
+ [-DiskSpaceRequirement <String>] [-DiskSpaceUnit <DiskSpaceUnitType>]
+ [-DownloadProgramType <DownloadProgramType>] -PackageId <String> [-PassThru] -ProgramName <String>
+ [-Requirement <String>] [-WorkingDirectory <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### SetStandardProgramByValue
-```
-Set-CMProgram -InputObject <IResultObject> [-StandardProgram] -ProgramName <String> [-Comment <String>]
- [-CommandLine <String>] [-WorkingDirectory <String>] [-RunType <RunType>]
- [-AfterRunningType <AfterRunningType>] [-Category <String>] [-DiskSpaceRequirement <String>]
- [-DiskSpaceUnit <DiskSpaceUnitType>] [-Duration <Int32>] [-Requirement <String>]
- [-ProgramRunType <ProgramRunType>] [-RunMode <RunModeType>] [-UserInteraction <Boolean>]
- [-DriveMode <DriveModeType>] [-DriveLetter <String>] [-Reconnect <Boolean>]
- [-ProgramAssignedType <ProgramAssignedType>] [-SuppressProgramNotification <Boolean>]
- [-DisableProgram <Boolean>] [-EnableTaskSequence <Boolean>] [-DisableMomAlertOnRun <Boolean>]
- [-GenerateMomAlertOnFail <Boolean>] [-AddSupportedOperatingSystemPlatform <IResultObject[]>]
- [-RemoveSupportedOperatingSystemPlatform <IResultObject[]>] [-RunOnAnyPlatform] [-PassThru]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetDeviceProgramByValue
 ```
-Set-CMProgram -InputObject <IResultObject> [-DeviceProgram] -ProgramName <String> [-Comment <String>]
- [-CommandLine <String>] [-WorkingDirectory <String>] [-DiskSpaceRequirement <String>]
- [-DiskSpaceUnit <DiskSpaceUnitType>] [-Requirement <String>] [-CommandLineFolder <String>]
- [-DownloadProgramType <DownloadProgramType>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Set-CMProgram [-CommandLine <String>] [-CommandLineFolder <String>] [-Comment <String>] [-DeviceProgram]
+ [-DiskSpaceRequirement <String>] [-DiskSpaceUnit <DiskSpaceUnitType>]
+ [-DownloadProgramType <DownloadProgramType>] -InputObject <IResultObject> [-PassThru] -ProgramName <String>
+ [-Requirement <String>] [-WorkingDirectory <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetDeviceProgramByProgramValue
 ```
-Set-CMProgram -InputObject <IResultObject> [-DeviceProgram] [-Comment <String>] [-CommandLine <String>]
- [-WorkingDirectory <String>] [-DiskSpaceRequirement <String>] [-DiskSpaceUnit <DiskSpaceUnitType>]
- [-Requirement <String>] [-CommandLineFolder <String>] [-DownloadProgramType <DownloadProgramType>] [-PassThru]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMProgram [-CommandLine <String>] [-CommandLineFolder <String>] [-Comment <String>] [-DeviceProgram]
+ [-DiskSpaceRequirement <String>] [-DiskSpaceUnit <DiskSpaceUnitType>]
+ [-DownloadProgramType <DownloadProgramType>] -InputObject <IResultObject> [-PassThru] [-Requirement <String>]
+ [-WorkingDirectory <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+
 The **Set-CMProgram** cmdlet modifies a program in Configuration Manager.
 Programs are commands that are associated with a Configuration Manager package.
 Programs identify the actions that occur when the client receives the client package.
 You can associate multiple programs with the same package.
 
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
 ### Example 1: Modify a standard program
-```
-PS XYZ:\> Set-CMProgram -Name "Test" -StandardProgramName SPM -Comment "Standard Upgrades" -CommandLine "RunThisNow" -RunType Maximized -AfterRunningType ProgramControlsRestart -Category "Laptops" -DiskSpaceRequirement 50 -DiskSpaceUnit MB -Duration 150 -Requirement 4 -Reconnect $False -SuppressProgramNotifications $False -DisableProgram $True -EnableTaskSequence $True -DisableMomAlertOnRun $True -GenerateMomAlertOnFail $True
-```
 
-This command modifies a standard program.
+```powershell
+Set-CMProgram -Name "Test" -StandardProgramName SPM -Comment "Standard Upgrades" -CommandLine "RunThisNow" -RunType Maximized -AfterRunningType ProgramControlsRestart -Category "Laptops" -DiskSpaceRequirement 50 -DiskSpaceUnit MB -Duration 150 -Requirement 4 -Reconnect $False -SuppressProgramNotifications $False -DisableProgram $True -EnableTaskSequence $True -DisableMomAlertOnRun $True -GenerateMomAlertOnFail $True
+```
 
 ### Example 2: Modify a device program
-```
-PS XYZ:\> Set-CMProgram -Name "Test" -DeviceProgramName DPM -Comment "Upgrades for December" -CommandLine "RunMe" -WorkingDirectory "\TempWork" -CommandLineFolder "C:\Windows" -DiskSpaceRequirement 30 -DiskSpaceUnit MB -DownloadProgramType AsSoonAsPossible -Requirement "All previous device updates"
-```
 
-This command modifies a device program.
+```powershell
+Set-CMProgram -Name "Test" -DeviceProgramName DPM -Comment "Upgrades for December" -CommandLine "RunMe" -WorkingDirectory "\TempWork" -CommandLineFolder "C:\Windows" -DiskSpaceRequirement 30 -DiskSpaceUnit MB -DownloadProgramType AsSoonAsPossible -Requirement "All previous device updates"
+```
 
 ## PARAMETERS
 
 ### -AddSupportedOperatingSystemPlatform
+
+Specify one or more supported OS platforms to add for the program. To get this object, use the [Get-CMSupportedPlatform](Get-CMSupportedPlatform.md) cmdlet.
+
 ```yaml
 Type: IResultObject[]
 Parameter Sets: SetStandardProgramByProgramValue, SetStandardProgramByName, SetStandardProgramById, SetStandardProgramByValue
@@ -151,13 +150,8 @@ Accept wildcard characters: False
 ```
 
 ### -AfterRunningType
-Specifies the action that occurs after the program completes successfully.
-The acceptable values for this parameter are:
 
-- ConfigurationManagerLogUserOff
-- ConfigurationManagerStartsComputer
- NoActionRequired
-- ProgramControlsRestart.
+Specify the action that occurs after the program completes successfully.
 
 ```yaml
 Type: AfterRunningType
@@ -173,7 +167,8 @@ Accept wildcard characters: False
 ```
 
 ### -Category
-Specifies the category under which the program is displayed on the client computer.
+
+Specify the category under which the program is displayed on the client computer.
 
 ```yaml
 Type: String
@@ -188,7 +183,8 @@ Accept wildcard characters: False
 ```
 
 ### -CommandLine
-Specifies the command line for the program.
+
+Specify the command line for the program.
 
 ```yaml
 Type: String
@@ -203,8 +199,8 @@ Accept wildcard characters: False
 ```
 
 ### -CommandLineFolder
-Specifies the folder that contains the executable program.
-This folder can be an absolute path on the client, or a path relative to the distribution folder that contains the package.
+
+Specify the folder that contains the executable program. This folder can be an absolute path on the client, or a path relative to the distribution folder that contains the package.
 
 ```yaml
 Type: String
@@ -219,8 +215,8 @@ Accept wildcard characters: False
 ```
 
 ### -Comment
-Specifies optional text about a program, such as a description.
-On client computers, this text appears in Run Advertised Programs in Control Panel.
+
+Specify optional text about the program, such as a description. On client computers, this text displays with the program in Software Center.
 
 ```yaml
 Type: String
@@ -235,6 +231,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -250,6 +247,9 @@ Accept wildcard characters: False
 ```
 
 ### -DeviceProgram
+
+Add this parameter to configure this program as a device program.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: SetDeviceProgramByName, SetDeviceProgramById, SetDeviceProgramByValue, SetDeviceProgramByProgramValue
@@ -263,8 +263,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableMomAlertOnRun
-Indicates whether the computer running the program is in maintenance mode for the duration of the program.
-When in maintenance mode, Microsoft Operations Manager (MOM) disables alerts while the program runs.
+
+Indicates whether the computer running the program is in maintenance mode for the duration of the program. When in maintenance mode, System Center Operations Manager disables alerts while the program runs.
 
 ```yaml
 Type: Boolean
@@ -279,8 +279,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableProgram
-Indicates whether to temporarily disable all advertisements that contain this program.
-If this option is selected, the program is removed from the list of available programs for users to run and it is run through assignment until re-enabled.
+
+Set this parameter to `$true` to temporarily disable all deployments that contain this program.
 
 ```yaml
 Type: Boolean
@@ -295,7 +295,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
+
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -310,9 +311,8 @@ Accept wildcard characters: False
 ```
 
 ### -DiskSpaceRequirement
-Specifies the amount of disk space that the software program requires to run on the computer.
-Requires the *DiskSpaceUnit* parameter be set.
-The value must be greater than or equal to zero.
+
+Specify the amount of disk space that the software program requires to run on the computer. The value must be greater than or equal to zero. If you specify a value, use the **DiskSpaceUnit** parameter to specify units for the value.
 
 ```yaml
 Type: String
@@ -327,8 +327,8 @@ Accept wildcard characters: False
 ```
 
 ### -DiskSpaceUnit
-Specifies the units for the *DiskSpaceRequirement* parameter.
-The acceptable values for this parameter are: GB, KB, and MB.
+
+Specify an accepted unit for the **DiskSpaceRequirement** parameter.
 
 ```yaml
 Type: DiskSpaceUnitType
@@ -344,12 +344,8 @@ Accept wildcard characters: False
 ```
 
 ### -DownloadProgramType
-Specifies when the program is to run.
-The acceptable values for this parameter are:
 
-- AsSoonAsPossible
-- OnlyOverFastNetwork
-- OnlyWhenTheDeviceIsLocked
+Specify when the program is to run.
 
 ```yaml
 Type: DownloadProgramType
@@ -365,7 +361,8 @@ Accept wildcard characters: False
 ```
 
 ### -DriveLetter
-Specifies a drive letter to qualify the location if the *DriveMode* parameter is used.
+
+If you use the **DriveMode** parameter, specify a drive letter for the location.
 
 ```yaml
 Type: String
@@ -380,16 +377,20 @@ Accept wildcard characters: False
 ```
 
 ### -DriveMode
-Indicates whether the program requires a specific drive letter, specified in the *DriveLetter* parameter.
-By default, the program runs with a Universal Naming Convention (UNC) name.
-If *DriveMode* is set to RequiresDriveLetter, the program uses any available drive letter.
-If *DriveMode* is set to RequiresSpecificDriveLetter, the program only runs if the drive is not already used.
+
+Indicates whether the program requires a specific drive letter, specified in the **DriveLetter** parameter.
+
+- `RunWithUnc`: Run the program from the UNC path. This value is the default. Starting in version 2010, this value was renamed from `RenameWithUnc`.
+
+- `RequiresDriveLetter`: The program uses any available drive letter.
+
+- `RequiresSpecificDriveLetter`: The program only runs if the drive isn't already in use.
 
 ```yaml
 Type: DriveModeType
 Parameter Sets: SetStandardProgramByProgramValue, SetStandardProgramByName, SetStandardProgramById, SetStandardProgramByValue
 Aliases:
-Accepted values: RenameWithUnc, RequiresDriveLetter, RequiresSpecificDriveLetter
+Accepted values: RunWithUnc, RequiresDriveLetter, RequiresSpecificDriveLetter
 
 Required: False
 Position: Named
@@ -399,8 +400,8 @@ Accept wildcard characters: False
 ```
 
 ### -Duration
-Specifies the maximum amount of time the program is expected to run.
-The default value is 120 minutes.
+
+Specifies the maximum amount of time that you expect the program to run. The default value is 120 minutes.
 
 ```yaml
 Type: Int32
@@ -415,7 +416,8 @@ Accept wildcard characters: False
 ```
 
 ### -EnableTaskSequence
-Indicates whether this program can be installed from the Install Software task sequence.
+
+Indicates whether this program can be installed from the **Install Package** task sequence step.
 
 ```yaml
 Type: Boolean
@@ -430,7 +432,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
+
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -445,6 +448,7 @@ Accept wildcard characters: False
 ```
 
 ### -GenerateMomAlertOnFail
+
 Indicates whether Configuration Manager generates an application log event entry if the program fails.
 
 ```yaml
@@ -460,8 +464,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies a **CMProgram** object.
-To obtain a **CMProgram** object, use the [Get-CMProgram](Get-CMProgram.md) cmdlet.
+
+Specify a program object to configure. To get this object, use the [Get-CMProgram](Get-CMProgram.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -476,7 +480,8 @@ Accept wildcard characters: False
 ```
 
 ### -PackageId
-Specifies a package ID.
+
+Specify a package ID with the program to configure.
 
 ```yaml
 Type: String
@@ -491,7 +496,8 @@ Accept wildcard characters: False
 ```
 
 ### -PackageName
-Specifies a package name.
+
+Specify a package name with the program to configure.
 
 ```yaml
 Type: String
@@ -506,8 +512,8 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Returns the current working object.
-By default, this cmdlet does not generate any output.
+
+Returns an object representing the item with which you're working. By default, this cmdlet may not generate any output.
 
 ```yaml
 Type: SwitchParameter
@@ -522,9 +528,8 @@ Accept wildcard characters: False
 ```
 
 ### -ProgramAssignedType
-Specifies whether the program runs once on the computer, or once for every user who logs on to the computer.
-The default setting is RunOnceForTheComputer.
-The program is only assigned to users when the *ProgramRunType* parameter is set to OnlyWhenUserIsLoggedOn.
+
+Specify whether the program runs once on the computer, or once for every user who signs in to the computer. The default value is `RunOnceForTheComputer`. The program is only assigned to users when the **ProgramRunType** parameter is set to `OnlyWhenUserIsLoggedOn`.
 
 ```yaml
 Type: ProgramAssignedType
@@ -540,11 +545,12 @@ Accept wildcard characters: False
 ```
 
 ### -ProgramName
-Specifies the name of the program.
+
+Specify the name of the program to configure.
 
 ```yaml
 Type: String
-Parameter Sets: SetStandardProgramByName, SetDeviceProgramByName, SetStandardProgramById, SetDeviceProgramById, SetStandardProgramByValue, SetDeviceProgramByValue
+Parameter Sets: SetStandardProgramByName, SetStandardProgramById, SetStandardProgramByValue, SetDeviceProgramByName, SetDeviceProgramById, SetDeviceProgramByValue
 Aliases: StandardProgramName, DeviceProgramName
 
 Required: True
@@ -555,14 +561,8 @@ Accept wildcard characters: False
 ```
 
 ### -ProgramRunType
-Specifies the logon conditions that are necessary for the program to run.
-The acceptable values for this parameter are:
 
-- OnlyWhenNoUserIsLoggedOn
-- OnlyWhenUserIsLoggedOn
-- WhetherOrNotUserIsLoggedOn
-
-The default setting is OnlyWhenUserIsLoggedOn.
+Specify the logon conditions that are necessary for the program to run. The default value is `OnlyWhenUserIsLoggedOn`.
 
 ```yaml
 Type: ProgramRunType
@@ -578,7 +578,8 @@ Accept wildcard characters: False
 ```
 
 ### -Reconnect
-Indicates whether the client computer reconnects to the distribution point when the user logs on.
+
+Indicates whether the client computer reconnects to the distribution point when the user signs in.
 
 ```yaml
 Type: Boolean
@@ -593,6 +594,9 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveSupportedOperatingSystemPlatform
+
+Specify one or more supported OS platforms to remove for the program. To get this object, use the [Get-CMSupportedPlatform](Get-CMSupportedPlatform.md) cmdlet.
+
 ```yaml
 Type: IResultObject[]
 Parameter Sets: SetStandardProgramByProgramValue, SetStandardProgramByName, SetStandardProgramById, SetStandardProgramByValue
@@ -606,7 +610,8 @@ Accept wildcard characters: False
 ```
 
 ### -Requirement
-Specifies any additional requirements for standard or device programs.
+
+Specify any additional requirements for standard or device programs.
 
 ```yaml
 Type: String
@@ -621,8 +626,8 @@ Accept wildcard characters: False
 ```
 
 ### -RunMode
-Specifies the credentials the client computer requires to run the program.
-The acceptable values for this parameter are: RunWithAdministrativeRights and RunWithUserRights.
+
+Specify the credentials the client computer requires to run the program.
 
 ```yaml
 Type: RunModeType
@@ -638,6 +643,9 @@ Accept wildcard characters: False
 ```
 
 ### -RunOnAnyPlatform
+
+Add this parameter to clear all supported OS platforms from this program.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: SetStandardProgramByProgramValue, SetStandardProgramByName, SetStandardProgramById, SetStandardProgramByValue
@@ -651,15 +659,8 @@ Accept wildcard characters: False
 ```
 
 ### -RunType
-Specifies the mode is which the program will run on the client computer.
-The acceptable values for this parameter are:
 
-- Hidden
-- Maximized
-- Minimized
-- Normal
-
-The default is Normal.
+Specify the mode in which the program runs on the client computer. The default value is `Normal`.
 
 ```yaml
 Type: RunType
@@ -675,6 +676,7 @@ Accept wildcard characters: False
 ```
 
 ### -StandardProgram
+
 Indicates that the program type in the deployment package is standard program.
 
 ```yaml
@@ -690,6 +692,9 @@ Accept wildcard characters: False
 ```
 
 ### -SuppressProgramNotification
+
+Set this parameter to `$true` to suppress program notifications.
+
 ```yaml
 Type: Boolean
 Parameter Sets: SetStandardProgramByProgramValue, SetStandardProgramByName, SetStandardProgramById, SetStandardProgramByValue
@@ -703,6 +708,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserInteraction
+
 Indicates whether to allow users to interact with the program.
 
 ```yaml
@@ -718,8 +724,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+
+Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
 
 ```yaml
 Type: SwitchParameter
@@ -734,7 +740,8 @@ Accept wildcard characters: False
 ```
 
 ### -WorkingDirectory
-Specifies a working directory for the program.
+
+Specify a working directory for the program.
 
 ```yaml
 Type: String
@@ -758,6 +765,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS

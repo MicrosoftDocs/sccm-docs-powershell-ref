@@ -24,8 +24,8 @@ Set-CMGlobalConditionFile [-FilePath <String>] [-IncludeSubfolder <Boolean>] [-I
 
 ### SetFileSystem
 ```
-Set-CMGlobalConditionFile [-Path <String>] [-FileOrFolderName <String>] [-IncludeSubfolder <Boolean>]
- [-Is64Bit <Boolean>] -Name <String> [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+Set-CMGlobalConditionFile [-FileOrFolderName <String>] [-IncludeSubfolder <Boolean>] [-Is64Bit <Boolean>]
+ [-Path <String>] -Name <String> [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
  [-Confirm] [<CommonParameters>]
 ```
 

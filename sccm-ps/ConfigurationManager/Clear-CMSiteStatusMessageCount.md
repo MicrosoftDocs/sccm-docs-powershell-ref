@@ -15,7 +15,7 @@ Clears the message count in Configuration Manager.
 ## SYNTAX
 
 ```
-Clear-CMSiteStatusMessageCount -Severity <Severity> -ComputerName <String> [-SiteCode <String>]
+Clear-CMSiteStatusMessageCount -ComputerName <String> -Severity <Severity> [-SiteCode <String>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

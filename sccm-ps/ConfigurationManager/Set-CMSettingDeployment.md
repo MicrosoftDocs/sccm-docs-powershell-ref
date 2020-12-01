@@ -1,9 +1,9 @@
----
+﻿---
 external help file: AdminUI.PS.Deployments.dll-Help.xml
 Module Name: ConfigurationManager
+ms.date: 08/20/2020
 online version:
 schema: 2.0.0
-ms.date: 08/20/2020
 ---
 
 # Set-CMSettingDeployment
@@ -39,7 +39,7 @@ Get-CMBlmSetting -Name "My BitLocker setting" | Get-CMSettingDeployment | Set-CM
 This example gets an Application Control policy object by name. It then uses the pipe operator to get a deployment for that policy object. It uses the pipe operator to modify the deployment to allow the client to remediate the policy outside of a maintenance window.
 
 ```powershell
- Get-CMWdacSetting -Name "My App Control setting"  | Get-CMSettingDeployment | Set-CMSettingDeployment -OverrideServiceWindows
+Get-CMWdacSetting -Name "My App Control setting"  | Get-CMSettingDeployment | Set-CMSettingDeployment -OverrideServiceWindows
 ```
 
 ## PARAMETERS
@@ -141,7 +141,6 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS

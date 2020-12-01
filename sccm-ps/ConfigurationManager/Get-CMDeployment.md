@@ -1,4 +1,4 @@
----
+﻿---
 description: Get a Configuration Manager deployment.
 external help file: AdminUI.PS.Deployments.dll-Help.xml
 Module Name: ConfigurationManager
@@ -102,7 +102,7 @@ Specifies the feature type of the deployment.
 Type: DeploymentFeature
 Parameter Sets: SearchByName
 Aliases:
-Accepted values: Application, Package, SoftwareUpdate, ConfigurationItem, TaskSequence, FirewallSetting
+Accepted values: Application, Package, SoftwareUpdate, ConfigurationItem, TaskSequence, FirewallSetting, ApplicationGroup
 
 Required: False
 Position: Named
@@ -160,7 +160,6 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -172,8 +171,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### IResultObject[]#SMS_DeploymentSummary
 
 ### IResultObject#SMS_DeploymentSummary
-
-For more information on this return object and its properties, see [SMS_DeploymentSummary server WMI class](https://docs.microsoft.com/mem/configmgr/develop/reference/apps/sms_deploymentsummary-server-wmi-class).
 
 ## NOTES
 

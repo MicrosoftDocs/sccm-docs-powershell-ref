@@ -15,7 +15,7 @@ Use this cmdlet to suspend the specified phased deployment.
 
 ### SearchByValue
 ```
-Suspend-CMPhasedDeployment -InputObject <IResultObject> [-Force] [-DisableWildcardHandling]
+Suspend-CMPhasedDeployment [-Force] -InputObject <IResultObject> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

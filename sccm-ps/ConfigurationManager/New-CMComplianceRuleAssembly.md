@@ -17,7 +17,7 @@ Creates a compliance rule assembly.
 ### AssemblyToken (Default)
 ```
 New-CMComplianceRuleAssembly [-PublicKeyToken] -ExpressionOperator <RuleExpressionOperator>
- [-ReportNoncompliance] -RuleName <String> -InputObject <ConfigurationItemSetting> [-ExpectedValue <String[]>]
+ [-ReportNoncompliance] -InputObject <ConfigurationItemSetting> -RuleName <String> [-ExpectedValue <String[]>]
  [-NoncomplianceSeverity <NoncomplianceSeverity>] [-RuleDescription <String>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
@@ -25,7 +25,7 @@ New-CMComplianceRuleAssembly [-PublicKeyToken] -ExpressionOperator <RuleExpressi
 ### AssemblyCulture
 ```
 New-CMComplianceRuleAssembly [-Culture] -ExpressionOperator <RuleExpressionOperator> [-ReportNoncompliance]
- -RuleName <String> -InputObject <ConfigurationItemSetting> [-ExpectedValue <String[]>]
+ -InputObject <ConfigurationItemSetting> -RuleName <String> [-ExpectedValue <String[]>]
  [-NoncomplianceSeverity <NoncomplianceSeverity>] [-RuleDescription <String>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```

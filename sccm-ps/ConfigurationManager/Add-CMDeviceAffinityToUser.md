@@ -16,13 +16,13 @@ Adds device affinity to a Configuration Manager user.
 
 ### AddDeviceAffinityByUserName (Default)
 ```
-Add-CMDeviceAffinityToUser -UserName <String[]> [-DeviceId <Int32[]>] [-DeviceName <String[]>]
+Add-CMDeviceAffinityToUser [-DeviceId <Int32[]>] [-DeviceName <String[]>] -UserName <String[]>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### AddDeviceAffinityByUserId
 ```
-Add-CMDeviceAffinityToUser -UserId <Int32> [-DeviceId <Int32[]>] [-DeviceName <String[]>]
+Add-CMDeviceAffinityToUser [-DeviceId <Int32[]>] [-DeviceName <String[]>] -UserId <Int32>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

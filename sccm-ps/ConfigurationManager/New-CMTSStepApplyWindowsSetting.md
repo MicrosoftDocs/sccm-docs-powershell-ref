@@ -13,12 +13,12 @@ schema: 2.0.0
 ## SYNTAX
 
 ```
-New-CMTSStepApplyWindowsSetting -UserName <String> -OrganizationName <String> [-InputLocale <String>]
- [-SystemLocale <String>] [-UserLocale <String>] [-UILanguage <String>] [-UILanguageFallback <String>]
- [-ProductKey <String>] [-ServerLicensing <ServerLicenseMode>] [-MaximumConnection <Int32>]
- [-Password <SecureString>] [-TimeZone <TimeZoneInfo>] -Name <String> [-Description <String>]
- [-ContinueOnError] [-Disable] [-Condition <IResultObject[]>] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+New-CMTSStepApplyWindowsSetting [-InputLocale <String>] [-MaximumConnection <Int32>] -OrganizationName <String>
+ [-Password <SecureString>] [-ProductKey <String>] [-ServerLicensing <ServerLicenseMode>]
+ [-SystemLocale <String>] [-TimeZone <TimeZoneInfo>] [-UILanguage <String>] [-UILanguageFallback <String>]
+ [-UserLocale <String>] -UserName <String> [-Condition <IResultObject[]>] [-ContinueOnError]
+ [-Description <String>] [-Disable] -Name <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

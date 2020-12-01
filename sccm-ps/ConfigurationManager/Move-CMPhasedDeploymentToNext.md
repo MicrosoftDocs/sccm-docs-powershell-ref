@@ -15,7 +15,7 @@ Use this cmdlet to move the specified phased deployment to the next phase.
 
 ### SearchByValue
 ```
-Move-CMPhasedDeploymentToNext -InputObject <IResultObject> [-Force] [-DisableWildcardHandling]
+Move-CMPhasedDeploymentToNext [-Force] -InputObject <IResultObject> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

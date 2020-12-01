@@ -1,8 +1,8 @@
 ---
-description: Gets Configuration Manager PowerShell scripts.
+description: Get Configuration Manager PowerShell scripts.
 external help file: AdminUI.PS.ClientOperations.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 11/15/2018
+ms.date: 11/17/2020
 schema: 2.0.0
 title: Get-CMScript
 ---
@@ -11,49 +11,57 @@ title: Get-CMScript
 
 ## SYNOPSIS
 
-Gets Configuration Manager PowerShell scripts.
+Get Configuration Manager PowerShell scripts.
 
 ## SYNTAX
 
+### ByName (Default)
 ```
-Get-CMScript [-Author <String>] [-ScriptName <String>] [-Fast] [-DisableWildcardHandling]
+Get-CMScript [-Author <String>] [-Fast] [-ScriptName <String>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [<CommonParameters>]
+```
+
+### ById
+```
+Get-CMScript [-Author <String>] [-Fast] -ScriptGuid <String> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-The **Get-CMScript** cmdlet gets one or more Configuration Manager Powershell scripts. Configuration Manager has an integrated ability to run Powershell scripts. The scripts simplify building custom tools to administer software and let you accomplish mundane tasks quickly, allowing you to get large jobs done more easily and more consistently. For more information, see [Create and run PowerShell scripts from the Configuration Manager console](/sccm/apps/deploy-use/create-deploy-scripts).
-
-You can get a specific script by specifying the author or the name of the script.
+The **Get-CMScript** cmdlet gets one or more Configuration Manager PowerShell scripts. Configuration Manager has an integrated ability to run PowerShell scripts. The scripts simplify building custom tools to administer software and let you accomplish mundane tasks quickly, allowing you to get large jobs done more easily and more consistently. For more information, see [Create and run PowerShell scripts from the Configuration Manager console](/mem/configmgr/apps/deploy-use/create-deploy-scripts).
 
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
 ### Example 1: Get all scripts
 
-```powershell
-PS XYZ:\> Get-CMScript
-```
-
 This command gets all scripts that Configuration Manager manages.
+
+```powershell
+Get-CMScript
+```
 
 ### Example 2: Get scripts by using name
 
-```powershell
-PS XYZ:\> Get-CMScript -ScriptName "D*"
-```
+This command gets all scripts that have a name that begins with the letter `D`.
 
-This command gets all scripts that have a name that begins with the letter D.
+```powershell
+Get-CMScript -ScriptName "D*"
+```
 
 ## PARAMETERS
 
 ### -Author
 
-Specifies an author.
+Specify the script author. For example, `contoso\jqpublic`.
+
+You can use wildcard characters:
+
+- `*`: Multiple characters
+- `?`: Single character
 
 ```yaml
 Type: String
@@ -69,7 +77,7 @@ Accept wildcard characters: False
 
 ### -DisableWildcardHandling
 
-DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -85,10 +93,9 @@ Accept wildcard characters: False
 
 ### -Fast
 
-Indicates that the cmdlet does not automatically refresh lazy properties.
+Add this parameter to not automatically refresh lazy properties. Lazy properties contain values that are relatively inefficient to retrieve. Getting these properties can cause additional network traffic and decrease cmdlet performance.
 
-Lazy properties contain values that are relatively inefficient to retrieve which can cause additional network traffic and decrease cmdlet performance.
-If lazy properties are not used, this parameter should be specified.
+If you don't use this parameter, the cmdlet displays a warning. To disable this warning, set `$CMPSSuppressFastNotUsedCheck = $true`.
 
 ```yaml
 Type: SwitchParameter
@@ -104,7 +111,7 @@ Accept wildcard characters: False
 
 ### -ForceWildcardHandling
 
-ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -118,13 +125,34 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ScriptName
+### -ScriptGuid
 
-Specifies a script name.
+Applies to version 2010 and later. Specify the GUID of script.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: ById
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ScriptName
+
+Specify a script name.
+
+You can use wildcard characters:
+
+- `*`: Multiple characters
+- `?`: Single character
+
+```yaml
+Type: String
+Parameter Sets: ByName
 Aliases:
 
 Required: False
@@ -162,3 +190,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Set-CMScriptDeploymentType](Set-CMScriptDeploymentType.md)
 
 [Add-CMScriptDeploymentType](Add-CMScriptDeploymentType.md)
+
+[Create and run PowerShell scripts from the Configuration Manager console](/mem/configmgr/apps/deploy-use/create-deploy-scripts)

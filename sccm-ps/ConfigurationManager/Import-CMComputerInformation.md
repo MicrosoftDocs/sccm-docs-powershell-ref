@@ -16,17 +16,17 @@ Imports computer information into a Configuration Manager database.
 
 ### ImportSingleComputer (Default)
 ```
-Import-CMComputerInformation [-CollectionName <String[]>] -ComputerName <String> [-MacAddress <String>]
- [-SMBiosGuid <String>] [-SourceComputerName <String>] [-WindowsToGoUniqueKey <String>]
- [-CollectionId <String[]>] [-InputObject <IResultObject[]>] [-UserName <String[]>]
- [-UserAccountMigrationBehavior <MigrationBehavior>] [-MergeIfExist] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Import-CMComputerInformation [-CollectionId <String[]>] [-CollectionName <String[]>] -ComputerName <String>
+ [-InputObject <IResultObject[]>] [-MacAddress <String>] [-MergeIfExist] [-SMBiosGuid <String>]
+ [-SourceComputerName <String>] [-UserAccountMigrationBehavior <MigrationBehavior>] [-UserName <String[]>]
+ [-WindowsToGoUniqueKey <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### ImportComputerByUsingFile
 ```
-Import-CMComputerInformation [-CollectionName <String[]>] [-EnableColumnHeading <Boolean>] -FileName <String>
- [-VariableName <String>] [-CollectionId <String[]>] [-InputObject <IResultObject[]>]
+Import-CMComputerInformation [-CollectionId <String[]>] [-CollectionName <String[]>]
+ [-EnableColumnHeading <Boolean>] -FileName <String> [-InputObject <IResultObject[]>] [-VariableName <String>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

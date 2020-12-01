@@ -16,17 +16,25 @@ Sets an advanced threat protection policy.
 
 ### SetByValue (Default)
 ```
-Set-CMAdvancedThreatProtectionPolicy [-InputObject] <IResultObject> [-Description <String>]
- [-Digest <ConfigurationItem>] [-DigestPath <String>] [-DigestXml <String>] [-NewName <String>]
- [-FilePath <String>] [-SampleSharingType <SampleSharingType>]
+Set-CMAdvancedThreatProtectionPolicy [-Description <String>] [-Digest <ConfigurationItem>]
+ [-DigestPath <String>] [-DigestXml <String>] [-FilePath <String>] [-InputObject] <IResultObject>
+ [-NewName <String>] [-SampleSharingType <SampleSharingType>]
  [-TelemetryReportingFrequencyType <TelemetryReportingFrequencyType>] [-PassThru] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetById
 ```
-Set-CMAdvancedThreatProtectionPolicy [-Id] <Int32> [-Description <String>] [-Digest <ConfigurationItem>]
- [-DigestPath <String>] [-DigestXml <String>] [-NewName <String>] [-FilePath <String>]
+Set-CMAdvancedThreatProtectionPolicy [-Description <String>] [-Digest <ConfigurationItem>]
+ [-DigestPath <String>] [-DigestXml <String>] [-FilePath <String>] [-Id] <Int32> [-NewName <String>]
+ [-SampleSharingType <SampleSharingType>] [-TelemetryReportingFrequencyType <TelemetryReportingFrequencyType>]
+ [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SetByName
+```
+Set-CMAdvancedThreatProtectionPolicy [-Description <String>] [-Digest <ConfigurationItem>]
+ [-DigestPath <String>] [-DigestXml <String>] [-FilePath <String>] [-Name] <String> [-NewName <String>]
  [-SampleSharingType <SampleSharingType>] [-TelemetryReportingFrequencyType <TelemetryReportingFrequencyType>]
  [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
@@ -37,23 +45,15 @@ Set-CMAdvancedThreatProtectionPolicy [-Id] <Int32> -Order <PriorityChangeType> [
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### SetByName
+### SetOrderByValue
 ```
-Set-CMAdvancedThreatProtectionPolicy [-Name] <String> [-Description <String>] [-Digest <ConfigurationItem>]
- [-DigestPath <String>] [-DigestXml <String>] [-NewName <String>] [-FilePath <String>]
- [-SampleSharingType <SampleSharingType>] [-TelemetryReportingFrequencyType <TelemetryReportingFrequencyType>]
- [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMAdvancedThreatProtectionPolicy [-InputObject] <IResultObject> -Order <PriorityChangeType> [-PassThru]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetOrderByName
 ```
 Set-CMAdvancedThreatProtectionPolicy [-Name] <String> -Order <PriorityChangeType> [-PassThru]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### SetOrderByValue
-```
-Set-CMAdvancedThreatProtectionPolicy [-InputObject] <IResultObject> -Order <PriorityChangeType> [-PassThru]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -238,7 +238,7 @@ Accept wildcard characters: False
 ### -Order
 ```yaml
 Type: PriorityChangeType
-Parameter Sets: SetOrderById, SetOrderByName, SetOrderByValue
+Parameter Sets: SetOrderById, SetOrderByValue, SetOrderByName
 Aliases:
 Accepted values: Increase, Decrease
 
@@ -313,9 +313,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
-
 ### Microsoft.ConfigurationManagement.DesiredConfigurationManagement.ConfigurationItem
+
+### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
 
 ## OUTPUTS
 

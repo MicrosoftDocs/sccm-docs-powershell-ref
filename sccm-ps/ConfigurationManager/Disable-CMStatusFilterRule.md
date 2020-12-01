@@ -22,7 +22,7 @@ Disable-CMStatusFilterRule -InputObject <IResultObject> [-DisableWildcardHandlin
 
 ### SearchByName
 ```
-Disable-CMStatusFilterRule [-SiteCode <String>] -Name <String> [-DisableWildcardHandling]
+Disable-CMStatusFilterRule -Name <String> [-SiteCode <String>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

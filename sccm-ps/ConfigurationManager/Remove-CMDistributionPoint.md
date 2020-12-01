@@ -22,7 +22,7 @@ Remove-CMDistributionPoint [-Force] -InputObject <IResultObject> [-DisableWildca
 
 ### SearchByNameMandatory
 ```
-Remove-CMDistributionPoint [-SiteCode <String>] [-Force] [-SiteSystemServerName] <String>
+Remove-CMDistributionPoint [-Force] [-SiteCode <String>] [-SiteSystemServerName] <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

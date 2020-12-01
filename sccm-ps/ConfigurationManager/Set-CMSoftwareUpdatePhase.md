@@ -16,64 +16,64 @@ Use this cmdlet to configure a deployment phase for a software update.
 
 ### SearchByPhasedDeployment
 ```
-Set-CMSoftwareUpdatePhase [-UserNotificationOption <UserNotificationType>] [-SoftwareInstallation <Boolean>]
- [-AllowSystemRestart <Boolean>] [-WriteFilterCommit <Boolean>] [-PhaseDescription <String>]
- [-EnableWakeOnLan <Boolean>] [-StateMessageVerbosity <VerbosityLevelType>]
- [-ServerRestartSuppression <Boolean>] [-WorkstationRestartSuppression <Boolean>]
- [-RequirePostRebootFullScan <Boolean>] [-EnableAlert <Boolean>] [-AlertThresholdPercentage <Int32>]
- [-AlertDelta <Int32>] [-AlertUnit <TimeUnitType>] [-DisableScomAlert <Boolean>]
- [-GenerateScomAlertOnFailure <Boolean>] [-UseNeighborDP <Boolean>] [-UseSiteDefaultDP <Boolean>]
- [-AllowWumuFallback <Boolean>] [-AllowMeteredConnection <Boolean>] [-CriteriaOption <CriteriaType>]
- [-CriteriaValue <Int32>] [-BeginCondition <BeginConditionType>] [-DaysAfterPreviousPhaseSuccess <Int32>]
- [-ThrottlingDays <Int32>] [-InstallationChoice <InstallationChoiceType>] [-DeadlineUnit <TimeUnitType>]
- [-DeadlineValue <Int32>] [-MovePhase <ReorderType>] [-MoveToOrder <Int32>] [-NewPhaseName <String>]
+Set-CMSoftwareUpdatePhase [-AlertDelta <Int32>] [-AlertThresholdPercentage <Int32>] [-AlertUnit <TimeUnitType>]
+ [-AllowMeteredConnection <Boolean>] [-AllowSystemRestart <Boolean>] [-AllowWumuFallback <Boolean>]
+ [-DisableScomAlert <Boolean>] [-EnableAlert <Boolean>] [-EnableWakeOnLan <Boolean>]
+ [-GenerateScomAlertOnFailure <Boolean>] [-PhaseDescription <String>] [-RequirePostRebootFullScan <Boolean>]
+ [-ServerRestartSuppression <Boolean>] [-SoftwareInstallation <Boolean>]
+ [-StateMessageVerbosity <VerbosityLevelType>] [-UseNeighborDP <Boolean>]
+ [-UserNotificationOption <UserNotificationType>] [-UseSiteDefaultDP <Boolean>]
+ [-WorkstationRestartSuppression <Boolean>] [-WriteFilterCommit <Boolean>]
+ [-BeginCondition <BeginConditionType>] [-CriteriaOption <CriteriaType>] [-CriteriaValue <Int32>]
+ [-DaysAfterPreviousPhaseSuccess <Int32>] [-DeadlineUnit <TimeUnitType>] [-DeadlineValue <Int32>]
+ [-InstallationChoice <InstallationChoiceType>] [-MovePhase <ReorderType>] [-MoveToOrder <Int32>]
  [-NewCollection <IResultObject>] [-NewCollectionId <String>] [-NewCollectionName <String>]
- [-InputObject] <IResultObject> [-Order <Int32>] [-Id <String>] [-Name <String>] [-Collection <IResultObject>]
- [-CollectionId <String>] [-CollectionName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-NewPhaseName <String>] [-ThrottlingDays <Int32>] [-Collection <IResultObject>] [-CollectionId <String>]
+ [-CollectionName <String>] [-Id <String>] [-InputObject] <IResultObject> [-Name <String>] [-Order <Int32>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByPhasedDeploymentId
 ```
-Set-CMSoftwareUpdatePhase [-UserNotificationOption <UserNotificationType>] [-SoftwareInstallation <Boolean>]
- [-AllowSystemRestart <Boolean>] [-WriteFilterCommit <Boolean>] [-PhaseDescription <String>]
- [-EnableWakeOnLan <Boolean>] [-StateMessageVerbosity <VerbosityLevelType>]
- [-ServerRestartSuppression <Boolean>] [-WorkstationRestartSuppression <Boolean>]
- [-RequirePostRebootFullScan <Boolean>] [-EnableAlert <Boolean>] [-AlertThresholdPercentage <Int32>]
- [-AlertDelta <Int32>] [-AlertUnit <TimeUnitType>] [-DisableScomAlert <Boolean>]
- [-GenerateScomAlertOnFailure <Boolean>] [-UseNeighborDP <Boolean>] [-UseSiteDefaultDP <Boolean>]
- [-AllowWumuFallback <Boolean>] [-AllowMeteredConnection <Boolean>] [-CriteriaOption <CriteriaType>]
- [-CriteriaValue <Int32>] [-BeginCondition <BeginConditionType>] [-DaysAfterPreviousPhaseSuccess <Int32>]
- [-ThrottlingDays <Int32>] [-InstallationChoice <InstallationChoiceType>] [-DeadlineUnit <TimeUnitType>]
- [-DeadlineValue <Int32>] [-MovePhase <ReorderType>] [-MoveToOrder <Int32>] [-NewPhaseName <String>]
+Set-CMSoftwareUpdatePhase [-AlertDelta <Int32>] [-AlertThresholdPercentage <Int32>] [-AlertUnit <TimeUnitType>]
+ [-AllowMeteredConnection <Boolean>] [-AllowSystemRestart <Boolean>] [-AllowWumuFallback <Boolean>]
+ [-DisableScomAlert <Boolean>] [-EnableAlert <Boolean>] [-EnableWakeOnLan <Boolean>]
+ [-GenerateScomAlertOnFailure <Boolean>] [-PhaseDescription <String>] [-RequirePostRebootFullScan <Boolean>]
+ [-ServerRestartSuppression <Boolean>] [-SoftwareInstallation <Boolean>]
+ [-StateMessageVerbosity <VerbosityLevelType>] [-UseNeighborDP <Boolean>]
+ [-UserNotificationOption <UserNotificationType>] [-UseSiteDefaultDP <Boolean>]
+ [-WorkstationRestartSuppression <Boolean>] [-WriteFilterCommit <Boolean>]
+ [-BeginCondition <BeginConditionType>] [-CriteriaOption <CriteriaType>] [-CriteriaValue <Int32>]
+ [-DaysAfterPreviousPhaseSuccess <Int32>] [-DeadlineUnit <TimeUnitType>] [-DeadlineValue <Int32>]
+ [-InstallationChoice <InstallationChoiceType>] [-MovePhase <ReorderType>] [-MoveToOrder <Int32>]
  [-NewCollection <IResultObject>] [-NewCollectionId <String>] [-NewCollectionName <String>]
- [-PhasedDeploymentId] <String> [-Order <Int32>] [-Id <String>] [-Name <String>] [-Collection <IResultObject>]
- [-CollectionId <String>] [-CollectionName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-NewPhaseName <String>] [-ThrottlingDays <Int32>] [-Collection <IResultObject>] [-CollectionId <String>]
+ [-CollectionName <String>] [-Id <String>] [-Name <String>] [-Order <Int32>] [-PhasedDeploymentId] <String>
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByPhasedDeploymentName
 ```
-Set-CMSoftwareUpdatePhase [-UserNotificationOption <UserNotificationType>] [-SoftwareInstallation <Boolean>]
- [-AllowSystemRestart <Boolean>] [-WriteFilterCommit <Boolean>] [-PhaseDescription <String>]
- [-EnableWakeOnLan <Boolean>] [-StateMessageVerbosity <VerbosityLevelType>]
- [-ServerRestartSuppression <Boolean>] [-WorkstationRestartSuppression <Boolean>]
- [-RequirePostRebootFullScan <Boolean>] [-EnableAlert <Boolean>] [-AlertThresholdPercentage <Int32>]
- [-AlertDelta <Int32>] [-AlertUnit <TimeUnitType>] [-DisableScomAlert <Boolean>]
- [-GenerateScomAlertOnFailure <Boolean>] [-UseNeighborDP <Boolean>] [-UseSiteDefaultDP <Boolean>]
- [-AllowWumuFallback <Boolean>] [-AllowMeteredConnection <Boolean>] [-CriteriaOption <CriteriaType>]
- [-CriteriaValue <Int32>] [-BeginCondition <BeginConditionType>] [-DaysAfterPreviousPhaseSuccess <Int32>]
- [-ThrottlingDays <Int32>] [-InstallationChoice <InstallationChoiceType>] [-DeadlineUnit <TimeUnitType>]
- [-DeadlineValue <Int32>] [-MovePhase <ReorderType>] [-MoveToOrder <Int32>] [-NewPhaseName <String>]
+Set-CMSoftwareUpdatePhase [-AlertDelta <Int32>] [-AlertThresholdPercentage <Int32>] [-AlertUnit <TimeUnitType>]
+ [-AllowMeteredConnection <Boolean>] [-AllowSystemRestart <Boolean>] [-AllowWumuFallback <Boolean>]
+ [-DisableScomAlert <Boolean>] [-EnableAlert <Boolean>] [-EnableWakeOnLan <Boolean>]
+ [-GenerateScomAlertOnFailure <Boolean>] [-PhaseDescription <String>] [-RequirePostRebootFullScan <Boolean>]
+ [-ServerRestartSuppression <Boolean>] [-SoftwareInstallation <Boolean>]
+ [-StateMessageVerbosity <VerbosityLevelType>] [-UseNeighborDP <Boolean>]
+ [-UserNotificationOption <UserNotificationType>] [-UseSiteDefaultDP <Boolean>]
+ [-WorkstationRestartSuppression <Boolean>] [-WriteFilterCommit <Boolean>]
+ [-BeginCondition <BeginConditionType>] [-CriteriaOption <CriteriaType>] [-CriteriaValue <Int32>]
+ [-DaysAfterPreviousPhaseSuccess <Int32>] [-DeadlineUnit <TimeUnitType>] [-DeadlineValue <Int32>]
+ [-InstallationChoice <InstallationChoiceType>] [-MovePhase <ReorderType>] [-MoveToOrder <Int32>]
  [-NewCollection <IResultObject>] [-NewCollectionId <String>] [-NewCollectionName <String>]
- [-PhasedDeploymentName] <String> [-Order <Int32>] [-Id <String>] [-Name <String>]
- [-Collection <IResultObject>] [-CollectionId <String>] [-CollectionName <String>] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-NewPhaseName <String>] [-ThrottlingDays <Int32>] [-Collection <IResultObject>] [-CollectionId <String>]
+ [-CollectionName <String>] [-Id <String>] [-Name <String>] [-Order <Int32>] [-PhasedDeploymentName] <String>
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-Applies to version 2006 and later. Use this cmdlet to configure a deployment phase for a software update. For more information, see [Create phased deployments](https://docs.microsoft.com/mem/configmgr/osd/deploy-use/create-phased-deployment-for-task-sequence).
+Applies to version 2006 and later. Use this cmdlet to configure a deployment phase for a software update. For more information, see [Create phased deployments](/mem/configmgr/osd/deploy-use/create-phased-deployment-for-task-sequence).
 
 ## EXAMPLES
 
@@ -939,4 +939,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Suspend-CMPhasedDeployment](Suspend-CMPhasedDeployment.md)
 
-[Create phased deployments](https://docs.microsoft.com/mem/configmgr/osd/deploy-use/create-phased-deployment-for-task-sequence)
+[Create phased deployments](/mem/configmgr/osd/deploy-use/create-phased-deployment-for-task-sequence)

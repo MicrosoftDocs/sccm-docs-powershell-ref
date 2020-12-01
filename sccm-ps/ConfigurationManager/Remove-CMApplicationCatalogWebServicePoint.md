@@ -22,7 +22,7 @@ Remove-CMApplicationCatalogWebServicePoint [-Force] -InputObject <IResultObject>
 
 ### SearchByNameMandatory
 ```
-Remove-CMApplicationCatalogWebServicePoint [-SiteCode <String>] [-Force] [-SiteSystemServerName] <String>
+Remove-CMApplicationCatalogWebServicePoint [-Force] [-SiteCode <String>] [-SiteSystemServerName] <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

@@ -74,7 +74,7 @@ You can specify the user collections where the rule is applied by using their na
 You can specify the collection whose members are excluded by using its name, ID, or an object that represents the collection.
 
 Configuration Manager dynamically updates the membership of the user collection on a schedule if the membership of the excluded collection changes.
-For more information on these rules, see [Introduction to Collections in Configuration Manager](https://docs.microsoft.com/mem/configmgr/core/clients/manage/collections/introduction-to-collections).
+For more information on these rules, see [Introduction to Collections in Configuration Manager](/mem/configmgr/core/clients/manage/collections/introduction-to-collections).
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

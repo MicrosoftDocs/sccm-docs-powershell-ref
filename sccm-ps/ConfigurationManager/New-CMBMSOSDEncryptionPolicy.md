@@ -1,9 +1,9 @@
----
+﻿---
 external help file: AdminUI.PS.EP.dll-Help.xml
 Module Name: ConfigurationManager
+ms.date: 08/13/2020
 online version:
 schema: 2.0.0
-ms.date: 08/13/2020
 ---
 
 # New-CMBMSOSDEncryptionPolicy
@@ -23,7 +23,7 @@ New-CMBMSOSDEncryptionPolicy [-PolicyState <State>] [-RequireTpm] [-MinimumPinLe
 
 Use this cmdlet to create a policy to manage whether to encrypt the OS drive with BitLocker.
 
-If you want to use BitLocker on a computer without a [Trusted Platform Module (TPM)](https://docs.microsoft.com/windows/security/information-protection/tpm/trusted-platform-module-top-node), don't use the **-RequireTpm** parameter. In this mode, BitLocker requires a password when the device starts up. If you forget the password, use a BitLocker recovery option to access the drive.
+If you want to use BitLocker on a computer without a [Trusted Platform Module (TPM)](/windows/security/information-protection/tpm/trusted-platform-module-top-node), don't use the **-RequireTpm** parameter. In this mode, BitLocker requires a password when the device starts up. If you forget the password, use a BitLocker recovery option to access the drive.
 
 On a computer with a compatible TPM, BitLocker can use two authentication methods when the device starts up. This behavior provides added protection for encrypted data. When the computer starts, it can use only the TPM for authentication, or it can also require the entry of a personal identification number (PIN).
 
@@ -167,7 +167,6 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -184,4 +183,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [New-CMBlmSetting](New-CMBlmSetting.md)
 
-[BitLocker settings reference](https://docs.microsoft.com/mem/configmgr/protect/tech-ref/bitlocker/settings#operating-system-drive-encryption-settings)
+[BitLocker settings reference](/mem/configmgr/protect/tech-ref/bitlocker/settings#operating-system-drive-encryption-settings)

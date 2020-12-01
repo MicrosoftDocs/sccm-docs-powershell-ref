@@ -12,15 +12,15 @@ schema: 2.0.0
 
 ## SYNTAX
 
-### ByText
+### ByFile
 ```
-New-CMScript -ScriptText <String> -ScriptName <String> [-Fast] [-DisableWildcardHandling]
+New-CMScript [-Fast] -ScriptFile <String> -ScriptName <String> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### ByFile
+### ByText
 ```
-New-CMScript -ScriptName <String> -ScriptFile <String> [-Fast] [-DisableWildcardHandling]
+New-CMScript [-Fast] -ScriptName <String> -ScriptText <String> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

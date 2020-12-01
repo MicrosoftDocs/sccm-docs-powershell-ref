@@ -16,19 +16,19 @@ Removes a device collection variable.
 
 ### SearchByValueMandatory (Default)
 ```
-Remove-CMDeviceCollectionVariable -Collection <IResultObject> -VariableName <String> [-Force]
+Remove-CMDeviceCollectionVariable -Collection <IResultObject> [-Force] -VariableName <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory
 ```
-Remove-CMDeviceCollectionVariable -CollectionId <String> -VariableName <String> [-Force]
+Remove-CMDeviceCollectionVariable -CollectionId <String> [-Force] -VariableName <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByNameMandatory
 ```
-Remove-CMDeviceCollectionVariable -CollectionName <String> -VariableName <String> [-Force]
+Remove-CMDeviceCollectionVariable -CollectionName <String> [-Force] -VariableName <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

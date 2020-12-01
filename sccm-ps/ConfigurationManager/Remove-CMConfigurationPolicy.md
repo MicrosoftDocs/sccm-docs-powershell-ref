@@ -16,19 +16,19 @@ Removes a configuration policy.
 
 ### SearchByValue (Default)
 ```
-Remove-CMConfigurationPolicy [-InputObject] <IResultObject> [-Force] [-DisableWildcardHandling]
+Remove-CMConfigurationPolicy [-Force] [-InputObject] <IResultObject> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchById
 ```
-Remove-CMConfigurationPolicy [-Id] <Int32> [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Remove-CMConfigurationPolicy [-Force] [-Id] <Int32> [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByName
 ```
-Remove-CMConfigurationPolicy [-Name] <String[]> [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Remove-CMConfigurationPolicy [-Force] [-Name] <String[]> [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

@@ -9,16 +9,17 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ROBOTS: NOINDEX
 ---
 
 # Configuration Manager Cmdlet Library changes for Current Branch 1702
 
  >[!NOTE]
- > System Center Configuration Current Branch 1610 is the baseline for these changes. See [Configuration Manager Cmdlet Library changes for Current Branch 1610](https://docs.microsoft.com/powershell/sccm/configurationmanager/1610_release_notes) for more details.
+ > System Center Configuration Current Branch 1610 is the baseline for these changes. See [Configuration Manager Cmdlet Library changes for Current Branch 1610](1610_release_notes.md) for more details.
 
 ## Important changes
 ### Documentation library updates
-For the latest cmdlet library documentation, see [ConfigurationManager module reference](https://docs.microsoft.com/powershell/module/configurationmanager/?view=sccm-ps).
+For the latest cmdlet library documentation, see [ConfigurationManager module reference](/powershell/module/configurationmanager/).
 
 ### Removed cmdlets
 The following cmdlets are no longer supported and have been removed:
@@ -79,7 +80,7 @@ The following cmdlets are no longer supported and have been removed:
 There is now support for importing the ConfigurationManager module by using a logical name or path.
 
 If the C:\\Program Files (x86)\\Microsoft Configuration Manager\\AdminConsole\\bin or equivalent path is added to the
-[PSModulePath](https://docs.microsoft.com/powershell/scripting/developer/module/modifying-the-psmodulepath-installation-path?view=powershell-7) variable, the following can be used:
+[PSModulePath](/powershell/scripting/developer/module/modifying-the-psmodulepath-installation-path) variable, the following can be used:
 
 `Import-Module ConfigrationManager`
 

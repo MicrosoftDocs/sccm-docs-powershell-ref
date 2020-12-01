@@ -1,4 +1,4 @@
----
+﻿---
 description: Gets a Configuration Manager Exchange Server object.
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -15,7 +15,7 @@ Gets a Configuration Manager Exchange Server object.
 ## SYNTAX
 
 ```
-Get-CMExchangeServer [-SiteCode <String>] [-ExchangeServerUrl <String>] [-DisableWildcardHandling]
+Get-CMExchangeServer [-ExchangeServerUrl <String>] [-SiteCode <String>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [<CommonParameters>]
 ```
 

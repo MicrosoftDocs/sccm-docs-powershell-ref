@@ -16,22 +16,22 @@ Configure a Configuration Manager query.
 
 ### SearchByValueMandatory (Default)
 ```
-Set-CMQuery -InputObject <IResultObject> [-NewName <String>] [-Comment <String>] [-Expression <String>]
- [-LimitToCollectionId <String>] [-TargetClassName <String>] [-PassThru] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMQuery [-Comment <String>] [-Expression <String>] -InputObject <IResultObject>
+ [-LimitToCollectionId <String>] [-NewName <String>] [-PassThru] [-TargetClassName <String>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory
 ```
-Set-CMQuery -Id <String> [-NewName <String>] [-Comment <String>] [-Expression <String>]
- [-LimitToCollectionId <String>] [-TargetClassName <String>] [-PassThru] [-DisableWildcardHandling]
+Set-CMQuery [-Comment <String>] [-Expression <String>] -Id <String> [-LimitToCollectionId <String>]
+ [-NewName <String>] [-PassThru] [-TargetClassName <String>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByNameMandatory
 ```
-Set-CMQuery -Name <String> [-NewName <String>] [-Comment <String>] [-Expression <String>]
- [-LimitToCollectionId <String>] [-TargetClassName <String>] [-PassThru] [-DisableWildcardHandling]
+Set-CMQuery [-Comment <String>] [-Expression <String>] [-LimitToCollectionId <String>] -Name <String>
+ [-NewName <String>] [-PassThru] [-TargetClassName <String>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

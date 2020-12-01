@@ -16,15 +16,15 @@ Creates a SQL Server settings object in Configuration Manager.
 
 ### NewSettingByExisting (Default)
 ```
-New-CMSqlServerSetting [-UseExistingSqlServerInstance] [-InstanceName <String>] -SiteDatabaseName <String>
- [-SqlServerServiceBrokerPort <Int32>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+New-CMSqlServerSetting [-InstanceName <String>] -SiteDatabaseName <String>
+ [-SqlServerServiceBrokerPort <Int32>] [-UseExistingSqlServerInstance] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### NewSettingByCopy
 ```
-New-CMSqlServerSetting [-CopySqlServerExpressOnSecondarySite] [-SqlServerServicePort <Int32>]
- [-SqlServerServiceBrokerPort <Int32>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+New-CMSqlServerSetting [-CopySqlServerExpressOnSecondarySite] [-SqlServerServiceBrokerPort <Int32>]
+ [-SqlServerServicePort <Int32>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 

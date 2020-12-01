@@ -15,13 +15,13 @@ Creates a cloud distribution point.
 ## SYNTAX
 
 ```
-New-CMCloudDistributionPoint -SubscriptionId <String> [-SiteCode <String>] -ManagementCertificatePath <String>
- [-Description <String>] -ServiceCName <String> -ServiceCertificatePath <String> [-StorageQuotaGB <Int32>]
- [-StorageWarningThreshold <Int32>] [-StorageCriticalThreshold <Int32>] [-TrafficOutGB <Int32>]
- [-TrafficWarningThreshold <Int32>] [-TrafficCriticalThreshold <Int32>]
- [-ManagementCertificatePassword <SecureString>] [-ServiceCertificatePassword <SecureString>]
- -Region <AzureRegion> [-EnvironmentSetting <AzureEnvironment>] [-PassThru] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+New-CMCloudDistributionPoint [-Description <String>] [-EnvironmentSetting <AzureEnvironment>]
+ [-ManagementCertificatePassword <SecureString>] -ManagementCertificatePath <String> [-PassThru]
+ -Region <AzureRegion> [-ServiceCertificatePassword <SecureString>] -ServiceCertificatePath <String>
+ -ServiceCName <String> [-SiteCode <String>] [-StorageCriticalThreshold <Int32>] [-StorageQuotaGB <Int32>]
+ [-StorageWarningThreshold <Int32>] -SubscriptionId <String> [-TrafficCriticalThreshold <Int32>]
+ [-TrafficOutGB <Int32>] [-TrafficWarningThreshold <Int32>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -29,7 +29,7 @@ The **New-CMCloudDistributionPoint** cmdlet creates a cloud distribution point i
 
 In Configuration Manager, you can use a cloud service in Azure to host a distribution point for storing files to download to clients.
 You can send packages and apps to and host packages and apps in cloud distribution points.
-For more information about cloud distribution points, see [Planning for Content Management in Configuration Manager](https://docs.microsoft.com/mem/configmgr/core/plan-design/hierarchy/fundamental-concepts-for-content-management).
+For more information about cloud distribution points, see [Planning for Content Management in Configuration Manager](/mem/configmgr/core/plan-design/hierarchy/fundamental-concepts-for-content-management).
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

@@ -16,42 +16,38 @@ Changes settings of a client push installation.
 
 ### SearchByValueMandatory (Default)
 ```
-Set-CMClientPushInstallation -InputObject <IResultObject> [-ChosenAccount <String[]>] [-ClearAccount]
- [-RemoveAccount <String[]>] [-AddAccount <String[]>] [-EnableAutomaticClientPushInstallation <Boolean>]
- [-EnableSystemTypeConfigurationManager <Boolean>] [-EnableSystemTypeServer <Boolean>]
- [-EnableSystemTypeWorkstation <Boolean>] [-InstallClientToDomainController <Boolean>]
- [-InstallationProperty <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
-```
-
-### SearchBySiteCodeMandatory
-```
-Set-CMClientPushInstallation [-SiteCode <String>] [-ChosenAccount <String[]>] [-ClearAccount]
- [-RemoveAccount <String[]>] [-AddAccount <String[]>] [-EnableAutomaticClientPushInstallation <Boolean>]
- [-EnableSystemTypeConfigurationManager <Boolean>] [-EnableSystemTypeServer <Boolean>]
- [-EnableSystemTypeWorkstation <Boolean>] [-InstallClientToDomainController <Boolean>]
- [-InstallationProperty <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
-```
-
-### SearchByNameMandatory
-```
-Set-CMClientPushInstallation -Name <String> [-ChosenAccount <String[]>] [-ClearAccount]
- [-RemoveAccount <String[]>] [-AddAccount <String[]>] [-EnableAutomaticClientPushInstallation <Boolean>]
- [-EnableSystemTypeConfigurationManager <Boolean>] [-EnableSystemTypeServer <Boolean>]
- [-EnableSystemTypeWorkstation <Boolean>] [-InstallClientToDomainController <Boolean>]
- [-InstallationProperty <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Set-CMClientPushInstallation [-AddAccount <String[]>] [-ChosenAccount <String[]>] [-ClearAccount]
+ [-EnableAutomaticClientPushInstallation <Boolean>] [-EnableSystemTypeConfigurationManager <Boolean>]
+ [-EnableSystemTypeServer <Boolean>] [-EnableSystemTypeWorkstation <Boolean>] -InputObject <IResultObject>
+ [-InstallationProperty <String>] [-InstallClientToDomainController <Boolean>] [-RemoveAccount <String[]>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByComponentValueMandatory
 ```
-Set-CMClientPushInstallation -InputObject <IResultObject> [-ChosenAccount <String[]>] [-ClearAccount]
- [-RemoveAccount <String[]>] [-AddAccount <String[]>] [-EnableAutomaticClientPushInstallation <Boolean>]
- [-EnableSystemTypeConfigurationManager <Boolean>] [-EnableSystemTypeServer <Boolean>]
- [-EnableSystemTypeWorkstation <Boolean>] [-InstallClientToDomainController <Boolean>]
- [-InstallationProperty <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Set-CMClientPushInstallation [-AddAccount <String[]>] [-ChosenAccount <String[]>] [-ClearAccount]
+ [-EnableAutomaticClientPushInstallation <Boolean>] [-EnableSystemTypeConfigurationManager <Boolean>]
+ [-EnableSystemTypeServer <Boolean>] [-EnableSystemTypeWorkstation <Boolean>] -InputObject <IResultObject>
+ [-InstallationProperty <String>] [-InstallClientToDomainController <Boolean>] [-RemoveAccount <String[]>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SearchByNameMandatory
+```
+Set-CMClientPushInstallation [-AddAccount <String[]>] [-ChosenAccount <String[]>] [-ClearAccount]
+ [-EnableAutomaticClientPushInstallation <Boolean>] [-EnableSystemTypeConfigurationManager <Boolean>]
+ [-EnableSystemTypeServer <Boolean>] [-EnableSystemTypeWorkstation <Boolean>] [-InstallationProperty <String>]
+ [-InstallClientToDomainController <Boolean>] -Name <String> [-RemoveAccount <String[]>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SearchBySiteCodeMandatory
+```
+Set-CMClientPushInstallation [-AddAccount <String[]>] [-ChosenAccount <String[]>] [-ClearAccount]
+ [-EnableAutomaticClientPushInstallation <Boolean>] [-EnableSystemTypeConfigurationManager <Boolean>]
+ [-EnableSystemTypeServer <Boolean>] [-EnableSystemTypeWorkstation <Boolean>] [-InstallationProperty <String>]
+ [-InstallClientToDomainController <Boolean>] [-RemoveAccount <String[]>] [-SiteCode <String>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -60,7 +56,7 @@ A client push installation installs client software on computers that Configurat
 When you configure client push installation for a site, the client installation automatically runs on the computers that Configuration Manager discovered within the site's configured boundaries when those boundaries are part of a boundary group.
 You can also start a client push installation by running the Client Push Installation Wizard for a specific collection or resource within a collection.
 
-For more information about how to install clients, see [How to Install Clients on Windows-Based Computers in Configuration Manager](https://docs.microsoft.com/mem/configmgr/core/clients/deploy/deploy-clients-to-windows-computers).
+For more information about how to install clients, see [How to Install Clients on Windows-Based Computers in Configuration Manager](/mem/configmgr/core/clients/deploy/deploy-clients-to-windows-computers).
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.
@@ -358,6 +354,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[How to Install Clients on Windows-Based Computers in Configuration Manager](https://docs.microsoft.com/mem/configmgr/core/clients/deploy/deploy-clients-to-windows-computers)
+[How to Install Clients on Windows-Based Computers in Configuration Manager](/mem/configmgr/core/clients/deploy/deploy-clients-to-windows-computers)
 
 [Get-CMClientPushInstallation](Get-CMClientPushInstallation.md)

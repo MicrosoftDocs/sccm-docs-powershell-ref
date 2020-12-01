@@ -16,16 +16,16 @@ Sets a client setting general.
 
 ### SetByName (Default)
 ```
-Set-CMClientSettingGeneral -Name <String> [-NewName <String>] [-Description <String>]
- [-Priority <PriorityChangeType>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Set-CMClientSettingGeneral [-Description <String>] -Name <String> [-NewName <String>] [-PassThru]
+ [-Priority <PriorityChangeType>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### SetByValue
 ```
-Set-CMClientSettingGeneral -InputObject <IResultObject> [-NewName <String>] [-Description <String>]
- [-Priority <PriorityChangeType>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Set-CMClientSettingGeneral [-Description <String>] -InputObject <IResultObject> [-NewName <String>] [-PassThru]
+ [-Priority <PriorityChangeType>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

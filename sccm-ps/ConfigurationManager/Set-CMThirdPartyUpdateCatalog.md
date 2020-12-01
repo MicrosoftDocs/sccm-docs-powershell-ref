@@ -15,25 +15,25 @@ Use this cmdlet to modify a third-party updates catalog.
 
 ### SearchByName (Default)
 ```
-Set-CMThirdPartyUpdateCatalog [[-Name] <String>] [-Subscribe] [-Unsubscribe] [-SyncNow]
- [-PublisherName <String>] [-NewName <String>] [-Description <String>] [-SupportUrl <Uri>]
- [-SupportContact <String>] [-Schedule <IResultObject>] [-PassThru] [-Force] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMThirdPartyUpdateCatalog [-Description <String>] [-Force] [[-Name] <String>] [-NewName <String>]
+ [-PassThru] [-PublisherName <String>] [-Schedule <IResultObject>] [-Subscribe] [-SupportContact <String>]
+ [-SupportUrl <Uri>] [-SyncNow] [-Unsubscribe] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory
 ```
-Set-CMThirdPartyUpdateCatalog [-Id] <String> [-Subscribe] [-Unsubscribe] [-SyncNow] [-PublisherName <String>]
- [-NewName <String>] [-Description <String>] [-SupportUrl <Uri>] [-SupportContact <String>]
- [-Schedule <IResultObject>] [-PassThru] [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+Set-CMThirdPartyUpdateCatalog [-Description <String>] [-Force] [-Id] <String> [-NewName <String>] [-PassThru]
+ [-PublisherName <String>] [-Schedule <IResultObject>] [-Subscribe] [-SupportContact <String>]
+ [-SupportUrl <Uri>] [-SyncNow] [-Unsubscribe] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
  [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByValueMandatory
 ```
-Set-CMThirdPartyUpdateCatalog [-InputObject] <IResultObject> [-Subscribe] [-Unsubscribe] [-SyncNow]
- [-PublisherName <String>] [-NewName <String>] [-Description <String>] [-SupportUrl <Uri>]
- [-SupportContact <String>] [-Schedule <IResultObject>] [-PassThru] [-Force] [-DisableWildcardHandling]
+Set-CMThirdPartyUpdateCatalog [-Description <String>] [-Force] [-InputObject] <IResultObject>
+ [-NewName <String>] [-PassThru] [-PublisherName <String>] [-Schedule <IResultObject>] [-Subscribe]
+ [-SupportContact <String>] [-SupportUrl <Uri>] [-SyncNow] [-Unsubscribe] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

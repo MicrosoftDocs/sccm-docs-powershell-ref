@@ -15,56 +15,56 @@ Sends a notification to client computers to trigger an immediate client action.
 
 ## SYNTAX
 
-### SearchByDeviceValueMandatory (Default)
+### SearchByValueMandatory (Default)
 ```
-Invoke-CMClientAction -Device <IResultObject> [-NotificationType <ClientNotificationType>]
- [-ActionType <ClientActionType>] [-ParentCollectionId <String>] [-ParentCollectionName <String>]
- [-ParentCollection <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Invoke-CMClientAction [-ActionType <ClientActionType>] -Collection <IResultObject>
+ [-NotificationType <ClientNotificationType>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByDeviceNameMandatory
 ```
-Invoke-CMClientAction -DeviceName <String> [-NotificationType <ClientNotificationType>]
- [-ActionType <ClientActionType>] [-ParentCollectionId <String>] [-ParentCollectionName <String>]
- [-ParentCollection <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Invoke-CMClientAction [-ActionType <ClientActionType>] -DeviceName <String>
+ [-NotificationType <ClientNotificationType>] [-ParentCollection <IResultObject>]
+ [-ParentCollectionId <String>] [-ParentCollectionName <String>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByDeviceIdMandatory
 ```
-Invoke-CMClientAction -DeviceId <String> [-NotificationType <ClientNotificationType>]
- [-ActionType <ClientActionType>] [-ParentCollectionId <String>] [-ParentCollectionName <String>]
- [-ParentCollection <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Invoke-CMClientAction [-ActionType <ClientActionType>] -DeviceId <String>
+ [-NotificationType <ClientNotificationType>] [-ParentCollection <IResultObject>]
+ [-ParentCollectionId <String>] [-ParentCollectionName <String>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SearchByDeviceValueMandatory
+```
+Invoke-CMClientAction [-ActionType <ClientActionType>] -Device <IResultObject>
+ [-NotificationType <ClientNotificationType>] [-ParentCollection <IResultObject>]
+ [-ParentCollectionId <String>] [-ParentCollectionName <String>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByNameMandatory
 ```
-Invoke-CMClientAction -CollectionName <String> [-NotificationType <ClientNotificationType>]
- [-ActionType <ClientActionType>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Invoke-CMClientAction [-ActionType <ClientActionType>] -CollectionName <String>
+ [-NotificationType <ClientNotificationType>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory
 ```
-Invoke-CMClientAction -CollectionId <String> [-NotificationType <ClientNotificationType>]
- [-ActionType <ClientActionType>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
-```
-
-### SearchByValueMandatory
-```
-Invoke-CMClientAction -Collection <IResultObject> [-NotificationType <ClientNotificationType>]
- [-ActionType <ClientActionType>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Invoke-CMClientAction [-ActionType <ClientActionType>] -CollectionId <String>
+ [-NotificationType <ClientNotificationType>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
 The **Invoke-CMClientAction** cmdlet sends a notification to client computers to trigger an immediate client action. You can specify one or more client computers, or send a notification to all the computers in a specified device collection.
 
-For more information about these actions, see [Client notification](https://docs.microsoft.com/mem/configmgr/core/clients/manage/client-notification).
+For more information about these actions, see [Client notification](/mem/configmgr/core/clients/manage/client-notification).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
@@ -273,7 +273,7 @@ Applies to version 1906 and later. Use this parameter to support waking up a mac
 
 ```yaml
 Type: IResultObject
-Parameter Sets: SearchByDeviceValueMandatory, SearchByDeviceNameMandatory, SearchByDeviceIdMandatory
+Parameter Sets: SearchByDeviceNameMandatory, SearchByDeviceIdMandatory, SearchByDeviceValueMandatory
 Aliases: ParentDeviceCollection
 
 Required: False
@@ -289,7 +289,7 @@ Applies to version 1906 and later. Use this parameter to support waking up a mac
 
 ```yaml
 Type: String
-Parameter Sets: SearchByDeviceValueMandatory, SearchByDeviceNameMandatory, SearchByDeviceIdMandatory
+Parameter Sets: SearchByDeviceNameMandatory, SearchByDeviceIdMandatory, SearchByDeviceValueMandatory
 Aliases: ParentDeviceCollectionId
 
 Required: False
@@ -305,7 +305,7 @@ Applies to version 1906 and later. Use this parameter to support waking up a mac
 
 ```yaml
 Type: String
-Parameter Sets: SearchByDeviceValueMandatory, SearchByDeviceNameMandatory, SearchByDeviceIdMandatory
+Parameter Sets: SearchByDeviceNameMandatory, SearchByDeviceIdMandatory, SearchByDeviceValueMandatory
 Aliases: ParentDeviceCollectionName
 
 Required: False
@@ -341,7 +341,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
-
 ## NOTES
 
 Cmdlet aliases: **Invoke-CMClientNotification**
@@ -352,4 +351,4 @@ Cmdlet aliases: **Invoke-CMClientNotification**
 
 [Get-CMDeviceCollection](Get-CMDeviceCollection.md)
 
-[Client notifications](https://docs.microsoft.com/mem/configmgr/core/clients/manage/client-notification)
+[Client notifications](/mem/configmgr/core/clients/manage/client-notification)

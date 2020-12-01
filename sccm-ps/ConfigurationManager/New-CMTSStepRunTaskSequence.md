@@ -14,9 +14,9 @@ Use this cmdlet to create the task sequence step **Run Task Sequence**.
 ## SYNTAX
 
 ```
-New-CMTSStepRunTaskSequence -RunTaskSequence <IResultObject> -Name <String> [-Description <String>]
- [-ContinueOnError] [-Disable] [-Condition <IResultObject[]>] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+New-CMTSStepRunTaskSequence -RunTaskSequence <IResultObject> [-Condition <IResultObject[]>] [-ContinueOnError]
+ [-Description <String>] [-Disable] -Name <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

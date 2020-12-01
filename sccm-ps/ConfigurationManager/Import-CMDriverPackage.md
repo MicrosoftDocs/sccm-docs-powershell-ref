@@ -15,8 +15,8 @@ Imports a driver package.
 ## SYNTAX
 
 ```
-Import-CMDriverPackage -ImportFilePath <String> [-ImportActionType <ImportActionType>]
- [-ImportActionTypeSpec <Hashtable>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+Import-CMDriverPackage [-ImportActionType <ImportActionType>] [-ImportActionTypeSpec <Hashtable>]
+ -ImportFilePath <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 

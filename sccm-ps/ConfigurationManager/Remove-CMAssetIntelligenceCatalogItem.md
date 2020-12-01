@@ -16,7 +16,7 @@ Removes an item from the Asset Intelligence catalog.
 
 ### SearchByValueMandatory (Default)
 ```
-Remove-CMAssetIntelligenceCatalogItem -InputObject <IResultObject> [-Force] [-DisableWildcardHandling]
+Remove-CMAssetIntelligenceCatalogItem [-Force] -InputObject <IResultObject> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -28,7 +28,7 @@ Remove-CMAssetIntelligenceCatalogItem -CategoryName <String> [-Force] [-DisableW
 
 ### SearchByIdMandatory
 ```
-Remove-CMAssetIntelligenceCatalogItem -Id <String> [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Remove-CMAssetIntelligenceCatalogItem [-Force] -Id <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

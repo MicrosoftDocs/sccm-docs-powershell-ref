@@ -16,26 +16,26 @@ Sets a Configuration Manager collection.
 
 ### SetByValue (Default)
 ```
-Set-CMCollection -InputObject <IResultObject> [-NewName <String>] [-Comment <String>]
- [-LimitingCollectionId <String>] [-LimitingCollectionName <String>] [-LimitingCollection <IResultObject>]
+Set-CMCollection [-Comment <String>] -InputObject <IResultObject> [-LimitingCollection <IResultObject>]
+ [-LimitingCollectionId <String>] [-LimitingCollectionName <String>] [-NewName <String>] [-PassThru]
  [-RefreshSchedule <IResultObject>] [-RefreshType <CollectionRefreshType>] [-VariablePriority <Int32>]
- [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### SetByName
-```
-Set-CMCollection -Name <String> [-NewName <String>] [-Comment <String>] [-LimitingCollectionId <String>]
- [-LimitingCollectionName <String>] [-LimitingCollection <IResultObject>] [-RefreshSchedule <IResultObject>]
- [-RefreshType <CollectionRefreshType>] [-VariablePriority <Int32>] [-PassThru] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetById
 ```
-Set-CMCollection -CollectionId <String> [-NewName <String>] [-Comment <String>]
- [-LimitingCollectionId <String>] [-LimitingCollectionName <String>] [-LimitingCollection <IResultObject>]
+Set-CMCollection -CollectionId <String> [-Comment <String>] [-LimitingCollection <IResultObject>]
+ [-LimitingCollectionId <String>] [-LimitingCollectionName <String>] [-NewName <String>] [-PassThru]
  [-RefreshSchedule <IResultObject>] [-RefreshType <CollectionRefreshType>] [-VariablePriority <Int32>]
- [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SetByName
+```
+Set-CMCollection [-Comment <String>] [-LimitingCollection <IResultObject>] [-LimitingCollectionId <String>]
+ [-LimitingCollectionName <String>] -Name <String> [-NewName <String>] [-PassThru]
+ [-RefreshSchedule <IResultObject>] [-RefreshType <CollectionRefreshType>] [-VariablePriority <Int32>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

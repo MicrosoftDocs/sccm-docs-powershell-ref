@@ -17,62 +17,63 @@ Creates a task sequence in Configuration Manager.
 
 ### NewBuildOSImage (Default)
 ```
-New-CMTaskSequence [-BuildOperatingSystemImage] [-HighPerformance <Boolean>] -Name <String>
- [-Description <String>] -BootImagePackageId <String> -OperatingSystemImagePackageId <String>
- -OperatingSystemImageIndex <UInt32> [-ApplyAll <Boolean>] [-ProductKey <String>]
- [-InstallationLicensingMode <ServerLicensingMode>] [-MaximumServerConnection <Int32>]
- [-GeneratePassword <Boolean>] [-LocalAdminPassword <SecureString>] [-TimeZone <TimeZoneInfo>]
- -JoinDomain <JoinType> [-WorkgroupName <String>] [-DomainName <String>] [-DomainOrganizationUnit <String>]
- [-DomainAccount <String>] [-DomainPassword <SecureString>] [-ClientPackagePackageId <String>]
- [-InstallationProperty <String>] [-SoftwareUpdateStyle <SoftwareUpdateStyleType>]
- [-ApplicationName <String[]>] [-IgnoreInvalidApplication <Boolean>] [-CreatedBy <String>]
- [-ImageVersion <String>] [-ImageDescription <String>] -OperatingSystemFilePath <String>
+New-CMTaskSequence [-ApplicationName <String[]>] [-ApplyAll <Boolean>] -BootImagePackageId <String>
+ [-BuildOperatingSystemImage] [-ClientPackagePackageId <String>] [-CreatedBy <String>] [-Description <String>]
+ [-DomainAccount <String>] [-DomainName <String>] [-DomainOrganizationUnit <String>]
+ [-DomainPassword <SecureString>] [-GeneratePassword <Boolean>] [-HighPerformance <Boolean>]
+ [-IgnoreInvalidApplication <Boolean>] [-ImageDescription <String>] [-ImageVersion <String>]
+ [-InstallationLicensingMode <ServerLicensingMode>] [-InstallationProperty <String>] -JoinDomain <JoinType>
+ [-LocalAdminPassword <SecureString>] [-MaximumServerConnection <Int32>] -Name <String>
  -OperatingSystemFileAccount <String> [-OperatingSystemFileAccountPassword <SecureString>]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ -OperatingSystemFilePath <String> -OperatingSystemImageIndex <UInt32> -OperatingSystemImagePackageId <String>
+ [-ProductKey <String>] [-SoftwareUpdateStyle <SoftwareUpdateStyleType>] [-TimeZone <TimeZoneInfo>]
+ [-WorkgroupName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### NewInstallOSImage
 ```
-New-CMTaskSequence [-InstallOperatingSystemImage] [-HighPerformance <Boolean>] -Name <String>
- [-Description <String>] -BootImagePackageId <String> -OperatingSystemImagePackageId <String>
- -OperatingSystemImageIndex <UInt32> [-ApplyAll <Boolean>] [-PartitionAndFormatTarget <Boolean>]
- [-ConfigureBitLocker <Boolean>] [-ProductKey <String>] [-InstallationLicensingMode <ServerLicensingMode>]
- [-GeneratePassword <Boolean>] [-LocalAdminPassword <SecureString>] [-TimeZone <TimeZoneInfo>]
- -JoinDomain <JoinType> [-WorkgroupName <String>] [-DomainName <String>] [-DomainOrganizationUnit <String>]
- [-DomainAccount <String>] [-DomainPassword <SecureString>] [-ClientPackagePackageId <String>]
- [-InstallationProperty <String>] [-CaptureUserSetting <Boolean>] [-UserStateMigrationToolPackageId <String>]
- [-SaveLocally <Boolean>] [-CaptureLocallyUsingLink <Boolean>] [-CaptureNetworkSetting <Boolean>]
- [-CaptureWindowsSetting <Boolean>] [-SoftwareUpdateStyle <SoftwareUpdateStyleType>]
- [-ApplicationName <String[]>] [-IgnoreInvalidApplication <Boolean>] [-DisableWildcardHandling]
+New-CMTaskSequence [-ApplicationName <String[]>] [-ApplyAll <Boolean>] -BootImagePackageId <String>
+ [-CaptureLocallyUsingLink <Boolean>] [-CaptureNetworkSetting <Boolean>] [-CaptureUserSetting <Boolean>]
+ [-CaptureWindowsSetting <Boolean>] [-ClientPackagePackageId <String>] [-ConfigureBitLocker <Boolean>]
+ [-Description <String>] [-DomainAccount <String>] [-DomainName <String>] [-DomainOrganizationUnit <String>]
+ [-DomainPassword <SecureString>] [-GeneratePassword <Boolean>] [-HighPerformance <Boolean>]
+ [-IgnoreInvalidApplication <Boolean>] [-InstallationLicensingMode <ServerLicensingMode>]
+ [-InstallationProperty <String>] [-InstallOperatingSystemImage] -JoinDomain <JoinType>
+ [-LocalAdminPassword <SecureString>] -Name <String> -OperatingSystemImageIndex <UInt32>
+ -OperatingSystemImagePackageId <String> [-PartitionAndFormatTarget <Boolean>] [-ProductKey <String>]
+ [-SaveLocally <Boolean>] [-SoftwareUpdateStyle <SoftwareUpdateStyleType>] [-TimeZone <TimeZoneInfo>]
+ [-UserStateMigrationToolPackageId <String>] [-WorkgroupName <String>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### NewInstallOSImageVhd
 ```
-New-CMTaskSequence [-InstallOperatingSystemImageVhd] [-HighPerformance <Boolean>] -Name <String>
- [-Description <String>] -BootImagePackageId <String> -OperatingSystemImagePackageId <String>
- -OperatingSystemImageIndex <UInt32> [-ApplyAll <Boolean>] [-PartitionAndFormatTarget <Boolean>]
- [-ConfigureBitLocker <Boolean>] [-ProductKey <String>] [-InstallationLicensingMode <ServerLicensingMode>]
- [-GeneratePassword <Boolean>] [-LocalAdminPassword <SecureString>] [-TimeZone <TimeZoneInfo>]
- -JoinDomain <JoinType> [-WorkgroupName <String>] [-DomainName <String>] [-DomainOrganizationUnit <String>]
- [-DomainAccount <String>] [-DomainPassword <SecureString>] [-ClientPackagePackageId <String>]
- [-InstallationProperty <String>] [-ApplicationName <String[]>] [-IgnoreInvalidApplication <Boolean>]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+New-CMTaskSequence [-ApplicationName <String[]>] [-ApplyAll <Boolean>] -BootImagePackageId <String>
+ [-ClientPackagePackageId <String>] [-ConfigureBitLocker <Boolean>] [-Description <String>]
+ [-DomainAccount <String>] [-DomainName <String>] [-DomainOrganizationUnit <String>]
+ [-DomainPassword <SecureString>] [-GeneratePassword <Boolean>] [-HighPerformance <Boolean>]
+ [-IgnoreInvalidApplication <Boolean>] [-InstallationLicensingMode <ServerLicensingMode>]
+ [-InstallationProperty <String>] [-InstallOperatingSystemImageVhd] -JoinDomain <JoinType>
+ [-LocalAdminPassword <SecureString>] -Name <String> -OperatingSystemImageIndex <UInt32>
+ -OperatingSystemImagePackageId <String> [-PartitionAndFormatTarget <Boolean>] [-ProductKey <String>]
+ [-TimeZone <TimeZoneInfo>] [-WorkgroupName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### UpgradeOSImage
 ```
-New-CMTaskSequence [-UpgradeOperatingSystem] [-HighPerformance <Boolean>] -Name <String>
- -UpgradePackageId <String> [-ProductKey <String>] [-SoftwareUpdateStyle <SoftwareUpdateStyleType>]
- [-ApplicationName <String[]>] [-IgnoreInvalidApplication <Boolean>] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+New-CMTaskSequence [-ApplicationName <String[]>] [-HighPerformance <Boolean>]
+ [-IgnoreInvalidApplication <Boolean>] -Name <String> [-ProductKey <String>]
+ [-SoftwareUpdateStyle <SoftwareUpdateStyleType>] [-UpgradeOperatingSystem] -UpgradePackageId <String>
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### NewCustom
 ```
-New-CMTaskSequence [-CustomTaskSequence] [-HighPerformance <Boolean>] -Name <String> [-Description <String>]
- [-BootImagePackageId <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+New-CMTaskSequence [-BootImagePackageId <String>] [-CustomTaskSequence] [-Description <String>]
+ [-HighPerformance <Boolean>] -Name <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

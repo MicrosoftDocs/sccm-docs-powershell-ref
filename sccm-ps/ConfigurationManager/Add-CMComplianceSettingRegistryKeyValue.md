@@ -18,7 +18,7 @@ Add a compliance setting registry key value.
 ### EmptyRule (Default)
 ```
 Add-CMComplianceSettingRegistryKeyValue -DataType <SettingDataType> -Hive <RegistryRootKey> [-Is64Bit]
- -KeyName <String> [-ValueName <String>] [-RemediateDword <Boolean>] [-Description <String>]
+ -KeyName <String> [-RemediateDword <Boolean>] [-ValueName <String>] [-Description <String>]
  -InputObject <PSObject> -Name <String> [-NoRule] [-PassThru] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
@@ -26,9 +26,9 @@ Add-CMComplianceSettingRegistryKeyValue -DataType <SettingDataType> -Hive <Regis
 ### ExistentialRule
 ```
 Add-CMComplianceSettingRegistryKeyValue -DataType <SettingDataType> [-Existence <ExistenceType>]
- -Hive <RegistryRootKey> [-Is64Bit] -KeyName <String> [-ValueName <String>] [-RemediateDword <Boolean>]
+ -Hive <RegistryRootKey> [-Is64Bit] -KeyName <String> [-RemediateDword <Boolean>] [-ValueName <String>]
  [-Description <String>] [-ExistentialRule] -InputObject <PSObject> -Name <String>
- [-NoncomplianceSeverity <NoncomplianceSeverity>] [-RuleDescription <String>] -RuleName <String> [-PassThru]
+ [-NoncomplianceSeverity <NoncomplianceSeverity>] [-PassThru] [-RuleDescription <String>] -RuleName <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -36,9 +36,9 @@ Add-CMComplianceSettingRegistryKeyValue -DataType <SettingDataType> [-Existence 
 ```
 Add-CMComplianceSettingRegistryKeyValue -DataType <SettingDataType> -ExpectedValue <String[]>
  [-ExpressionOperator <RuleExpressionOperator>] -Hive <RegistryRootKey> [-Is64Bit] -KeyName <String>
- [-Remediate] [-ValueName <String>] [-RemediateDword <Boolean>] [-Description <String>] -InputObject <PSObject>
- -Name <String> [-NoncomplianceSeverity <NoncomplianceSeverity>] [-ReportNoncompliance]
- [-RuleDescription <String>] -RuleName <String> [-ValueRule] [-PassThru] [-DisableWildcardHandling]
+ [-Remediate] [-RemediateDword <Boolean>] [-ValueName <String>] [-Description <String>] -InputObject <PSObject>
+ -Name <String> [-NoncomplianceSeverity <NoncomplianceSeverity>] [-PassThru] [-ReportNoncompliance]
+ [-RuleDescription <String>] -RuleName <String> [-ValueRule] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -421,7 +421,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
-
 ## NOTES
 
 ## RELATED LINKS

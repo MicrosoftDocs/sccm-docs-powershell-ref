@@ -16,19 +16,19 @@ Sets a component for a management point in Configuration Manager.
 
 ### SearchBySiteCodeMandatory (Default)
 ```
-Set-CMManagementPointComponent [-SiteCode <String>] [-PublishDns <Boolean>] [-DisableWildcardHandling]
+Set-CMManagementPointComponent [-PublishDns <Boolean>] [-SiteCode <String>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SearchByValueMandatory
+```
+Set-CMManagementPointComponent -InputObject <IResultObject> [-PublishDns <Boolean>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByNameMandatory
 ```
 Set-CMManagementPointComponent -Name <String> [-PublishDns <Boolean>] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### SearchByValueMandatory
-```
-Set-CMManagementPointComponent [-PublishDns <Boolean>] -InputObject <IResultObject> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

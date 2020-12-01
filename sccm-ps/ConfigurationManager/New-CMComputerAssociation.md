@@ -15,9 +15,9 @@ Creates an association between two computers in Configuration Manager.
 ## SYNTAX
 
 ```
-New-CMComputerAssociation -DestinationComputer <String> -SourceComputer <String>
- [-MigrationBehavior <MigrationBehavior>] [-MigrationUserName <String[]>] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+New-CMComputerAssociation -DestinationComputer <String> [-MigrationBehavior <MigrationBehavior>]
+ [-MigrationUserName <String[]>] -SourceComputer <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

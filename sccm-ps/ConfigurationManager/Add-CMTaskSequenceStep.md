@@ -17,22 +17,22 @@ Adds a Configuration Manager task sequence step.
 
 ### ByValue (Default)
 ```
-Add-CMTaskSequenceStep -Step <IResultObject[]> [-InsertStepStartIndex <UInt32>] -InputObject <IResultObject>
+Add-CMTaskSequenceStep [-InsertStepStartIndex <UInt32>] -Step <IResultObject[]> -InputObject <IResultObject>
  [-StepName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ### ById
 ```
-Add-CMTaskSequenceStep -Step <IResultObject[]> [-InsertStepStartIndex <UInt32>] -TaskSequenceId <String>
- [-StepName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+Add-CMTaskSequenceStep [-InsertStepStartIndex <UInt32>] -Step <IResultObject[]> [-StepName <String>]
+ -TaskSequenceId <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ### ByName
 ```
-Add-CMTaskSequenceStep -Step <IResultObject[]> [-InsertStepStartIndex <UInt32>] -TaskSequenceName <String>
- [-StepName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+Add-CMTaskSequenceStep [-InsertStepStartIndex <UInt32>] -Step <IResultObject[]> [-StepName <String>]
+ -TaskSequenceName <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 

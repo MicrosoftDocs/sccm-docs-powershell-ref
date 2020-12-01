@@ -1,4 +1,4 @@
----
+﻿---
 description: Gets a migration entity in Configuration Manager.
 external help file: AdminUI.PS.Migration.dll-Help.xml
 Module Name: ConfigurationManager
@@ -19,15 +19,15 @@ Gets a migration entity in Configuration Manager.
 Get-CMMigrationEntity [-Id <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
+### SearchByOthers
+```
+Get-CMMigrationEntity [-IsActive <String>] [-Type <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [<CommonParameters>]
+```
+
 ### SearchByName
 ```
 Get-CMMigrationEntity [-Name <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
-```
-
-### SearchByOthers
-```
-Get-CMMigrationEntity [-Type <String>] [-IsActive <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [<CommonParameters>]
 ```
 
 ## DESCRIPTION

@@ -16,19 +16,19 @@ Removes operating system installers.
 
 ### SearchByValueMandatory (Default)
 ```
-Remove-CMOperatingSystemInstaller -InputObject <IResultObject> [-Force] [-DisableWildcardHandling]
+Remove-CMOperatingSystemInstaller [-Force] -InputObject <IResultObject> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory
 ```
-Remove-CMOperatingSystemInstaller -Id <String> [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Remove-CMOperatingSystemInstaller [-Force] -Id <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByNameMandatory
 ```
-Remove-CMOperatingSystemInstaller -Name <String> [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Remove-CMOperatingSystemInstaller [-Force] -Name <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

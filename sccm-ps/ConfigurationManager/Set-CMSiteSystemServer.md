@@ -16,17 +16,17 @@ Modifies a site system server.
 
 ### SearchByValueMandatory (Default)
 ```
-Set-CMSiteSystemServer [-PublicFqdn <String>] [-FdmOperation <Boolean>] [-UseSiteServerAccount]
- [-AccountName <String>] [-EnableProxy <Boolean>] [-ProxyServerName <String>] [-ProxyServerPort <UInt32>]
- [-ProxyAccessAccount <IResultObject>] -InputObject <IResultObject> [-PassThru] [-DisableWildcardHandling]
+Set-CMSiteSystemServer [-AccountName <String>] [-EnableProxy <Boolean>] [-FdmOperation <Boolean>]
+ -InputObject <IResultObject> [-PassThru] [-ProxyAccessAccount <IResultObject>] [-ProxyServerName <String>]
+ [-ProxyServerPort <UInt32>] [-PublicFqdn <String>] [-UseSiteServerAccount] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByNameMandatory
 ```
-Set-CMSiteSystemServer [-SiteCode <String>] [-SiteSystemServerName] <String> [-PublicFqdn <String>]
- [-FdmOperation <Boolean>] [-UseSiteServerAccount] [-AccountName <String>] [-EnableProxy <Boolean>]
- [-ProxyServerName <String>] [-ProxyServerPort <UInt32>] [-ProxyAccessAccount <IResultObject>] [-PassThru]
+Set-CMSiteSystemServer [-AccountName <String>] [-EnableProxy <Boolean>] [-FdmOperation <Boolean>] [-PassThru]
+ [-ProxyAccessAccount <IResultObject>] [-ProxyServerName <String>] [-ProxyServerPort <UInt32>]
+ [-PublicFqdn <String>] [-SiteCode <String>] [-SiteSystemServerName] <String> [-UseSiteServerAccount]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

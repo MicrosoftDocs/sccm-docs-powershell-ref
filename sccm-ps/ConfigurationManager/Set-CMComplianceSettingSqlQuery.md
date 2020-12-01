@@ -16,8 +16,8 @@ Sets a compliance setting sql query.
 
 ```
 Set-CMComplianceSettingSqlQuery [-ColumnName <String>] [-DatabaseName <String>] [-InstanceName <String>]
- [-SqlStatementFile <String>] [-SqlStatementText <String>] [-InstanceType <TargetSqlInstance>]
- [-Description <String>] -InputObject <PSObject> -SettingName <String> [-NewSettingName <String>] [-PassThru]
+ [-InstanceType <TargetSqlInstance>] [-SqlStatementFile <String>] [-SqlStatementText <String>]
+ [-Description <String>] -InputObject <PSObject> [-NewSettingName <String>] [-PassThru] -SettingName <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

@@ -15,8 +15,8 @@ Creates a new storage folder in Configuration Manager.
 ## SYNTAX
 
 ```
-New-CMStorageFolder -StorageFolderName <String> [-MaximumClientNumber <Int32>] [-MinimumFreeSpace <Int32>]
- [-SpaceUnit <MinSpaceType>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+New-CMStorageFolder [-MaximumClientNumber <Int32>] [-MinimumFreeSpace <Int32>] [-SpaceUnit <MinSpaceType>]
+ -StorageFolderName <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 

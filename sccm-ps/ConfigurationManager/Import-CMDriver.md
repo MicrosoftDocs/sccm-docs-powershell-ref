@@ -2,7 +2,7 @@
 description: Import a device driver into the driver catalog.
 external help file: AdminUI.PS.Osd.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 08/26/2020
+ms.date: 11/20/2020
 schema: 2.0.0
 title: Import-CMDriver
 ---
@@ -16,12 +16,12 @@ Import a device driver into the driver catalog.
 ## SYNTAX
 
 ```
-Import-CMDriver -Path <String> [-ImportFolder] [-ImportDuplicateDriverOption <ImportDuplicateDriverOption>]
- [-EnableAndAllowInstall <Boolean>] [-AdministrativeCategory <IResultObject[]>]
- [-SupportedPlatformName <String[]>] [-SupportedPlatform <IResultObject[]>] [-DriverPackage <IResultObject[]>]
- [-UpdateDriverPackageDistributionPoint <Boolean>] [-BootImagePackage <IResultObject[]>]
- [-UpdateBootImageDistributionPoint <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Import-CMDriver [-AdministrativeCategory <IResultObject[]>] [-AdministrativeCategoryName <String[]>]
+ [-BootImagePackage <IResultObject[]>] [-DriverPackage <IResultObject[]>] [-EnableAndAllowInstall <Boolean>]
+ [-ImportDuplicateDriverOption <ImportDuplicateDriverOption>] [-ImportFolder] -Path <String>
+ [-SupportedPlatform <IResultObject[]>] [-SupportedPlatformName <String[]>]
+ [-UpdateBootImageDistributionPoint <Boolean>] [-UpdateDriverPackageDistributionPoint <Boolean>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -75,6 +75,22 @@ Assign the device drivers to a category for filtering purposes, such as Desktops
 Type: IResultObject[]
 Parameter Sets: (All)
 Aliases: AdministrativeCategories
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AdministrativeCategoryName
+
+Instead of getting and specifying an object for a category with the **AdministrativeCategory** parameter, use this parameter to simply specify the name of a category. You can also use an array of category names.
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases: AdministrativeCategoryNames
 
 Required: False
 Position: Named
@@ -330,7 +346,6 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -340,8 +355,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### IResultObject#SMS_Driver
-
-For more information on this return object and its properties, see [SMS_Driver server WMI class](/mem/configmgr/develop/reference/osd/sms_driver-server-wmi-class).
 
 ## NOTES
 

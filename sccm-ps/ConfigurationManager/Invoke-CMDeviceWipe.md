@@ -16,19 +16,19 @@ Performs a wipe of a modern device.
 
 ### SearchByValueMandatory (Default)
 ```
-Invoke-CMDeviceWipe -InputObject <IResultObject> [-Force] [-Cancel] [-DisableWildcardHandling]
+Invoke-CMDeviceWipe [-Cancel] [-Force] -InputObject <IResultObject> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### SearchByNameMandatory
-```
-Invoke-CMDeviceWipe -Name <String> [-Force] [-Cancel] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory
 ```
-Invoke-CMDeviceWipe -Id <Int32> [-Force] [-Cancel] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Invoke-CMDeviceWipe [-Cancel] [-Force] -Id <Int32> [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SearchByNameMandatory
+```
+Invoke-CMDeviceWipe [-Cancel] [-Force] -Name <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

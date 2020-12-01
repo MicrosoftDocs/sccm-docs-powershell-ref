@@ -15,8 +15,8 @@ Creates a software update deployment package.
 ## SYNTAX
 
 ```
-New-CMSoftwareUpdateDeploymentPackage -Name <String> [-Description <String>] -Path <String>
- [-Priority <Priorities>] [-Fast] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+New-CMSoftwareUpdateDeploymentPackage [-Description <String>] [-Fast] -Name <String> -Path <String>
+ [-Priority <Priorities>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 

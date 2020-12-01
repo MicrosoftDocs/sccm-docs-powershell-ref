@@ -1,4 +1,4 @@
----
+﻿---
 description: Creates an IIS Metabase type global condition in Configuration Manager.
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 Module Name: ConfigurationManager
@@ -17,7 +17,7 @@ Creates an IIS Metabase type global condition in Configuration Manager.
 
 ```
 New-CMGlobalConditionIisMetabase -DataType <GlobalConditionDataType> [-MetabasePath <String>]
- -PropertyId <Int32> -Name <String> [-Description <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ -PropertyId <Int32> [-Description <String>] -Name <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
  [<CommonParameters>]
 ```
 

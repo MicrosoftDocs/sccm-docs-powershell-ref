@@ -16,50 +16,51 @@ Modifies an operating system boot image.
 
 ### SetByValueMandatory (Default)
 ```
-Set-CMBootImage -InputObject <IResultObject> [-Reload] [-NewName <String>] [-Version <String>]
- [-Description <String>] [-Path <String>] [-EnablePrestartCommand <Boolean>] [-PrestartCommandLine <String>]
- [-IncludeFilesForPrestart <Boolean>] [-PrestartIncludeFilesDirectory <String>]
- [-BackgroundBitmapPath <String>] [-InputLocale <String>] [-ScratchSpace <UInt32>]
- [-EnableCommandSupport <Boolean>] [-PersistContentInCache <Boolean>] [-EnableBinaryDeltaReplication <Boolean>]
- [-DeployFromPxeDistributionPoint <Boolean>] [-DistributionPointUpdateSchedule <IResultObject>]
- [-CustomPackageShareName <String>] [-DisconnectUserFromDistributionPoint <Boolean>]
- [-DisconnectUserFromDistributionPointRetryCount <UInt32>] [-DisconnectUserFromDistributionPointMins <UInt32>]
- [-AddOptionalComponent <IResultObject[]>] [-RemoveOptionalComponent <IResultObject[]>]
- [-CopyToPackageShareOnDistributionPoint <Boolean>] [-Force] [-Priority <Priority>]
- [-SendToPreferredDistributionPoint <Boolean>] [-PrestageBehavior <PrestageBehavior>] [-PassThru]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMBootImage [-AddOptionalComponent <IResultObject[]>] [-BackgroundBitmapPath <String>]
+ [-CopyToPackageShareOnDistributionPoint <Boolean>] [-CustomPackageShareName <String>]
+ [-DeployFromPxeDistributionPoint <Boolean>] [-Description <String>]
+ [-DisconnectUserFromDistributionPoint <Boolean>] [-DisconnectUserFromDistributionPointMins <UInt32>]
+ [-DisconnectUserFromDistributionPointRetryCount <UInt32>] [-DistributionPointUpdateSchedule <IResultObject>]
+ [-EnableBinaryDeltaReplication <Boolean>] [-EnableCommandSupport <Boolean>] [-EnablePrestartCommand <Boolean>]
+ [-Force] [-IncludeFilesForPrestart <Boolean>] [-InputLocale <String>] -InputObject <IResultObject>
+ [-NewName <String>] [-PassThru] [-Path <String>] [-PersistContentInCache <Boolean>]
+ [-PrestageBehavior <PrestageBehavior>] [-PrestartCommandLine <String>]
+ [-PrestartIncludeFilesDirectory <String>] [-Priority <Priority>] [-Reload]
+ [-RemoveOptionalComponent <IResultObject[]>] [-ScratchSpace <UInt32>]
+ [-SendToPreferredDistributionPoint <Boolean>] [-Version <String>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetById
 ```
-Set-CMBootImage -Id <String> [-Reload] [-NewName <String>] [-Version <String>] [-Description <String>]
- [-Path <String>] [-EnablePrestartCommand <Boolean>] [-PrestartCommandLine <String>]
- [-IncludeFilesForPrestart <Boolean>] [-PrestartIncludeFilesDirectory <String>]
- [-BackgroundBitmapPath <String>] [-InputLocale <String>] [-ScratchSpace <UInt32>]
- [-EnableCommandSupport <Boolean>] [-PersistContentInCache <Boolean>] [-EnableBinaryDeltaReplication <Boolean>]
- [-DeployFromPxeDistributionPoint <Boolean>] [-DistributionPointUpdateSchedule <IResultObject>]
- [-CustomPackageShareName <String>] [-DisconnectUserFromDistributionPoint <Boolean>]
- [-DisconnectUserFromDistributionPointRetryCount <UInt32>] [-DisconnectUserFromDistributionPointMins <UInt32>]
- [-AddOptionalComponent <IResultObject[]>] [-RemoveOptionalComponent <IResultObject[]>]
- [-CopyToPackageShareOnDistributionPoint <Boolean>] [-Force] [-Priority <Priority>]
- [-SendToPreferredDistributionPoint <Boolean>] [-PrestageBehavior <PrestageBehavior>] [-PassThru]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMBootImage [-AddOptionalComponent <IResultObject[]>] [-BackgroundBitmapPath <String>]
+ [-CopyToPackageShareOnDistributionPoint <Boolean>] [-CustomPackageShareName <String>]
+ [-DeployFromPxeDistributionPoint <Boolean>] [-Description <String>]
+ [-DisconnectUserFromDistributionPoint <Boolean>] [-DisconnectUserFromDistributionPointMins <UInt32>]
+ [-DisconnectUserFromDistributionPointRetryCount <UInt32>] [-DistributionPointUpdateSchedule <IResultObject>]
+ [-EnableBinaryDeltaReplication <Boolean>] [-EnableCommandSupport <Boolean>] [-EnablePrestartCommand <Boolean>]
+ [-Force] -Id <String> [-IncludeFilesForPrestart <Boolean>] [-InputLocale <String>] [-NewName <String>]
+ [-PassThru] [-Path <String>] [-PersistContentInCache <Boolean>] [-PrestageBehavior <PrestageBehavior>]
+ [-PrestartCommandLine <String>] [-PrestartIncludeFilesDirectory <String>] [-Priority <Priority>] [-Reload]
+ [-RemoveOptionalComponent <IResultObject[]>] [-ScratchSpace <UInt32>]
+ [-SendToPreferredDistributionPoint <Boolean>] [-Version <String>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetByName
 ```
-Set-CMBootImage -Name <String> [-Reload] [-NewName <String>] [-Version <String>] [-Description <String>]
- [-Path <String>] [-EnablePrestartCommand <Boolean>] [-PrestartCommandLine <String>]
- [-IncludeFilesForPrestart <Boolean>] [-PrestartIncludeFilesDirectory <String>]
- [-BackgroundBitmapPath <String>] [-InputLocale <String>] [-ScratchSpace <UInt32>]
- [-EnableCommandSupport <Boolean>] [-PersistContentInCache <Boolean>] [-EnableBinaryDeltaReplication <Boolean>]
- [-DeployFromPxeDistributionPoint <Boolean>] [-DistributionPointUpdateSchedule <IResultObject>]
- [-CustomPackageShareName <String>] [-DisconnectUserFromDistributionPoint <Boolean>]
- [-DisconnectUserFromDistributionPointRetryCount <UInt32>] [-DisconnectUserFromDistributionPointMins <UInt32>]
- [-AddOptionalComponent <IResultObject[]>] [-RemoveOptionalComponent <IResultObject[]>]
- [-CopyToPackageShareOnDistributionPoint <Boolean>] [-Force] [-Priority <Priority>]
- [-SendToPreferredDistributionPoint <Boolean>] [-PrestageBehavior <PrestageBehavior>] [-PassThru]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMBootImage [-AddOptionalComponent <IResultObject[]>] [-BackgroundBitmapPath <String>]
+ [-CopyToPackageShareOnDistributionPoint <Boolean>] [-CustomPackageShareName <String>]
+ [-DeployFromPxeDistributionPoint <Boolean>] [-Description <String>]
+ [-DisconnectUserFromDistributionPoint <Boolean>] [-DisconnectUserFromDistributionPointMins <UInt32>]
+ [-DisconnectUserFromDistributionPointRetryCount <UInt32>] [-DistributionPointUpdateSchedule <IResultObject>]
+ [-EnableBinaryDeltaReplication <Boolean>] [-EnableCommandSupport <Boolean>] [-EnablePrestartCommand <Boolean>]
+ [-Force] [-IncludeFilesForPrestart <Boolean>] [-InputLocale <String>] -Name <String> [-NewName <String>]
+ [-PassThru] [-Path <String>] [-PersistContentInCache <Boolean>] [-PrestageBehavior <PrestageBehavior>]
+ [-PrestartCommandLine <String>] [-PrestartIncludeFilesDirectory <String>] [-Priority <Priority>] [-Reload]
+ [-RemoveOptionalComponent <IResultObject[]>] [-ScratchSpace <UInt32>]
+ [-SendToPreferredDistributionPoint <Boolean>] [-Version <String>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -519,7 +520,7 @@ Accept wildcard characters: False
 
 ### -Reload
 
-Applies to version 2006 and later. If the version of the Windows ADK components in the boot image are out of date, use this parameter to reload this boot image with the current Windows PE version from the Windows ADK. For more information on this process, see [Update distribution points with the boot image](https://docs.microsoft.com/mem/configmgr/osd/get-started/manage-boot-images#update-distribution-points-with-the-boot-image).
+Applies to version 2006 and later. If the version of the Windows ADK components in the boot image are out of date, use this parameter to reload this boot image with the current Windows PE version from the Windows ADK. For more information on this process, see [Update distribution points with the boot image](/mem/configmgr/osd/get-started/manage-boot-images#update-distribution-points-with-the-boot-image).
 
 ```yaml
 Type: SwitchParameter

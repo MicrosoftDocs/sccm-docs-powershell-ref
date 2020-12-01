@@ -16,20 +16,21 @@ Changes settings for a Configuration Manager software update point.
 
 ### ByValue (Default)
 ```
-Set-CMSoftwareUpdatePoint [-HttpPort <Int32>] [-HttpsPort <Int32>] -InputObject <IResultObject>
- [-ClientConnectionType <ClientConnectionTypes>] [-EnableSsl <Boolean>] [-EnableCloudGateway <Boolean>]
- [-UseProxy <Boolean>] [-UseProxyForAutoDeploymentRule <Boolean>] [-AnonymousWsusAccess]
- [-WsusAccessAccount <String>] [-NlbVirtualIP <String>] [-PublicVirtualIP <String>] [-PassThru]
+Set-CMSoftwareUpdatePoint [-AnonymousWsusAccess] [-ClientConnectionType <ClientConnectionTypes>]
+ [-EnableCloudGateway <Boolean>] [-EnableSsl <Boolean>] [-HttpPort <Int32>] [-HttpsPort <Int32>]
+ -InputObject <IResultObject> [-NlbVirtualIP <String>] [-PassThru] [-PublicVirtualIP <String>]
+ [-UseProxy <Boolean>] [-UseProxyForAutoDeploymentRule <Boolean>] [-WsusAccessAccount <String>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByName
 ```
-Set-CMSoftwareUpdatePoint [-HttpPort <Int32>] [-HttpsPort <Int32>] [-SiteSystemServerName] <String>
- [-SiteCode <String>] [-ClientConnectionType <ClientConnectionTypes>] [-EnableSsl <Boolean>]
- [-EnableCloudGateway <Boolean>] [-UseProxy <Boolean>] [-UseProxyForAutoDeploymentRule <Boolean>]
- [-AnonymousWsusAccess] [-WsusAccessAccount <String>] [-NlbVirtualIP <String>] [-PublicVirtualIP <String>]
- [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMSoftwareUpdatePoint [-AnonymousWsusAccess] [-ClientConnectionType <ClientConnectionTypes>]
+ [-EnableCloudGateway <Boolean>] [-EnableSsl <Boolean>] [-HttpPort <Int32>] [-HttpsPort <Int32>]
+ [-NlbVirtualIP <String>] [-PassThru] [-PublicVirtualIP <String>] [-SiteCode <String>]
+ [-SiteSystemServerName] <String> [-UseProxy <Boolean>] [-UseProxyForAutoDeploymentRule <Boolean>]
+ [-WsusAccessAccount <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

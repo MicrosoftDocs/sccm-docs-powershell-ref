@@ -1,4 +1,4 @@
----
+﻿---
 description: Get a software update deployment.
 external help file: AdminUI.PS.Deployments.dll-Help.xml
 Module Name: ConfigurationManager
@@ -17,28 +17,29 @@ Get a software update deployment.
 
 ### SearchByName (Default)
 ```
-Get-CMSoftwareUpdateDeployment [-Name <String>] [-Summary] [-CollectionName <String>] [-CollectionId <String>]
- [-Collection <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
-```
-
-### SearchById
-```
-Get-CMSoftwareUpdateDeployment [-SmsObjectId <Int32>] [-Summary] [-CollectionName <String>]
- [-CollectionId <String>] [-Collection <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Get-CMSoftwareUpdateDeployment [-Name <String>] [-Summary] [-Collection <IResultObject>]
+ [-CollectionId <String>] [-CollectionName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [<CommonParameters>]
 ```
 
 ### SearchByDeploymentId
 ```
-Get-CMSoftwareUpdateDeployment [-DeploymentId <String>] [-Summary] [-CollectionName <String>]
- [-CollectionId <String>] [-Collection <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Get-CMSoftwareUpdateDeployment [-DeploymentId <String>] [-Summary] [-Collection <IResultObject>]
+ [-CollectionId <String>] [-CollectionName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [<CommonParameters>]
 ```
 
 ### SearchByValue
 ```
-Get-CMSoftwareUpdateDeployment [-InputObject <IResultObject>] [-Summary] [-CollectionName <String>]
- [-CollectionId <String>] [-Collection <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Get-CMSoftwareUpdateDeployment [-InputObject <IResultObject>] [-Summary] [-Collection <IResultObject>]
+ [-CollectionId <String>] [-CollectionName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [<CommonParameters>]
+```
+
+### SearchById
+```
+Get-CMSoftwareUpdateDeployment [-SmsObjectId <Int32>] [-Summary] [-Collection <IResultObject>]
+ [-CollectionId <String>] [-CollectionName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [<CommonParameters>]
 ```
 
@@ -218,7 +219,6 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -230,8 +230,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### IResultObject[]#SMS_DeploymentSummary
 
 ### IResultObject#SMS_DeploymentSummary
-
-For more information on this return object and its properties, see [SMS_DeploymentSummary server WMI class](https://docs.microsoft.com/mem/configmgr/develop/reference/apps/sms_deploymentsummary-server-wmi-class).
 
 ### IResultObject[]#SMS_UpdateAssignment
 

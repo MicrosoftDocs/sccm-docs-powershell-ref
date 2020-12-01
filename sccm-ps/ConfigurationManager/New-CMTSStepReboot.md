@@ -16,10 +16,10 @@ Creates a t s step reboot.
 ## SYNTAX
 
 ```
-New-CMTSStepReboot [-RunAfterRestart <RunAfterRestartType>] [-NotificationMessage <String>]
- [-MessageTimeout <Int32>] -Name <String> [-Description <String>] [-ContinueOnError] [-Disable]
- [-Condition <IResultObject[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+New-CMTSStepReboot [-MessageTimeout <Int32>] [-NotificationMessage <String>]
+ [-RunAfterRestart <RunAfterRestartType>] [-Condition <IResultObject[]>] [-ContinueOnError]
+ [-Description <String>] [-Disable] -Name <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

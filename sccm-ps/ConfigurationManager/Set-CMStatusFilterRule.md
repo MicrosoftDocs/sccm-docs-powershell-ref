@@ -15,14 +15,14 @@ Modifies settings for a Configuration Manager filter rule for status messages.
 ## SYNTAX
 
 ```
-Set-CMStatusFilterRule [-SiteCode <String>] -Name <String> [-Priority <PriorityChangeType>] [-Source <String>]
- [-StatusFilterRuleSiteCode <String>] [-SiteSystemServerName <String>] [-ComponentName <String>]
- [-MessageType <MessageType>] [-SeverityType <SeverityType>] [-MessageId <Int32>] [-PropertyId <String>]
- [-PropertyValue <String>] [-WriteToDatabase <Boolean>] [-AllowDeleteAfterDays <Int32>]
- [-ReportToEventLog <Boolean>] [-ReplicateToParentSite <Boolean>] [-ReplicationPriority <ReplicationPriority>]
- [-RunProgram <Boolean>] [-ProgramPath <String>] [-ForwardToStatusSummarizer <Boolean>]
- [-ProcessLowerPriorityRule <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Set-CMStatusFilterRule [-AllowDeleteAfterDays <Int32>] [-ComponentName <String>]
+ [-ForwardToStatusSummarizer <Boolean>] [-MessageId <Int32>] [-MessageType <MessageType>] -Name <String>
+ [-Priority <PriorityChangeType>] [-ProcessLowerPriorityRule <Boolean>] [-ProgramPath <String>]
+ [-PropertyId <String>] [-PropertyValue <String>] [-ReplicateToParentSite <Boolean>]
+ [-ReplicationPriority <ReplicationPriority>] [-ReportToEventLog <Boolean>] [-RunProgram <Boolean>]
+ [-SeverityType <SeverityType>] [-SiteCode <String>] [-SiteSystemServerName <String>] [-Source <String>]
+ [-StatusFilterRuleSiteCode <String>] [-WriteToDatabase <Boolean>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

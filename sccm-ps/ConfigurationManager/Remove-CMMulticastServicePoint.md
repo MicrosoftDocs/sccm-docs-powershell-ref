@@ -16,13 +16,13 @@ Removes a multicast service point.
 
 ### ByValue (Default)
 ```
-Remove-CMMulticastServicePoint [-Force] [-RemoveWds] -InputObject <IResultObject> [-DisableWildcardHandling]
+Remove-CMMulticastServicePoint [-Force] -InputObject <IResultObject> [-RemoveWds] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByName
 ```
-Remove-CMMulticastServicePoint [-SiteCode <String>] [-Force] [-SiteSystemServerName] <String> [-RemoveWds]
+Remove-CMMulticastServicePoint [-Force] [-RemoveWds] [-SiteCode <String>] [-SiteSystemServerName] <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

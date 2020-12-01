@@ -1,4 +1,4 @@
----
+﻿---
 description: Gets a site update.
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -15,7 +15,7 @@ Gets a site update.
 ## SYNTAX
 
 ```
-Get-CMSiteUpdate [-Name <String>] [-Fast] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Get-CMSiteUpdate [-Fast] [-Name <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [<CommonParameters>]
 ```
 

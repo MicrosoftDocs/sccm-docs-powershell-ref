@@ -16,19 +16,19 @@ Updates a certificate.
 
 ### ByValue (Default)
 ```
-Update-CMCertificate -Path <String> -InputObject <IResultObject> [-Force] [-DisableWildcardHandling]
+Update-CMCertificate [-Force] -InputObject <IResultObject> -Path <String> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ById
 ```
-Update-CMCertificate -Path <String> -Id <String> [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Update-CMCertificate [-Force] -Id <String> -Path <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByCertificate
 ```
-Update-CMCertificate -InputObject <IResultObject> -X509Certificate <X509Certificate> [-Force]
+Update-CMCertificate [-Force] -InputObject <IResultObject> -X509Certificate <X509Certificate>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

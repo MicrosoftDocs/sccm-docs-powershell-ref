@@ -20,15 +20,15 @@ Invoke-CMCollectionUpdate -InputObject <IResultObject> [-DisableWildcardHandling
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### SearchByNameMandatory
-```
-Invoke-CMCollectionUpdate -Name <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
-```
-
 ### SearchByIdMandatory
 ```
 Invoke-CMCollectionUpdate -CollectionId <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
+```
+
+### SearchByNameMandatory
+```
+Invoke-CMCollectionUpdate -Name <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
  [-Confirm] [<CommonParameters>]
 ```
 

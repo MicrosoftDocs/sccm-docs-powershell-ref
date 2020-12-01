@@ -22,7 +22,7 @@ Remove-CMClientOperation -ClientOperation <IResultObject> [-Force] [-DisableWild
 
 ### RemoveById
 ```
-Remove-CMClientOperation -Id <String> [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+Remove-CMClientOperation [-Force] -Id <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
  [-Confirm] [<CommonParameters>]
 ```
 

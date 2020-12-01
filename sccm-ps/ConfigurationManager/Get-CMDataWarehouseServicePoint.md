@@ -1,4 +1,4 @@
----
+﻿---
 description: Gets a data warehouse service point.
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,7 +16,7 @@ Gets a data warehouse service point.
 
 ### SearchByName (Default)
 ```
-Get-CMDataWarehouseServicePoint [-SiteCode <String>] [[-SiteSystemServerName] <String>] [-AllSite]
+Get-CMDataWarehouseServicePoint [-AllSite] [-SiteCode <String>] [[-SiteSystemServerName] <String>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 

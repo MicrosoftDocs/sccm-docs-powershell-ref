@@ -1,4 +1,4 @@
----
+﻿---
 description: Gets a package deployment from Configuration Manager.
 external help file: AdminUI.PS.Deployments.dll-Help.xml
 Module Name: ConfigurationManager
@@ -17,30 +17,30 @@ Gets a package deployment from Configuration Manager.
 
 ### SearchByName (Default)
 ```
-Get-CMPackageDeployment [-Name <String>] [-ProgramName <String>] [-Summary] [-CollectionName <String>]
- [-CollectionId <String>] [-Collection <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [<CommonParameters>]
-```
-
-### SearchById
-```
-Get-CMPackageDeployment [-ProgramName <String>] [-PackageId <String>] [-Summary] [-CollectionName <String>]
- [-CollectionId <String>] [-Collection <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Get-CMPackageDeployment [-Name <String>] [-ProgramName <String>] [-Summary] [-Collection <IResultObject>]
+ [-CollectionId <String>] [-CollectionName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [<CommonParameters>]
 ```
 
 ### SearchByDeploymentId
 ```
-Get-CMPackageDeployment [-ProgramName <String>] [-DeploymentId <String>] [-Summary] [-CollectionName <String>]
- [-CollectionId <String>] [-Collection <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [<CommonParameters>]
+Get-CMPackageDeployment [-DeploymentId <String>] [-ProgramName <String>] [-Summary]
+ [-Collection <IResultObject>] [-CollectionId <String>] [-CollectionName <String>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ### SearchByValue
 ```
-Get-CMPackageDeployment [-ProgramName <String>] [-InputObject <IResultObject>] [-Summary]
- [-CollectionName <String>] [-CollectionId <String>] [-Collection <IResultObject>] [-DisableWildcardHandling]
+Get-CMPackageDeployment [-InputObject <IResultObject>] [-ProgramName <String>] [-Summary]
+ [-Collection <IResultObject>] [-CollectionId <String>] [-CollectionName <String>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [<CommonParameters>]
+```
+
+### SearchById
+```
+Get-CMPackageDeployment [-PackageId <String>] [-ProgramName <String>] [-Summary] [-Collection <IResultObject>]
+ [-CollectionId <String>] [-CollectionName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

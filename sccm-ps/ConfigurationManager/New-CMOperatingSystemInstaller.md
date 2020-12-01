@@ -15,7 +15,7 @@ Adds an operating system installer.
 ## SYNTAX
 
 ```
-New-CMOperatingSystemInstaller [-Name <String>] -Path <String> [-Description <String>] [-Version <String>]
+New-CMOperatingSystemInstaller [-Description <String>] [-Name <String>] -Path <String> [-Version <String>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

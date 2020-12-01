@@ -16,9 +16,9 @@ Creates a t s step setup windows and config mgr.
 ## SYNTAX
 
 ```
-New-CMTSStepSetupWindowsAndConfigMgr -PackageId <String> [-PreproductionPackageId <String>]
- [-InstallationProperty <String>] -Name <String> [-Description <String>] [-ContinueOnError] [-Disable]
- [-Condition <IResultObject[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+New-CMTSStepSetupWindowsAndConfigMgr [-InstallationProperty <String>] -PackageId <String>
+ [-PreproductionPackageId <String>] [-Condition <IResultObject[]>] [-ContinueOnError] [-Description <String>]
+ [-Disable] -Name <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 

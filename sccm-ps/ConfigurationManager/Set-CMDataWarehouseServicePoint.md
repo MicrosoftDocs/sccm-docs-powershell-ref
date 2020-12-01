@@ -16,21 +16,21 @@ Sets a data warehouse service point.
 
 ### SetByValue (Default)
 ```
-Set-CMDataWarehouseServicePoint [-DataWarehouseDatabaseServerName <String>]
- [-DataWarehouseInstanceName <String>] [-DataWarehouseDatabaseName <String>] [-DataWarehouseSqlPort <Int32>]
- [-StartAftertime <DateTime>] [-WeekFrequency <Int32>] [-DaysOfWeek <DataWarehouseDaysOfWeek>]
- [-UserName <String>] [-DataRetentionDays <Int32>] -InputObject <IResultObject> [-PassThru] [-Force]
+Set-CMDataWarehouseServicePoint [-DataRetentionDays <Int32>] [-DataWarehouseDatabaseName <String>]
+ [-DataWarehouseDatabaseServerName <String>] [-DataWarehouseInstanceName <String>]
+ [-DataWarehouseSqlPort <Int32>] [-DaysOfWeek <DataWarehouseDaysOfWeek>] [-Force] -InputObject <IResultObject>
+ [-PassThru] [-StartAftertime <DateTime>] [-UserName <String>] [-WeekFrequency <Int32>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetByName
 ```
-Set-CMDataWarehouseServicePoint [-SiteCode <String>] [-SiteSystemServerName] <String>
+Set-CMDataWarehouseServicePoint [-DataRetentionDays <Int32>] [-DataWarehouseDatabaseName <String>]
  [-DataWarehouseDatabaseServerName <String>] [-DataWarehouseInstanceName <String>]
- [-DataWarehouseDatabaseName <String>] [-DataWarehouseSqlPort <Int32>] [-StartAftertime <DateTime>]
- [-WeekFrequency <Int32>] [-DaysOfWeek <DataWarehouseDaysOfWeek>] [-UserName <String>]
- [-DataRetentionDays <Int32>] [-PassThru] [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-DataWarehouseSqlPort <Int32>] [-DaysOfWeek <DataWarehouseDaysOfWeek>] [-Force] [-PassThru]
+ [-SiteCode <String>] [-SiteSystemServerName] <String> [-StartAftertime <DateTime>] [-UserName <String>]
+ [-WeekFrequency <Int32>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

@@ -16,7 +16,7 @@ Removes an Exchange Server object from Configuration Manager.
 
 ### SearchBySiteCodeMandatory (Default)
 ```
-Remove-CMExchangeServer [-SiteCode <String>] -ExchangeServerUrl <String> [-Force] [-DisableWildcardHandling]
+Remove-CMExchangeServer -ExchangeServerUrl <String> [-Force] [-SiteCode <String>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

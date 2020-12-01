@@ -13,8 +13,8 @@ schema: 2.0.0
 ## SYNTAX
 
 ```
-New-CMTSStepDisableBitLocker [-Drive <String>] [-RebootCount <Int32>] -Name <String> [-Description <String>]
- [-ContinueOnError] [-Disable] [-Condition <IResultObject[]>] [-DisableWildcardHandling]
+New-CMTSStepDisableBitLocker [-Drive <String>] [-RebootCount <Int32>] [-Condition <IResultObject[]>]
+ [-ContinueOnError] [-Description <String>] [-Disable] -Name <String> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

@@ -20,21 +20,21 @@ Invoke-CMDeploymentSummarization -CollectionId <String> [-SoftwareName <String>]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### SearchByIdMandatory
-```
-Invoke-CMDeploymentSummarization -DeploymentId <String> [-SoftwareName <String>] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
 ### SearchByCollectionNameMandatory
 ```
 Invoke-CMDeploymentSummarization -CollectionName <String> [-SoftwareName <String>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
+### SearchByIdMandatory
+```
+Invoke-CMDeploymentSummarization -DeploymentId <String> [-SoftwareName <String>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
 ### SearchByValueMandatory
 ```
-Invoke-CMDeploymentSummarization [-SoftwareName <String>] -InputObject <IResultObject>
+Invoke-CMDeploymentSummarization -InputObject <IResultObject> [-SoftwareName <String>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

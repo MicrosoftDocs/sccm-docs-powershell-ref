@@ -15,7 +15,7 @@ Creates an alert subscription object.
 ## SYNTAX
 
 ```
-New-CMAlertSubscription -Name <String> [-AlertId <Int32[]>] -AddEmailAddress <String[]> [-LocaleId <Int32>]
+New-CMAlertSubscription -AddEmailAddress <String[]> [-AlertId <Int32[]>] [-LocaleId <Int32>] -Name <String>
  [-RequireValidLocaleId] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
@@ -117,7 +117,7 @@ Accept wildcard characters: False
 
 ### -LocaleId
 Specifies a locale for alert messages.
-For more information and a list of locale identifiers, see [Appendix A: Product Behavior](https://docs.microsoft.com/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c).
+For more information and a list of locale identifiers, see [Appendix A: Product Behavior](/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c).
 
 ```yaml
 Type: Int32

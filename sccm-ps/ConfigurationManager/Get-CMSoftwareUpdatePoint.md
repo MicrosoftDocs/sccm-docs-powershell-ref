@@ -1,4 +1,4 @@
----
+﻿---
 description: Gets a Configuration Manager software update point.
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,7 +16,7 @@ Gets a Configuration Manager software update point.
 
 ### SearchByName (Default)
 ```
-Get-CMSoftwareUpdatePoint [-SiteCode <String>] [[-SiteSystemServerName] <String>] [-AllSite]
+Get-CMSoftwareUpdatePoint [-AllSite] [-SiteCode <String>] [[-SiteSystemServerName] <String>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 

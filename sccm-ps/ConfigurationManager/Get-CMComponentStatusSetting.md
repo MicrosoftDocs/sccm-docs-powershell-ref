@@ -1,4 +1,4 @@
----
+﻿---
 description: Gets Configuration Manager component status settings.
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -15,7 +15,7 @@ Gets Configuration Manager component status settings.
 ## SYNTAX
 
 ```
-Get-CMComponentStatusSetting [-SiteSystemServerName <String>] [-ComponentName <String>]
+Get-CMComponentStatusSetting [-ComponentName <String>] [-SiteSystemServerName <String>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 

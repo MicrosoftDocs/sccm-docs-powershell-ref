@@ -1,4 +1,4 @@
----
+﻿---
 description: Creates a Script type global condition in Configuration Manager.
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 Module Name: ConfigurationManager
@@ -18,17 +18,16 @@ Creates a Script type global condition in Configuration Manager.
 ### NewScriptFromFile (Default)
 ```
 New-CMGlobalConditionScript -DataType <GlobalConditionDataType> -FilePath <String>
- -ScriptLanguage <ScriptingLanguage> [-UseLoggedOnUserCredential <Boolean>] [-Use32BitHost <Boolean>]
- -Name <String> [-Description <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ -ScriptLanguage <ScriptingLanguage> [-Use32BitHost <Boolean>] [-UseLoggedOnUserCredential <Boolean>]
+ [-Description <String>] -Name <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
  [<CommonParameters>]
 ```
 
 ### NewScriptFromText
 ```
-New-CMGlobalConditionScript -DataType <GlobalConditionDataType> -ScriptText <String>
- -ScriptLanguage <ScriptingLanguage> [-UseLoggedOnUserCredential <Boolean>] [-Use32BitHost <Boolean>]
- -Name <String> [-Description <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [<CommonParameters>]
+New-CMGlobalConditionScript -DataType <GlobalConditionDataType> -ScriptLanguage <ScriptingLanguage>
+ -ScriptText <String> [-Use32BitHost <Boolean>] [-UseLoggedOnUserCredential <Boolean>] [-Description <String>]
+ -Name <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

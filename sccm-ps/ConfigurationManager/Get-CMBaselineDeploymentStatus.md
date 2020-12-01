@@ -1,4 +1,4 @@
----
+﻿---
 description: Gets a baseline deployment status.
 external help file: AdminUI.PS.Deployments.dll-Help.xml
 Module Name: ConfigurationManager
@@ -15,7 +15,7 @@ Gets a baseline deployment status.
 ## SYNTAX
 
 ```
-Get-CMBaselineDeploymentStatus [-StatusType <BaselineDeploymentStatusType>] -InputObject <IResultObject>
+Get-CMBaselineDeploymentStatus -InputObject <IResultObject> [-StatusType <BaselineDeploymentStatusType>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 

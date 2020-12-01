@@ -28,7 +28,7 @@ Add-CMComplianceSettingXPathQuery -DataType <SettingDataType> [-IncludeSubfolder
  -XmlFileName <String> [-XmlNamespace <Hashtable>] [-XPathQueryFile <String>] [-XPathQueryText <String>]
  [-Description <String>] -Existence <ExistenceType> [-ExistentialRule] [-ExpectedValue <String[]>]
  [-ExpressionOperator <RuleExpressionOperator>] -InputObject <PSObject> -Name <String>
- [-NoncomplianceSeverity <NoncomplianceSeverity>] [-RuleDescription <String>] -RuleName <String> [-PassThru]
+ [-NoncomplianceSeverity <NoncomplianceSeverity>] [-PassThru] [-RuleDescription <String>] -RuleName <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -37,8 +37,8 @@ Add-CMComplianceSettingXPathQuery -DataType <SettingDataType> [-IncludeSubfolder
 Add-CMComplianceSettingXPathQuery -DataType <SettingDataType> [-IncludeSubfolders] [-Is64Bit] -Path <String>
  -XmlFileName <String> [-XmlNamespace <Hashtable>] [-XPathQueryFile <String>] [-XPathQueryText <String>]
  [-Description <String>] -ExpectedValue <String[]> -ExpressionOperator <RuleExpressionOperator>
- -InputObject <PSObject> -Name <String> [-NoncomplianceSeverity <NoncomplianceSeverity>] [-ReportNoncompliance]
- [-RuleDescription <String>] -RuleName <String> [-ValueRule] [-PassThru] [-DisableWildcardHandling]
+ -InputObject <PSObject> -Name <String> [-NoncomplianceSeverity <NoncomplianceSeverity>] [-PassThru]
+ [-ReportNoncompliance] [-RuleDescription <String>] -RuleName <String> [-ValueRule] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

@@ -16,7 +16,7 @@ Sets a Registry Key type global condition in Configuration Manager.
 ## SYNTAX
 
 ```
-Set-CMGlobalConditionRegistryKey [-Is64Bit <Boolean>] [-RegistryHive <RegistryRootKey>] [-KeyName <String>]
+Set-CMGlobalConditionRegistryKey [-Is64Bit <Boolean>] [-KeyName <String>] [-RegistryHive <RegistryRootKey>]
  -Name <String> [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```

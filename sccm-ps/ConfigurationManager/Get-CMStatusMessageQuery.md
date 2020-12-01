@@ -1,4 +1,4 @@
----
+﻿---
 description: Gets Configuration Manager status message queries or displays messages.
 external help file: AdminUI.PS.SystemStatus.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,13 +16,13 @@ Gets Configuration Manager status message queries or displays messages.
 
 ### SearchByName (Default)
 ```
-Get-CMStatusMessageQuery [-Name <String>] [-ShowMessage] [-PassThru] [-DisableWildcardHandling]
+Get-CMStatusMessageQuery [-Name <String>] [-PassThru] [-ShowMessage] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory
 ```
-Get-CMStatusMessageQuery -Id <String> [-ShowMessage] [-PassThru] [-DisableWildcardHandling]
+Get-CMStatusMessageQuery -Id <String> [-PassThru] [-ShowMessage] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [<CommonParameters>]
 ```
 

@@ -1,4 +1,4 @@
----
+﻿---
 description: Get a Configuration Manager device.
 external help file: AdminUI.PS.Collections.dll-Help.xml
 Module Name: ConfigurationManager
@@ -17,49 +17,49 @@ Get a Configuration Manager device.
 
 ### ByName (Default)
 ```
-Get-CMDevice [-Name <String>] [-Fast] [-CollectionMember] [-Resource] [-DisableWildcardHandling]
+Get-CMDevice [-CollectionMember] [-Fast] [-Name <String>] [-Resource] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
-### SearchByNameMandatory
+### SearchByValueMandatory
 ```
-Get-CMDevice -CollectionName <String> [-Name <String>] [-Fast] [-CollectionMember] [-Resource]
+Get-CMDevice -Collection <IResultObject> [-CollectionMember] [-Fast] [-Name <String>] [-Resource]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory
 ```
-Get-CMDevice -CollectionId <String> [-Name <String>] [-Fast] [-CollectionMember] [-Resource]
+Get-CMDevice -CollectionId <String> [-CollectionMember] [-Fast] [-Name <String>] [-Resource]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ### SearchByIdMandatoryForViewInfectedClients
 ```
-Get-CMDevice [-CollectionId <String>] -ThreatId <String> [-Fast] [-CollectionMember] [-Resource]
+Get-CMDevice [-CollectionId <String>] [-CollectionMember] [-Fast] [-Resource] -ThreatId <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ### SearchByNameMandatoryForViewInfectedClients
 ```
-Get-CMDevice [-CollectionId <String>] -ThreatName <String> [-Fast] [-CollectionMember] [-Resource]
+Get-CMDevice [-CollectionId <String>] [-CollectionMember] [-Fast] [-Resource] -ThreatName <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ### SearchByValueMandatoryForViewInfectedClients
 ```
-Get-CMDevice [-CollectionId <String>] -InputObject <IResultObject> [-Fast] [-CollectionMember] [-Resource]
+Get-CMDevice [-CollectionId <String>] [-CollectionMember] [-Fast] -InputObject <IResultObject> [-Resource]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
-### SearchByValueMandatory
+### SearchByNameMandatory
 ```
-Get-CMDevice -Collection <IResultObject> [-Name <String>] [-Fast] [-CollectionMember] [-Resource]
+Get-CMDevice [-CollectionMember] -CollectionName <String> [-Fast] [-Name <String>] [-Resource]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ### ById
 ```
-Get-CMDevice -ResourceId <Int32> [-Fast] [-CollectionMember] [-Resource] [-DisableWildcardHandling]
+Get-CMDevice [-CollectionMember] [-Fast] [-Resource] -ResourceId <Int32> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
@@ -311,7 +311,7 @@ Specify the name of a device.
 
 ```yaml
 Type: String
-Parameter Sets: ByName, SearchByNameMandatory, SearchByIdMandatory, SearchByValueMandatory
+Parameter Sets: ByName, SearchByValueMandatory, SearchByIdMandatory, SearchByNameMandatory
 Aliases:
 
 Required: False
@@ -386,7 +386,6 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -398,10 +397,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### IResultObject[]#SMS_CombinedDeviceResources
 
 ### IResultObject#SMS_CombinedDeviceResources
-
-For more information on the **SMS_CombinedDeviceResources** object and its properties, see [SMS_CombinedDeviceResources server WMI class](/mem/configmgr/develop/reference/core/clients/collections/sms_combineddeviceresources-server-wmi-class).
-
-For more information on the **SMS_R_System** object and its properties, see [SMS_R_System server WMI class](/mem/configmgr/develop/reference/core/clients/manage/sms_r_system-server-wmi-class).
 
 ## NOTES
 

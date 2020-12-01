@@ -16,20 +16,20 @@ Deletes a computer association from Configuration Manager.
 
 ### SearchByNameMandatory (Default)
 ```
-Remove-CMComputerAssociation -DestinationComputer <String> -SourceComputer <String> [-Force]
+Remove-CMComputerAssociation -DestinationComputer <String> [-Force] -SourceComputer <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### SearchByIdMandatory
-```
-Remove-CMComputerAssociation -MigrationId <String> [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByValueMandatory
 ```
-Remove-CMComputerAssociation -InputObject <IResultObject> [-Force] [-DisableWildcardHandling]
+Remove-CMComputerAssociation [-Force] -InputObject <IResultObject> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SearchByIdMandatory
+```
+Remove-CMComputerAssociation [-Force] -MigrationId <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

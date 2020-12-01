@@ -1,4 +1,4 @@
----
+﻿---
 description: Gets one or more Configuration Manager sites.
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -15,7 +15,7 @@ Gets one or more Configuration Manager sites.
 ## SYNTAX
 
 ```
-Get-CMSite [[-SiteCode] <String>] [-Name <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Get-CMSite [-Name <String>] [[-SiteCode] <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [<CommonParameters>]
 ```
 

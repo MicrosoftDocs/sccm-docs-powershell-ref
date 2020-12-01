@@ -16,22 +16,22 @@ Changes properties of Configuration Manager alerts.
 
 ### SetByValue (Default)
 ```
-Set-CMAlert -InputObject <IResultObject> [-NewName <String>] [-Severity <Severities>]
- [-ParameterValue <String>] [-Comment <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
-```
-
-### SetByName
-```
-Set-CMAlert -Name <String> [-NewName <String>] [-Severity <Severities>] [-ParameterValue <String>]
- [-Comment <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+Set-CMAlert [-Comment <String>] -InputObject <IResultObject> [-NewName <String>] [-ParameterValue <String>]
+ [-Severity <Severities>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ### SetById
 ```
-Set-CMAlert -Id <String> [-NewName <String>] [-Severity <Severities>] [-ParameterValue <String>]
- [-Comment <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+Set-CMAlert [-Comment <String>] -Id <String> [-NewName <String>] [-ParameterValue <String>]
+ [-Severity <Severities>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### SetByName
+```
+Set-CMAlert [-Comment <String>] -Name <String> [-NewName <String>] [-ParameterValue <String>]
+ [-Severity <Severities>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 

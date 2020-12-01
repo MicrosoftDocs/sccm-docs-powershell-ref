@@ -16,20 +16,20 @@ Removes Configuration Manager software update groups.
 
 ### SearchByIdMandatory (Default)
 ```
-Remove-CMSoftwareUpdateGroup -Id <String[]> [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### SearchByNameMandatory
-```
-Remove-CMSoftwareUpdateGroup -Name <String> [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Remove-CMSoftwareUpdateGroup [-Force] -Id <String[]> [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByValueMandatory
 ```
-Remove-CMSoftwareUpdateGroup -InputObject <IResultObject> [-Force] [-DisableWildcardHandling]
+Remove-CMSoftwareUpdateGroup [-Force] -InputObject <IResultObject> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SearchByNameMandatory
+```
+Remove-CMSoftwareUpdateGroup [-Force] -Name <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

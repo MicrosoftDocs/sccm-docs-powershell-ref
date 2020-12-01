@@ -17,32 +17,32 @@ Modify the properties of a boundary group.
 
 ### SetByValueMandatory (Default)
 ```
-Set-CMBoundaryGroup -InputObject <IResultObject> [-NewName <String>] [-Description <String>]
- [-DefaultSiteCode <String>] [-AddSiteSystemServer <IResultObject[]>] [-AddSiteSystemServerName <String[]>]
- [-RemoveSiteSystemServer <IResultObject[]>] [-RemoveSiteSystemServerName <String[]>] [-ClearSiteSystemServer]
- [-AllowPeerDownload <Boolean>] [-SubnetPeerDownloadOnly <Boolean>] [-PreferDPOverPeer <Boolean>]
- [-PreferCloudDPOverDP <Boolean>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Set-CMBoundaryGroup [-AddSiteSystemServer <IResultObject[]>] [-AddSiteSystemServerName <String[]>]
+ [-AllowPeerDownload <Boolean>] [-ClearSiteSystemServer] [-DefaultSiteCode <String>] [-Description <String>]
+ -InputObject <IResultObject> [-NewName <String>] [-PassThru] [-PreferCloudDPOverDP <Boolean>]
+ [-PreferDPOverPeer <Boolean>] [-RemoveSiteSystemServer <IResultObject[]>]
+ [-RemoveSiteSystemServerName <String[]>] [-SubnetPeerDownloadOnly <Boolean>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetById
 ```
-Set-CMBoundaryGroup -Id <String> [-NewName <String>] [-Description <String>] [-DefaultSiteCode <String>]
- [-AddSiteSystemServer <IResultObject[]>] [-AddSiteSystemServerName <String[]>]
- [-RemoveSiteSystemServer <IResultObject[]>] [-RemoveSiteSystemServerName <String[]>] [-ClearSiteSystemServer]
- [-AllowPeerDownload <Boolean>] [-SubnetPeerDownloadOnly <Boolean>] [-PreferDPOverPeer <Boolean>]
- [-PreferCloudDPOverDP <Boolean>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Set-CMBoundaryGroup [-AddSiteSystemServer <IResultObject[]>] [-AddSiteSystemServerName <String[]>]
+ [-AllowPeerDownload <Boolean>] [-ClearSiteSystemServer] [-DefaultSiteCode <String>] [-Description <String>]
+ -Id <String> [-NewName <String>] [-PassThru] [-PreferCloudDPOverDP <Boolean>] [-PreferDPOverPeer <Boolean>]
+ [-RemoveSiteSystemServer <IResultObject[]>] [-RemoveSiteSystemServerName <String[]>]
+ [-SubnetPeerDownloadOnly <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### SetByName
 ```
-Set-CMBoundaryGroup -Name <String> [-NewName <String>] [-Description <String>] [-DefaultSiteCode <String>]
- [-AddSiteSystemServer <IResultObject[]>] [-AddSiteSystemServerName <String[]>]
- [-RemoveSiteSystemServer <IResultObject[]>] [-RemoveSiteSystemServerName <String[]>] [-ClearSiteSystemServer]
- [-AllowPeerDownload <Boolean>] [-SubnetPeerDownloadOnly <Boolean>] [-PreferDPOverPeer <Boolean>]
- [-PreferCloudDPOverDP <Boolean>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Set-CMBoundaryGroup [-AddSiteSystemServer <IResultObject[]>] [-AddSiteSystemServerName <String[]>]
+ [-AllowPeerDownload <Boolean>] [-ClearSiteSystemServer] [-DefaultSiteCode <String>] [-Description <String>]
+ -Name <String> [-NewName <String>] [-PassThru] [-PreferCloudDPOverDP <Boolean>] [-PreferDPOverPeer <Boolean>]
+ [-RemoveSiteSystemServer <IResultObject[]>] [-RemoveSiteSystemServerName <String[]>]
+ [-SubnetPeerDownloadOnly <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -234,7 +234,7 @@ Accept wildcard characters: False
 
 ### -Id
 
-Specify the ID of a boundary group to configure. This ID is the **GroupID** property on the [SMS_BoundaryGroup](https://docs.microsoft.com/mem/configmgr/develop/reference/core/servers/configure/sms_boundarygroup-server-wmi-class) object. For example, `33`.
+Specify the ID of a boundary group to configure. This ID is the **GroupID** property on the [SMS_BoundaryGroup](/mem/configmgr/develop/reference/core/servers/configure/sms_boundarygroup-server-wmi-class) object. For example, `33`.
 
 ```yaml
 Type: String
@@ -411,7 +411,6 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -421,8 +420,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### IResultObject#SMS_BoundaryGroup
-
-For more information on this return object and its properties, see [SMS_BoundaryGroup](https://docs.microsoft.com/mem/configmgr/develop/reference/core/servers/configure/sms_boundarygroup-server-wmi-class).
 
 ## NOTES
 

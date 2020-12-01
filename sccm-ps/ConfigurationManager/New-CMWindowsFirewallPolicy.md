@@ -15,11 +15,11 @@ Creates a new Windows Firewall policy in Configuration Manager.
 ## SYNTAX
 
 ```
-New-CMWindowsFirewallPolicy -Name <String> [-Description <String>] [-DomainTurnOnFirewall <SettingType>]
- [-PrivateTurnOnFirewall <SettingType>] [-PublicTurnOnFirewall <SettingType>]
- [-DomainBlockAllInboundTraffic <SettingType>] [-PrivateBlockAllInboundTraffic <SettingType>]
- [-PublicBlockAllInboundTraffic <SettingType>] [-DomainNotification <SettingType>]
- [-PrivateNotification <SettingType>] [-PublicNotification <SettingType>] [-DisableWildcardHandling]
+New-CMWindowsFirewallPolicy [-Description <String>] [-DomainBlockAllInboundTraffic <SettingType>]
+ [-DomainNotification <SettingType>] [-DomainTurnOnFirewall <SettingType>] -Name <String>
+ [-PrivateBlockAllInboundTraffic <SettingType>] [-PrivateNotification <SettingType>]
+ [-PrivateTurnOnFirewall <SettingType>] [-PublicBlockAllInboundTraffic <SettingType>]
+ [-PublicNotification <SettingType>] [-PublicTurnOnFirewall <SettingType>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

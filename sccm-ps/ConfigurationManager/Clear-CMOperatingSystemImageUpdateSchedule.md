@@ -16,19 +16,19 @@ Removes a schedule for updating an operating system image.
 
 ### SearchByValueMandatory (Default)
 ```
-Clear-CMOperatingSystemImageUpdateSchedule -InputObject <IResultObject> [-Force] [-DisableWildcardHandling]
+Clear-CMOperatingSystemImageUpdateSchedule [-Force] -InputObject <IResultObject> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory
 ```
-Clear-CMOperatingSystemImageUpdateSchedule -Id <String> [-Force] [-DisableWildcardHandling]
+Clear-CMOperatingSystemImageUpdateSchedule [-Force] -Id <String> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByNameMandatory
 ```
-Clear-CMOperatingSystemImageUpdateSchedule -Name <String> [-Force] [-DisableWildcardHandling]
+Clear-CMOperatingSystemImageUpdateSchedule [-Force] -Name <String> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

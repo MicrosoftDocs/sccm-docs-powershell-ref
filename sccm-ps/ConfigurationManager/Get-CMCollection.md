@@ -1,4 +1,4 @@
----
+﻿---
 description: Gets a Configuration Manager collection.
 external help file: AdminUI.PS.Collections.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,32 +16,32 @@ Gets a Configuration Manager collection.
 
 ### ByName (Default)
 ```
-Get-CMCollection [-Name <String>] [-CollectionType <CollectionType>] [-DisableWildcardHandling]
+Get-CMCollection [-CollectionType <CollectionType>] [-Name <String>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
-### ById
+### ByDPGroup
 ```
-Get-CMCollection -Id <String> [-CollectionType <CollectionType>] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [<CommonParameters>]
-```
-
-### ByDPGroupName
-```
-Get-CMCollection -DistributionPointGroupName <String> [-CollectionType <CollectionType>]
+Get-CMCollection [-CollectionType <CollectionType>] -DistributionPointGroup <IResultObject>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ### ByDPGroupId
 ```
-Get-CMCollection -DistributionPointGroupId <String> [-CollectionType <CollectionType>]
+Get-CMCollection [-CollectionType <CollectionType>] -DistributionPointGroupId <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
-### ByDPGroup
+### ByDPGroupName
 ```
-Get-CMCollection -DistributionPointGroup <IResultObject> [-CollectionType <CollectionType>]
+Get-CMCollection [-CollectionType <CollectionType>] -DistributionPointGroupName <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
+```
+
+### ById
+```
+Get-CMCollection [-CollectionType <CollectionType>] -Id <String> [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

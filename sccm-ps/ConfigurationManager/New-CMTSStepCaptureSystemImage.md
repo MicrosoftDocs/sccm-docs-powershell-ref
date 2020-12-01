@@ -13,10 +13,10 @@ schema: 2.0.0
 ## SYNTAX
 
 ```
-New-CMTSStepCaptureSystemImage -Path <String> [-ImageDescription <String>] [-ImageVersion <String>]
- [-ImageCreator <String>] -UserName <String> [-Password <SecureString>] -Name <String> [-Description <String>]
- [-ContinueOnError] [-Disable] [-Condition <IResultObject[]>] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+New-CMTSStepCaptureSystemImage [-ImageCreator <String>] [-ImageDescription <String>] [-ImageVersion <String>]
+ [-Password <SecureString>] -Path <String> -UserName <String> [-Condition <IResultObject[]>] [-ContinueOnError]
+ [-Description <String>] [-Disable] -Name <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

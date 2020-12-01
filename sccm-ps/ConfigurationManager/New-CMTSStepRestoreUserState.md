@@ -13,10 +13,10 @@ schema: 2.0.0
 ## SYNTAX
 
 ```
-New-CMTSStepRestoreUserState -Package <IResultObject> [-ModeOption <ModeType>] [-ConfigFile <String[]>]
- [-RestoreLocalAccount <Boolean>] [-Password <SecureString>] [-ContinueOnRestore <Boolean>]
- [-VerboseLogging <Boolean>] -Name <String> [-Description <String>] [-ContinueOnError] [-Disable]
- [-Condition <IResultObject[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+New-CMTSStepRestoreUserState [-ConfigFile <String[]>] [-ContinueOnRestore <Boolean>] [-ModeOption <ModeType>]
+ -Package <IResultObject> [-Password <SecureString>] [-RestoreLocalAccount <Boolean>]
+ [-VerboseLogging <Boolean>] [-Condition <IResultObject[]>] [-ContinueOnError] [-Description <String>]
+ [-Disable] -Name <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 

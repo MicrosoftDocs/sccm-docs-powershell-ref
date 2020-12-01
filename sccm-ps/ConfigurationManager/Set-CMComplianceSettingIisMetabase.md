@@ -16,7 +16,7 @@ Sets a compliance setting iis metabase.
 
 ```
 Set-CMComplianceSettingIisMetabase [-Path <String>] [-PropertyId <UInt32>] [-Description <String>]
- -InputObject <PSObject> -SettingName <String> [-NewSettingName <String>] [-PassThru]
+ -InputObject <PSObject> [-NewSettingName <String>] [-PassThru] -SettingName <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

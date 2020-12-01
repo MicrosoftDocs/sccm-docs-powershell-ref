@@ -21,7 +21,7 @@ Move-CMContentLibrary -InputObject <IResultObject> -NewLocation <String> [-Disab
 
 ### MoveBySiteCodeMandatory
 ```
-Move-CMContentLibrary -SiteCode <String> -NewLocation <String> [-DisableWildcardHandling]
+Move-CMContentLibrary -NewLocation <String> -SiteCode <String> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -167,7 +167,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
-
 ## NOTES
 
 ## RELATED LINKS

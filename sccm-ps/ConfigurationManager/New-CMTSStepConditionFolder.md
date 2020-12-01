@@ -16,9 +16,9 @@ Creates a t s step condition folder.
 ## SYNTAX
 
 ```
-New-CMTSStepConditionFolder -FolderPath <String> [-FolderTimestamp <DateTime>]
- [-FolderDateTimeOperator <VariableOperatorType>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+New-CMTSStepConditionFolder [-FolderDateTimeOperator <VariableOperatorType>] -FolderPath <String>
+ [-FolderTimestamp <DateTime>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

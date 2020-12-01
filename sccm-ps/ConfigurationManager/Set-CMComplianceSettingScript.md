@@ -18,7 +18,7 @@ Sets a compliance setting script.
 Set-CMComplianceSettingScript [-DiscoveryScriptFile <String>] [-DiscoveryScriptLanguage <ScriptingLanguage>]
  [-DiscoveryScriptText <String>] [-Is64Bit <Boolean>] [-IsPerUser <Boolean>] [-RemediationScriptFile <String>]
  [-RemediationScriptLanguage <ScriptingLanguage>] [-RemediationScriptText <String>] [-RemoveRemediationScript]
- [-Description <String>] -InputObject <PSObject> -SettingName <String> [-NewSettingName <String>] [-PassThru]
+ [-Description <String>] -InputObject <PSObject> [-NewSettingName <String>] [-PassThru] -SettingName <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

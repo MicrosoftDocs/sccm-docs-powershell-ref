@@ -15,8 +15,8 @@ Sets a compliance setting registry key.
 ## SYNTAX
 
 ```
-Set-CMComplianceSettingRegistryKey [-Is64Bit <Boolean>] [-KeyName <String>] [-Hive <RegistryRootKey>]
- [-Description <String>] -InputObject <PSObject> -SettingName <String> [-NewSettingName <String>] [-PassThru]
+Set-CMComplianceSettingRegistryKey [-Hive <RegistryRootKey>] [-Is64Bit <Boolean>] [-KeyName <String>]
+ [-Description <String>] -InputObject <PSObject> [-NewSettingName <String>] [-PassThru] -SettingName <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

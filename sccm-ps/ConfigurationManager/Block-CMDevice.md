@@ -20,15 +20,15 @@ Block-CMDevice [-InputObject] <IResultObject> [-DisableWildcardHandling] [-Force
  [-Confirm] [<CommonParameters>]
 ```
 
-### SearchByNameMandatory
-```
-Block-CMDevice -DeviceName <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
-```
-
 ### SearchByIdMandatory
 ```
 Block-CMDevice -DeviceId <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### SearchByNameMandatory
+```
+Block-CMDevice -DeviceName <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 

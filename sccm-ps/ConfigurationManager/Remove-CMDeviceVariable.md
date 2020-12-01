@@ -16,19 +16,19 @@ Removes a variable defined for a Configuration Manager device.
 
 ### SearchByValueMandatory (Default)
 ```
-Remove-CMDeviceVariable -Device <IResultObject> -VariableName <String> [-Force] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### SearchByIdMandatory
-```
-Remove-CMDeviceVariable -ResourceId <String> -VariableName <String> [-Force] [-DisableWildcardHandling]
+Remove-CMDeviceVariable -Device <IResultObject> [-Force] -VariableName <String> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByNameMandatory
 ```
-Remove-CMDeviceVariable -DeviceName <String> -VariableName <String> [-Force] [-DisableWildcardHandling]
+Remove-CMDeviceVariable -DeviceName <String> [-Force] -VariableName <String> [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SearchByIdMandatory
+```
+Remove-CMDeviceVariable [-Force] -ResourceId <String> -VariableName <String> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

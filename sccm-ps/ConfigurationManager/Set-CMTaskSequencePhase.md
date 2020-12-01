@@ -16,52 +16,49 @@ Use this cmdlet to configure a deployment phase for a task sequence.
 
 ### SearchByPhasedDeployment
 ```
-Set-CMTaskSequencePhase [-UserNotification <UserNotificationType>] [-SoftwareInstallation <Boolean>]
- [-AllowSystemRestart <Boolean>] [-WriteFilterCommit <Boolean>] [-PreDownload <Boolean>] [-Comments <String>]
- [-DeploymentOption <DeploymentOptionType>] [-AllowRemoteDP <Boolean>] [-AllowFallback <Boolean>]
- [-CriteriaOption <CriteriaType>] [-CriteriaValue <Int32>] [-BeginCondition <BeginConditionType>]
- [-DaysAfterPreviousPhaseSuccess <Int32>] [-ThrottlingDays <Int32>]
- [-InstallationChoice <InstallationChoiceType>] [-DeadlineUnit <TimeUnitType>] [-DeadlineValue <Int32>]
- [-MovePhase <ReorderType>] [-MoveToOrder <Int32>] [-NewPhaseName <String>] [-NewCollection <IResultObject>]
- [-NewCollectionId <String>] [-NewCollectionName <String>] [-InputObject] <IResultObject> [-Order <Int32>]
- [-Id <String>] [-Name <String>] [-Collection <IResultObject>] [-CollectionId <String>]
- [-CollectionName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Set-CMTaskSequencePhase [-AllowFallback <Boolean>] [-AllowRemoteDP <Boolean>] [-AllowSystemRestart <Boolean>]
+ [-Comments <String>] [-DeploymentOption <DeploymentOptionType>] [-PreDownload <Boolean>]
+ [-SoftwareInstallation <Boolean>] [-UserNotification <UserNotificationType>] [-WriteFilterCommit <Boolean>]
+ [-BeginCondition <BeginConditionType>] [-CriteriaOption <CriteriaType>] [-CriteriaValue <Int32>]
+ [-DaysAfterPreviousPhaseSuccess <Int32>] [-DeadlineUnit <TimeUnitType>] [-DeadlineValue <Int32>]
+ [-InstallationChoice <InstallationChoiceType>] [-MovePhase <ReorderType>] [-MoveToOrder <Int32>]
+ [-NewCollection <IResultObject>] [-NewCollectionId <String>] [-NewCollectionName <String>]
+ [-NewPhaseName <String>] [-ThrottlingDays <Int32>] [-Collection <IResultObject>] [-CollectionId <String>]
+ [-CollectionName <String>] [-Id <String>] [-InputObject] <IResultObject> [-Name <String>] [-Order <Int32>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByPhasedDeploymentId
 ```
-Set-CMTaskSequencePhase [-UserNotification <UserNotificationType>] [-SoftwareInstallation <Boolean>]
- [-AllowSystemRestart <Boolean>] [-WriteFilterCommit <Boolean>] [-PreDownload <Boolean>] [-Comments <String>]
- [-DeploymentOption <DeploymentOptionType>] [-AllowRemoteDP <Boolean>] [-AllowFallback <Boolean>]
- [-CriteriaOption <CriteriaType>] [-CriteriaValue <Int32>] [-BeginCondition <BeginConditionType>]
- [-DaysAfterPreviousPhaseSuccess <Int32>] [-ThrottlingDays <Int32>]
- [-InstallationChoice <InstallationChoiceType>] [-DeadlineUnit <TimeUnitType>] [-DeadlineValue <Int32>]
- [-MovePhase <ReorderType>] [-MoveToOrder <Int32>] [-NewPhaseName <String>] [-NewCollection <IResultObject>]
- [-NewCollectionId <String>] [-NewCollectionName <String>] [-PhasedDeploymentId] <String> [-Order <Int32>]
- [-Id <String>] [-Name <String>] [-Collection <IResultObject>] [-CollectionId <String>]
- [-CollectionName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Set-CMTaskSequencePhase [-AllowFallback <Boolean>] [-AllowRemoteDP <Boolean>] [-AllowSystemRestart <Boolean>]
+ [-Comments <String>] [-DeploymentOption <DeploymentOptionType>] [-PreDownload <Boolean>]
+ [-SoftwareInstallation <Boolean>] [-UserNotification <UserNotificationType>] [-WriteFilterCommit <Boolean>]
+ [-BeginCondition <BeginConditionType>] [-CriteriaOption <CriteriaType>] [-CriteriaValue <Int32>]
+ [-DaysAfterPreviousPhaseSuccess <Int32>] [-DeadlineUnit <TimeUnitType>] [-DeadlineValue <Int32>]
+ [-InstallationChoice <InstallationChoiceType>] [-MovePhase <ReorderType>] [-MoveToOrder <Int32>]
+ [-NewCollection <IResultObject>] [-NewCollectionId <String>] [-NewCollectionName <String>]
+ [-NewPhaseName <String>] [-ThrottlingDays <Int32>] [-Collection <IResultObject>] [-CollectionId <String>]
+ [-CollectionName <String>] [-Id <String>] [-Name <String>] [-Order <Int32>] [-PhasedDeploymentId] <String>
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByPhasedDeploymentName
 ```
-Set-CMTaskSequencePhase [-UserNotification <UserNotificationType>] [-SoftwareInstallation <Boolean>]
- [-AllowSystemRestart <Boolean>] [-WriteFilterCommit <Boolean>] [-PreDownload <Boolean>] [-Comments <String>]
- [-DeploymentOption <DeploymentOptionType>] [-AllowRemoteDP <Boolean>] [-AllowFallback <Boolean>]
- [-CriteriaOption <CriteriaType>] [-CriteriaValue <Int32>] [-BeginCondition <BeginConditionType>]
- [-DaysAfterPreviousPhaseSuccess <Int32>] [-ThrottlingDays <Int32>]
- [-InstallationChoice <InstallationChoiceType>] [-DeadlineUnit <TimeUnitType>] [-DeadlineValue <Int32>]
- [-MovePhase <ReorderType>] [-MoveToOrder <Int32>] [-NewPhaseName <String>] [-NewCollection <IResultObject>]
- [-NewCollectionId <String>] [-NewCollectionName <String>] [-PhasedDeploymentName] <String> [-Order <Int32>]
- [-Id <String>] [-Name <String>] [-Collection <IResultObject>] [-CollectionId <String>]
- [-CollectionName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Set-CMTaskSequencePhase [-AllowFallback <Boolean>] [-AllowRemoteDP <Boolean>] [-AllowSystemRestart <Boolean>]
+ [-Comments <String>] [-DeploymentOption <DeploymentOptionType>] [-PreDownload <Boolean>]
+ [-SoftwareInstallation <Boolean>] [-UserNotification <UserNotificationType>] [-WriteFilterCommit <Boolean>]
+ [-BeginCondition <BeginConditionType>] [-CriteriaOption <CriteriaType>] [-CriteriaValue <Int32>]
+ [-DaysAfterPreviousPhaseSuccess <Int32>] [-DeadlineUnit <TimeUnitType>] [-DeadlineValue <Int32>]
+ [-InstallationChoice <InstallationChoiceType>] [-MovePhase <ReorderType>] [-MoveToOrder <Int32>]
+ [-NewCollection <IResultObject>] [-NewCollectionId <String>] [-NewCollectionName <String>]
+ [-NewPhaseName <String>] [-ThrottlingDays <Int32>] [-Collection <IResultObject>] [-CollectionId <String>]
+ [-CollectionName <String>] [-Id <String>] [-Name <String>] [-Order <Int32>] [-PhasedDeploymentName] <String>
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-Applies to version 2006 and later. Use this cmdlet to configure a deployment phase for a task sequence. For more information, see [Create phased deployments](https://docs.microsoft.com/mem/configmgr/osd/deploy-use/create-phased-deployment-for-task-sequence).
+Applies to version 2006 and later. Use this cmdlet to configure a deployment phase for a task sequence. For more information, see [Create phased deployments](/mem/configmgr/osd/deploy-use/create-phased-deployment-for-task-sequence).
 
 ## EXAMPLES
 
@@ -737,4 +734,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Suspend-CMPhasedDeployment](Suspend-CMPhasedDeployment.md)
 
-[Create phased deployments](https://docs.microsoft.com/mem/configmgr/osd/deploy-use/create-phased-deployment-for-task-sequence)
+[Create phased deployments](/mem/configmgr/osd/deploy-use/create-phased-deployment-for-task-sequence)

@@ -16,24 +16,25 @@ Sets a boundary group relationship.
 
 ### SetByValueMandatory (Default)
 ```
-Set-CMBoundaryGroupRelationship -InputObject <IResultObject> [-FallbackDPMinutes <Int32>]
- [-FallbackMPMinutes <Int32>] [-FallbackSmpMinutes <Int32>] [-FallbackSupMinutes <Int32>] [-PassThru]
+Set-CMBoundaryGroupRelationship [-FallbackDPMinutes <Int32>] [-FallbackMPMinutes <Int32>]
+ [-FallbackSmpMinutes <Int32>] [-FallbackSupMinutes <Int32>] -InputObject <IResultObject> [-PassThru]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetByIdMandatory
 ```
-Set-CMBoundaryGroupRelationship -SourceGroupId <Int32> -DestinationGroupId <Int32> [-FallbackDPMinutes <Int32>]
+Set-CMBoundaryGroupRelationship -DestinationGroupId <Int32> [-FallbackDPMinutes <Int32>]
  [-FallbackMPMinutes <Int32>] [-FallbackSmpMinutes <Int32>] [-FallbackSupMinutes <Int32>] [-PassThru]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ -SourceGroupId <Int32> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### SetByNameMandatory
 ```
-Set-CMBoundaryGroupRelationship -SourceGroupName <String> -DestinationGroupName <String>
- [-FallbackDPMinutes <Int32>] [-FallbackMPMinutes <Int32>] [-FallbackSmpMinutes <Int32>]
- [-FallbackSupMinutes <Int32>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Set-CMBoundaryGroupRelationship -DestinationGroupName <String> [-FallbackDPMinutes <Int32>]
+ [-FallbackMPMinutes <Int32>] [-FallbackSmpMinutes <Int32>] [-FallbackSupMinutes <Int32>] [-PassThru]
+ -SourceGroupName <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

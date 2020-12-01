@@ -16,28 +16,29 @@ Configure a phased deployment for a task sequence.
 
 ### SearchByValue
 ```
-Set-CMTaskSequencePhasedDeployment -InputObject <IResultObject> [-NewName <String>] [-Description <String>]
- [-AddPhases <Phase[]>] [-RemovePhases <Phase[]>] [-RemovePhaseOrders <Int32[]>] [-RemovePhaseIds <String[]>]
- [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMTaskSequencePhasedDeployment [-AddPhases <Phase[]>] [-Description <String>] -InputObject <IResultObject>
+ [-NewName <String>] [-PassThru] [-RemovePhaseIds <String[]>] [-RemovePhaseOrders <Int32[]>]
+ [-RemovePhases <Phase[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### SearchById
 ```
-Set-CMTaskSequencePhasedDeployment [-NewName <String>] [-Description <String>] [-AddPhases <Phase[]>]
- [-RemovePhases <Phase[]>] [-RemovePhaseOrders <Int32[]>] [-RemovePhaseIds <String[]>] [-PassThru] -Id <String>
+Set-CMTaskSequencePhasedDeployment [-AddPhases <Phase[]>] [-Description <String>] [-NewName <String>]
+ [-PassThru] [-RemovePhaseIds <String[]>] [-RemovePhaseOrders <Int32[]>] [-RemovePhases <Phase[]>] -Id <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByName
 ```
-Set-CMTaskSequencePhasedDeployment [-NewName <String>] [-Description <String>] [-AddPhases <Phase[]>]
- [-RemovePhases <Phase[]>] [-RemovePhaseOrders <Int32[]>] [-RemovePhaseIds <String[]>] [-PassThru]
+Set-CMTaskSequencePhasedDeployment [-AddPhases <Phase[]>] [-Description <String>] [-NewName <String>]
+ [-PassThru] [-RemovePhaseIds <String[]>] [-RemovePhaseOrders <Int32[]>] [-RemovePhases <Phase[]>]
  -Name <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-Applies to version 2006 and later. Configure a phased deployment for a task sequence. For more information, see [Create phased deployments](https://docs.microsoft.com/mem/configmgr/osd/deploy-use/create-phased-deployment-for-task-sequence).
+Applies to version 2006 and later. Configure a phased deployment for a task sequence. For more information, see [Create phased deployments](/mem/configmgr/osd/deploy-use/create-phased-deployment-for-task-sequence).
 
 ## EXAMPLES
 
@@ -324,4 +325,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Suspend-CMPhasedDeployment](Suspend-CMPhasedDeployment.md)
 
-[Create phased deployments](https://docs.microsoft.com/mem/configmgr/osd/deploy-use/create-phased-deployment-for-task-sequence)
+[Create phased deployments](/mem/configmgr/osd/deploy-use/create-phased-deployment-for-task-sequence)

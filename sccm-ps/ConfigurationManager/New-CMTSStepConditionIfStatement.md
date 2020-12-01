@@ -16,7 +16,7 @@ Creates a t s step condition if statement.
 ## SYNTAX
 
 ```
-New-CMTSStepConditionIfStatement -StatementType <ConditionStatementType> [-Condition <IResultObject[]>]
+New-CMTSStepConditionIfStatement [-Condition <IResultObject[]>] -StatementType <ConditionStatementType>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

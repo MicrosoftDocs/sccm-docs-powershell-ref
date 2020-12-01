@@ -1,9 +1,9 @@
 ---
 external help file: AdminUI.PS.Osd.dll-Help.xml
 Module Name: ConfigurationManager
+ms.date: 10/28/2020
 online version:
 schema: 2.0.0
-ms.date: 10/28/2020
 ---
 
 # New-CMTSStepDownloadPackageContent
@@ -14,9 +14,9 @@ Add the **Download Package Content** step to a task sequence.
 ## SYNTAX
 
 ```
-New-CMTSStepDownloadPackageContent -AddPackage <IResultObject[]> [-LocationOption <LocationType>]
- [-Path <String>] [-DestinationVariable <String>] [-ContinueDownload <Boolean>] -Name <String>
- [-Description <String>] [-ContinueOnError] [-Disable] [-Condition <IResultObject[]>]
+New-CMTSStepDownloadPackageContent -AddPackage <IResultObject[]> [-ContinueDownload <Boolean>]
+ [-DestinationVariable <String>] [-LocationOption <LocationType>] [-Path <String>]
+ [-Condition <IResultObject[]>] [-ContinueOnError] [-Description <String>] [-Disable] -Name <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

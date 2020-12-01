@@ -16,8 +16,9 @@ Creates capture media.
 
 ```
 New-CMCaptureMedia [-AllowUacPrompt] -BootImage <IResultObject> -DistributionPoint <IResultObject[]> [-Force]
- [-FormatMedia] -MediaType <MediaInputType> -Path <String> [-TemporaryFolder <String>] [-NoAutoRun]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-FormatMedia] [-SiteCode <String>] -MediaType <MediaInputType> [-NoAutoRun] -Path <String>
+ [-TemporaryFolder <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -215,6 +216,21 @@ Parameter Sets: (All)
 Aliases: MediaPath, OutputPath, DriveName
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SiteCode
+{{ Fill SiteCode Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False

@@ -16,23 +16,23 @@ Sets a device collection variable.
 
 ### SetByValueMandatory (Default)
 ```
-Set-CMDeviceCollectionVariable -InputObject <IResultObject> -VariableName <String> [-NewVariableName <String>]
- [-NewVariableValue <String>] [-IsMask <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Set-CMDeviceCollectionVariable -InputObject <IResultObject> [-IsMask <Boolean>] [-NewVariableName <String>]
+ [-NewVariableValue <String>] -VariableName <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetByIdMandatory
 ```
-Set-CMDeviceCollectionVariable -CollectionId <String> -VariableName <String> [-NewVariableName <String>]
- [-NewVariableValue <String>] [-IsMask <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Set-CMDeviceCollectionVariable -CollectionId <String> [-IsMask <Boolean>] [-NewVariableName <String>]
+ [-NewVariableValue <String>] -VariableName <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetByNameMandatory
 ```
-Set-CMDeviceCollectionVariable -CollectionName <String> -VariableName <String> [-NewVariableName <String>]
- [-NewVariableValue <String>] [-IsMask <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Set-CMDeviceCollectionVariable -CollectionName <String> [-IsMask <Boolean>] [-NewVariableName <String>]
+ [-NewVariableValue <String>] -VariableName <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -245,7 +245,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Planning a Task Sequence Strategy in Configuration Manager](https://docs.microsoft.com/mem/configmgr/osd/plan-design/planning-considerations-for-automating-tasks)
+[Planning a Task Sequence Strategy in Configuration Manager](/mem/configmgr/osd/plan-design/planning-considerations-for-automating-tasks)
 
 [Get-CMDeviceCollectionVariable](Get-CMDeviceCollectionVariable.md)
 

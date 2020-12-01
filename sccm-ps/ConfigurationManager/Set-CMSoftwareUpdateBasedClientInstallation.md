@@ -16,13 +16,13 @@ Modifies a client installation on a Configuration Manager software update point.
 
 ### SearchBySiteCodeMandatory (Default)
 ```
-Set-CMSoftwareUpdateBasedClientInstallation [-SiteCode <String>] -EnableWsus <Boolean>
+Set-CMSoftwareUpdateBasedClientInstallation -EnableWsus <Boolean> [-SiteCode <String>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByNameMandatory
 ```
-Set-CMSoftwareUpdateBasedClientInstallation -Name <String> -EnableWsus <Boolean> [-DisableWildcardHandling]
+Set-CMSoftwareUpdateBasedClientInstallation -EnableWsus <Boolean> -Name <String> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

@@ -1,8 +1,8 @@
 ---
-description: Changes settings for a Configuration Manager maintenance task.
+description: Change settings for a Configuration Manager maintenance task.
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/07/2019
+ms.date: 11/20/2020
 schema: 2.0.0
 title: Set-CMSiteMaintenanceTask
 ---
@@ -10,48 +10,50 @@ title: Set-CMSiteMaintenanceTask
 # Set-CMSiteMaintenanceTask
 
 ## SYNOPSIS
-Changes settings for a Configuration Manager maintenance task.
+
+Change settings for a Configuration Manager maintenance task.
 
 ## SYNTAX
 
 ### SetSummaryTaskByName (Default)
 ```
-Set-CMSiteMaintenanceTask -SummaryTask <SummaryTask> [-RunNow] [-RunIntervalMins <Int32>] [-FixedRun]
- [-SiteCode <String>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+Set-CMSiteMaintenanceTask [-FixedRun] [-RunIntervalMins <Int32>] [-RunNow] -SummaryTask <SummaryTask>
+ [-PassThru] [-SiteCode <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ### SetMaintenanceTasksByValue
 ```
-Set-CMSiteMaintenanceTask [-DeleteOlderThanDays <Int32>] [-DeviceName <String>] [-Enabled <Boolean>]
- [-BeginTime <DateTime>] [-LatestBeginTime <DateTime>] [-DaysOfWeek <DaysOfWeek[]>] [-EnableAlert <Boolean>]
- -InputObject <IResultObject> [-SiteCode <String>] [-PassThru] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMSiteMaintenanceTask [-BeginTime <DateTime>] [-DaysOfWeek <DaysOfWeek[]>] [-DeleteOlderThanDays <Int32>]
+ [-DeviceName <String>] [-EnableAlert <Boolean>] [-Enabled <Boolean>] -InputObject <IResultObject>
+ [-LatestBeginTime <DateTime>] [-SiteBackupPath <String>] [-SqlBackupPath <String>] [-PassThru]
+ [-SiteCode <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### SetMaintenanceTasksByTaskName
 ```
-Set-CMSiteMaintenanceTask [-DeleteOlderThanDays <Int32>] [-DeviceName <String>] -Name <String>
- [-Enabled <Boolean>] [-BeginTime <DateTime>] [-LatestBeginTime <DateTime>] [-DaysOfWeek <DaysOfWeek[]>]
- [-EnableAlert <Boolean>] [-SiteCode <String>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMSiteMaintenanceTask [-BeginTime <DateTime>] [-DaysOfWeek <DaysOfWeek[]>] [-DeleteOlderThanDays <Int32>]
+ [-DeviceName <String>] [-EnableAlert <Boolean>] [-Enabled <Boolean>] [-LatestBeginTime <DateTime>]
+ -Name <String> [-SiteBackupPath <String>] [-SqlBackupPath <String>] [-PassThru] [-SiteCode <String>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetMaintenanceTasksByName
 ```
-Set-CMSiteMaintenanceTask [-DeleteOlderThanDays <Int32>] [-DeviceName <String>]
- -MaintenanceTask <MaintenanceTask> [-Enabled <Boolean>] [-BeginTime <DateTime>] [-LatestBeginTime <DateTime>]
- [-DaysOfWeek <DaysOfWeek[]>] [-EnableAlert <Boolean>] [-SiteCode <String>] [-PassThru]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMSiteMaintenanceTask [-BeginTime <DateTime>] [-DaysOfWeek <DaysOfWeek[]>] [-DeleteOlderThanDays <Int32>]
+ [-DeviceName <String>] [-EnableAlert <Boolean>] [-Enabled <Boolean>] [-LatestBeginTime <DateTime>]
+ -MaintenanceTask <MaintenanceTask> [-SiteBackupPath <String>] [-SqlBackupPath <String>] [-PassThru]
+ [-SiteCode <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Set-CMSiteMaintenanceTask** cmdlet changes settings for a Configuration Manager maintenance task.
+
+The **Set-CMSiteMaintenanceTask** cmdlet changes settings for a Configuration Manager maintenance task. For more information, see [Maintenance tasks](/mem/configmgr/core/servers/manage/maintenance-tasks).
 
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
@@ -63,10 +65,17 @@ This example specifies that the maintenance task named **Backup SMS Site Server*
 Set-CMSiteMaintenanceTask -SiteCode "CM1" -MaintenanceTaskName "Backup SMS Site Server" -DaysOfWeek Friday
 ```
 
+### Example 2: Configure backup destinations
+
+```powershell
+Set-CMSiteMaintenanceTask -Name $TaskName -SiteBackupPath "c:\site-backup" -SqlBackupPath "c:\sql-backup" -BeginTime (Get-Date) -DaysOfWeek Sunday,Monday -EnableAlert $true -Enabled $true
+```
+
 ## PARAMETERS
 
 ### -BeginTime
-Specifies the date and time at which a maintenance task starts.
+
+Specify the date and time at which a maintenance task starts.
 
 ```yaml
 Type: DateTime
@@ -81,6 +90,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -96,16 +106,8 @@ Accept wildcard characters: False
 ```
 
 ### -DaysOfWeek
-Specifies an array of day names that determine the days of each week on which the maintenance task runs.
-The acceptable values for this parameter are:
 
-- Monday
-- Tuesday
-- Wednesday
-- Thursday
-- Friday
-- Saturday
-- Sunday
+Specify an array of day names that determine the days of each week on which the maintenance task runs.
 
 ```yaml
 Type: DaysOfWeek[]
@@ -121,6 +123,9 @@ Accept wildcard characters: False
 ```
 
 ### -DeleteOlderThanDays
+
+For maintenance tasks that delete aged data, use this parameter to specify the number of days.
+
 ```yaml
 Type: Int32
 Parameter Sets: SetMaintenanceTasksByValue, SetMaintenanceTasksByTaskName, SetMaintenanceTasksByName
@@ -134,6 +139,7 @@ Accept wildcard characters: False
 ```
 
 ### -DeviceName
+
 Specifies the name of the device on which the maintenance task runs.
 
 ```yaml
@@ -149,7 +155,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
+
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -164,6 +171,9 @@ Accept wildcard characters: False
 ```
 
 ### -EnableAlert
+
+Set this parameter to `$true` to enable alerts for task failures, if the task supports it.
+
 ```yaml
 Type: Boolean
 Parameter Sets: SetMaintenanceTasksByValue, SetMaintenanceTasksByTaskName, SetMaintenanceTasksByName
@@ -177,6 +187,7 @@ Accept wildcard characters: False
 ```
 
 ### -Enabled
+
 Indicates whether the maintenance task is enabled in Configuration Manager.
 
 ```yaml
@@ -192,6 +203,7 @@ Accept wildcard characters: False
 ```
 
 ### -FixedRun
+
 Indicates that this cmdlet modifies the maintenance task as a fixed run.
 
 ```yaml
@@ -207,7 +219,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
+
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -222,6 +235,9 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
+
+Specify the maintenance task object to configure. To get this object, use the [Get-CMSiteMaintenanceTask](Get-CMSiteMaintenanceTask.md) cmdlet.
+
 ```yaml
 Type: IResultObject
 Parameter Sets: SetMaintenanceTasksByValue
@@ -235,6 +251,7 @@ Accept wildcard characters: False
 ```
 
 ### -LatestBeginTime
+
 Specifies a future date and time at which the maintenance task runs.
 
 ```yaml
@@ -250,56 +267,8 @@ Accept wildcard characters: False
 ```
 
 ### -MaintenanceTask
-Specifies the name of a maintenance task.
-The acceptable values for this parameter are:
 
-- BackupConfigMgrSecondarySiteServer
-- BackupSiteServer
-- CheckApplicationTitleWithInventoryInformation
-- ClearUndiscoveredClients
-- DeleteAgedApplicationRequestData
-- DeleteAgedClientAccessLicenseData
-- DeleteAgedClientOperations
-- DeleteAgedClientPresenceHistory
-- DeleteAgedCollectedFiles
-- DeleteAgedComputerAssociationData
-- DeleteAgedConfigurationManagementData
-- DeleteAgedDeleteDetectionData
-- DeleteAgedDevicesManagedByTheExchangeServerConnector
-- DeleteAgedDeviceWipeRecord
-- DeleteAgedDiscoveryData
-- DeleteAgedEndpointProtectionHealthStatusHistoryData
-- DeleteAgedEnrolledDevices
-- DeleteAgedInventoryHistory
-- DeleteAgedLogData
-- DeleteAgedNotificationTaskHistory
-- DeleteAgedReplicationSummaryData
-- DeleteAgedReplicationTrackingData
-- DeleteAgedSoftwareMeteringData
-- DeleteAgedStatusMessages
-- DeleteAgedThreatData
-- DeleteAgedUnknownComputers
-- DeleteAgedUserDeviceAffinityData
-- DeletedAgedClientPresenceHistory
-- DeleteExpiredActivities
-- DeleteExpiredActivityFacts
-- DeleteExpiredBookmarks
-- DeleteInactiveClientDiscoveryData
-- DeleteObsoleteAlerts
-- DeleteObsoleteClientDiscoveryData
-- DeleteObsoleteForestDiscoverySitesAndSubnets
-- DeleteUnusedApplicationRevisions
-- EvaluateProvisionedAmtComputerCertificates
-- ExportSiteDatabaseTransactionLog
-- MonitorKeys
-- RebuildIndexes
-- ResetAmtComputerPasswords
-- SiteDatabase
-- SummarizeClientAccessLicenseWeeklyUsageData
-- SummarizeInstalledSoftwareData
-- SummarizeSoftwareMeteringFileUsageData
-- SummarizeSoftwareMeteringMonthlyUsageData
-- UpdateStatistics
+Specify the name of a maintenance task to configure.
 
 ```yaml
 Type: MaintenanceTask
@@ -315,7 +284,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{ Fill Name Description }}
+
+Specify the name of a maintenance task object to configure.
 
 ```yaml
 Type: String
@@ -330,6 +300,9 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
+
+Returns an object representing the item with which you're working. By default, this cmdlet may not generate any output.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -356,7 +329,8 @@ Accept wildcard characters: False
 ```
 
 ### -RunNow
-Indicates whether Configuration Manager runs the maintenance task immediately.
+
+Add this parameter to have Configuration Manager run the maintenance task immediately.
 
 ```yaml
 Type: SwitchParameter
@@ -370,7 +344,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -SiteBackupPath
+
+Applies to version 2010 and later. For the **Backup Site Server** task, specify the **Site backup destination**. The site server computer account needs full control to the destination folder.
+
+```yaml
+Type: String
+Parameter Sets: SetMaintenanceTasksByValue, SetMaintenanceTasksByTaskName, SetMaintenanceTasksByName
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -SiteCode
+
 Specifies the site code of the Configuration Manager site that hosts the site system role.
 
 ```yaml
@@ -385,9 +376,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -SqlBackupPath
+
+Applies to version 2010 and later. For the **Backup Site Server** task, specify the **SQL backup destination**. The site server computer account needs full control to the destination folder.
+
+```yaml
+Type: String
+Parameter Sets: SetMaintenanceTasksByValue, SetMaintenanceTasksByTaskName, SetMaintenanceTasksByName
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -SummaryTask
+
 Specifies a summary maintenance task.
-The acceptable value for this parameter is UpdateApplicationCatalogTables.
 
 ```yaml
 Type: SummaryTask
@@ -403,8 +410,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+
+Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
 
 ```yaml
 Type: SwitchParameter

@@ -16,32 +16,32 @@ Sets a client setting software inventory.
 
 ### SetCustomSettingByName (Default)
 ```
-Set-CMClientSettingSoftwareInventory [-Enable <Boolean>] [-Schedule <IResultObject>]
- [-ReportOption <ReportOptionType>] [-FileName <String>] [-FileDisplayName <String>]
- [-FileInventoriedName <String>] [-AddInventoryFileType <Hashtable[]>] [-RemoveInventoryFileType <Hashtable[]>]
- [-CleanInventoryFileType] [-AddCollectFile <Hashtable[]>] [-RemoveCollectFile <Hashtable[]>]
- [-CleanCollectFile] -Name <String> [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Set-CMClientSettingSoftwareInventory [-AddCollectFile <Hashtable[]>] [-AddInventoryFileType <Hashtable[]>]
+ [-CleanCollectFile] [-CleanInventoryFileType] [-Enable <Boolean>] [-FileDisplayName <String>]
+ [-FileInventoriedName <String>] [-FileName <String>] [-RemoveCollectFile <Hashtable[]>]
+ [-RemoveInventoryFileType <Hashtable[]>] [-ReportOption <ReportOptionType>] [-Schedule <IResultObject>]
+ -Name <String> [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### SetDefaultSetting
 ```
-Set-CMClientSettingSoftwareInventory [-Enable <Boolean>] [-Schedule <IResultObject>]
- [-ReportOption <ReportOptionType>] [-FileName <String>] [-FileDisplayName <String>]
- [-FileInventoriedName <String>] [-AddInventoryFileType <Hashtable[]>] [-RemoveInventoryFileType <Hashtable[]>]
- [-CleanInventoryFileType] [-AddCollectFile <Hashtable[]>] [-RemoveCollectFile <Hashtable[]>]
- [-CleanCollectFile] [-DefaultSetting] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMClientSettingSoftwareInventory [-AddCollectFile <Hashtable[]>] [-AddInventoryFileType <Hashtable[]>]
+ [-CleanCollectFile] [-CleanInventoryFileType] [-Enable <Boolean>] [-FileDisplayName <String>]
+ [-FileInventoriedName <String>] [-FileName <String>] [-RemoveCollectFile <Hashtable[]>]
+ [-RemoveInventoryFileType <Hashtable[]>] [-ReportOption <ReportOptionType>] [-Schedule <IResultObject>]
+ [-DefaultSetting] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### SetCustomSettingByValue
 ```
-Set-CMClientSettingSoftwareInventory [-Enable <Boolean>] [-Schedule <IResultObject>]
- [-ReportOption <ReportOptionType>] [-FileName <String>] [-FileDisplayName <String>]
- [-FileInventoriedName <String>] [-AddInventoryFileType <Hashtable[]>] [-RemoveInventoryFileType <Hashtable[]>]
- [-CleanInventoryFileType] [-AddCollectFile <Hashtable[]>] [-RemoveCollectFile <Hashtable[]>]
- [-CleanCollectFile] -InputObject <IResultObject> [-PassThru] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMClientSettingSoftwareInventory [-AddCollectFile <Hashtable[]>] [-AddInventoryFileType <Hashtable[]>]
+ [-CleanCollectFile] [-CleanInventoryFileType] [-Enable <Boolean>] [-FileDisplayName <String>]
+ [-FileInventoriedName <String>] [-FileName <String>] [-RemoveCollectFile <Hashtable[]>]
+ [-RemoveInventoryFileType <Hashtable[]>] [-ReportOption <ReportOptionType>] [-Schedule <IResultObject>]
+ -InputObject <IResultObject> [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

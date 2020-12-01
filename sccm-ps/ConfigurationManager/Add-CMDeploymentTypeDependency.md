@@ -16,9 +16,9 @@ Adds a deployment type as a dependency to a dependency group in Configuration Ma
 ## SYNTAX
 
 ```
-Add-CMDeploymentTypeDependency [-IsAutoInstall <Boolean>] -DeploymentTypeDependency <IResultObject[]>
- -InputObject <DeploymentTypeDependencyGroup> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Add-CMDeploymentTypeDependency -DeploymentTypeDependency <IResultObject[]>
+ -InputObject <DeploymentTypeDependencyGroup> [-IsAutoInstall <Boolean>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

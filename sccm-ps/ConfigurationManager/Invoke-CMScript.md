@@ -1,8 +1,8 @@
 ---
-description: Invokes a script in Configuration Manager.
+description: Invoke a script in Configuration Manager.
 external help file: AdminUI.PS.ClientOperations.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 11/15/2018
+ms.date: 11/17/2020
 schema: 2.0.0
 title: Invoke-CMScript
 ---
@@ -11,59 +11,66 @@ title: Invoke-CMScript
 
 ## SYNOPSIS
 
-Invokes a script in Configuration Manager.
+Invoke a script in Configuration Manager.
 
 ## SYNTAX
 
 ### ByInputObject
 ```
 Invoke-CMScript [-Collection <IResultObject>] [-CollectionId <String>] [-CollectionName <String>]
- [-Device <IResultObject[]>] -InputObject <IResultObject> [-PassThru] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-Device <IResultObject[]>] -InputObject <IResultObject> [-PassThru] [-ScriptParameter <Hashtable>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByGuid
 ```
 Invoke-CMScript [-Collection <IResultObject>] [-CollectionId <String>] [-CollectionName <String>]
- [-Device <IResultObject[]>] [-PassThru] -ScriptGuid <String> [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-Device <IResultObject[]>] [-PassThru] -ScriptGuid <String> [-ScriptParameter <Hashtable>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-The **Invoke-CMScript** cmdlet invokes a PowerShell script in Configuration Manager. Configuration Manager has an integrated ability to run Powershell scripts. The scripts simplify building custom tools to administer software and let you accomplish mundane tasks quickly, allowing you to get large jobs done more easily and more consistently. For more information, see [Create and run PowerShell scripts from the Configuration Manager console](/sccm/apps/deploy-use/create-deploy-scripts).
+The **Invoke-CMScript** cmdlet invokes a PowerShell script in Configuration Manager. Configuration Manager has an integrated ability to run PowerShell scripts. The scripts simplify building custom tools to administer software and let you accomplish mundane tasks quickly, allowing you to get large jobs done more easily and more consistently. For more information, see [Create and run PowerShell scripts from the Configuration Manager console](/mem/configmgr/apps/deploy-use/create-deploy-scripts).
 
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
 ### Example 1: Invoke a script by using the script id
 
-```powershell
-PS XYZ:\> Invoke-CMScript -ScriptGuid "DF8E7546-FD66-4A3D-A129-53AF5AA54F80"
-```
-
 This command invoke a script that has the ID DF8E7546-FD66-4A3D-A129-53AF5AA54F80  .
+
+```powershell
+Invoke-CMScript -ScriptGuid "DF8E7546-FD66-4A3D-A129-53AF5AA54F80"
+```
 
 ### Example 2: Invoke a script by using script object variable
 
+The first command gets a **CMScript** object by its ID, and then stores it in the **$ScriptObj** variable. The second command invokes the script stored in that variable.
+
 ```powershell
-PS XYZ:\> $ScriptObj = Get-CMScript -Id "DF8E7546-FD66-4A3D-A129-53AF5AA54F80"
-PS XYZ:\> Invoke-CMScript -InputObject $ScriptObj
+$ScriptObj = Get-CMScript -Id "DF8E7546-FD66-4A3D-A129-53AF5AA54F80"
+
+Invoke-CMScript -InputObject $ScriptObj
 ```
 
-The first command gets a **CMScript** object that has the ID DF8E7546-FD66-4A3D-A129-53AF5AA54F80, and then stores it in the $ScriptObj variable.
+### Example 3: Pass parameters to the target script
 
-The second command invokes the script stored in the $ScriptObj variable.
+The first line stores parameters in a hashtable. The second line invokes the script on the target device, passing the parameters in the hashtable.
+
+```powershell
+$Hash = @{"FolderName"="c:\test\test1"; "FileName"="test2"}
+
+Invoke-CMScript -ScriptGuid $scriptGuid -Device (Get-CMDevice -Name $targetPCName) -ScriptParameter $Hash
+```
 
 ## PARAMETERS
 
 ### -Collection
 
-Specifies the collection.
+Specify a collection object. To get this object, use the [Get-CMCollection](Get-CMCollection.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -79,7 +86,7 @@ Accept wildcard characters: False
 
 ### -CollectionId
 
-Specifies the ID of a collection.
+Specify the ID of a collection.
 
 ```yaml
 Type: String
@@ -95,7 +102,7 @@ Accept wildcard characters: False
 
 ### -CollectionName
 
-Specifies the name of a collection.
+Specify the name of a collection.
 
 ```yaml
 Type: String
@@ -127,8 +134,7 @@ Accept wildcard characters: False
 
 ### -Device
 
-Specifies a device object in Configuration Manager.
-To obtain a device object, use the [Get-CMDevice](Get-CMDevice.md) cmdlet.
+Specify a device object in Configuration Manager. To get this object, use the [Get-CMDevice](Get-CMDevice.md) cmdlet.
 
 ```yaml
 Type: IResultObject[]
@@ -144,7 +150,7 @@ Accept wildcard characters: False
 
 ### -DisableWildcardHandling
 
-DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -160,7 +166,7 @@ Accept wildcard characters: False
 
 ### -ForceWildcardHandling
 
-ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -176,8 +182,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 
-Specifies a **CMScript** object.
-To obtain a **CMScript** object, use [Get-CMScript](Get-CMScript.md).
+Specify a Configuration Manager script object. To get this object, use the [Get-CMScript](Get-CMScript.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -193,8 +198,7 @@ Accept wildcard characters: False
 
 ### -PassThru
 
-Returns the current working object.
-By default, this cmdlet does not generate any output.
+Returns an object representing the item with which you're working. By default, this cmdlet may not generate any output.
 
 ```yaml
 Type: SwitchParameter
@@ -210,7 +214,7 @@ Accept wildcard characters: False
 
 ### -ScriptGuid
 
-Specifies the script ID.
+Specify the script ID. THe format is a standard GUID.
 
 ```yaml
 Type: String
@@ -224,10 +228,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ScriptParameter
+
+Applies to version 2010 and later. Use this parameter to pass parameters to the target script. Specify a hashtable with the required parameters. For an example of usage, see [Examples](#examples).
+
+```yaml
+Type: Hashtable
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet isn't run.
 
 ```yaml
 Type: SwitchParameter
@@ -251,6 +270,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
@@ -259,7 +279,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Deny-CMScript](Deny-CMScript.md)
 
-[Get-CMScript](Invoke-CMScript.md)
+[Get-CMScript](Get-CMScript.md)
 
 [Remove-CMScript](Remove-CMScript.md)
 

@@ -20,15 +20,15 @@ Approve-CMDevice -InputObject <IResultObject> [-DisableWildcardHandling] [-Force
  [-Confirm] [<CommonParameters>]
 ```
 
-### SearchByNameMandatory
-```
-Approve-CMDevice -DeviceName <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
-```
-
 ### SearchByIdMandatory
 ```
 Approve-CMDevice -DeviceId <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### SearchByNameMandatory
+```
+Approve-CMDevice -DeviceName <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 

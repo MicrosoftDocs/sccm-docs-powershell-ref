@@ -15,7 +15,7 @@ Imports Configuration Manager baselines.
 ## SYNTAX
 
 ```
-Import-CMBaseline -FileName <String[]> [-DuplicateWhileImporting] [-Force] [-DisableWildcardHandling]
+Import-CMBaseline [-DuplicateWhileImporting] -FileName <String[]> [-Force] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

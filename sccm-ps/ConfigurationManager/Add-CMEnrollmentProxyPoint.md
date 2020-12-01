@@ -16,15 +16,15 @@ Adds an enrollment proxy point to Configuration Manager.
 
 ### EnrollmentProxyPointByValue (Default)
 ```
-Add-CMEnrollmentProxyPoint [-WebsiteName <String>] [-PortNumber <Int32>] [-ServiceHost <IResultObject>]
- -InputObject <IResultObject> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+Add-CMEnrollmentProxyPoint -InputObject <IResultObject> [-PortNumber <Int32>] [-ServiceHost <IResultObject>]
+ [-WebsiteName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ### EnrollmentProxyPoint
 ```
-Add-CMEnrollmentProxyPoint [-WebsiteName <String>] [-PortNumber <Int32>] [-ServiceHost <IResultObject>]
- [-SiteSystemServerName] <String> [-SiteCode <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Add-CMEnrollmentProxyPoint [-PortNumber <Int32>] [-ServiceHost <IResultObject>] [-SiteCode <String>]
+ [-SiteSystemServerName] <String> [-WebsiteName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -36,7 +36,7 @@ When Configuration Manager enrolls a mobile device, it installs a Configuration 
 The client provides management capabilities that include hardware inventory, software deployment, settings, and remote wipe.
 To enroll mobile devices, use Microsoft Certificate Services with an enterprise certification authority (CA).
 You need a Configuration Manager enrollment proxy point site system role, as well as an enrollment point site system role.
-For more information about site system roles, see [Install and Configure Site System Roles for Configuration Manager](https://docs.microsoft.com/mem/configmgr/core/servers/deploy/configure/install-site-system-roles).
+For more information about site system roles, see [Install and Configure Site System Roles for Configuration Manager](/mem/configmgr/core/servers/deploy/configure/install-site-system-roles).
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

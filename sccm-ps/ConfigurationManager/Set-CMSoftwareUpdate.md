@@ -16,21 +16,21 @@ Sets a software update.
 
 ### SetById (Default)
 ```
-Set-CMSoftwareUpdate -Id <String> [-MaximumExecutionMins <Int32>] [-CustomSeverity <CustomSeverityType>]
+Set-CMSoftwareUpdate [-CustomSeverity <CustomSeverityType>] -Id <String> [-MaximumExecutionMins <Int32>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetByName
 ```
-Set-CMSoftwareUpdate -Name <String> [-MaximumExecutionMins <Int32>] [-CustomSeverity <CustomSeverityType>]
+Set-CMSoftwareUpdate [-CustomSeverity <CustomSeverityType>] [-MaximumExecutionMins <Int32>] -Name <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetByValue
 ```
-Set-CMSoftwareUpdate -InputObject <IResultObject> [-MaximumExecutionMins <Int32>]
- [-CustomSeverity <CustomSeverityType>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Set-CMSoftwareUpdate [-CustomSeverity <CustomSeverityType>] -InputObject <IResultObject>
+ [-MaximumExecutionMins <Int32>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

@@ -16,23 +16,23 @@ Adds a query membership rule to one or more Configuration Manager user collectio
 
 ### ByCollectionValue (Default)
 ```
-Add-CMUserCollectionQueryMembershipRule -InputObject <IResultObject> -RuleName <String>
- -QueryExpression <String> [-ValidateQueryHasResult] [-PassThru] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Add-CMUserCollectionQueryMembershipRule -InputObject <IResultObject> [-PassThru] -QueryExpression <String>
+ -RuleName <String> [-ValidateQueryHasResult] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ### ByCollectionId
 ```
-Add-CMUserCollectionQueryMembershipRule -CollectionId <String> -RuleName <String> -QueryExpression <String>
- [-ValidateQueryHasResult] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Add-CMUserCollectionQueryMembershipRule -CollectionId <String> [-PassThru] -QueryExpression <String>
+ -RuleName <String> [-ValidateQueryHasResult] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ### ByCollectionName
 ```
-Add-CMUserCollectionQueryMembershipRule -CollectionName <String> -RuleName <String> -QueryExpression <String>
- [-ValidateQueryHasResult] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Add-CMUserCollectionQueryMembershipRule -CollectionName <String> [-PassThru] -QueryExpression <String>
+ -RuleName <String> [-ValidateQueryHasResult] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -41,7 +41,7 @@ You can specify the user collections by using their names, IDs, or by specifying
 The query is specified as a text string.
 
 A query rule lets you dynamically update the members of a collection based on a query that is run on a schedule.
-For more information on collection rules, see [Introduction to Collections in Configuration Manager](https://docs.microsoft.com/mem/configmgr/core/clients/manage/collections/introduction-to-collections).
+For more information on collection rules, see [Introduction to Collections in Configuration Manager](/mem/configmgr/core/clients/manage/collections/introduction-to-collections).
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

@@ -1,4 +1,4 @@
----
+﻿---
 description: Creates a new Active Directory Query type global condition in Configuration Manager.
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,9 +16,10 @@ Creates a new Active Directory Query type global condition in Configuration Mana
 ## SYNTAX
 
 ```
-New-CMGlobalConditionActiveDirectoryQuery -DataType <GlobalConditionDataType> [-LdapPrefix <String>]
- -DistinguishedName <String> -LdapFilter <String> -SearchScope <SearchScope> -Property <String> -Name <String>
- [-Description <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
+New-CMGlobalConditionActiveDirectoryQuery -DataType <GlobalConditionDataType> -DistinguishedName <String>
+ -LdapFilter <String> [-LdapPrefix <String>] -Property <String> -SearchScope <SearchScope>
+ [-Description <String>] -Name <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

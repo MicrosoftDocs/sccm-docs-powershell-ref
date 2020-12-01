@@ -14,20 +14,19 @@ title: New-CMWirelessProfile
 ## SYNTAX
 
 ```
-New-CMWirelessProfile -Name <String> [-Description <String>] [-Severity <NoncomplianceSeverity>]
- -SupportedPlatform <IResultObject[]> -NetworkName <String> -Ssid <String>
- [-ConnectAutoNetworkInRange <Boolean>] [-LookOtherNetworkWhileConnected <Boolean>]
- [-ConnectEvenNotBroadcasting <Boolean>] [-AuthenticationMode <AuthenticationMode>]
- [-EnableSingleSignOn <Boolean>] [-SingleSignOnImmediatelyBefore <Boolean>] [-SingleSignOnMaxDelaySec <Int32>]
- [-SingleSignOnAdditionalDialogs <Boolean>] [-SingleSignOnVlan <Boolean>] [-EnablePmkCaching <Boolean>]
- [-PmkTimeToLiveMins <Int32>] [-PmkCacheMaxEntries <Int32>] [-PreAuthentication <Boolean>]
- [-PreAuthAttempts <Int32>] [-EnableFipsCompliance <Boolean>] [-ConfigureProxy <Boolean>]
- [-AutoDetectProxy <Boolean>] [-AutoScriptUrl <String>] [-ProxyAddress <String>] [-ProxyPort <Int32>]
- [-BypassProxy <String>] -SecurityAuthentication <SecurityAuthentication>
- [-SecurityEncryption <SecurityEncryption>] [-EapType <EapType>] [-TrustedServerCertSubjectNames <String>]
- [-RememberCredentials] [-RememberUserCredentials <Boolean>] [-RootCertificate <IResultObject[]>]
- [-ClientCertificate <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+New-CMWirelessProfile [-AuthenticationMode <AuthenticationMode>] [-AutoDetectProxy <Boolean>]
+ [-AutoScriptUrl <String>] [-BypassProxy <String>] [-ClientCertificate <IResultObject>]
+ [-ConfigureProxy <Boolean>] [-ConnectAutoNetworkInRange <Boolean>] [-ConnectEvenNotBroadcasting <Boolean>]
+ [-Description <String>] [-EapType <EapType>] [-EnableFipsCompliance <Boolean>] [-EnablePmkCaching <Boolean>]
+ [-EnableSingleSignOn <Boolean>] [-LookOtherNetworkWhileConnected <Boolean>] -Name <String>
+ -NetworkName <String> [-PmkCacheMaxEntries <Int32>] [-PmkTimeToLiveMins <Int32>] [-PreAuthAttempts <Int32>]
+ [-PreAuthentication <Boolean>] [-ProxyAddress <String>] [-ProxyPort <Int32>] [-RememberCredentials]
+ [-RememberUserCredentials <Boolean>] [-RootCertificate <IResultObject[]>]
+ -SecurityAuthentication <SecurityAuthentication> [-SecurityEncryption <SecurityEncryption>]
+ [-Severity <NoncomplianceSeverity>] [-SingleSignOnAdditionalDialogs <Boolean>]
+ [-SingleSignOnImmediatelyBefore <Boolean>] [-SingleSignOnMaxDelaySec <Int32>] [-SingleSignOnVlan <Boolean>]
+ -Ssid <String> -SupportedPlatform <IResultObject[]> [-TrustedServerCertSubjectNames <String>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

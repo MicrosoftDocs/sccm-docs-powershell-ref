@@ -16,16 +16,16 @@ Installs a site update.
 
 ### ByValue (Default)
 ```
-Install-CMSiteUpdate [-Force] -InputObject <IResultObject> [-SkipPrerequisiteCheck] [-PassThru]
- [-PreproductionCollection <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Install-CMSiteUpdate [-Force] -InputObject <IResultObject> [-PassThru]
+ [-PreproductionCollection <IResultObject>] [-SkipPrerequisiteCheck] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByName
 ```
-Install-CMSiteUpdate [-Force] -Name <String> [-SkipPrerequisiteCheck] [-PassThru]
- [-PreproductionCollection <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Install-CMSiteUpdate [-Force] -Name <String> [-PassThru] [-PreproductionCollection <IResultObject>]
+ [-SkipPrerequisiteCheck] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

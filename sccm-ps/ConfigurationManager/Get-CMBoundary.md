@@ -1,4 +1,4 @@
----
+﻿---
 description: Get a site boundary.
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -21,14 +21,15 @@ Get-CMBoundary [-BoundaryName <String>] [-DisableWildcardHandling] [-ForceWildca
  [<CommonParameters>]
 ```
 
-### SearchByIdMandatory
-```
-Get-CMBoundary -BoundaryId <UInt32> [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
-```
-
 ### SearchByBoundaryGroupIdMandatory
 ```
 Get-CMBoundary -BoundaryGroupId <UInt32> [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [<CommonParameters>]
+```
+
+### SearchByBoundaryGroup
+```
+Get-CMBoundary -BoundaryGroupInputObject <IResultObject> [-DisableWildcardHandling] [-ForceWildcardHandling]
  [<CommonParameters>]
 ```
 
@@ -38,10 +39,9 @@ Get-CMBoundary -BoundaryGroupName <String> [-DisableWildcardHandling] [-ForceWil
  [<CommonParameters>]
 ```
 
-### SearchByBoundaryGroup
+### SearchByIdMandatory
 ```
-Get-CMBoundary -BoundaryGroupInputObject <IResultObject> [-DisableWildcardHandling] [-ForceWildcardHandling]
- [<CommonParameters>]
+Get-CMBoundary -BoundaryId <UInt32> [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -88,7 +88,7 @@ Get-CMBoundary -BoundaryGroupName "BGroup07"
 
 ### -BoundaryGroupId
 
-Specify the ID of a boundary group that includes the boundary to get. You can get a boundary group ID by using the [Get-CMBoundaryGroup](Get-CMBoundaryGroup.md) cmdlet. This ID is the **GroupID** property on the [SMS_BoundaryGroup](https://docs.microsoft.com/mem/configmgr/develop/reference/core/servers/configure/sms_boundarygroup-server-wmi-class) object. For example, `33`.
+Specify the ID of a boundary group that includes the boundary to get. You can get a boundary group ID by using the [Get-CMBoundaryGroup](Get-CMBoundaryGroup.md) cmdlet. This ID is the **GroupID** property on the [SMS_BoundaryGroup](/mem/configmgr/develop/reference/core/servers/configure/sms_boundarygroup-server-wmi-class) object. For example, `33`.
 
 ```yaml
 Type: UInt32
@@ -199,7 +199,6 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -211,8 +210,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### IResultObject[]#SMS_Boundary
 
 ### IResultObject#SMS_Boundary
-
-For more information on this return object and its properties, see [SMS_Boundary](/mem/configmgr/develop/reference/core/servers/configure/sms_boundary-server-wmi-class).
 
 ## NOTES
 

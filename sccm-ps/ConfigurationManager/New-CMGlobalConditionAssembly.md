@@ -1,4 +1,4 @@
----
+﻿---
 description: Creates an Assembly type global condition in Configuration Manager.
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,7 +16,7 @@ Creates an Assembly type global condition in Configuration Manager.
 ## SYNTAX
 
 ```
-New-CMGlobalConditionAssembly -AssemblyName <String> -Name <String> [-Description <String>]
+New-CMGlobalConditionAssembly -AssemblyName <String> [-Description <String>] -Name <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 

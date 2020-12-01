@@ -16,17 +16,17 @@ Modifies a remote connection profile.
 
 ### SetByValue (Default)
 ```
-Set-CMRemoteConnectionProfileConfigurationItem [-InputObject] <IResultObject> [-EnableNla <Boolean>]
- [-EnablePrimaryUser <Boolean>] [-EnableTSFirewallRule <Boolean>] [-EnableTSConnection <Boolean>]
- [-Enable <Boolean>] [-RDGatewayServer <String>] [-Description <String>] [-Digest <ConfigurationItem>]
- [-DigestPath <String>] [-DigestXml <String>] [-NewName <String>] [-PassThru] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMRemoteConnectionProfileConfigurationItem [-Enable <Boolean>] [-EnableNla <Boolean>]
+ [-EnablePrimaryUser <Boolean>] [-EnableTSConnection <Boolean>] [-EnableTSFirewallRule <Boolean>]
+ [-InputObject] <IResultObject> [-RDGatewayServer <String>] [-Description <String>]
+ [-Digest <ConfigurationItem>] [-DigestPath <String>] [-DigestXml <String>] [-NewName <String>] [-PassThru]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetById
 ```
-Set-CMRemoteConnectionProfileConfigurationItem [-EnableNla <Boolean>] [-EnablePrimaryUser <Boolean>]
- [-EnableTSFirewallRule <Boolean>] [-EnableTSConnection <Boolean>] [-Enable <Boolean>]
+Set-CMRemoteConnectionProfileConfigurationItem [-Enable <Boolean>] [-EnableNla <Boolean>]
+ [-EnablePrimaryUser <Boolean>] [-EnableTSConnection <Boolean>] [-EnableTSFirewallRule <Boolean>]
  [-RDGatewayServer <String>] [-Description <String>] [-Digest <ConfigurationItem>] [-DigestPath <String>]
  [-DigestXml <String>] [-Id] <Int32> [-NewName <String>] [-PassThru] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
@@ -34,8 +34,8 @@ Set-CMRemoteConnectionProfileConfigurationItem [-EnableNla <Boolean>] [-EnablePr
 
 ### SetByName
 ```
-Set-CMRemoteConnectionProfileConfigurationItem [-EnableNla <Boolean>] [-EnablePrimaryUser <Boolean>]
- [-EnableTSFirewallRule <Boolean>] [-EnableTSConnection <Boolean>] [-Enable <Boolean>]
+Set-CMRemoteConnectionProfileConfigurationItem [-Enable <Boolean>] [-EnableNla <Boolean>]
+ [-EnablePrimaryUser <Boolean>] [-EnableTSConnection <Boolean>] [-EnableTSFirewallRule <Boolean>]
  [-RDGatewayServer <String>] [-Description <String>] [-Digest <ConfigurationItem>] [-DigestPath <String>]
  [-DigestXml <String>] [-Name] <String> [-NewName <String>] [-PassThru] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]

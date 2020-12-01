@@ -16,38 +16,38 @@ Changes settings or security scope or deletes messages for a Configuration Manag
 
 ### SetStatusMessageQueryByObjectMandatory (Default)
 ```
-Set-CMStatusMessageQuery -InputObject <IResultObject> [-NewName <String>] [-Expression <String>]
- [-Comment <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+Set-CMStatusMessageQuery [-Comment <String>] [-Expression <String>] -InputObject <IResultObject>
+ [-NewName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ### SetStatusMessageQueryByIdMandatory
 ```
-Set-CMStatusMessageQuery -Id <String> [-NewName <String>] [-Expression <String>] [-Comment <String>]
+Set-CMStatusMessageQuery [-Comment <String>] [-Expression <String>] -Id <String> [-NewName <String>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### DeleteMessageByIdMandatory
-```
-Set-CMStatusMessageQuery -Id <String> [-DeleteMessage] [-PassThru] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetStatusMessageQueryByNameMandatory
 ```
-Set-CMStatusMessageQuery -Name <String> [-NewName <String>] [-Expression <String>] [-Comment <String>]
+Set-CMStatusMessageQuery [-Comment <String>] [-Expression <String>] -Name <String> [-NewName <String>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### DeleteMessageByNameMandatory
-```
-Set-CMStatusMessageQuery -Name <String> [-DeleteMessage] [-PassThru] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### DeleteMessageByObjectMandatory
 ```
-Set-CMStatusMessageQuery -InputObject <IResultObject> [-DeleteMessage] [-PassThru] [-DisableWildcardHandling]
+Set-CMStatusMessageQuery [-DeleteMessage] -InputObject <IResultObject> [-PassThru] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### DeleteMessageByNameMandatory
+```
+Set-CMStatusMessageQuery [-DeleteMessage] -Name <String> [-PassThru] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### DeleteMessageByIdMandatory
+```
+Set-CMStatusMessageQuery [-DeleteMessage] -Id <String> [-PassThru] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -127,7 +127,7 @@ Indicates that messages found by this query are deleted from the Configuration M
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: DeleteMessageByIdMandatory, DeleteMessageByNameMandatory, DeleteMessageByObjectMandatory
+Parameter Sets: DeleteMessageByObjectMandatory, DeleteMessageByNameMandatory, DeleteMessageByIdMandatory
 Aliases:
 
 Required: True
@@ -249,7 +249,7 @@ By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: DeleteMessageByIdMandatory, DeleteMessageByNameMandatory, DeleteMessageByObjectMandatory
+Parameter Sets: DeleteMessageByObjectMandatory, DeleteMessageByNameMandatory, DeleteMessageByIdMandatory
 Aliases:
 
 Required: False

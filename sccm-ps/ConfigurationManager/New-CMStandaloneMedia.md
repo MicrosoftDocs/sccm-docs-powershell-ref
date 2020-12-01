@@ -15,13 +15,14 @@ Creates stand-alone media.
 ## SYNTAX
 
 ```
-New-CMStandaloneMedia [-DriverPackage <IResultObject[]>] [-Application <IResultObject[]>]
- [-Package <IResultObject[]>] [-MediaStartDate <DateTime>] [-MediaExpirationDate <DateTime>]
- [-IncludeApplicationDependency] [-MediaSize <MediaSize>] -TaskSequence <IResultObject> [-AllowUacPrompt]
+New-CMStandaloneMedia [-Application <IResultObject[]>] [-DriverPackage <IResultObject[]>]
+ [-IncludeApplicationDependency] [-MediaExpirationDate <DateTime>] [-MediaSize <MediaSize>]
+ [-MediaStartDate <DateTime>] [-Package <IResultObject[]>] -TaskSequence <IResultObject> [-AllowUacPrompt]
  [-AllowUnattended] [-CertificatePath <String>] -DistributionPoint <IResultObject[]> [-Force] [-FormatMedia]
- [-MediaPassword <SecureString>] -MediaType <MediaInputType> -Path <String> [-TemporaryFolder <String>]
- [-NoAutoRun] [-PrestartCommand <String>] [-PrestartPackage <IResultObject>] [-Variable <Hashtable>]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-SiteCode <String>] [-MediaPassword <SecureString>] -MediaType <MediaInputType> [-NoAutoRun] -Path <String>
+ [-PrestartCommand <String>] [-PrestartPackage <IResultObject>] [-TemporaryFolder <String>]
+ [-Variable <Hashtable>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -380,6 +381,21 @@ To obtain a package object, use the [Get-CMPackage](Get-CMPackage.md) cmdlet.
 
 ```yaml
 Type: IResultObject
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SiteCode
+{{ Fill SiteCode Description }}
+
+```yaml
+Type: String
 Parameter Sets: (All)
 Aliases:
 

@@ -16,23 +16,23 @@ Modifies a device variable of a Configuration Manager device.
 
 ### SetByValueMandatory (Default)
 ```
-Set-CMDeviceVariable -InputObject <IResultObject> -VariableName <String> [-NewVariableName <String>]
- [-NewVariableValue <String>] [-IsMask <Boolean>] [-PassThru] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### SetByIdMandatory
-```
-Set-CMDeviceVariable -ResourceId <String> -VariableName <String> [-NewVariableName <String>]
- [-NewVariableValue <String>] [-IsMask <Boolean>] [-PassThru] [-DisableWildcardHandling]
+Set-CMDeviceVariable -InputObject <IResultObject> [-IsMask <Boolean>] [-NewVariableName <String>]
+ [-NewVariableValue <String>] [-PassThru] -VariableName <String> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByNameMandatory
 ```
-Set-CMDeviceVariable -DeviceName <String> -VariableName <String> [-NewVariableName <String>]
- [-NewVariableValue <String>] [-IsMask <Boolean>] [-PassThru] [-DisableWildcardHandling]
+Set-CMDeviceVariable -DeviceName <String> [-IsMask <Boolean>] [-NewVariableName <String>]
+ [-NewVariableValue <String>] [-PassThru] -VariableName <String> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SetByIdMandatory
+```
+Set-CMDeviceVariable [-IsMask <Boolean>] [-NewVariableName <String>] [-NewVariableValue <String>] [-PassThru]
+ -ResourceId <String> -VariableName <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

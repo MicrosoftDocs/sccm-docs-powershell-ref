@@ -22,16 +22,16 @@ Enable-CMTaskSequence -InputObject <IResultObject> [-DisableWildcardHandling] [-
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### SearchByIdMandatory
-```
-Enable-CMTaskSequence -TaskSequencePackageId <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
 ### SearchByNameMandatory
 ```
 Enable-CMTaskSequence -Name <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
+```
+
+### SearchByIdMandatory
+```
+Enable-CMTaskSequence -TaskSequencePackageId <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

@@ -16,22 +16,22 @@ Removes a Configuration Manager collection membership rule.
 
 ### ByName (Default)
 ```
-Remove-CMCollectionMembershipRule [-CollectionType <CollectionType>] -CollectionName <String>
- -RuleClassName <String> -ChildSearchCriteria <SmsProviderSearch> [-Force] [-ExtraArguments <Object>]
+Remove-CMCollectionMembershipRule -ChildSearchCriteria <SmsProviderSearch> -CollectionName <String>
+ [-CollectionType <CollectionType>] [-ExtraArguments <Object>] [-Force] -RuleClassName <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ById
 ```
-Remove-CMCollectionMembershipRule [-CollectionType <CollectionType>] -CollectionId <String>
- -RuleClassName <String> -ChildSearchCriteria <SmsProviderSearch> [-Force] [-ExtraArguments <Object>]
+Remove-CMCollectionMembershipRule -ChildSearchCriteria <SmsProviderSearch> -CollectionId <String>
+ [-CollectionType <CollectionType>] [-ExtraArguments <Object>] [-Force] -RuleClassName <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByValue
 ```
-Remove-CMCollectionMembershipRule [-CollectionType <CollectionType>] -InputObject <IResultObject>
- -RuleClassName <String> -ChildSearchCriteria <SmsProviderSearch> [-Force] [-ExtraArguments <Object>]
+Remove-CMCollectionMembershipRule -ChildSearchCriteria <SmsProviderSearch> [-CollectionType <CollectionType>]
+ [-ExtraArguments <Object>] [-Force] -InputObject <IResultObject> -RuleClassName <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -218,9 +218,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
-
 ### System.Object
+
+### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
 
 ## OUTPUTS
 

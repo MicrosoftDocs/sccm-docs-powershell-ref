@@ -1,4 +1,4 @@
----
+﻿---
 description: Gets a resultant settings.
 external help file: AdminUI.PS.ClientSettings.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,20 +16,20 @@ Gets a resultant settings.
 
 ### ByName (Default)
 ```
-Get-CMResultantSettings -Name <String> -SettingsType <ResultantSettingsType> [-Setting <SettingType>]
+Get-CMResultantSettings -Name <String> [-Setting <SettingType>] -SettingsType <ResultantSettingsType>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ### ById
 ```
-Get-CMResultantSettings -Id <String> -SettingsType <ResultantSettingsType> [-Setting <SettingType>]
+Get-CMResultantSettings -Id <String> [-Setting <SettingType>] -SettingsType <ResultantSettingsType>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ### ByValue
 ```
-Get-CMResultantSettings -InputObject <IResultObject> -SettingsType <ResultantSettingsType>
- [-Setting <SettingType>] [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
+Get-CMResultantSettings -InputObject <IResultObject> [-Setting <SettingType>]
+ -SettingsType <ResultantSettingsType> [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

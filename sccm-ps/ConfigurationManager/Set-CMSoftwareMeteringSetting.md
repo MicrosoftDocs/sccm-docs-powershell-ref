@@ -15,8 +15,8 @@ Configures Configuration Manager software metering properties.
 ## SYNTAX
 
 ```
-Set-CMSoftwareMeteringSetting [-DataRetentionDayCount <Int32>] [-AutoCreateDisabledRule <Boolean>]
- [-AutoCreatePercentage <Int32>] [-AutoCreateThreshold <Int32>] [-DisableWildcardHandling]
+Set-CMSoftwareMeteringSetting [-AutoCreateDisabledRule <Boolean>] [-AutoCreatePercentage <Int32>]
+ [-AutoCreateThreshold <Int32>] [-DataRetentionDayCount <Int32>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

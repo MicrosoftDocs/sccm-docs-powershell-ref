@@ -15,19 +15,19 @@ Use this cmdlet to edit a script.
 
 ### ByScript
 ```
-Set-CMScript -InputObject <IResultObject> [-ScriptText <String>] [-ScriptFile <String>]
+Set-CMScript -InputObject <IResultObject> [-ScriptFile <String>] [-ScriptText <String>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ById
 ```
-Set-CMScript -ScriptGuid <String> [-ScriptText <String>] [-ScriptFile <String>] [-DisableWildcardHandling]
+Set-CMScript [-ScriptFile <String>] -ScriptGuid <String> [-ScriptText <String>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByName
 ```
-Set-CMScript -ScriptName <String> [-ScriptText <String>] [-ScriptFile <String>] [-DisableWildcardHandling]
+Set-CMScript [-ScriptFile <String>] -ScriptName <String> [-ScriptText <String>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

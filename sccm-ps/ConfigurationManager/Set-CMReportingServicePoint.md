@@ -16,16 +16,16 @@ Modifies a Configuration Manager reporting service point.
 
 ### SetByValue (Default)
 ```
-Set-CMReportingServicePoint [-DatabaseServerName <String>] [-DatabaseName <String>] [-UserName <String>]
- -InputObject <IResultObject> [-Force] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMReportingServicePoint [-DatabaseName <String>] [-DatabaseServerName <String>] [-Force]
+ -InputObject <IResultObject> [-PassThru] [-UserName <String>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetByName
 ```
-Set-CMReportingServicePoint [-SiteCode <String>] [-SiteSystemServerName] <String>
- [-DatabaseServerName <String>] [-DatabaseName <String>] [-UserName <String>] [-Force] [-PassThru]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMReportingServicePoint [-DatabaseName <String>] [-DatabaseServerName <String>] [-Force] [-PassThru]
+ [-SiteCode <String>] [-SiteSystemServerName] <String> [-UserName <String>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

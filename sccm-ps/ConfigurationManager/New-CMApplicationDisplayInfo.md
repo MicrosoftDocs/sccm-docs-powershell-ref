@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.AppMan.dll-Help.xml
 Module Name: ConfigurationManager
 online version:
@@ -13,9 +13,9 @@ schema: 2.0.0
 ## SYNTAX
 
 ```
-New-CMApplicationDisplayInfo -LanguageId <Int32> -Title <String> [-UserDocumentation <String>]
- [-LinkText <String>] [-Description <String>] [-Keyword <String[]>] [-PrivacyUrl <String>]
- [-IconLocationFile <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
+New-CMApplicationDisplayInfo [-Description <String>] [-IconLocationFile <String>] [-Keyword <String[]>]
+ -LanguageId <Int32> [-LinkText <String>] [-PrivacyUrl <String>] -Title <String> [-UserDocumentation <String>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

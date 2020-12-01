@@ -1,4 +1,4 @@
----
+﻿---
 description: Gets an email notification components.
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -15,7 +15,7 @@ Gets an email notification components.
 ## SYNTAX
 
 ```
-Get-CMEmailNotificationComponent [-SiteSystemServerName <String>] [-SiteCode <String>]
+Get-CMEmailNotificationComponent [-SiteCode <String>] [-SiteSystemServerName <String>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 

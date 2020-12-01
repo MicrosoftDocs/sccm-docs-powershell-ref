@@ -16,22 +16,22 @@ Distributes the content that a task sequence uses to a distribution point.
 
 ### SearchByValueMandatory_TaskSequence (Default)
 ```
-Publish-CMPrestageContentTaskSequence -TaskSequence <IResultObject> [-IgnoreApplicationDependency]
- -FolderName <String> [-Description <String>] -DistributionPointName <String> [-DisableWildcardHandling]
+Publish-CMPrestageContentTaskSequence [-Description <String>] -DistributionPointName <String>
+ -FolderName <String> [-IgnoreApplicationDependency] -TaskSequence <IResultObject> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory_TaskSequence
 ```
-Publish-CMPrestageContentTaskSequence -TaskSequenceId <String[]> [-IgnoreApplicationDependency]
- -FolderName <String> [-Description <String>] -DistributionPointName <String> [-DisableWildcardHandling]
+Publish-CMPrestageContentTaskSequence [-Description <String>] -DistributionPointName <String>
+ -FolderName <String> [-IgnoreApplicationDependency] -TaskSequenceId <String[]> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByNameMandatory_TaskSequence
 ```
-Publish-CMPrestageContentTaskSequence -TaskSequenceName <String[]> [-IgnoreApplicationDependency]
- -FolderName <String> [-Description <String>] -DistributionPointName <String> [-DisableWildcardHandling]
+Publish-CMPrestageContentTaskSequence [-Description <String>] -DistributionPointName <String>
+ -FolderName <String> [-IgnoreApplicationDependency] -TaskSequenceName <String[]> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

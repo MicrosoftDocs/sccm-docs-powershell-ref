@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 Module Name: ConfigurationManager
 online version:
@@ -14,13 +14,13 @@ schema: 2.0.0
 
 ### SearchByName (Default)
 ```
-Get-CMConfigurationPlatform [[-Name] <String>] [-PlatformOption <PlatformType>] [-IsSupported <Boolean>]
+Get-CMConfigurationPlatform [-IsSupported <Boolean>] [[-Name] <String>] [-PlatformOption <PlatformType>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ### SearchById
 ```
-Get-CMConfigurationPlatform [-Id] <Int32> [-PlatformOption <PlatformType>] [-IsSupported <Boolean>]
+Get-CMConfigurationPlatform [-Id] <Int32> [-IsSupported <Boolean>] [-PlatformOption <PlatformType>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 

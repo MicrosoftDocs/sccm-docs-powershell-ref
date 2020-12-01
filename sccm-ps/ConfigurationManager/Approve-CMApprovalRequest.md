@@ -24,9 +24,9 @@ Approve-CMApprovalRequest [-Comment <String>] -InputObject <IResultObject>
 
 ### SearchByNameMandatory
 ```
-Approve-CMApprovalRequest -ApplicationName <String[]> [-Comment <String>] -User <String>
- [-InstallActionBehavior <ActionBehavior>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Approve-CMApprovalRequest -ApplicationName <String[]> [-Comment <String>]
+ [-InstallActionBehavior <ActionBehavior>] -User <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory
@@ -37,7 +37,7 @@ Approve-CMApprovalRequest [-Comment <String>] -Id <String[]> [-InstallActionBeha
 
 ### SearchByGuid
 ```
-Approve-CMApprovalRequest [-Comment <String>] -RequestGuid <String> [-InstallActionBehavior <ActionBehavior>]
+Approve-CMApprovalRequest [-Comment <String>] [-InstallActionBehavior <ActionBehavior>] -RequestGuid <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

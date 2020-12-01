@@ -16,27 +16,26 @@ Starts deployment of a Configuration Manager baseline configuration to a collect
 
 ### SearchByValueMandatory (Default)
 ```
-Start-CMBaselineDeployment [-InputObject] <IResultObject> -CollectionName <String>
- [-EnableEnforcement <Boolean>] [-OverrideServiceWindow <Boolean>] [-GenerateAlert <Boolean>]
- [-ParameterValue <Int32>] [-PostponeDate <DateTime>] [-PostponeTime <DateTime>] [-MonitoredByScom <Boolean>]
- [-Schedule <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Start-CMBaselineDeployment -CollectionName <String> [-EnableEnforcement <Boolean>] [-GenerateAlert <Boolean>]
+ [-InputObject] <IResultObject> [-MonitoredByScom <Boolean>] [-OverrideServiceWindow <Boolean>]
+ [-ParameterValue <Int32>] [-PostponeDate <DateTime>] [-PostponeTime <DateTime>] [-Schedule <IResultObject>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory
 ```
-Start-CMBaselineDeployment [-Id] <Int32> -CollectionName <String> [-EnableEnforcement <Boolean>]
- [-OverrideServiceWindow <Boolean>] [-GenerateAlert <Boolean>] [-ParameterValue <Int32>]
- [-PostponeDate <DateTime>] [-PostponeTime <DateTime>] [-MonitoredByScom <Boolean>] [-Schedule <IResultObject>]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Start-CMBaselineDeployment -CollectionName <String> [-EnableEnforcement <Boolean>] [-GenerateAlert <Boolean>]
+ [-Id] <Int32> [-MonitoredByScom <Boolean>] [-OverrideServiceWindow <Boolean>] [-ParameterValue <Int32>]
+ [-PostponeDate <DateTime>] [-PostponeTime <DateTime>] [-Schedule <IResultObject>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByNameMandatory
 ```
-Start-CMBaselineDeployment [-Name] <String> -CollectionName <String> [-EnableEnforcement <Boolean>]
- [-OverrideServiceWindow <Boolean>] [-GenerateAlert <Boolean>] [-ParameterValue <Int32>]
- [-PostponeDate <DateTime>] [-PostponeTime <DateTime>] [-MonitoredByScom <Boolean>] [-Schedule <IResultObject>]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Start-CMBaselineDeployment -CollectionName <String> [-EnableEnforcement <Boolean>] [-GenerateAlert <Boolean>]
+ [-MonitoredByScom <Boolean>] [-Name] <String> [-OverrideServiceWindow <Boolean>] [-ParameterValue <Int32>]
+ [-PostponeDate <DateTime>] [-PostponeTime <DateTime>] [-Schedule <IResultObject>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

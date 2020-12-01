@@ -1,4 +1,4 @@
----
+﻿---
 description: Get a Configuration Manager legacy package.
 external help file: AdminUI.PS.AppModel.dll-Help.xml
 Module Name: ConfigurationManager
@@ -17,12 +17,12 @@ Get a Configuration Manager legacy package.
 
 ### SearchByName (Default)
 ```
-Get-CMPackage [-Name <String>] [-Fast] [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
+Get-CMPackage [-Fast] [-Name <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory
 ```
-Get-CMPackage -Id <String> [-Fast] [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
+Get-CMPackage [-Fast] -Id <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -143,7 +143,6 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -155,8 +154,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### IResultObject[]#SMS_Package
 
 ### IResultObject#SMS_Package
-
-For more information on this return object and its properties, see [SMS_Package server WMI class](https://docs.microsoft.com/mem/configmgr/develop/reference/core/servers/configure/sms_package-server-wmi-class).
 
 ## NOTES
 

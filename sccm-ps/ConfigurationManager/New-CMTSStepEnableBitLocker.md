@@ -14,15 +14,15 @@ Add the **Enable BitLocker** step to a task sequence, which enables BitLocker en
 ## SYNTAX
 
 ```
-New-CMTSStepEnableBitLocker [-TpmOnly] [-EnableSkipWhenNoValidTpm <Boolean>] [-UsbOnly] [-TpmAndUsb]
- [-TpmAndPin] [-Drive <String>] [-Pin <SecureString>] [-CreateKeyOption <CreateKeyType>]
- [-WaitForBitLockerComplete] [-EncryptFullDisk] [-EncryptionMethod <DiskEncryptionMethod>] -Name <String>
- [-Description <String>] [-ContinueOnError] [-Disable] [-Condition <IResultObject[]>]
+New-CMTSStepEnableBitLocker [-CreateKeyOption <CreateKeyType>] [-Drive <String>]
+ [-EnableSkipWhenNoValidTpm <Boolean>] [-EncryptFullDisk] [-EncryptionMethod <DiskEncryptionMethod>]
+ [-Pin <SecureString>] [-TpmAndPin] [-TpmAndUsb] [-TpmOnly] [-UsbOnly] [-WaitForBitLockerComplete]
+ [-Condition <IResultObject[]>] [-ContinueOnError] [-Description <String>] [-Disable] -Name <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Add the **Enable BitLocker** step to a task sequence, which enables BitLocker encryption on the hard drive. For more information on this task sequence step, see [About task sequence steps](https://docs.microsoft.com/mem/configmgr/osd/understand/task-sequence-steps#BKMK_EnableBitLocker).
+Add the **Enable BitLocker** step to a task sequence, which enables BitLocker encryption on the hard drive. For more information on this task sequence step, see [About task sequence steps](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_EnableBitLocker).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
@@ -379,4 +379,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[About task sequence steps - Enable BitLocker](https://docs.microsoft.com/mem/configmgr/osd/understand/task-sequence-steps#BKMK_EnableBitLocker)
+[About task sequence steps - Enable BitLocker](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_EnableBitLocker)

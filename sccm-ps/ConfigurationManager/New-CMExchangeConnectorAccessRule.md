@@ -1,4 +1,4 @@
----
+﻿---
 description: Configure access settings for a mobile device that uses a Microsoft Exchange Server connector.
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,7 +16,7 @@ Configure access settings for a mobile device that uses a Microsoft Exchange Ser
 ## SYNTAX
 
 ```
-New-CMExchangeConnectorAccessRule -RuleName <String> -AccessLevel <AccessLevelType> -Device <DeviceType>
+New-CMExchangeConnectorAccessRule -AccessLevel <AccessLevelType> -Device <DeviceType> -RuleName <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 

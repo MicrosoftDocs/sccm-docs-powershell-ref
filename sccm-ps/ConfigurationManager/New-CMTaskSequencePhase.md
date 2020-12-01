@@ -16,35 +16,38 @@ Use this cmdlet to create a deployment phase for a task sequence.
 
 ### SearchByCollection
 ```
-New-CMTaskSequencePhase [-UserNotification <UserNotificationType>] [-SoftwareInstallation <Boolean>]
- [-AllowSystemRestart <Boolean>] [-WriteFilterCommit <Boolean>] [-PreDownload <Boolean>] [-Comments <String>]
- [-DeploymentOption <DeploymentOptionType>] [-AllowRemoteDP <Boolean>] [-AllowFallback <Boolean>]
- -PhaseName <String> [-Collection] <IResultObject> [-CriteriaOption <CriteriaType>] [-CriteriaValue <Int32>]
- [-BeginCondition <BeginConditionType>] [-DaysAfterPreviousPhaseSuccess <Int32>] [-ThrottlingDays <Int32>]
- [-InstallationChoice <InstallationChoiceType>] [-DeadlineUnit <TimeUnitType>] [-DeadlineValue <Int32>]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+New-CMTaskSequencePhase [-AllowFallback <Boolean>] [-AllowRemoteDP <Boolean>] [-AllowSystemRestart <Boolean>]
+ [-BeginCondition <BeginConditionType>] [-Collection] <IResultObject> [-Comments <String>]
+ [-CriteriaOption <CriteriaType>] [-CriteriaValue <Int32>] [-DaysAfterPreviousPhaseSuccess <Int32>]
+ [-DeadlineUnit <TimeUnitType>] [-DeadlineValue <Int32>] [-DeploymentOption <DeploymentOptionType>]
+ [-InstallationChoice <InstallationChoiceType>] -PhaseName <String> [-PreDownload <Boolean>]
+ [-SoftwareInstallation <Boolean>] [-ThrottlingDays <Int32>] [-UserNotification <UserNotificationType>]
+ [-WriteFilterCommit <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### SearchByCollectionId
 ```
-New-CMTaskSequencePhase [-UserNotification <UserNotificationType>] [-SoftwareInstallation <Boolean>]
- [-AllowSystemRestart <Boolean>] [-WriteFilterCommit <Boolean>] [-PreDownload <Boolean>] [-Comments <String>]
- [-DeploymentOption <DeploymentOptionType>] [-AllowRemoteDP <Boolean>] [-AllowFallback <Boolean>]
- -PhaseName <String> [-CollectionId] <String> [-CriteriaOption <CriteriaType>] [-CriteriaValue <Int32>]
- [-BeginCondition <BeginConditionType>] [-DaysAfterPreviousPhaseSuccess <Int32>] [-ThrottlingDays <Int32>]
- [-InstallationChoice <InstallationChoiceType>] [-DeadlineUnit <TimeUnitType>] [-DeadlineValue <Int32>]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+New-CMTaskSequencePhase [-AllowFallback <Boolean>] [-AllowRemoteDP <Boolean>] [-AllowSystemRestart <Boolean>]
+ [-BeginCondition <BeginConditionType>] [-CollectionId] <String> [-Comments <String>]
+ [-CriteriaOption <CriteriaType>] [-CriteriaValue <Int32>] [-DaysAfterPreviousPhaseSuccess <Int32>]
+ [-DeadlineUnit <TimeUnitType>] [-DeadlineValue <Int32>] [-DeploymentOption <DeploymentOptionType>]
+ [-InstallationChoice <InstallationChoiceType>] -PhaseName <String> [-PreDownload <Boolean>]
+ [-SoftwareInstallation <Boolean>] [-ThrottlingDays <Int32>] [-UserNotification <UserNotificationType>]
+ [-WriteFilterCommit <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### SearchByCollectionName
 ```
-New-CMTaskSequencePhase [-UserNotification <UserNotificationType>] [-SoftwareInstallation <Boolean>]
- [-AllowSystemRestart <Boolean>] [-WriteFilterCommit <Boolean>] [-PreDownload <Boolean>] [-Comments <String>]
- [-DeploymentOption <DeploymentOptionType>] [-AllowRemoteDP <Boolean>] [-AllowFallback <Boolean>]
- -PhaseName <String> [-CollectionName] <String> [-CriteriaOption <CriteriaType>] [-CriteriaValue <Int32>]
- [-BeginCondition <BeginConditionType>] [-DaysAfterPreviousPhaseSuccess <Int32>] [-ThrottlingDays <Int32>]
- [-InstallationChoice <InstallationChoiceType>] [-DeadlineUnit <TimeUnitType>] [-DeadlineValue <Int32>]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+New-CMTaskSequencePhase [-AllowFallback <Boolean>] [-AllowRemoteDP <Boolean>] [-AllowSystemRestart <Boolean>]
+ [-BeginCondition <BeginConditionType>] [-CollectionName] <String> [-Comments <String>]
+ [-CriteriaOption <CriteriaType>] [-CriteriaValue <Int32>] [-DaysAfterPreviousPhaseSuccess <Int32>]
+ [-DeadlineUnit <TimeUnitType>] [-DeadlineValue <Int32>] [-DeploymentOption <DeploymentOptionType>]
+ [-InstallationChoice <InstallationChoiceType>] -PhaseName <String> [-PreDownload <Boolean>]
+ [-SoftwareInstallation <Boolean>] [-ThrottlingDays <Int32>] [-UserNotification <UserNotificationType>]
+ [-WriteFilterCommit <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

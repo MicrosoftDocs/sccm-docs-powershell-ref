@@ -16,37 +16,37 @@ Installs a Configuration Manager client.
 
 ### SearchByValueMandatory (Default)
 ```
-Install-CMClient -InputObject <IResultObject> [-IncludeDomainController <Boolean>]
- [-AlwaysInstallClient <Boolean>] [-ForceReinstall <Boolean>] [-SiteCode <String>] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### SearchByNameMandatory
-```
-Install-CMClient -Name <String> [-IncludeDomainController <Boolean>] [-AlwaysInstallClient <Boolean>]
- [-ForceReinstall <Boolean>] [-SiteCode <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
-```
-
-### SearchByIdMandatory
-```
-Install-CMClient -CollectionId <String> [-IncludeDomainController <Boolean>] [-AlwaysInstallClient <Boolean>]
- [-ForceReinstall <Boolean>] [-SiteCode <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
-```
-
-### SearchByDeviceNameMandatory
-```
-Install-CMClient -DeviceName <String> [-IncludeDomainController <Boolean>] [-AlwaysInstallClient <Boolean>]
- [-ForceReinstall <Boolean>] [-SiteCode <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Install-CMClient [-AlwaysInstallClient <Boolean>] [-ForceReinstall <Boolean>]
+ [-IncludeDomainController <Boolean>] -InputObject <IResultObject> [-SiteCode <String>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByDeviceIdMandatory
 ```
-Install-CMClient -DeviceId <String> [-IncludeDomainController <Boolean>] [-AlwaysInstallClient <Boolean>]
- [-ForceReinstall <Boolean>] [-SiteCode <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Install-CMClient [-AlwaysInstallClient <Boolean>] -DeviceId <String> [-ForceReinstall <Boolean>]
+ [-IncludeDomainController <Boolean>] [-SiteCode <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SearchByDeviceNameMandatory
+```
+Install-CMClient [-AlwaysInstallClient <Boolean>] -DeviceName <String> [-ForceReinstall <Boolean>]
+ [-IncludeDomainController <Boolean>] [-SiteCode <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SearchByIdMandatory
+```
+Install-CMClient [-AlwaysInstallClient <Boolean>] -CollectionId <String> [-ForceReinstall <Boolean>]
+ [-IncludeDomainController <Boolean>] [-SiteCode <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SearchByNameMandatory
+```
+Install-CMClient [-AlwaysInstallClient <Boolean>] [-ForceReinstall <Boolean>]
+ [-IncludeDomainController <Boolean>] -Name <String> [-SiteCode <String>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -275,17 +275,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
-
-[Get-CMClientSetting](Get-CMClientSetting.md)
-
-[New-CMClientSetting](New-CMClientSetting.md)
-
-[Remove-CMClientSetting](Remove-CMClientSetting.md)
-
-[Set-CMClientSetting](Set-CMClientSetting.md)
 
 [Set-CMClientStatusSetting](Set-CMClientStatusSetting.md)
 
@@ -294,5 +287,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-CMDevice](Get-CMDevice.md)
 
 [Get-CMBaseline](Get-CMBaseline.md)
-
-

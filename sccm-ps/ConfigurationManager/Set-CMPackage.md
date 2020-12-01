@@ -16,44 +16,44 @@ Changes configuration settings for Configuration Manager packages.
 
 ### SetByValue (Default)
 ```
-Set-CMPackage [-InputObject] <IResultObject> [-NewName <String>] [-Version <String>] [-Manufacturer <String>]
- [-Language <String>] [-Description <String>] [-Path <String>] [-MifFileName <String>] [-MifName <String>]
- [-MifPublisher <String>] [-MifVersion <String>] [-DistributionPointUpdateSchedule <IResultObject>]
- [-DisconnectUserFromDistributionPoint <Boolean>] [-DisconnectUserFromDistributionPointRetry <UInt32>]
- [-DisconnectUserFromDistributionPointMins <UInt32>] [-CustomPackageShareName <String>]
- [-CopyToPackageShareOnDistributionPoint <Boolean>] [-MulticastAllow <Boolean>] [-MulticastEncrypt <Boolean>]
- [-MulticastTransferOnly <Boolean>] [-Priority <Priorities>] [-SendToPreferredDistributionPoint <Boolean>]
- [-PrestageBehavior <PrestageBehavior>] [-PersistContentInCache <Boolean>]
- [-EnableBinaryDeltaReplication <Boolean>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMPackage [-CopyToPackageShareOnDistributionPoint <Boolean>] [-CustomPackageShareName <String>]
+ [-Description <String>] [-DisconnectUserFromDistributionPoint <Boolean>]
+ [-DisconnectUserFromDistributionPointMins <UInt32>] [-DisconnectUserFromDistributionPointRetry <UInt32>]
+ [-DistributionPointUpdateSchedule <IResultObject>] [-EnableBinaryDeltaReplication <Boolean>]
+ [-InputObject] <IResultObject> [-Language <String>] [-Manufacturer <String>] [-MifFileName <String>]
+ [-MifName <String>] [-MifPublisher <String>] [-MifVersion <String>] [-MulticastAllow <Boolean>]
+ [-MulticastEncrypt <Boolean>] [-MulticastTransferOnly <Boolean>] [-NewName <String>] [-PassThru]
+ [-Path <String>] [-PersistContentInCache <Boolean>] [-PrestageBehavior <PrestageBehavior>]
+ [-Priority <Priorities>] [-SendToPreferredDistributionPoint <Boolean>] [-Version <String>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetById
 ```
-Set-CMPackage -Id <String> [-NewName <String>] [-Version <String>] [-Manufacturer <String>]
- [-Language <String>] [-Description <String>] [-Path <String>] [-MifFileName <String>] [-MifName <String>]
- [-MifPublisher <String>] [-MifVersion <String>] [-DistributionPointUpdateSchedule <IResultObject>]
- [-DisconnectUserFromDistributionPoint <Boolean>] [-DisconnectUserFromDistributionPointRetry <UInt32>]
- [-DisconnectUserFromDistributionPointMins <UInt32>] [-CustomPackageShareName <String>]
- [-CopyToPackageShareOnDistributionPoint <Boolean>] [-MulticastAllow <Boolean>] [-MulticastEncrypt <Boolean>]
- [-MulticastTransferOnly <Boolean>] [-Priority <Priorities>] [-SendToPreferredDistributionPoint <Boolean>]
- [-PrestageBehavior <PrestageBehavior>] [-PersistContentInCache <Boolean>]
- [-EnableBinaryDeltaReplication <Boolean>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMPackage [-CopyToPackageShareOnDistributionPoint <Boolean>] [-CustomPackageShareName <String>]
+ [-Description <String>] [-DisconnectUserFromDistributionPoint <Boolean>]
+ [-DisconnectUserFromDistributionPointMins <UInt32>] [-DisconnectUserFromDistributionPointRetry <UInt32>]
+ [-DistributionPointUpdateSchedule <IResultObject>] [-EnableBinaryDeltaReplication <Boolean>] -Id <String>
+ [-Language <String>] [-Manufacturer <String>] [-MifFileName <String>] [-MifName <String>]
+ [-MifPublisher <String>] [-MifVersion <String>] [-MulticastAllow <Boolean>] [-MulticastEncrypt <Boolean>]
+ [-MulticastTransferOnly <Boolean>] [-NewName <String>] [-PassThru] [-Path <String>]
+ [-PersistContentInCache <Boolean>] [-PrestageBehavior <PrestageBehavior>] [-Priority <Priorities>]
+ [-SendToPreferredDistributionPoint <Boolean>] [-Version <String>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetByName
 ```
-Set-CMPackage -Name <String> [-NewName <String>] [-Version <String>] [-Manufacturer <String>]
- [-Language <String>] [-Description <String>] [-Path <String>] [-MifFileName <String>] [-MifName <String>]
- [-MifPublisher <String>] [-MifVersion <String>] [-DistributionPointUpdateSchedule <IResultObject>]
- [-DisconnectUserFromDistributionPoint <Boolean>] [-DisconnectUserFromDistributionPointRetry <UInt32>]
- [-DisconnectUserFromDistributionPointMins <UInt32>] [-CustomPackageShareName <String>]
- [-CopyToPackageShareOnDistributionPoint <Boolean>] [-MulticastAllow <Boolean>] [-MulticastEncrypt <Boolean>]
- [-MulticastTransferOnly <Boolean>] [-Priority <Priorities>] [-SendToPreferredDistributionPoint <Boolean>]
- [-PrestageBehavior <PrestageBehavior>] [-PersistContentInCache <Boolean>]
- [-EnableBinaryDeltaReplication <Boolean>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMPackage [-CopyToPackageShareOnDistributionPoint <Boolean>] [-CustomPackageShareName <String>]
+ [-Description <String>] [-DisconnectUserFromDistributionPoint <Boolean>]
+ [-DisconnectUserFromDistributionPointMins <UInt32>] [-DisconnectUserFromDistributionPointRetry <UInt32>]
+ [-DistributionPointUpdateSchedule <IResultObject>] [-EnableBinaryDeltaReplication <Boolean>]
+ [-Language <String>] [-Manufacturer <String>] [-MifFileName <String>] [-MifName <String>]
+ [-MifPublisher <String>] [-MifVersion <String>] [-MulticastAllow <Boolean>] [-MulticastEncrypt <Boolean>]
+ [-MulticastTransferOnly <Boolean>] -Name <String> [-NewName <String>] [-PassThru] [-Path <String>]
+ [-PersistContentInCache <Boolean>] [-PrestageBehavior <PrestageBehavior>] [-Priority <Priorities>]
+ [-SendToPreferredDistributionPoint <Boolean>] [-Version <String>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

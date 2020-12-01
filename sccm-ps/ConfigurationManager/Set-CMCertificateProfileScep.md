@@ -22,10 +22,10 @@ Set-CMCertificateProfileScep [-AllowCertificateOnAnyDevice <Boolean>]
  [-EnrollmentRenewThresholdPct <Int32>] [-EnrollmentRetryCount <Int32>] [-EnrollmentRetryDelayMins <Int32>]
  [-HashAlgorithm <HashAlgorithmTypes>] -InputObject <IResultObject> [-KeySize <Int32>]
  [-KeyStorageProvider <KeyStorageProviderSettingType>] [-KeyUsage <X509KeyUsageFlags>] [-NewName <String>]
- [-RequireMultifactor <Boolean>] [-RootCertificate <IResultObject>]
+ [-PassThru] [-RequireMultifactor <Boolean>] [-RootCertificate <IResultObject>]
  [-SanType <SubjectAlternativeNameFormatTypes>] [-ScepServerUrl <String[]>]
- [-SubjectType <SubjectNameFormatTypes>] [-SupportedPlatform <IResultObject[]>] [-PassThru]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-SubjectType <SubjectNameFormatTypes>] [-SupportedPlatform <IResultObject[]>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ById
@@ -36,10 +36,10 @@ Set-CMCertificateProfileScep [-AllowCertificateOnAnyDevice <Boolean>]
  [-EnrollmentRenewThresholdPct <Int32>] [-EnrollmentRetryCount <Int32>] [-EnrollmentRetryDelayMins <Int32>]
  [-HashAlgorithm <HashAlgorithmTypes>] -Id <Int32> [-KeySize <Int32>]
  [-KeyStorageProvider <KeyStorageProviderSettingType>] [-KeyUsage <X509KeyUsageFlags>] [-NewName <String>]
- [-RequireMultifactor <Boolean>] [-RootCertificate <IResultObject>]
+ [-PassThru] [-RequireMultifactor <Boolean>] [-RootCertificate <IResultObject>]
  [-SanType <SubjectAlternativeNameFormatTypes>] [-ScepServerUrl <String[]>]
- [-SubjectType <SubjectNameFormatTypes>] [-SupportedPlatform <IResultObject[]>] [-PassThru]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-SubjectType <SubjectNameFormatTypes>] [-SupportedPlatform <IResultObject[]>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByName
@@ -49,10 +49,10 @@ Set-CMCertificateProfileScep [-AllowCertificateOnAnyDevice <Boolean>]
  [-CertificateValidityDays <Int32>] [-Description <String>] [-Eku <Hashtable>]
  [-EnrollmentRenewThresholdPct <Int32>] [-EnrollmentRetryCount <Int32>] [-EnrollmentRetryDelayMins <Int32>]
  [-HashAlgorithm <HashAlgorithmTypes>] [-KeySize <Int32>] [-KeyStorageProvider <KeyStorageProviderSettingType>]
- [-KeyUsage <X509KeyUsageFlags>] -Name <String> [-NewName <String>] [-RequireMultifactor <Boolean>]
+ [-KeyUsage <X509KeyUsageFlags>] -Name <String> [-NewName <String>] [-PassThru] [-RequireMultifactor <Boolean>]
  [-RootCertificate <IResultObject>] [-SanType <SubjectAlternativeNameFormatTypes>] [-ScepServerUrl <String[]>]
- [-SubjectType <SubjectNameFormatTypes>] [-SupportedPlatform <IResultObject[]>] [-PassThru]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-SubjectType <SubjectNameFormatTypes>] [-SupportedPlatform <IResultObject[]>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

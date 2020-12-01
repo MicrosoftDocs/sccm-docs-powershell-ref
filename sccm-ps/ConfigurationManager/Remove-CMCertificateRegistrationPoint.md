@@ -22,7 +22,7 @@ Remove-CMCertificateRegistrationPoint [-Force] -InputObject <IResultObject> [-Di
 
 ### SearchByNameMandatory
 ```
-Remove-CMCertificateRegistrationPoint [-SiteCode <String>] [-Force] [-SiteSystemServerName] <String>
+Remove-CMCertificateRegistrationPoint [-Force] [-SiteCode <String>] [-SiteSystemServerName] <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

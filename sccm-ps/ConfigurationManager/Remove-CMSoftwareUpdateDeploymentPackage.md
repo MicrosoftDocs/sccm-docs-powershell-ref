@@ -16,19 +16,19 @@ Removes a deployment package.
 
 ### SearchByValueMandatory (Default)
 ```
-Remove-CMSoftwareUpdateDeploymentPackage -InputObject <IResultObject> [-Force] [-DisableWildcardHandling]
+Remove-CMSoftwareUpdateDeploymentPackage [-Force] -InputObject <IResultObject> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory
 ```
-Remove-CMSoftwareUpdateDeploymentPackage -Id <String> [-Force] [-DisableWildcardHandling]
+Remove-CMSoftwareUpdateDeploymentPackage [-Force] -Id <String> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByNameMandatory
 ```
-Remove-CMSoftwareUpdateDeploymentPackage -Name <String> [-Force] [-DisableWildcardHandling]
+Remove-CMSoftwareUpdateDeploymentPackage [-Force] -Name <String> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

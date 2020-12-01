@@ -16,8 +16,8 @@ Creates a Configuration Manager package.
 
 ### New (Default)
 ```
-New-CMPackage -Name <String> [-Description <String>] [-Manufacturer <String>] [-Language <String>]
- [-Version <String>] [-Path <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+New-CMPackage [-Description <String>] [-Language <String>] [-Manufacturer <String>] -Name <String>
+ [-Path <String>] [-Version <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
@@ -29,21 +29,21 @@ New-CMPackage [-FromDefinition] -PackageDefinitionName <String> [-PackageNoSourc
 
 ### NewPackageByDefinitionNoSourceFileWithNew
 ```
-New-CMPackage [-FromDefinition] -PackagePath <String> [-PackageNoSourceFile] [-DisableWildcardHandling]
+New-CMPackage [-FromDefinition] [-PackageNoSourceFile] -PackagePath <String> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### NewPackageByDefinitionSourceFileWithExisted
 ```
 New-CMPackage [-FromDefinition] -PackageDefinitionName <String> -SourceFileType <SourceFileType>
- -SourceFolderPathType <SourceFolderPathType> -SourceFolderPath <String> [-DisableWildcardHandling]
+ -SourceFolderPath <String> -SourceFolderPathType <SourceFolderPathType> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### NewPackageByDefinitionSourceFileWithNew
 ```
 New-CMPackage [-FromDefinition] -PackagePath <String> -SourceFileType <SourceFileType>
- -SourceFolderPathType <SourceFolderPathType> -SourceFolderPath <String> [-DisableWildcardHandling]
+ -SourceFolderPath <String> -SourceFolderPathType <SourceFolderPathType> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

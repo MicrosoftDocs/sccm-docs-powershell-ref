@@ -1,8 +1,8 @@
 ---
-description: Gets a cloud management gateway connection point.
+description: Get a cloud management gateway connection point.
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/02/2019
+ms.date: 11/20/2020
 schema: 2.0.0
 title: Get-CMCloudManagementGatewayConnectionPoint
 ---
@@ -10,13 +10,14 @@ title: Get-CMCloudManagementGatewayConnectionPoint
 # Get-CMCloudManagementGatewayConnectionPoint
 
 ## SYNOPSIS
-Gets a cloud management gateway connection point.
+
+Get a cloud management gateway connection point.
 
 ## SYNTAX
 
 ### SearchByName (Default)
 ```
-Get-CMCloudManagementGatewayConnectionPoint [-SiteCode <String>] [[-SiteSystemServerName] <String>] [-AllSite]
+Get-CMCloudManagementGatewayConnectionPoint [-AllSite] [-SiteCode <String>] [[-SiteSystemServerName] <String>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
@@ -28,21 +29,27 @@ Get-CMCloudManagementGatewayConnectionPoint [-AllSite] -InputObject <IResultObje
 
 ## DESCRIPTION
 
+Use this cmdlet to get a cloud management gateway (CMG) connection point role from a site system.
+
+For more information on CMG, see [CMG Overview](/mem/configmgr/core/clients/manage/cmg/overview).
+
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
 ### Example 1
-```
-PS XYZ:\>
+
+```powershell
+Get-CMSiteSystemServer -SiteSystemServerName "Server2.contoso.com" | Get-CMCloudManagementGatewayConnectionPoint
 ```
 
 ## PARAMETERS
 
 ### -AllSite
+
+Include this parameter to get all of the CMG connection point roles for the site.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -56,7 +63,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
+
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -71,7 +79,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
+
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -86,6 +95,9 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
+
+Specify a site server object as the target for this cmdlet. To get the object, use the [Get-CMSiteSystemServer](Get-CMSiteSystemServer.md) cmdlet.
+
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValue
@@ -99,6 +111,9 @@ Accept wildcard characters: False
 ```
 
 ### -SiteCode
+
+Specify the site code for this site system role.
+
 ```yaml
 Type: String
 Parameter Sets: SearchByName
@@ -112,6 +127,9 @@ Accept wildcard characters: False
 ```
 
 ### -SiteSystemServerName
+
+Specify the FQDN of the server with this role.
+
 ```yaml
 Type: String
 Parameter Sets: SearchByName
@@ -137,6 +155,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### IResultObject#SMS_SCI_SysResUse
 
+For more information on this return object and its properties, see [SMS_SCI_SysResUse server WMI class](/mem/configmgr/develop/reference/core/servers/configure/sms_sci_sysresuse-server-wmi-class).
+
 ## NOTES
 
 ## RELATED LINKS
+
+[Add-CMCloudManagementGatewayConnectionPoint](Add-CMCloudManagementGatewayConnectionPoint.md)
+
+[Remove-CMCloudManagementGatewayConnectionPoint](Remove-CMCloudManagementGatewayConnectionPoint.md)
+
+[Set-CMCloudManagementGatewayConnectionPoint](Set-CMCloudManagementGatewayConnectionPoint.md)

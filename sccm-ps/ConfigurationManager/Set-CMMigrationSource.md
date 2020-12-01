@@ -15,8 +15,8 @@ Specifies or changes settings for a migration source site in Configuration Manag
 ## SYNTAX
 
 ```
-Set-CMMigrationSource -SourceSiteServerName <String> [-SmsProviderAccount <String>]
- [-SqlServerAccount <String>] [-EnableDistributionPointSharing <Boolean>] [-DisableWildcardHandling]
+Set-CMMigrationSource [-EnableDistributionPointSharing <Boolean>] [-SmsProviderAccount <String>]
+ -SourceSiteServerName <String> [-SqlServerAccount <String>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

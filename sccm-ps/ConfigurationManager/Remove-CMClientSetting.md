@@ -16,25 +16,25 @@ Removes client settings.
 
 ### SearchByValueMandatory (Default)
 ```
-Remove-CMClientSetting -InputObject <IResultObject> [-Force] [-DisableWildcardHandling]
+Remove-CMClientSetting [-Force] -InputObject <IResultObject> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### SearchByNameMandatory
-```
-Remove-CMClientSetting -Name <String> [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory
 ```
-Remove-CMClientSetting -Id <String> [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+Remove-CMClientSetting [-Force] -Id <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
+```
+
+### SearchByNameMandatory
+```
+Remove-CMClientSetting [-Force] -Name <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
  [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 The **Remove-CMClientSetting** cmdlet removes a customized collection of client settings.
-For more information, see [About Client Settings in Configuration Manager](https://docs.microsoft.com/mem/configmgr/core/clients/deploy/about-client-settings).
+For more information, see [About Client Settings in Configuration Manager](/mem/configmgr/core/clients/deploy/about-client-settings).
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.
@@ -189,12 +189,31 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[About Client Settings in Configuration Manager](https://docs.microsoft.com/mem/configmgr/core/clients/deploy/about-client-settings)
+[About Client Settings in Configuration Manager](/mem/configmgr/core/clients/deploy/about-client-settings)
 
 [Get-CMClientSetting](Get-CMClientSetting.md)
 
 [New-CMClientSetting](New-CMClientSetting.md)
 
-[Set-CMClientSetting](Set-CMClientSetting.md)
-
-
+[Set-CMClientSettingBackgroundIntelligentTransfer](Set-CMClientSettingBackgroundIntelligentTransfer.md)
+[Set-CMClientSettingClientCache](Set-CMClientSettingClientCache.md)
+[Set-CMClientSettingClientPolicy](Set-CMClientSettingClientPolicy.md)
+[Set-CMClientSettingCloudService](Set-CMClientSettingCloudService.md)
+[Set-CMClientSettingComplianceSetting](Set-CMClientSettingComplianceSetting.md)
+[Set-CMClientSettingComputerAgent](Set-CMClientSettingComputerAgent.md)
+[Set-CMClientSettingComputerRestart](Set-CMClientSettingComputerRestart.md)
+[Set-CMClientSettingDeliveryOptimization](Set-CMClientSettingDeliveryOptimization.md)
+[Set-CMClientSettingEndpointProtection](Set-CMClientSettingEndpointProtection.md)
+[Set-CMClientSettingEnrollment](Set-CMClientSettingEnrollment.md)
+[Set-CMClientSettingGeneral](Set-CMClientSettingGeneral.md)
+[Set-CMClientSettingHardwareInventory](Set-CMClientSettingHardwareInventory.md)
+[Set-CMClientSettingMeteredInternetConnection](Set-CMClientSettingMeteredInternetConnection.md)
+[Set-CMClientSettingPowerManagement](Set-CMClientSettingPowerManagement.md)
+[Set-CMClientSettingRemoteTool](Set-CMClientSettingRemoteTool.md)
+[Set-CMClientSettingSoftwareCenter](Set-CMClientSettingSoftwareCenter.md)
+[Set-CMClientSettingSoftwareDeployment](Set-CMClientSettingSoftwareDeployment.md)
+[Set-CMClientSettingSoftwareInventory](Set-CMClientSettingSoftwareInventory.md)
+[Set-CMClientSettingSoftwareMetering](Set-CMClientSettingSoftwareMetering.md)
+[Set-CMClientSettingSoftwareUpdate](Set-CMClientSettingSoftwareUpdate.md)
+[Set-CMClientSettingStateMessaging](Set-CMClientSettingStateMessaging.md)
+[Set-CMClientSettingUserAndDeviceAffinity](Set-CMClientSettingUserAndDeviceAffinity.md)

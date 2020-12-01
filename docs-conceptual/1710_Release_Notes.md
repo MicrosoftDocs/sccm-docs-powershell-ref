@@ -9,6 +9,7 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ROBOTS: NOINDEX
 ---
 
 # Configuration Manager Cmdlet Library changes for Current Branch 1710
@@ -20,7 +21,7 @@ manager: dougeby
 
 ### Documentation library updates
 
-For the latest cmdlet library documentation, see [ConfigurationManager module reference](https://docs.microsoft.com/powershell/module/configurationmanager/?view=sccm-ps).
+For the latest cmdlet library documentation, see [ConfigurationManager module reference](/powershell/module/configurationmanager/).
 
 ### Removed cmdlets
 The following cmdlets are no longer supported and have been removed:

@@ -13,11 +13,11 @@ schema: 2.0.0
 ## SYNTAX
 
 ```
-New-CMTSStepApplyNetworkSetting [-WorkgroupName <String>] [-DomainName <String>] [-DomainOU <String>]
- [-UserName <String>] [-UserPassword <SecureString>] [-DnsSuffix <String>] [-EnableTcpIpFiltering]
- [-AddAdapterSetting <IResultObject[]>] -Name <String> [-Description <String>] [-ContinueOnError] [-Disable]
- [-Condition <IResultObject[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+New-CMTSStepApplyNetworkSetting [-AddAdapterSetting <IResultObject[]>] [-DnsSuffix <String>]
+ [-DomainName <String>] [-DomainOU <String>] [-EnableTcpIpFiltering] [-UserName <String>]
+ [-UserPassword <SecureString>] [-WorkgroupName <String>] [-Condition <IResultObject[]>] [-ContinueOnError]
+ [-Description <String>] [-Disable] -Name <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

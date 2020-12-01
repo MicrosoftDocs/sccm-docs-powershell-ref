@@ -1,4 +1,4 @@
----
+﻿---
 description: Get members of a collection.
 external help file: AdminUI.PS.Collections.dll-Help.xml
 Module Name: ConfigurationManager
@@ -17,19 +17,19 @@ Get members of a collection.
 
 ### ByCollectionName (Default)
 ```
-Get-CMCollectionMember -CollectionName <String> [-Name <String>] [-SmsId <String>] [-ResourceId <Int32>]
+Get-CMCollectionMember -CollectionName <String> [-Name <String>] [-ResourceId <Int32>] [-SmsId <String>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ### ByCollectionId
 ```
-Get-CMCollectionMember -CollectionId <String> [-Name <String>] [-SmsId <String>] [-ResourceId <Int32>]
+Get-CMCollectionMember -CollectionId <String> [-Name <String>] [-ResourceId <Int32>] [-SmsId <String>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ### ByCollection
 ```
-Get-CMCollectionMember -InputObject <IResultObject> [-Name <String>] [-SmsId <String>] [-ResourceId <Int32>]
+Get-CMCollectionMember -InputObject <IResultObject> [-Name <String>] [-ResourceId <Int32>] [-SmsId <String>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
@@ -214,7 +214,6 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -224,7 +223,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
-
 ## NOTES
 
 ## RELATED LINKS

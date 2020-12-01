@@ -16,8 +16,8 @@ Sets an Active Directory Query type global condition in Configuration Manager.
 ## SYNTAX
 
 ```
-Set-CMGlobalConditionActiveDirectoryQuery [-LdapPrefix <String>] [-DistinguishedName <String>]
- [-LdapFilter <String>] [-SearchScope <SearchScope>] [-Property <String>] -Name <String> [-PassThru]
+Set-CMGlobalConditionActiveDirectoryQuery [-DistinguishedName <String>] [-LdapFilter <String>]
+ [-LdapPrefix <String>] [-Property <String>] [-SearchScope <SearchScope>] -Name <String> [-PassThru]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

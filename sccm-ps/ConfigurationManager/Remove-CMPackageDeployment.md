@@ -17,29 +17,29 @@ Removes a package deployment from Configuration Manager.
 
 ### SearchByValue (Default)
 ```
-Remove-CMPackageDeployment [-ProgramName <String>] -InputObject <IResultObject> [-Force]
- [-CollectionName <String>] [-CollectionId <String>] [-Collection <IResultObject>] [-DisableWildcardHandling]
+Remove-CMPackageDeployment -InputObject <IResultObject> [-ProgramName <String>] [-Force]
+ [-Collection <IResultObject>] [-CollectionId <String>] [-CollectionName <String>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SearchByDeploymentId
+```
+Remove-CMPackageDeployment [-DeploymentId <String>] [-ProgramName <String>] [-Force]
+ [-Collection <IResultObject>] [-CollectionId <String>] [-CollectionName <String>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByName
 ```
-Remove-CMPackageDeployment [-Name <String>] [-ProgramName <String>] [-Force] [-CollectionName <String>]
- [-CollectionId <String>] [-Collection <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Remove-CMPackageDeployment [-Name <String>] [-ProgramName <String>] [-Force] [-Collection <IResultObject>]
+ [-CollectionId <String>] [-CollectionName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchById
 ```
-Remove-CMPackageDeployment [-ProgramName <String>] [-PackageId <String>] [-Force] [-CollectionName <String>]
- [-CollectionId <String>] [-Collection <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### SearchByDeploymentId
-```
-Remove-CMPackageDeployment [-ProgramName <String>] [-DeploymentId <String>] [-Force] [-CollectionName <String>]
- [-CollectionId <String>] [-Collection <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Remove-CMPackageDeployment [-PackageId <String>] [-ProgramName <String>] [-Force] [-Collection <IResultObject>]
+ [-CollectionId <String>] [-CollectionName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

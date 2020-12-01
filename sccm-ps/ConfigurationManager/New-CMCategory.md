@@ -15,7 +15,7 @@ Creates a configuration category in Configuration Manager.
 ## SYNTAX
 
 ```
-New-CMCategory -Name <String> -CategoryType <CategoryType> [-DisableWildcardHandling] [-ForceWildcardHandling]
+New-CMCategory -CategoryType <CategoryType> -Name <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

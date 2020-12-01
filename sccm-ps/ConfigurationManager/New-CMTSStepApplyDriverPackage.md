@@ -13,11 +13,11 @@ schema: 2.0.0
 ## SYNTAX
 
 ```
-New-CMTSStepApplyDriverPackage -PackageId <String> [-EnableRecurse] [-EnableUnsignedDriver]
- [-BootCriticalDriverId <String>] [-BootCriticalContentUniqueId <String>] [-BootCriticalInfFile <String>]
- [-BootCriticalHardwareComponent <String>] [-BootCriticalId <String>] -Name <String> [-Description <String>]
- [-ContinueOnError] [-Disable] [-Condition <IResultObject[]>] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+New-CMTSStepApplyDriverPackage [-BootCriticalContentUniqueId <String>] [-BootCriticalDriverId <String>]
+ [-BootCriticalHardwareComponent <String>] [-BootCriticalId <String>] [-BootCriticalInfFile <String>]
+ [-EnableRecurse] [-EnableUnsignedDriver] -PackageId <String> [-Condition <IResultObject[]>] [-ContinueOnError]
+ [-Description <String>] [-Disable] -Name <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

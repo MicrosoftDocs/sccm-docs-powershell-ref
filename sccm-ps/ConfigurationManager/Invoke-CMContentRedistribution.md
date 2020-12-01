@@ -16,16 +16,10 @@ Invokes a content redistribution.
 
 ### SearchByValue (Default)
 ```
-Invoke-CMContentRedistribution [-DistributionPointName <String[]>] [-DistributionPointGroupName <String[]>]
- [-DistributionPoint <IResultObject[]>] [-DistributionPointGroup <IResultObject[]>]
- [-InputObject <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
-```
-
-### SearchByDP
-```
-Invoke-CMContentRedistribution [-DistributionPointName <String[]>] [-DistributionPointGroupName <String[]>]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Invoke-CMContentRedistribution [-DistributionPoint <IResultObject[]>]
+ [-DistributionPointGroup <IResultObject[]>] [-DistributionPointGroupName <String[]>]
+ [-DistributionPointName <String[]>] [-InputObject <IResultObject>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByDPName
@@ -33,6 +27,12 @@ Invoke-CMContentRedistribution [-DistributionPointName <String[]>] [-Distributio
 Invoke-CMContentRedistribution [-DistributionPoint <IResultObject[]>]
  [-DistributionPointGroup <IResultObject[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
  [-Confirm] [<CommonParameters>]
+```
+
+### SearchByDP
+```
+Invoke-CMContentRedistribution [-DistributionPointGroupName <String[]>] [-DistributionPointName <String[]>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

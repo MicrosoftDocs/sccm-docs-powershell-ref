@@ -16,13 +16,13 @@ Removes an administrative user.
 
 ### SearchByValueMandatory (Default)
 ```
-Remove-CMAdministrativeUser -InputObject <IResultObject> [-Force] [-DisableWildcardHandling]
+Remove-CMAdministrativeUser [-Force] -InputObject <IResultObject> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByName
 ```
-Remove-CMAdministrativeUser -Name <String> [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Remove-CMAdministrativeUser [-Force] -Name <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

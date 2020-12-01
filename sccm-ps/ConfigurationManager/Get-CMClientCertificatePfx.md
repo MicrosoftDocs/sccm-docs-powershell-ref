@@ -1,4 +1,4 @@
----
+﻿---
 description: Gets a client PFX certificate.
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 Module Name: ConfigurationManager
@@ -15,7 +15,7 @@ Gets a client PFX certificate.
 ## SYNTAX
 
 ```
-Get-CMClientCertificatePfx [-UserName <String>] [-Thumbprint <String>] [-InputObject <IResultObject>]
+Get-CMClientCertificatePfx [-InputObject <IResultObject>] [-Thumbprint <String>] [-UserName <String>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 

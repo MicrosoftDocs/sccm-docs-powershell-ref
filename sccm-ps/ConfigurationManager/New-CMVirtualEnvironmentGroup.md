@@ -16,13 +16,13 @@ Creates a virtual environment group.
 
 ### NewByValue (Default)
 ```
-New-CMVirtualEnvironmentGroup -Name <String> -InputObject <IResultObject[]> [-DisableWildcardHandling]
+New-CMVirtualEnvironmentGroup -InputObject <IResultObject[]> -Name <String> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### NewByDTI
 ```
-New-CMVirtualEnvironmentGroup -Name <String> -DeploymentTypeItem <DeploymentTypeItem[]>
+New-CMVirtualEnvironmentGroup -DeploymentTypeItem <DeploymentTypeItem[]> -Name <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

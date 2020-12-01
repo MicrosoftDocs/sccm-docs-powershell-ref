@@ -20,16 +20,16 @@ Set-CMAssignedSite -InputObject <IResultObject> [-SiteCode <String>] [-DisableWi
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### SearchByNameMandatory
-```
-Set-CMAssignedSite -DeviceName <String> [-SiteCode <String>] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
 ### SearchByIdMandatory
 ```
 Set-CMAssignedSite -DeviceId <String> [-SiteCode <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SearchByNameMandatory
+```
+Set-CMAssignedSite -DeviceName <String> [-SiteCode <String>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

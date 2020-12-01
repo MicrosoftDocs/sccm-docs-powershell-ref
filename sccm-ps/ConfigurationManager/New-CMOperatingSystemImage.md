@@ -15,7 +15,7 @@ Creates an operating system image.
 ## SYNTAX
 
 ```
-New-CMOperatingSystemImage -Name <String> -Path <String> [-Version <String>] [-Description <String>]
+New-CMOperatingSystemImage [-Description <String>] -Name <String> -Path <String> [-Version <String>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

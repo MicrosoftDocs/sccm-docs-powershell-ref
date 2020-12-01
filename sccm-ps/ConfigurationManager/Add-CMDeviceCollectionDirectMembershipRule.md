@@ -16,37 +16,37 @@ Adds a Direct Rule membership rule to a device collection.
 
 ### ByCollectionIdAndResourceId (Default)
 ```
-Add-CMDeviceCollectionDirectMembershipRule -CollectionId <String> -ResourceId <Int32[]> [-PassThru]
+Add-CMDeviceCollectionDirectMembershipRule -CollectionId <String> [-PassThru] -ResourceId <Int32[]>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByCollectionIdAndResourceValue
 ```
-Add-CMDeviceCollectionDirectMembershipRule -CollectionId <String> -Resource <IResultObject[]> [-PassThru]
+Add-CMDeviceCollectionDirectMembershipRule -CollectionId <String> [-PassThru] -Resource <IResultObject[]>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByCollectionNameAndResourceId
 ```
-Add-CMDeviceCollectionDirectMembershipRule -CollectionName <String> -ResourceId <Int32[]> [-PassThru]
+Add-CMDeviceCollectionDirectMembershipRule -CollectionName <String> [-PassThru] -ResourceId <Int32[]>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByCollectionNameAndResourceValue
 ```
-Add-CMDeviceCollectionDirectMembershipRule -CollectionName <String> -Resource <IResultObject[]> [-PassThru]
+Add-CMDeviceCollectionDirectMembershipRule -CollectionName <String> [-PassThru] -Resource <IResultObject[]>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByCollectionValueAndResourceId
 ```
-Add-CMDeviceCollectionDirectMembershipRule -InputObject <IResultObject> -ResourceId <Int32[]> [-PassThru]
+Add-CMDeviceCollectionDirectMembershipRule -InputObject <IResultObject> [-PassThru] -ResourceId <Int32[]>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByCollectionValueAndResourceValue
 ```
-Add-CMDeviceCollectionDirectMembershipRule -InputObject <IResultObject> -Resource <IResultObject[]> [-PassThru]
+Add-CMDeviceCollectionDirectMembershipRule -InputObject <IResultObject> [-PassThru] -Resource <IResultObject[]>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -247,7 +247,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Introduction to Collections in Configuration Manager](https://docs.microsoft.com/mem/configmgr/core/clients/manage/collections/introduction-to-collections)
+[Introduction to Collections in Configuration Manager](/mem/configmgr/core/clients/manage/collections/introduction-to-collections)
 
 [Get-CMCollection](Get-CMCollection.md)
 

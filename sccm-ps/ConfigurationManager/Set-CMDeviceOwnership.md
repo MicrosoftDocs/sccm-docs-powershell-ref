@@ -20,15 +20,15 @@ Set-CMDeviceOwnership -InputObject <IResultObject> -OwnershipType <DeviceOwnersh
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### SearchByNameMandatory
-```
-Set-CMDeviceOwnership -DeviceName <String> -OwnershipType <DeviceOwnershipType> [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
 ### SearchByIdMandatory
 ```
 Set-CMDeviceOwnership -DeviceId <String> -OwnershipType <DeviceOwnershipType> [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SearchByNameMandatory
+```
+Set-CMDeviceOwnership -DeviceName <String> -OwnershipType <DeviceOwnershipType> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

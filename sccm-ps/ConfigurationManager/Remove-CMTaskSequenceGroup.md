@@ -23,13 +23,13 @@ Remove-CMTaskSequenceGroup [-Force] -InputObject <IResultObject> [-StepName <Str
 
 ### ById
 ```
-Remove-CMTaskSequenceGroup [-Force] -TaskSequenceId <String> [-StepName <String>] [-DisableWildcardHandling]
+Remove-CMTaskSequenceGroup [-Force] [-StepName <String>] -TaskSequenceId <String> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByName
 ```
-Remove-CMTaskSequenceGroup [-Force] -TaskSequenceName <String> [-StepName <String>] [-DisableWildcardHandling]
+Remove-CMTaskSequenceGroup [-Force] [-StepName <String>] -TaskSequenceName <String> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

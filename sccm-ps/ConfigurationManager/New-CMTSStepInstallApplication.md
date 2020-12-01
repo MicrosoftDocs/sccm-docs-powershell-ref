@@ -17,8 +17,8 @@ Creates a t s step install application.
 
 ```
 New-CMTSStepInstallApplication [-Application <IResultObject[]>] [-BaseVariableName <String>]
- [-ClearCache <Boolean>] [-RetryCount <Int32>] [-ContinueOnInstallError] -Name <String> [-Description <String>]
- [-ContinueOnError] [-Disable] [-Condition <IResultObject[]>] [-DisableWildcardHandling]
+ [-ClearCache <Boolean>] [-ContinueOnInstallError] [-RetryCount <Int32>] [-Condition <IResultObject[]>]
+ [-ContinueOnError] [-Description <String>] [-Disable] -Name <String> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

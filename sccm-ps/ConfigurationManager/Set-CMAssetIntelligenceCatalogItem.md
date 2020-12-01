@@ -16,23 +16,23 @@ Changes the properties of an item in the Asset Intelligence catalog.
 
 ### SetById (Default)
 ```
-Set-CMAssetIntelligenceCatalogItem -Id <String> [-NewCategoryName <String>] [-Description <String>]
- [-LanguageId <Int32>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+Set-CMAssetIntelligenceCatalogItem [-Description <String>] -Id <String> [-LanguageId <Int32>]
+ [-NewCategoryName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ### SetByName
 ```
-Set-CMAssetIntelligenceCatalogItem -CategoryName <String> [-NewCategoryName <String>] [-Description <String>]
- [-LanguageId <Int32>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+Set-CMAssetIntelligenceCatalogItem -CategoryName <String> [-Description <String>] [-LanguageId <Int32>]
+ [-NewCategoryName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ### SetByValueMandatory
 ```
-Set-CMAssetIntelligenceCatalogItem -InputObject <IResultObject> [-NewCategoryName <String>]
- [-Description <String>] [-LanguageId <Int32>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Set-CMAssetIntelligenceCatalogItem [-Description <String>] -InputObject <IResultObject> [-LanguageId <Int32>]
+ [-NewCategoryName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -182,7 +182,7 @@ Accept wildcard characters: False
 
 ### -LanguageId
 Specifies the locale ID for an item.
-For more information and a list of locale IDs, see [Appendix A: Product Behavior](https://docs.microsoft.com/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c).
+For more information and a list of locale IDs, see [Appendix A: Product Behavior](/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c).
 
 ```yaml
 Type: Int32

@@ -17,15 +17,15 @@ Adds a certificate registration point role to a site system server.
 ### ByValue (Default)
 ```
 Add-CMCertificateRegistrationPoint -Certificate <Hashtable> [-ConnectionAccountUserName <String>]
- -InputObject <IResultObject> [-IisWebsite <String>] [-WebApplicationName <String>] [-Port <Int32>]
+ [-IisWebsite <String>] -InputObject <IResultObject> [-Port <Int32>] [-WebApplicationName <String>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByName
 ```
 Add-CMCertificateRegistrationPoint -Certificate <Hashtable> [-ConnectionAccountUserName <String>]
- [-IisWebsite <String>] [-WebApplicationName <String>] [-Port <Int32>] [-SiteCode <String>]
- [-SiteSystemServerName] <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [-IisWebsite <String>] [-Port <Int32>] [-SiteCode <String>] [-SiteSystemServerName] <String>
+ [-WebApplicationName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 

@@ -16,8 +16,8 @@ Creates a compliance rule registry key permission.
 
 ```
 New-CMComplianceRuleRegistryKeyPermission -ExpectedPermission <RegistryPermissions[]>
- -ExpectedUserAccess <Hashtable> [-IsExclusive <Boolean>] [-ReportNoncompliance] -RuleName <String>
- -InputObject <ConfigurationItemSetting> [-NoncomplianceSeverity <NoncomplianceSeverity>]
+ -ExpectedUserAccess <Hashtable> [-IsExclusive <Boolean>] [-ReportNoncompliance]
+ -InputObject <ConfigurationItemSetting> -RuleName <String> [-NoncomplianceSeverity <NoncomplianceSeverity>]
  [-RuleDescription <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```

@@ -9,6 +9,7 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ROBOTS: NOINDEX
 ---
 
 # Configuration Manager Cmdlet Library changes for version 1906
@@ -16,7 +17,7 @@ manager: dougeby
 *Applies to: Configuration Manager (Current Branch)*
 
 > [!NOTE]  
-> Configuration Manager current branch version 1902 is the baseline for these changes. For more information, see [Configuration Manager Cmdlet Library changes for version 1902](https://docs.microsoft.com/powershell/sccm/1902-release-notes).
+> Configuration Manager current branch version 1902 is the baseline for these changes. For more information, see [Configuration Manager Cmdlet Library changes for version 1902](1902-release-notes.md).
 
 
 ## Important changes
@@ -1019,4 +1020,4 @@ Set-CMSoftwareUpdateAutoDeploymentRule -Name $ ReferenceADRName  -ContentSize $s
 
 Many of the fixes and improvements described in this article are a result of your feedback.
 
-To submit bug reports, use [send a smile in the Configuration Manager console](https://docs.microsoft.com/sccm/core/understand/find-help#product-feedback). For new feature requests, use [UserVoice](https://configurationmanager.uservoice.com).
+To submit bug reports, use [send a smile in the Configuration Manager console](/sccm/core/understand/find-help#product-feedback). For new feature requests, use [UserVoice](https://configurationmanager.uservoice.com).

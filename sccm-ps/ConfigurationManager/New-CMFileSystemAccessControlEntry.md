@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 Module Name: ConfigurationManager
 online version:
@@ -13,7 +13,7 @@ schema: 2.0.0
 ## SYNTAX
 
 ```
-New-CMFileSystemAccessControlEntry -GroupOrUserName <String> [-AccessOption <AccessType>]
+New-CMFileSystemAccessControlEntry [-AccessOption <AccessType>] -GroupOrUserName <String>
  [-Permission <FileSystemPermissions[]>] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [<CommonParameters>]
 ```

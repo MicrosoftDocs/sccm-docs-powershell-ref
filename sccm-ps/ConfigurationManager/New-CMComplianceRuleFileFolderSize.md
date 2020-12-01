@@ -16,7 +16,7 @@ Creates a compliance rule file folder size.
 
 ```
 New-CMComplianceRuleFileFolderSize -ExpectedValue <Int64[]> -ExpressionOperator <RuleExpressionOperator>
- [-ReportNoncompliance] -RuleName <String> -InputObject <ConfigurationItemSetting>
+ [-ReportNoncompliance] -InputObject <ConfigurationItemSetting> -RuleName <String>
  [-NoncomplianceSeverity <NoncomplianceSeverity>] [-RuleDescription <String>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```

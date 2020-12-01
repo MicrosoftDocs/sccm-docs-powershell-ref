@@ -16,7 +16,7 @@ manager: dougeby
 *Applies to: Configuration Manager (current branch)*
 
 > [!NOTE]  
-> Configuration Manager current branch version 1910 is the baseline for these changes. For more information, see [Configuration Manager Cmdlet Library changes for version 1910](https://docs.microsoft.com/powershell/sccm/1910-release-notes).
+> Configuration Manager current branch version 1910 is the baseline for these changes. For more information, see [Configuration Manager Cmdlet Library changes for version 1910](1910-release-notes.md).
 
 ## Important changes
 
@@ -408,4 +408,6 @@ Set-CMThirdPartyUpdateCatalog -Name $name –Schedule $schedule
 
 Many of the fixes and improvements described in this article are a result of your feedback.
 
-To submit bug reports, use [send a smile in the Configuration Manager console](https://docs.microsoft.com/sccm/core/understand/find-help#product-feedback). For new feature requests, use [UserVoice](https://configurationmanager.uservoice.com).
+To send feedback, use the Configuration Manager console. For more information, see [Feedback for PowerShell](/mem/configmgr/core/understand/product-feedback#feedback-for-powershell).
+
+To submit new feature requests, see the PowerShell group of [Configuration Manager on UserVoice](https://configurationmanager.uservoice.com).

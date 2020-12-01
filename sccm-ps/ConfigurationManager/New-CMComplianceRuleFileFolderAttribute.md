@@ -16,8 +16,8 @@ Creates a compliance rule file folder attribute.
 
 ```
 New-CMComplianceRuleFileFolderAttribute [-Archive <Boolean>] [-Compressed <Boolean>] [-Encrypted <Boolean>]
- [-Hidden <Boolean>] [-ReadOnly <Boolean>] [-System <Boolean>] [-ReportNoncompliance] -RuleName <String>
- -InputObject <ConfigurationItemSetting> [-NoncomplianceSeverity <NoncomplianceSeverity>]
+ [-Hidden <Boolean>] [-ReadOnly <Boolean>] [-System <Boolean>] [-ReportNoncompliance]
+ -InputObject <ConfigurationItemSetting> -RuleName <String> [-NoncomplianceSeverity <NoncomplianceSeverity>]
  [-RuleDescription <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```

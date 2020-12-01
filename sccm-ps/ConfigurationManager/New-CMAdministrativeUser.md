@@ -16,8 +16,8 @@ Creates an administrative user.
 
 ### New
 ```
-New-CMAdministrativeUser -Name <String> -RoleName <String[]> [-SecurityScopeName <String[]>]
- [-CollectionName <String[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+New-CMAdministrativeUser [-CollectionName <String[]>] -Name <String> -RoleName <String[]>
+ [-SecurityScopeName <String[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 

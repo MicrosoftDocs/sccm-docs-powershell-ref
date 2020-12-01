@@ -22,7 +22,7 @@ Remove-CMAssetIntelligenceSynchronizationPoint [-Force] -InputObject <IResultObj
 
 ### SearchByNameMandatory
 ```
-Remove-CMAssetIntelligenceSynchronizationPoint [-SiteCode <String>] [-Force] [-SiteSystemServerName] <String>
+Remove-CMAssetIntelligenceSynchronizationPoint [-Force] [-SiteCode <String>] [-SiteSystemServerName] <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

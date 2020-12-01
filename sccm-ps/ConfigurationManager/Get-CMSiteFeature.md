@@ -1,4 +1,4 @@
----
+﻿---
 description: Gets a site feature.
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -15,7 +15,7 @@ Gets a site feature.
 ## SYNTAX
 
 ```
-Get-CMSiteFeature [-Name <String>] [-Prerelease] [-Production] [-Fast] [-DisableWildcardHandling]
+Get-CMSiteFeature [-Fast] [-Name <String>] [-Prerelease] [-Production] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [<CommonParameters>]
 ```
 

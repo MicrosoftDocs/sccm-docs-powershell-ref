@@ -38,7 +38,7 @@ Set-CMClientSettingComputerRestart [-CountdownMins <Int32>] [-FinalWindowMins <I
 
 ## DESCRIPTION
 
-Set client settings for computer restart. For more information, see [device restart notifications](https://docs.microsoft.com/mem/configmgr/core/clients/deploy/device-restart-notifications).
+Set client settings for computer restart. For more information, see [device restart notifications](/mem/configmgr/core/clients/deploy/device-restart-notifications).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
@@ -241,9 +241,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
-
 ## NOTES
 
 ## RELATED LINKS
 
-[Device restart notifications](https://docs.microsoft.com/mem/configmgr/core/clients/deploy/device-restart-notifications)
+[Device restart notifications](/mem/configmgr/core/clients/deploy/device-restart-notifications)

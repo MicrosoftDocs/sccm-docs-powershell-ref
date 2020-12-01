@@ -15,9 +15,9 @@ Changes database settings for a Configuration Manager database.
 ## SYNTAX
 
 ```
-Set-CMDatabaseProperty [-SiteCode <String>] [-EnableDataCompression <Boolean>]
- [-SqlServerServiceBrokerPort <Int32>] [-DataRetentionDays <Int32>] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMDatabaseProperty [-DataRetentionDays <Int32>] [-EnableDataCompression <Boolean>] [-SiteCode <String>]
+ [-SqlServerServiceBrokerPort <Int32>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

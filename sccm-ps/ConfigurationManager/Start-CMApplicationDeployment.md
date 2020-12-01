@@ -16,45 +16,47 @@ Starts an application deployment in Configuration Manager.
 
 ### SearchByValueMandatory (Default)
 ```
-Start-CMApplicationDeployment [-InputObject] <IResultObject> [-ApprovalRequired <Boolean>]
- [-AvailableDate <DateTime>] [-AvailableTime <DateTime>] [-AvailableDateTime <DateTime>]
- -CollectionName <String> [-Comment <String>] [-DeadlineDate <DateTime>] [-DeadlineTime <DateTime>]
- [-DeadlineDateTime <DateTime>] [-DeployAction <DeployActionType>] [-DeployPurpose <DeployPurposeType>]
- [-EnableMomAlert <Boolean>] [-FailParameterValue <Int32>] [-OverrideServiceWindow <Boolean>]
- [-PersistOnWriteFilterDevice <Boolean>] [-PostponeDate <DateTime>] [-PostponeTime <DateTime>]
- [-PostponeDateTime <DateTime>] [-PreDeploy <Boolean>] [-GenerateScomAlertOnFailure <Boolean>]
- [-RebootOutsideServiceWindow <Boolean>] [-SendWakeupPacket <Boolean>] [-SuccessParameterValue <Int32>]
- [-TimeBaseOn <TimeType>] [-UseMeteredNetwork <Boolean>] [-UserNotification <UserNotificationType>] [-PassThru]
- [-UpdateSupersedence <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
-```
-
-### SearchByNameMandatory
-```
-Start-CMApplicationDeployment [-Name] <String> [-ApprovalRequired <Boolean>] [-AvailableDate <DateTime>]
- [-AvailableTime <DateTime>] [-AvailableDateTime <DateTime>] -CollectionName <String> [-Comment <String>]
- [-DeadlineDate <DateTime>] [-DeadlineTime <DateTime>] [-DeadlineDateTime <DateTime>]
+Start-CMApplicationDeployment [-ApprovalRequired <Boolean>] [-AvailableDate <DateTime>]
+ [-AvailableDateTime <DateTime>] [-AvailableTime <DateTime>] -CollectionName <String> [-Comment <String>]
+ [-DeadlineDate <DateTime>] [-DeadlineDateTime <DateTime>] [-DeadlineTime <DateTime>]
  [-DeployAction <DeployActionType>] [-DeployPurpose <DeployPurposeType>] [-EnableMomAlert <Boolean>]
- [-FailParameterValue <Int32>] [-OverrideServiceWindow <Boolean>] [-PersistOnWriteFilterDevice <Boolean>]
- [-PostponeDate <DateTime>] [-PostponeTime <DateTime>] [-PostponeDateTime <DateTime>] [-PreDeploy <Boolean>]
- [-GenerateScomAlertOnFailure <Boolean>] [-RebootOutsideServiceWindow <Boolean>] [-SendWakeupPacket <Boolean>]
- [-SuccessParameterValue <Int32>] [-TimeBaseOn <TimeType>] [-UseMeteredNetwork <Boolean>]
- [-UserNotification <UserNotificationType>] [-PassThru] [-UpdateSupersedence <Boolean>]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-FailParameterValue <Int32>] [-GenerateScomAlertOnFailure <Boolean>] [-InputObject] <IResultObject>
+ [-OverrideServiceWindow <Boolean>] [-PassThru] [-PersistOnWriteFilterDevice <Boolean>]
+ [-PostponeDate <DateTime>] [-PostponeDateTime <DateTime>] [-PostponeTime <DateTime>] [-PreDeploy <Boolean>]
+ [-RebootOutsideServiceWindow <Boolean>] [-SendWakeupPacket <Boolean>] [-SuccessParameterValue <Int32>]
+ [-TimeBaseOn <TimeType>] [-UpdateSupersedence <Boolean>] [-UseMeteredNetwork <Boolean>]
+ [-UserNotification <UserNotificationType>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory
 ```
-Start-CMApplicationDeployment [-Id] <Int32> [-ApprovalRequired <Boolean>] [-AvailableDate <DateTime>]
- [-AvailableTime <DateTime>] [-AvailableDateTime <DateTime>] -CollectionName <String> [-Comment <String>]
- [-DeadlineDate <DateTime>] [-DeadlineTime <DateTime>] [-DeadlineDateTime <DateTime>]
+Start-CMApplicationDeployment [-ApprovalRequired <Boolean>] [-AvailableDate <DateTime>]
+ [-AvailableDateTime <DateTime>] [-AvailableTime <DateTime>] -CollectionName <String> [-Comment <String>]
+ [-DeadlineDate <DateTime>] [-DeadlineDateTime <DateTime>] [-DeadlineTime <DateTime>]
  [-DeployAction <DeployActionType>] [-DeployPurpose <DeployPurposeType>] [-EnableMomAlert <Boolean>]
- [-FailParameterValue <Int32>] [-OverrideServiceWindow <Boolean>] [-PersistOnWriteFilterDevice <Boolean>]
- [-PostponeDate <DateTime>] [-PostponeTime <DateTime>] [-PostponeDateTime <DateTime>] [-PreDeploy <Boolean>]
- [-GenerateScomAlertOnFailure <Boolean>] [-RebootOutsideServiceWindow <Boolean>] [-SendWakeupPacket <Boolean>]
- [-SuccessParameterValue <Int32>] [-TimeBaseOn <TimeType>] [-UseMeteredNetwork <Boolean>]
- [-UserNotification <UserNotificationType>] [-PassThru] [-UpdateSupersedence <Boolean>]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-FailParameterValue <Int32>] [-GenerateScomAlertOnFailure <Boolean>] [-Id] <Int32>
+ [-OverrideServiceWindow <Boolean>] [-PassThru] [-PersistOnWriteFilterDevice <Boolean>]
+ [-PostponeDate <DateTime>] [-PostponeDateTime <DateTime>] [-PostponeTime <DateTime>] [-PreDeploy <Boolean>]
+ [-RebootOutsideServiceWindow <Boolean>] [-SendWakeupPacket <Boolean>] [-SuccessParameterValue <Int32>]
+ [-TimeBaseOn <TimeType>] [-UpdateSupersedence <Boolean>] [-UseMeteredNetwork <Boolean>]
+ [-UserNotification <UserNotificationType>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
+```
+
+### SearchByNameMandatory
+```
+Start-CMApplicationDeployment [-ApprovalRequired <Boolean>] [-AvailableDate <DateTime>]
+ [-AvailableDateTime <DateTime>] [-AvailableTime <DateTime>] -CollectionName <String> [-Comment <String>]
+ [-DeadlineDate <DateTime>] [-DeadlineDateTime <DateTime>] [-DeadlineTime <DateTime>]
+ [-DeployAction <DeployActionType>] [-DeployPurpose <DeployPurposeType>] [-EnableMomAlert <Boolean>]
+ [-FailParameterValue <Int32>] [-GenerateScomAlertOnFailure <Boolean>] [-Name] <String>
+ [-OverrideServiceWindow <Boolean>] [-PassThru] [-PersistOnWriteFilterDevice <Boolean>]
+ [-PostponeDate <DateTime>] [-PostponeDateTime <DateTime>] [-PostponeTime <DateTime>] [-PreDeploy <Boolean>]
+ [-RebootOutsideServiceWindow <Boolean>] [-SendWakeupPacket <Boolean>] [-SuccessParameterValue <Int32>]
+ [-TimeBaseOn <TimeType>] [-UpdateSupersedence <Boolean>] [-UseMeteredNetwork <Boolean>]
+ [-UserNotification <UserNotificationType>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

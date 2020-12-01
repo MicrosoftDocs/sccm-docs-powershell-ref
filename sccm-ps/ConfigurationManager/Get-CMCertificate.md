@@ -1,4 +1,4 @@
----
+﻿---
 description: Gets a certificate.
 external help file: AdminUI.PS.Certificates.dll-Help.xml
 Module Name: ConfigurationManager
@@ -15,8 +15,8 @@ Gets a certificate.
 ## SYNTAX
 
 ```
-Get-CMCertificate [-Id <String>] [-Thumbprint <String>] [-CertificateType <CertificateType>]
- [-KeyType <KeyType>] [-Fast] [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
+Get-CMCertificate [-CertificateType <CertificateType>] [-Fast] [-Id <String>] [-KeyType <KeyType>]
+ [-Thumbprint <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

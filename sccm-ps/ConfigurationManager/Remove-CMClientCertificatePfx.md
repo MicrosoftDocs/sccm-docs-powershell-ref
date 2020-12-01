@@ -16,15 +16,15 @@ Removes a PFX client certificate.
 
 ### ByValue (Default)
 ```
-Remove-CMClientCertificatePfx -InputObject <IResultObject> [-Force] [-DisableWildcardHandling]
+Remove-CMClientCertificatePfx [-Force] -InputObject <IResultObject> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByName
 ```
-Remove-CMClientCertificatePfx -UserName <String> [-Thumbprint <String>]
- [-CertificateProfilePfx <IResultObject>] [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+Remove-CMClientCertificatePfx [-CertificateProfilePfx <IResultObject>] [-Force] [-Thumbprint <String>]
+ -UserName <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

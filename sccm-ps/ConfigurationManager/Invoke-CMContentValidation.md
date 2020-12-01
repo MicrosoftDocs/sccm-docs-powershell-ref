@@ -21,13 +21,6 @@ Invoke-CMContentValidation [-CollectionName <String[]>] [-DisableContentDependen
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### SearchByValueMandatory
-```
-Invoke-CMContentValidation -InputObject <IResultObject> [-CollectionName <String[]>]
- [-DistributionPointGroupName <String[]>] [-DistributionPointName <String[]>] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
 ### SearchByIdMandatory_Application
 ```
 Invoke-CMContentValidation -ApplicationId <String[]> [-CollectionName <String[]>]
@@ -83,6 +76,13 @@ Invoke-CMContentValidation [-CollectionName <String[]>] [-DistributionPointGroup
 ```
 Invoke-CMContentValidation [-CollectionName <String[]>] [-DistributionPointGroupName <String[]>]
  [-DistributionPointName <String[]>] -DriverPackageName <String[]> [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SearchByValueMandatory
+```
+Invoke-CMContentValidation [-CollectionName <String[]>] [-DistributionPointGroupName <String[]>]
+ [-DistributionPointName <String[]>] -InputObject <IResultObject> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -266,7 +266,7 @@ Specifies an array of IDs of deployment packages.
 ```yaml
 Type: String[]
 Parameter Sets: SearchByIdMandatory_DeploymentPackage
-Aliases: DeploymentPackageIds
+Aliases: DeploymentPackageIds, SoftwareUpdatesPackageId, SoftwareUpdatesPackageIds
 
 Required: True
 Position: Named
@@ -281,7 +281,7 @@ Specifies an array of names of deployment packages.
 ```yaml
 Type: String[]
 Parameter Sets: SearchByNameMandatory_DeploymentPackage
-Aliases: DeploymentPackageNames
+Aliases: DeploymentPackageNames, SoftwareUpdatesPackageName, SoftwareUpdatesPackageNames
 
 Required: True
 Position: Named

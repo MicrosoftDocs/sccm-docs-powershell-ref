@@ -20,15 +20,15 @@ Unblock-CMDevice [-InputObject] <IResultObject> [-DisableWildcardHandling] [-For
  [-Confirm] [<CommonParameters>]
 ```
 
-### SearchByNameMandatory
-```
-Unblock-CMDevice -DeviceName <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
-```
-
 ### SearchByIdMandatory
 ```
 Unblock-CMDevice -DeviceId <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### SearchByNameMandatory
+```
+Unblock-CMDevice -DeviceName <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 

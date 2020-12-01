@@ -1,4 +1,4 @@
----
+﻿---
 description: Gets cloud-based distribution points.
 external help file: AdminUI.PS.Content.dll-Help.xml
 Module Name: ConfigurationManager
@@ -20,6 +20,18 @@ Get-CMCloudDistributionPoint -DistributionPointGroupName <String> [-DisableWildc
  [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
+### SearchByGroup
+```
+Get-CMCloudDistributionPoint -DistributionPointGroup <IResultObject> [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [<CommonParameters>]
+```
+
+### SearchByGroupId
+```
+Get-CMCloudDistributionPoint -DistributionPointGroupId <String> [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [<CommonParameters>]
+```
+
 ### SearchByIdMandatory
 ```
 Get-CMCloudDistributionPoint -Id <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
@@ -32,24 +44,12 @@ Get-CMCloudDistributionPoint [-Name <String>] [-DisableWildcardHandling] [-Force
  [<CommonParameters>]
 ```
 
-### SearchByGroupId
-```
-Get-CMCloudDistributionPoint -DistributionPointGroupId <String> [-DisableWildcardHandling]
- [-ForceWildcardHandling] [<CommonParameters>]
-```
-
-### SearchByGroup
-```
-Get-CMCloudDistributionPoint -DistributionPointGroup <IResultObject> [-DisableWildcardHandling]
- [-ForceWildcardHandling] [<CommonParameters>]
-```
-
 ## DESCRIPTION
 The **Get-CMCloudDistributionPoint** cmdlet gets one or more cloud-based distribution points in Configuration Manager.
 
 In Configuration Manager, you can use a cloud service in Azure to host a distribution point for storing files to download to clients.
 You can send packages and apps to and host packages and apps in cloud distribution points.
-For more information about cloud distribution points, see [Planning for Content Management in Configuration Manager](https://docs.microsoft.com/mem/configmgr/core/plan-design/hierarchy/fundamental-concepts-for-content-management).
+For more information about cloud distribution points, see [Planning for Content Management in Configuration Manager](/mem/configmgr/core/plan-design/hierarchy/fundamental-concepts-for-content-management).
 
 You can use the **Get-CMCloudDistributionPoint** cmdlet to get distribution points to use with other cmdlets.
 For example, you might want to get a distribution point and then use the [Stop-CMCloudDistributionPoint](Stop-CMCloudDistributionPoint.md) cmdlet to suspend it.

@@ -17,15 +17,15 @@ Sets a SQL Query type global condition in Configuration Manager.
 
 ### SetQueryFromFile (Default)
 ```
-Set-CMGlobalConditionSqlQuery [-FilePath <String>] [-UseDefaultInstance] [-UseAllInstances]
- [-InstanceName <String>] [-Database <String>] [-Column <String>] -Name <String> [-PassThru]
+Set-CMGlobalConditionSqlQuery [-Column <String>] [-Database <String>] [-FilePath <String>]
+ [-InstanceName <String>] [-UseAllInstances] [-UseDefaultInstance] -Name <String> [-PassThru]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetQueryFromText
 ```
-Set-CMGlobalConditionSqlQuery [-QueryText <String>] [-UseDefaultInstance] [-UseAllInstances]
- [-InstanceName <String>] [-Database <String>] [-Column <String>] -Name <String> [-PassThru]
+Set-CMGlobalConditionSqlQuery [-Column <String>] [-Database <String>] [-InstanceName <String>]
+ [-QueryText <String>] [-UseAllInstances] [-UseDefaultInstance] -Name <String> [-PassThru]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

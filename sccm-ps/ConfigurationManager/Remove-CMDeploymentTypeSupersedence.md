@@ -16,8 +16,8 @@ Removes a deployment type supersedence in Configuration Manager.
 ## SYNTAX
 
 ```
-Remove-CMDeploymentTypeSupersedence [-SupersedingDeploymentType] <IResultObject> [-Force]
- [-SupersededDeploymentType] <IResultObject> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+Remove-CMDeploymentTypeSupersedence [-Force] [-SupersededDeploymentType] <IResultObject>
+ [-SupersedingDeploymentType] <IResultObject> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
  [-Confirm] [<CommonParameters>]
 ```
 

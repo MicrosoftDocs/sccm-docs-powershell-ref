@@ -16,9 +16,9 @@ Sets a compliance setting file.
 
 ```
 Set-CMComplianceSettingFile [-FileName <String>] [-IncludeSubfolders <Boolean>] [-Is64Bit <Boolean>]
- [-Path <String>] [-Description <String>] -InputObject <PSObject> -SettingName <String>
- [-NewSettingName <String>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+ [-Path <String>] [-Description <String>] -InputObject <PSObject> [-NewSettingName <String>] [-PassThru]
+ -SettingName <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

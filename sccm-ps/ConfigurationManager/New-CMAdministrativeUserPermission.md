@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Rba.dll-Help.xml
 Module Name: ConfigurationManager
 online version:
@@ -14,25 +14,24 @@ schema: 2.0.0
 
 ### ByValue (Default)
 ```
-New-CMAdministrativeUserPermission -InputObject <IResultObject> [-SecurityScopeId <String[]>]
- [-SecurityScopeName <String[]>] [-SecurityScope <IResultObject[]>] [-CollectionId <String[]>]
- [-CollectionName <String[]>] [-Collection <IResultObject[]>] [-DisableWildcardHandling]
+New-CMAdministrativeUserPermission [-Collection <IResultObject[]>] [-CollectionId <String[]>]
+ [-CollectionName <String[]>] -InputObject <IResultObject> [-SecurityScope <IResultObject[]>]
+ [-SecurityScopeId <String[]>] [-SecurityScopeName <String[]>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ### ById
 ```
-New-CMAdministrativeUserPermission -RoleId <String> [-SecurityScopeId <String[]>]
- [-SecurityScopeName <String[]>] [-SecurityScope <IResultObject[]>] [-CollectionId <String[]>]
- [-CollectionName <String[]>] [-Collection <IResultObject[]>] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [<CommonParameters>]
+New-CMAdministrativeUserPermission [-Collection <IResultObject[]>] [-CollectionId <String[]>]
+ [-CollectionName <String[]>] -RoleId <String> [-SecurityScope <IResultObject[]>] [-SecurityScopeId <String[]>]
+ [-SecurityScopeName <String[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ### ByName
 ```
-New-CMAdministrativeUserPermission -RoleName <String> [-SecurityScopeId <String[]>]
- [-SecurityScopeName <String[]>] [-SecurityScope <IResultObject[]>] [-CollectionId <String[]>]
- [-CollectionName <String[]>] [-Collection <IResultObject[]>] [-DisableWildcardHandling]
+New-CMAdministrativeUserPermission [-Collection <IResultObject[]>] [-CollectionId <String[]>]
+ [-CollectionName <String[]>] -RoleName <String> [-SecurityScope <IResultObject[]>]
+ [-SecurityScopeId <String[]>] [-SecurityScopeName <String[]>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [<CommonParameters>]
 ```
 

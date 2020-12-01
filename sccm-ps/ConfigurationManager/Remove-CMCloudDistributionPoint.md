@@ -16,19 +16,19 @@ Removes cloud-based distribution points.
 
 ### SearchByValueMandatory (Default)
 ```
-Remove-CMCloudDistributionPoint -InputObject <IResultObject> [-Force] [-DisableWildcardHandling]
+Remove-CMCloudDistributionPoint [-Force] -InputObject <IResultObject> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory
 ```
-Remove-CMCloudDistributionPoint -Id <String> [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Remove-CMCloudDistributionPoint [-Force] -Id <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByNameMandatory
 ```
-Remove-CMCloudDistributionPoint -Name <String> [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Remove-CMCloudDistributionPoint [-Force] -Name <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

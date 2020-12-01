@@ -16,25 +16,25 @@ Adds a Configuration Manager collection membership rule.
 
 ### ByName (Default)
 ```
-Add-CMCollectionMembershipRule -CollectionType <CollectionType> -CollectionName <String>
- -RulePropertyName <String> -RuleClassName <String> -ChildSearchCriteria <SmsProviderSearch> [-PassThru]
- [-ExtraArguments <Object>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+Add-CMCollectionMembershipRule -ChildSearchCriteria <SmsProviderSearch> -CollectionName <String>
+ -CollectionType <CollectionType> [-ExtraArguments <Object>] [-PassThru] -RuleClassName <String>
+ -RulePropertyName <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ### ById
 ```
-Add-CMCollectionMembershipRule -CollectionType <CollectionType> -CollectionId <String>
- -RulePropertyName <String> -RuleClassName <String> -ChildSearchCriteria <SmsProviderSearch> [-PassThru]
- [-ExtraArguments <Object>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+Add-CMCollectionMembershipRule -ChildSearchCriteria <SmsProviderSearch> -CollectionId <String>
+ -CollectionType <CollectionType> [-ExtraArguments <Object>] [-PassThru] -RuleClassName <String>
+ -RulePropertyName <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ### ByValue
 ```
-Add-CMCollectionMembershipRule -CollectionType <CollectionType> -InputObject <IResultObject>
- -RulePropertyName <String> -RuleClassName <String> -ChildSearchCriteria <SmsProviderSearch> [-PassThru]
- [-ExtraArguments <Object>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+Add-CMCollectionMembershipRule -ChildSearchCriteria <SmsProviderSearch> -CollectionType <CollectionType>
+ [-ExtraArguments <Object>] -InputObject <IResultObject> [-PassThru] -RuleClassName <String>
+ -RulePropertyName <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
@@ -236,9 +236,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
-
 ### System.Object
+
+### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
 
 ## OUTPUTS
 

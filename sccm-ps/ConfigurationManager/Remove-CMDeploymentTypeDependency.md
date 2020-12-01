@@ -16,7 +16,7 @@ Removes a deployment type dependency from Configuration Manager deployment type 
 ## SYNTAX
 
 ```
-Remove-CMDeploymentTypeDependency [-Force] -DeploymentTypeDependency <IResultObject[]>
+Remove-CMDeploymentTypeDependency -DeploymentTypeDependency <IResultObject[]> [-Force]
  -InputObject <DeploymentTypeDependencyGroup> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
  [-Confirm] [<CommonParameters>]
 ```

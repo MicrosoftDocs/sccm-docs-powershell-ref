@@ -16,26 +16,26 @@ Removes a configuration category in Configuration Manager.
 
 ### ByValue (Default)
 ```
-Remove-CMCategory -InputObject <IResultObject> [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Remove-CMCategory [-Force] -InputObject <IResultObject> [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### ByCategory
+```
+Remove-CMCategory -CategoryType <CategoryType> [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByName
 ```
-Remove-CMCategory -Name <String[]> [-Force] [-CategoryType <CategoryType>] [-DisableWildcardHandling]
+Remove-CMCategory [-CategoryType <CategoryType>] [-Force] -Name <String[]> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ById
 ```
-Remove-CMCategory -Id <String[]> [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+Remove-CMCategory [-Force] -Id <String[]> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
  [-Confirm] [<CommonParameters>]
-```
-
-### ByCategory
-```
-Remove-CMCategory [-Force] -CategoryType <CategoryType> [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -70,11 +70,11 @@ Valid values are:
 
 ```yaml
 Type: CategoryType
-Parameter Sets: ByName
+Parameter Sets: ByCategory
 Aliases:
 Accepted values: UserCategories, BaselineCategories, DriverCategories, AppCategories, GlobalCondition, CatalogCategories
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -83,11 +83,11 @@ Accept wildcard characters: False
 
 ```yaml
 Type: CategoryType
-Parameter Sets: ByCategory
+Parameter Sets: ByName
 Aliases:
 Accepted values: UserCategories, BaselineCategories, DriverCategories, AppCategories, GlobalCondition, CatalogCategories
 
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False

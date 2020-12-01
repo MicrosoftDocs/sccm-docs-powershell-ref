@@ -16,8 +16,8 @@ Adds a Mac deployment type.
 
 ### ByAppName (Default)
 ```
-Add-CMMacDeploymentType [-AddDetectionClause <DetectionClause[]>] [-GroupDetectionClauses <String[]>]
- [-DetectionClauseConnector <Hashtable[]>] [-DeploymentTypeName <String>] [-AddRequirement <Rule[]>]
+Add-CMMacDeploymentType [-AddDetectionClause <DetectionClause[]>] [-DetectionClauseConnector <Hashtable[]>]
+ [-GroupDetectionClauses <String[]>] [-DeploymentTypeName <String>] [-AddRequirement <Rule[]>]
  -ApplicationName <String> [-RemoveLanguage <String[]>] [-RemoveRequirement <Rule[]>] [-AddLanguage <String[]>]
  [-Comment <String>] -ContentLocation <String> [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
@@ -25,8 +25,8 @@ Add-CMMacDeploymentType [-AddDetectionClause <DetectionClause[]>] [-GroupDetecti
 
 ### ByAppId
 ```
-Add-CMMacDeploymentType [-AddDetectionClause <DetectionClause[]>] [-GroupDetectionClauses <String[]>]
- [-DetectionClauseConnector <Hashtable[]>] [-DeploymentTypeName <String>] [-AddRequirement <Rule[]>]
+Add-CMMacDeploymentType [-AddDetectionClause <DetectionClause[]>] [-DetectionClauseConnector <Hashtable[]>]
+ [-GroupDetectionClauses <String[]>] [-DeploymentTypeName <String>] [-AddRequirement <Rule[]>]
  -ApplicationId <Int32> [-RemoveLanguage <String[]>] [-RemoveRequirement <Rule[]>] [-AddLanguage <String[]>]
  [-Comment <String>] -ContentLocation <String> [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
@@ -34,8 +34,8 @@ Add-CMMacDeploymentType [-AddDetectionClause <DetectionClause[]>] [-GroupDetecti
 
 ### ByAppValue
 ```
-Add-CMMacDeploymentType [-AddDetectionClause <DetectionClause[]>] [-GroupDetectionClauses <String[]>]
- [-DetectionClauseConnector <Hashtable[]>] [-DeploymentTypeName <String>] [-AddRequirement <Rule[]>]
+Add-CMMacDeploymentType [-AddDetectionClause <DetectionClause[]>] [-DetectionClauseConnector <Hashtable[]>]
+ [-GroupDetectionClauses <String[]>] [-DeploymentTypeName <String>] [-AddRequirement <Rule[]>]
  -InputObject <IResultObject> [-RemoveLanguage <String[]>] [-RemoveRequirement <Rule[]>]
  [-AddLanguage <String[]>] [-Comment <String>] -ContentLocation <String> [-Force] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]

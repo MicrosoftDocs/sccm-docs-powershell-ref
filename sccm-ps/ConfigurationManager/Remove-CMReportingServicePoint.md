@@ -22,7 +22,7 @@ Remove-CMReportingServicePoint [-Force] -InputObject <IResultObject> [-DisableWi
 
 ### SearchByNameMandatory
 ```
-Remove-CMReportingServicePoint [-SiteCode <String>] [-Force] [-SiteSystemServerName] <String>
+Remove-CMReportingServicePoint [-Force] [-SiteCode <String>] [-SiteSystemServerName] <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

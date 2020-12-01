@@ -16,13 +16,13 @@ Removes a specified Configuration Manager filter rule for status messages.
 
 ### SearchByValue (Default)
 ```
-Remove-CMStatusFilterRule -InputObject <IResultObject> [-Force] [-DisableWildcardHandling]
+Remove-CMStatusFilterRule [-Force] -InputObject <IResultObject> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchBySiteCodeMandatory
 ```
-Remove-CMStatusFilterRule [-SiteCode <String>] -Name <String> [-Force] [-DisableWildcardHandling]
+Remove-CMStatusFilterRule [-Force] -Name <String> [-SiteCode <String>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

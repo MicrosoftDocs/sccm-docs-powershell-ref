@@ -16,29 +16,29 @@ Adds a compliance setting active directory query
 
 ### EmptyRule (Default)
 ```
-Add-CMComplianceSettingActiveDirectoryQuery -DistinguishedName <String> [-LdapPrefix <String>]
- -Property <String> -SearchFilter <String> [-SearchScope <SearchScope>] -DataType <SettingDataType>
+Add-CMComplianceSettingActiveDirectoryQuery -DataType <SettingDataType> -DistinguishedName <String>
+ [-LdapPrefix <String>] -Property <String> -SearchFilter <String> [-SearchScope <SearchScope>]
  [-Description <String>] -InputObject <PSObject> -Name <String> [-NoRule] [-PassThru]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ExistentialRule
 ```
-Add-CMComplianceSettingActiveDirectoryQuery -DistinguishedName <String> [-LdapPrefix <String>]
- -Property <String> -SearchFilter <String> [-SearchScope <SearchScope>] -DataType <SettingDataType>
+Add-CMComplianceSettingActiveDirectoryQuery -DataType <SettingDataType> -DistinguishedName <String>
+ [-LdapPrefix <String>] -Property <String> -SearchFilter <String> [-SearchScope <SearchScope>]
  [-Description <String>] -Existence <ExistenceType> [-ExistentialRule] [-ExpectedValue <String[]>]
  [-ExpressionOperator <RuleExpressionOperator>] -InputObject <PSObject> -Name <String>
- [-NoncomplianceSeverity <NoncomplianceSeverity>] [-RuleDescription <String>] -RuleName <String> [-PassThru]
+ [-NoncomplianceSeverity <NoncomplianceSeverity>] [-PassThru] [-RuleDescription <String>] -RuleName <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ValueRule
 ```
-Add-CMComplianceSettingActiveDirectoryQuery -DistinguishedName <String> [-LdapPrefix <String>]
- -Property <String> -SearchFilter <String> [-SearchScope <SearchScope>] -DataType <SettingDataType>
+Add-CMComplianceSettingActiveDirectoryQuery -DataType <SettingDataType> -DistinguishedName <String>
+ [-LdapPrefix <String>] -Property <String> -SearchFilter <String> [-SearchScope <SearchScope>]
  [-Description <String>] -ExpectedValue <String[]> -ExpressionOperator <RuleExpressionOperator>
- -InputObject <PSObject> -Name <String> [-NoncomplianceSeverity <NoncomplianceSeverity>] [-ReportNoncompliance]
- [-RuleDescription <String>] -RuleName <String> [-ValueRule] [-PassThru] [-DisableWildcardHandling]
+ -InputObject <PSObject> -Name <String> [-NoncomplianceSeverity <NoncomplianceSeverity>] [-PassThru]
+ [-ReportNoncompliance] [-RuleDescription <String>] -RuleName <String> [-ValueRule] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

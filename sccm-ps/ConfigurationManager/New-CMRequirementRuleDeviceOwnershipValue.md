@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 Module Name: ConfigurationManager
 online version:
@@ -13,8 +13,8 @@ schema: 2.0.0
 ## SYNTAX
 
 ```
-New-CMRequirementRuleDeviceOwnershipValue -RuleOperator <RuleExpressionOperator>
- -OwnershipOption <OwnershipType> [-InputObject] <IResultObject> [-DisableWildcardHandling]
+New-CMRequirementRuleDeviceOwnershipValue -OwnershipOption <OwnershipType>
+ -RuleOperator <RuleExpressionOperator> [-InputObject] <IResultObject> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [<CommonParameters>]
 ```
 

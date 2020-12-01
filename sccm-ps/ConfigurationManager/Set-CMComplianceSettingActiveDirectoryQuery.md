@@ -17,7 +17,7 @@ Sets a compliance setting active directory query.
 ```
 Set-CMComplianceSettingActiveDirectoryQuery [-DistinguishedName <String>] [-LdapPrefix <String>]
  [-Property <String>] [-SearchFilter <String>] [-SearchScope <SearchScope>] [-Description <String>]
- -InputObject <PSObject> -SettingName <String> [-NewSettingName <String>] [-PassThru]
+ -InputObject <PSObject> [-NewSettingName <String>] [-PassThru] -SettingName <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

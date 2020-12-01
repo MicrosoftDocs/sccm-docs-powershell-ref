@@ -16,7 +16,7 @@ Creates a t s step condition software.
 ## SYNTAX
 
 ```
-New-CMTSStepConditionSoftware -MsiFilePath <String> [-IsAnyVersion <Boolean>] [-DisableWildcardHandling]
+New-CMTSStepConditionSoftware [-IsAnyVersion <Boolean>] -MsiFilePath <String> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

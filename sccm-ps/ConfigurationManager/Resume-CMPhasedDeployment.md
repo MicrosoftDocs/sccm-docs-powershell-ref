@@ -15,7 +15,7 @@ Use this cmdlet to resume the phased deployment from the suspend status.
 
 ### SearchByValue
 ```
-Resume-CMPhasedDeployment -InputObject <IResultObject> [-Force] [-DisableWildcardHandling]
+Resume-CMPhasedDeployment [-Force] -InputObject <IResultObject> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

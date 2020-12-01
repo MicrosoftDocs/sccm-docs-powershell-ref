@@ -20,10 +20,10 @@ Invoke-CMRemoteControl -InputObject <IResultObject> [-PassThru] [-DisableWildcar
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### InvokeSiteStatusByNameMandatory
+### InvokeDeviceByIdMandatory
 ```
-Invoke-CMRemoteControl -SiteSystemServerName <String> [-SiteSystemRole <String>] [-SiteCode <String>]
- [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Invoke-CMRemoteControl -DeviceId <String> [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### InvokeDeviceByNameMandatory
@@ -32,10 +32,11 @@ Invoke-CMRemoteControl -DeviceName <String> [-PassThru] [-DisableWildcardHandlin
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### InvokeDeviceByIdMandatory
+### InvokeSiteStatusByNameMandatory
 ```
-Invoke-CMRemoteControl -DeviceId <String> [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+Invoke-CMRemoteControl [-PassThru] [-SiteCode <String>] [-SiteSystemRole <String>]
+ -SiteSystemServerName <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

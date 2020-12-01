@@ -22,7 +22,7 @@ Remove-CMFallbackStatusPoint [-Force] -InputObject <IResultObject> [-DisableWild
 
 ### SearchByNameMandatory
 ```
-Remove-CMFallbackStatusPoint [-SiteCode <String>] [-Force] [-SiteSystemServerName] <String>
+Remove-CMFallbackStatusPoint [-Force] [-SiteCode <String>] [-SiteSystemServerName] <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

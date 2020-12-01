@@ -1,8 +1,8 @@
 ---
-description: Starts a cloud management gateway.
+description: Start a cloud management gateway service in Azure.
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/07/2019
+ms.date: 11/20/2020
 schema: 2.0.0
 title: Start-CMCloudManagementGateway
 ---
@@ -10,7 +10,8 @@ title: Start-CMCloudManagementGateway
 # Start-CMCloudManagementGateway
 
 ## SYNOPSIS
-Starts a cloud management gateway.
+
+Start a cloud management gateway service in Azure.
 
 ## SYNTAX
 
@@ -34,21 +35,25 @@ Start-CMCloudManagementGateway -Name <String> [-DisableWildcardHandling] [-Force
 
 ## DESCRIPTION
 
+Use this cmdlet to start a cloud management gateway (CMG) service in Azure. The service typically stops because of administrator action to stop it. If you configure the CMG to automatically stop when the total data transfer exceeds your threshold, the service stops automatically.
+
+For more information, see [CMG Overview](/mem/configmgr/core/clients/manage/cmg/overview).
+
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
 ### Example 1
-```
-PS XYZ:\>
+
+```powershell
+Get-CMCloudManagementGateway -Name "GraniteFalls.cloudapp.net" | Start-CMCloudManagementGateway
 ```
 
 ## PARAMETERS
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -64,7 +69,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
+
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -79,7 +85,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
+
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -94,6 +101,9 @@ Accept wildcard characters: False
 ```
 
 ### -Id
+
+Specify the site's ID for the Azure service. The **Id** is the integer value stored in the site database for the service. For example, run the following SQL query, and look at the **ID** column: `select * from Azure_CloudService`.
+
 ```yaml
 Type: String
 Parameter Sets: SearchByIdMandatory
@@ -107,6 +117,9 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
+
+Specify a CMG object to start. To get this object, use the [Get-CMCloudManagementGateway](Get-CMCloudManagementGateway.md) cmdlet.
+
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
@@ -120,6 +133,9 @@ Accept wildcard characters: False
 ```
 
 ### -Name
+
+Specify the service name of the CMG to start.
+
 ```yaml
 Type: String
 Parameter Sets: SearchByNameMandatory
@@ -133,8 +149,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+
+Shows what would happen if the cmdlet runs. The cmdlet isn't run.
 
 ```yaml
 Type: SwitchParameter
@@ -158,6 +174,15 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-CMCloudManagementGateway](Get-CMCloudManagementGateway.md)
+[New-CMCloudManagementGateway](New-CMCloudManagementGateway.md)
+[Remove-CMCloudManagementGateway](Remove-CMCloudManagementGateway.md)
+[Set-CMCloudManagementGateway](Set-CMCloudManagementGateway.md)
+[Stop-CMCloudManagementGateway](Stop-CMCloudManagementGateway.md)
+
+[CMG Overview](/mem/configmgr/core/clients/manage/cmg/overview)

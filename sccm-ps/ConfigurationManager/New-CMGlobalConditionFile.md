@@ -1,4 +1,4 @@
----
+﻿---
 description: Creates a File System type global condition in Configuration Manager.
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 Module Name: ConfigurationManager
@@ -17,15 +17,16 @@ Creates a File System type global condition in Configuration Manager.
 
 ### NewFileSystem (Default)
 ```
-New-CMGlobalConditionFile [-IsFolder] -Path <String> -FileOrFolderName <String> [-IncludeSubfolder <Boolean>]
- [-Is64Bit <Boolean>] -Name <String> [-Description <String>] [-DisableWildcardHandling]
+New-CMGlobalConditionFile -FileOrFolderName <String> [-IncludeSubfolder <Boolean>] [-Is64Bit <Boolean>]
+ [-IsFolder] -Path <String> [-Description <String>] -Name <String> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ### NewFileSystemFile
 ```
-New-CMGlobalConditionFile -FilePath <String> [-IncludeSubfolder <Boolean>] [-Is64Bit <Boolean>] -Name <String>
- [-Description <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
+New-CMGlobalConditionFile -FilePath <String> [-IncludeSubfolder <Boolean>] [-Is64Bit <Boolean>]
+ [-Description <String>] -Name <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

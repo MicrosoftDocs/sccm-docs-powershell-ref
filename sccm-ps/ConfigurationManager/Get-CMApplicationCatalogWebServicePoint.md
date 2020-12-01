@@ -1,4 +1,4 @@
----
+﻿---
 description: Gets an Application Catalog web service point.
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,7 +16,7 @@ Gets an Application Catalog web service point.
 
 ### SearchByName (Default)
 ```
-Get-CMApplicationCatalogWebServicePoint [-SiteCode <String>] [[-SiteSystemServerName] <String>] [-AllSite]
+Get-CMApplicationCatalogWebServicePoint [-AllSite] [-SiteCode <String>] [[-SiteSystemServerName] <String>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
@@ -30,7 +30,7 @@ Get-CMApplicationCatalogWebServicePoint [-AllSite] -InputObject <IResultObject> 
 The **Get-CMApplicationCatalogWebServicePoint** cmdlet gets a Configuration Manager Application Catalog web service point object that has a specified site code for a fully qualified domain name (FQDN).
 
 Before you can configure an Application Catalog web service point you must first install and configure site system roles in Configuration Manager.
-For more information, see [Install and Configure Site System Roles for Configuration Manager](https://docs.microsoft.com/mem/configmgr/core/servers/deploy/configure/install-site-system-roles).
+For more information, see [Install and Configure Site System Roles for Configuration Manager](/mem/configmgr/core/servers/deploy/configure/install-site-system-roles).
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

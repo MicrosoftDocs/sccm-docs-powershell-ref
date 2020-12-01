@@ -22,7 +22,7 @@ Remove-CMDataWarehouseServicePoint [-Force] -InputObject <IResultObject> [-Disab
 
 ### SearchByNameMandatory
 ```
-Remove-CMDataWarehouseServicePoint [-SiteCode <String>] [-Force] [-SiteSystemServerName] <String>
+Remove-CMDataWarehouseServicePoint [-Force] [-SiteCode <String>] [-SiteSystemServerName] <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

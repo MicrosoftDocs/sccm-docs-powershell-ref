@@ -16,8 +16,8 @@ Creates a t s step condition variable.
 ## SYNTAX
 
 ```
-New-CMTSStepConditionVariable -OperatorType <VariableOperatorType> -ConditionVariableName <String>
- [-ConditionVariableValue <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+New-CMTSStepConditionVariable -ConditionVariableName <String> [-ConditionVariableValue <String>]
+ -OperatorType <VariableOperatorType> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 

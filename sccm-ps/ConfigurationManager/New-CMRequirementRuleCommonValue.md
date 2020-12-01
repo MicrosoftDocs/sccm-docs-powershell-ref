@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 Module Name: ConfigurationManager
 online version:
@@ -13,9 +13,10 @@ schema: 2.0.0
 ## SYNTAX
 
 ```
-New-CMRequirementRuleCommonValue -Value1 <String[]> [-Value2 <String[]>] -RuleOperator <RuleExpressionOperator>
- [-PropertyForFileFolder <FileFolderProperty>] [-PropertyForAssembly <AssemblyProperty>]
- [-InputObject] <IResultObject> [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
+New-CMRequirementRuleCommonValue [-PropertyForAssembly <AssemblyProperty>]
+ [-PropertyForFileFolder <FileFolderProperty>] -RuleOperator <RuleExpressionOperator> -Value1 <String[]>
+ [-Value2 <String[]>] [-InputObject] <IResultObject> [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

@@ -16,8 +16,8 @@ Creates a t s step condition file.
 ## SYNTAX
 
 ```
-New-CMTSStepConditionFile -FilePath <String> [-FileVersion <String>] [-FileTimestamp <DateTime>]
- [-FileDateTimeOperator <VariableOperatorType>] [-VersionOperator <VariableOperatorType>]
+New-CMTSStepConditionFile [-FileDateTimeOperator <VariableOperatorType>] -FilePath <String>
+ [-FileTimestamp <DateTime>] [-FileVersion <String>] [-VersionOperator <VariableOperatorType>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

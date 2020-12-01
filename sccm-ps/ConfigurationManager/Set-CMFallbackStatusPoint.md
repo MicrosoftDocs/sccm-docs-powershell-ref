@@ -16,16 +16,16 @@ Changes the throttle interval or the message count for a Configuration Manager f
 
 ### SetByValue (Default)
 ```
-Set-CMFallbackStatusPoint -InputObject <IResultObject> [-StateMessageCount <Int32>] [-ThrottleSec <Int32>]
- [-ThrottleMins <Int32>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Set-CMFallbackStatusPoint -InputObject <IResultObject> [-PassThru] [-StateMessageCount <Int32>]
+ [-ThrottleMins <Int32>] [-ThrottleSec <Int32>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ### SetByName
 ```
-Set-CMFallbackStatusPoint [-SiteCode <String>] [-SiteSystemServerName] <String> [-StateMessageCount <Int32>]
- [-ThrottleSec <Int32>] [-ThrottleMins <Int32>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMFallbackStatusPoint [-PassThru] [-SiteCode <String>] [-SiteSystemServerName] <String>
+ [-StateMessageCount <Int32>] [-ThrottleMins <Int32>] [-ThrottleSec <Int32>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

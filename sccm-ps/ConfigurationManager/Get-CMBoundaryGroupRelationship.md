@@ -1,4 +1,4 @@
----
+﻿---
 description: Gets a boundary group relationship.
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,13 +16,13 @@ Gets a boundary group relationship.
 
 ### SearchByName (Default)
 ```
-Get-CMBoundaryGroupRelationship [-SourceGroupName <String>] [-DestinationGroupName <String>]
+Get-CMBoundaryGroupRelationship [-DestinationGroupName <String>] [-SourceGroupName <String>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ### SearchById
 ```
-Get-CMBoundaryGroupRelationship [-SourceGroupId <Int32>] [-DestinationGroupId <Int32>]
+Get-CMBoundaryGroupRelationship [-DestinationGroupId <Int32>] [-SourceGroupId <Int32>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 

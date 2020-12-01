@@ -16,39 +16,39 @@ Changes settings for a file replication route in Configuration Manager.
 
 ### SetFileReplicationAccount (Default)
 ```
-Set-CMFileReplicationRoute -SourceSiteCode <String> -DestinationSiteCode <String>
- [-FileReplicationAccountName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Set-CMFileReplicationRoute -DestinationSiteCode <String> [-FileReplicationAccountName <String>]
+ -SourceSiteCode <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
-### SetFileReplicationRouteByUnlimited
+### SetFileReplicationRouteBySchedule
 ```
-Set-CMFileReplicationRoute -SourceSiteCode <String> -DestinationSiteCode <String>
- [-FileReplicationAccountName <String>] [-Unlimited] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMFileReplicationRoute [-AvailabilityLevel <AvailabilityLevel>] [-BeginHr <Int32>]
+ [-ControlNetworkLoadSchedule] [-DaysOfWeek <DaysOfWeek[]>] -DestinationSiteCode <String> [-EndHr <Int32>]
+ -SourceSiteCode <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### SetFileReplicationRouteByPulseMode
 ```
-Set-CMFileReplicationRoute -SourceSiteCode <String> -DestinationSiteCode <String>
- [-FileReplicationAccountName <String>] [-PulseMode] [-DataBlockSizeKB <Int32>]
- [-DelayBetweenDataBlockSec <Int32>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+Set-CMFileReplicationRoute [-DataBlockSizeKB <Int32>] [-DelayBetweenDataBlockSec <Int32>]
+ -DestinationSiteCode <String> [-FileReplicationAccountName <String>] [-PulseMode] -SourceSiteCode <String>
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SetFileReplicationRouteByUnlimited
+```
+Set-CMFileReplicationRoute -DestinationSiteCode <String> [-FileReplicationAccountName <String>]
+ -SourceSiteCode <String> [-Unlimited] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ### SetFileReplicationRouteByLimited
 ```
-Set-CMFileReplicationRoute -SourceSiteCode <String> -DestinationSiteCode <String>
- [-FileReplicationAccountName <String>] [-Limited] [-LimitedBeginHr <Int32>] [-LimitedEndHr <Int32>]
- [-LimitAvailableBandwidthPercent <Int32>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
-```
-
-### SetFileReplicationRouteBySchedule
-```
-Set-CMFileReplicationRoute -SourceSiteCode <String> -DestinationSiteCode <String> [-ControlNetworkLoadSchedule]
- [-DaysOfWeek <DaysOfWeek[]>] [-BeginHr <Int32>] [-EndHr <Int32>] [-AvailabilityLevel <AvailabilityLevel>]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMFileReplicationRoute -DestinationSiteCode <String> [-FileReplicationAccountName <String>]
+ [-LimitAvailableBandwidthPercent <Int32>] [-Limited] [-LimitedBeginHr <Int32>] [-LimitedEndHr <Int32>]
+ -SourceSiteCode <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -252,7 +252,7 @@ This account must have local administrative credentials.
 
 ```yaml
 Type: String
-Parameter Sets: SetFileReplicationAccount, SetFileReplicationRouteByUnlimited, SetFileReplicationRouteByPulseMode, SetFileReplicationRouteByLimited
+Parameter Sets: SetFileReplicationAccount, SetFileReplicationRouteByPulseMode, SetFileReplicationRouteByUnlimited, SetFileReplicationRouteByLimited
 Aliases:
 
 Required: False

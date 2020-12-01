@@ -22,7 +22,7 @@ Remove-CMStateMigrationPoint [-Force] -InputObject <IResultObject> [-DisableWild
 
 ### SearchByNameMandatory
 ```
-Remove-CMStateMigrationPoint [-SiteCode <String>] [-Force] [-SiteSystemServerName] <String>
+Remove-CMStateMigrationPoint [-Force] [-SiteCode <String>] [-SiteSystemServerName] <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

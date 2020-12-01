@@ -1,4 +1,4 @@
----
+﻿---
 description: Create application-related settings for a mobile device that uses a Exchange Server connector.
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,8 +16,8 @@ Create application-related settings for a mobile device that uses a Exchange Ser
 ## SYNTAX
 
 ```
-New-CMExchangeConnectorApplicationSetting [-UnsignedInstall <Boolean>] [-UnsignedApplication <Boolean>]
- [-BlockedApplication <String[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
+New-CMExchangeConnectorApplicationSetting [-BlockedApplication <String[]>] [-UnsignedApplication <Boolean>]
+ [-UnsignedInstall <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

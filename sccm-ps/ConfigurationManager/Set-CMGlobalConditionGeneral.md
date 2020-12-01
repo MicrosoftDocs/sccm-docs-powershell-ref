@@ -16,7 +16,7 @@ Modifies general settings for a Configuration Manager global condition.
 ## SYNTAX
 
 ```
-Set-CMGlobalConditionGeneral [-NewName <String>] [-Description <String>] -Name <String> [-PassThru]
+Set-CMGlobalConditionGeneral [-Description <String>] [-NewName <String>] -Name <String> [-PassThru]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

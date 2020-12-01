@@ -16,13 +16,13 @@ Imports a certificate.
 
 ### ByValue (Default)
 ```
-Import-CMCertificate [-X509Certificate] <X509Certificate> [-PassThru] [-DisableWildcardHandling]
+Import-CMCertificate [-PassThru] [-X509Certificate] <X509Certificate> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByFile
 ```
-Import-CMCertificate [-Path] <String> [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+Import-CMCertificate [-PassThru] [-Path] <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
  [-Confirm] [<CommonParameters>]
 ```
 

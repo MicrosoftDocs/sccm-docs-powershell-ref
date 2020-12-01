@@ -16,22 +16,22 @@ Exports a Configuration Manager package.
 
 ### SearchByValue (Default)
 ```
-Export-CMPackage -InputObject <IResultObject> -FileName <String> [-WithDependence <Boolean>]
- [-WithContent <Boolean>] [-Comment <String>] [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Export-CMPackage [-Comment <String>] -FileName <String> [-Force] -InputObject <IResultObject>
+ [-WithContent <Boolean>] [-WithDependence <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchPackageByIdMandatory
 ```
-Export-CMPackage -Id <String> -FileName <String> [-WithDependence <Boolean>] [-WithContent <Boolean>]
- [-Comment <String>] [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+Export-CMPackage [-Comment <String>] -FileName <String> [-Force] -Id <String> [-WithContent <Boolean>]
+ [-WithDependence <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ### SearchPackageByNameMandatory
 ```
-Export-CMPackage -Name <String> -FileName <String> [-WithDependence <Boolean>] [-WithContent <Boolean>]
- [-Comment <String>] [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+Export-CMPackage [-Comment <String>] -FileName <String> [-Force] -Name <String> [-WithContent <Boolean>]
+ [-WithDependence <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 

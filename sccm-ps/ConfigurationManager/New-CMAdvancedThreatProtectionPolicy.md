@@ -15,8 +15,8 @@ Creates an advanced threat protection policy.
 ## SYNTAX
 
 ```
-New-CMAdvancedThreatProtectionPolicy -Name <String> [-Description <String>] -PolicyType <ConfigurationType>
- -FilePath <String> [-SampleSharingType <SampleSharingType>]
+New-CMAdvancedThreatProtectionPolicy [-Description <String>] -FilePath <String> -Name <String>
+ -PolicyType <ConfigurationType> [-SampleSharingType <SampleSharingType>]
  [-TelemetryReportingFrequencyType <TelemetryReportingFrequencyType>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```

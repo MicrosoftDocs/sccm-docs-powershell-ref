@@ -16,23 +16,34 @@ Changes settings of a Windows Firewall policy.
 
 ### SetByValue (Default)
 ```
-Set-CMWindowsFirewallPolicy [-InputObject] <IResultObject> [-Description <String>]
- [-Digest <ConfigurationItem>] [-DigestPath <String>] [-DigestXml <String>] [-NewName <String>]
- [-DomainTurnOnFirewall <SettingType>] [-PrivateTurnOnFirewall <SettingType>]
- [-PublicTurnOnFirewall <SettingType>] [-DomainBlockAllInboundTraffic <SettingType>]
- [-PrivateBlockAllInboundTraffic <SettingType>] [-PublicBlockAllInboundTraffic <SettingType>]
- [-DomainNotification <SettingType>] [-PrivateNotification <SettingType>] [-PublicNotification <SettingType>]
- [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMWindowsFirewallPolicy [-Description <String>] [-Digest <ConfigurationItem>] [-DigestPath <String>]
+ [-DigestXml <String>] [-DomainBlockAllInboundTraffic <SettingType>] [-DomainNotification <SettingType>]
+ [-DomainTurnOnFirewall <SettingType>] [-InputObject] <IResultObject> [-NewName <String>]
+ [-PrivateBlockAllInboundTraffic <SettingType>] [-PrivateNotification <SettingType>]
+ [-PrivateTurnOnFirewall <SettingType>] [-PublicBlockAllInboundTraffic <SettingType>]
+ [-PublicNotification <SettingType>] [-PublicTurnOnFirewall <SettingType>] [-PassThru]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetById
 ```
-Set-CMWindowsFirewallPolicy [-Id] <Int32> [-Description <String>] [-Digest <ConfigurationItem>]
- [-DigestPath <String>] [-DigestXml <String>] [-NewName <String>] [-DomainTurnOnFirewall <SettingType>]
- [-PrivateTurnOnFirewall <SettingType>] [-PublicTurnOnFirewall <SettingType>]
- [-DomainBlockAllInboundTraffic <SettingType>] [-PrivateBlockAllInboundTraffic <SettingType>]
- [-PublicBlockAllInboundTraffic <SettingType>] [-DomainNotification <SettingType>]
- [-PrivateNotification <SettingType>] [-PublicNotification <SettingType>] [-PassThru]
+Set-CMWindowsFirewallPolicy [-Description <String>] [-Digest <ConfigurationItem>] [-DigestPath <String>]
+ [-DigestXml <String>] [-DomainBlockAllInboundTraffic <SettingType>] [-DomainNotification <SettingType>]
+ [-DomainTurnOnFirewall <SettingType>] [-Id] <Int32> [-NewName <String>]
+ [-PrivateBlockAllInboundTraffic <SettingType>] [-PrivateNotification <SettingType>]
+ [-PrivateTurnOnFirewall <SettingType>] [-PublicBlockAllInboundTraffic <SettingType>]
+ [-PublicNotification <SettingType>] [-PublicTurnOnFirewall <SettingType>] [-PassThru]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SetByName
+```
+Set-CMWindowsFirewallPolicy [-Description <String>] [-Digest <ConfigurationItem>] [-DigestPath <String>]
+ [-DigestXml <String>] [-DomainBlockAllInboundTraffic <SettingType>] [-DomainNotification <SettingType>]
+ [-DomainTurnOnFirewall <SettingType>] [-Name] <String> [-NewName <String>]
+ [-PrivateBlockAllInboundTraffic <SettingType>] [-PrivateNotification <SettingType>]
+ [-PrivateTurnOnFirewall <SettingType>] [-PublicBlockAllInboundTraffic <SettingType>]
+ [-PublicNotification <SettingType>] [-PublicTurnOnFirewall <SettingType>] [-PassThru]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -42,14 +53,9 @@ Set-CMWindowsFirewallPolicy [-Id] <Int32> -Order <PriorityChangeType> [-PassThru
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### SetByName
+### SetOrderByValue
 ```
-Set-CMWindowsFirewallPolicy [-Name] <String> [-Description <String>] [-Digest <ConfigurationItem>]
- [-DigestPath <String>] [-DigestXml <String>] [-NewName <String>] [-DomainTurnOnFirewall <SettingType>]
- [-PrivateTurnOnFirewall <SettingType>] [-PublicTurnOnFirewall <SettingType>]
- [-DomainBlockAllInboundTraffic <SettingType>] [-PrivateBlockAllInboundTraffic <SettingType>]
- [-PublicBlockAllInboundTraffic <SettingType>] [-DomainNotification <SettingType>]
- [-PrivateNotification <SettingType>] [-PublicNotification <SettingType>] [-PassThru]
+Set-CMWindowsFirewallPolicy [-InputObject] <IResultObject> -Order <PriorityChangeType> [-PassThru]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -57,12 +63,6 @@ Set-CMWindowsFirewallPolicy [-Name] <String> [-Description <String>] [-Digest <C
 ```
 Set-CMWindowsFirewallPolicy [-Name] <String> -Order <PriorityChangeType> [-PassThru] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### SetOrderByValue
-```
-Set-CMWindowsFirewallPolicy [-InputObject] <IResultObject> -Order <PriorityChangeType> [-PassThru]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -322,7 +322,7 @@ Accept wildcard characters: False
 
 ```yaml
 Type: PriorityChangeType
-Parameter Sets: SetOrderById, SetOrderByName, SetOrderByValue
+Parameter Sets: SetOrderById, SetOrderByValue, SetOrderByName
 Aliases: Priority
 Accepted values: Increase, Decrease
 
@@ -482,9 +482,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
-
 ### Microsoft.ConfigurationManagement.DesiredConfigurationManagement.ConfigurationItem
+
+### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
 
 ## OUTPUTS
 
