@@ -16,19 +16,19 @@ Removes a boundary group relationship.
 
 ### SearchByValueMandatory (Default)
 ```
-Remove-CMBoundaryGroupRelationship -InputObject <IResultObject> [-Force] [-DisableWildcardHandling]
+Remove-CMBoundaryGroupRelationship [-Force] -InputObject <IResultObject> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory
 ```
-Remove-CMBoundaryGroupRelationship -SourceGroupId <Int32> [-DestinationGroupId <Int32>] [-Force]
+Remove-CMBoundaryGroupRelationship [-DestinationGroupId <Int32>] [-Force] -SourceGroupId <Int32>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByName
 ```
-Remove-CMBoundaryGroupRelationship [-SourceGroupName <String>] [-DestinationGroupName <String>] [-Force]
+Remove-CMBoundaryGroupRelationship [-DestinationGroupName <String>] [-Force] [-SourceGroupName <String>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

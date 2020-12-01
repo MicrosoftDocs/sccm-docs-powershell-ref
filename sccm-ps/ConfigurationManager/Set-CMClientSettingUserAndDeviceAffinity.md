@@ -16,22 +16,22 @@ Sets a client setting user and device affinity.
 
 ### SetCustomSettingByName (Default)
 ```
-Set-CMClientSettingUserAndDeviceAffinity [-LogOnThresholdMins <Int32>] [-UsageThresholdDays <Int32>]
- [-AutoApproveAffinity <Boolean>] [-AllowUserAffinity <Boolean>] -Name <String> [-PassThru]
+Set-CMClientSettingUserAndDeviceAffinity [-AllowUserAffinity <Boolean>] [-AutoApproveAffinity <Boolean>]
+ [-LogOnThresholdMins <Int32>] [-UsageThresholdDays <Int32>] -Name <String> [-PassThru]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetDefaultSetting
 ```
-Set-CMClientSettingUserAndDeviceAffinity [-LogOnThresholdMins <Int32>] [-UsageThresholdDays <Int32>]
- [-AutoApproveAffinity <Boolean>] [-AllowUserAffinity <Boolean>] [-DefaultSetting] [-PassThru]
+Set-CMClientSettingUserAndDeviceAffinity [-AllowUserAffinity <Boolean>] [-AutoApproveAffinity <Boolean>]
+ [-LogOnThresholdMins <Int32>] [-UsageThresholdDays <Int32>] [-DefaultSetting] [-PassThru]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetCustomSettingByValue
 ```
-Set-CMClientSettingUserAndDeviceAffinity [-LogOnThresholdMins <Int32>] [-UsageThresholdDays <Int32>]
- [-AutoApproveAffinity <Boolean>] [-AllowUserAffinity <Boolean>] -InputObject <IResultObject> [-PassThru]
+Set-CMClientSettingUserAndDeviceAffinity [-AllowUserAffinity <Boolean>] [-AutoApproveAffinity <Boolean>]
+ [-LogOnThresholdMins <Int32>] [-UsageThresholdDays <Int32>] -InputObject <IResultObject> [-PassThru]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

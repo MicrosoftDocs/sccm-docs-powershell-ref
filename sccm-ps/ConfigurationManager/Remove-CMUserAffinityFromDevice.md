@@ -16,13 +16,13 @@ Removes a primary user from one or more devices in the Configuration Manager hie
 
 ### RemoveUserAffinityByDeviceName (Default)
 ```
-Remove-CMUserAffinityFromDevice -DeviceName <String[]> [-UserId <Int32[]>] [-UserName <String[]>] [-Force]
+Remove-CMUserAffinityFromDevice -DeviceName <String[]> [-Force] [-UserId <Int32[]>] [-UserName <String[]>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### RemoveUserAffinityByDeviceId
 ```
-Remove-CMUserAffinityFromDevice -DeviceId <Int32[]> [-UserId <Int32[]>] [-UserName <String[]>] [-Force]
+Remove-CMUserAffinityFromDevice -DeviceId <Int32[]> [-Force] [-UserId <Int32[]>] [-UserName <String[]>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

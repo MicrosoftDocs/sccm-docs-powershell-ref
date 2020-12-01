@@ -16,13 +16,13 @@ Removes Configuration Manager hardware requirement objects for products.
 
 ### SearchByNameMandatory (Default)
 ```
-Remove-CMHardwareRequirement -Product <String> [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Remove-CMHardwareRequirement [-Force] -Product <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByValueMandatory
 ```
-Remove-CMHardwareRequirement -InputObject <IResultObject> [-Force] [-DisableWildcardHandling]
+Remove-CMHardwareRequirement [-Force] -InputObject <IResultObject> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

@@ -1,4 +1,4 @@
----
+﻿---
 description: Gets a configuration policy deployment.
 external help file: AdminUI.PS.Deployments.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,29 +16,29 @@ Gets a configuration policy deployment.
 
 ### SearchByName (Default)
 ```
-Get-CMConfigurationPolicyDeployment [-Name <String>] [-Summary] [-CollectionName <String>]
- [-CollectionId <String>] [-Collection <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [<CommonParameters>]
-```
-
-### SearchById
-```
-Get-CMConfigurationPolicyDeployment [-SmsObjectId <Int32>] [-Summary] [-CollectionName <String>]
- [-CollectionId <String>] [-Collection <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Get-CMConfigurationPolicyDeployment [-Name <String>] [-Summary] [-Collection <IResultObject>]
+ [-CollectionId <String>] [-CollectionName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [<CommonParameters>]
 ```
 
 ### SearchByDeploymentId
 ```
-Get-CMConfigurationPolicyDeployment [-DeploymentId <String>] [-Summary] [-CollectionName <String>]
- [-CollectionId <String>] [-Collection <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Get-CMConfigurationPolicyDeployment [-DeploymentId <String>] [-Summary] [-Collection <IResultObject>]
+ [-CollectionId <String>] [-CollectionName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [<CommonParameters>]
 ```
 
 ### SearchByValue
 ```
-Get-CMConfigurationPolicyDeployment [-InputObject <IResultObject>] [-Summary] [-CollectionName <String>]
- [-CollectionId <String>] [-Collection <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Get-CMConfigurationPolicyDeployment [-InputObject <IResultObject>] [-Summary] [-Collection <IResultObject>]
+ [-CollectionId <String>] [-CollectionName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [<CommonParameters>]
+```
+
+### SearchById
+```
+Get-CMConfigurationPolicyDeployment [-SmsObjectId <Int32>] [-Summary] [-Collection <IResultObject>]
+ [-CollectionId <String>] [-CollectionName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [<CommonParameters>]
 ```
 

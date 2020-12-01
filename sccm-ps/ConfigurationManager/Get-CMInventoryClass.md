@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.ClientSettings.dll-Help.xml
 Module Name: ConfigurationManager
 online version:
@@ -13,7 +13,7 @@ schema: 2.0.0
 ## SYNTAX
 
 ```
-Get-CMInventoryClass [-Id <String>] [-Name <String>] [-GroupName <String>] [-DisableWildcardHandling]
+Get-CMInventoryClass [-GroupName <String>] [-Id <String>] [-Name <String>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [<CommonParameters>]
 ```
 

@@ -16,9 +16,9 @@ Creates a t s step condition registry.
 ## SYNTAX
 
 ```
-New-CMTSStepConditionRegistry -RootKey <RegistryRootKeyType> -RegistryKey <String>
- -RegistryOperator <VariableOperatorType> [-RegistryValueName <String>] [-ValueType <RegistryValueType>]
- [-RegistryValueData <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+New-CMTSStepConditionRegistry -RegistryKey <String> -RegistryOperator <VariableOperatorType>
+ [-RegistryValueData <String>] [-RegistryValueName <String>] -RootKey <RegistryRootKeyType>
+ [-ValueType <RegistryValueType>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 

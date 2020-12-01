@@ -17,28 +17,28 @@ Creates a t s step run command line.
 
 ### ByName (Default)
 ```
-New-CMTSStepRunCommandLine -CommandLine <String> [-WorkingDirectory <String>] [-PackageId <String>]
- [-Timeout <Int32>] [-DisableWow64Redirection] [-RunAsUser] [-UserName <String>] [-UserPassword <SecureString>]
- [-SuccessCode <Int32[]>] -Name <String> [-Description <String>] [-ContinueOnError] [-Disable]
- [-Condition <IResultObject[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+New-CMTSStepRunCommandLine -CommandLine <String> [-DisableWow64Redirection] [-PackageId <String>] [-RunAsUser]
+ [-SuccessCode <Int32[]>] [-Timeout <Int32>] [-UserName <String>] [-UserPassword <SecureString>]
+ [-WorkingDirectory <String>] [-Condition <IResultObject[]>] [-ContinueOnError] [-Description <String>]
+ [-Disable] -Name <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ### RunScriptFromSource
 ```
-New-CMTSStepRunCommandLine -CommandLine <String> [-WorkingDirectory <String>] [-PackageId <String>]
- [-OutputVariableName <String>] [-Timeout <Int32>] [-DisableWow64Redirection] [-RunAsUser] [-UserName <String>]
- [-UserPassword <SecureString>] [-SuccessCode <Int32[]>] [-Description <String>] [-ContinueOnError] [-Disable]
- [-Condition <IResultObject[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+New-CMTSStepRunCommandLine -CommandLine <String> [-DisableWow64Redirection] [-OutputVariableName <String>]
+ [-PackageId <String>] [-RunAsUser] [-SuccessCode <Int32[]>] [-Timeout <Int32>] [-UserName <String>]
+ [-UserPassword <SecureString>] [-WorkingDirectory <String>] [-Condition <IResultObject[]>] [-ContinueOnError]
+ [-Description <String>] [-Disable] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ### RunScriptFromPackage
 ```
-New-CMTSStepRunCommandLine -CommandLine <String> [-WorkingDirectory <String>] [-PackageId <String>]
- [-OutputVariableName <String>] [-Timeout <Int32>] [-DisableWow64Redirection] [-RunAsUser] [-UserName <String>]
- [-UserPassword <SecureString>] [-SuccessCode <Int32[]>] [-Description <String>] [-ContinueOnError] [-Disable]
- [-Condition <IResultObject[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+New-CMTSStepRunCommandLine -CommandLine <String> [-DisableWow64Redirection] [-OutputVariableName <String>]
+ [-PackageId <String>] [-RunAsUser] [-SuccessCode <Int32[]>] [-Timeout <Int32>] [-UserName <String>]
+ [-UserPassword <SecureString>] [-WorkingDirectory <String>] [-Condition <IResultObject[]>] [-ContinueOnError]
+ [-Description <String>] [-Disable] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 

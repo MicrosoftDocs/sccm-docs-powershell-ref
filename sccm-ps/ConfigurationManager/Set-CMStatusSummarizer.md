@@ -16,31 +16,32 @@ Modifies settings of a Configuration Manager status summarizer.
 
 ### SetComponentStatusSummarizer (Default)
 ```
-Set-CMStatusSummarizer [-SiteCode <String>] [-ComponentStatusSummarizer] [-EnableStatusSummarizer <Boolean>]
- [-ReplicateToParentSite <Boolean>] [-ReplicationPriority <ReplicationPriorityType>] [-TimeThreshold <String>]
- [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMStatusSummarizer [-ComponentStatusSummarizer] [-EnableStatusSummarizer <Boolean>] [-PassThru]
+ [-ReplicateToParentSite <Boolean>] [-ReplicationPriority <ReplicationPriorityType>] [-SiteCode <String>]
+ [-TimeThreshold <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### SetAppDeploymentSummarizer
 ```
-Set-CMStatusSummarizer [-SiteCode <String>] [-ApplicationDeploymentSummarizer] [-Minutes <Int32>]
- [-Hours <Int32>] [-Days <Int32>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Set-CMStatusSummarizer [-ApplicationDeploymentSummarizer] [-Days <Int32>] [-Hours <Int32>] [-Minutes <Int32>]
+ [-PassThru] [-SiteCode <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### SetAppStatisticsSummarizer
 ```
-Set-CMStatusSummarizer [-SiteCode <String>] [-ApplicationStatisticSummarizer] [-Minutes <Int32>]
- [-Hours <Int32>] [-Days <Int32>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Set-CMStatusSummarizer [-ApplicationStatisticSummarizer] [-Days <Int32>] [-Hours <Int32>] [-Minutes <Int32>]
+ [-PassThru] [-SiteCode <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### SetSiteSystemStatusSummarizer
 ```
-Set-CMStatusSummarizer [-SiteCode <String>] [-EnableStatusSummarizer <Boolean>]
+Set-CMStatusSummarizer [-CriticalSizeKB <Int32>] [-EnableStatusSummarizer <Boolean>] [-PassThru]
  [-ReplicateToParentSite <Boolean>] [-ReplicationPriority <ReplicationPriorityType>]
- [-SiteSystemStatusSummarizer] [-Schedule <IResultObject>] [-WarningSizeKB <Int32>] [-CriticalSizeKB <Int32>]
- [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-Schedule <IResultObject>] [-SiteCode <String>] [-SiteSystemStatusSummarizer] [-WarningSizeKB <Int32>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

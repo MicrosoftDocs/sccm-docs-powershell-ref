@@ -33,7 +33,7 @@ Remove-CMTaskSequencePhasedDeployment -TaskSequenceName <String> [-Force] [-Disa
 
 ### SearchByValue
 ```
-Remove-CMTaskSequencePhasedDeployment -InputObject <IResultObject> [-Force] [-DisableWildcardHandling]
+Remove-CMTaskSequencePhasedDeployment [-Force] -InputObject <IResultObject> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

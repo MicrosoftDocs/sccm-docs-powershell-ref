@@ -16,24 +16,25 @@ Creates a boundary group relationship.
 
 ### NameMandatory (Default)
 ```
-New-CMBoundaryGroupRelationship -SourceGroupName <String> -DestinationGroupName <String>
- [-FallbackDPMinutes <Int32>] [-FallbackMPMinutes <Int32>] [-FallbackSmpMinutes <Int32>]
- [-FallbackSupMinutes <Int32>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+New-CMBoundaryGroupRelationship -DestinationGroupName <String> [-FallbackDPMinutes <Int32>]
+ [-FallbackMPMinutes <Int32>] [-FallbackSmpMinutes <Int32>] [-FallbackSupMinutes <Int32>]
+ -SourceGroupName <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### SetByValueMandatory
+```
+New-CMBoundaryGroupRelationship -DestinationGroup <IResultObject> [-FallbackDPMinutes <Int32>]
+ [-FallbackMPMinutes <Int32>] [-FallbackSmpMinutes <Int32>] [-FallbackSupMinutes <Int32>]
+ -SourceGroup <IResultObject> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ### IdMandatory
 ```
-New-CMBoundaryGroupRelationship -SourceGroupId <Int32> -DestinationGroupId <Int32> [-FallbackDPMinutes <Int32>]
+New-CMBoundaryGroupRelationship -DestinationGroupId <Int32> [-FallbackDPMinutes <Int32>]
  [-FallbackMPMinutes <Int32>] [-FallbackSmpMinutes <Int32>] [-FallbackSupMinutes <Int32>]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### SetByValueMandatory
-```
-New-CMBoundaryGroupRelationship -SourceGroup <IResultObject> -DestinationGroup <IResultObject>
- [-FallbackDPMinutes <Int32>] [-FallbackMPMinutes <Int32>] [-FallbackSmpMinutes <Int32>]
- [-FallbackSupMinutes <Int32>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ -SourceGroupId <Int32> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 

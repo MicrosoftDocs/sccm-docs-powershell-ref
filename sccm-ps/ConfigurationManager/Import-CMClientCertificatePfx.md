@@ -15,8 +15,8 @@ Imports a client PFX certificate.
 ## SYNTAX
 
 ```
-Import-CMClientCertificatePfx -Path <String> -UserName <String> [-Password <SecureString>]
- -CertificateProfilePfx <IResultObject> [-PassThru] [-ForSmimeEncryption] [-DisableWildcardHandling]
+Import-CMClientCertificatePfx -CertificateProfilePfx <IResultObject> [-ForSmimeEncryption] [-PassThru]
+ [-Password <SecureString>] -Path <String> -UserName <String> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

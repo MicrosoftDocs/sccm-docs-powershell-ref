@@ -1,4 +1,4 @@
----
+﻿---
 description: Convert a Configuration Manager management iResultObject to a configuration item object.
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 Module Name: ConfigurationManager
@@ -17,7 +17,7 @@ Convert a Configuration Manager management iResultObject to a configuration item
 
 ### ByObjectValue (Default)
 ```
-ConvertTo-CMConfigurationItem -InputObject <IResultObject> [-Force] [-DisableWildcardHandling]
+ConvertTo-CMConfigurationItem [-Force] -InputObject <IResultObject> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
@@ -144,7 +144,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Introduction to Compliance Settings in Configuration Manager](https://docs.microsoft.com/mem/configmgr/compliance/understand/ensure-device-compliance)
+[Introduction to Compliance Settings in Configuration Manager](/mem/configmgr/compliance/understand/ensure-device-compliance)
 
 [Get-CMConfigurationItem](Get-CMConfigurationItem.md)
 

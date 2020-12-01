@@ -17,29 +17,28 @@ Create a baseline deployment.
 
 ### SearchByValueMandatory (Default)
 ```
-New-CMBaselineDeployment [-InputObject] <IResultObject> [-EnableEnforcement <Boolean>]
- [-OverrideServiceWindow <Boolean>] [-GenerateAlert <Boolean>] [-ParameterValue <Int32>]
- [-PostponeDateTime <DateTime>] [-MonitoredByScom <Boolean>] [-Schedule <IResultObject>]
- [-CollectionName <String>] [-CollectionId <String>] [-Collection <IResultObject>] [-DisableWildcardHandling]
+New-CMBaselineDeployment [-EnableEnforcement <Boolean>] [-GenerateAlert <Boolean>]
+ [-InputObject] <IResultObject> [-MonitoredByScom <Boolean>] [-OverrideServiceWindow <Boolean>]
+ [-ParameterValue <Int32>] [-PostponeDateTime <DateTime>] [-Schedule <IResultObject>]
+ [-Collection <IResultObject>] [-CollectionId <String>] [-CollectionName <String>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory
 ```
-New-CMBaselineDeployment [-Id] <Int32> [-EnableEnforcement <Boolean>] [-OverrideServiceWindow <Boolean>]
- [-GenerateAlert <Boolean>] [-ParameterValue <Int32>] [-PostponeDateTime <DateTime>]
- [-MonitoredByScom <Boolean>] [-Schedule <IResultObject>] [-CollectionName <String>] [-CollectionId <String>]
- [-Collection <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+New-CMBaselineDeployment [-EnableEnforcement <Boolean>] [-GenerateAlert <Boolean>] [-Id] <Int32>
+ [-MonitoredByScom <Boolean>] [-OverrideServiceWindow <Boolean>] [-ParameterValue <Int32>]
+ [-PostponeDateTime <DateTime>] [-Schedule <IResultObject>] [-Collection <IResultObject>]
+ [-CollectionId <String>] [-CollectionName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByNameMandatory
 ```
-New-CMBaselineDeployment [-Name] <String> [-EnableEnforcement <Boolean>] [-OverrideServiceWindow <Boolean>]
- [-GenerateAlert <Boolean>] [-ParameterValue <Int32>] [-PostponeDateTime <DateTime>]
- [-MonitoredByScom <Boolean>] [-Schedule <IResultObject>] [-CollectionName <String>] [-CollectionId <String>]
- [-Collection <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+New-CMBaselineDeployment [-EnableEnforcement <Boolean>] [-GenerateAlert <Boolean>] [-MonitoredByScom <Boolean>]
+ [-Name] <String> [-OverrideServiceWindow <Boolean>] [-ParameterValue <Int32>] [-PostponeDateTime <DateTime>]
+ [-Schedule <IResultObject>] [-Collection <IResultObject>] [-CollectionId <String>] [-CollectionName <String>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -351,7 +350,6 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -361,7 +359,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
-
 ## NOTES
 
 ## RELATED LINKS

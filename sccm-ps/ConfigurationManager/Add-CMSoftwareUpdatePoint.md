@@ -16,20 +16,20 @@ Adds a software update point for Configuration Manager.
 
 ### SumPByValueWithWsus (Default)
 ```
-Add-CMSoftwareUpdatePoint -InputObject <IResultObject> [-WsusIisPort <Int32>] [-WsusIisSslPort <Int32>]
- [-ClientConnectionType <ClientConnectionTypes>] [-EnableCloudGateway] [-WsusSsl <Boolean>]
- [-UseProxy <Boolean>] [-UseProxyForAutoDeploymentRule <Boolean>] [-AnonymousWsusAccess]
- [-ConnectionAccountUserName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+Add-CMSoftwareUpdatePoint [-AnonymousWsusAccess] [-ClientConnectionType <ClientConnectionTypes>]
+ [-ConnectionAccountUserName <String>] [-EnableCloudGateway] -InputObject <IResultObject> [-UseProxy <Boolean>]
+ [-UseProxyForAutoDeploymentRule <Boolean>] [-WsusIisPort <Int32>] [-WsusIisSslPort <Int32>]
+ [-WsusSsl <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ### SumPWithWsus
 ```
-Add-CMSoftwareUpdatePoint [-WsusIisPort <Int32>] [-WsusIisSslPort <Int32>] [-SiteSystemServerName] <String>
- [-SiteCode <String>] [-ClientConnectionType <ClientConnectionTypes>] [-EnableCloudGateway]
- [-WsusSsl <Boolean>] [-UseProxy <Boolean>] [-UseProxyForAutoDeploymentRule <Boolean>] [-AnonymousWsusAccess]
- [-ConnectionAccountUserName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Add-CMSoftwareUpdatePoint [-AnonymousWsusAccess] [-ClientConnectionType <ClientConnectionTypes>]
+ [-ConnectionAccountUserName <String>] [-EnableCloudGateway] [-SiteCode <String>]
+ [-SiteSystemServerName] <String> [-UseProxy <Boolean>] [-UseProxyForAutoDeploymentRule <Boolean>]
+ [-WsusIisPort <Int32>] [-WsusIisSslPort <Int32>] [-WsusSsl <Boolean>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

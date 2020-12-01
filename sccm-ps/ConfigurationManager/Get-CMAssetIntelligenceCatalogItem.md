@@ -35,7 +35,7 @@ Predefined items cannot be modified.
 In addition to predefined software categories and software families, you can create custom categories and families.
 You can also create custom software labels.
 
-For more information about the Asset Intelligence catalog, see [Introduction to Asset Intelligence in Configuration Manager](https://docs.microsoft.com/mem/configmgr/core/clients/manage/asset-intelligence/configuring-asset-intelligence).
+For more information about the Asset Intelligence catalog, see [Introduction to Asset Intelligence in Configuration Manager](/mem/configmgr/core/clients/manage/asset-intelligence/configuring-asset-intelligence).
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

@@ -17,28 +17,27 @@ Creates a t s step run power shell script.
 
 ### ByName (Default)
 ```
-New-CMTSStepRunPowerShellScript -Name <String> [-SuccessCode <Int32[]>] [-Description <String>]
- [-ContinueOnError] [-Disable] [-Condition <IResultObject[]>] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+New-CMTSStepRunPowerShellScript -Name <String> [-SuccessCode <Int32[]>] [-Condition <IResultObject[]>]
+ [-ContinueOnError] [-Description <String>] [-Disable] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### RunScriptFromSource
 ```
-New-CMTSStepRunPowerShellScript -Name <String> -SourceScript <String> [-WorkingDirectory <String>]
- [-TimeoutMins <Int32>] [-UserName <String>] [-UserPassword <SecureString>] [-OutputVariableName <String>]
- [-Parameter <String>] [-SuccessCode <Int32[]>] [-ExecutionPolicy <ExecutionPolicyType>]
- [-Description <String>] [-ContinueOnError] [-Disable] [-Condition <IResultObject[]>]
+New-CMTSStepRunPowerShellScript [-ExecutionPolicy <ExecutionPolicyType>] -Name <String>
+ [-OutputVariableName <String>] [-Parameter <String>] -SourceScript <String> [-SuccessCode <Int32[]>]
+ [-TimeoutMins <Int32>] [-UserName <String>] [-UserPassword <SecureString>] [-WorkingDirectory <String>]
+ [-Condition <IResultObject[]>] [-ContinueOnError] [-Description <String>] [-Disable]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### RunScriptFromPackage
 ```
-New-CMTSStepRunPowerShellScript -Name <String> -PackageId <String> -ScriptName <String>
- [-WorkingDirectory <String>] [-TimeoutMins <Int32>] [-UserName <String>] [-UserPassword <SecureString>]
- [-OutputVariableName <String>] [-Parameter <String>] [-SuccessCode <Int32[]>]
- [-ExecutionPolicy <ExecutionPolicyType>] [-Description <String>] [-ContinueOnError] [-Disable]
- [-Condition <IResultObject[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+New-CMTSStepRunPowerShellScript [-ExecutionPolicy <ExecutionPolicyType>] -Name <String>
+ [-OutputVariableName <String>] -PackageId <String> [-Parameter <String>] -ScriptName <String>
+ [-SuccessCode <Int32[]>] [-TimeoutMins <Int32>] [-UserName <String>] [-UserPassword <SecureString>]
+ [-WorkingDirectory <String>] [-Condition <IResultObject[]>] [-ContinueOnError] [-Description <String>]
+ [-Disable] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

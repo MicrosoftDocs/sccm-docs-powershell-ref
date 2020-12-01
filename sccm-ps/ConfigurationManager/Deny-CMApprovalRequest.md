@@ -17,25 +17,25 @@ Denies a request to allow the installation of an application.
 
 ### SearchByValueMandatory (Default)
 ```
-Deny-CMApprovalRequest -InputObject <IResultObject> [-Comment <String>] [-DisableWildcardHandling]
+Deny-CMApprovalRequest [-Comment <String>] -InputObject <IResultObject> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### SearchByIdMandatory
-```
-Deny-CMApprovalRequest -Id <String[]> [-Comment <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByNameMandatory
 ```
-Deny-CMApprovalRequest -ApplicationName <String[]> -User <String> [-Comment <String>]
+Deny-CMApprovalRequest -ApplicationName <String[]> [-Comment <String>] -User <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SearchByIdMandatory
+```
+Deny-CMApprovalRequest [-Comment <String>] -Id <String[]> [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByGuid
 ```
-Deny-CMApprovalRequest -RequestGuid <String> [-Comment <String>] [-DisableWildcardHandling]
+Deny-CMApprovalRequest [-Comment <String>] -RequestGuid <String> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

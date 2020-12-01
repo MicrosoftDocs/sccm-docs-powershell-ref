@@ -20,16 +20,16 @@ Invoke-CMQuery -InputObject <IResultObject> [-LimitToCollectionId <String>] [-Di
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### SearchByNameMandatory
-```
-Invoke-CMQuery -Name <String> [-LimitToCollectionId <String>] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
 ### SearchByIdMandatory
 ```
 Invoke-CMQuery -Id <String> [-LimitToCollectionId <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SearchByNameMandatory
+```
+Invoke-CMQuery [-LimitToCollectionId <String>] -Name <String> [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

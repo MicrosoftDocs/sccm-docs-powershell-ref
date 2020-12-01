@@ -16,20 +16,19 @@ Exports an application.
 
 ### SearchByValueMandatory (Default)
 ```
-Export-CMApplication -InputObject <IResultObject> -Path <String> [-IgnoreRelated] [-OmitContent]
- [-Comment <String>] [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
-```
-
-### SearchByNameMandatory
-```
-Export-CMApplication -Name <String> -Path <String> [-IgnoreRelated] [-OmitContent] [-Comment <String>] [-Force]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Export-CMApplication [-Comment <String>] [-Force] [-IgnoreRelated] -InputObject <IResultObject> [-OmitContent]
+ -Path <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory
 ```
-Export-CMApplication -Id <Int32> -Path <String> [-IgnoreRelated] [-OmitContent] [-Comment <String>] [-Force]
+Export-CMApplication [-Comment <String>] [-Force] -Id <Int32> [-IgnoreRelated] [-OmitContent] -Path <String>
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SearchByNameMandatory
+```
+Export-CMApplication [-Comment <String>] [-Force] [-IgnoreRelated] -Name <String> [-OmitContent] -Path <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

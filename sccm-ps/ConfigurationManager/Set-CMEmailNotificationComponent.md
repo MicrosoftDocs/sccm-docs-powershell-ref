@@ -16,8 +16,8 @@ Changes configuration settings of an email notification component.
 
 ### Enable (Default)
 ```
-Set-CMEmailNotificationComponent [-EnableEmailNotification] -SmtpServerFqdn <String> [-UseSsl <Boolean>]
- [-Port <Int32>] -TypeOfAuthentication <AuthenticationMethod> [-UserName <String>] -SendFrom <String>
+Set-CMEmailNotificationComponent [-EnableEmailNotification] [-Port <Int32>] -SendFrom <String>
+ -SmtpServerFqdn <String> -TypeOfAuthentication <AuthenticationMethod> [-UserName <String>] [-UseSsl <Boolean>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

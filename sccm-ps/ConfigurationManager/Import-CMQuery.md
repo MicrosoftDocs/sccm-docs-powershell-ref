@@ -22,7 +22,7 @@ Import-CMQuery [-ImportFilePath] <String> [-DisableWildcardHandling] [-ForceWild
 
 ## DESCRIPTION
 
-The **Import-CMQuery** cmdlet imports a set of exported queries to Configuration Manager. Queries define and store the criteria for sets of database objects that you want to find. For more information, see [Introduction to queries in Configuration Manager](https://docs.microsoft.com/mem/configmgr/core/servers/manage/introduction-to-queries).
+The **Import-CMQuery** cmdlet imports a set of exported queries to Configuration Manager. Queries define and store the criteria for sets of database objects that you want to find. For more information, see [Introduction to queries in Configuration Manager](/mem/configmgr/core/servers/manage/introduction-to-queries).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
@@ -120,7 +120,6 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -130,7 +129,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
-
 ## NOTES
 
 ## RELATED LINKS

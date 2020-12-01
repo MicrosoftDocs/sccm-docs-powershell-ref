@@ -16,25 +16,25 @@ Modifies an object that collects software inventory data on files.
 
 ### SetById (Default)
 ```
-Set-CMSoftwareInventory -Id <String> [-NewName <String>] [-Publisher <String>] [-FamilyId <Int32>]
- [-CategoryId <Int32>] [-Tag1Id <Int32>] [-Tag2Id <Int32>] [-Tag3Id <Int32>] [-CleanTag1] [-CleanTag2]
- [-CleanTag3] [-ParentSoftwareId <String>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Set-CMSoftwareInventory [-CategoryId <Int32>] [-CleanTag1] [-CleanTag2] [-CleanTag3] [-FamilyId <Int32>]
+ -Id <String> [-NewName <String>] [-ParentSoftwareId <String>] [-PassThru] [-Publisher <String>]
+ [-Tag1Id <Int32>] [-Tag2Id <Int32>] [-Tag3Id <Int32>] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetByName
 ```
-Set-CMSoftwareInventory -Name <String[]> [-NewName <String>] [-Publisher <String>] [-FamilyId <Int32>]
- [-CategoryId <Int32>] [-Tag1Id <Int32>] [-Tag2Id <Int32>] [-Tag3Id <Int32>] [-CleanTag1] [-CleanTag2]
- [-CleanTag3] [-ParentSoftwareId <String>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Set-CMSoftwareInventory [-CategoryId <Int32>] [-CleanTag1] [-CleanTag2] [-CleanTag3] [-FamilyId <Int32>]
+ -Name <String[]> [-NewName <String>] [-ParentSoftwareId <String>] [-PassThru] [-Publisher <String>]
+ [-Tag1Id <Int32>] [-Tag2Id <Int32>] [-Tag3Id <Int32>] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetByValueMandatory
 ```
-Set-CMSoftwareInventory -InputObject <IResultObject> [-NewName <String>] [-Publisher <String>]
- [-FamilyId <Int32>] [-CategoryId <Int32>] [-Tag1Id <Int32>] [-Tag2Id <Int32>] [-Tag3Id <Int32>] [-CleanTag1]
- [-CleanTag2] [-CleanTag3] [-ParentSoftwareId <String>] [-PassThru] [-DisableWildcardHandling]
+Set-CMSoftwareInventory [-CategoryId <Int32>] [-CleanTag1] [-CleanTag2] [-CleanTag3] [-FamilyId <Int32>]
+ -InputObject <IResultObject> [-NewName <String>] [-ParentSoftwareId <String>] [-PassThru]
+ [-Publisher <String>] [-Tag1Id <Int32>] [-Tag2Id <Int32>] [-Tag3Id <Int32>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

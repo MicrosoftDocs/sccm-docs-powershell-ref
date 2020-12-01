@@ -16,8 +16,8 @@ Creates a t s step install update.
 ## SYNTAX
 
 ```
-New-CMTSStepInstallUpdate [-Target <TargetType>] [-UseCache <Boolean>] [-RetryCount <Int32>] -Name <String>
- [-Description <String>] [-ContinueOnError] [-Disable] [-Condition <IResultObject[]>]
+New-CMTSStepInstallUpdate [-RetryCount <Int32>] [-Target <TargetType>] [-UseCache <Boolean>]
+ [-Condition <IResultObject[]>] [-ContinueOnError] [-Description <String>] [-Disable] -Name <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

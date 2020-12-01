@@ -1,4 +1,4 @@
----
+﻿---
 description: Gets a configuration policy.
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,19 +16,19 @@ Gets a configuration policy.
 
 ### SearchByName (Default)
 ```
-Get-CMConfigurationPolicy [[-Name] <String>] [-AsXml] [-CategoryInstanceType <String[]>] [-Fast]
+Get-CMConfigurationPolicy [-AsXml] [-CategoryInstanceType <String[]>] [-Fast] [[-Name] <String>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ### SearchById
 ```
-Get-CMConfigurationPolicy [-Id] <Int32> [-AsXml] [-CategoryInstanceType <String[]>] [-Fast]
+Get-CMConfigurationPolicy [-AsXml] [-CategoryInstanceType <String[]>] [-Fast] [-Id] <Int32>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ### SearchByValue
 ```
-Get-CMConfigurationPolicy [-AsXml] [[-InputObject] <IResultObject>] [-CategoryInstanceType <String[]>] [-Fast]
+Get-CMConfigurationPolicy [-AsXml] [-CategoryInstanceType <String[]>] [-Fast] [[-InputObject] <IResultObject>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 

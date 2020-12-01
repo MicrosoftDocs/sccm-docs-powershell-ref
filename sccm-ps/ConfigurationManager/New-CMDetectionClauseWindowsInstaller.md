@@ -1,4 +1,4 @@
----
+﻿---
 description: Creates a detection clause windows installer.
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,9 +16,9 @@ Creates a detection clause windows installer.
 
 ### Value
 ```
-New-CMDetectionClauseWindowsInstaller -ExpectedValue <String> -ExpressionOperator <RuleExpressionOperator>
- -ProductCode <Guid> [-PropertyType <MSIProperty>] [-Value] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [<CommonParameters>]
+New-CMDetectionClauseWindowsInstaller -ExpectedValue <String>
+ -ExpressionOperator <WindowsInstallerRuleExpressionOperator> -ProductCode <Guid> [-PropertyType <MSIProperty>]
+ [-Value] [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ### Existence
@@ -86,10 +86,10 @@ Accept wildcard characters: False
 
 ### -ExpressionOperator
 ```yaml
-Type: RuleExpressionOperator
+Type: WindowsInstallerRuleExpressionOperator
 Parameter Sets: Value
 Aliases:
-Accepted values: IsEquals, NotEquals, GreaterEquals, GreaterThan, LessEquals, LessThan
+Accepted values: IsEquals, NotEquals, GreaterThan, LessThan, GreaterEquals, LessEquals
 
 Required: True
 Position: Named

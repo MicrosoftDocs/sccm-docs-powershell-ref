@@ -1,4 +1,4 @@
----
+﻿---
 description: Get a site role object.
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -17,7 +17,7 @@ Get a site role object.
 
 ### SearchByName (Default)
 ```
-Get-CMSiteRole [-SiteCode <String>] [[-SiteSystemServerName] <String>] [-AllSite] [-RoleName <String>]
+Get-CMSiteRole [-AllSite] [-RoleName <String>] [-SiteCode <String>] [[-SiteSystemServerName] <String>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
@@ -217,7 +217,6 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -229,8 +228,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### IResultObject[]#SMS_SCI_SysResUse
 
 ### IResultObject#SMS_SCI_SysResUse
-
-For more information on this return object and its properties, see [SMS_SCI_SysResUse server WMI class](https://docs.microsoft.com/mem/configmgr/develop/reference/core/servers/configure/sms_sci_sysresuse-server-wmi-class).
 
 ## NOTES
 

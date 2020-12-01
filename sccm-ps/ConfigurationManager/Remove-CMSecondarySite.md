@@ -16,19 +16,19 @@ Removes a secondary site from Configuration Manager.
 
 ### SearchByValueMandatory (Default)
 ```
-Remove-CMSecondarySite -InputObject <IResultObject> [-Force] -Action <ActionType> [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### SearchBySiteCodeMandatory
-```
-Remove-CMSecondarySite -SiteCode <String> [-Force] -Action <ActionType> [-DisableWildcardHandling]
+Remove-CMSecondarySite -Action <ActionType> [-Force] -InputObject <IResultObject> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByNameMandatory
 ```
-Remove-CMSecondarySite -Name <String> [-Force] -Action <ActionType> [-DisableWildcardHandling]
+Remove-CMSecondarySite -Action <ActionType> [-Force] -Name <String> [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SearchBySiteCodeMandatory
+```
+Remove-CMSecondarySite -Action <ActionType> [-Force] -SiteCode <String> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

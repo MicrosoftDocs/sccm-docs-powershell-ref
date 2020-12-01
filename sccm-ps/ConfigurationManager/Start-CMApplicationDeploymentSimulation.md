@@ -16,23 +16,23 @@ Starts an application deployment simulation in Configuration Manager.
 
 ### SearchByValueMandatory (Default)
 ```
-Start-CMApplicationDeploymentSimulation -InputObject <IResultObject> -CollectionName <String>
- [-DeploymentAction <DeployActionType>] [-PreDeploy <Boolean>] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### SearchByNameMandatory
-```
-Start-CMApplicationDeploymentSimulation -Name <String> -CollectionName <String>
- [-DeploymentAction <DeployActionType>] [-PreDeploy <Boolean>] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Start-CMApplicationDeploymentSimulation -CollectionName <String> [-DeploymentAction <DeployActionType>]
+ -InputObject <IResultObject> [-PreDeploy <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory
 ```
-Start-CMApplicationDeploymentSimulation -Id <Int32> -CollectionName <String>
- [-DeploymentAction <DeployActionType>] [-PreDeploy <Boolean>] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Start-CMApplicationDeploymentSimulation -CollectionName <String> [-DeploymentAction <DeployActionType>]
+ -Id <Int32> [-PreDeploy <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### SearchByNameMandatory
+```
+Start-CMApplicationDeploymentSimulation -CollectionName <String> [-DeploymentAction <DeployActionType>]
+ -Name <String> [-PreDeploy <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

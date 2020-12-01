@@ -18,7 +18,7 @@ Sets a compliance setting x path query.
 Set-CMComplianceSettingXPathQuery [-AddXmlNamespace <Hashtable>] [-ClearXmlNamespace]
  [-IncludeSubfolders <Boolean>] [-Is64Bit <Boolean>] [-Path <String>] [-RemoveXmlNamespace <String[]>]
  [-XmlFileName <String>] [-XPathQueryFile <String>] [-XPathQueryText <String>] [-Description <String>]
- -InputObject <PSObject> -SettingName <String> [-NewSettingName <String>] [-PassThru]
+ -InputObject <PSObject> [-NewSettingName <String>] [-PassThru] -SettingName <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

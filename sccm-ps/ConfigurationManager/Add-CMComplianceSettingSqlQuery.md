@@ -17,7 +17,7 @@ Adds a compliance setting sql query
 ### EmptyRule (Default)
 ```
 Add-CMComplianceSettingSqlQuery -ColumnName <String> -DatabaseName <String> -DataType <SettingDataType>
- [-InstanceType <TargetSqlInstance>] [-InstanceName <String>] [-SqlStatementFile <String>]
+ [-InstanceName <String>] [-InstanceType <TargetSqlInstance>] [-SqlStatementFile <String>]
  [-SqlStatementText <String>] [-Description <String>] -InputObject <PSObject> -Name <String> [-NoRule]
  [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
@@ -25,22 +25,23 @@ Add-CMComplianceSettingSqlQuery -ColumnName <String> -DatabaseName <String> -Dat
 ### ExistentialRule
 ```
 Add-CMComplianceSettingSqlQuery -ColumnName <String> -DatabaseName <String> -DataType <SettingDataType>
- [-InstanceType <TargetSqlInstance>] [-InstanceName <String>] [-SqlStatementFile <String>]
+ [-InstanceName <String>] [-InstanceType <TargetSqlInstance>] [-SqlStatementFile <String>]
  [-SqlStatementText <String>] [-Description <String>] -Existence <ExistenceType> [-ExistentialRule]
  [-ExpectedValue <String[]>] [-ExpressionOperator <RuleExpressionOperator>] -InputObject <PSObject>
- -Name <String> [-NoncomplianceSeverity <NoncomplianceSeverity>] [-RuleDescription <String>] -RuleName <String>
- [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ -Name <String> [-NoncomplianceSeverity <NoncomplianceSeverity>] [-PassThru] [-RuleDescription <String>]
+ -RuleName <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### ValueRule
 ```
 Add-CMComplianceSettingSqlQuery -ColumnName <String> -DatabaseName <String> -DataType <SettingDataType>
- [-InstanceType <TargetSqlInstance>] [-InstanceName <String>] [-SqlStatementFile <String>]
+ [-InstanceName <String>] [-InstanceType <TargetSqlInstance>] [-SqlStatementFile <String>]
  [-SqlStatementText <String>] [-Description <String>] -ExpectedValue <String[]>
  -ExpressionOperator <RuleExpressionOperator> -InputObject <PSObject> -Name <String>
- [-NoncomplianceSeverity <NoncomplianceSeverity>] [-ReportNoncompliance] [-RuleDescription <String>]
- -RuleName <String> [-ValueRule] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+ [-NoncomplianceSeverity <NoncomplianceSeverity>] [-PassThru] [-ReportNoncompliance]
+ [-RuleDescription <String>] -RuleName <String> [-ValueRule] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

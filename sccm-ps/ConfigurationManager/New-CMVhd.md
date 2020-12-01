@@ -15,9 +15,9 @@ Creates a VHD image.
 ## SYNTAX
 
 ```
-New-CMVhd -Name <String> -VhdFilePath <String> [-Version <String>] [-Description <String>]
- -TaskSequencePackageId <String> -DistributionPointServerName <String[]> [-VhdSizeGB <Int32>]
- [-Timeout <TimeSpan>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+New-CMVhd [-Description <String>] -DistributionPointServerName <String[]> -Name <String>
+ -TaskSequencePackageId <String> [-Timeout <TimeSpan>] [-Version <String>] -VhdFilePath <String>
+ [-VhdSizeGB <Int32>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 

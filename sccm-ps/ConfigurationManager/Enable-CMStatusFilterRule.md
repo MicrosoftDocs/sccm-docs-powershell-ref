@@ -16,7 +16,7 @@ Enables a Configuration Manager filter rule for status messages.
 
 ### SearchByName (Default)
 ```
-Enable-CMStatusFilterRule [-SiteCode <String>] -Name <String> [-DisableWildcardHandling]
+Enable-CMStatusFilterRule -Name <String> [-SiteCode <String>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

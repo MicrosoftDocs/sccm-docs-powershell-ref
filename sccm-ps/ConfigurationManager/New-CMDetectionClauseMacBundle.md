@@ -1,4 +1,4 @@
----
+﻿---
 description: Creates a detection clause mac bundle.
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 Module Name: ConfigurationManager
@@ -15,8 +15,8 @@ Creates a detection clause mac bundle.
 ## SYNTAX
 
 ```
-New-CMDetectionClauseMacBundle -BundleId <String> -ExpressionOperator <RuleExpressionOperator>
- -PropertyType <SettingDataType> [-Value] -ExpectedValue <String> [-DisableWildcardHandling]
+New-CMDetectionClauseMacBundle -BundleId <String> -ExpressionOperator <MacRuleExpressionOperator>
+ -PropertyType <SettingDataType> -ExpectedValue <String> [-Value] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
@@ -79,10 +79,10 @@ Accept wildcard characters: False
 
 ### -ExpressionOperator
 ```yaml
-Type: RuleExpressionOperator
+Type: MacRuleExpressionOperator
 Parameter Sets: (All)
 Aliases:
-Accepted values: IsEquals, GreaterEquals, GreaterThan, LessEquals, LessThan
+Accepted values: IsEquals, GreaterThan, LessThan, GreaterEquals, LessEquals
 
 Required: True
 Position: Named

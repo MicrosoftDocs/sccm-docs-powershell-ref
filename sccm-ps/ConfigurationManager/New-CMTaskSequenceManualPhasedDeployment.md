@@ -15,23 +15,23 @@ Use this cmdlet to create a phased deployment for a task sequence.
 
 ### SearchByValueMandatory
 ```
-New-CMTaskSequenceManualPhasedDeployment [-TaskSequence] <IResultObject> -AddPhases <Phase[]> -Name <String>
- [-Description <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+New-CMTaskSequenceManualPhasedDeployment [-TaskSequence] <IResultObject> -AddPhases <Phase[]>
+ [-Description <String>] -Name <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory
 ```
-New-CMTaskSequenceManualPhasedDeployment [-TaskSequenceId] <String> -AddPhases <Phase[]> -Name <String>
- [-Description <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+New-CMTaskSequenceManualPhasedDeployment [-TaskSequenceId] <String> -AddPhases <Phase[]>
+ [-Description <String>] -Name <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByNameMandatory
 ```
-New-CMTaskSequenceManualPhasedDeployment [-TaskSequenceName] <String> -AddPhases <Phase[]> -Name <String>
- [-Description <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+New-CMTaskSequenceManualPhasedDeployment [-TaskSequenceName] <String> -AddPhases <Phase[]>
+ [-Description <String>] -Name <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

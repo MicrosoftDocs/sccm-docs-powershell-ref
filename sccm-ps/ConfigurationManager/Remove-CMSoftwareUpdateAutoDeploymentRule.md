@@ -16,19 +16,19 @@ Removes Configuration Manager deployment rules for automatic software updates.
 
 ### SearchByIdMandatory (Default)
 ```
-Remove-CMSoftwareUpdateAutoDeploymentRule [-Id] <Int32> [-Force] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### SearchByNameMandatory
-```
-Remove-CMSoftwareUpdateAutoDeploymentRule [-Name] <String> [-Force] [-DisableWildcardHandling]
+Remove-CMSoftwareUpdateAutoDeploymentRule [-Force] [-Id] <Int32> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByValueMandatory
 ```
-Remove-CMSoftwareUpdateAutoDeploymentRule [-InputObject] <IResultObject> [-Force] [-DisableWildcardHandling]
+Remove-CMSoftwareUpdateAutoDeploymentRule [-Force] [-InputObject] <IResultObject> [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SearchByNameMandatory
+```
+Remove-CMSoftwareUpdateAutoDeploymentRule [-Force] [-Name] <String> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

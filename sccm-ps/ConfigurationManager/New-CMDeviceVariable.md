@@ -16,20 +16,20 @@ Creates a device variable for a Configuration Manager device.
 
 ### NewByValueMandatory (Default)
 ```
-New-CMDeviceVariable -InputObject <IResultObject> -VariableName <String> [-VariableValue <String>]
- [-IsMask <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+New-CMDeviceVariable -InputObject <IResultObject> [-IsMask <Boolean>] -VariableName <String>
+ [-VariableValue <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ### NewByIdMandatory
 ```
-New-CMDeviceVariable -DeviceId <String> -VariableName <String> [-VariableValue <String>] [-IsMask <Boolean>]
+New-CMDeviceVariable -DeviceId <String> [-IsMask <Boolean>] -VariableName <String> [-VariableValue <String>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### NewByNameMandatory
 ```
-New-CMDeviceVariable -DeviceName <String> -VariableName <String> [-VariableValue <String>] [-IsMask <Boolean>]
+New-CMDeviceVariable -DeviceName <String> [-IsMask <Boolean>] -VariableName <String> [-VariableValue <String>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

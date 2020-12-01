@@ -1,4 +1,4 @@
----
+﻿---
 description: Get an automatic deployment rule for software updates.
 external help file: AdminUI.PS.Sum.dll-Help.xml
 Module Name: ConfigurationManager
@@ -17,13 +17,13 @@ Get an automatic deployment rule for software updates.
 
 ### SearchByName (Default)
 ```
-Get-CMSoftwareUpdateAutoDeploymentRule [[-Name] <String>] [-IsServicingPlan <Boolean>] [-Fast]
+Get-CMSoftwareUpdateAutoDeploymentRule [-Fast] [-IsServicingPlan <Boolean>] [[-Name] <String>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory
 ```
-Get-CMSoftwareUpdateAutoDeploymentRule [-Id] <Int32[]> [-IsServicingPlan <Boolean>] [-Fast]
+Get-CMSoftwareUpdateAutoDeploymentRule [-Fast] [-Id] <Int32[]> [-IsServicingPlan <Boolean>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
@@ -156,7 +156,6 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -168,8 +167,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### IResultObject[]#SMS_AutoDeployment
 
 ### IResultObject#SMS_AutoDeployment
-
-For more information on this return object and its properties, see [SMS_AutoDeployment server WMI class](https://docs.microsoft.com/mem/configmgr/develop/reference/sum/sms_autodeployment-server-wmi-class).
 
 ## NOTES
 

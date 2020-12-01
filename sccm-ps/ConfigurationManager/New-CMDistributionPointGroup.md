@@ -15,7 +15,7 @@ Creates a distribution point group.
 ## SYNTAX
 
 ```
-New-CMDistributionPointGroup -Name <String> [-Description <String>] [-DisableWildcardHandling]
+New-CMDistributionPointGroup [-Description <String>] -Name <String> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

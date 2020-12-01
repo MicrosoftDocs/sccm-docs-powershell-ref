@@ -16,19 +16,19 @@ Removes a maintenance window.
 
 ### ByValue (Default)
 ```
-Remove-CMMaintenanceWindow [-InputObject] <IResultObject> -MaintenanceWindowName <String> [-Force]
+Remove-CMMaintenanceWindow [-Force] [-InputObject] <IResultObject> -MaintenanceWindowName <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByCollectionId
 ```
-Remove-CMMaintenanceWindow [-CollectionId] <String> -MaintenanceWindowName <String> [-Force]
+Remove-CMMaintenanceWindow [-CollectionId] <String> [-Force] -MaintenanceWindowName <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByCollectionName
 ```
-Remove-CMMaintenanceWindow [-CollectionName] <String> -MaintenanceWindowName <String> [-Force]
+Remove-CMMaintenanceWindow [-CollectionName] <String> [-Force] -MaintenanceWindowName <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

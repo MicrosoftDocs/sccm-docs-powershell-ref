@@ -17,20 +17,20 @@ Removes configuration items from Configuration Manager.
 
 ### SearchByIdMandatory (Default)
 ```
-Remove-CMConfigurationItem [-Id] <Int32> [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+Remove-CMConfigurationItem [-Force] [-Id] <Int32> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
  [-Confirm] [<CommonParameters>]
-```
-
-### SearchByNameMandatory
-```
-Remove-CMConfigurationItem [-Name] <String> [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByValueMandatory
 ```
-Remove-CMConfigurationItem [-InputObject] <IResultObject> [-Force] [-DisableWildcardHandling]
+Remove-CMConfigurationItem [-Force] [-InputObject] <IResultObject> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SearchByNameMandatory
+```
+Remove-CMConfigurationItem [-Force] [-Name] <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -43,7 +43,7 @@ Items usually define a unit of configuration you want to.
 
 If you remove a configuration item that has been deployed to a collection, the deployment will also be removed.
 
-For more information about configuration items, see [Introduction to Compliance Settings in Configuration Manager](https://docs.microsoft.com/mem/configmgr/compliance/understand/ensure-device-compliance).
+For more information about configuration items, see [Introduction to Compliance Settings in Configuration Manager](/mem/configmgr/compliance/understand/ensure-device-compliance).
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.
@@ -226,7 +226,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Introduction to Compliance Settings in Configuration Manager](https://docs.microsoft.com/mem/configmgr/compliance/understand/ensure-device-compliance)
+[Introduction to Compliance Settings in Configuration Manager](/mem/configmgr/compliance/understand/ensure-device-compliance)
 
 [Get-CMConfigurationItem](Get-CMConfigurationItem.md)
 

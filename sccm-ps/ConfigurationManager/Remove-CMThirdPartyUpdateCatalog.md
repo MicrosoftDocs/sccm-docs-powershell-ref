@@ -15,19 +15,19 @@ Use this cmdlet to remove a third-party updates catalog.
 
 ### SearchByName (Default)
 ```
-Remove-CMThirdPartyUpdateCatalog [[-Name] <String>] [-Force] [-DisableWildcardHandling]
+Remove-CMThirdPartyUpdateCatalog [-Force] [[-Name] <String>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory
 ```
-Remove-CMThirdPartyUpdateCatalog [-Id] <String> [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Remove-CMThirdPartyUpdateCatalog [-Force] [-Id] <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByValueMandatory
 ```
-Remove-CMThirdPartyUpdateCatalog [-InputObject] <IResultObject> [-Force] [-DisableWildcardHandling]
+Remove-CMThirdPartyUpdateCatalog [-Force] [-InputObject] <IResultObject> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

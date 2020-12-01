@@ -15,8 +15,8 @@ Signs a Windows Mobile CAB file.
 ## SYNTAX
 
 ```
-Out-CMSignedWindowsMobileCab [-ContentLocation] <String> -PfxPassword <SecureString> -PfxFilePath <String>
- -OutputPath <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+Out-CMSignedWindowsMobileCab [-ContentLocation] <String> -OutputPath <String> -PfxFilePath <String>
+ -PfxPassword <SecureString> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 

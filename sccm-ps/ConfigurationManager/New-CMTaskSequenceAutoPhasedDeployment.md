@@ -15,38 +15,38 @@ Use this cmdlet to create a phased deployment for a task sequence by generating 
 
 ### SearchByValueMandatory
 ```
-New-CMTaskSequenceAutoPhasedDeployment [-TaskSequence] <IResultObject> [-FirstCollection <IResultObject>]
- [-FirstCollectionId <String>] [-FirstCollectionName <String>] [-SecondCollection <IResultObject>]
- [-SecondCollectionId <String>] [-SecondCollectionName <String>] [-CriteriaOption <CriteriaType>]
- [-CriteriaValue <Int32>] [-BeginCondition <BeginConditionType>] [-DaysAfterPreviousPhaseSuccess <Int32>]
- [-ThrottlingDays <Int32>] [-InstallationChoice <InstallationChoiceType>] [-DeadlineUnit <TimeUnitType>]
- [-DeadlineValue <Int32>] [-AddPhases <Phase[]>] [-InsertAtOrder <Int32>] -Name <String>
- [-Description <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+New-CMTaskSequenceAutoPhasedDeployment [-TaskSequence] <IResultObject> [-AddPhases <Phase[]>]
+ [-BeginCondition <BeginConditionType>] [-CriteriaOption <CriteriaType>] [-CriteriaValue <Int32>]
+ [-DaysAfterPreviousPhaseSuccess <Int32>] [-DeadlineUnit <TimeUnitType>] [-DeadlineValue <Int32>]
+ [-FirstCollection <IResultObject>] [-FirstCollectionId <String>] [-FirstCollectionName <String>]
+ [-InsertAtOrder <Int32>] [-InstallationChoice <InstallationChoiceType>] [-SecondCollection <IResultObject>]
+ [-SecondCollectionId <String>] [-SecondCollectionName <String>] [-ThrottlingDays <Int32>]
+ [-Description <String>] -Name <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory
 ```
-New-CMTaskSequenceAutoPhasedDeployment [-TaskSequenceId] <String> [-FirstCollection <IResultObject>]
- [-FirstCollectionId <String>] [-FirstCollectionName <String>] [-SecondCollection <IResultObject>]
- [-SecondCollectionId <String>] [-SecondCollectionName <String>] [-CriteriaOption <CriteriaType>]
- [-CriteriaValue <Int32>] [-BeginCondition <BeginConditionType>] [-DaysAfterPreviousPhaseSuccess <Int32>]
- [-ThrottlingDays <Int32>] [-InstallationChoice <InstallationChoiceType>] [-DeadlineUnit <TimeUnitType>]
- [-DeadlineValue <Int32>] [-AddPhases <Phase[]>] [-InsertAtOrder <Int32>] -Name <String>
- [-Description <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+New-CMTaskSequenceAutoPhasedDeployment [-TaskSequenceId] <String> [-AddPhases <Phase[]>]
+ [-BeginCondition <BeginConditionType>] [-CriteriaOption <CriteriaType>] [-CriteriaValue <Int32>]
+ [-DaysAfterPreviousPhaseSuccess <Int32>] [-DeadlineUnit <TimeUnitType>] [-DeadlineValue <Int32>]
+ [-FirstCollection <IResultObject>] [-FirstCollectionId <String>] [-FirstCollectionName <String>]
+ [-InsertAtOrder <Int32>] [-InstallationChoice <InstallationChoiceType>] [-SecondCollection <IResultObject>]
+ [-SecondCollectionId <String>] [-SecondCollectionName <String>] [-ThrottlingDays <Int32>]
+ [-Description <String>] -Name <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByNameMandatory
 ```
-New-CMTaskSequenceAutoPhasedDeployment [-TaskSequenceName] <String> [-FirstCollection <IResultObject>]
- [-FirstCollectionId <String>] [-FirstCollectionName <String>] [-SecondCollection <IResultObject>]
- [-SecondCollectionId <String>] [-SecondCollectionName <String>] [-CriteriaOption <CriteriaType>]
- [-CriteriaValue <Int32>] [-BeginCondition <BeginConditionType>] [-DaysAfterPreviousPhaseSuccess <Int32>]
- [-ThrottlingDays <Int32>] [-InstallationChoice <InstallationChoiceType>] [-DeadlineUnit <TimeUnitType>]
- [-DeadlineValue <Int32>] [-AddPhases <Phase[]>] [-InsertAtOrder <Int32>] -Name <String>
- [-Description <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+New-CMTaskSequenceAutoPhasedDeployment [-TaskSequenceName] <String> [-AddPhases <Phase[]>]
+ [-BeginCondition <BeginConditionType>] [-CriteriaOption <CriteriaType>] [-CriteriaValue <Int32>]
+ [-DaysAfterPreviousPhaseSuccess <Int32>] [-DeadlineUnit <TimeUnitType>] [-DeadlineValue <Int32>]
+ [-FirstCollection <IResultObject>] [-FirstCollectionId <String>] [-FirstCollectionName <String>]
+ [-InsertAtOrder <Int32>] [-InstallationChoice <InstallationChoiceType>] [-SecondCollection <IResultObject>]
+ [-SecondCollectionId <String>] [-SecondCollectionName <String>] [-ThrottlingDays <Int32>]
+ [-Description <String>] -Name <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

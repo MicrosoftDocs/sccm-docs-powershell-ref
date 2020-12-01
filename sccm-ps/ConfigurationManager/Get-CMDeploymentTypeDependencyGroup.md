@@ -1,4 +1,4 @@
----
+﻿---
 description: Gets a deployment type dependency group from Configuration Manager.
 external help file: AdminUI.PS.AppMan.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,7 +16,7 @@ Gets a deployment type dependency group from Configuration Manager.
 ## SYNTAX
 
 ```
-Get-CMDeploymentTypeDependencyGroup [-GroupName <String>] [-GroupId <String>] -InputObject <IResultObject>
+Get-CMDeploymentTypeDependencyGroup [-GroupId <String>] [-GroupName <String>] -InputObject <IResultObject>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 

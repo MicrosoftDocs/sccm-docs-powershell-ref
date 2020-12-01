@@ -16,55 +16,55 @@ Assigns boundaries to a boundary group in Configuration Manager.
 
 ### AddBoundaryToGroupByObject_Object (Default)
 ```
-Add-CMBoundaryToGroup -InputObject <IResultObject> -BoundaryGroupInputObject <IResultObject>
+Add-CMBoundaryToGroup -BoundaryGroupInputObject <IResultObject> -InputObject <IResultObject>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### AddBoundaryToGroupById_Id
 ```
-Add-CMBoundaryToGroup -BoundaryId <Int32> -BoundaryGroupId <Int32> [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### AddBoundaryToGroupById_Name
-```
-Add-CMBoundaryToGroup -BoundaryId <Int32> -BoundaryGroupName <String> [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### AddBoundaryToGroupById_Object
-```
-Add-CMBoundaryToGroup -BoundaryId <Int32> -BoundaryGroupInputObject <IResultObject> [-DisableWildcardHandling]
+Add-CMBoundaryToGroup -BoundaryGroupId <Int32> -BoundaryId <Int32> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### AddBoundaryToGroupByName_Id
 ```
-Add-CMBoundaryToGroup -BoundaryName <String> -BoundaryGroupId <Int32> [-DisableWildcardHandling]
+Add-CMBoundaryToGroup -BoundaryGroupId <Int32> -BoundaryName <String> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### AddBoundaryToGroupByName_Name
+### AddBoundaryToGroupByObject_Id
 ```
-Add-CMBoundaryToGroup -BoundaryName <String> -BoundaryGroupName <String> [-DisableWildcardHandling]
+Add-CMBoundaryToGroup -BoundaryGroupId <Int32> -InputObject <IResultObject> [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### AddBoundaryToGroupById_Object
+```
+Add-CMBoundaryToGroup -BoundaryGroupInputObject <IResultObject> -BoundaryId <Int32> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### AddBoundaryToGroupByName_Object
 ```
-Add-CMBoundaryToGroup -BoundaryName <String> -BoundaryGroupInputObject <IResultObject>
+Add-CMBoundaryToGroup -BoundaryGroupInputObject <IResultObject> -BoundaryName <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### AddBoundaryToGroupByObject_Id
+### AddBoundaryToGroupById_Name
 ```
-Add-CMBoundaryToGroup -InputObject <IResultObject> -BoundaryGroupId <Int32> [-DisableWildcardHandling]
+Add-CMBoundaryToGroup -BoundaryGroupName <String> -BoundaryId <Int32> [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### AddBoundaryToGroupByName_Name
+```
+Add-CMBoundaryToGroup -BoundaryGroupName <String> -BoundaryName <String> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### AddBoundaryToGroupByObject_Name
 ```
-Add-CMBoundaryToGroup -InputObject <IResultObject> -BoundaryGroupName <String> [-DisableWildcardHandling]
+Add-CMBoundaryToGroup -BoundaryGroupName <String> -InputObject <IResultObject> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -77,7 +77,7 @@ A boundary can be an IP subnet, Active Directory site name, IPv6 prefix, or an I
 You can use boundary groups to manage network locations.
 You must assign boundaries to boundary groups before you can use the boundary group.
 Boundary groups enable client computers to find a primary site for client assignment, which is referred to as automatic site assignment, and a list of available site systems that have content.
-For more information about boundaries, see [Planning for Boundaries and Boundary Groups in Configuration Manager](https://docs.microsoft.com/mem/configmgr/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups).
+For more information about boundaries, see [Planning for Boundaries and Boundary Groups in Configuration Manager](/mem/configmgr/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups).
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.
@@ -143,7 +143,7 @@ Specifies the ID of a boundary.
 
 ```yaml
 Type: Int32
-Parameter Sets: AddBoundaryToGroupById_Id, AddBoundaryToGroupById_Name, AddBoundaryToGroupById_Object
+Parameter Sets: AddBoundaryToGroupById_Id, AddBoundaryToGroupById_Object, AddBoundaryToGroupById_Name
 Aliases:
 
 Required: True
@@ -158,7 +158,7 @@ Specifies the name of a boundary.
 
 ```yaml
 Type: String
-Parameter Sets: AddBoundaryToGroupByName_Id, AddBoundaryToGroupByName_Name, AddBoundaryToGroupByName_Object
+Parameter Sets: AddBoundaryToGroupByName_Id, AddBoundaryToGroupByName_Object, AddBoundaryToGroupByName_Name
 Aliases:
 
 Required: True
@@ -260,7 +260,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Planning for Boundaries and Boundary Groups in Configuration Manager](https://docs.microsoft.com/mem/configmgr/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups)
+[Planning for Boundaries and Boundary Groups in Configuration Manager](/mem/configmgr/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups)
 
 [Get-CMBoundary](Get-CMBoundary.md)
 

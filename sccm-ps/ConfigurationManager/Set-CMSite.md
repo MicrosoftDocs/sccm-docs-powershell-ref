@@ -17,80 +17,83 @@ Configure a Configuration Manager site.
 
 ### SetByObject (Default)
 ```
-Set-CMSite -InputObject <IResultObject> [-Comment <String>] [-EnableWakeOnLan <Boolean>]
- [-WakeOnLanType <WakeOnLanType>] [-WakeOnLanTransmissionMethodType <WakeOnLanTransmissionMethodType>]
- [-RetryNumberOfSendingWakeupPacketTransmission <Int32>] [-SendingWakeupPacketTransmissionDelayMins <Int32>]
- [-MaximumNumberOfSendingWakeupPacketBeforePausing <Int32>] [-SendingWakeupPacketBeforePausingWaitSec <Int32>]
- [-ThreadNumberOfSendingWakeupPacket <Int32>] [-SendingWakeupPacketTransmissionOffsetMins <Int32>]
- [-AddClientRequestServiceType <ClientRequestServiceType>] [-PortForClientRequestServiceType <Int32>]
- [-RemoveClientRequestServiceType <ClientRequestServiceType>] [-UseCustomWebsite <Boolean>]
- [-MaximumConcurrentSendingForAllSite <Int32>] [-MaximumConcurrentSendingForPerSite <Int32>]
- [-RetryNumberForConcurrentSending <Int32>] [-ConcurrentSendingDelayBeforeRetryingMins <Int32>]
- [-AddActiveDirectoryForest <IResultObject[]>] [-RemoveActiveDirectoryForest <IResultObject[]>]
- [-ClientComputerCommunicationType <ClientComputerCommunicationType>] [-UseSmsGeneratedCert <Boolean>]
- [-UsePkiClientCertificate <Boolean>] [-ClientCertificateCustomStoreName <String>]
+Set-CMSite [-AddActiveDirectoryForest <IResultObject[]>] [-AddCertificateByPath <String[]>]
+ [-AddClientRequestServiceType <ClientRequestServiceType>] [-ClientCertificateCustomStoreName <String>]
  [-ClientCertificateSelectionCriteriaType <ClientCertificateSelectionCriteriaType>]
  [-ClientCertificateSelectionCriteriaValue <String>]
+ [-ClientCheckCertificateRevocationListForSiteSystem <Boolean>]
+ [-ClientComputerCommunicationType <ClientComputerCommunicationType>] [-Comment <String>]
+ [-ConcurrentSendingDelayBeforeRetryingMins <Int32>] [-EnableLowFreeSpaceAlert <Boolean>]
+ [-EnableWakeOnLan <Boolean>] [-FreeSpaceThresholdCriticalGB <Int32>] [-FreeSpaceThresholdWarningGB <Int32>]
+ -InputObject <IResultObject> [-MaximumConcurrentSendingForAllSite <Int32>]
+ [-MaximumConcurrentSendingForPerSite <Int32>] [-MaximumNumberOfSendingWakeupPacketBeforePausing <Int32>]
+ [-PassThru] [-PortForClientRequestServiceType <Int32>] [-PromotePassiveSiteToActive]
+ [-RemoveActiveDirectoryForest <IResultObject[]>] [-RemoveCertificateByKey <String[]>]
+ [-RemoveClientRequestServiceType <ClientRequestServiceType>] [-RequireSha256 <Boolean>]
+ [-RequireSigning <Boolean>] [-RetryInstallPassiveSite] [-RetryNumberForConcurrentSending <Int32>]
+ [-RetryNumberOfSendingWakeupPacketTransmission <Int32>] [-SendingWakeupPacketBeforePausingWaitSec <Int32>]
+ [-SendingWakeupPacketTransmissionDelayMins <Int32>] [-SendingWakeupPacketTransmissionOffsetMins <Int32>]
+ [-SiteSystemCollectionBehavior <CollectionBehaviorType>]
  [-TakeActionForMultipleCertificateMatchCriteria <TakeActionForMultipleCertificateMatchCriteria>]
- [-ClientCheckCertificateRevocationListForSiteSystem <Boolean>] [-AddCertificateByPath <String[]>]
- [-RemoveCertificateByKey <String[]>] [-EnableLowFreeSpaceAlert <Boolean>]
- [-FreeSpaceThresholdWarningGB <Int32>] [-FreeSpaceThresholdCriticalGB <Int32>] [-RequireSigning <Boolean>]
- [-RequireSha256 <Boolean>] [-UseEncryption <Boolean>] [-ThresholdOfSelectCollectionByDefault <Int32>]
- [-ThresholdOfSelectCollectionMax <Int32>] [-SiteSystemCollectionBehavior <CollectionBehaviorType>] [-PassThru]
- [-RetryInstallPassiveSite] [-PromotePassiveSiteToActive] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-ThreadNumberOfSendingWakeupPacket <Int32>] [-ThresholdOfSelectCollectionByDefault <Int32>]
+ [-ThresholdOfSelectCollectionMax <Int32>] [-UseCustomWebsite <Boolean>] [-UseEncryption <Boolean>]
+ [-UsePkiClientCertificate <Boolean>] [-UseSmsGeneratedCert <Boolean>]
+ [-WakeOnLanTransmissionMethodType <WakeOnLanTransmissionMethodType>] [-WakeOnLanType <WakeOnLanType>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetByNameMandatory
 ```
-Set-CMSite -Name <String> [-Comment <String>] [-EnableWakeOnLan <Boolean>] [-WakeOnLanType <WakeOnLanType>]
- [-WakeOnLanTransmissionMethodType <WakeOnLanTransmissionMethodType>]
- [-RetryNumberOfSendingWakeupPacketTransmission <Int32>] [-SendingWakeupPacketTransmissionDelayMins <Int32>]
- [-MaximumNumberOfSendingWakeupPacketBeforePausing <Int32>] [-SendingWakeupPacketBeforePausingWaitSec <Int32>]
- [-ThreadNumberOfSendingWakeupPacket <Int32>] [-SendingWakeupPacketTransmissionOffsetMins <Int32>]
- [-AddClientRequestServiceType <ClientRequestServiceType>] [-PortForClientRequestServiceType <Int32>]
- [-RemoveClientRequestServiceType <ClientRequestServiceType>] [-UseCustomWebsite <Boolean>]
- [-MaximumConcurrentSendingForAllSite <Int32>] [-MaximumConcurrentSendingForPerSite <Int32>]
- [-RetryNumberForConcurrentSending <Int32>] [-ConcurrentSendingDelayBeforeRetryingMins <Int32>]
- [-AddActiveDirectoryForest <IResultObject[]>] [-RemoveActiveDirectoryForest <IResultObject[]>]
- [-ClientComputerCommunicationType <ClientComputerCommunicationType>] [-UseSmsGeneratedCert <Boolean>]
- [-UsePkiClientCertificate <Boolean>] [-ClientCertificateCustomStoreName <String>]
+Set-CMSite [-AddActiveDirectoryForest <IResultObject[]>] [-AddCertificateByPath <String[]>]
+ [-AddClientRequestServiceType <ClientRequestServiceType>] [-ClientCertificateCustomStoreName <String>]
  [-ClientCertificateSelectionCriteriaType <ClientCertificateSelectionCriteriaType>]
  [-ClientCertificateSelectionCriteriaValue <String>]
+ [-ClientCheckCertificateRevocationListForSiteSystem <Boolean>]
+ [-ClientComputerCommunicationType <ClientComputerCommunicationType>] [-Comment <String>]
+ [-ConcurrentSendingDelayBeforeRetryingMins <Int32>] [-EnableLowFreeSpaceAlert <Boolean>]
+ [-EnableWakeOnLan <Boolean>] [-FreeSpaceThresholdCriticalGB <Int32>] [-FreeSpaceThresholdWarningGB <Int32>]
+ [-MaximumConcurrentSendingForAllSite <Int32>] [-MaximumConcurrentSendingForPerSite <Int32>]
+ [-MaximumNumberOfSendingWakeupPacketBeforePausing <Int32>] -Name <String> [-PassThru]
+ [-PortForClientRequestServiceType <Int32>] [-PromotePassiveSiteToActive]
+ [-RemoveActiveDirectoryForest <IResultObject[]>] [-RemoveCertificateByKey <String[]>]
+ [-RemoveClientRequestServiceType <ClientRequestServiceType>] [-RequireSha256 <Boolean>]
+ [-RequireSigning <Boolean>] [-RetryInstallPassiveSite] [-RetryNumberForConcurrentSending <Int32>]
+ [-RetryNumberOfSendingWakeupPacketTransmission <Int32>] [-SendingWakeupPacketBeforePausingWaitSec <Int32>]
+ [-SendingWakeupPacketTransmissionDelayMins <Int32>] [-SendingWakeupPacketTransmissionOffsetMins <Int32>]
+ [-SiteSystemCollectionBehavior <CollectionBehaviorType>]
  [-TakeActionForMultipleCertificateMatchCriteria <TakeActionForMultipleCertificateMatchCriteria>]
- [-ClientCheckCertificateRevocationListForSiteSystem <Boolean>] [-AddCertificateByPath <String[]>]
- [-RemoveCertificateByKey <String[]>] [-EnableLowFreeSpaceAlert <Boolean>]
- [-FreeSpaceThresholdWarningGB <Int32>] [-FreeSpaceThresholdCriticalGB <Int32>] [-RequireSigning <Boolean>]
- [-RequireSha256 <Boolean>] [-UseEncryption <Boolean>] [-ThresholdOfSelectCollectionByDefault <Int32>]
- [-ThresholdOfSelectCollectionMax <Int32>] [-SiteSystemCollectionBehavior <CollectionBehaviorType>] [-PassThru]
- [-RetryInstallPassiveSite] [-PromotePassiveSiteToActive] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-ThreadNumberOfSendingWakeupPacket <Int32>] [-ThresholdOfSelectCollectionByDefault <Int32>]
+ [-ThresholdOfSelectCollectionMax <Int32>] [-UseCustomWebsite <Boolean>] [-UseEncryption <Boolean>]
+ [-UsePkiClientCertificate <Boolean>] [-UseSmsGeneratedCert <Boolean>]
+ [-WakeOnLanTransmissionMethodType <WakeOnLanTransmissionMethodType>] [-WakeOnLanType <WakeOnLanType>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetBySiteCodeMandatory
 ```
-Set-CMSite [-SiteCode <String>] [-Comment <String>] [-EnableWakeOnLan <Boolean>]
- [-WakeOnLanType <WakeOnLanType>] [-WakeOnLanTransmissionMethodType <WakeOnLanTransmissionMethodType>]
- [-RetryNumberOfSendingWakeupPacketTransmission <Int32>] [-SendingWakeupPacketTransmissionDelayMins <Int32>]
- [-MaximumNumberOfSendingWakeupPacketBeforePausing <Int32>] [-SendingWakeupPacketBeforePausingWaitSec <Int32>]
- [-ThreadNumberOfSendingWakeupPacket <Int32>] [-SendingWakeupPacketTransmissionOffsetMins <Int32>]
- [-AddClientRequestServiceType <ClientRequestServiceType>] [-PortForClientRequestServiceType <Int32>]
- [-RemoveClientRequestServiceType <ClientRequestServiceType>] [-UseCustomWebsite <Boolean>]
- [-MaximumConcurrentSendingForAllSite <Int32>] [-MaximumConcurrentSendingForPerSite <Int32>]
- [-RetryNumberForConcurrentSending <Int32>] [-ConcurrentSendingDelayBeforeRetryingMins <Int32>]
- [-AddActiveDirectoryForest <IResultObject[]>] [-RemoveActiveDirectoryForest <IResultObject[]>]
- [-ClientComputerCommunicationType <ClientComputerCommunicationType>] [-UseSmsGeneratedCert <Boolean>]
- [-UsePkiClientCertificate <Boolean>] [-ClientCertificateCustomStoreName <String>]
+Set-CMSite [-AddActiveDirectoryForest <IResultObject[]>] [-AddCertificateByPath <String[]>]
+ [-AddClientRequestServiceType <ClientRequestServiceType>] [-ClientCertificateCustomStoreName <String>]
  [-ClientCertificateSelectionCriteriaType <ClientCertificateSelectionCriteriaType>]
  [-ClientCertificateSelectionCriteriaValue <String>]
+ [-ClientCheckCertificateRevocationListForSiteSystem <Boolean>]
+ [-ClientComputerCommunicationType <ClientComputerCommunicationType>] [-Comment <String>]
+ [-ConcurrentSendingDelayBeforeRetryingMins <Int32>] [-EnableLowFreeSpaceAlert <Boolean>]
+ [-EnableWakeOnLan <Boolean>] [-FreeSpaceThresholdCriticalGB <Int32>] [-FreeSpaceThresholdWarningGB <Int32>]
+ [-MaximumConcurrentSendingForAllSite <Int32>] [-MaximumConcurrentSendingForPerSite <Int32>]
+ [-MaximumNumberOfSendingWakeupPacketBeforePausing <Int32>] [-PassThru]
+ [-PortForClientRequestServiceType <Int32>] [-PromotePassiveSiteToActive]
+ [-RemoveActiveDirectoryForest <IResultObject[]>] [-RemoveCertificateByKey <String[]>]
+ [-RemoveClientRequestServiceType <ClientRequestServiceType>] [-RequireSha256 <Boolean>]
+ [-RequireSigning <Boolean>] [-RetryInstallPassiveSite] [-RetryNumberForConcurrentSending <Int32>]
+ [-RetryNumberOfSendingWakeupPacketTransmission <Int32>] [-SendingWakeupPacketBeforePausingWaitSec <Int32>]
+ [-SendingWakeupPacketTransmissionDelayMins <Int32>] [-SendingWakeupPacketTransmissionOffsetMins <Int32>]
+ [-SiteCode <String>] [-SiteSystemCollectionBehavior <CollectionBehaviorType>]
  [-TakeActionForMultipleCertificateMatchCriteria <TakeActionForMultipleCertificateMatchCriteria>]
- [-ClientCheckCertificateRevocationListForSiteSystem <Boolean>] [-AddCertificateByPath <String[]>]
- [-RemoveCertificateByKey <String[]>] [-EnableLowFreeSpaceAlert <Boolean>]
- [-FreeSpaceThresholdWarningGB <Int32>] [-FreeSpaceThresholdCriticalGB <Int32>] [-RequireSigning <Boolean>]
- [-RequireSha256 <Boolean>] [-UseEncryption <Boolean>] [-ThresholdOfSelectCollectionByDefault <Int32>]
- [-ThresholdOfSelectCollectionMax <Int32>] [-SiteSystemCollectionBehavior <CollectionBehaviorType>] [-PassThru]
- [-RetryInstallPassiveSite] [-PromotePassiveSiteToActive] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-ThreadNumberOfSendingWakeupPacket <Int32>] [-ThresholdOfSelectCollectionByDefault <Int32>]
+ [-ThresholdOfSelectCollectionMax <Int32>] [-UseCustomWebsite <Boolean>] [-UseEncryption <Boolean>]
+ [-UsePkiClientCertificate <Boolean>] [-UseSmsGeneratedCert <Boolean>]
+ [-WakeOnLanTransmissionMethodType <WakeOnLanTransmissionMethodType>] [-WakeOnLanType <WakeOnLanType>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -711,7 +714,7 @@ Accept wildcard characters: False
 
 ### -SiteSystemCollectionBehavior
 
-For [deployment verification](https://docs.microsoft.com/mem/configmgr/core/servers/manage/settings-to-manage-high-risk-deployments), specify the behavior to take when the selected collection includes computers that host site systems roles.
+For [deployment verification](/mem/configmgr/core/servers/manage/settings-to-manage-high-risk-deployments), specify the behavior to take when the selected collection includes computers that host site systems roles.
 
 - `Block`: Don't create the deployment
 - `Warn`: Require verification before creating the deployment
@@ -764,7 +767,7 @@ Accept wildcard characters: False
 
 ### -ThresholdOfSelectCollectionByDefault
 
-For [deployment verification](https://docs.microsoft.com/mem/configmgr/core/servers/manage/settings-to-manage-high-risk-deployments), configure the default collection size limit. The **Select Collection** window hides collections with membership that exceeds this default value. Specify `0` to disable.
+For [deployment verification](/mem/configmgr/core/servers/manage/settings-to-manage-high-risk-deployments), configure the default collection size limit. The **Select Collection** window hides collections with membership that exceeds this default value. Specify `0` to disable.
 
 ```yaml
 Type: Int32
@@ -780,7 +783,7 @@ Accept wildcard characters: False
 
 ### -ThresholdOfSelectCollectionMax
 
-For [deployment verification](https://docs.microsoft.com/mem/configmgr/core/servers/manage/settings-to-manage-high-risk-deployments), configure the maximum collection size limit. The **Select Collection** window always hides collections that have more members than this maximum size. Specify `0` to disable.
+For [deployment verification](/mem/configmgr/core/servers/manage/settings-to-manage-high-risk-deployments), configure the maximum collection size limit. The **Select Collection** window always hides collections that have more members than this maximum size. Specify `0` to disable.
 
 ```yaml
 Type: Int32
@@ -844,7 +847,7 @@ Accept wildcard characters: False
 
 ### -UseSmsGeneratedCert
 
-Use this parameter to enable or disable the site property to **Use Configuration Manager-generated certificates for HTTP site systems**. For more information, see [Enhanced HTTP](https://docs.microsoft.com/mem/configmgr/core/plan-design/hierarchy/enhanced-http).
+Use this parameter to enable or disable the site property to **Use Configuration Manager-generated certificates for HTTP site systems**. For more information, see [Enhanced HTTP](/mem/configmgr/core/plan-design/hierarchy/enhanced-http).
 
 ```yaml
 Type: Boolean
@@ -909,7 +912,6 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -917,6 +919,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
 
 ## OUTPUTS
+
+###  
 
 ## NOTES
 

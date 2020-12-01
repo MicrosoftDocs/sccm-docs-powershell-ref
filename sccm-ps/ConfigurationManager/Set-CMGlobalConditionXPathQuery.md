@@ -17,15 +17,15 @@ Sets a XPath Query type global condition in Configuration Manager.
 
 ### SetQueryFromFile (Default)
 ```
-Set-CMGlobalConditionXPathQuery [-XmlFilePath <String>] [-IncludeSubfolder <Boolean>] [-Is64Bit <Boolean>]
- [-XPathQueryFilePath <String>] [-XmlNamespace <String[]>] -Name <String> [-PassThru]
+Set-CMGlobalConditionXPathQuery [-IncludeSubfolder <Boolean>] [-Is64Bit <Boolean>] [-XmlFilePath <String>]
+ [-XmlNamespace <String[]>] [-XPathQueryFilePath <String>] -Name <String> [-PassThru]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetQueryFromText
 ```
-Set-CMGlobalConditionXPathQuery [-XmlFilePath <String>] [-IncludeSubfolder <Boolean>] [-Is64Bit <Boolean>]
- [-XPathQuery <String>] [-XmlNamespace <String[]>] -Name <String> [-PassThru] [-DisableWildcardHandling]
+Set-CMGlobalConditionXPathQuery [-IncludeSubfolder <Boolean>] [-Is64Bit <Boolean>] [-XmlFilePath <String>]
+ [-XmlNamespace <String[]>] [-XPathQuery <String>] -Name <String> [-PassThru] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

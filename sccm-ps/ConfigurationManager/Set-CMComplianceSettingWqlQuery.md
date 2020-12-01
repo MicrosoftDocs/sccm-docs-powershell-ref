@@ -16,9 +16,9 @@ Sets a compliance setting wql query.
 
 ```
 Set-CMComplianceSettingWqlQuery [-ClassName <String>] [-Namespace <String>] [-Property <String>]
- [-WhereClause <String>] [-Description <String>] -InputObject <PSObject> -SettingName <String>
- [-NewSettingName <String>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+ [-WhereClause <String>] [-Description <String>] -InputObject <PSObject> [-NewSettingName <String>] [-PassThru]
+ -SettingName <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

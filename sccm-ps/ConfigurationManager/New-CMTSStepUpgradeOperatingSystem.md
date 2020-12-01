@@ -13,12 +13,12 @@ schema: 2.0.0
 ## SYNTAX
 
 ```
-New-CMTSStepUpgradeOperatingSystem [-UpgradePackage <IResultObject>] [-SourcePath <String>]
- [-EditionIndex <Int32>] [-ProductKey <String>] [-DriverPackage <IResultObject>] [-StagedContent <String>]
- [-SetupTimeout <Int32>] [-ScanOnly <Boolean>] [-IgnoreMessage <Boolean>]
- [-DynamicUpdateSetting <DynamicUpdateOption>] -Name <String> [-Description <String>] [-ContinueOnError]
- [-Disable] [-Condition <IResultObject[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+New-CMTSStepUpgradeOperatingSystem [-DriverPackage <IResultObject>]
+ [-DynamicUpdateSetting <DynamicUpdateOption>] [-EditionIndex <Int32>] [-IgnoreMessage <Boolean>]
+ [-ProductKey <String>] [-ScanOnly <Boolean>] [-SetupTimeout <Int32>] [-SourcePath <String>]
+ [-StagedContent <String>] [-UpgradePackage <IResultObject>] [-Condition <IResultObject[]>] [-ContinueOnError]
+ [-Description <String>] [-Disable] -Name <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

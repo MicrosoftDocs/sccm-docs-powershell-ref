@@ -1,4 +1,4 @@
----
+﻿---
 description: Gets a file replication route from Configuration Manager.
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,13 +16,13 @@ Gets a file replication route from Configuration Manager.
 
 ### SearchBySiteCode (Default)
 ```
-Get-CMFileReplicationRoute [-SourceSiteCode <String>] [-DestinationSiteCode <String>]
+Get-CMFileReplicationRoute [-DestinationSiteCode <String>] [-SourceSiteCode <String>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ### SearchBySiteName
 ```
-Get-CMFileReplicationRoute [-SourceSiteName <String>] [-DestinationSiteName <String>]
+Get-CMFileReplicationRoute [-DestinationSiteName <String>] [-SourceSiteName <String>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 

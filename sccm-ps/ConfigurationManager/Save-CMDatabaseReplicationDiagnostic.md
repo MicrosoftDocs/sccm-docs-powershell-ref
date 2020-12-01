@@ -15,8 +15,9 @@ Saves database replication diagnostic information for Configuration Manager in a
 ## SYNTAX
 
 ```
-Save-CMDatabaseReplicationDiagnostic [-SiteCode <String>] -ChildSiteCode <String> [-FileName <String>]
- [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Save-CMDatabaseReplicationDiagnostic -ChildSiteCode <String> [-FileName <String>] [-PassThru]
+ [-SiteCode <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

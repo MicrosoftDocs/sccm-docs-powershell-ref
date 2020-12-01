@@ -16,19 +16,19 @@ Sets a security scope.
 
 ### SetByValue (Default)
 ```
-Set-CMSecurityScope -InputObject <IResultObject> [-NewName <String>] [-Description <String>]
+Set-CMSecurityScope [-Description <String>] -InputObject <IResultObject> [-NewName <String>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetById
 ```
-Set-CMSecurityScope -Id <String> [-NewName <String>] [-Description <String>] [-DisableWildcardHandling]
+Set-CMSecurityScope [-Description <String>] -Id <String> [-NewName <String>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetByName
 ```
-Set-CMSecurityScope -Name <String> [-NewName <String>] [-Description <String>] [-DisableWildcardHandling]
+Set-CMSecurityScope [-Description <String>] -Name <String> [-NewName <String>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

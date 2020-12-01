@@ -1,4 +1,4 @@
----
+﻿---
 description: Gets Configuration Manager configuration items.
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 Module Name: ConfigurationManager
@@ -17,13 +17,13 @@ Gets Configuration Manager configuration items.
 
 ### SearchByName (Default)
 ```
-Get-CMConfigurationItem [[-Name] <String>] [-Fast] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Get-CMConfigurationItem [-Fast] [[-Name] <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory
 ```
-Get-CMConfigurationItem [-Id] <Int32> [-Fast] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Get-CMConfigurationItem [-Fast] [-Id] <Int32> [-DisableWildcardHandling] [-ForceWildcardHandling]
  [<CommonParameters>]
 ```
 
@@ -34,7 +34,7 @@ You can use this cmdlet to get items for other cmdlets to use.
 For instance, you might get configuration items so you can use the Set-CMConfigurationItem to change settings on them.
 
 Configuration items contain one or more settings, along with compliance rules.
-For more information about configuration items, see [Introduction to Compliance Settings in Configuration Manager](https://docs.microsoft.com/mem/configmgr/compliance/understand/ensure-device-compliance).
+For more information about configuration items, see [Introduction to Compliance Settings in Configuration Manager](/mem/configmgr/compliance/understand/ensure-device-compliance).
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.
@@ -166,7 +166,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Introduction to Compliance Settings in Configuration Manager](https://docs.microsoft.com/mem/configmgr/compliance/understand/ensure-device-compliance)
+[Introduction to Compliance Settings in Configuration Manager](/mem/configmgr/compliance/understand/ensure-device-compliance)
 
 [Get-CMConfigurationItemXMLDefinition](Get-CMConfigurationItemXMLDefinition.md)
 

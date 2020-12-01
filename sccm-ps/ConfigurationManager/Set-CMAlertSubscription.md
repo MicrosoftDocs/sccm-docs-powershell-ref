@@ -16,22 +16,23 @@ Changes the properties of an alert subscription.
 
 ### SetByValueMandatory (Default)
 ```
-Set-CMAlertSubscription -InputObject <IResultObject> [-NewName <String>] [-AlertId <Int32[]>]
- [-EmailAddress <String[]>] [-AddEmailAddress <String[]>] [-RemoveEmailAddress <String[]>] [-LocaleId <Int32>]
- [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMAlertSubscription [-AddEmailAddress <String[]>] [-AlertId <Int32[]>] [-EmailAddress <String[]>]
+ -InputObject <IResultObject> [-LocaleId <Int32>] [-NewName <String>] [-PassThru]
+ [-RemoveEmailAddress <String[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### SetById
 ```
-Set-CMAlertSubscription -Id <String> [-NewName <String>] [-AlertId <Int32[]>] [-EmailAddress <String[]>]
- [-AddEmailAddress <String[]>] [-RemoveEmailAddress <String[]>] [-LocaleId <Int32>] [-PassThru]
+Set-CMAlertSubscription [-AddEmailAddress <String[]>] [-AlertId <Int32[]>] [-EmailAddress <String[]>]
+ -Id <String> [-LocaleId <Int32>] [-NewName <String>] [-PassThru] [-RemoveEmailAddress <String[]>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetByName
 ```
-Set-CMAlertSubscription -Name <String> [-NewName <String>] [-AlertId <Int32[]>] [-EmailAddress <String[]>]
- [-AddEmailAddress <String[]>] [-RemoveEmailAddress <String[]>] [-LocaleId <Int32>] [-PassThru]
+Set-CMAlertSubscription [-AddEmailAddress <String[]>] [-AlertId <Int32[]>] [-EmailAddress <String[]>]
+ [-LocaleId <Int32>] -Name <String> [-NewName <String>] [-PassThru] [-RemoveEmailAddress <String[]>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -208,7 +209,7 @@ Accept wildcard characters: False
 
 ### -LocaleId
 Specifies a locale for alert messages.
-For more information and a list of locale identifiers, see [Appendix A: Product Behavior](https://docs.microsoft.com/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c).
+For more information and a list of locale identifiers, see [Appendix A: Product Behavior](/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c).
 
 ```yaml
 Type: Int32

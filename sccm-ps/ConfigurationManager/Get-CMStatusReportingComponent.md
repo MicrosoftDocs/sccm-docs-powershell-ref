@@ -1,4 +1,4 @@
----
+﻿---
 description: Gets an object representing a status reporting component.
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -15,7 +15,7 @@ Gets an object representing a status reporting component.
 ## SYNTAX
 
 ```
-Get-CMStatusReportingComponent [-SiteSystemServerName <String>] [-SiteCode <String>] [-DisableWildcardHandling]
+Get-CMStatusReportingComponent [-SiteCode <String>] [-SiteSystemServerName <String>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [<CommonParameters>]
 ```
 

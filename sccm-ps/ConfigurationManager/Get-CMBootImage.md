@@ -34,7 +34,7 @@ By default, Configuration Manager includes both x86 and x64 boot images.
 
 You must run the **Get-CMBootImage** cmdlet on the computer that is running the Systems Management Server (SMS) provider.
 The computer account of the computer that is running the SMS provider must have Read and Write access to the source package of the boot image.
-For more information about the SMS provider, see [Planning for the SMS Provider in Configuration Manager](https://docs.microsoft.com/mem/configmgr/core/plan-design/hierarchy/plan-for-the-sms-provider).
+For more information about the SMS provider, see [Planning for the SMS Provider in Configuration Manager](/mem/configmgr/core/plan-design/hierarchy/plan-for-the-sms-provider).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
@@ -121,7 +121,7 @@ Accept wildcard characters: False
 
 ### -Reload
 
-Applies to version 2006 and later. If the version of the Windows ADK components in the boot image are out of date, use this parameter to reload this boot image with the current Windows PE version from the Windows ADK. For more information on this process, see [Update distribution points with the boot image](https://docs.microsoft.com/mem/configmgr/osd/get-started/manage-boot-images#update-distribution-points-with-the-boot-image).
+Applies to version 2006 and later. If the version of the Windows ADK components in the boot image are out of date, use this parameter to reload this boot image with the current Windows PE version from the Windows ADK. For more information on this process, see [Update distribution points with the boot image](/mem/configmgr/osd/get-started/manage-boot-images#update-distribution-points-with-the-boot-image).
 
 ```yaml
 Type: SwitchParameter
@@ -152,7 +152,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Planning for the SMS Provider in Configuration Manager](https://docs.microsoft.com/mem/configmgr/core/plan-design/hierarchy/plan-for-the-sms-provider)
+[Planning for the SMS Provider in Configuration Manager](/mem/configmgr/core/plan-design/hierarchy/plan-for-the-sms-provider)
 
 [New-CMBootImage](New-CMBootImage.md)
 

@@ -16,13 +16,13 @@ Removes device affinity from a Configuration Manager user.
 
 ### RemoveDeviceAffinityByUserName (Default)
 ```
-Remove-CMDeviceAffinityFromUser -UserName <String[]> [-DeviceId <Int32[]>] [-DeviceName <String[]>] [-Force]
+Remove-CMDeviceAffinityFromUser [-DeviceId <Int32[]>] [-DeviceName <String[]>] [-Force] -UserName <String[]>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### RemoveDeviceAffinityByUserId
 ```
-Remove-CMDeviceAffinityFromUser -UserId <Int32> [-DeviceId <Int32[]>] [-DeviceName <String[]>] [-Force]
+Remove-CMDeviceAffinityFromUser [-DeviceId <Int32[]>] [-DeviceName <String[]>] [-Force] -UserId <Int32>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -33,7 +33,7 @@ Device affinity in Configuration Manager associates a user with one or more devi
 Instead of deploying applications to all the devices of a user, you deploy the application to the user and Configuration Manager automatically installs the application on all devices that are associated with that user.
 Device affinity removes the need for Configuration Manager to determine the names of all the devices of a user before you deploy applications for that user.
 
-For more information about user device affinity, see [How to Manage User Device Affinity in Configuration Manager](https://docs.microsoft.com/mem/configmgr/apps/deploy-use/link-users-and-devices-with-user-device-affinity).
+For more information about user device affinity, see [How to Manage User Device Affinity in Configuration Manager](/mem/configmgr/apps/deploy-use/link-users-and-devices-with-user-device-affinity).
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

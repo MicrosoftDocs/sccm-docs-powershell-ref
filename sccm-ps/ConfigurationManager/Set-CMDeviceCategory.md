@@ -18,15 +18,15 @@ Set-CMDeviceCategory -InputObject <IResultObject> [-NewName <String>] [-PassThru
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### SetByName
-```
-Set-CMDeviceCategory -Name <String> [-NewName <String>] [-PassThru] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
 ### SetById
 ```
 Set-CMDeviceCategory -Id <String> [-NewName <String>] [-PassThru] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SetByName
+```
+Set-CMDeviceCategory -Name <String> [-NewName <String>] [-PassThru] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

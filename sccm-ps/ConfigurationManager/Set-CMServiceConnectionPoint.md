@@ -16,15 +16,15 @@ Sets a service connection point.
 
 ### ByValue (Default)
 ```
-Set-CMServiceConnectionPoint [-Mode <ServiceConnectionPointMode>] -InputObject <IResultObject> [-PassThru]
+Set-CMServiceConnectionPoint -InputObject <IResultObject> [-Mode <ServiceConnectionPointMode>] [-PassThru]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByName
 ```
-Set-CMServiceConnectionPoint [-SiteCode <String>] [-SiteSystemServerName] <String>
- [-Mode <ServiceConnectionPointMode>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Set-CMServiceConnectionPoint [-Mode <ServiceConnectionPointMode>] [-PassThru] [-SiteCode <String>]
+ [-SiteSystemServerName] <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

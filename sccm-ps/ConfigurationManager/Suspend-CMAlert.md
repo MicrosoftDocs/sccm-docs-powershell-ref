@@ -16,19 +16,19 @@ Suspends monitoring alerts.
 
 ### SearchByValueMandatory (Default)
 ```
-Suspend-CMAlert -InputObject <IResultObject> [-Comment <String>] -SkipUntil <DateTime> [-PassThru]
+Suspend-CMAlert [-Comment <String>] -InputObject <IResultObject> [-PassThru] -SkipUntil <DateTime>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory
 ```
-Suspend-CMAlert -Id <String> [-Comment <String>] -SkipUntil <DateTime> [-PassThru] [-DisableWildcardHandling]
+Suspend-CMAlert [-Comment <String>] -Id <String> [-PassThru] -SkipUntil <DateTime> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByNameMandatory
 ```
-Suspend-CMAlert -Name <String> [-Comment <String>] -SkipUntil <DateTime> [-PassThru] [-DisableWildcardHandling]
+Suspend-CMAlert [-Comment <String>] -Name <String> [-PassThru] -SkipUntil <DateTime> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

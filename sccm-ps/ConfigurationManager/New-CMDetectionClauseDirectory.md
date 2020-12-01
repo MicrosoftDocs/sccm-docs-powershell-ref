@@ -1,4 +1,4 @@
----
+﻿---
 description: Creates a detection clause directory.
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 Module Name: ConfigurationManager
@@ -17,8 +17,8 @@ Creates a detection clause directory.
 ### Value
 ```
 New-CMDetectionClauseDirectory -DirectoryName <String> -PropertyType <FileFolderProperty>
- -ExpectedValue <String[]> -ExpressionOperator <RuleExpressionOperator> [-Is64Bit] -Path <String> [-Value]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
+ -ExpectedValue <String[]> -ExpressionOperator <FileFolderRuleExpressionOperator> [-Is64Bit] -Path <String>
+ [-Value] [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ### Existence
@@ -99,10 +99,10 @@ Accept wildcard characters: False
 
 ### -ExpressionOperator
 ```yaml
-Type: RuleExpressionOperator
+Type: FileFolderRuleExpressionOperator
 Parameter Sets: Value
 Aliases:
-Accepted values: IsEquals, NotEquals, GreaterThan, GreaterEquals, LessThan, LessEquals, Between, OneOf, NoneOf
+Accepted values: IsEquals, NotEquals, GreaterThan, LessThan, Between, GreaterEquals, LessEquals, OneOf, NoneOf
 
 Required: True
 Position: Named

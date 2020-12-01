@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 Module Name: ConfigurationManager
 online version:
@@ -13,9 +13,9 @@ schema: 2.0.0
 ## SYNTAX
 
 ```
-New-CMRequirementRuleRegistryKeyPermissionValue [-Exclusive <Boolean>]
- -ControlEntry <RegistryAccessControlEntry[]> [-InputObject] <IResultObject> [-DisableWildcardHandling]
- [-ForceWildcardHandling] [<CommonParameters>]
+New-CMRequirementRuleRegistryKeyPermissionValue -ControlEntry <RegistryAccessControlEntry[]>
+ [-Exclusive <Boolean>] [-InputObject] <IResultObject> [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

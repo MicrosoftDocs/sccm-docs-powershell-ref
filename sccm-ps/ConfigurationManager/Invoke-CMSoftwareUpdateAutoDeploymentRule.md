@@ -20,15 +20,15 @@ Invoke-CMSoftwareUpdateAutoDeploymentRule -Id <Int32[]> [-PassThru] [-DisableWil
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### SearchByNameMandatory
-```
-Invoke-CMSoftwareUpdateAutoDeploymentRule -Name <String> [-PassThru] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
 ### SearchByValueMandatory
 ```
 Invoke-CMSoftwareUpdateAutoDeploymentRule -InputObject <IResultObject> [-PassThru] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SearchByNameMandatory
+```
+Invoke-CMSoftwareUpdateAutoDeploymentRule -Name <String> [-PassThru] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

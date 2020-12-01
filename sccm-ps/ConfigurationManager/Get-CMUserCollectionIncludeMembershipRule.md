@@ -73,7 +73,7 @@ The **Get-CMUserCollectionIncludeMembershipRule** cmdlet retrieves rules that in
 You can specify the user collections where the rule is applied by using their names, IDs, or by specifying an object that represents the collections.
 
 Configuration Manager dynamically updates the membership of the user collection if the membership of the included collection changes.
-For more information about membership rules, see [Introduction to Collections in Configuration Manager](https://docs.microsoft.com/mem/configmgr/core/clients/manage/collections/introduction-to-collections).
+For more information about membership rules, see [Introduction to Collections in Configuration Manager](/mem/configmgr/core/clients/manage/collections/introduction-to-collections).
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

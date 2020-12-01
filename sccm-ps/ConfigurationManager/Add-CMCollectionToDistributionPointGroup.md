@@ -20,6 +20,24 @@ Add-CMCollectionToDistributionPointGroup -CollectionId <String> -DistributionPoi
  [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
+### AddByObject_Id
+```
+Add-CMCollectionToDistributionPointGroup -Collection <IResultObject> -DistributionPointGroupId <String>
+ [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### AddByObject_Name
+```
+Add-CMCollectionToDistributionPointGroup -Collection <IResultObject> -DistributionPointGroupName <String>
+ [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### AddByObject_Object
+```
+Add-CMCollectionToDistributionPointGroup -Collection <IResultObject> -DistributionPointGroup <IResultObject>
+ [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
 ### AddById_Id
 ```
 Add-CMCollectionToDistributionPointGroup -CollectionId <String> -DistributionPointGroupId <String> [-PassThru]
@@ -47,24 +65,6 @@ Add-CMCollectionToDistributionPointGroup -CollectionName <String> -DistributionP
 ### AddByName_Object
 ```
 Add-CMCollectionToDistributionPointGroup -CollectionName <String> -DistributionPointGroup <IResultObject>
- [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### AddByObject_Id
-```
-Add-CMCollectionToDistributionPointGroup -Collection <IResultObject> -DistributionPointGroupId <String>
- [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### AddByObject_Name
-```
-Add-CMCollectionToDistributionPointGroup -Collection <IResultObject> -DistributionPointGroupName <String>
- [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### AddByObject_Object
-```
-Add-CMCollectionToDistributionPointGroup -Collection <IResultObject> -DistributionPointGroup <IResultObject>
  [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -156,7 +156,7 @@ Accept wildcard characters: False
 ### -DistributionPointGroup
 ```yaml
 Type: IResultObject
-Parameter Sets: AddById_Object, AddByName_Object, AddByObject_Object
+Parameter Sets: AddById_Object, AddByObject_Object, AddByName_Object
 Aliases:
 
 Required: True
@@ -169,7 +169,7 @@ Accept wildcard characters: False
 ### -DistributionPointGroupId
 ```yaml
 Type: String
-Parameter Sets: AddById_Id, AddByName_Id, AddByObject_Id
+Parameter Sets: AddByObject_Id, AddById_Id, AddByName_Id
 Aliases:
 
 Required: True
@@ -182,7 +182,7 @@ Accept wildcard characters: False
 ### -DistributionPointGroupName
 ```yaml
 Type: String
-Parameter Sets: AddById_Name, AddByName_Name, AddByObject_Name
+Parameter Sets: AddByObject_Name, AddById_Name, AddByName_Name
 Aliases:
 
 Required: True

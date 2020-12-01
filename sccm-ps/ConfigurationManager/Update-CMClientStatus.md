@@ -128,7 +128,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[About Client Settings in Configuration Manager](https://docs.microsoft.com/mem/configmgr/core/clients/deploy/about-client-settings)
+[About Client Settings in Configuration Manager](/mem/configmgr/core/clients/deploy/about-client-settings)
 
 [Get-CMClientStatusSetting](Get-CMClientStatusSetting.md)
 

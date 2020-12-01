@@ -22,13 +22,13 @@ Disable-CMProgram -InputObject <IResultObject> [-PassThru] [-DisableWildcardHand
 
 ### SearchByIdAndNameMandatory
 ```
-Disable-CMProgram -PackageId <String> -ProgramName <String> [-PassThru] [-DisableWildcardHandling]
+Disable-CMProgram -PackageId <String> [-PassThru] -ProgramName <String> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByNameAndNameMandatory
 ```
-Disable-CMProgram -PackageName <String> -ProgramName <String> [-PassThru] [-DisableWildcardHandling]
+Disable-CMProgram -PackageName <String> [-PassThru] -ProgramName <String> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

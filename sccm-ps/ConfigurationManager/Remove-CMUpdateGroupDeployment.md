@@ -16,29 +16,29 @@ Removes an update group deployment.
 
 ### SearchByValue (Default)
 ```
-Remove-CMUpdateGroupDeployment -InputObject <IResultObject> [-Force] [-CollectionName <String>]
- [-CollectionId <String>] [-Collection <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### SearchByName
-```
-Remove-CMUpdateGroupDeployment [-Name <String>] [-DeploymentName <String>] [-Force] [-CollectionName <String>]
- [-CollectionId <String>] [-Collection <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### SearchBySmsObjectId
-```
-Remove-CMUpdateGroupDeployment [-SmsObjectId <Int32>] [-Force] [-CollectionName <String>]
- [-CollectionId <String>] [-Collection <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Remove-CMUpdateGroupDeployment -InputObject <IResultObject> [-Force] [-Collection <IResultObject>]
+ [-CollectionId <String>] [-CollectionName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByDeploymentId
 ```
-Remove-CMUpdateGroupDeployment [-DeploymentId <String>] [-Force] [-CollectionName <String>]
- [-CollectionId <String>] [-Collection <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Remove-CMUpdateGroupDeployment [-DeploymentId <String>] [-Force] [-Collection <IResultObject>]
+ [-CollectionId <String>] [-CollectionName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SearchByName
+```
+Remove-CMUpdateGroupDeployment [-DeploymentName <String>] [-Name <String>] [-Force]
+ [-Collection <IResultObject>] [-CollectionId <String>] [-CollectionName <String>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SearchBySmsObjectId
+```
+Remove-CMUpdateGroupDeployment [-SmsObjectId <Int32>] [-Force] [-Collection <IResultObject>]
+ [-CollectionId <String>] [-CollectionName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

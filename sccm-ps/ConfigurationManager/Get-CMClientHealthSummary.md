@@ -1,4 +1,4 @@
----
+﻿---
 description: Gets a client health summary.
 external help file: AdminUI.PS.ClientStatus.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,19 +16,19 @@ Gets a client health summary.
 
 ### SetById
 ```
-Get-CMClientHealthSummary -CollectionId <String> [-StartDate <DateTime>] [-EndDate <DateTime>]
+Get-CMClientHealthSummary -CollectionId <String> [-EndDate <DateTime>] [-StartDate <DateTime>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ### SetByName
 ```
-Get-CMClientHealthSummary -CollectionName <String> [-StartDate <DateTime>] [-EndDate <DateTime>]
+Get-CMClientHealthSummary -CollectionName <String> [-EndDate <DateTime>] [-StartDate <DateTime>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ### SetByValue
 ```
-Get-CMClientHealthSummary -InputObject <IResultObject> [-StartDate <DateTime>] [-EndDate <DateTime>]
+Get-CMClientHealthSummary [-EndDate <DateTime>] -InputObject <IResultObject> [-StartDate <DateTime>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 

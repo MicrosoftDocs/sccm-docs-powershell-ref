@@ -16,23 +16,24 @@ Sets a migration job.
 
 ### SetByValue (Default)
 ```
-Set-CMMigrationJob -InputObject <IResultObject> [-NewName <String>] [-Description <String>]
- [-UtcTime <Boolean>] [-MigrationJobSchedule <DateTime>] [-OverwriteAllObject <Boolean>]
- [-MigrateWithFolder <Boolean>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
-```
-
-### SetByName
-```
-Set-CMMigrationJob -Name <String> [-NewName <String>] [-Description <String>] [-UtcTime <Boolean>]
- [-MigrationJobSchedule <DateTime>] [-OverwriteAllObject <Boolean>] [-MigrateWithFolder <Boolean>] [-PassThru]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMMigrationJob [-Description <String>] -InputObject <IResultObject> [-MigrateWithFolder <Boolean>]
+ [-MigrationJobSchedule <DateTime>] [-NewName <String>] [-OverwriteAllObject <Boolean>] [-PassThru]
+ [-UtcTime <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### SetById
 ```
-Set-CMMigrationJob -Id <Int32> [-NewName <String>] [-Description <String>] [-UtcTime <Boolean>]
- [-MigrationJobSchedule <DateTime>] [-OverwriteAllObject <Boolean>] [-MigrateWithFolder <Boolean>] [-PassThru]
+Set-CMMigrationJob [-Description <String>] -Id <Int32> [-MigrateWithFolder <Boolean>]
+ [-MigrationJobSchedule <DateTime>] [-NewName <String>] [-OverwriteAllObject <Boolean>] [-PassThru]
+ [-UtcTime <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### SetByName
+```
+Set-CMMigrationJob [-Description <String>] [-MigrateWithFolder <Boolean>] [-MigrationJobSchedule <DateTime>]
+ -Name <String> [-NewName <String>] [-OverwriteAllObject <Boolean>] [-PassThru] [-UtcTime <Boolean>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

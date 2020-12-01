@@ -16,37 +16,37 @@ Adds a direct membership rule to one or more Configuration Manager user collecti
 
 ### ByCollectionValueAndResourceValue (Default)
 ```
-Add-CMUserCollectionDirectMembershipRule -InputObject <IResultObject> -Resource <IResultObject[]> [-PassThru]
+Add-CMUserCollectionDirectMembershipRule -InputObject <IResultObject> [-PassThru] -Resource <IResultObject[]>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByCollectionIdAndResourceId
 ```
-Add-CMUserCollectionDirectMembershipRule -CollectionId <String> -ResourceId <Int32[]> [-PassThru]
+Add-CMUserCollectionDirectMembershipRule -CollectionId <String> [-PassThru] -ResourceId <Int32[]>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByCollectionIdAndResourceValue
 ```
-Add-CMUserCollectionDirectMembershipRule -CollectionId <String> -Resource <IResultObject[]> [-PassThru]
+Add-CMUserCollectionDirectMembershipRule -CollectionId <String> [-PassThru] -Resource <IResultObject[]>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByCollectionNameAndResourceId
 ```
-Add-CMUserCollectionDirectMembershipRule -CollectionName <String> -ResourceId <Int32[]> [-PassThru]
+Add-CMUserCollectionDirectMembershipRule -CollectionName <String> [-PassThru] -ResourceId <Int32[]>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByCollectionNameAndResourceValue
 ```
-Add-CMUserCollectionDirectMembershipRule -CollectionName <String> -Resource <IResultObject[]> [-PassThru]
+Add-CMUserCollectionDirectMembershipRule -CollectionName <String> [-PassThru] -Resource <IResultObject[]>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByCollectionValueAndResourceId
 ```
-Add-CMUserCollectionDirectMembershipRule -InputObject <IResultObject> -ResourceId <Int32[]> [-PassThru]
+Add-CMUserCollectionDirectMembershipRule -InputObject <IResultObject> [-PassThru] -ResourceId <Int32[]>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -55,7 +55,7 @@ The **Add-CMUserCollectionDirectMembershipRule** cmdlet adds a rule that adds a 
 You can specify the user collections by using their names, IDs, or by specifying an object that represents the collections.
 
 A direct rule lets you explicitly choose the members of the user collection.
-For more information on collection rules in Configuration Manager, see [Introduction to Collections in Configuration Manager](https://docs.microsoft.com/mem/configmgr/core/clients/manage/collections/introduction-to-collections).
+For more information on collection rules in Configuration Manager, see [Introduction to Collections in Configuration Manager](/mem/configmgr/core/clients/manage/collections/introduction-to-collections).
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

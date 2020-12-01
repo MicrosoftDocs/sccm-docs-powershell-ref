@@ -16,7 +16,7 @@ Modifies Configuration Manager boundary settings.
 
 ### SetByValue (Default)
 ```
-Set-CMBoundary [-NewName <String>] -InputObject <IResultObject> [-NewType <BoundaryTypes>] [-NewValue <String>]
+Set-CMBoundary -InputObject <IResultObject> [-NewName <String>] [-NewType <BoundaryTypes>] [-NewValue <String>]
  [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -28,8 +28,8 @@ Set-CMBoundary -Id <String> [-NewName <String>] [-NewType <BoundaryTypes>] [-New
 
 ### SetByName
 ```
-Set-CMBoundary [-NewName <String>] -Type <BoundaryTypes> -Value <String> [-NewType <BoundaryTypes>]
- [-NewValue <String>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+Set-CMBoundary [-NewName <String>] [-NewType <BoundaryTypes>] [-NewValue <String>] [-PassThru]
+ -Type <BoundaryTypes> -Value <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 

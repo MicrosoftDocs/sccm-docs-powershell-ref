@@ -2,7 +2,7 @@
 description: Change client settings for Configuration Manager devices and users.
 external help file: AdminUI.PS.ClientSettings.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 07/31/2020
+ms.date: 11/20/2020
 schema: 2.0.0
 title: Set-CMClientSetting
 ---
@@ -17,86 +17,145 @@ Change client settings for Configuration Manager devices and users.
 
 ### SetByName (Default)
 ```
-Set-CMClientSetting -Name <String> [-NewName <String>] [-Description <String>] [-Priority <PriorityChangeType>]
- [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMClientSetting [-Description <String>] -Name <String> [-NewName <String>] [-PassThru]
+ [-Priority <PriorityChangeType>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
-### SetEndpointProtectionSettingsByName
+### SetRemoteToolsSettingsByName
 ```
-Set-CMClientSetting [-Enable <Boolean>] -Name <String> [-EndpointProtection]
- [-InstallEndpointProtectionClient <Boolean>] [-RemoveThirdParty <Boolean>] [-SuppressReboot <Boolean>]
- [-ForceRebootHr <Int32>] [-DisableFirstSignatureUpdate <Boolean>] [-PassThru] [-DisableWildcardHandling]
+Set-CMClientSetting [-AccessLevel <AccessLevelType>] [-AllowClientChange <Boolean>]
+ [-AllowPermittedViewer <Boolean>] [-AllowRemoteControlOfUnattendedComputer <Boolean>]
+ [-AudibleSignal <AudibleSignalType>] [-FirewallExceptionProfile <FirewallExceptionProfileType[]>]
+ [-GrantRemoteControlPermissionToLocalAdministrator <Boolean>] [-ManageRemoteDesktopSetting <Boolean>]
+ [-ManageSolicitedRemoteAssistance <Boolean>] [-ManageUnsolicitedRemoteAssistance <Boolean>] -Name <String>
+ [-PassThru] [-PermittedViewer <String[]>] [-PromptUserForPermission <Boolean>]
+ [-RemoteAssistanceAccessLevel <RemoteAssistanceAccessLevelType>] [-RemoteControl]
+ [-RequireAuthentication <Boolean>] [-ShowNotificationIconOnTaskbar <Boolean>]
+ [-ShowSessionConnectionBar <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### SetComputerAgentSettingsByName
+```
+Set-CMClientSetting [-AddPortalToTrustedSiteList <Boolean>] [-AllowPortalToHaveElevatedTrust <Boolean>]
+ [-ApplicationCatalogWebsitePointServerName <String>] [-BrandingTitle <String>] [-ComputerAgent]
+ [-DisplayNewProgramNotification <Boolean>]
+ [-EnableThirdPartyOrchestration <EnableThirdPartyOrchestrationType>] [-FinalReminderMins <Int32>]
+ [-InitialReminderHours <Int32>] [-InstallRestriction <InstallRestrictionType>] [-InterimReminderHours <Int32>]
+ -Name <String> [-PassThru] [-PortalUrl <String>] [-PowerShellExecutionPolicy <PowerShellExecutionPolicyType>]
+ [-SelectApplicationCatalogWebsitePoint <ApplicationCatalogWebsitePointType>]
+ [-SuspendBitLocker <SuspendBitLockerType>] [-UseNewSoftwareCenter <Boolean>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SetCloudSettingsByName
+```
+Set-CMClientSetting [-AllowCloudDistributionPoint <Boolean>] [-CloudService] -Name <String> [-PassThru]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SetUserDeviceAffinitySettingsByName
+```
+Set-CMClientSetting [-AllowUserAffinity <Boolean>] [-AutoApproveAffinity <Boolean>]
+ [-LogOnThresholdMins <Int32>] -Name <String> [-PassThru] [-UsageThresholdDays <Int32>] [-UserDeviceAffinity]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetPowerManagementSettingsByName
 ```
-Set-CMClientSetting [-Enable <Boolean>] -Name <String> [-PowerManagement]
- [-AllowUserToOptOutFromPowerPlan <Boolean>] [-EnableWakeupProxy <Boolean>] [-WakeupProxyPort <Int32>]
- [-WakeOnLanPort <Int32>] [-FirewallExceptionForWakeupProxy <WakeUpProxyFirewallExceptionTypes>]
- [-WakeupProxyDirectAccessPrefix <String>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### SetHardwareInventorySettingsByName
-```
-Set-CMClientSetting [-Enable <Boolean>] [-Schedule <IResultObject>] -Name <String> [-HardwareInventory]
- [-InventoryReportId <String>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
-```
-
-### SetMobileDeviceSettingsByName
-```
-Set-CMClientSetting [-Enable <Boolean>] -Name <String> [-Enrollment] [-EnrollmentProfileName <String>]
- [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### SetNetworkAccessProtectionSettingsByName
-```
-Set-CMClientSetting [-Enable <Boolean>] [-Schedule <IResultObject>] -Name <String> [-NetworkAccessProtection]
- [-UseUtcForEvaluationTime <Boolean>] [-ForceScan <Boolean>] [-PassThru] [-DisableWildcardHandling]
+Set-CMClientSetting [-AllowUserToOptOutFromPowerPlan <Boolean>] [-Enable <Boolean>]
+ [-EnableWakeupProxy <Boolean>] [-FirewallExceptionForWakeupProxy <WakeUpProxyFirewallExceptionTypes>]
+ -Name <String> [-PassThru] [-PowerManagement] [-WakeOnLanPort <Int32>]
+ [-WakeupProxyDirectAccessPrefix <String>] [-WakeupProxyPort <Int32>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### SetSoftwareMeteringSettingsByName
-```
-Set-CMClientSetting [-Enable <Boolean>] [-Schedule <IResultObject>] -Name <String> [-SoftwareMetering]
- [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetSoftwareUpdatesSettingsByName
 ```
-Set-CMClientSetting [-Enable <Boolean>] -Name <String> [-SoftwareUpdate] [-ScanSchedule <IResultObject>]
- [-DeploymentEvaluationSchedule <IResultObject>] [-BatchingTimeout <Int32>] [-EnforceMandatory <Boolean>]
- [-TimeUnit <BatchingTimeoutType>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Set-CMClientSetting [-BatchingTimeout <Int32>] [-DeploymentEvaluationSchedule <IResultObject>]
+ [-Enable <Boolean>] [-EnforceMandatory <Boolean>] -Name <String> [-PassThru] [-ScanSchedule <IResultObject>]
+ [-SoftwareUpdate] [-TimeUnit <BatchingTimeoutType>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### SetSoftwareInventorySettingsByName
+### SetBackgroundIntelligentTransferSettingsByName
 ```
-Set-CMClientSetting [-Enable <Boolean>] [-Schedule <IResultObject>] -Name <String> [-SoftwareInventory]
- [-SoftwareInventoryFileName <String>] [-SoftwareInventoryFileDisplayName <String>]
- [-SoftwareInventoryFileInventoriedName <String>] [-PassThru] [-DisableWildcardHandling]
+Set-CMClientSetting [-Bits] [-EnableBitsMaxBandwidth <Boolean>] [-EnableDownloadOffSchedule <Boolean>]
+ [-MaxBandwidthBeginHr <Int32>] [-MaxBandwidthEndHr <Int32>] [-MaxTransferRateOffSchedule <Int32>]
+ [-MaxTransferRateOnSchedule <Int32>] -Name <String> [-PassThru] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### SetSoftwareDeploymentSettingsByName
+### SetClientPolicySettingsByName
 ```
-Set-CMClientSetting [-Schedule <IResultObject>] -Name <String> [-SoftwareDeployment] [-PassThru]
+Set-CMClientSetting [-ClientPolicy] [-EnableUserPolicy <Boolean>] [-EnableUserPolicyOnInternet <Boolean>]
+ [-EnableUserPolicyOnTS <Boolean>] -Name <String> [-PassThru] [-PolicyPollingMins <Int32>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetComplianceSettingsByName
 ```
-Set-CMClientSetting [-Schedule <IResultObject>] -Name <String> [-Compliance]
- [-EnableComplianceEvaluation <Boolean>] [-EnableUserDataAndProfile <Boolean>] [-PassThru]
+Set-CMClientSetting [-Compliance] [-EnableComplianceEvaluation <Boolean>] [-EnableUserDataAndProfile <Boolean>]
+ -Name <String> [-PassThru] [-Schedule <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SetComputerRestartSettingsByName
+```
+Set-CMClientSetting [-ComputerRestart] -Name <String> [-PassThru]
+ [-RebootLogoffNotificationCountdownMins <Int32>] [-RebootLogoffNotificationFinalWindowMins <Int32>]
+ [-ReplaceToastNotificationWithDialog <Boolean>] [-NoRebootEnforcement <Boolean>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SetEndpointProtectionSettingsByName
+```
+Set-CMClientSetting [-DisableFirstSignatureUpdate <Boolean>] [-Enable <Boolean>] [-EndpointProtection]
+ [-ForceRebootHr <Int32>] [-InstallEndpointProtectionClient <Boolean>] -Name <String> [-PassThru]
+ [-RemoveThirdParty <Boolean>] [-SuppressReboot <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SetHardwareInventorySettingsByName
+```
+Set-CMClientSetting [-Enable <Boolean>] [-HardwareInventory] [-InventoryReportId <String>] -Name <String>
+ [-PassThru] [-Schedule <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
+```
+
+### SetMobileDeviceSettingsByName
+```
+Set-CMClientSetting [-Enable <Boolean>] [-Enrollment] [-EnrollmentProfileName <String>] -Name <String>
+ [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SetNetworkAccessProtectionSettingsByName
+```
+Set-CMClientSetting [-Enable <Boolean>] [-ForceScan <Boolean>] -Name <String> [-NetworkAccessProtection]
+ [-PassThru] [-Schedule <IResultObject>] [-UseUtcForEvaluationTime <Boolean>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SetSoftwareMeteringSettingsByName
+```
+Set-CMClientSetting [-Enable <Boolean>] -Name <String> [-PassThru] [-Schedule <IResultObject>]
+ [-SoftwareMetering] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### SetSoftwareInventorySettingsByName
+```
+Set-CMClientSetting [-Enable <Boolean>] -Name <String> [-PassThru] [-Schedule <IResultObject>]
+ [-SoftwareInventory] [-SoftwareInventoryFileDisplayName <String>]
+ [-SoftwareInventoryFileInventoriedName <String>] [-SoftwareInventoryFileName <String>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### SetCloudSettingsByName
+### SetMeteredNetworksSettingsByName
 ```
-Set-CMClientSetting -Name <String> [-CloudService] [-AllowCloudDistributionPoint <Boolean>] [-PassThru]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMClientSetting [-MeteredNetwork] [-MeteredNetworkUsage <MeteredNetworkUsageType>] -Name <String>
+ [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetSecurityScopeByName
@@ -107,76 +166,22 @@ Set-CMClientSetting -Name <String> [-PassThru] [-DisableWildcardHandling] [-Forc
 
 ### SetStateMessagingSettingsByName
 ```
-Set-CMClientSetting -Name <String> [-StateMessage] [-ReportingCycleMins <Int32>] [-PassThru]
+Set-CMClientSetting -Name <String> [-PassThru] [-ReportingCycleMins <Int32>] [-StateMessage]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### SetUserDeviceAffinitySettingsByName
+### SetSoftwareDeploymentSettingsByName
 ```
-Set-CMClientSetting -Name <String> [-UserDeviceAffinity] [-LogOnThresholdMins <Int32>]
- [-UsageThresholdDays <Int32>] [-AutoApproveAffinity <Boolean>] [-AllowUserAffinity <Boolean>] [-PassThru]
+Set-CMClientSetting -Name <String> [-PassThru] [-Schedule <IResultObject>] [-SoftwareDeployment]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### SetBackgroundIntelligentTransferSettingsByName
-```
-Set-CMClientSetting -Name <String> [-Bits] [-EnableBitsMaxBandwidth <Boolean>] [-MaxBandwidthBeginHr <Int32>]
- [-MaxBandwidthEndHr <Int32>] [-MaxTransferRateOnSchedule <Int32>] [-EnableDownloadOffSchedule <Boolean>]
- [-MaxTransferRateOffSchedule <Int32>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### SetClientPolicySettingsByName
-```
-Set-CMClientSetting -Name <String> [-ClientPolicy] [-PolicyPollingMins <Int32>] [-EnableUserPolicy <Boolean>]
- [-EnableUserPolicyOnInternet <Boolean>] [-EnableUserPolicyOnTS <Boolean>] [-PassThru]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### SetComputerAgentSettingsByName
-```
-Set-CMClientSetting -Name <String> [-ComputerAgent] [-InitialReminderHours <Int32>]
- [-InterimReminderHours <Int32>] [-FinalReminderMins <Int32>] [-PortalUrl <String>]
- [-AddPortalToTrustedSiteList <Boolean>] [-AllowPortalToHaveElevatedTrust <Boolean>]
- [-SelectApplicationCatalogWebsitePoint <ApplicationCatalogWebsitePointType>]
- [-ApplicationCatalogWebsitePointServerName <String>] [-BrandingTitle <String>]
- [-UseNewSoftwareCenter <Boolean>] [-InstallRestriction <InstallRestrictionType>]
- [-SuspendBitLocker <SuspendBitLockerType>]
- [-EnableThirdPartyOrchestration <EnableThirdPartyOrchestrationType>]
- [-PowerShellExecutionPolicy <PowerShellExecutionPolicyType>] [-DisplayNewProgramNotification <Boolean>]
- [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### SetComputerRestartSettingsByName
-```
-Set-CMClientSetting -Name <String> [-ComputerRestart] [-RebootLogoffNotificationCountdownMins <Int32>]
- [-RebootLogoffNotificationFinalWindowMins <Int32>] [-ReplaceToastNotificationWithDialog <Boolean>]
- [-NoRebootEnforcement <Boolean>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
-```
-
-### SetMeteredNetworksSettingsByName
-```
-Set-CMClientSetting -Name <String> [-MeteredNetwork] [-MeteredNetworkUsage <MeteredNetworkUsageType>]
- [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### SetRemoteToolsSettingsByName
-```
-Set-CMClientSetting -Name <String> [-RemoteControl]
- [-FirewallExceptionProfile <FirewallExceptionProfileType[]>] [-AllowClientChange <Boolean>]
- [-AllowRemoteControlOfUnattendedComputer <Boolean>] [-PromptUserForPermission <Boolean>]
- [-GrantRemoteControlPermissionToLocalAdministrator <Boolean>] [-AccessLevel <AccessLevelType>]
- [-PermittedViewer <String[]>] [-ShowNotificationIconOnTaskbar <Boolean>] [-ShowSessionConnectionBar <Boolean>]
- [-AudibleSignal <AudibleSignalType>] [-ManageUnsolicitedRemoteAssistance <Boolean>]
- [-ManageSolicitedRemoteAssistance <Boolean>] [-RemoteAssistanceAccessLevel <RemoteAssistanceAccessLevelType>]
- [-ManageRemoteDesktopSetting <Boolean>] [-AllowPermittedViewer <Boolean>] [-RequireAuthentication <Boolean>]
- [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-The **Set-CMClientSetting** cmdlet changes client settings for Configuration Manager devices and users. Configuration Manager provides default values for all client settings, but you can use this cmdlet to modify settings objects. Settings objects determine settings for individual clients. For more information, see [About client settings](https://docs.microsoft.com/mem/configmgr/core/clients/deploy/about-client-settings).
+The **Set-CMClientSetting** cmdlet changes client settings for Configuration Manager devices and users. Configuration Manager provides default values for all client settings, but you can use this cmdlet to modify settings objects. Settings objects determine settings for individual clients. For more information, see [About client settings](/mem/configmgr/core/clients/deploy/about-client-settings).
+
+> [!IMPORTANT]
+> Starting in version 2010, this cmdlet is deprecated. Use one of the cmdlets specific to the client settings group, listed in the [Related links](#related-links).
 
 To modify a client setting, specify it by name.
 
@@ -690,7 +695,7 @@ Indicates whether to enable client settings.
 
 ```yaml
 Type: Boolean
-Parameter Sets: SetEndpointProtectionSettingsByName, SetPowerManagementSettingsByName, SetHardwareInventorySettingsByName, SetMobileDeviceSettingsByName, SetNetworkAccessProtectionSettingsByName, SetSoftwareMeteringSettingsByName, SetSoftwareUpdatesSettingsByName, SetSoftwareInventorySettingsByName
+Parameter Sets: SetPowerManagementSettingsByName, SetSoftwareUpdatesSettingsByName, SetEndpointProtectionSettingsByName, SetHardwareInventorySettingsByName, SetMobileDeviceSettingsByName, SetNetworkAccessProtectionSettingsByName, SetSoftwareMeteringSettingsByName, SetSoftwareInventorySettingsByName
 Aliases: EnableEndpointProtection, EnablePowerManagement, EnableHardwareInventory, EnableDeviceEnrollment, EnableNetworkAccessProtection, EnableSoftwareMetering, EnableSoftwareUpdatesOnClient, EnableSoftwareInventory
 
 Required: False
@@ -1283,7 +1288,7 @@ Accept wildcard characters: False
 
 ### -NoRebootEnforcement
 
-Applies to version 2006 and later. Configure the client setting **Configuration Manager can force a device to restart** to prevent devices from automatically restarting when a deployment requires it. By default, Configuration Manager can still force devices to restart. For more information, see [device restart notifications](https://docs.microsoft.com/mem/configmgr/core/clients/deploy/device-restart-notifications).
+Applies to version 2006 and later. Configure the client setting **Configuration Manager can force a device to restart** to prevent devices from automatically restarting when a deployment requires it. By default, Configuration Manager can still force devices to restart. For more information, see [device restart notifications](/mem/configmgr/core/clients/deploy/device-restart-notifications).
 
 ```yaml
 Type: Boolean
@@ -1568,7 +1573,7 @@ To create a **CMSchedule** object, use the [New-CMSchedule](New-CMSchedule.md) c
 
 ```yaml
 Type: IResultObject
-Parameter Sets: SetHardwareInventorySettingsByName, SetNetworkAccessProtectionSettingsByName, SetSoftwareMeteringSettingsByName, SetSoftwareInventorySettingsByName, SetSoftwareDeploymentSettingsByName, SetComplianceSettingsByName
+Parameter Sets: SetComplianceSettingsByName, SetHardwareInventorySettingsByName, SetNetworkAccessProtectionSettingsByName, SetSoftwareMeteringSettingsByName, SetSoftwareInventorySettingsByName, SetSoftwareDeploymentSettingsByName
 Aliases: InventorySchedule, NapEvaluationSchedule, EvaluationSchedule, DataCollectionSchedule, SoftwareInventorySchedule
 
 Required: False
@@ -1912,11 +1917,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
+
+Starting in version 2010, this cmdlet is deprecated. Use one of the cmdlets specific to the client settings group, listed in the [Related links](#related-links).
 
 ## RELATED LINKS
 
-[About client settings](https://docs.microsoft.com/mem/configmgr/core/clients/deploy/about-client-settings)
+[About client settings](/mem/configmgr/core/clients/deploy/about-client-settings)
 
 [Get-CMClientSetting](Get-CMClientSetting.md)
 
@@ -1925,3 +1933,26 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-CMClientSetting](Remove-CMClientSetting.md)
 
 [New-CMSchedule](New-CMSchedule.md)
+
+[Set-CMClientSettingBackgroundIntelligentTransfer](Set-CMClientSettingBackgroundIntelligentTransfer.md)
+[Set-CMClientSettingClientCache](Set-CMClientSettingClientCache.md)
+[Set-CMClientSettingClientPolicy](Set-CMClientSettingClientPolicy.md)
+[Set-CMClientSettingCloudService](Set-CMClientSettingCloudService.md)
+[Set-CMClientSettingComplianceSetting](Set-CMClientSettingComplianceSetting.md)
+[Set-CMClientSettingComputerAgent](Set-CMClientSettingComputerAgent.md)
+[Set-CMClientSettingComputerRestart](Set-CMClientSettingComputerRestart.md)
+[Set-CMClientSettingDeliveryOptimization](Set-CMClientSettingDeliveryOptimization.md)
+[Set-CMClientSettingEndpointProtection](Set-CMClientSettingEndpointProtection.md)
+[Set-CMClientSettingEnrollment](Set-CMClientSettingEnrollment.md)
+[Set-CMClientSettingGeneral](Set-CMClientSettingGeneral.md)
+[Set-CMClientSettingHardwareInventory](Set-CMClientSettingHardwareInventory.md)
+[Set-CMClientSettingMeteredInternetConnection](Set-CMClientSettingMeteredInternetConnection.md)
+[Set-CMClientSettingPowerManagement](Set-CMClientSettingPowerManagement.md)
+[Set-CMClientSettingRemoteTool](Set-CMClientSettingRemoteTool.md)
+[Set-CMClientSettingSoftwareCenter](Set-CMClientSettingSoftwareCenter.md)
+[Set-CMClientSettingSoftwareDeployment](Set-CMClientSettingSoftwareDeployment.md)
+[Set-CMClientSettingSoftwareInventory](Set-CMClientSettingSoftwareInventory.md)
+[Set-CMClientSettingSoftwareMetering](Set-CMClientSettingSoftwareMetering.md)
+[Set-CMClientSettingSoftwareUpdate](Set-CMClientSettingSoftwareUpdate.md)
+[Set-CMClientSettingStateMessaging](Set-CMClientSettingStateMessaging.md)
+[Set-CMClientSettingUserAndDeviceAffinity](Set-CMClientSettingUserAndDeviceAffinity.md)

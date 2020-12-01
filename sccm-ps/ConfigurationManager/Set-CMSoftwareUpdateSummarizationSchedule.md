@@ -15,7 +15,7 @@ Sets how often Configuration Manager summarizes the status of updates.
 ## SYNTAX
 
 ```
-Set-CMSoftwareUpdateSummarizationSchedule -Interval <Int32> -Unit <SummarizationScheduleUnit> [-PassThru]
+Set-CMSoftwareUpdateSummarizationSchedule -Interval <Int32> [-PassThru] -Unit <SummarizationScheduleUnit>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

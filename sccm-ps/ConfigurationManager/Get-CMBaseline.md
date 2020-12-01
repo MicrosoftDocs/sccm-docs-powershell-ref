@@ -1,4 +1,4 @@
----
+﻿---
 description: Gets configuration baselines.
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 Module Name: ConfigurationManager
@@ -24,6 +24,12 @@ Get-CMBaseline [[-Name] <String>] [-DisableWildcardHandling] [-ForceWildcardHand
 Get-CMBaseline [-Id] <Int32> [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
+### SearchByParentBaseline
+```
+Get-CMBaseline [-ParentBaseline] <IResultObject> [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [<CommonParameters>]
+```
+
 ### SearchByParentBaselineIdMandatory
 ```
 Get-CMBaseline -ParentBaselineId <Int32> [-DisableWildcardHandling] [-ForceWildcardHandling]
@@ -33,12 +39,6 @@ Get-CMBaseline -ParentBaselineId <Int32> [-DisableWildcardHandling] [-ForceWildc
 ### SearchByParentBaselineNameMandatory
 ```
 Get-CMBaseline -ParentBaselineName <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
- [<CommonParameters>]
-```
-
-### SearchByParentBaseline
-```
-Get-CMBaseline [-ParentBaseline] <IResultObject> [-DisableWildcardHandling] [-ForceWildcardHandling]
  [<CommonParameters>]
 ```
 

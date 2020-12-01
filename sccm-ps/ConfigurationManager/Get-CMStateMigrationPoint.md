@@ -1,4 +1,4 @@
----
+﻿---
 description: Gets a state migration point for a Configuration Manager site.
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,7 +16,7 @@ Gets a state migration point for a Configuration Manager site.
 
 ### SearchByName (Default)
 ```
-Get-CMStateMigrationPoint [-SiteCode <String>] [[-SiteSystemServerName] <String>] [-AllSite]
+Get-CMStateMigrationPoint [-AllSite] [-SiteCode <String>] [[-SiteSystemServerName] <String>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 

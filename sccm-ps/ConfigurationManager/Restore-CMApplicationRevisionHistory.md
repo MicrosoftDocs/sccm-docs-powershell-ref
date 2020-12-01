@@ -16,20 +16,20 @@ Restores a previous version of a Configuration Manager application from the appl
 
 ### SearchByValueMandatory (Default)
 ```
-Restore-CMApplicationRevisionHistory [-InputObject] <IResultObject> [-Revision] <UInt32> [-PassThru]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### SearchBySingleNameMandatory
-```
-Restore-CMApplicationRevisionHistory [-Name] <String> [-Revision] <UInt32> [-PassThru]
+Restore-CMApplicationRevisionHistory [-InputObject] <IResultObject> [-PassThru] [-Revision] <UInt32>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchBySingleIdMandatory
 ```
-Restore-CMApplicationRevisionHistory [-Id] <UInt32> [-Revision] <UInt32> [-PassThru] [-DisableWildcardHandling]
+Restore-CMApplicationRevisionHistory [-Id] <UInt32> [-PassThru] [-Revision] <UInt32> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SearchBySingleNameMandatory
+```
+Restore-CMApplicationRevisionHistory [-Name] <String> [-PassThru] [-Revision] <UInt32>
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

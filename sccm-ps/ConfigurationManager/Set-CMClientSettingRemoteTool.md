@@ -16,41 +16,41 @@ Sets a client setting remote tool.
 
 ### SetCustomSettingByName (Default)
 ```
-Set-CMClientSettingRemoteTool [-FirewallExceptionProfile <FirewallExceptionProfileType[]>]
- [-AllowClientChange <Boolean>] [-AllowUnattendedComputer <Boolean>] [-PromptUserForPermission <Boolean>]
- [-PromptUserForClipboardPermission <Boolean>] [-GrantPermissionToLocalAdministrator <Boolean>]
- [-AccessLevel <AccessLevelType>] [-PermittedViewer <String[]>] [-ShowNotificationIconOnTaskbar <Boolean>]
- [-ShowSessionConnectionBar <Boolean>] [-AudibleSignal <AudibleSignalType>]
- [-ManageUnsolicitedRemoteAssistance <Boolean>] [-ManageSolicitedRemoteAssistance <Boolean>]
- [-RemoteAssistanceAccessLevel <RemoteAssistanceAccessLevelType>] [-ManageRemoteDesktopSetting <Boolean>]
- [-AllowPermittedViewer <Boolean>] [-RequireAuthentication <Boolean>] -Name <String> [-PassThru]
+Set-CMClientSettingRemoteTool [-AccessLevel <AccessLevelType>] [-AllowClientChange <Boolean>]
+ [-AllowPermittedViewer <Boolean>] [-AllowUnattendedComputer <Boolean>] [-AudibleSignal <AudibleSignalType>]
+ [-FirewallExceptionProfile <FirewallExceptionProfileType[]>] [-GrantPermissionToLocalAdministrator <Boolean>]
+ [-ManageRemoteDesktopSetting <Boolean>] [-ManageSolicitedRemoteAssistance <Boolean>]
+ [-ManageUnsolicitedRemoteAssistance <Boolean>] [-PermittedViewer <String[]>]
+ [-PromptUserForClipboardPermission <Boolean>] [-PromptUserForPermission <Boolean>]
+ [-RemoteAssistanceAccessLevel <RemoteAssistanceAccessLevelType>] [-RequireAuthentication <Boolean>]
+ [-ShowNotificationIconOnTaskbar <Boolean>] [-ShowSessionConnectionBar <Boolean>] -Name <String> [-PassThru]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetDefaultSetting
 ```
-Set-CMClientSettingRemoteTool [-FirewallExceptionProfile <FirewallExceptionProfileType[]>]
- [-AllowClientChange <Boolean>] [-AllowUnattendedComputer <Boolean>] [-PromptUserForPermission <Boolean>]
- [-PromptUserForClipboardPermission <Boolean>] [-GrantPermissionToLocalAdministrator <Boolean>]
- [-AccessLevel <AccessLevelType>] [-PermittedViewer <String[]>] [-ShowNotificationIconOnTaskbar <Boolean>]
- [-ShowSessionConnectionBar <Boolean>] [-AudibleSignal <AudibleSignalType>]
- [-ManageUnsolicitedRemoteAssistance <Boolean>] [-ManageSolicitedRemoteAssistance <Boolean>]
- [-RemoteAssistanceAccessLevel <RemoteAssistanceAccessLevelType>] [-ManageRemoteDesktopSetting <Boolean>]
- [-AllowPermittedViewer <Boolean>] [-RequireAuthentication <Boolean>] [-DefaultSetting] [-PassThru]
+Set-CMClientSettingRemoteTool [-AccessLevel <AccessLevelType>] [-AllowClientChange <Boolean>]
+ [-AllowPermittedViewer <Boolean>] [-AllowUnattendedComputer <Boolean>] [-AudibleSignal <AudibleSignalType>]
+ [-FirewallExceptionProfile <FirewallExceptionProfileType[]>] [-GrantPermissionToLocalAdministrator <Boolean>]
+ [-ManageRemoteDesktopSetting <Boolean>] [-ManageSolicitedRemoteAssistance <Boolean>]
+ [-ManageUnsolicitedRemoteAssistance <Boolean>] [-PermittedViewer <String[]>]
+ [-PromptUserForClipboardPermission <Boolean>] [-PromptUserForPermission <Boolean>]
+ [-RemoteAssistanceAccessLevel <RemoteAssistanceAccessLevelType>] [-RequireAuthentication <Boolean>]
+ [-ShowNotificationIconOnTaskbar <Boolean>] [-ShowSessionConnectionBar <Boolean>] [-DefaultSetting] [-PassThru]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetCustomSettingByValue
 ```
-Set-CMClientSettingRemoteTool [-FirewallExceptionProfile <FirewallExceptionProfileType[]>]
- [-AllowClientChange <Boolean>] [-AllowUnattendedComputer <Boolean>] [-PromptUserForPermission <Boolean>]
- [-PromptUserForClipboardPermission <Boolean>] [-GrantPermissionToLocalAdministrator <Boolean>]
- [-AccessLevel <AccessLevelType>] [-PermittedViewer <String[]>] [-ShowNotificationIconOnTaskbar <Boolean>]
- [-ShowSessionConnectionBar <Boolean>] [-AudibleSignal <AudibleSignalType>]
- [-ManageUnsolicitedRemoteAssistance <Boolean>] [-ManageSolicitedRemoteAssistance <Boolean>]
- [-RemoteAssistanceAccessLevel <RemoteAssistanceAccessLevelType>] [-ManageRemoteDesktopSetting <Boolean>]
- [-AllowPermittedViewer <Boolean>] [-RequireAuthentication <Boolean>] -InputObject <IResultObject> [-PassThru]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMClientSettingRemoteTool [-AccessLevel <AccessLevelType>] [-AllowClientChange <Boolean>]
+ [-AllowPermittedViewer <Boolean>] [-AllowUnattendedComputer <Boolean>] [-AudibleSignal <AudibleSignalType>]
+ [-FirewallExceptionProfile <FirewallExceptionProfileType[]>] [-GrantPermissionToLocalAdministrator <Boolean>]
+ [-ManageRemoteDesktopSetting <Boolean>] [-ManageSolicitedRemoteAssistance <Boolean>]
+ [-ManageUnsolicitedRemoteAssistance <Boolean>] [-PermittedViewer <String[]>]
+ [-PromptUserForClipboardPermission <Boolean>] [-PromptUserForPermission <Boolean>]
+ [-RemoteAssistanceAccessLevel <RemoteAssistanceAccessLevelType>] [-RequireAuthentication <Boolean>]
+ [-ShowNotificationIconOnTaskbar <Boolean>] [-ShowSessionConnectionBar <Boolean>] -InputObject <IResultObject>
+ [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

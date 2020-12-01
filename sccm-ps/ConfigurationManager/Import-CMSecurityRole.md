@@ -15,7 +15,7 @@ Imports a security role into Configuration Manager.
 ## SYNTAX
 
 ```
-Import-CMSecurityRole -Overwrite <Boolean> -XmlFileName <String> [-NewRoleName <String>]
+Import-CMSecurityRole [-NewRoleName <String>] -Overwrite <Boolean> -XmlFileName <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

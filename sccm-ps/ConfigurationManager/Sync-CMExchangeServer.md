@@ -15,7 +15,7 @@ Synchronizes Configuration Manager mobile device information with an Exchange Se
 ## SYNTAX
 
 ```
-Sync-CMExchangeServer [-SiteCode <String>] -Address <String> [-Force] [-PassThru] [-DisableWildcardHandling]
+Sync-CMExchangeServer -Address <String> [-Force] [-PassThru] [-SiteCode <String>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

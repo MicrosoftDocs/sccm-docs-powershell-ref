@@ -15,9 +15,9 @@ Invokes a report about data and operations in Configuration Manager.
 ## SYNTAX
 
 ```
-Invoke-CMReport [-SiteCode <String>] [-SrsServerName <String>] -ReportPath <String>
- [-ReportParameter <Hashtable>] [-OutputFormat <String>] [-PassThru] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Invoke-CMReport [-OutputFormat <String>] [-PassThru] [-ReportParameter <Hashtable>] -ReportPath <String>
+ [-SiteCode <String>] [-SrsServerName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

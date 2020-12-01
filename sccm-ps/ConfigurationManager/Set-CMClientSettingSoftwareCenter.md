@@ -14,43 +14,43 @@ Use this cmdlet to configure the client settings in the **Software Center** grou
 
 ### SetCustomSettingByName (Default)
 ```
-Set-CMClientSettingSoftwareCenter [-EnableCustomize <Boolean>] [-CompanyName <String>] [-ColorScheme <Color>]
- [-LogoFilePath <String>] [-HideUnapprovedApplication <Boolean>] [-HideInstalledApplication <Boolean>]
- [-HideApplicationCatalogLink <Boolean>] [-EnableApplicationsTab <Boolean>] [-EnableUpdatesTab <Boolean>]
- [-EnableOperatingSystemsTab <Boolean>] [-EnableStatusTab <Boolean>] [-EnableComplianceTab <Boolean>]
- [-EnableOptionsTab <Boolean>] [-ClearCustomTab] [-RemoveCustomTabName <String[]>]
- [-AddCustomTab <SoftwareCenterTabItem[]>] [-SetVisibleTabName <String[]>] [-SetInvisibleTabName <String[]>]
- [-SelectCustomTabName <String>] [-SelectBuiltInTab <BuiltInTab>] [-SelectTabIndex <Int32>]
- [-MoveSelectedTabToIndex <Int32>] [-SelectedTabNewName <String>] [-SelectedTabNewUrl <Uri>]
- [-CustomTabName <String>] [-CustomTabUrl <Uri>] -Name <String> [-PassThru] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMClientSettingSoftwareCenter [-AddCustomTab <SoftwareCenterTabItem[]>] [-ClearCustomTab]
+ [-ColorScheme <Color>] [-CompanyName <String>] [-CustomTabName <String>] [-CustomTabUrl <Uri>]
+ [-EnableApplicationsTab <Boolean>] [-EnableComplianceTab <Boolean>] [-EnableCustomize <Boolean>]
+ [-EnableOperatingSystemsTab <Boolean>] [-EnableOptionsTab <Boolean>] [-EnableStatusTab <Boolean>]
+ [-EnableUpdatesTab <Boolean>] [-HideApplicationCatalogLink <Boolean>] [-HideInstalledApplication <Boolean>]
+ [-HideUnapprovedApplication <Boolean>] [-LogoFilePath <String>] [-MoveSelectedTabToIndex <Int32>]
+ [-RemoveCustomTabName <String[]>] [-SelectBuiltInTab <BuiltInTab>] [-SelectCustomTabName <String>]
+ [-SelectedTabNewName <String>] [-SelectedTabNewUrl <Uri>] [-SelectTabIndex <Int32>]
+ [-SetInvisibleTabName <String[]>] [-SetVisibleTabName <String[]>] -Name <String> [-PassThru]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetDefaultSetting
 ```
-Set-CMClientSettingSoftwareCenter [-EnableCustomize <Boolean>] [-CompanyName <String>] [-ColorScheme <Color>]
- [-LogoFilePath <String>] [-HideUnapprovedApplication <Boolean>] [-HideInstalledApplication <Boolean>]
- [-HideApplicationCatalogLink <Boolean>] [-EnableApplicationsTab <Boolean>] [-EnableUpdatesTab <Boolean>]
- [-EnableOperatingSystemsTab <Boolean>] [-EnableStatusTab <Boolean>] [-EnableComplianceTab <Boolean>]
- [-EnableOptionsTab <Boolean>] [-ClearCustomTab] [-RemoveCustomTabName <String[]>]
- [-AddCustomTab <SoftwareCenterTabItem[]>] [-SetVisibleTabName <String[]>] [-SetInvisibleTabName <String[]>]
- [-SelectCustomTabName <String>] [-SelectBuiltInTab <BuiltInTab>] [-SelectTabIndex <Int32>]
- [-MoveSelectedTabToIndex <Int32>] [-SelectedTabNewName <String>] [-SelectedTabNewUrl <Uri>]
- [-CustomTabName <String>] [-CustomTabUrl <Uri>] [-DefaultSetting] [-PassThru] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMClientSettingSoftwareCenter [-AddCustomTab <SoftwareCenterTabItem[]>] [-ClearCustomTab]
+ [-ColorScheme <Color>] [-CompanyName <String>] [-CustomTabName <String>] [-CustomTabUrl <Uri>]
+ [-EnableApplicationsTab <Boolean>] [-EnableComplianceTab <Boolean>] [-EnableCustomize <Boolean>]
+ [-EnableOperatingSystemsTab <Boolean>] [-EnableOptionsTab <Boolean>] [-EnableStatusTab <Boolean>]
+ [-EnableUpdatesTab <Boolean>] [-HideApplicationCatalogLink <Boolean>] [-HideInstalledApplication <Boolean>]
+ [-HideUnapprovedApplication <Boolean>] [-LogoFilePath <String>] [-MoveSelectedTabToIndex <Int32>]
+ [-RemoveCustomTabName <String[]>] [-SelectBuiltInTab <BuiltInTab>] [-SelectCustomTabName <String>]
+ [-SelectedTabNewName <String>] [-SelectedTabNewUrl <Uri>] [-SelectTabIndex <Int32>]
+ [-SetInvisibleTabName <String[]>] [-SetVisibleTabName <String[]>] [-DefaultSetting] [-PassThru]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetCustomSettingByValue
 ```
-Set-CMClientSettingSoftwareCenter [-EnableCustomize <Boolean>] [-CompanyName <String>] [-ColorScheme <Color>]
- [-LogoFilePath <String>] [-HideUnapprovedApplication <Boolean>] [-HideInstalledApplication <Boolean>]
- [-HideApplicationCatalogLink <Boolean>] [-EnableApplicationsTab <Boolean>] [-EnableUpdatesTab <Boolean>]
- [-EnableOperatingSystemsTab <Boolean>] [-EnableStatusTab <Boolean>] [-EnableComplianceTab <Boolean>]
- [-EnableOptionsTab <Boolean>] [-ClearCustomTab] [-RemoveCustomTabName <String[]>]
- [-AddCustomTab <SoftwareCenterTabItem[]>] [-SetVisibleTabName <String[]>] [-SetInvisibleTabName <String[]>]
- [-SelectCustomTabName <String>] [-SelectBuiltInTab <BuiltInTab>] [-SelectTabIndex <Int32>]
- [-MoveSelectedTabToIndex <Int32>] [-SelectedTabNewName <String>] [-SelectedTabNewUrl <Uri>]
- [-CustomTabName <String>] [-CustomTabUrl <Uri>] -InputObject <IResultObject> [-PassThru]
+Set-CMClientSettingSoftwareCenter [-AddCustomTab <SoftwareCenterTabItem[]>] [-ClearCustomTab]
+ [-ColorScheme <Color>] [-CompanyName <String>] [-CustomTabName <String>] [-CustomTabUrl <Uri>]
+ [-EnableApplicationsTab <Boolean>] [-EnableComplianceTab <Boolean>] [-EnableCustomize <Boolean>]
+ [-EnableOperatingSystemsTab <Boolean>] [-EnableOptionsTab <Boolean>] [-EnableStatusTab <Boolean>]
+ [-EnableUpdatesTab <Boolean>] [-HideApplicationCatalogLink <Boolean>] [-HideInstalledApplication <Boolean>]
+ [-HideUnapprovedApplication <Boolean>] [-LogoFilePath <String>] [-MoveSelectedTabToIndex <Int32>]
+ [-RemoveCustomTabName <String[]>] [-SelectBuiltInTab <BuiltInTab>] [-SelectCustomTabName <String>]
+ [-SelectedTabNewName <String>] [-SelectedTabNewUrl <Uri>] [-SelectTabIndex <Int32>]
+ [-SetInvisibleTabName <String[]>] [-SetVisibleTabName <String[]>] -InputObject <IResultObject> [-PassThru]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -657,6 +657,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[About client settings - Software Center](https://docs.microsoft.com/mem/configmgr/core/clients/deploy/about-client-settings#software-center)
+[About client settings - Software Center](/mem/configmgr/core/clients/deploy/about-client-settings#software-center)
 
-[Plan for Software Center](https://docs.microsoft.com/mem/configmgr/apps/plan-design/plan-for-software-center)
+[Plan for Software Center](/mem/configmgr/apps/plan-design/plan-for-software-center)

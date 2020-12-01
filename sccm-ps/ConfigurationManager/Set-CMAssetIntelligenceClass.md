@@ -22,8 +22,8 @@ Set-CMAssetIntelligenceClass [-EnableAllReportingClass] [-DisableWildcardHandlin
 
 ### SetBySelectReportClass
 ```
-Set-CMAssetIntelligenceClass [-EnableReportingClass <ClassNameType[]>]
- [-DisableReportingClass <ClassNameType[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+Set-CMAssetIntelligenceClass [-DisableReportingClass <ClassNameType[]>]
+ [-EnableReportingClass <ClassNameType[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
  [-Confirm] [<CommonParameters>]
 ```
 

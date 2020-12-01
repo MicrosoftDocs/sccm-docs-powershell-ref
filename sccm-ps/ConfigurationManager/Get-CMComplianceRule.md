@@ -1,4 +1,4 @@
----
+﻿---
 description: Gets a compliance rule.
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,19 +16,19 @@ Gets a compliance rule.
 
 ### ById
 ```
-Get-CMComplianceRule [-Id] <Int32> [-RuleName <String>] [-PropertyPath <String>] [-DisableWildcardHandling]
+Get-CMComplianceRule [-Id] <Int32> [-PropertyPath <String>] [-RuleName <String>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ### ByValue
 ```
-Get-CMComplianceRule -InputObject <IResultObject> [-RuleName <String>] [-PropertyPath <String>]
+Get-CMComplianceRule -InputObject <IResultObject> [-PropertyPath <String>] [-RuleName <String>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ### ByName
 ```
-Get-CMComplianceRule [-Name] <String> [-RuleName <String>] [-PropertyPath <String>] [-DisableWildcardHandling]
+Get-CMComplianceRule [-Name] <String> [-PropertyPath <String>] [-RuleName <String>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [<CommonParameters>]
 ```
 

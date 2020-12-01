@@ -17,16 +17,15 @@ Creates a compliance rule file folder date.
 ### ByCreation (Default)
 ```
 New-CMComplianceRuleFileFolderDate [-Creation] -ExpectedValue <DateTime[]>
- -ExpressionOperator <RuleExpressionOperator> [-ReportNoncompliance] -RuleName <String>
- -InputObject <ConfigurationItemSetting> [-NoncomplianceSeverity <NoncomplianceSeverity>]
- [-RuleDescription <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ -ExpressionOperator <RuleExpressionOperator> [-ReportNoncompliance] -InputObject <ConfigurationItemSetting>
+ -RuleName <String> [-NoncomplianceSeverity <NoncomplianceSeverity>] [-RuleDescription <String>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByModification
 ```
 New-CMComplianceRuleFileFolderDate -ExpectedValue <DateTime[]> -ExpressionOperator <RuleExpressionOperator>
- [-Modification] [-ReportNoncompliance] -RuleName <String> -InputObject <ConfigurationItemSetting>
+ [-Modification] [-ReportNoncompliance] -InputObject <ConfigurationItemSetting> -RuleName <String>
  [-NoncomplianceSeverity <NoncomplianceSeverity>] [-RuleDescription <String>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```

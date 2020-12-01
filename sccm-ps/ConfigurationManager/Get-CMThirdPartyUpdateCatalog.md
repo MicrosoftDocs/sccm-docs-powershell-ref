@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Sum.dll-Help.xml
 Module Name: ConfigurationManager
 online version:
@@ -15,15 +15,15 @@ Use this cmdlet to get a third-party updates catalog.
 
 ### SearchByName (Default)
 ```
-Get-CMThirdPartyUpdateCatalog [[-Name] <String>] [-PublisherName <String>] [-SiteCode <String>]
- [-IsSyncEnabled <Boolean>] [-IsCustomCatalog <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Get-CMThirdPartyUpdateCatalog [-IsCustomCatalog <Boolean>] [-IsSyncEnabled <Boolean>] [[-Name] <String>]
+ [-PublisherName <String>] [-SiteCode <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory
 ```
-Get-CMThirdPartyUpdateCatalog [-Id] <String> [-PublisherName <String>] [-SiteCode <String>]
- [-IsSyncEnabled <Boolean>] [-IsCustomCatalog <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Get-CMThirdPartyUpdateCatalog [-Id] <String> [-IsCustomCatalog <Boolean>] [-IsSyncEnabled <Boolean>]
+ [-PublisherName <String>] [-SiteCode <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [<CommonParameters>]
 ```
 

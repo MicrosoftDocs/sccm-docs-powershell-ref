@@ -15,8 +15,8 @@ Creates a driver package.
 ## SYNTAX
 
 ```
-New-CMDriverPackage -Name <String> -Path <String> [-Description <String>] [-DriverManufacturer <String>]
- [-DriverModel <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+New-CMDriverPackage [-Description <String>] [-DriverManufacturer <String>] [-DriverModel <String>]
+ -Name <String> -Path <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 

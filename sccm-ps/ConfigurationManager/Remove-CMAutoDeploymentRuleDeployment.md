@@ -15,7 +15,7 @@ Removes a deployment from an auto deployment rule.
 ## SYNTAX
 
 ```
-Remove-CMAutoDeploymentRuleDeployment [-InputObject] <IResultObject> [-Force] [-DisableWildcardHandling]
+Remove-CMAutoDeploymentRuleDeployment [-Force] [-InputObject] <IResultObject> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

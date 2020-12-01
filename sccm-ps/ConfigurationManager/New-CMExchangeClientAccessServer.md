@@ -15,7 +15,7 @@ Creates a Client Access server role for an Exchange Server.
 ## SYNTAX
 
 ```
-New-CMExchangeClientAccessServer -ExchangeClientAccessServerName <String> -ActiveDirectorySiteName <String>
+New-CMExchangeClientAccessServer -ActiveDirectorySiteName <String> -ExchangeClientAccessServerName <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

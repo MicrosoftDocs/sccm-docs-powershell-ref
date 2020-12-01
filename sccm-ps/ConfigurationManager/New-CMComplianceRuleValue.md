@@ -17,7 +17,7 @@ Create a compliance rule value.
 
 ```
 New-CMComplianceRuleValue -ExpectedValue <String[]> -ExpressionOperator <RuleExpressionOperator> [-Remediate]
- [-ReportNoncompliance] -RuleName <String> -InputObject <ConfigurationItemSetting>
+ [-ReportNoncompliance] -InputObject <ConfigurationItemSetting> -RuleName <String>
  [-NoncomplianceSeverity <NoncomplianceSeverity>] [-RuleDescription <String>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
@@ -224,7 +224,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
-
 ## NOTES
 
 ## RELATED LINKS

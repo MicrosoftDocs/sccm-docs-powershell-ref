@@ -22,7 +22,7 @@ Remove-CMEnrollmentProxyPoint [-Force] -InputObject <IResultObject> [-DisableWil
 
 ### SearchByNameMandatory
 ```
-Remove-CMEnrollmentProxyPoint [-SiteCode <String>] [-Force] [-SiteSystemServerName] <String>
+Remove-CMEnrollmentProxyPoint [-Force] [-SiteCode <String>] [-SiteSystemServerName] <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

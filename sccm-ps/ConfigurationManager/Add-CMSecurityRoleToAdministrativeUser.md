@@ -16,55 +16,55 @@ Adds a security role to an administrative user or group in Configuration Manager
 
 ### AddRoleToAdminByName_Name (Default)
 ```
-Add-CMSecurityRoleToAdministrativeUser -RoleName <String> -AdministrativeUserName <String>
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### AddRoleToAdminById_Id
-```
-Add-CMSecurityRoleToAdministrativeUser -RoleId <String> -AdministrativeUserId <Int32>
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### AddRoleToAdminById_Name
-```
-Add-CMSecurityRoleToAdministrativeUser -RoleId <String> -AdministrativeUserName <String>
+Add-CMSecurityRoleToAdministrativeUser -AdministrativeUserName <String> -RoleName <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### AddRoleToAdminById_Object
 ```
-Add-CMSecurityRoleToAdministrativeUser -RoleId <String> -AdministrativeUser <IResultObject>
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### AddRoleToAdminByName_Id
-```
-Add-CMSecurityRoleToAdministrativeUser -RoleName <String> -AdministrativeUserId <Int32>
+Add-CMSecurityRoleToAdministrativeUser -AdministrativeUser <IResultObject> -RoleId <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### AddRoleToAdminByName_Object
 ```
-Add-CMSecurityRoleToAdministrativeUser -RoleName <String> -AdministrativeUser <IResultObject>
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### AddRoleToAdminByObject_Id
-```
-Add-CMSecurityRoleToAdministrativeUser -InputObject <IResultObject> -AdministrativeUserId <Int32>
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### AddRoleToAdminByObject_Name
-```
-Add-CMSecurityRoleToAdministrativeUser -InputObject <IResultObject> -AdministrativeUserName <String>
+Add-CMSecurityRoleToAdministrativeUser -AdministrativeUser <IResultObject> -RoleName <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### AddRoleToAdminByObject_Object
 ```
-Add-CMSecurityRoleToAdministrativeUser -InputObject <IResultObject> -AdministrativeUser <IResultObject>
+Add-CMSecurityRoleToAdministrativeUser -AdministrativeUser <IResultObject> -InputObject <IResultObject>
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### AddRoleToAdminById_Id
+```
+Add-CMSecurityRoleToAdministrativeUser -AdministrativeUserId <Int32> -RoleId <String>
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### AddRoleToAdminByName_Id
+```
+Add-CMSecurityRoleToAdministrativeUser -AdministrativeUserId <Int32> -RoleName <String>
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### AddRoleToAdminByObject_Id
+```
+Add-CMSecurityRoleToAdministrativeUser -AdministrativeUserId <Int32> -InputObject <IResultObject>
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### AddRoleToAdminById_Name
+```
+Add-CMSecurityRoleToAdministrativeUser -AdministrativeUserName <String> -RoleId <String>
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### AddRoleToAdminByObject_Name
+```
+Add-CMSecurityRoleToAdministrativeUser -AdministrativeUserName <String> -InputObject <IResultObject>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -74,7 +74,7 @@ The **Add-CMSecurityRoleToAdministrativeUser** cmdlet adds a security role to an
 Permissions defined in a role represent object types and actions available for each object type.
 Configuration Manager provides some built-in security roles.
 You can also create custom security roles.
-For more information about security roles, see [Configuring Security for Configuration Manager](https://docs.microsoft.com/mem/configmgr/core/plan-design/security/configure-security).
+For more information about security roles, see [Configuring Security for Configuration Manager](/mem/configmgr/core/plan-design/security/configure-security).
 
 You can specify an administrative user or group by name or by ID or you can use the use the [Get-CMAdministrativeUser](Get-CMAdministrativeUser.md) cmdlet to obtain a user or group object.
 You can specify a role to add by name or by ID, or you can use the [Get-CMSecurityRole](Get-CMSecurityRole.md) cmdlet to obtain a role.
@@ -199,7 +199,7 @@ You can use this parameter, or you can pipe the input to this cmdlet.
 
 ```yaml
 Type: IResultObject
-Parameter Sets: AddRoleToAdminByObject_Id, AddRoleToAdminByObject_Name, AddRoleToAdminByObject_Object
+Parameter Sets: AddRoleToAdminByObject_Object, AddRoleToAdminByObject_Id, AddRoleToAdminByObject_Name
 Aliases: Role
 
 Required: True
@@ -215,7 +215,7 @@ A role represents Configuration Manager permissions granted to a user.
 
 ```yaml
 Type: String
-Parameter Sets: AddRoleToAdminById_Id, AddRoleToAdminById_Name, AddRoleToAdminById_Object
+Parameter Sets: AddRoleToAdminById_Object, AddRoleToAdminById_Id, AddRoleToAdminById_Name
 Aliases:
 
 Required: True
@@ -231,7 +231,7 @@ A role represents Configuration Manager permissions granted to a user.
 
 ```yaml
 Type: String
-Parameter Sets: AddRoleToAdminByName_Name, AddRoleToAdminByName_Id, AddRoleToAdminByName_Object
+Parameter Sets: AddRoleToAdminByName_Name, AddRoleToAdminByName_Object, AddRoleToAdminByName_Id
 Aliases:
 
 Required: True

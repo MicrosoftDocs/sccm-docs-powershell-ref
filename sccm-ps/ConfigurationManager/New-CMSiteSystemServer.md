@@ -15,9 +15,9 @@ Creates a site system server.
 ## SYNTAX
 
 ```
-New-CMSiteSystemServer [-SiteCode <String>] [-SiteSystemServerName] <String> [-PublicFqdn <String>]
- [-FdmOperation <Boolean>] [-UseSiteServerAccount] [-AccountName <String>] [-EnableProxy <Boolean>]
- [-ProxyServerName <String>] [-ProxyServerPort <UInt32>] [-ProxyAccessAccount <IResultObject>]
+New-CMSiteSystemServer [-AccountName <String>] [-EnableProxy <Boolean>] [-FdmOperation <Boolean>]
+ [-ProxyAccessAccount <IResultObject>] [-ProxyServerName <String>] [-ProxyServerPort <UInt32>]
+ [-PublicFqdn <String>] [-SiteCode <String>] [-SiteSystemServerName] <String> [-UseSiteServerAccount]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

@@ -1,8 +1,8 @@
 ---
-description: Removes a cloud management gateway.
+description: Remove a cloud management gateway.
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/07/2019
+ms.date: 11/20/2020
 schema: 2.0.0
 title: Remove-CMCloudManagementGateway
 ---
@@ -10,45 +10,50 @@ title: Remove-CMCloudManagementGateway
 # Remove-CMCloudManagementGateway
 
 ## SYNOPSIS
-Removes a cloud management gateway.
+
+Remove a cloud management gateway.
 
 ## SYNTAX
 
 ### SearchByValueMandatory (Default)
 ```
-Remove-CMCloudManagementGateway -InputObject <IResultObject> [-Force] [-DisableWildcardHandling]
+Remove-CMCloudManagementGateway [-Force] -InputObject <IResultObject> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory
 ```
-Remove-CMCloudManagementGateway -Id <String> [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Remove-CMCloudManagementGateway [-Force] -Id <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByNameMandatory
 ```
-Remove-CMCloudManagementGateway -Name <String> [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Remove-CMCloudManagementGateway [-Force] -Name <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
+Use this cmdlet to remove a cloud management gateway (CMG) service from the site.
+
+For more information, see [CMG Overview](/mem/configmgr/core/clients/manage/cmg/overview).
+
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
 ### Example 1
-```
-PS XYZ:\>
+
+```powershell
+Get-CMCloudManagementGateway -Name "GraniteFalls.cloudapp.net" | Remove-CMCloudManagementGateway
 ```
 
 ## PARAMETERS
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -64,7 +69,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
+
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -79,6 +85,9 @@ Accept wildcard characters: False
 ```
 
 ### -Force
+
+Run the command without asking for confirmation.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -92,7 +101,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
+
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -107,6 +117,9 @@ Accept wildcard characters: False
 ```
 
 ### -Id
+
+Specify the site's ID for the Azure service. The **Id** is the integer value stored in the site database for the service. For example, run the following SQL query, and look at the **ID** column: `select * from Azure_CloudService`.
+
 ```yaml
 Type: String
 Parameter Sets: SearchByIdMandatory
@@ -120,6 +133,9 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
+
+Specify a CMG object to remove. To get this object, use the [Get-CMCloudManagementGateway](Get-CMCloudManagementGateway.md) cmdlet.
+
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
@@ -133,6 +149,9 @@ Accept wildcard characters: False
 ```
 
 ### -Name
+
+Specify the service name for the CMG in Azure.
+
 ```yaml
 Type: String
 Parameter Sets: SearchByNameMandatory
@@ -146,8 +165,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+
+Shows what would happen if the cmdlet runs. The cmdlet isn't run.
 
 ```yaml
 Type: SwitchParameter
@@ -171,6 +190,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-CMCloudManagementGateway](Get-CMCloudManagementGateway.md)
+[New-CMCloudManagementGateway](New-CMCloudManagementGateway.md)
+[Set-CMCloudManagementGateway](Set-CMCloudManagementGateway.md)
+[Start-CMCloudManagementGateway](Start-CMCloudManagementGateway.md)
+[Stop-CMCloudManagementGateway](Stop-CMCloudManagementGateway.md)

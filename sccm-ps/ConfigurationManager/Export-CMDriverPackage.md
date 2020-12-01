@@ -16,22 +16,22 @@ Exports driver packages.
 
 ### SearchPackageByNameMandatory (Default)
 ```
-Export-CMDriverPackage -Name <String> -ExportFilePath <String> [-WithDependence <Boolean>]
- [-WithContent <Boolean>] [-Comment <String>] [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Export-CMDriverPackage [-Comment <String>] -ExportFilePath <String> [-Force] -Name <String>
+ [-WithContent <Boolean>] [-WithDependence <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByValueMandatory
 ```
-Export-CMDriverPackage -InputObject <IResultObject> -ExportFilePath <String> [-WithDependence <Boolean>]
- [-WithContent <Boolean>] [-Comment <String>] [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Export-CMDriverPackage [-Comment <String>] -ExportFilePath <String> [-Force] -InputObject <IResultObject>
+ [-WithContent <Boolean>] [-WithDependence <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchPackageByIdMandatory
 ```
-Export-CMDriverPackage -Id <String> -ExportFilePath <String> [-WithDependence <Boolean>]
- [-WithContent <Boolean>] [-Comment <String>] [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Export-CMDriverPackage [-Comment <String>] -ExportFilePath <String> [-Force] -Id <String>
+ [-WithContent <Boolean>] [-WithDependence <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

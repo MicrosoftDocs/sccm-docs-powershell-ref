@@ -1,4 +1,4 @@
----
+﻿---
 description: Gets a distribution point info
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,7 +16,7 @@ Gets a distribution point info.
 
 ### ByName (Default)
 ```
-Get-CMDistributionPointInfo [[-SiteSystemServerName] <String>] [-SiteCode <String>] [-DisableWildcardHandling]
+Get-CMDistributionPointInfo [-SiteCode <String>] [[-SiteSystemServerName] <String>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [<CommonParameters>]
 ```
 

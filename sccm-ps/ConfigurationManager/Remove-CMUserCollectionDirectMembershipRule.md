@@ -72,7 +72,7 @@ Remove-CMUserCollectionDirectMembershipRule -InputObject <IResultObject> -Resour
 The **Remove-CMUserCollectionDirectMembershipRule** cmdlet removes a direct rule from the specified collections.
 You can specify the collections by using their names, IDs, or by specifying an object that represents the collections.
 
-For more information about collection rules in Configuration Manager, see [Introduction to Collections in Configuration Manager](https://docs.microsoft.com/mem/configmgr/core/clients/manage/collections/introduction-to-collections).
+For more information about collection rules in Configuration Manager, see [Introduction to Collections in Configuration Manager](/mem/configmgr/core/clients/manage/collections/introduction-to-collections).
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

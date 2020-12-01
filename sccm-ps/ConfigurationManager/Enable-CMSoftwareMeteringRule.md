@@ -20,15 +20,15 @@ Enable-CMSoftwareMeteringRule -Id <String> [-DisableWildcardHandling] [-ForceWil
  [-Confirm] [<CommonParameters>]
 ```
 
-### SearchByNameMandatory
-```
-Enable-CMSoftwareMeteringRule -ProductName <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
 ### SearchByValueMandatory
 ```
 Enable-CMSoftwareMeteringRule -InputObject <IResultObject> [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SearchByNameMandatory
+```
+Enable-CMSoftwareMeteringRule -ProductName <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -42,7 +42,7 @@ You can create software metering rules that specify which software to monitor.
 
 You can specify rules that enable software metering rules by ID or by product name, or by using the [Get-CMSoftwareMeteringRule](Get-CMSoftwareMeteringRule.md) cmdlet.
 
-For more information about software metering in Configuration Manager, see [Introduction to Software Metering in Configuration Manager](https://docs.microsoft.com/mem/configmgr/apps/deploy-use/monitor-app-usage-with-software-metering).
+For more information about software metering in Configuration Manager, see [Introduction to Software Metering in Configuration Manager](/mem/configmgr/apps/deploy-use/monitor-app-usage-with-software-metering).
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

@@ -21,16 +21,16 @@ Copy-CMTaskSequence -Id <String> [-DisableWildcardHandling] [-ForceWildcardHandl
  [<CommonParameters>]
 ```
 
-### SearchByName
-```
-Copy-CMTaskSequence -Name <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
-```
-
 ### SearchByValue
 ```
 Copy-CMTaskSequence -InputObject <IResultObject> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
  [-Confirm] [<CommonParameters>]
+```
+
+### SearchByName
+```
+Copy-CMTaskSequence -Name <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

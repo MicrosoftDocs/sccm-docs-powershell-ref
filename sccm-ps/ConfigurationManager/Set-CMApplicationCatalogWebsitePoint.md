@@ -16,19 +16,19 @@ Changes the settings of an Application Catalog website point.
 
 ### SetByValue (Default)
 ```
-Set-CMApplicationCatalogWebsitePoint [-ApplicationWebServicePointServerName <String>] [-NetBiosName <String>]
- [-OrganizationName <String>] [-CommunicationType <ComputerCommunicationType>]
- [-ClientConnectionType <ClientConnectionTypes>] [-ColorRed <Int32>] [-ColorGreen <Int32>] [-ColorBlue <Int32>]
- [-Color <Color>] -InputObject <IResultObject> [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMApplicationCatalogWebsitePoint [-ApplicationWebServicePointServerName <String>]
+ [-ClientConnectionType <ClientConnectionTypes>] [-Color <Color>] [-ColorBlue <Int32>] [-ColorGreen <Int32>]
+ [-ColorRed <Int32>] [-CommunicationType <ComputerCommunicationType>] -InputObject <IResultObject>
+ [-NetBiosName <String>] [-OrganizationName <String>] [-PassThru] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetByName
 ```
-Set-CMApplicationCatalogWebsitePoint [-SiteCode <String>] [-SiteSystemServerName] <String>
- [-ApplicationWebServicePointServerName <String>] [-NetBiosName <String>] [-OrganizationName <String>]
- [-CommunicationType <ComputerCommunicationType>] [-ClientConnectionType <ClientConnectionTypes>]
- [-ColorRed <Int32>] [-ColorGreen <Int32>] [-ColorBlue <Int32>] [-Color <Color>] [-PassThru]
+Set-CMApplicationCatalogWebsitePoint [-ApplicationWebServicePointServerName <String>]
+ [-ClientConnectionType <ClientConnectionTypes>] [-Color <Color>] [-ColorBlue <Int32>] [-ColorGreen <Int32>]
+ [-ColorRed <Int32>] [-CommunicationType <ComputerCommunicationType>] [-NetBiosName <String>]
+ [-OrganizationName <String>] [-PassThru] [-SiteCode <String>] [-SiteSystemServerName] <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

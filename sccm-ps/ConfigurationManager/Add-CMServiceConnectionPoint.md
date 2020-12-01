@@ -16,7 +16,7 @@ Adds a service connection point to a site system server.
 
 ### ByValue (Default)
 ```
-Add-CMServiceConnectionPoint -Mode <ServiceConnectionPointMode> -InputObject <IResultObject>
+Add-CMServiceConnectionPoint -InputObject <IResultObject> -Mode <ServiceConnectionPointMode>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

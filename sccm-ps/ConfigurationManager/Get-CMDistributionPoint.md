@@ -1,4 +1,4 @@
----
+﻿---
 description: Gets a distribution point.
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,13 +16,13 @@ Gets a distribution point.
 
 ### SearchByName (Default)
 ```
-Get-CMDistributionPoint [-SiteCode <String>] [[-SiteSystemServerName] <String>] [-AllSite]
+Get-CMDistributionPoint [-AllSite] [-SiteCode <String>] [[-SiteSystemServerName] <String>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
-### SearchByGroupName
+### SearchByGroup
 ```
-Get-CMDistributionPoint -DistributionPointGroupName <String> [-AllSite] [-DisableWildcardHandling]
+Get-CMDistributionPoint -DistributionPointGroup <IResultObject> [-AllSite] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
@@ -32,9 +32,9 @@ Get-CMDistributionPoint -DistributionPointGroupId <String> [-AllSite] [-DisableW
  [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
-### SearchByGroup
+### SearchByGroupName
 ```
-Get-CMDistributionPoint -DistributionPointGroup <IResultObject> [-AllSite] [-DisableWildcardHandling]
+Get-CMDistributionPoint -DistributionPointGroupName <String> [-AllSite] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [<CommonParameters>]
 ```
 

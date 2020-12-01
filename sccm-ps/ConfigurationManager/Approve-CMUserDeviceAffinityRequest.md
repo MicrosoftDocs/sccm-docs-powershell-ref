@@ -16,18 +16,18 @@ Approves a request for user device affinity in Configuration Manager.
 
 ### SearchByNameMandatory (Default)
 ```
-Approve-CMUserDeviceAffinityRequest -CollectionName <String> [-UserName <String>] [-UserId <String>]
- [-DeviceName <String>] [-DeviceId <String>] [-UserDeviceAffinityRequestId <String>]
- [-UserDeviceAffinityRequest <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Approve-CMUserDeviceAffinityRequest -CollectionName <String> [-DeviceId <String>] [-DeviceName <String>]
+ [-UserDeviceAffinityRequest <IResultObject>] [-UserDeviceAffinityRequestId <String>] [-UserId <String>]
+ [-UserName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory
 ```
-Approve-CMUserDeviceAffinityRequest -CollectionId <String> [-UserName <String>] [-UserId <String>]
- [-DeviceName <String>] [-DeviceId <String>] [-UserDeviceAffinityRequestId <String>]
- [-UserDeviceAffinityRequest <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Approve-CMUserDeviceAffinityRequest -CollectionId <String> [-DeviceId <String>] [-DeviceName <String>]
+ [-UserDeviceAffinityRequest <IResultObject>] [-UserDeviceAffinityRequestId <String>] [-UserId <String>]
+ [-UserName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

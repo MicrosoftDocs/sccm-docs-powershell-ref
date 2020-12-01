@@ -17,25 +17,25 @@ Export a query from Configuration Manager.
 
 ### SearchByNameMandatory (Default)
 ```
-Export-CMQuery -Name <String> -ExportFilePath <String> [-Comment <String>] [-DisableWildcardHandling]
+Export-CMQuery [-Comment <String>] -ExportFilePath <String> -Name <String> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory
 ```
-Export-CMQuery -Id <String> -ExportFilePath <String> [-Comment <String>] [-DisableWildcardHandling]
+Export-CMQuery [-Comment <String>] -ExportFilePath <String> -Id <String> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByValueMandatory
 ```
-Export-CMQuery [-InputObject] <IResultObject> -ExportFilePath <String> [-Comment <String>]
+Export-CMQuery [-Comment <String>] -ExportFilePath <String> [-InputObject] <IResultObject>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-The **Export-CMQuery** cmdlet exports a query from Configuration Manager. Queries define and store the criteria for sets of database objects that you want to find. For more information, see [Introduction to queries in Configuration Manager](https://docs.microsoft.com/mem/configmgr/core/servers/manage/introduction-to-queries).
+The **Export-CMQuery** cmdlet exports a query from Configuration Manager. Queries define and store the criteria for sets of database objects that you want to find. For more information, see [Introduction to queries in Configuration Manager](/mem/configmgr/core/servers/manage/introduction-to-queries).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
@@ -56,17 +56,17 @@ Export-CMQuery -Name "My Systems" -ExportFilePath "C:\Export\Query.mof"
 
 Add a comment to the exported MOF file. For example:
 
-```powershell
+
+
 Export-CMQuery -Name "My Systems" -ExportFilePath "C:\Export\Query.mof" -Comment "This is a comment"
-```
 
 This example sets the following comment in the exported file:
 
-```mof
+
+
 // Comments :
 //
 // This is a comment
-```
 
 ```yaml
 Type: String
@@ -209,7 +209,6 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -219,7 +218,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
-
 ## NOTES
 
 ## RELATED LINKS

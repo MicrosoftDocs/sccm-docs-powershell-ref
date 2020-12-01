@@ -20,15 +20,15 @@ Update-CMApplicationStatistic [-InputObject] <IResultObject> [-PassThru] [-Disab
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### SearchByNameMandatory
-```
-Update-CMApplicationStatistic [-Name] <String> [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
 ### SearchByIdMandatory
 ```
 Update-CMApplicationStatistic [-Id] <Int32> [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SearchByNameMandatory
+```
+Update-CMApplicationStatistic [-Name] <String> [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

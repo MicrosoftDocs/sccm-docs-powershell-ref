@@ -15,7 +15,7 @@ Imports a software license.
 ## SYNTAX
 
 ```
-Import-CMSoftwareLicense -MlsFilePath <String> -ImportType <ImportType> [-Timeout <TimeSpan>]
+Import-CMSoftwareLicense -ImportType <ImportType> -MlsFilePath <String> [-Timeout <TimeSpan>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

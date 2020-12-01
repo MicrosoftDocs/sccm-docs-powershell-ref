@@ -33,7 +33,7 @@ Remove-CMApplicationPhasedDeployment -ApplicationName <String> [-Force] [-Disabl
 
 ### SearchByValue
 ```
-Remove-CMApplicationPhasedDeployment -InputObject <IResultObject> [-Force] [-DisableWildcardHandling]
+Remove-CMApplicationPhasedDeployment [-Force] -InputObject <IResultObject> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

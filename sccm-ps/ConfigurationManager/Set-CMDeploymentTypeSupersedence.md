@@ -16,9 +16,9 @@ Sets a deployment type supersedence in Configuration Manager.
 ## SYNTAX
 
 ```
-Set-CMDeploymentTypeSupersedence -InputObject <IResultObject> [-IsUninstall <Boolean>]
- -SupersedingDeploymentType <IResultObject> [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMDeploymentTypeSupersedence -InputObject <IResultObject> [-IsUninstall <Boolean>] [-PassThru]
+ -SupersedingDeploymentType <IResultObject> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

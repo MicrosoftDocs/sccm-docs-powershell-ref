@@ -16,77 +16,77 @@ Deploys policies for a Configuration Manager collection.
 
 ### DeployFWPolicyByValueMandatory (Default)
 ```
-Start-CMConfigurationPolicyDeployment -FirewallPolicy <IResultObject> -CollectionName <String>
- [-Schedule <IResultObject>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
-```
-
-### DeployUSMPolicyByNameMandatory
-```
-Start-CMConfigurationPolicyDeployment -UserDataAndProfileName <String> -CollectionName <String>
- [-EnableEnforcement <Boolean>] [-OverrideServiceWindow <Boolean>] [-GenerateAlert <Boolean>]
- [-ParameterValue <Int32>] [-PostponeDate <DateTime>] [-PostponeTime <DateTime>] [-MonitoredByScom <Boolean>]
- [-Schedule <IResultObject>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Start-CMConfigurationPolicyDeployment -CollectionName <String> -FirewallPolicy <IResultObject> [-PassThru]
+ [-Schedule <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### DeployUSMPolicyByIdMandatory
 ```
-Start-CMConfigurationPolicyDeployment -UserDataAndProfileId <String> -CollectionName <String>
- [-EnableEnforcement <Boolean>] [-OverrideServiceWindow <Boolean>] [-GenerateAlert <Boolean>]
- [-ParameterValue <Int32>] [-PostponeDate <DateTime>] [-PostponeTime <DateTime>] [-MonitoredByScom <Boolean>]
- [-Schedule <IResultObject>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Start-CMConfigurationPolicyDeployment -CollectionName <String> [-EnableEnforcement <Boolean>]
+ [-GenerateAlert <Boolean>] [-MonitoredByScom <Boolean>] [-OverrideServiceWindow <Boolean>]
+ [-ParameterValue <Int32>] [-PassThru] [-PostponeDate <DateTime>] [-PostponeTime <DateTime>]
+ [-Schedule <IResultObject>] -UserDataAndProfileId <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### DeployUSMPolicyByNameMandatory
+```
+Start-CMConfigurationPolicyDeployment -CollectionName <String> [-EnableEnforcement <Boolean>]
+ [-GenerateAlert <Boolean>] [-MonitoredByScom <Boolean>] [-OverrideServiceWindow <Boolean>]
+ [-ParameterValue <Int32>] [-PassThru] [-PostponeDate <DateTime>] [-PostponeTime <DateTime>]
+ [-Schedule <IResultObject>] -UserDataAndProfileName <String> [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### DeployUSMPolicyByValueMandatory
 ```
-Start-CMConfigurationPolicyDeployment -UserDataAndProfile <IResultObject> -CollectionName <String>
- [-EnableEnforcement <Boolean>] [-OverrideServiceWindow <Boolean>] [-GenerateAlert <Boolean>]
- [-ParameterValue <Int32>] [-PostponeDate <DateTime>] [-PostponeTime <DateTime>] [-MonitoredByScom <Boolean>]
- [-Schedule <IResultObject>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Start-CMConfigurationPolicyDeployment -CollectionName <String> [-EnableEnforcement <Boolean>]
+ [-GenerateAlert <Boolean>] [-MonitoredByScom <Boolean>] [-OverrideServiceWindow <Boolean>]
+ [-ParameterValue <Int32>] [-PassThru] [-PostponeDate <DateTime>] [-PostponeTime <DateTime>]
+ [-Schedule <IResultObject>] -UserDataAndProfile <IResultObject> [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### DeployFWPolicyByNameMandatory
 ```
-Start-CMConfigurationPolicyDeployment -FirewallPolicyName <String> -CollectionName <String>
- [-Schedule <IResultObject>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Start-CMConfigurationPolicyDeployment -CollectionName <String> -FirewallPolicyName <String> [-PassThru]
+ [-Schedule <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### DeployFWPolicyByIdMandatory
 ```
-Start-CMConfigurationPolicyDeployment -FirewallPolicyId <String> -CollectionName <String>
- [-Schedule <IResultObject>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
-```
-
-### DeployRCPolicyByNameMandatory
-```
-Start-CMConfigurationPolicyDeployment -RemoteConnectionProfileName <String> -CollectionName <String>
- [-EnableEnforcement <Boolean>] [-OverrideServiceWindow <Boolean>] [-GenerateAlert <Boolean>]
- [-ParameterValue <Int32>] [-PostponeDate <DateTime>] [-PostponeTime <DateTime>] [-MonitoredByScom <Boolean>]
- [-Schedule <IResultObject>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Start-CMConfigurationPolicyDeployment -CollectionName <String> -FirewallPolicyId <String> [-PassThru]
+ [-Schedule <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### DeployRCPolicyByIdMandatory
 ```
-Start-CMConfigurationPolicyDeployment -RemoteConnectionProfileId <String> -CollectionName <String>
- [-EnableEnforcement <Boolean>] [-OverrideServiceWindow <Boolean>] [-GenerateAlert <Boolean>]
- [-ParameterValue <Int32>] [-PostponeDate <DateTime>] [-PostponeTime <DateTime>] [-MonitoredByScom <Boolean>]
- [-Schedule <IResultObject>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Start-CMConfigurationPolicyDeployment -CollectionName <String> [-EnableEnforcement <Boolean>]
+ [-GenerateAlert <Boolean>] [-MonitoredByScom <Boolean>] [-OverrideServiceWindow <Boolean>]
+ [-ParameterValue <Int32>] [-PassThru] [-PostponeDate <DateTime>] [-PostponeTime <DateTime>]
+ -RemoteConnectionProfileId <String> [-Schedule <IResultObject>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### DeployRCPolicyByNameMandatory
+```
+Start-CMConfigurationPolicyDeployment -CollectionName <String> [-EnableEnforcement <Boolean>]
+ [-GenerateAlert <Boolean>] [-MonitoredByScom <Boolean>] [-OverrideServiceWindow <Boolean>]
+ [-ParameterValue <Int32>] [-PassThru] [-PostponeDate <DateTime>] [-PostponeTime <DateTime>]
+ -RemoteConnectionProfileName <String> [-Schedule <IResultObject>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### DeployRCPolicyByValueMandatory
 ```
-Start-CMConfigurationPolicyDeployment -RemoteConnectionProfile <IResultObject> -CollectionName <String>
- [-EnableEnforcement <Boolean>] [-OverrideServiceWindow <Boolean>] [-GenerateAlert <Boolean>]
- [-ParameterValue <Int32>] [-PostponeDate <DateTime>] [-PostponeTime <DateTime>] [-MonitoredByScom <Boolean>]
- [-Schedule <IResultObject>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Start-CMConfigurationPolicyDeployment -CollectionName <String> [-EnableEnforcement <Boolean>]
+ [-GenerateAlert <Boolean>] [-MonitoredByScom <Boolean>] [-OverrideServiceWindow <Boolean>]
+ [-ParameterValue <Int32>] [-PassThru] [-PostponeDate <DateTime>] [-PostponeTime <DateTime>]
+ -RemoteConnectionProfile <IResultObject> [-Schedule <IResultObject>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -166,7 +166,7 @@ During enforcement, a client reports compliance information about a deployment.
 
 ```yaml
 Type: Boolean
-Parameter Sets: DeployUSMPolicyByNameMandatory, DeployUSMPolicyByIdMandatory, DeployUSMPolicyByValueMandatory, DeployRCPolicyByNameMandatory, DeployRCPolicyByIdMandatory, DeployRCPolicyByValueMandatory
+Parameter Sets: DeployUSMPolicyByIdMandatory, DeployUSMPolicyByNameMandatory, DeployUSMPolicyByValueMandatory, DeployRCPolicyByIdMandatory, DeployRCPolicyByNameMandatory, DeployRCPolicyByValueMandatory
 Aliases:
 
 Required: False
@@ -241,7 +241,7 @@ Specifies whether Configuration Manager generates alerts during the deployment.
 
 ```yaml
 Type: Boolean
-Parameter Sets: DeployUSMPolicyByNameMandatory, DeployUSMPolicyByIdMandatory, DeployUSMPolicyByValueMandatory, DeployRCPolicyByNameMandatory, DeployRCPolicyByIdMandatory, DeployRCPolicyByValueMandatory
+Parameter Sets: DeployUSMPolicyByIdMandatory, DeployUSMPolicyByNameMandatory, DeployUSMPolicyByValueMandatory, DeployRCPolicyByIdMandatory, DeployRCPolicyByNameMandatory, DeployRCPolicyByValueMandatory
 Aliases:
 
 Required: False
@@ -256,7 +256,7 @@ Specifies whether Operations Manager monitoring criteria applies during the depl
 
 ```yaml
 Type: Boolean
-Parameter Sets: DeployUSMPolicyByNameMandatory, DeployUSMPolicyByIdMandatory, DeployUSMPolicyByValueMandatory, DeployRCPolicyByNameMandatory, DeployRCPolicyByIdMandatory, DeployRCPolicyByValueMandatory
+Parameter Sets: DeployUSMPolicyByIdMandatory, DeployUSMPolicyByNameMandatory, DeployUSMPolicyByValueMandatory, DeployRCPolicyByIdMandatory, DeployRCPolicyByNameMandatory, DeployRCPolicyByValueMandatory
 Aliases:
 
 Required: False
@@ -271,7 +271,7 @@ Specifies whether to override the service window while deploying policies.
 
 ```yaml
 Type: Boolean
-Parameter Sets: DeployUSMPolicyByNameMandatory, DeployUSMPolicyByIdMandatory, DeployUSMPolicyByValueMandatory, DeployRCPolicyByNameMandatory, DeployRCPolicyByIdMandatory, DeployRCPolicyByValueMandatory
+Parameter Sets: DeployUSMPolicyByIdMandatory, DeployUSMPolicyByNameMandatory, DeployUSMPolicyByValueMandatory, DeployRCPolicyByIdMandatory, DeployRCPolicyByNameMandatory, DeployRCPolicyByValueMandatory
 Aliases:
 
 Required: False
@@ -287,7 +287,7 @@ This is the parameter value.
 
 ```yaml
 Type: Int32
-Parameter Sets: DeployUSMPolicyByNameMandatory, DeployUSMPolicyByIdMandatory, DeployUSMPolicyByValueMandatory, DeployRCPolicyByNameMandatory, DeployRCPolicyByIdMandatory, DeployRCPolicyByValueMandatory
+Parameter Sets: DeployUSMPolicyByIdMandatory, DeployUSMPolicyByNameMandatory, DeployUSMPolicyByValueMandatory, DeployRCPolicyByIdMandatory, DeployRCPolicyByNameMandatory, DeployRCPolicyByValueMandatory
 Aliases:
 
 Required: False
@@ -321,7 +321,7 @@ This is the date for the deployment if postponed.
 
 ```yaml
 Type: DateTime
-Parameter Sets: DeployUSMPolicyByNameMandatory, DeployUSMPolicyByIdMandatory, DeployUSMPolicyByValueMandatory, DeployRCPolicyByNameMandatory, DeployRCPolicyByIdMandatory, DeployRCPolicyByValueMandatory
+Parameter Sets: DeployUSMPolicyByIdMandatory, DeployUSMPolicyByNameMandatory, DeployUSMPolicyByValueMandatory, DeployRCPolicyByIdMandatory, DeployRCPolicyByNameMandatory, DeployRCPolicyByValueMandatory
 Aliases:
 
 Required: False
@@ -338,7 +338,7 @@ This is the time for the deployment if postponed.
 
 ```yaml
 Type: DateTime
-Parameter Sets: DeployUSMPolicyByNameMandatory, DeployUSMPolicyByIdMandatory, DeployUSMPolicyByValueMandatory, DeployRCPolicyByNameMandatory, DeployRCPolicyByIdMandatory, DeployRCPolicyByValueMandatory
+Parameter Sets: DeployUSMPolicyByIdMandatory, DeployUSMPolicyByNameMandatory, DeployUSMPolicyByValueMandatory, DeployRCPolicyByIdMandatory, DeployRCPolicyByNameMandatory, DeployRCPolicyByValueMandatory
 Aliases:
 
 Required: False

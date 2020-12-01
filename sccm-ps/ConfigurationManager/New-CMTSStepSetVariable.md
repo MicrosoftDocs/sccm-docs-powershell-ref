@@ -16,10 +16,10 @@ Creates a t s step set variable.
 ## SYNTAX
 
 ```
-New-CMTSStepSetVariable -TaskSequenceVariable <String> [-TaskSequenceVariableValue <String>]
- [-IsMasked <Boolean>] -Name <String> [-Description <String>] [-ContinueOnError] [-Disable]
- [-Condition <IResultObject[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+New-CMTSStepSetVariable [-IsMasked <Boolean>] -TaskSequenceVariable <String>
+ [-TaskSequenceVariableValue <String>] [-Condition <IResultObject[]>] [-ContinueOnError]
+ [-Description <String>] [-Disable] -Name <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

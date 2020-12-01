@@ -20,16 +20,16 @@ Disable-CMBaseline [-Id] <Int32> [-DisableWildcardHandling] [-ForceWildcardHandl
  [<CommonParameters>]
 ```
 
-### SearchByNameMandatory
-```
-Disable-CMBaseline [-Name] <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
-```
-
 ### SearchByValueMandatory
 ```
 Disable-CMBaseline [-InputObject] <IResultObject> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
  [-Confirm] [<CommonParameters>]
+```
+
+### SearchByNameMandatory
+```
+Disable-CMBaseline [-Name] <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

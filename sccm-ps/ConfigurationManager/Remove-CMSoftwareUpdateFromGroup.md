@@ -16,37 +16,7 @@ Removes a software update from group.
 
 ### ById_Id (Default)
 ```
-Remove-CMSoftwareUpdateFromGroup [-Force] -SoftwareUpdateId <String[]> -SoftwareUpdateGroupId <String>
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### ById_Name
-```
-Remove-CMSoftwareUpdateFromGroup [-Force] -SoftwareUpdateId <String[]> -SoftwareUpdateGroupName <String>
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### ById_Object
-```
-Remove-CMSoftwareUpdateFromGroup [-Force] -SoftwareUpdateId <String[]> -SoftwareUpdateGroup <IResultObject>
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### ByName_Id
-```
-Remove-CMSoftwareUpdateFromGroup [-Force] -SoftwareUpdateName <String[]> -SoftwareUpdateGroupId <String>
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### ByName_Name
-```
-Remove-CMSoftwareUpdateFromGroup [-Force] -SoftwareUpdateName <String[]> -SoftwareUpdateGroupName <String>
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### ByName_Object
-```
-Remove-CMSoftwareUpdateFromGroup [-Force] -SoftwareUpdateName <String[]> -SoftwareUpdateGroup <IResultObject>
+Remove-CMSoftwareUpdateFromGroup [-Force] -SoftwareUpdateGroupId <String> -SoftwareUpdateId <String[]>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -67,6 +37,36 @@ Remove-CMSoftwareUpdateFromGroup [-Force] -SoftwareUpdate <IResultObject[]> -Sof
 Remove-CMSoftwareUpdateFromGroup [-Force] -SoftwareUpdate <IResultObject[]>
  -SoftwareUpdateGroup <IResultObject> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
+```
+
+### ById_Object
+```
+Remove-CMSoftwareUpdateFromGroup [-Force] -SoftwareUpdateGroup <IResultObject> -SoftwareUpdateId <String[]>
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### ByName_Object
+```
+Remove-CMSoftwareUpdateFromGroup [-Force] -SoftwareUpdateGroup <IResultObject> -SoftwareUpdateName <String[]>
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### ByName_Id
+```
+Remove-CMSoftwareUpdateFromGroup [-Force] -SoftwareUpdateGroupId <String> -SoftwareUpdateName <String[]>
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### ById_Name
+```
+Remove-CMSoftwareUpdateFromGroup [-Force] -SoftwareUpdateGroupName <String> -SoftwareUpdateId <String[]>
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### ByName_Name
+```
+Remove-CMSoftwareUpdateFromGroup [-Force] -SoftwareUpdateGroupName <String> -SoftwareUpdateName <String[]>
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -159,7 +159,7 @@ Accept wildcard characters: False
 ### -SoftwareUpdateGroup
 ```yaml
 Type: IResultObject
-Parameter Sets: ById_Object, ByName_Object, ByObject_Object
+Parameter Sets: ByObject_Object, ById_Object, ByName_Object
 Aliases:
 
 Required: True
@@ -172,7 +172,7 @@ Accept wildcard characters: False
 ### -SoftwareUpdateGroupId
 ```yaml
 Type: String
-Parameter Sets: ById_Id, ByName_Id, ByObject_Id
+Parameter Sets: ById_Id, ByObject_Id, ByName_Id
 Aliases:
 
 Required: True
@@ -185,7 +185,7 @@ Accept wildcard characters: False
 ### -SoftwareUpdateGroupName
 ```yaml
 Type: String
-Parameter Sets: ById_Name, ByName_Name, ByObject_Name
+Parameter Sets: ByObject_Name, ById_Name, ByName_Name
 Aliases:
 
 Required: True
@@ -198,7 +198,7 @@ Accept wildcard characters: False
 ### -SoftwareUpdateId
 ```yaml
 Type: String[]
-Parameter Sets: ById_Id, ById_Name, ById_Object
+Parameter Sets: ById_Id, ById_Object, ById_Name
 Aliases: SoftwareUpdateIds
 
 Required: True
@@ -211,7 +211,7 @@ Accept wildcard characters: False
 ### -SoftwareUpdateName
 ```yaml
 Type: String[]
-Parameter Sets: ByName_Id, ByName_Name, ByName_Object
+Parameter Sets: ByName_Object, ByName_Id, ByName_Name
 Aliases: SoftwareUpdateNames
 
 Required: True

@@ -22,7 +22,7 @@ Rename-CMCategory -InputObject <IResultObject> -NewName <String> [-PassThru] [-D
 
 ### RenameCategoryByName
 ```
-Rename-CMCategory -Name <String> -CategoryType <CategoryType> -NewName <String> [-PassThru]
+Rename-CMCategory -CategoryType <CategoryType> -Name <String> -NewName <String> [-PassThru]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

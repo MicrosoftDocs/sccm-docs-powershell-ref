@@ -16,25 +16,25 @@ Configure a phased deployment for an application.
 
 ### SearchByValue
 ```
-Set-CMApplicationPhasedDeployment -InputObject <IResultObject> [-NewName <String>] [-Description <String>]
+Set-CMApplicationPhasedDeployment [-Description <String>] -InputObject <IResultObject> [-NewName <String>]
  [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchById
 ```
-Set-CMApplicationPhasedDeployment [-NewName <String>] [-Description <String>] [-PassThru] -Id <String>
+Set-CMApplicationPhasedDeployment [-Description <String>] [-NewName <String>] [-PassThru] -Id <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByName
 ```
-Set-CMApplicationPhasedDeployment [-NewName <String>] [-Description <String>] [-PassThru] -Name <String>
+Set-CMApplicationPhasedDeployment [-Description <String>] [-NewName <String>] [-PassThru] -Name <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-Applies to version 2006 and later. Configure a phased deployment for an application. For more information, see [Create phased deployments](https://docs.microsoft.com/mem/configmgr/osd/deploy-use/create-phased-deployment-for-task-sequence).
+Applies to version 2006 and later. Configure a phased deployment for an application. For more information, see [Create phased deployments](/mem/configmgr/osd/deploy-use/create-phased-deployment-for-task-sequence).
 
 ## EXAMPLES
 
@@ -249,4 +249,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Suspend-CMPhasedDeployment](Suspend-CMPhasedDeployment.md)
 
-[Create phased deployments](https://docs.microsoft.com/mem/configmgr/osd/deploy-use/create-phased-deployment-for-task-sequence)
+[Create phased deployments](/mem/configmgr/osd/deploy-use/create-phased-deployment-for-task-sequence)

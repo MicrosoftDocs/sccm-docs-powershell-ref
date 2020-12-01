@@ -17,16 +17,15 @@ Creates a Configuration Manager configuration item.
 
 ### NewChild (Default)
 ```
-New-CMConfigurationItem -Name <String> [-Description <String>] [-Category <String[]>]
+New-CMConfigurationItem [-Category <String[]>] [-Description <String>] -Name <String>
  -ParentConfigurationItem <IResultObject> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
  [-Confirm] [<CommonParameters>]
 ```
 
 ### New
 ```
-New-CMConfigurationItem -Name <String> [-Description <String>] [-Category <String[]>]
- -CreationType <CICreationType> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+New-CMConfigurationItem [-Category <String[]>] -CreationType <CICreationType> [-Description <String>]
+ -Name <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -224,7 +223,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Introduction to Compliance Settings in Configuration Manager](https://docs.microsoft.com/mem/configmgr/compliance/understand/ensure-device-compliance)
+[Introduction to Compliance Settings in Configuration Manager](/mem/configmgr/compliance/understand/ensure-device-compliance)
 
 [Get-CMConfigurationItem](Get-CMConfigurationItem.md)
 

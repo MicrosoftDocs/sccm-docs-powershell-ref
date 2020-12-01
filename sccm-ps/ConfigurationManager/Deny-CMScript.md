@@ -17,13 +17,13 @@ Denies a Configuration Manager PowerShell script.
 
 ### ByScript
 ```
-Deny-CMScript -InputObject <IResultObject> [-Comment <String>] [-DisableWildcardHandling]
+Deny-CMScript [-Comment <String>] -InputObject <IResultObject> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByScriptId
 ```
-Deny-CMScript -ScriptGuid <String> [-Comment <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Deny-CMScript [-Comment <String>] -ScriptGuid <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

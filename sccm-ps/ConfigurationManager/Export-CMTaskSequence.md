@@ -17,22 +17,22 @@ Exports a Configuration Manager task sequence.
 
 ### SearchPackageByNameMandatory (Default)
 ```
-Export-CMTaskSequence -Name <String> -ExportFilePath <String> [-WithDependence <Boolean>]
- [-WithContent <Boolean>] [-Comment <String>] [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Export-CMTaskSequence [-Comment <String>] -ExportFilePath <String> [-Force] -Name <String>
+ [-WithContent <Boolean>] [-WithDependence <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByValueMandatory
 ```
-Export-CMTaskSequence -InputObject <IResultObject> -ExportFilePath <String> [-WithDependence <Boolean>]
- [-WithContent <Boolean>] [-Comment <String>] [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Export-CMTaskSequence [-Comment <String>] -ExportFilePath <String> [-Force] -InputObject <IResultObject>
+ [-WithContent <Boolean>] [-WithDependence <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchPackageByIdMandatory
 ```
-Export-CMTaskSequence -TaskSequencePackageId <String> -ExportFilePath <String> [-WithDependence <Boolean>]
- [-WithContent <Boolean>] [-Comment <String>] [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Export-CMTaskSequence [-Comment <String>] -ExportFilePath <String> [-Force] -TaskSequencePackageId <String>
+ [-WithContent <Boolean>] [-WithDependence <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

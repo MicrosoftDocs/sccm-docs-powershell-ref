@@ -22,9 +22,9 @@ Set-CMClientSettingComplianceSetting [-Enable <Boolean>] [-EnableUserDataAndProf
 
 ### SetDefaultSetting
 ```
-Set-CMClientSettingComplianceSetting [-Schedule <IResultObject>] [-Enable <Boolean>]
- [-EnableUserDataAndProfile <Boolean>] [-DefaultSetting] [-PassThru] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMClientSettingComplianceSetting [-Enable <Boolean>] [-EnableUserDataAndProfile <Boolean>]
+ [-Schedule <IResultObject>] [-DefaultSetting] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetCustomSettingByValue

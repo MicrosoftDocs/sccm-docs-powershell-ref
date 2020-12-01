@@ -16,19 +16,19 @@ Removes a Configuration Manager status message query.
 
 ### SearchByValueMandatory (Default)
 ```
-Remove-CMStatusMessageQuery -InputObject <IResultObject> [-Force] [-DisableWildcardHandling]
+Remove-CMStatusMessageQuery [-Force] -InputObject <IResultObject> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory
 ```
-Remove-CMStatusMessageQuery -Id <String> [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+Remove-CMStatusMessageQuery [-Force] -Id <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
  [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByNameMandatory
 ```
-Remove-CMStatusMessageQuery -Name <String> [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Remove-CMStatusMessageQuery [-Force] -Name <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

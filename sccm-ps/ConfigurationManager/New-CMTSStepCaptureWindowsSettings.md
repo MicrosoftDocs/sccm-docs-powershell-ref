@@ -14,8 +14,8 @@ schema: 2.0.0
 
 ```
 New-CMTSStepCaptureWindowsSettings [-MigrateComputerName <Boolean>] [-MigrateRegistrationInfo <Boolean>]
- [-MigrateTimeZone <Boolean>] -Name <String> [-Description <String>] [-ContinueOnError] [-Disable]
- [-Condition <IResultObject[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [-MigrateTimeZone <Boolean>] [-Condition <IResultObject[]>] [-ContinueOnError] [-Description <String>]
+ [-Disable] -Name <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 

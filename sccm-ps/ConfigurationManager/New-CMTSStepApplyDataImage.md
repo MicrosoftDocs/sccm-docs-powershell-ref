@@ -13,10 +13,10 @@ schema: 2.0.0
 ## SYNTAX
 
 ```
-New-CMTSStepApplyDataImage -ImagePackage <IResultObject> -ImagePackageIndex <Int32>
- [-DestinationVariable <String>] [-Destination <DestinationType>] [-DestinationDisk <Int32>]
- [-DestinationPartition <Int32>] [-DestinationDriveLetter <String>] [-WipePartition <Boolean>] -Name <String>
- [-Description <String>] [-ContinueOnError] [-Disable] [-Condition <IResultObject[]>]
+New-CMTSStepApplyDataImage [-Destination <DestinationType>] [-DestinationDisk <Int32>]
+ [-DestinationDriveLetter <String>] [-DestinationPartition <Int32>] [-DestinationVariable <String>]
+ -ImagePackage <IResultObject> -ImagePackageIndex <Int32> [-WipePartition <Boolean>]
+ [-Condition <IResultObject[]>] [-ContinueOnError] [-Description <String>] [-Disable] -Name <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

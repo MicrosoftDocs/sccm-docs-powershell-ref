@@ -22,7 +22,7 @@ Remove-CMManagementPoint [-Force] -InputObject <IResultObject> [-DisableWildcard
 
 ### SearchByNameMandatory
 ```
-Remove-CMManagementPoint [-SiteCode <String>] [-Force] [-SiteSystemServerName] <String>
+Remove-CMManagementPoint [-Force] [-SiteCode <String>] [-SiteSystemServerName] <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

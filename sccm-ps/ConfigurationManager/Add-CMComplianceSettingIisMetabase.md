@@ -26,7 +26,7 @@ Add-CMComplianceSettingIisMetabase -DataType <SettingDataType> -Path <String> -P
 Add-CMComplianceSettingIisMetabase -DataType <SettingDataType> -Path <String> -PropertyId <UInt32>
  [-Description <String>] -Existence <ExistenceType> [-ExistentialRule] [-ExpectedValue <String[]>]
  [-ExpressionOperator <RuleExpressionOperator>] -InputObject <PSObject> -Name <String>
- [-NoncomplianceSeverity <NoncomplianceSeverity>] [-RuleDescription <String>] -RuleName <String> [-PassThru]
+ [-NoncomplianceSeverity <NoncomplianceSeverity>] [-PassThru] [-RuleDescription <String>] -RuleName <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -34,8 +34,8 @@ Add-CMComplianceSettingIisMetabase -DataType <SettingDataType> -Path <String> -P
 ```
 Add-CMComplianceSettingIisMetabase -DataType <SettingDataType> -Path <String> -PropertyId <UInt32>
  [-Description <String>] -ExpectedValue <String[]> -ExpressionOperator <RuleExpressionOperator>
- -InputObject <PSObject> -Name <String> [-NoncomplianceSeverity <NoncomplianceSeverity>] [-ReportNoncompliance]
- [-RuleDescription <String>] -RuleName <String> [-ValueRule] [-PassThru] [-DisableWildcardHandling]
+ -InputObject <PSObject> -Name <String> [-NoncomplianceSeverity <NoncomplianceSeverity>] [-PassThru]
+ [-ReportNoncompliance] [-RuleDescription <String>] -RuleName <String> [-ValueRule] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

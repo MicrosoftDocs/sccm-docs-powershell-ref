@@ -13,6 +13,12 @@ Use this cmdlet to remove a phased deployment for software updates.
 
 ## SYNTAX
 
+### SearchBySoftwareUpdate
+```
+Remove-CMSoftwareUpdatePhasedDeployment -SoftwareUpdate <IResultObject> [-Force] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
 ### SearchBySoftwareUpdateGroup
 ```
 Remove-CMSoftwareUpdatePhasedDeployment -SoftwareUpdateGroup <IResultObject> [-Force]
@@ -31,12 +37,6 @@ Remove-CMSoftwareUpdatePhasedDeployment -SoftwareUpdateGroupName <String> [-Forc
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### SearchBySoftwareUpdate
-```
-Remove-CMSoftwareUpdatePhasedDeployment -SoftwareUpdate <IResultObject> [-Force] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
 ### SearchBySoftwareUpdateId
 ```
 Remove-CMSoftwareUpdatePhasedDeployment -SoftwareUpdateId <String> [-Force] [-DisableWildcardHandling]
@@ -51,7 +51,7 @@ Remove-CMSoftwareUpdatePhasedDeployment -SoftwareUpdateName <String> [-Force] [-
 
 ### SearchByValue
 ```
-Remove-CMSoftwareUpdatePhasedDeployment -InputObject <IResultObject> [-Force] [-DisableWildcardHandling]
+Remove-CMSoftwareUpdatePhasedDeployment [-Force] -InputObject <IResultObject> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

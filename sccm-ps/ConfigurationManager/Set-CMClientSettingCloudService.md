@@ -16,23 +16,23 @@ Sets a client setting cloud service.
 
 ### SetCustomSettingByName (Default)
 ```
-Set-CMClientSettingCloudService [-AllowCloudDistributionPoint <Boolean>] [-AutoAzureADJoin <Boolean>]
- [-AllowCloudManagementGateway <Boolean>] -Name <String> [-PassThru] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMClientSettingCloudService [-AllowCloudDistributionPoint <Boolean>]
+ [-AllowCloudManagementGateway <Boolean>] [-AutoAzureADJoin <Boolean>] -Name <String> [-PassThru]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetDefaultSetting
 ```
-Set-CMClientSettingCloudService [-AllowCloudDistributionPoint <Boolean>] [-AutoAzureADJoin <Boolean>]
- [-AllowCloudManagementGateway <Boolean>] [-DefaultSetting] [-PassThru] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMClientSettingCloudService [-AllowCloudDistributionPoint <Boolean>]
+ [-AllowCloudManagementGateway <Boolean>] [-AutoAzureADJoin <Boolean>] [-DefaultSetting] [-PassThru]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetCustomSettingByValue
 ```
-Set-CMClientSettingCloudService [-AllowCloudDistributionPoint <Boolean>] [-AutoAzureADJoin <Boolean>]
- [-AllowCloudManagementGateway <Boolean>] -InputObject <IResultObject> [-PassThru] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMClientSettingCloudService [-AllowCloudDistributionPoint <Boolean>]
+ [-AllowCloudManagementGateway <Boolean>] [-AutoAzureADJoin <Boolean>] -InputObject <IResultObject> [-PassThru]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

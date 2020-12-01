@@ -15,8 +15,8 @@ Creates a file replication route for Configuration Manager.
 ## SYNTAX
 
 ```
-New-CMFileReplicationRoute -SourceSiteCode <String> -DestinationSiteCode <String>
- [-DestinationSiteServerName <String>] [-FileReplicationAccountName <String>] [-DisableWildcardHandling]
+New-CMFileReplicationRoute -DestinationSiteCode <String> [-DestinationSiteServerName <String>]
+ [-FileReplicationAccountName <String>] -SourceSiteCode <String> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

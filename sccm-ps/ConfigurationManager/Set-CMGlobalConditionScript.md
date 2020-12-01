@@ -18,14 +18,14 @@ Sets a Script type global condition in Configuration Manager.
 ### SetScriptFromFile (Default)
 ```
 Set-CMGlobalConditionScript [-FilePath <String>] [-ScriptLanguage <ScriptingLanguage>]
- [-UseLoggedOnUserCredential <Boolean>] [-Use32BitHost <Boolean>] -Name <String> [-PassThru]
+ [-Use32BitHost <Boolean>] [-UseLoggedOnUserCredential <Boolean>] -Name <String> [-PassThru]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetScriptFromText
 ```
-Set-CMGlobalConditionScript [-ScriptText <String>] [-ScriptLanguage <ScriptingLanguage>]
- [-UseLoggedOnUserCredential <Boolean>] [-Use32BitHost <Boolean>] -Name <String> [-PassThru]
+Set-CMGlobalConditionScript [-ScriptLanguage <ScriptingLanguage>] [-ScriptText <String>]
+ [-Use32BitHost <Boolean>] [-UseLoggedOnUserCredential <Boolean>] -Name <String> [-PassThru]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

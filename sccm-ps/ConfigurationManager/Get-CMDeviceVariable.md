@@ -1,4 +1,4 @@
----
+﻿---
 description: Gets device variables of a Configuration Manager device.
 external help file: AdminUI.PS.Collections.dll-Help.xml
 Module Name: ConfigurationManager
@@ -20,15 +20,15 @@ Get-CMDeviceVariable -InputObject <IResultObject> [-VariableName <String>] [-Dis
  [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
-### SearchByIdMandatory
-```
-Get-CMDeviceVariable -ResourceId <String> [-VariableName <String>] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [<CommonParameters>]
-```
-
 ### SearchByNameMandatory
 ```
 Get-CMDeviceVariable -DeviceName <String> [-VariableName <String>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [<CommonParameters>]
+```
+
+### SearchByIdMandatory
+```
+Get-CMDeviceVariable -ResourceId <String> [-VariableName <String>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [<CommonParameters>]
 ```
 

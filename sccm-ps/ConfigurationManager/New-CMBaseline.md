@@ -15,7 +15,7 @@ Creates a Configuration Manager baseline.
 ## SYNTAX
 
 ```
-New-CMBaseline -Name <String> [-Description <String>] [-Category <String[]>] [-AllowComanagedClients]
+New-CMBaseline [-AllowComanagedClients] [-Category <String[]>] [-Description <String>] -Name <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

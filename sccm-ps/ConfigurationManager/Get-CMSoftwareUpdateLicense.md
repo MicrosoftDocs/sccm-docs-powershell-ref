@@ -1,4 +1,4 @@
----
+﻿---
 description: Gets a EULA or SLT for a software update in Configuration Manager.
 external help file: AdminUI.PS.Sum.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,13 +16,13 @@ Gets a EULA or SLT for a software update in Configuration Manager.
 
 ### SearchByName (Default)
 ```
-Get-CMSoftwareUpdateLicense [-Name <String>] [-EulaAcceptance <EulaAcceptance>] [-PassThru]
+Get-CMSoftwareUpdateLicense [-EulaAcceptance <EulaAcceptance>] [-Name <String>] [-PassThru]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ### SearchByValueMandatory
 ```
-Get-CMSoftwareUpdateLicense -InputObject <IResultObject> [-EulaAcceptance <EulaAcceptance>] [-PassThru]
+Get-CMSoftwareUpdateLicense [-EulaAcceptance <EulaAcceptance>] -InputObject <IResultObject> [-PassThru]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 

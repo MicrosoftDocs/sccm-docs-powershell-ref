@@ -16,25 +16,24 @@ Modifies VHD images.
 
 ### SetByValue (Default)
 ```
-Set-CMVhd -InputObject <IResultObject> [-NewName <String>] [-VhdFilePath <String>] [-Version <String>]
- [-Description <String>] [-TaskSequencePackageId <String>] -DistributionPointServerName <String[]>
- [-Timeout <TimeSpan>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
-```
-
-### SetById
-```
-Set-CMVhd -VhdPackageId <String> [-NewName <String>] [-VhdFilePath <String>] [-Version <String>]
- [-Description <String>] [-TaskSequencePackageId <String>] -DistributionPointServerName <String[]>
- [-Timeout <TimeSpan>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+Set-CMVhd [-Description <String>] -DistributionPointServerName <String[]> -InputObject <IResultObject>
+ [-NewName <String>] [-TaskSequencePackageId <String>] [-Timeout <TimeSpan>] [-Version <String>]
+ [-VhdFilePath <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ### SetByName
 ```
-Set-CMVhd -Name <String> [-NewName <String>] [-VhdFilePath <String>] [-Version <String>]
- [-Description <String>] [-TaskSequencePackageId <String>] -DistributionPointServerName <String[]>
- [-Timeout <TimeSpan>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+Set-CMVhd [-Description <String>] -DistributionPointServerName <String[]> -Name <String> [-NewName <String>]
+ [-TaskSequencePackageId <String>] [-Timeout <TimeSpan>] [-Version <String>] [-VhdFilePath <String>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SetById
+```
+Set-CMVhd [-Description <String>] -DistributionPointServerName <String[]> [-NewName <String>]
+ [-TaskSequencePackageId <String>] [-Timeout <TimeSpan>] [-Version <String>] [-VhdFilePath <String>]
+ -VhdPackageId <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 

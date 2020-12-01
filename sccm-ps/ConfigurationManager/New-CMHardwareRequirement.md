@@ -15,8 +15,9 @@ Creates a Configuration Manager hardware requirement object for a product.
 ## SYNTAX
 
 ```
-New-CMHardwareRequirement -Product <String> -MinCpu <Int32> -MinDiskFree <Int64> -MinDiskSize <Int64>
- -MinRam <Int64> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+New-CMHardwareRequirement -MinCpu <Int32> -MinDiskFree <Int64> -MinDiskSize <Int64> -MinRam <Int64>
+ -Product <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

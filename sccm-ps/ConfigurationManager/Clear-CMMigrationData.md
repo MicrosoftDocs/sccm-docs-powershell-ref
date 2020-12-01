@@ -15,7 +15,7 @@ Deletes historical data about a data migration operation.
 ## SYNTAX
 
 ```
-Clear-CMMigrationData -SourceSiteCode <String> [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Clear-CMMigrationData [-Force] -SourceSiteCode <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

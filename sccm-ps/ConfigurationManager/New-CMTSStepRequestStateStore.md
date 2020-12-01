@@ -13,10 +13,10 @@ schema: 2.0.0
 ## SYNTAX
 
 ```
-New-CMTSStepRequestStateStore [-RetryCount <Int32>] [-RetryTime <Int32>] [-FallbackToAccount <Boolean>]
- [-RequestOption <RequestType>] -Name <String> [-Description <String>] [-ContinueOnError] [-Disable]
- [-Condition <IResultObject[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+New-CMTSStepRequestStateStore [-FallbackToAccount <Boolean>] [-RequestOption <RequestType>]
+ [-RetryCount <Int32>] [-RetryTime <Int32>] [-Condition <IResultObject[]>] [-ContinueOnError]
+ [-Description <String>] [-Disable] -Name <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

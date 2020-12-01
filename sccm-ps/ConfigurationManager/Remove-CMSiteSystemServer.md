@@ -22,7 +22,7 @@ Remove-CMSiteSystemServer [-Force] -InputObject <IResultObject> [-DisableWildcar
 
 ### SearchByName
 ```
-Remove-CMSiteSystemServer [-SiteCode <String>] [-Force] [-SiteSystemServerName] <String>
+Remove-CMSiteSystemServer [-Force] [-SiteCode <String>] [-SiteSystemServerName] <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

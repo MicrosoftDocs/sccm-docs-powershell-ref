@@ -9,18 +9,19 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ROBOTS: NOINDEX
 ---
 
 # Configuration Manager Cmdlet Library changes for Current Branch 1706
 
  >[!NOTE]
- > System Center Configuration Current Branch 1702 is the baseline for these changes. See [Configuration Manager Cmdlet Library changes for Current Branch 1702](https://docs.microsoft.com/powershell/sccm/configurationmanager/1702_release_notes) for more details.
+ > System Center Configuration Current Branch 1702 is the baseline for these changes. See [Configuration Manager Cmdlet Library changes for Current Branch 1702](1702_release_notes.md) for more details.
 
 ## Important changes
 
 ### Documentation library updates
 
-For the latest cmdlet library documentation, see [ConfigurationManager module reference](https://docs.microsoft.com/powershell/module/configurationmanager/?view=sccm-ps).
+For the latest cmdlet library documentation, see [ConfigurationManager module reference](/powershell/module/configurationmanager/).
 
 ### Administrator console Integrated Scripting Environment (ISE) experience improvements
 The script that is generated when launching ISE from the administrator console has been updated to allow for more customization and reusability. 

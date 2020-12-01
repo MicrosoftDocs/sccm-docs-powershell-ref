@@ -15,9 +15,8 @@ Creates an App-V virtual environment.
 ## SYNTAX
 
 ```
-New-CMAppVVirtualEnvironment -Name <String> [-Description <String>]
- -ApplicationGroup <VirtualEnvironmentGroup[]> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+New-CMAppVVirtualEnvironment -ApplicationGroup <VirtualEnvironmentGroup[]> [-Description <String>]
+ -Name <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

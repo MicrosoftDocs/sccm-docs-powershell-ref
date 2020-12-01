@@ -15,8 +15,8 @@ Sets how often Configuration Manager evaluates collections for membership.
 ## SYNTAX
 
 ```
-Set-CMCollectionMembershipEvaluationComponent [-SiteSystemServerName <String>] [-SiteCode <String>]
- -EvaluationMins <Int32> [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+Set-CMCollectionMembershipEvaluationComponent -EvaluationMins <Int32> [-PassThru] [-SiteCode <String>]
+ [-SiteSystemServerName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 

@@ -17,33 +17,33 @@ Sets a Windows Phone app package deployment type.
 ### ByAppName (Default)
 ```
 Set-CMWindowsPhoneDeploymentType [-AddRequirement <Rule[]>] -ApplicationName <String>
- -DeploymentTypeName <String> [-NewName <String>] [-ContentLocation <String>] [-RemoveRequirement <Rule[]>]
- [-RemoveLanguage <String[]>] [-PassThru] [-AddLanguage <String[]>] [-Comment <String>] [-Force]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### ByAppId
-```
-Set-CMWindowsPhoneDeploymentType [-AddRequirement <Rule[]>] -ApplicationId <Int32> -DeploymentTypeName <String>
- [-NewName <String>] [-ContentLocation <String>] [-RemoveRequirement <Rule[]>] [-RemoveLanguage <String[]>]
- [-PassThru] [-AddLanguage <String[]>] [-Comment <String>] [-Force] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-ContentLocation <String>] -DeploymentTypeName <String> [-NewName <String>] [-PassThru]
+ [-RemoveLanguage <String[]>] [-RemoveRequirement <Rule[]>] [-AddLanguage <String[]>] [-Comment <String>]
+ [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByAppValue
 ```
-Set-CMWindowsPhoneDeploymentType [-AddRequirement <Rule[]>] -DeploymentTypeName <String>
- -Application <IResultObject> [-NewName <String>] [-ContentLocation <String>] [-RemoveRequirement <Rule[]>]
- [-RemoveLanguage <String[]>] [-PassThru] [-AddLanguage <String[]>] [-Comment <String>] [-Force]
+Set-CMWindowsPhoneDeploymentType [-AddRequirement <Rule[]>] -Application <IResultObject>
+ [-ContentLocation <String>] -DeploymentTypeName <String> [-NewName <String>] [-PassThru]
+ [-RemoveLanguage <String[]>] [-RemoveRequirement <Rule[]>] [-AddLanguage <String[]>] [-Comment <String>]
+ [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### ByAppId
+```
+Set-CMWindowsPhoneDeploymentType [-AddRequirement <Rule[]>] -ApplicationId <Int32> [-ContentLocation <String>]
+ -DeploymentTypeName <String> [-NewName <String>] [-PassThru] [-RemoveLanguage <String[]>]
+ [-RemoveRequirement <Rule[]>] [-AddLanguage <String[]>] [-Comment <String>] [-Force]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByDTValue
 ```
-Set-CMWindowsPhoneDeploymentType [-AddRequirement <Rule[]>] -InputObject <IResultObject> [-NewName <String>]
- [-ContentLocation <String>] [-RemoveRequirement <Rule[]>] [-RemoveLanguage <String[]>] [-PassThru]
- [-AddLanguage <String[]>] [-Comment <String>] [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMWindowsPhoneDeploymentType [-AddRequirement <Rule[]>] [-ContentLocation <String>]
+ -InputObject <IResultObject> [-NewName <String>] [-PassThru] [-RemoveLanguage <String[]>]
+ [-RemoveRequirement <Rule[]>] [-AddLanguage <String[]>] [-Comment <String>] [-Force]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -203,7 +203,7 @@ Specifies a display name for this deployment type.
 
 ```yaml
 Type: String
-Parameter Sets: ByAppName, ByAppId, ByAppValue
+Parameter Sets: ByAppName, ByAppValue, ByAppId
 Aliases:
 
 Required: True

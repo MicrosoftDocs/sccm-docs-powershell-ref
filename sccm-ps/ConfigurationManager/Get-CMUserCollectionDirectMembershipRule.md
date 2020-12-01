@@ -67,7 +67,7 @@ The **Get-CMUserCollectionDirectMembershipRule** cmdlet retrieves the direct rul
 You can specify the user collections by using their names, IDs, or by specifying an object that represents the collections.
 
 A direct rule lets you explicitly choose the members of the user collection.
-For more information about collection rules, see [Introduction to Collections in Configuration Manager](https://docs.microsoft.com/mem/configmgr/core/clients/manage/collections/introduction-to-collections).
+For more information about collection rules, see [Introduction to Collections in Configuration Manager](/mem/configmgr/core/clients/manage/collections/introduction-to-collections).
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

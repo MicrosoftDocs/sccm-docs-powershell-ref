@@ -17,13 +17,13 @@ Approves a Configuration Manager PowerShell script.
 
 ### ByScript
 ```
-Approve-CMScript -InputObject <IResultObject> [-Comment <String>] [-DisableWildcardHandling]
+Approve-CMScript [-Comment <String>] -InputObject <IResultObject> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByScriptId
 ```
-Approve-CMScript -ScriptGuid <String> [-Comment <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Approve-CMScript [-Comment <String>] -ScriptGuid <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

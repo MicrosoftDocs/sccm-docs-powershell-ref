@@ -13,10 +13,10 @@ schema: 2.0.0
 ## SYNTAX
 
 ```
-New-CMTSStepCaptureUserState -Package <IResultObject> [-ModeOption <ModeType>] [-ConfigFile <String[]>]
- [-VerboseLogging <Boolean>] [-SkipEncryptedFile <Boolean>] [-FileAccessOption <FileAccessType>]
- [-ContinueOnLockedFile <Boolean>] [-UseHardLinks <Boolean>] [-OfflineUserState <Boolean>] -Name <String>
- [-Description <String>] [-ContinueOnError] [-Disable] [-Condition <IResultObject[]>]
+New-CMTSStepCaptureUserState [-ConfigFile <String[]>] [-ContinueOnLockedFile <Boolean>]
+ [-FileAccessOption <FileAccessType>] [-ModeOption <ModeType>] [-OfflineUserState <Boolean>]
+ -Package <IResultObject> [-SkipEncryptedFile <Boolean>] [-UseHardLinks <Boolean>] [-VerboseLogging <Boolean>]
+ [-Condition <IResultObject[]>] [-ContinueOnError] [-Description <String>] [-Disable] -Name <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

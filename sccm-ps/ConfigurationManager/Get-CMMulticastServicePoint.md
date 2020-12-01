@@ -1,4 +1,4 @@
----
+﻿---
 description: Gets a multicast service point.
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,7 +16,7 @@ Gets a multicast service point.
 
 ### SearchByName (Default)
 ```
-Get-CMMulticastServicePoint [-SiteCode <String>] [[-SiteSystemServerName] <String>] [-AllSite]
+Get-CMMulticastServicePoint [-AllSite] [-SiteCode <String>] [[-SiteSystemServerName] <String>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 

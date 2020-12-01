@@ -16,29 +16,27 @@ Sets a client setting endpoint protection.
 
 ### SetCustomSettingByName (Default)
 ```
-Set-CMClientSettingEndpointProtection [-Enable <Boolean>] [-InstallEndpointProtectionClient <Boolean>]
- [-RemoveThirdParty <Boolean>] [-SuppressReboot <Boolean>] [-ForceRebootHr <Int32>]
- [-DisableFirstSignatureUpdate <Boolean>] [-PersistInstallation <Boolean>]
- [-OverrideMaintenanceWindow <Boolean>] -Name <String> [-PassThru] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMClientSettingEndpointProtection [-DisableFirstSignatureUpdate <Boolean>] [-Enable <Boolean>]
+ [-ForceRebootHr <Int32>] [-InstallEndpointProtectionClient <Boolean>] [-OverrideMaintenanceWindow <Boolean>]
+ [-PersistInstallation <Boolean>] [-RemoveThirdParty <Boolean>] [-SuppressReboot <Boolean>] -Name <String>
+ [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetDefaultSetting
 ```
-Set-CMClientSettingEndpointProtection [-Enable <Boolean>] [-InstallEndpointProtectionClient <Boolean>]
- [-RemoveThirdParty <Boolean>] [-SuppressReboot <Boolean>] [-ForceRebootHr <Int32>]
- [-DisableFirstSignatureUpdate <Boolean>] [-PersistInstallation <Boolean>]
- [-OverrideMaintenanceWindow <Boolean>] [-DefaultSetting] [-PassThru] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMClientSettingEndpointProtection [-DisableFirstSignatureUpdate <Boolean>] [-Enable <Boolean>]
+ [-ForceRebootHr <Int32>] [-InstallEndpointProtectionClient <Boolean>] [-OverrideMaintenanceWindow <Boolean>]
+ [-PersistInstallation <Boolean>] [-RemoveThirdParty <Boolean>] [-SuppressReboot <Boolean>] [-DefaultSetting]
+ [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetCustomSettingByValue
 ```
-Set-CMClientSettingEndpointProtection [-Enable <Boolean>] [-InstallEndpointProtectionClient <Boolean>]
- [-RemoveThirdParty <Boolean>] [-SuppressReboot <Boolean>] [-ForceRebootHr <Int32>]
- [-DisableFirstSignatureUpdate <Boolean>] [-PersistInstallation <Boolean>]
- [-OverrideMaintenanceWindow <Boolean>] -InputObject <IResultObject> [-PassThru] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMClientSettingEndpointProtection [-DisableFirstSignatureUpdate <Boolean>] [-Enable <Boolean>]
+ [-ForceRebootHr <Int32>] [-InstallEndpointProtectionClient <Boolean>] [-OverrideMaintenanceWindow <Boolean>]
+ [-PersistInstallation <Boolean>] [-RemoveThirdParty <Boolean>] [-SuppressReboot <Boolean>]
+ -InputObject <IResultObject> [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

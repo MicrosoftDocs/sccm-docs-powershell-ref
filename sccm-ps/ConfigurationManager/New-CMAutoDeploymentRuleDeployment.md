@@ -17,53 +17,56 @@ Create a deployment for an automatic deployment rule.
 
 ### ByName (Default)
 ```
-New-CMAutoDeploymentRuleDeployment [-Name] <String> [-Collection <IResultObject>] [-CollectionName <String>]
- [-CollectionId <String>] [-EnableDeployment <Boolean>] [-SendWakeupPacket <Boolean>]
- [-VerboseLevel <VerboseLevelType>] [-UseUtc <Boolean>] [-AvailableImmediately <Boolean>]
- [-AvailableTime <Int32>] [-AvailableTimeUnit <TimeUnitType>] [-DeadlineImmediately <Boolean>]
- [-DeadlineTime <Int32>] [-DeadlineTimeUnit <TimeUnitType>] [-UserNotification <UserNotificationOption>]
- [-AllowSoftwareInstallationOutsideMaintenanceWindow <Boolean>] [-AllowRestart <Boolean>]
- [-SuppressRestartServer <Boolean>] [-SuppressRestartWorkstation <Boolean>] [-WriteFilterHandling <Boolean>]
- [-GenerateSuccessAlert <Boolean>] [-SuccessPercentage <Int32>] [-AlertTime <Int32>]
- [-AlertTimeUnit <TimeUnitType>] [-DisableOperationsManager <Boolean>]
- [-GenerateOperationsManagerAlert <Boolean>] [-NoInstallOnRemote <Boolean>] [-NoInstallOnUnprotected <Boolean>]
- [-UseBranchCache <Boolean>] [-AllowDownloadFromMicrosoftUpdate <Boolean>] [-AllowUseMeteredNetwork <Boolean>]
- [-SoftDeadlineEnabled <Boolean>] [-RequirePostRebootFullScan <Boolean>] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+New-CMAutoDeploymentRuleDeployment [-AlertTime <Int32>] [-AlertTimeUnit <TimeUnitType>]
+ [-AllowDownloadFromMicrosoftUpdate <Boolean>] [-AllowRestart <Boolean>]
+ [-AllowSoftwareInstallationOutsideMaintenanceWindow <Boolean>] [-AllowUseMeteredNetwork <Boolean>]
+ [-AvailableImmediately <Boolean>] [-AvailableTime <Int32>] [-AvailableTimeUnit <TimeUnitType>]
+ [-Collection <IResultObject>] [-CollectionId <String>] [-CollectionName <String>]
+ [-DeadlineImmediately <Boolean>] [-DeadlineTime <Int32>] [-DeadlineTimeUnit <TimeUnitType>]
+ [-DisableOperationsManager <Boolean>] [-EnableDeployment <Boolean>]
+ [-GenerateOperationsManagerAlert <Boolean>] [-GenerateSuccessAlert <Boolean>] [-Name] <String>
+ [-NoInstallOnRemote <Boolean>] [-NoInstallOnUnprotected <Boolean>] [-RequirePostRebootFullScan <Boolean>]
+ [-SendWakeupPacket <Boolean>] [-SoftDeadlineEnabled <Boolean>] [-SuccessPercentage <Int32>]
+ [-SuppressRestartServer <Boolean>] [-SuppressRestartWorkstation <Boolean>] [-UseBranchCache <Boolean>]
+ [-UserNotification <UserNotificationOption>] [-UseUtc <Boolean>] [-VerboseLevel <VerboseLevelType>]
+ [-WriteFilterHandling <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### ById
 ```
-New-CMAutoDeploymentRuleDeployment [-Id] <Int32> [-Collection <IResultObject>] [-CollectionName <String>]
- [-CollectionId <String>] [-EnableDeployment <Boolean>] [-SendWakeupPacket <Boolean>]
- [-VerboseLevel <VerboseLevelType>] [-UseUtc <Boolean>] [-AvailableImmediately <Boolean>]
- [-AvailableTime <Int32>] [-AvailableTimeUnit <TimeUnitType>] [-DeadlineImmediately <Boolean>]
- [-DeadlineTime <Int32>] [-DeadlineTimeUnit <TimeUnitType>] [-UserNotification <UserNotificationOption>]
- [-AllowSoftwareInstallationOutsideMaintenanceWindow <Boolean>] [-AllowRestart <Boolean>]
- [-SuppressRestartServer <Boolean>] [-SuppressRestartWorkstation <Boolean>] [-WriteFilterHandling <Boolean>]
- [-GenerateSuccessAlert <Boolean>] [-SuccessPercentage <Int32>] [-AlertTime <Int32>]
- [-AlertTimeUnit <TimeUnitType>] [-DisableOperationsManager <Boolean>]
- [-GenerateOperationsManagerAlert <Boolean>] [-NoInstallOnRemote <Boolean>] [-NoInstallOnUnprotected <Boolean>]
- [-UseBranchCache <Boolean>] [-AllowDownloadFromMicrosoftUpdate <Boolean>] [-AllowUseMeteredNetwork <Boolean>]
- [-SoftDeadlineEnabled <Boolean>] [-RequirePostRebootFullScan <Boolean>] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+New-CMAutoDeploymentRuleDeployment [-AlertTime <Int32>] [-AlertTimeUnit <TimeUnitType>]
+ [-AllowDownloadFromMicrosoftUpdate <Boolean>] [-AllowRestart <Boolean>]
+ [-AllowSoftwareInstallationOutsideMaintenanceWindow <Boolean>] [-AllowUseMeteredNetwork <Boolean>]
+ [-AvailableImmediately <Boolean>] [-AvailableTime <Int32>] [-AvailableTimeUnit <TimeUnitType>]
+ [-Collection <IResultObject>] [-CollectionId <String>] [-CollectionName <String>]
+ [-DeadlineImmediately <Boolean>] [-DeadlineTime <Int32>] [-DeadlineTimeUnit <TimeUnitType>]
+ [-DisableOperationsManager <Boolean>] [-EnableDeployment <Boolean>]
+ [-GenerateOperationsManagerAlert <Boolean>] [-GenerateSuccessAlert <Boolean>] [-Id] <Int32>
+ [-NoInstallOnRemote <Boolean>] [-NoInstallOnUnprotected <Boolean>] [-RequirePostRebootFullScan <Boolean>]
+ [-SendWakeupPacket <Boolean>] [-SoftDeadlineEnabled <Boolean>] [-SuccessPercentage <Int32>]
+ [-SuppressRestartServer <Boolean>] [-SuppressRestartWorkstation <Boolean>] [-UseBranchCache <Boolean>]
+ [-UserNotification <UserNotificationOption>] [-UseUtc <Boolean>] [-VerboseLevel <VerboseLevelType>]
+ [-WriteFilterHandling <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### ByValue
 ```
-New-CMAutoDeploymentRuleDeployment [-InputObject] <IResultObject> [-Collection <IResultObject>]
- [-CollectionName <String>] [-CollectionId <String>] [-EnableDeployment <Boolean>]
- [-SendWakeupPacket <Boolean>] [-VerboseLevel <VerboseLevelType>] [-UseUtc <Boolean>]
+New-CMAutoDeploymentRuleDeployment [-AlertTime <Int32>] [-AlertTimeUnit <TimeUnitType>]
+ [-AllowDownloadFromMicrosoftUpdate <Boolean>] [-AllowRestart <Boolean>]
+ [-AllowSoftwareInstallationOutsideMaintenanceWindow <Boolean>] [-AllowUseMeteredNetwork <Boolean>]
  [-AvailableImmediately <Boolean>] [-AvailableTime <Int32>] [-AvailableTimeUnit <TimeUnitType>]
+ [-Collection <IResultObject>] [-CollectionId <String>] [-CollectionName <String>]
  [-DeadlineImmediately <Boolean>] [-DeadlineTime <Int32>] [-DeadlineTimeUnit <TimeUnitType>]
- [-UserNotification <UserNotificationOption>] [-AllowSoftwareInstallationOutsideMaintenanceWindow <Boolean>]
- [-AllowRestart <Boolean>] [-SuppressRestartServer <Boolean>] [-SuppressRestartWorkstation <Boolean>]
- [-WriteFilterHandling <Boolean>] [-GenerateSuccessAlert <Boolean>] [-SuccessPercentage <Int32>]
- [-AlertTime <Int32>] [-AlertTimeUnit <TimeUnitType>] [-DisableOperationsManager <Boolean>]
- [-GenerateOperationsManagerAlert <Boolean>] [-NoInstallOnRemote <Boolean>] [-NoInstallOnUnprotected <Boolean>]
- [-UseBranchCache <Boolean>] [-AllowDownloadFromMicrosoftUpdate <Boolean>] [-AllowUseMeteredNetwork <Boolean>]
- [-SoftDeadlineEnabled <Boolean>] [-RequirePostRebootFullScan <Boolean>] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-DisableOperationsManager <Boolean>] [-EnableDeployment <Boolean>]
+ [-GenerateOperationsManagerAlert <Boolean>] [-GenerateSuccessAlert <Boolean>] [-InputObject] <IResultObject>
+ [-NoInstallOnRemote <Boolean>] [-NoInstallOnUnprotected <Boolean>] [-RequirePostRebootFullScan <Boolean>]
+ [-SendWakeupPacket <Boolean>] [-SoftDeadlineEnabled <Boolean>] [-SuccessPercentage <Int32>]
+ [-SuppressRestartServer <Boolean>] [-SuppressRestartWorkstation <Boolean>] [-UseBranchCache <Boolean>]
+ [-UserNotification <UserNotificationOption>] [-UseUtc <Boolean>] [-VerboseLevel <VerboseLevelType>]
+ [-WriteFilterHandling <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -726,7 +729,6 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -736,8 +738,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### IResultObject#SMS_AdrDeploymentSettings
-
-For more information on this return object and its properties, see [SMS_AdrDeploymentSettings server WMI class](https://docs.microsoft.com/mem/configmgr/develop/reference/sum/sms_adrdeploymentsettings-server-wmi-class).
 
 ## NOTES
 

@@ -16,19 +16,19 @@ Removes an App-V virtual environment.
 
 ### SearchByValueMandatory (Default)
 ```
-Remove-CMAppVVirtualEnvironment -InputObject <IResultObject> [-Force] [-DisableWildcardHandling]
+Remove-CMAppVVirtualEnvironment [-Force] -InputObject <IResultObject> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### SearchByNameMandatory
-```
-Remove-CMAppVVirtualEnvironment -Name <String> [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory
 ```
-Remove-CMAppVVirtualEnvironment -Id <Int32[]> [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Remove-CMAppVVirtualEnvironment [-Force] -Id <Int32[]> [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SearchByNameMandatory
+```
+Remove-CMAppVVirtualEnvironment [-Force] -Name <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

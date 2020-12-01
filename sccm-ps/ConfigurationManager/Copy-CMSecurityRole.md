@@ -16,20 +16,20 @@ Creates a custom security role.
 
 ### CopyFromId (Default)
 ```
-Copy-CMSecurityRole -SourceRoleId <String> -Name <String> [-Description <String>] [-DisableWildcardHandling]
+Copy-CMSecurityRole [-Description <String>] -Name <String> -SourceRoleId <String> [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### CopyFromName
+```
+Copy-CMSecurityRole [-Description <String>] -Name <String> -SourceRoleName <String> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### CopyFromValue
 ```
-Copy-CMSecurityRole -InputObject <IResultObject> -Name <String> [-Description <String>]
+Copy-CMSecurityRole [-Description <String>] -InputObject <IResultObject> -Name <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### CopyFromName
-```
-Copy-CMSecurityRole -Name <String> [-Description <String>] -SourceRoleName <String> [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

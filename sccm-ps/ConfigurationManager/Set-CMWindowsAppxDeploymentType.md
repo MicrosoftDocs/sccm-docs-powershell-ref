@@ -16,36 +16,36 @@ Sets a Windows app package deployment type.
 
 ### ByAppName (Default)
 ```
-Set-CMWindowsAppxDeploymentType [-SlowNetworkDeploymentMode <ContentHandlingMode>] [-TriggerVpn <Boolean>]
- [-ContentFallback <Boolean>] [-AddRequirement <Rule[]>] -ApplicationName <String> -DeploymentTypeName <String>
- [-NewName <String>] [-ContentLocation <String>] [-RemoveRequirement <Rule[]>] [-RemoveLanguage <String[]>]
- [-PassThru] [-AddLanguage <String[]>] [-Comment <String>] [-Force] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### ByAppId
-```
-Set-CMWindowsAppxDeploymentType [-SlowNetworkDeploymentMode <ContentHandlingMode>] [-TriggerVpn <Boolean>]
- [-ContentFallback <Boolean>] [-AddRequirement <Rule[]>] -ApplicationId <Int32> -DeploymentTypeName <String>
- [-NewName <String>] [-ContentLocation <String>] [-RemoveRequirement <Rule[]>] [-RemoveLanguage <String[]>]
- [-PassThru] [-AddLanguage <String[]>] [-Comment <String>] [-Force] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMWindowsAppxDeploymentType [-ContentFallback <Boolean>] [-SlowNetworkDeploymentMode <ContentHandlingMode>]
+ [-TriggerVpn <Boolean>] [-AddRequirement <Rule[]>] -ApplicationName <String> [-ContentLocation <String>]
+ -DeploymentTypeName <String> [-NewName <String>] [-PassThru] [-RemoveLanguage <String[]>]
+ [-RemoveRequirement <Rule[]>] [-AddLanguage <String[]>] [-Comment <String>] [-Force]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByAppValue
 ```
-Set-CMWindowsAppxDeploymentType [-SlowNetworkDeploymentMode <ContentHandlingMode>] [-TriggerVpn <Boolean>]
- [-ContentFallback <Boolean>] [-AddRequirement <Rule[]>] -DeploymentTypeName <String>
- -Application <IResultObject> [-NewName <String>] [-ContentLocation <String>] [-RemoveRequirement <Rule[]>]
- [-RemoveLanguage <String[]>] [-PassThru] [-AddLanguage <String[]>] [-Comment <String>] [-Force]
+Set-CMWindowsAppxDeploymentType [-ContentFallback <Boolean>] [-SlowNetworkDeploymentMode <ContentHandlingMode>]
+ [-TriggerVpn <Boolean>] [-AddRequirement <Rule[]>] -Application <IResultObject> [-ContentLocation <String>]
+ -DeploymentTypeName <String> [-NewName <String>] [-PassThru] [-RemoveLanguage <String[]>]
+ [-RemoveRequirement <Rule[]>] [-AddLanguage <String[]>] [-Comment <String>] [-Force]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### ByAppId
+```
+Set-CMWindowsAppxDeploymentType [-ContentFallback <Boolean>] [-SlowNetworkDeploymentMode <ContentHandlingMode>]
+ [-TriggerVpn <Boolean>] [-AddRequirement <Rule[]>] -ApplicationId <Int32> [-ContentLocation <String>]
+ -DeploymentTypeName <String> [-NewName <String>] [-PassThru] [-RemoveLanguage <String[]>]
+ [-RemoveRequirement <Rule[]>] [-AddLanguage <String[]>] [-Comment <String>] [-Force]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByDTValue
 ```
-Set-CMWindowsAppxDeploymentType [-SlowNetworkDeploymentMode <ContentHandlingMode>] [-TriggerVpn <Boolean>]
- [-ContentFallback <Boolean>] [-AddRequirement <Rule[]>] -InputObject <IResultObject> [-NewName <String>]
- [-ContentLocation <String>] [-RemoveRequirement <Rule[]>] [-RemoveLanguage <String[]>] [-PassThru]
+Set-CMWindowsAppxDeploymentType [-ContentFallback <Boolean>] [-SlowNetworkDeploymentMode <ContentHandlingMode>]
+ [-TriggerVpn <Boolean>] [-AddRequirement <Rule[]>] [-ContentLocation <String>] -InputObject <IResultObject>
+ [-NewName <String>] [-PassThru] [-RemoveLanguage <String[]>] [-RemoveRequirement <Rule[]>]
  [-AddLanguage <String[]>] [-Comment <String>] [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
@@ -223,7 +223,7 @@ Specifies a display name for this deployment type.
 
 ```yaml
 Type: String
-Parameter Sets: ByAppName, ByAppId, ByAppValue
+Parameter Sets: ByAppName, ByAppValue, ByAppId
 Aliases:
 
 Required: True

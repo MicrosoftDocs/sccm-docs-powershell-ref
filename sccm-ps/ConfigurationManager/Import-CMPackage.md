@@ -15,7 +15,7 @@ Imports a Configuration Manager package.
 ## SYNTAX
 
 ```
-Import-CMPackage -ImportFilePath <String> [-ImportActionType <ImportActionType>] [-DisableWildcardHandling]
+Import-CMPackage [-ImportActionType <ImportActionType>] -ImportFilePath <String> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

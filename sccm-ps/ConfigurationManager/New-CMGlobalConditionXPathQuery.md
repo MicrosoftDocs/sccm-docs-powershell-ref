@@ -17,17 +17,17 @@ Creates a XPath Query type global condition in Configuration Manager.
 
 ### NewQueryFromFile (Default)
 ```
-New-CMGlobalConditionXPathQuery -DataType <GlobalConditionDataType> -XmlFilePath <String>
- -XPathQueryFilePath <String> [-IncludeSubfolder <Boolean>] [-Is64Bit <Boolean>] [-XmlNamespace <String[]>]
- -Name <String> [-Description <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+New-CMGlobalConditionXPathQuery -DataType <GlobalConditionDataType> [-IncludeSubfolder <Boolean>]
+ [-Is64Bit <Boolean>] -XmlFilePath <String> [-XmlNamespace <String[]>] -XPathQueryFilePath <String>
+ [-Description <String>] -Name <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
  [<CommonParameters>]
 ```
 
 ### NewQueryFromText
 ```
-New-CMGlobalConditionXPathQuery -DataType <GlobalConditionDataType> -XmlFilePath <String>
- [-IncludeSubfolder <Boolean>] [-Is64Bit <Boolean>] [-XmlNamespace <String[]>] -XPathQuery <String>
- -Name <String> [-Description <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+New-CMGlobalConditionXPathQuery -DataType <GlobalConditionDataType> [-IncludeSubfolder <Boolean>]
+ [-Is64Bit <Boolean>] -XmlFilePath <String> [-XmlNamespace <String[]>] -XPathQuery <String>
+ [-Description <String>] -Name <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
  [<CommonParameters>]
 ```
 

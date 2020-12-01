@@ -1,4 +1,4 @@
----
+﻿---
 description: Gets Configuration Manager filter rules for status messages.
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -15,7 +15,7 @@ Gets Configuration Manager filter rules for status messages.
 ## SYNTAX
 
 ```
-Get-CMStatusFilterRule [-SiteCode <String>] [-Name <String>] [-DisableWildcardHandling]
+Get-CMStatusFilterRule [-Name <String>] [-SiteCode <String>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [<CommonParameters>]
 ```
 

@@ -16,54 +16,55 @@ Creates an operating system upgrade update schedule.
 
 ### NewScheduleByInputObject (Default)
 ```
-New-CMOperatingSystemUpgradeUpdateSchedule [-ContinueOnError <Boolean>] [-RemoveSupersededUpdates <Boolean>]
- [-CustomSchedule <DateTime>] -InputObject <IResultObject> -SoftwareUpdate <IResultObject[]>
+New-CMOperatingSystemUpgradeUpdateSchedule [-ContinueOnError <Boolean>] [-CustomSchedule <DateTime>]
+ -InputObject <IResultObject> [-RemoveSupersededUpdates <Boolean>] -SoftwareUpdate <IResultObject[]>
  [-UpdateDistributionPoint <Boolean>] [-Utc <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### NewScheduleByNameRunNow
-```
-New-CMOperatingSystemUpgradeUpdateSchedule -Name <String> [-ContinueOnError <Boolean>]
- [-RemoveSupersededUpdates <Boolean>] [-RunNow] -SoftwareUpdate <IResultObject[]>
- [-UpdateDistributionPoint <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
-```
-
-### NewScheduleByIdRunNow
-```
-New-CMOperatingSystemUpgradeUpdateSchedule -Id <String> [-ContinueOnError <Boolean>]
- [-RemoveSupersededUpdates <Boolean>] [-RunNow] -SoftwareUpdate <IResultObject[]>
- [-UpdateDistributionPoint <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
-```
-
 ### NewScheduleByName
 ```
-New-CMOperatingSystemUpgradeUpdateSchedule [-ContinueOnError <Boolean>] [-RemoveSupersededUpdates <Boolean>]
- [-CustomSchedule <DateTime>] -SoftwareUpdate <IResultObject[]> [-UpdateDistributionPoint <Boolean>]
+New-CMOperatingSystemUpgradeUpdateSchedule [-ContinueOnError <Boolean>] [-CustomSchedule <DateTime>]
+ [-RemoveSupersededUpdates <Boolean>] -SoftwareUpdate <IResultObject[]> [-UpdateDistributionPoint <Boolean>]
  [-Utc <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### NewScheduleById
 ```
-New-CMOperatingSystemUpgradeUpdateSchedule [-ContinueOnError <Boolean>] [-RemoveSupersededUpdates <Boolean>]
- [-CustomSchedule <DateTime>] -SoftwareUpdate <IResultObject[]> [-UpdateDistributionPoint <Boolean>]
+New-CMOperatingSystemUpgradeUpdateSchedule [-ContinueOnError <Boolean>] [-CustomSchedule <DateTime>]
+ [-RemoveSupersededUpdates <Boolean>] -SoftwareUpdate <IResultObject[]> [-UpdateDistributionPoint <Boolean>]
  [-Utc <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### NewScheduleByScheduleInputObject
 ```
-New-CMOperatingSystemUpgradeUpdateSchedule [-ContinueOnError <Boolean>] [-RemoveSupersededUpdates <Boolean>]
- [-CustomSchedule <DateTime>] -SoftwareUpdate <IResultObject[]> [-UpdateDistributionPoint <Boolean>]
+New-CMOperatingSystemUpgradeUpdateSchedule [-ContinueOnError <Boolean>] [-CustomSchedule <DateTime>]
+ [-RemoveSupersededUpdates <Boolean>] -SoftwareUpdate <IResultObject[]> [-UpdateDistributionPoint <Boolean>]
  [-Utc <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### NewScheduleByIdRunNow
+```
+New-CMOperatingSystemUpgradeUpdateSchedule [-ContinueOnError <Boolean>] -Id <String>
+ [-RemoveSupersededUpdates <Boolean>] [-RunNow] -SoftwareUpdate <IResultObject[]>
+ [-UpdateDistributionPoint <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### NewScheduleByInputObjectRunNow
 ```
-New-CMOperatingSystemUpgradeUpdateSchedule [-ContinueOnError <Boolean>] [-RemoveSupersededUpdates <Boolean>]
- -InputObject <IResultObject> [-RunNow] -SoftwareUpdate <IResultObject[]> [-UpdateDistributionPoint <Boolean>]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+New-CMOperatingSystemUpgradeUpdateSchedule [-ContinueOnError <Boolean>] -InputObject <IResultObject>
+ [-RemoveSupersededUpdates <Boolean>] [-RunNow] -SoftwareUpdate <IResultObject[]>
+ [-UpdateDistributionPoint <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### NewScheduleByNameRunNow
+```
+New-CMOperatingSystemUpgradeUpdateSchedule [-ContinueOnError <Boolean>] -Name <String>
+ [-RemoveSupersededUpdates <Boolean>] [-RunNow] -SoftwareUpdate <IResultObject[]>
+ [-UpdateDistributionPoint <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### NewScheduleByScheduleInputObjectRunNow
@@ -217,7 +218,7 @@ Accept wildcard characters: False
 ### -RunNow
 ```yaml
 Type: SwitchParameter
-Parameter Sets: NewScheduleByNameRunNow, NewScheduleByIdRunNow, NewScheduleByInputObjectRunNow, NewScheduleByScheduleInputObjectRunNow
+Parameter Sets: NewScheduleByIdRunNow, NewScheduleByInputObjectRunNow, NewScheduleByNameRunNow, NewScheduleByScheduleInputObjectRunNow
 Aliases:
 
 Required: False

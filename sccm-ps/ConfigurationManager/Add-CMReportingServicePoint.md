@@ -16,16 +16,16 @@ Adds a reporting service point to Configuration Manager.
 
 ### ReportingServicePointByValue (Default)
 ```
-Add-CMReportingServicePoint [-ReportServerInstance <String>] [-DatabaseServerName <String>]
- [-DatabaseName <String>] -UserName <String> -InputObject <IResultObject> [-Force] [-DisableWildcardHandling]
+Add-CMReportingServicePoint [-DatabaseName <String>] [-DatabaseServerName <String>] [-Force]
+ -InputObject <IResultObject> [-ReportServerInstance <String>] -UserName <String> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ReportingServicePoint
 ```
-Add-CMReportingServicePoint [-FolderName <String>] [-ReportServerInstance <String>]
- [-SiteSystemServerName] <String> [-SiteCode <String>] [-DatabaseServerName <String>] [-DatabaseName <String>]
- -UserName <String> [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+Add-CMReportingServicePoint [-DatabaseName <String>] [-DatabaseServerName <String>] [-FolderName <String>]
+ [-Force] [-ReportServerInstance <String>] [-SiteCode <String>] [-SiteSystemServerName] <String>
+ -UserName <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 

@@ -16,19 +16,19 @@ Exports a security role to an XML file.
 
 ### ByValue (Default)
 ```
-Export-CMSecurityRole -Path <String> -InputObject <IResultObject> [-DisableWildcardHandling]
+Export-CMSecurityRole -InputObject <IResultObject> -Path <String> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### ByName
-```
-Export-CMSecurityRole -Path <String> -RoleName <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ById
 ```
 Export-CMSecurityRole -Path <String> -RoleId <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### ByName
+```
+Export-CMSecurityRole -Path <String> -RoleName <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

@@ -1,4 +1,4 @@
----
+﻿---
 description: Gets an application deployment status.
 external help file: AdminUI.PS.Deployments.dll-Help.xml
 Module Name: ConfigurationManager
@@ -15,7 +15,7 @@ Gets an application deployment status.
 ## SYNTAX
 
 ```
-Get-CMApplicationDeploymentStatus [-StatusType <ApplicationDeploymentStatusType>] -InputObject <IResultObject>
+Get-CMApplicationDeploymentStatus -InputObject <IResultObject> [-StatusType <ApplicationDeploymentStatusType>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 

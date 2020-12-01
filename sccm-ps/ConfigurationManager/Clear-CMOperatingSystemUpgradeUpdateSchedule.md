@@ -16,19 +16,19 @@ Clears an operating system upgrade update schedule
 
 ### SearchByValueMandatory (Default)
 ```
-Clear-CMOperatingSystemUpgradeUpdateSchedule -InputObject <IResultObject> [-Force] [-DisableWildcardHandling]
+Clear-CMOperatingSystemUpgradeUpdateSchedule [-Force] -InputObject <IResultObject> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory
 ```
-Clear-CMOperatingSystemUpgradeUpdateSchedule -Id <String> [-Force] [-DisableWildcardHandling]
+Clear-CMOperatingSystemUpgradeUpdateSchedule [-Force] -Id <String> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByNameMandatory
 ```
-Clear-CMOperatingSystemUpgradeUpdateSchedule -Name <String> [-Force] [-DisableWildcardHandling]
+Clear-CMOperatingSystemUpgradeUpdateSchedule [-Force] -Name <String> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

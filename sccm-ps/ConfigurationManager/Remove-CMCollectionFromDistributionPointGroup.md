@@ -16,22 +16,20 @@ Removes a collection from distribution point group.
 
 ### SearchByValueMandatory (Default)
 ```
-Remove-CMCollectionFromDistributionPointGroup [-Force] -CollectionName <String> -InputObject <IResultObject>
+Remove-CMCollectionFromDistributionPointGroup -CollectionName <String> [-Force] -InputObject <IResultObject>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByNameMandatory
 ```
-Remove-CMCollectionFromDistributionPointGroup -DistributionPointGroupName <String> [-Force]
- -CollectionName <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Remove-CMCollectionFromDistributionPointGroup -CollectionName <String> -DistributionPointGroupName <String>
+ [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory
 ```
-Remove-CMCollectionFromDistributionPointGroup -DistributionPointGroupId <String> [-Force]
- -CollectionName <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Remove-CMCollectionFromDistributionPointGroup -CollectionName <String> -DistributionPointGroupId <String>
+ [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

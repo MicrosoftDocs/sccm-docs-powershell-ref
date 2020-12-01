@@ -15,7 +15,7 @@ Adds a new operating system boot image.
 ## SYNTAX
 
 ```
-New-CMBootImage -Path <String> -Index <Int32> -Name <String> [-Version <String>] [-Description <String>]
+New-CMBootImage [-Description <String>] -Index <Int32> -Name <String> -Path <String> [-Version <String>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -27,7 +27,7 @@ By default, Configuration Manager includes both x86 and x64 operating system ima
 
 You must run **New-CMBootImage** on the computer that is running the Systems Management Server (SMS) provider.
 The computer account of the computer that is running the SMS provider must have Read and Write access to the package source of the boot image.
-For more information about the SMS provider, see [Planning for the SMS Provider in Configuration Manager](https://docs.microsoft.com/mem/configmgr/core/plan-design/hierarchy/plan-for-the-sms-provider).
+For more information about the SMS provider, see [Planning for the SMS Provider in Configuration Manager](/mem/configmgr/core/plan-design/hierarchy/plan-for-the-sms-provider).
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.
@@ -197,7 +197,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Planning for the SMS Provider in Configuration Manager](https://docs.microsoft.com/mem/configmgr/core/plan-design/hierarchy/plan-for-the-sms-provider)
+[Planning for the SMS Provider in Configuration Manager](/mem/configmgr/core/plan-design/hierarchy/plan-for-the-sms-provider)
 
 [Get-CMBootImage](Get-CMBootImage.md)
 

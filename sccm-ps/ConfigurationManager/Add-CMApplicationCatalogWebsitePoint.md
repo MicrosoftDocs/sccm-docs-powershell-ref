@@ -16,62 +16,63 @@ Adds an Application Catalog website point to a Configuration Manager site.
 
 ### AppWebSitePointByValue (Default)
 ```
-Add-CMApplicationCatalogWebsitePoint [-IisWebsite <String>] [-WebApplicationName <String>]
- [-NetBiosName <String>] [-OrganizationName <String>] [-ApplicationWebServicePointServerName <String>]
- [-ApplicationWebServicePointServer <IResultObject>] [-Http] [-Port <Int32>] [-ColorRed <Int32>]
- [-ColorGreen <Int32>] [-ColorBlue <Int32>] [-Color <Color>] [-ClientConnectionType <ClientConnectionTypes>]
- -InputObject <IResultObject> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+Add-CMApplicationCatalogWebsitePoint [-ApplicationWebServicePointServer <IResultObject>]
+ [-ApplicationWebServicePointServerName <String>] [-ClientConnectionType <ClientConnectionTypes>]
+ [-Color <Color>] [-ColorBlue <Int32>] [-ColorGreen <Int32>] [-ColorRed <Int32>] [-Http] [-IisWebsite <String>]
+ -InputObject <IResultObject> [-NetBiosName <String>] [-OrganizationName <String>] [-Port <Int32>]
+ [-WebApplicationName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ### AppWebSite
 ```
-Add-CMApplicationCatalogWebsitePoint [-IisWebsite <String>] [-WebApplicationName <String>]
- [-NetBiosName <String>] [-OrganizationName <String>] [-SiteSystemServerName] <String> [-SiteCode <String>]
- [-ApplicationWebServicePointServerName <String>] [-ApplicationWebServicePointServer <IResultObject>]
- -CommunicationType <ComputerCommunicationType> [-Port <Int32>] [-ColorRed <Int32>] [-ColorGreen <Int32>]
- [-ColorBlue <Int32>] [-Color <Color>] [-ClientConnectionType <ClientConnectionTypes>]
+Add-CMApplicationCatalogWebsitePoint [-ApplicationWebServicePointServer <IResultObject>]
+ [-ApplicationWebServicePointServerName <String>] [-ClientConnectionType <ClientConnectionTypes>]
+ [-Color <Color>] [-ColorBlue <Int32>] [-ColorGreen <Int32>] [-ColorRed <Int32>]
+ -CommunicationType <ComputerCommunicationType> [-IisWebsite <String>] [-NetBiosName <String>]
+ [-OrganizationName <String>] [-Port <Int32>] [-SiteCode <String>] [-SiteSystemServerName] <String>
+ [-WebApplicationName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### AppWebSiteByValue
+```
+Add-CMApplicationCatalogWebsitePoint [-ApplicationWebServicePointServer <IResultObject>]
+ [-ApplicationWebServicePointServerName <String>] [-ClientConnectionType <ClientConnectionTypes>]
+ [-Color <Color>] [-ColorBlue <Int32>] [-ColorGreen <Int32>] [-ColorRed <Int32>]
+ -CommunicationType <ComputerCommunicationType> [-IisWebsite <String>] -InputObject <IResultObject>
+ [-NetBiosName <String>] [-OrganizationName <String>] [-Port <Int32>] [-WebApplicationName <String>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### AppWebSitePoint
 ```
-Add-CMApplicationCatalogWebsitePoint [-IisWebsite <String>] [-WebApplicationName <String>]
- [-NetBiosName <String>] [-OrganizationName <String>] [-SiteSystemServerName] <String> [-SiteCode <String>]
- [-ApplicationWebServicePointServerName <String>] [-ApplicationWebServicePointServer <IResultObject>] [-Http]
- [-Port <Int32>] [-ColorRed <Int32>] [-ColorGreen <Int32>] [-ColorBlue <Int32>] [-Color <Color>]
- [-ClientConnectionType <ClientConnectionTypes>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Add-CMApplicationCatalogWebsitePoint [-ApplicationWebServicePointServer <IResultObject>]
+ [-ApplicationWebServicePointServerName <String>] [-ClientConnectionType <ClientConnectionTypes>]
+ [-Color <Color>] [-ColorBlue <Int32>] [-ColorGreen <Int32>] [-ColorRed <Int32>] [-Http] [-IisWebsite <String>]
+ [-NetBiosName <String>] [-OrganizationName <String>] [-Port <Int32>] [-SiteCode <String>]
+ [-SiteSystemServerName] <String> [-WebApplicationName <String>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### AppWebSitePointWithSsl
 ```
-Add-CMApplicationCatalogWebsitePoint [-IisWebsite <String>] [-WebApplicationName <String>]
- [-NetBiosName <String>] [-OrganizationName <String>] [-SiteSystemServerName] <String> [-SiteCode <String>]
- [-ApplicationWebServicePointServerName <String>] [-ApplicationWebServicePointServer <IResultObject>] [-Https]
- [-Port <Int32>] [-ColorRed <Int32>] [-ColorGreen <Int32>] [-ColorBlue <Int32>] [-Color <Color>]
- [-ClientConnectionType <ClientConnectionTypes>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
-```
-
-### AppWebSiteByValue
-```
-Add-CMApplicationCatalogWebsitePoint [-IisWebsite <String>] [-WebApplicationName <String>]
- [-NetBiosName <String>] [-OrganizationName <String>] [-ApplicationWebServicePointServerName <String>]
- [-ApplicationWebServicePointServer <IResultObject>] -CommunicationType <ComputerCommunicationType>
- [-Port <Int32>] [-ColorRed <Int32>] [-ColorGreen <Int32>] [-ColorBlue <Int32>] [-Color <Color>]
- [-ClientConnectionType <ClientConnectionTypes>] -InputObject <IResultObject> [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Add-CMApplicationCatalogWebsitePoint [-ApplicationWebServicePointServer <IResultObject>]
+ [-ApplicationWebServicePointServerName <String>] [-ClientConnectionType <ClientConnectionTypes>]
+ [-Color <Color>] [-ColorBlue <Int32>] [-ColorGreen <Int32>] [-ColorRed <Int32>] [-Https]
+ [-IisWebsite <String>] [-NetBiosName <String>] [-OrganizationName <String>] [-Port <Int32>]
+ [-SiteCode <String>] [-SiteSystemServerName] <String> [-WebApplicationName <String>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### AppWebSitePointWithSslByValue
 ```
-Add-CMApplicationCatalogWebsitePoint [-IisWebsite <String>] [-WebApplicationName <String>]
- [-NetBiosName <String>] [-OrganizationName <String>] [-ApplicationWebServicePointServerName <String>]
- [-ApplicationWebServicePointServer <IResultObject>] [-Https] [-Port <Int32>] [-ColorRed <Int32>]
- [-ColorGreen <Int32>] [-ColorBlue <Int32>] [-Color <Color>] [-ClientConnectionType <ClientConnectionTypes>]
- -InputObject <IResultObject> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Add-CMApplicationCatalogWebsitePoint [-ApplicationWebServicePointServer <IResultObject>]
+ [-ApplicationWebServicePointServerName <String>] [-ClientConnectionType <ClientConnectionTypes>]
+ [-Color <Color>] [-ColorBlue <Int32>] [-ColorGreen <Int32>] [-ColorRed <Int32>] [-Https]
+ [-IisWebsite <String>] -InputObject <IResultObject> [-NetBiosName <String>] [-OrganizationName <String>]
+ [-Port <Int32>] [-WebApplicationName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

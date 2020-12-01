@@ -15,7 +15,7 @@ Creates a status message query.
 ## SYNTAX
 
 ```
-New-CMStatusMessageQuery -Name <String> [-Comment <String>] [-Expression <String>] [-DisableWildcardHandling]
+New-CMStatusMessageQuery [-Comment <String>] [-Expression <String>] -Name <String> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

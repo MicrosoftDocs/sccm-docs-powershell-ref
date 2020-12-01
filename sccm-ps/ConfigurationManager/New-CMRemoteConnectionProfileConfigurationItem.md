@@ -15,9 +15,9 @@ Creates a remote connection profile.
 ## SYNTAX
 
 ```
-New-CMRemoteConnectionProfileConfigurationItem -Name <String> [-Description <String>]
- [-EnableTSConnection <Boolean>] [-EnableNla <Boolean>] [-EnablePrimaryUser <Boolean>]
- [-EnableTSFirewallRule <Boolean>] [-Enable <Boolean>] [-RDGatewayServer <String>] [-DisableWildcardHandling]
+New-CMRemoteConnectionProfileConfigurationItem [-Description <String>] [-Enable <Boolean>]
+ [-EnableNla <Boolean>] [-EnablePrimaryUser <Boolean>] [-EnableTSConnection <Boolean>]
+ [-EnableTSFirewallRule <Boolean>] -Name <String> [-RDGatewayServer <String>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

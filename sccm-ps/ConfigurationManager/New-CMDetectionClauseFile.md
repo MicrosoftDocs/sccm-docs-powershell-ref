@@ -1,4 +1,4 @@
----
+﻿---
 description: Create a detection clause for a file in a configuration item or app detection method.
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 Module Name: ConfigurationManager
@@ -18,8 +18,8 @@ Create a detection clause for a file in a configuration item or app detection me
 ### Value
 ```
 New-CMDetectionClauseFile -FileName <String> -PropertyType <FileFolderProperty> -ExpectedValue <String[]>
- -ExpressionOperator <RuleExpressionOperator> [-Is64Bit] -Path <String> [-Value] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [<CommonParameters>]
+ -ExpressionOperator <FileFolderRuleExpressionOperator> [-Is64Bit] -Path <String> [-Value]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ### Existence
@@ -56,7 +56,7 @@ $cla3=New-CMDetectionClauseRegistryKey -Hive ClassesRoot -KeyName "aaa"
 $logic1=$cla1.Setting.LogicalName
 $logic2=$cla2.Setting.LogicalName
 $logic3=$cla3.Setting.LogicalName
-Add-CMMsiDeploymentType -AddDetectionClause $cla1,$cla2,$cla3 -ApplicationName "app" -DeploymentTypeName "dt" -InstallCommand "mycommand" -ContentLocation “\\server\sources\Orca.msi” -GroupDetectionClauses $logic1,$logic2 -DetectionClauseConnector {LogicalName=$logic2;Connector="or"},{LogicalName=$logic3;Connector="or"}
+Add-CMMsiDeploymentType -AddDetectionClause $cla1,$cla2,$cla3 -ApplicationName "app" -DeploymentTypeName "dt" -InstallCommand "mycommand" -ContentLocation "\\server\sources\Orca.msi" -GroupDetectionClauses $logic1,$logic2 -DetectionClauseConnector {LogicalName=$logic2;Connector="or"},{LogicalName=$logic3;Connector="or"}
 ```
 
 ## PARAMETERS
@@ -116,10 +116,10 @@ Accept wildcard characters: False
 For the **ExpectedValue**, specify the comparison operator.
 
 ```yaml
-Type: RuleExpressionOperator
+Type: FileFolderRuleExpressionOperator
 Parameter Sets: Value
 Aliases:
-Accepted values: IsEquals, NotEquals, GreaterThan, GreaterEquals, LessThan, LessEquals, Between, OneOf, NoneOf
+Accepted values: IsEquals, NotEquals, GreaterThan, LessThan, Between, GreaterEquals, LessEquals, OneOf, NoneOf
 
 Required: True
 Position: Named
@@ -228,7 +228,6 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -238,7 +237,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
-
 ## NOTES
 
 ## RELATED LINKS

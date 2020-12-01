@@ -16,149 +16,149 @@ Publishes files to a distribution point.
 
 ### SearchByValueMandatory_DeploymentPackage (Default)
 ```
-Publish-CMPrestageContent -DeploymentPackage <IResultObject> -FileName <String> [-Description <String>]
- -DistributionPointName <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
-```
-
-### SearchByIdMandatory_DeploymentPackage
-```
-Publish-CMPrestageContent -DeploymentPackageId <String[]> -FileName <String> [-Description <String>]
- -DistributionPointName <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
-```
-
-### SearchByNameMandatory_DeploymentPackage
-```
-Publish-CMPrestageContent -DeploymentPackageName <String[]> -FileName <String> [-Description <String>]
- -DistributionPointName <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
-```
-
-### SearchByIdMandatory_BootImage
-```
-Publish-CMPrestageContent -BootImageId <String[]> -FileName <String> [-Description <String>]
- -DistributionPointName <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
-```
-
-### SearchByNameMandatory_BootImage
-```
-Publish-CMPrestageContent -BootImageName <String[]> -FileName <String> [-Description <String>]
- -DistributionPointName <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
-```
-
-### SearchByValueMandatory_BootImage
-```
-Publish-CMPrestageContent -BootImage <IResultObject> -FileName <String> [-Description <String>]
- -DistributionPointName <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
-```
-
-### SearchByIdMandatory_DriverPackage
-```
-Publish-CMPrestageContent -DriverPackageId <String[]> -FileName <String> [-Description <String>]
- -DistributionPointName <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
-```
-
-### SearchByNameMandatory_DriverPackage
-```
-Publish-CMPrestageContent -DriverPackageName <String[]> -FileName <String> [-Description <String>]
- -DistributionPointName <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
-```
-
-### SearchByValueMandatory_DriverPackage
-```
-Publish-CMPrestageContent -DriverPackage <IResultObject> -FileName <String> [-Description <String>]
- -DistributionPointName <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
-```
-
-### SearchByIdMandatory_OperatingSystemImage
-```
-Publish-CMPrestageContent -OperatingSystemImageId <String[]> -FileName <String> [-Description <String>]
- -DistributionPointName <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
-```
-
-### SearchByNameMandatory_OperatingSystemImage
-```
-Publish-CMPrestageContent -OperatingSystemImageName <String[]> -FileName <String> [-Description <String>]
- -DistributionPointName <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
-```
-
-### SearchByValueMandatory_OperatingSystemImage
-```
-Publish-CMPrestageContent -OperatingSystemImage <IResultObject> -FileName <String> [-Description <String>]
- -DistributionPointName <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
-```
-
-### SearchByIdMandatory_OperatingSystemInstaller
-```
-Publish-CMPrestageContent -OperatingSystemInstallerId <String[]> -FileName <String> [-Description <String>]
- -DistributionPointName <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
-```
-
-### SearchByNameMandatory_OperatingSystemInstaller
-```
-Publish-CMPrestageContent -OperatingSystemInstallerName <String[]> -FileName <String> [-Description <String>]
- -DistributionPointName <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
-```
-
-### SearchByValueMandatory_OperatingSystemInstaller
-```
-Publish-CMPrestageContent -OperatingSystemInstaller <IResultObject> -FileName <String> [-Description <String>]
- -DistributionPointName <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
-```
-
-### SearchByIdMandatory_Package
-```
-Publish-CMPrestageContent -PackageId <String[]> -FileName <String> [-Description <String>]
- -DistributionPointName <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
-```
-
-### SearchByNameMandatory_Package
-```
-Publish-CMPrestageContent -PackageName <String[]> -FileName <String> [-Description <String>]
- -DistributionPointName <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
-```
-
-### SearchByValueMandatory_Package
-```
-Publish-CMPrestageContent -Package <IResultObject> -FileName <String> [-Description <String>]
- -DistributionPointName <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
-```
-
-### SearchByIdMandatory_Application
-```
-Publish-CMPrestageContent -ApplicationId <String[]> [-DisableDependencyExport] -FileName <String>
- [-Description <String>] -DistributionPointName <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### SearchByNameMandatory_Application
-```
-Publish-CMPrestageContent -ApplicationName <String[]> [-DisableDependencyExport] -FileName <String>
- [-Description <String>] -DistributionPointName <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
+Publish-CMPrestageContent -DeploymentPackage <IResultObject> [-Description <String>]
+ -DistributionPointName <String> -FileName <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByValueMandatory_Application
 ```
-Publish-CMPrestageContent -Application <IResultObject> [-DisableDependencyExport] -FileName <String>
- [-Description <String>] -DistributionPointName <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
+Publish-CMPrestageContent -Application <IResultObject> [-Description <String>] [-DisableDependencyExport]
+ -DistributionPointName <String> -FileName <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SearchByIdMandatory_Application
+```
+Publish-CMPrestageContent -ApplicationId <String[]> [-Description <String>] [-DisableDependencyExport]
+ -DistributionPointName <String> -FileName <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SearchByNameMandatory_Application
+```
+Publish-CMPrestageContent -ApplicationName <String[]> [-Description <String>] [-DisableDependencyExport]
+ -DistributionPointName <String> -FileName <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SearchByValueMandatory_BootImage
+```
+Publish-CMPrestageContent -BootImage <IResultObject> [-Description <String>] -DistributionPointName <String>
+ -FileName <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### SearchByIdMandatory_BootImage
+```
+Publish-CMPrestageContent -BootImageId <String[]> [-Description <String>] -DistributionPointName <String>
+ -FileName <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### SearchByNameMandatory_BootImage
+```
+Publish-CMPrestageContent -BootImageName <String[]> [-Description <String>] -DistributionPointName <String>
+ -FileName <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### SearchByIdMandatory_DeploymentPackage
+```
+Publish-CMPrestageContent -DeploymentPackageId <String[]> [-Description <String>]
+ -DistributionPointName <String> -FileName <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SearchByNameMandatory_DeploymentPackage
+```
+Publish-CMPrestageContent -DeploymentPackageName <String[]> [-Description <String>]
+ -DistributionPointName <String> -FileName <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SearchByIdMandatory_DriverPackage
+```
+Publish-CMPrestageContent [-Description <String>] -DistributionPointName <String> -DriverPackageId <String[]>
+ -FileName <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### SearchByNameMandatory_DriverPackage
+```
+Publish-CMPrestageContent [-Description <String>] -DistributionPointName <String> -DriverPackageName <String[]>
+ -FileName <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### SearchByValueMandatory_DriverPackage
+```
+Publish-CMPrestageContent [-Description <String>] -DistributionPointName <String>
+ -DriverPackage <IResultObject> -FileName <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SearchByIdMandatory_OperatingSystemImage
+```
+Publish-CMPrestageContent [-Description <String>] -DistributionPointName <String> -FileName <String>
+ -OperatingSystemImageId <String[]> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### SearchByNameMandatory_OperatingSystemImage
+```
+Publish-CMPrestageContent [-Description <String>] -DistributionPointName <String> -FileName <String>
+ -OperatingSystemImageName <String[]> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### SearchByValueMandatory_OperatingSystemImage
+```
+Publish-CMPrestageContent [-Description <String>] -DistributionPointName <String> -FileName <String>
+ -OperatingSystemImage <IResultObject> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### SearchByIdMandatory_OperatingSystemInstaller
+```
+Publish-CMPrestageContent [-Description <String>] -DistributionPointName <String> -FileName <String>
+ -OperatingSystemInstallerId <String[]> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
+```
+
+### SearchByNameMandatory_OperatingSystemInstaller
+```
+Publish-CMPrestageContent [-Description <String>] -DistributionPointName <String> -FileName <String>
+ -OperatingSystemInstallerName <String[]> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
+```
+
+### SearchByValueMandatory_OperatingSystemInstaller
+```
+Publish-CMPrestageContent [-Description <String>] -DistributionPointName <String> -FileName <String>
+ -OperatingSystemInstaller <IResultObject> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
+```
+
+### SearchByIdMandatory_Package
+```
+Publish-CMPrestageContent [-Description <String>] -DistributionPointName <String> -FileName <String>
+ -PackageId <String[]> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### SearchByNameMandatory_Package
+```
+Publish-CMPrestageContent [-Description <String>] -DistributionPointName <String> -FileName <String>
+ -PackageName <String[]> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### SearchByValueMandatory_Package
+```
+Publish-CMPrestageContent [-Description <String>] -DistributionPointName <String> -FileName <String>
+ -Package <IResultObject> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -393,7 +393,7 @@ Accept wildcard characters: False
 ### -DisableDependencyExport
 ```yaml
 Type: SwitchParameter
-Parameter Sets: SearchByIdMandatory_Application, SearchByNameMandatory_Application, SearchByValueMandatory_Application
+Parameter Sets: SearchByValueMandatory_Application, SearchByIdMandatory_Application, SearchByNameMandatory_Application
 Aliases: DisableExportAllDependencies
 
 Required: False

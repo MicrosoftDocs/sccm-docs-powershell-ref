@@ -1,4 +1,4 @@
----
+﻿---
 description: Gets Configuration Manager global condition objects.
 external help file: AdminUI.PS.AppModel.dll-Help.xml
 Module Name: ConfigurationManager
@@ -17,13 +17,13 @@ Gets Configuration Manager global condition objects.
 
 ### SearchByName (Default)
 ```
-Get-CMGlobalCondition [-Name <String>] [-AsDcmSdkObject] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Get-CMGlobalCondition [-AsDcmSdkObject] [-Name <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory
 ```
-Get-CMGlobalCondition -Id <String> [-AsDcmSdkObject] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Get-CMGlobalCondition [-AsDcmSdkObject] -Id <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
  [<CommonParameters>]
 ```
 

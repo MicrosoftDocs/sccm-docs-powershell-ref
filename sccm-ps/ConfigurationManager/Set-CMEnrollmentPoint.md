@@ -16,14 +16,14 @@ Sets an enrollment point in Configuration Manager.
 
 ### SetByValue (Default)
 ```
-Set-CMEnrollmentPoint [-UserName <String>] [-UseComputerAccount] -InputObject <IResultObject> [-PassThru]
+Set-CMEnrollmentPoint -InputObject <IResultObject> [-PassThru] [-UseComputerAccount] [-UserName <String>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetByName
 ```
-Set-CMEnrollmentPoint [-SiteCode <String>] [-SiteSystemServerName] <String> [-UserName <String>]
- [-UseComputerAccount] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+Set-CMEnrollmentPoint [-PassThru] [-SiteCode <String>] [-SiteSystemServerName] <String> [-UseComputerAccount]
+ [-UserName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 

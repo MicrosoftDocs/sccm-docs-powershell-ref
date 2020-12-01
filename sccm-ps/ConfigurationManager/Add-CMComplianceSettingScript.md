@@ -16,34 +16,35 @@ Adds a compliance setting script
 
 ### EmptyRule (Default)
 ```
-Add-CMComplianceSettingScript -DataType <SettingDataType> [-Remediate] [-DiscoveryScriptFile <String>]
+Add-CMComplianceSettingScript -DataType <SettingDataType> [-DiscoveryScriptFile <String>]
  -DiscoveryScriptLanguage <ScriptingLanguage> [-DiscoveryScriptText <String>] [-Is64Bit] [-IsPerUser]
- [-RemediationScriptFile <String>] [-RemediationScriptLanguage <ScriptingLanguage>]
+ [-Remediate] [-RemediationScriptFile <String>] [-RemediationScriptLanguage <ScriptingLanguage>]
  [-RemediationScriptText <String>] [-Description <String>] -InputObject <PSObject> -Name <String> [-NoRule]
  [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ExistentialRule
 ```
-Add-CMComplianceSettingScript -DataType <SettingDataType> [-Remediate] [-DiscoveryScriptFile <String>]
+Add-CMComplianceSettingScript -DataType <SettingDataType> [-DiscoveryScriptFile <String>]
  -DiscoveryScriptLanguage <ScriptingLanguage> [-DiscoveryScriptText <String>] [-Is64Bit] [-IsPerUser]
- [-RemediationScriptFile <String>] [-RemediationScriptLanguage <ScriptingLanguage>]
+ [-Remediate] [-RemediationScriptFile <String>] [-RemediationScriptLanguage <ScriptingLanguage>]
  [-RemediationScriptText <String>] [-Description <String>] -Existence <ExistenceType> [-ExistentialRule]
  [-ExpectedValue <String[]>] [-ExpressionOperator <RuleExpressionOperator>] -InputObject <PSObject>
- -Name <String> [-NoncomplianceSeverity <NoncomplianceSeverity>] [-RuleDescription <String>] -RuleName <String>
- [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ -Name <String> [-NoncomplianceSeverity <NoncomplianceSeverity>] [-PassThru] [-RuleDescription <String>]
+ -RuleName <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### ValueRule
 ```
-Add-CMComplianceSettingScript -DataType <SettingDataType> [-Remediate] [-DiscoveryScriptFile <String>]
+Add-CMComplianceSettingScript -DataType <SettingDataType> [-DiscoveryScriptFile <String>]
  -DiscoveryScriptLanguage <ScriptingLanguage> [-DiscoveryScriptText <String>] [-Is64Bit] [-IsPerUser]
- [-RemediationScriptFile <String>] [-RemediationScriptLanguage <ScriptingLanguage>]
+ [-Remediate] [-RemediationScriptFile <String>] [-RemediationScriptLanguage <ScriptingLanguage>]
  [-RemediationScriptText <String>] [-Description <String>] -ExpectedValue <String[]>
  -ExpressionOperator <RuleExpressionOperator> -InputObject <PSObject> -Name <String>
- [-NoncomplianceSeverity <NoncomplianceSeverity>] [-ReportNoncompliance] [-RuleDescription <String>]
- -RuleName <String> [-ValueRule] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+ [-NoncomplianceSeverity <NoncomplianceSeverity>] [-PassThru] [-ReportNoncompliance]
+ [-RuleDescription <String>] -RuleName <String> [-ValueRule] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

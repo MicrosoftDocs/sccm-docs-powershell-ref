@@ -1,4 +1,4 @@
----
+﻿---
 description: Get a Configuration Manager resource.
 external help file: AdminUI.PS.Collections.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,7 +16,7 @@ Get a Configuration Manager resource.
 ## SYNTAX
 
 ```
-Get-CMResource [[-ResourceId] <Int32>] [-Fast] [-ResourceType <ResourceType>] [-DisableWildcardHandling]
+Get-CMResource [-Fast] [[-ResourceId] <Int32>] [-ResourceType <ResourceType>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
@@ -133,7 +133,6 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -143,8 +142,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### IResultObject#SMS_Resource
-
-For more information on this return object and its properties, see [SMS_Resource server WMI class](/mem/configmgr/develop/reference/core/clients/manage/sms_resource-server-wmi-class).
 
 ## NOTES
 

@@ -15,8 +15,8 @@ Creates a software update group.
 ## SYNTAX
 
 ```
-New-CMSoftwareUpdateGroup -Name <String> [-Description <String>] [-UpdateId <Int32[]>]
- [-SoftwareUpdateId <String[]>] [-SoftwareUpdateName <String[]>] [-InputObject <IResultObject[]>]
+New-CMSoftwareUpdateGroup [-Description <String>] [-InputObject <IResultObject[]>] -Name <String>
+ [-SoftwareUpdateId <String[]>] [-SoftwareUpdateName <String[]>] [-UpdateId <Int32[]>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

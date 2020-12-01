@@ -24,13 +24,13 @@ Remove-CMTaskSequenceStep [-ActionClassName <String>] [-Force] -InputObject <IRe
 
 ### ById
 ```
-Remove-CMTaskSequenceStep [-ActionClassName <String>] [-Force] -TaskSequenceId <String> [-StepName <String>]
+Remove-CMTaskSequenceStep [-ActionClassName <String>] [-Force] [-StepName <String>] -TaskSequenceId <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByName
 ```
-Remove-CMTaskSequenceStep [-ActionClassName <String>] [-Force] -TaskSequenceName <String> [-StepName <String>]
+Remove-CMTaskSequenceStep [-ActionClassName <String>] [-Force] [-StepName <String>] -TaskSequenceName <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

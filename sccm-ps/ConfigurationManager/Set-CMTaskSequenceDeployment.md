@@ -2,7 +2,7 @@
 description: Configure a task sequence deployment.
 external help file: AdminUI.PS.Deployments.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 07/31/2020
+ms.date: 11/20/2020
 schema: 2.0.0
 title: Set-CMTaskSequenceDeployment
 ---
@@ -17,66 +17,70 @@ Configure a task sequence deployment.
 
 ### SetTaskSequenceDeploymentByValueMandatory (Default)
 ```
-Set-CMTaskSequenceDeployment -InputObject <IResultObject> [-Comment <String>] [-SendWakeupPacket <Boolean>]
- [-UseMeteredNetwork <Boolean>] [-MakeAvailableTo <MakeAvailableToType>]
- [-DeploymentAvailableDateTime <DateTime>] [-UseUtcForAvailableSchedule <Boolean>]
- [-DeploymentExpireDateTime <DateTime>] [-UseUtcForExpireSchedule <Boolean>]
- [-ScheduleEvent <ScheduleEventType[]>] [-Schedule <IResultObject[]>] [-RerunBehavior <RerunBehaviorType>]
- [-AllowUsersRunIndependently <Boolean>] [-ShowTaskSequenceProgress <Boolean>]
- [-SoftwareInstallation <Boolean>] [-SystemRestart <Boolean>] [-PersistOnWriteFilterDevice <Boolean>]
- [-InternetOption <Boolean>] [-DeploymentOption <DeploymentOptionType>] [-AllowSharedContent <Boolean>]
- [-AllowFallback <Boolean>] [-CreateAlertOnSuccess <Boolean>] [-PercentSuccess <Int32>]
- [-AlertDateTime <DateTime>] [-CreateAlertOnFailure <Boolean>] [-PercentFailure <Int32>] [-PassThru]
- [-CollectionName <String>] [-CollectionId <String>] [-Collection <IResultObject>] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### SetTaskSequenceDeploymentByNameMandatory
-```
-Set-CMTaskSequenceDeployment -TaskSequenceName <String> [-Comment <String>] [-SendWakeupPacket <Boolean>]
- [-UseMeteredNetwork <Boolean>] [-MakeAvailableTo <MakeAvailableToType>]
- [-DeploymentAvailableDateTime <DateTime>] [-UseUtcForAvailableSchedule <Boolean>]
- [-DeploymentExpireDateTime <DateTime>] [-UseUtcForExpireSchedule <Boolean>]
- [-ScheduleEvent <ScheduleEventType[]>] [-Schedule <IResultObject[]>] [-RerunBehavior <RerunBehaviorType>]
- [-AllowUsersRunIndependently <Boolean>] [-ShowTaskSequenceProgress <Boolean>]
- [-SoftwareInstallation <Boolean>] [-SystemRestart <Boolean>] [-PersistOnWriteFilterDevice <Boolean>]
- [-InternetOption <Boolean>] [-DeploymentOption <DeploymentOptionType>] [-AllowSharedContent <Boolean>]
- [-AllowFallback <Boolean>] [-CreateAlertOnSuccess <Boolean>] [-PercentSuccess <Int32>]
- [-AlertDateTime <DateTime>] [-CreateAlertOnFailure <Boolean>] [-PercentFailure <Int32>] [-PassThru]
- [-CollectionName <String>] [-CollectionId <String>] [-Collection <IResultObject>] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### SetTaskSequenceDeploymentByIdMandatory
-```
-Set-CMTaskSequenceDeployment -TaskSequencePackageId <String> [-Comment <String>] [-SendWakeupPacket <Boolean>]
- [-UseMeteredNetwork <Boolean>] [-MakeAvailableTo <MakeAvailableToType>]
- [-DeploymentAvailableDateTime <DateTime>] [-UseUtcForAvailableSchedule <Boolean>]
- [-DeploymentExpireDateTime <DateTime>] [-UseUtcForExpireSchedule <Boolean>]
- [-ScheduleEvent <ScheduleEventType[]>] [-Schedule <IResultObject[]>] [-RerunBehavior <RerunBehaviorType>]
- [-AllowUsersRunIndependently <Boolean>] [-ShowTaskSequenceProgress <Boolean>]
- [-SoftwareInstallation <Boolean>] [-SystemRestart <Boolean>] [-PersistOnWriteFilterDevice <Boolean>]
- [-InternetOption <Boolean>] [-DeploymentOption <DeploymentOptionType>] [-AllowSharedContent <Boolean>]
- [-AllowFallback <Boolean>] [-CreateAlertOnSuccess <Boolean>] [-PercentSuccess <Int32>]
- [-AlertDateTime <DateTime>] [-CreateAlertOnFailure <Boolean>] [-PercentFailure <Int32>] [-PassThru]
- [-CollectionName <String>] [-CollectionId <String>] [-Collection <IResultObject>] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMTaskSequenceDeployment [-AlertDateTime <DateTime>] [-AllowFallback <Boolean>]
+ [-AllowSharedContent <Boolean>] [-AllowUsersRunIndependently <Boolean>] [-Comment <String>]
+ [-CreateAlertOnFailure <Boolean>] [-CreateAlertOnSuccess <Boolean>] [-DeploymentAvailableDateTime <DateTime>]
+ [-DeploymentExpireDateTime <DateTime>] [-DeploymentOption <DeploymentOptionType>] -InputObject <IResultObject>
+ [-InternetOption <Boolean>] [-MakeAvailableTo <MakeAvailableToType>] [-PercentFailure <Int32>]
+ [-PercentSuccess <Int32>] [-PersistOnWriteFilterDevice <Boolean>] [-RerunBehavior <RerunBehaviorType>]
+ [-ClearSchedule] [-RemoveSchedule <IResultObject[]>] [-AddSchedule <IResultObject[]>]
+ [-Schedule <IResultObject[]>] [-ClearScheduleEvent] [-RemoveScheduleEvent <ScheduleEventType[]>]
+ [-AddScheduleEvent <ScheduleEventType[]>] [-ScheduleEvent <ScheduleEventType[]>] [-SendWakeupPacket <Boolean>]
+ [-ShowTaskSequenceProgress <Boolean>] [-SoftwareInstallation <Boolean>] [-SystemRestart <Boolean>]
+ [-UseMeteredNetwork <Boolean>] [-UseUtcForAvailableSchedule <Boolean>] [-UseUtcForExpireSchedule <Boolean>]
+ [-PassThru] [-Collection <IResultObject>] [-CollectionId <String>] [-CollectionName <String>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetTaskSequenceDeploymentByDeploymentIdMandatory
 ```
-Set-CMTaskSequenceDeployment -TaskSequenceDeploymentId <String> [-Comment <String>]
- [-SendWakeupPacket <Boolean>] [-UseMeteredNetwork <Boolean>] [-MakeAvailableTo <MakeAvailableToType>]
- [-DeploymentAvailableDateTime <DateTime>] [-UseUtcForAvailableSchedule <Boolean>]
- [-DeploymentExpireDateTime <DateTime>] [-UseUtcForExpireSchedule <Boolean>]
- [-ScheduleEvent <ScheduleEventType[]>] [-Schedule <IResultObject[]>] [-RerunBehavior <RerunBehaviorType>]
- [-AllowUsersRunIndependently <Boolean>] [-ShowTaskSequenceProgress <Boolean>]
- [-SoftwareInstallation <Boolean>] [-SystemRestart <Boolean>] [-PersistOnWriteFilterDevice <Boolean>]
- [-InternetOption <Boolean>] [-DeploymentOption <DeploymentOptionType>] [-AllowSharedContent <Boolean>]
- [-AllowFallback <Boolean>] [-CreateAlertOnSuccess <Boolean>] [-PercentSuccess <Int32>]
- [-AlertDateTime <DateTime>] [-CreateAlertOnFailure <Boolean>] [-PercentFailure <Int32>] [-PassThru]
- [-CollectionName <String>] [-CollectionId <String>] [-Collection <IResultObject>] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMTaskSequenceDeployment [-AlertDateTime <DateTime>] [-AllowFallback <Boolean>]
+ [-AllowSharedContent <Boolean>] [-AllowUsersRunIndependently <Boolean>] [-Comment <String>]
+ [-CreateAlertOnFailure <Boolean>] [-CreateAlertOnSuccess <Boolean>] [-DeploymentAvailableDateTime <DateTime>]
+ [-DeploymentExpireDateTime <DateTime>] [-DeploymentOption <DeploymentOptionType>] [-InternetOption <Boolean>]
+ [-MakeAvailableTo <MakeAvailableToType>] [-PercentFailure <Int32>] [-PercentSuccess <Int32>]
+ [-PersistOnWriteFilterDevice <Boolean>] [-RerunBehavior <RerunBehaviorType>] [-ClearSchedule]
+ [-RemoveSchedule <IResultObject[]>] [-AddSchedule <IResultObject[]>] [-Schedule <IResultObject[]>]
+ [-ClearScheduleEvent] [-RemoveScheduleEvent <ScheduleEventType[]>] [-AddScheduleEvent <ScheduleEventType[]>]
+ [-ScheduleEvent <ScheduleEventType[]>] [-SendWakeupPacket <Boolean>] [-ShowTaskSequenceProgress <Boolean>]
+ [-SoftwareInstallation <Boolean>] [-SystemRestart <Boolean>] -TaskSequenceDeploymentId <String>
+ [-UseMeteredNetwork <Boolean>] [-UseUtcForAvailableSchedule <Boolean>] [-UseUtcForExpireSchedule <Boolean>]
+ [-PassThru] [-Collection <IResultObject>] [-CollectionId <String>] [-CollectionName <String>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SetTaskSequenceDeploymentByNameMandatory
+```
+Set-CMTaskSequenceDeployment [-AlertDateTime <DateTime>] [-AllowFallback <Boolean>]
+ [-AllowSharedContent <Boolean>] [-AllowUsersRunIndependently <Boolean>] [-Comment <String>]
+ [-CreateAlertOnFailure <Boolean>] [-CreateAlertOnSuccess <Boolean>] [-DeploymentAvailableDateTime <DateTime>]
+ [-DeploymentExpireDateTime <DateTime>] [-DeploymentOption <DeploymentOptionType>] [-InternetOption <Boolean>]
+ [-MakeAvailableTo <MakeAvailableToType>] [-PercentFailure <Int32>] [-PercentSuccess <Int32>]
+ [-PersistOnWriteFilterDevice <Boolean>] [-RerunBehavior <RerunBehaviorType>] [-ClearSchedule]
+ [-RemoveSchedule <IResultObject[]>] [-AddSchedule <IResultObject[]>] [-Schedule <IResultObject[]>]
+ [-ClearScheduleEvent] [-RemoveScheduleEvent <ScheduleEventType[]>] [-AddScheduleEvent <ScheduleEventType[]>]
+ [-ScheduleEvent <ScheduleEventType[]>] [-SendWakeupPacket <Boolean>] [-ShowTaskSequenceProgress <Boolean>]
+ [-SoftwareInstallation <Boolean>] [-SystemRestart <Boolean>] -TaskSequenceName <String>
+ [-UseMeteredNetwork <Boolean>] [-UseUtcForAvailableSchedule <Boolean>] [-UseUtcForExpireSchedule <Boolean>]
+ [-PassThru] [-Collection <IResultObject>] [-CollectionId <String>] [-CollectionName <String>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SetTaskSequenceDeploymentByIdMandatory
+```
+Set-CMTaskSequenceDeployment [-AlertDateTime <DateTime>] [-AllowFallback <Boolean>]
+ [-AllowSharedContent <Boolean>] [-AllowUsersRunIndependently <Boolean>] [-Comment <String>]
+ [-CreateAlertOnFailure <Boolean>] [-CreateAlertOnSuccess <Boolean>] [-DeploymentAvailableDateTime <DateTime>]
+ [-DeploymentExpireDateTime <DateTime>] [-DeploymentOption <DeploymentOptionType>] [-InternetOption <Boolean>]
+ [-MakeAvailableTo <MakeAvailableToType>] [-PercentFailure <Int32>] [-PercentSuccess <Int32>]
+ [-PersistOnWriteFilterDevice <Boolean>] [-RerunBehavior <RerunBehaviorType>] [-ClearSchedule]
+ [-RemoveSchedule <IResultObject[]>] [-AddSchedule <IResultObject[]>] [-Schedule <IResultObject[]>]
+ [-ClearScheduleEvent] [-RemoveScheduleEvent <ScheduleEventType[]>] [-AddScheduleEvent <ScheduleEventType[]>]
+ [-ScheduleEvent <ScheduleEventType[]>] [-SendWakeupPacket <Boolean>] [-ShowTaskSequenceProgress <Boolean>]
+ [-SoftwareInstallation <Boolean>] [-SystemRestart <Boolean>] -TaskSequencePackageId <String>
+ [-UseMeteredNetwork <Boolean>] [-UseUtcForAvailableSchedule <Boolean>] [-UseUtcForExpireSchedule <Boolean>]
+ [-PassThru] [-Collection <IResultObject>] [-CollectionId <String>] [-CollectionName <String>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -105,6 +109,39 @@ Set-CMTaskSequenceDeployment -TaskSequenceName "Task Sequence 1333" -CollectionN
 ```
 
 ## PARAMETERS
+
+### -AddSchedule
+
+Specify a schedule token object to add to the deployment. To create a schedule object, use the [New-CMSchedule](New-CMSchedule.md) cmdlet.
+
+```yaml
+Type: IResultObject[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AddScheduleEvent
+
+Specify one of the accepted schedule events to add to the deployment.
+
+```yaml
+Type: ScheduleEventType[]
+Parameter Sets: (All)
+Aliases:
+Accepted values: AsSoonAsPossible, LogOn, LogOff
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -AlertDateTime
 
@@ -160,6 +197,38 @@ Indicates whether to allow users to independently run the program, regardless of
 
 ```yaml
 Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ClearSchedule
+
+Add this parameter to remove all schedules from the deployment.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ClearScheduleEvent
+
+Add this parameter to remove all schedule events from the deployment.
+
+```yaml
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
@@ -476,6 +545,39 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -RemoveSchedule
+
+Specify a schedule token object to remove from the deployment. To create a schedule object, use the [New-CMSchedule](New-CMSchedule.md) cmdlet.
+
+```yaml
+Type: IResultObject[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemoveScheduleEvent
+
+Specify one of the accepted schedule events to remove from the deployment.
+
+```yaml
+Type: ScheduleEventType[]
+Parameter Sets: (All)
+Aliases:
+Accepted values: AsSoonAsPossible, LogOn, LogOff
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -RerunBehavior
 
 Specifies whether the task sequence will rerun on a computer if it previously ran before the scheduled mandatory time. By default, the task sequence always reruns.
@@ -703,7 +805,6 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS

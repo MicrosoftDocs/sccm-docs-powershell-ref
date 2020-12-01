@@ -15,7 +15,7 @@ Releases locks to global objects in Configuration Manager.
 ## SYNTAX
 
 ```
-Unlock-CMObject [-InputObject] <IResultObject[]> [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Unlock-CMObject [-Force] [-InputObject] <IResultObject[]> [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

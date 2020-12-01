@@ -1,4 +1,4 @@
----
+﻿---
 description: Gets a reporting service point.
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,7 +16,7 @@ Gets a reporting service point.
 
 ### SearchByName (Default)
 ```
-Get-CMReportingServicePoint [-SiteCode <String>] [[-SiteSystemServerName] <String>] [-AllSite]
+Get-CMReportingServicePoint [-AllSite] [-SiteCode <String>] [[-SiteSystemServerName] <String>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 

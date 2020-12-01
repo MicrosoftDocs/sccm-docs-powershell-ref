@@ -14,25 +14,25 @@ schema: 2.0.0
 
 ### SetCustomSettingByName (Default)
 ```
-Set-CMClientSettingWindowsAnalytics [-Enable <Boolean>] [-CommercialIdKey <String>]
- [-Win10Telemetry <Win10TelemetryLevelType>] [-EnableEarlierTelemetry <Boolean>]
- [-IEDataCollectionOption <InternetExplorerTelemetryLevelType>] -Name <String> [-PassThru]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMClientSettingWindowsAnalytics [-CommercialIdKey <String>] [-Enable <Boolean>]
+ [-EnableEarlierTelemetry <Boolean>] [-IEDataCollectionOption <InternetExplorerTelemetryLevelType>]
+ [-Win10Telemetry <Win10TelemetryLevelType>] -Name <String> [-PassThru] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetDefaultSetting
 ```
-Set-CMClientSettingWindowsAnalytics [-Enable <Boolean>] [-CommercialIdKey <String>]
- [-Win10Telemetry <Win10TelemetryLevelType>] [-EnableEarlierTelemetry <Boolean>]
- [-IEDataCollectionOption <InternetExplorerTelemetryLevelType>] [-DefaultSetting] [-PassThru]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMClientSettingWindowsAnalytics [-CommercialIdKey <String>] [-Enable <Boolean>]
+ [-EnableEarlierTelemetry <Boolean>] [-IEDataCollectionOption <InternetExplorerTelemetryLevelType>]
+ [-Win10Telemetry <Win10TelemetryLevelType>] [-DefaultSetting] [-PassThru] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetCustomSettingByValue
 ```
-Set-CMClientSettingWindowsAnalytics [-Enable <Boolean>] [-CommercialIdKey <String>]
- [-Win10Telemetry <Win10TelemetryLevelType>] [-EnableEarlierTelemetry <Boolean>]
- [-IEDataCollectionOption <InternetExplorerTelemetryLevelType>] -InputObject <IResultObject> [-PassThru]
+Set-CMClientSettingWindowsAnalytics [-CommercialIdKey <String>] [-Enable <Boolean>]
+ [-EnableEarlierTelemetry <Boolean>] [-IEDataCollectionOption <InternetExplorerTelemetryLevelType>]
+ [-Win10Telemetry <Win10TelemetryLevelType>] -InputObject <IResultObject> [-PassThru]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

@@ -17,19 +17,19 @@ Configure distribution point groups.
 
 ### SetByValueMandatory (Default)
 ```
-Set-CMDistributionPointGroup -InputObject <IResultObject> [-Description <String>] [-NewName <String>]
+Set-CMDistributionPointGroup [-Description <String>] -InputObject <IResultObject> [-NewName <String>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetById
 ```
-Set-CMDistributionPointGroup -Id <String> [-Description <String>] [-NewName <String>]
+Set-CMDistributionPointGroup [-Description <String>] -Id <String> [-NewName <String>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetByName
 ```
-Set-CMDistributionPointGroup -Name <String> [-Description <String>] [-NewName <String>]
+Set-CMDistributionPointGroup [-Description <String>] -Name <String> [-NewName <String>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -205,7 +205,6 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -215,7 +214,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
-
 ## NOTES
 
 ## RELATED LINKS

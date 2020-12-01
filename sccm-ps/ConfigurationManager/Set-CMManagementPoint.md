@@ -16,20 +16,20 @@ Changes settings for a management point in Configuration Manager.
 
 ### SetByValue (Default)
 ```
-Set-CMManagementPoint -InputObject <IResultObject> [-EnableSsl <Boolean>] [-EnableCloudGateway <Boolean>]
- [-ClientConnectionType <ClientConnectionTypes>] [-AllowDevice <Boolean>] [-GenerateAlert <Boolean>]
- [-UseSiteDatabase <Boolean>] [-SqlServerFqdn <String>] [-SqlServerInstanceName <String>]
- [-DatabaseName <String>] [-UserName <String>] [-UseComputerAccount] [-PassThru] [-DisableWildcardHandling]
+Set-CMManagementPoint [-AllowDevice <Boolean>] [-ClientConnectionType <ClientConnectionTypes>]
+ [-DatabaseName <String>] [-EnableCloudGateway <Boolean>] [-EnableSsl <Boolean>] [-GenerateAlert <Boolean>]
+ -InputObject <IResultObject> [-PassThru] [-SqlServerFqdn <String>] [-SqlServerInstanceName <String>]
+ [-UseComputerAccount] [-UserName <String>] [-UseSiteDatabase <Boolean>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetByName
 ```
-Set-CMManagementPoint [-SiteSystemServerName] <String> [-SiteCode <String>] [-EnableSsl <Boolean>]
- [-EnableCloudGateway <Boolean>] [-ClientConnectionType <ClientConnectionTypes>] [-AllowDevice <Boolean>]
- [-GenerateAlert <Boolean>] [-UseSiteDatabase <Boolean>] [-SqlServerFqdn <String>]
- [-SqlServerInstanceName <String>] [-DatabaseName <String>] [-UserName <String>] [-UseComputerAccount]
- [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMManagementPoint [-AllowDevice <Boolean>] [-ClientConnectionType <ClientConnectionTypes>]
+ [-DatabaseName <String>] [-EnableCloudGateway <Boolean>] [-EnableSsl <Boolean>] [-GenerateAlert <Boolean>]
+ [-PassThru] [-SiteCode <String>] [-SiteSystemServerName] <String> [-SqlServerFqdn <String>]
+ [-SqlServerInstanceName <String>] [-UseComputerAccount] [-UserName <String>] [-UseSiteDatabase <Boolean>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

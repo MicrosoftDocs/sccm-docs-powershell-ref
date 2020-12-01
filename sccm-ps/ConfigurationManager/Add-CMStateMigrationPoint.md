@@ -16,20 +16,18 @@ Adds a state migration point in Configuration Manager.
 
 ### ByValue (Default)
 ```
-Add-CMStateMigrationPoint -StorageFolder <StorageDirectoryData[]> [-DeleteImmediately]
- [-TimeDeleteAfter <Int32>] [-TimeUnit <IntervalType>] [-EnableRestoreOnlyMode <Boolean>]
- [-AllowFallbackSourceLocationForContent <Boolean>] [-BoundaryGroupName <String[]>]
- -InputObject <IResultObject> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Add-CMStateMigrationPoint [-AllowFallbackSourceLocationForContent <Boolean>] [-BoundaryGroupName <String[]>]
+ [-DeleteImmediately] [-EnableRestoreOnlyMode <Boolean>] -InputObject <IResultObject>
+ -StorageFolder <StorageDirectoryData[]> [-TimeDeleteAfter <Int32>] [-TimeUnit <IntervalType>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByName
 ```
-Add-CMStateMigrationPoint [-SiteSystemServerName] <String> [-SiteCode <String>]
- -StorageFolder <StorageDirectoryData[]> [-DeleteImmediately] [-TimeDeleteAfter <Int32>]
- [-TimeUnit <IntervalType>] [-EnableRestoreOnlyMode <Boolean>]
- [-AllowFallbackSourceLocationForContent <Boolean>] [-BoundaryGroupName <String[]>] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Add-CMStateMigrationPoint [-AllowFallbackSourceLocationForContent <Boolean>] [-BoundaryGroupName <String[]>]
+ [-DeleteImmediately] [-EnableRestoreOnlyMode <Boolean>] [-SiteCode <String>] [-SiteSystemServerName] <String>
+ -StorageFolder <StorageDirectoryData[]> [-TimeDeleteAfter <Int32>] [-TimeUnit <IntervalType>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

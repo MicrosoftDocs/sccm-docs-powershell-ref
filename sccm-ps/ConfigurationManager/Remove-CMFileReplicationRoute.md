@@ -15,7 +15,7 @@ Removes a file replication route from Configuration Manager.
 ## SYNTAX
 
 ```
-Remove-CMFileReplicationRoute -SourceSiteCode <String> -DestinationSiteCode <String> [-Force]
+Remove-CMFileReplicationRoute -DestinationSiteCode <String> [-Force] -SourceSiteCode <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

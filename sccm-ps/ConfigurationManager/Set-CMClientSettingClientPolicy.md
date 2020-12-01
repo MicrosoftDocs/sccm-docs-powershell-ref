@@ -16,23 +16,23 @@ Sets a client setting client policy.
 
 ### SetCustomSettingByName (Default)
 ```
-Set-CMClientSettingClientPolicy [-PolicyPollingMins <Int32>] [-EnableUserPolicy <Boolean>]
- [-EnableUserPolicyOnInternet <Boolean>] [-EnableUserPolicyOnTS <Boolean>] -Name <String> [-PassThru]
+Set-CMClientSettingClientPolicy [-EnableUserPolicy <Boolean>] [-EnableUserPolicyOnInternet <Boolean>]
+ [-EnableUserPolicyOnTS <Boolean>] [-PolicyPollingMins <Int32>] -Name <String> [-PassThru]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetDefaultSetting
 ```
-Set-CMClientSettingClientPolicy [-PolicyPollingMins <Int32>] [-EnableUserPolicy <Boolean>]
- [-EnableUserPolicyOnInternet <Boolean>] [-EnableUserPolicyOnTS <Boolean>] [-DefaultSetting] [-PassThru]
+Set-CMClientSettingClientPolicy [-EnableUserPolicy <Boolean>] [-EnableUserPolicyOnInternet <Boolean>]
+ [-EnableUserPolicyOnTS <Boolean>] [-PolicyPollingMins <Int32>] [-DefaultSetting] [-PassThru]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetCustomSettingByValue
 ```
-Set-CMClientSettingClientPolicy [-PolicyPollingMins <Int32>] [-EnableUserPolicy <Boolean>]
- [-EnableUserPolicyOnInternet <Boolean>] [-EnableUserPolicyOnTS <Boolean>] -InputObject <IResultObject>
- [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMClientSettingClientPolicy [-EnableUserPolicy <Boolean>] [-EnableUserPolicyOnInternet <Boolean>]
+ [-EnableUserPolicyOnTS <Boolean>] [-PolicyPollingMins <Int32>] -InputObject <IResultObject> [-PassThru]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

@@ -16,16 +16,15 @@ Changes settings for a computer association in Configuration Manager.
 
 ### SearchByName (Default)
 ```
-Set-CMComputerAssociation -DestinationComputer <String> -SourceComputer <String>
- [-MigrationBehavior <MigrationBehavior>] [-AddMigrationUserName <String[]>]
- [-RemoveMigrationUserName <String[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Set-CMComputerAssociation [-AddMigrationUserName <String[]>] -DestinationComputer <String>
+ [-MigrationBehavior <MigrationBehavior>] [-RemoveMigrationUserName <String[]>] -SourceComputer <String>
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory
 ```
-Set-CMComputerAssociation -MigrationId <String> [-MigrationBehavior <MigrationBehavior>]
- [-AddMigrationUserName <String[]>] [-RemoveMigrationUserName <String[]>] [-DisableWildcardHandling]
+Set-CMComputerAssociation [-AddMigrationUserName <String[]>] [-MigrationBehavior <MigrationBehavior>]
+ -MigrationId <String> [-RemoveMigrationUserName <String[]>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

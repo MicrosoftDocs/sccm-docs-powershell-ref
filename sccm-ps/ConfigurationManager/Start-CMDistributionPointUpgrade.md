@@ -17,36 +17,35 @@ Upgrades a shared distribution point.
 ### UseImportCertificate (Default)
 ```
 Start-CMDistributionPointUpgrade [-AllowFallbackForContent <Boolean>] [-AllowPreStaging <Boolean>]
- [-AllowRespondIncomingPxeRequest <Boolean>] [-ClientConnectionType <ClientConnectionTypes>]
- [-ClientCommunicationMode <ComputerCommunicationType>] [-PxePassword <SecureString>]
- [-ContentValidationPriority <Priority>] [-EnableAnonymous <Boolean>] [-EnablePxeSupport <Boolean>]
- [-EnableUnknownComputerSupport <Boolean>] [-EnableNonWdsPxe <Boolean>] [-InitiateConnection <Boolean>]
- [-InstallIis <Boolean>] [-MacAddressForRespondingPxeRequest <String[]>] [-PublicFqdn <String>]
- [-PxeServerResponseDelaySec <Int32>] [-UserDeviceAffinity <UserDeviceAffinityType>]
- [-ValidateContentSchedule <IResultObject>] [-CertificatePassword <SecureString>] -CertificatePath <String>
- -DestinationSiteCode <String> [-ForceWhenDuplicateCertificate <Boolean>]
- [-InstallationAccount <IResultObject>] [-MinFreeSpaceMB <Int32>] [-PathForSavingMigratedPackage <String>]
- [-PrimaryContentLibraryLocation <DriveType>] [-PrimaryPackageShareLocation <DriveType>]
+ [-AllowRespondIncomingPxeRequest <Boolean>] [-CertificatePassword <SecureString>] -CertificatePath <String>
+ [-ClientCommunicationMode <ComputerCommunicationType>] [-ClientConnectionType <ClientConnectionTypes>]
+ [-ContentValidationPriority <Priority>] -DestinationSiteCode <String> [-EnableAnonymous <Boolean>]
+ [-EnableNonWdsPxe <Boolean>] [-EnablePxeSupport <Boolean>] [-EnableUnknownComputerSupport <Boolean>]
+ [-ForceWhenDuplicateCertificate <Boolean>] [-InitiateConnection <Boolean>] -InputObject <IResultObject>
+ [-InstallationAccount <IResultObject>] [-InstallIis <Boolean>] [-MacAddressForRespondingPxeRequest <String[]>]
+ [-MinFreeSpaceMB <Int32>] [-PathForSavingMigratedPackage <String>]
+ [-PrimaryContentLibraryLocation <DriveType>] [-PrimaryPackageShareLocation <DriveType>] [-PublicFqdn <String>]
+ [-PxePassword <SecureString>] [-PxeServerResponseDelaySec <Int32>]
  [-SecondaryContentLibraryLocation <DriveType>] [-SecondaryPackageShareLocation <DriveType>]
- -InputObject <IResultObject> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-UserDeviceAffinity <UserDeviceAffinityType>] [-ValidateContentSchedule <IResultObject>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### UseSelfSignedCertificate
 ```
 Start-CMDistributionPointUpgrade [-AllowFallbackForContent <Boolean>] [-AllowPreStaging <Boolean>]
- [-AllowRespondIncomingPxeRequest <Boolean>] [-ClientConnectionType <ClientConnectionTypes>]
- [-ClientCommunicationMode <ComputerCommunicationType>] [-PxePassword <SecureString>]
- [-ContentValidationPriority <Priority>] [-EnableAnonymous <Boolean>] [-EnablePxeSupport <Boolean>]
- [-EnableUnknownComputerSupport <Boolean>] [-EnableNonWdsPxe <Boolean>] [-InitiateConnection <Boolean>]
- [-InstallIis <Boolean>] [-MacAddressForRespondingPxeRequest <String[]>] [-PublicFqdn <String>]
- [-PxeServerResponseDelaySec <Int32>] [-UserDeviceAffinity <UserDeviceAffinityType>]
- [-ValidateContentSchedule <IResultObject>] -CertificateExpirationTimeUtc <DateTime>
- -DestinationSiteCode <String> [-InstallationAccount <IResultObject>] [-MinFreeSpaceMB <Int32>]
+ [-AllowRespondIncomingPxeRequest <Boolean>] -CertificateExpirationTimeUtc <DateTime>
+ [-ClientCommunicationMode <ComputerCommunicationType>] [-ClientConnectionType <ClientConnectionTypes>]
+ [-ContentValidationPriority <Priority>] -DestinationSiteCode <String> [-EnableAnonymous <Boolean>]
+ [-EnableNonWdsPxe <Boolean>] [-EnablePxeSupport <Boolean>] [-EnableUnknownComputerSupport <Boolean>]
+ [-InitiateConnection <Boolean>] -InputObject <IResultObject> [-InstallationAccount <IResultObject>]
+ [-InstallIis <Boolean>] [-MacAddressForRespondingPxeRequest <String[]>] [-MinFreeSpaceMB <Int32>]
  [-PathForSavingMigratedPackage <String>] [-PrimaryContentLibraryLocation <DriveType>]
- [-PrimaryPackageShareLocation <DriveType>] [-SecondaryContentLibraryLocation <DriveType>]
- [-SecondaryPackageShareLocation <DriveType>] -InputObject <IResultObject> [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-PrimaryPackageShareLocation <DriveType>] [-PublicFqdn <String>] [-PxePassword <SecureString>]
+ [-PxeServerResponseDelaySec <Int32>] [-SecondaryContentLibraryLocation <DriveType>]
+ [-SecondaryPackageShareLocation <DriveType>] [-UserDeviceAffinity <UserDeviceAffinityType>]
+ [-ValidateContentSchedule <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -654,6 +653,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
 
 ## OUTPUTS
+
+###  
 
 ## NOTES
 

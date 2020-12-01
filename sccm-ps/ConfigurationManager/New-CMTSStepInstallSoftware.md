@@ -16,8 +16,8 @@ Creates a t s step install software.
 ## SYNTAX
 
 ```
-New-CMTSStepInstallSoftware [-Program <IResultObject>] [-BaseVariableName <String>] [-ContinueOnInstallError]
- -Name <String> [-Description <String>] [-ContinueOnError] [-Disable] [-Condition <IResultObject[]>]
+New-CMTSStepInstallSoftware [-BaseVariableName <String>] [-ContinueOnInstallError] [-Program <IResultObject>]
+ [-Condition <IResultObject[]>] [-ContinueOnError] [-Description <String>] [-Disable] -Name <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

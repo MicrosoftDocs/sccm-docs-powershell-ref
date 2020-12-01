@@ -15,8 +15,8 @@ Creates one or more Active Directory forest objects in Configuration Manager.
 ## SYNTAX
 
 ```
-New-CMActiveDirectoryForest -ForestFqdn <String> [-Description <String>] [-EnableDiscovery <Boolean>]
- [-UserName <String>] [-Password <SecureString>] [-PublishingPath <String>] [-DisableWildcardHandling]
+New-CMActiveDirectoryForest [-Description <String>] [-EnableDiscovery <Boolean>] -ForestFqdn <String>
+ [-Password <SecureString>] [-PublishingPath <String>] [-UserName <String>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

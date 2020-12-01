@@ -16,13 +16,13 @@ Removes an Active Directory forest object from Configuration Manager.
 
 ### SearchByValueMandatory (Default)
 ```
-Remove-CMActiveDirectoryForest [-InputObject] <IResultObject> [-Force] [-DisableWildcardHandling]
+Remove-CMActiveDirectoryForest [-Force] [-InputObject] <IResultObject> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByFQDNMandatory
 ```
-Remove-CMActiveDirectoryForest [-Name] <String> [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Remove-CMActiveDirectoryForest [-Force] [-Name] <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

@@ -16,22 +16,20 @@ Modifies settings for a state migration point in Configuration Manager.
 
 ### SetByValue (Default)
 ```
-Set-CMStateMigrationPoint [-AddStorageFolder <StorageDirectoryData[]>]
- [-RemoveStorageFolder <StorageDirectoryData[]>] [-DeleteImmediately] [-TimeDeleteAfter <Int32>]
- [-TimeUnit <IntervalType>] [-EnableRestoreOnlyMode <Boolean>]
- [-AllowFallbackSourceLocationForContent <Boolean>] [-AddBoundaryGroupName <String[]>]
- [-RemoveBoundaryGroupName <String[]>] -InputObject <IResultObject> [-PassThru] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMStateMigrationPoint [-AddBoundaryGroupName <String[]>] [-AddStorageFolder <StorageDirectoryData[]>]
+ [-AllowFallbackSourceLocationForContent <Boolean>] [-DeleteImmediately] [-EnableRestoreOnlyMode <Boolean>]
+ -InputObject <IResultObject> [-PassThru] [-RemoveBoundaryGroupName <String[]>]
+ [-RemoveStorageFolder <StorageDirectoryData[]>] [-TimeDeleteAfter <Int32>] [-TimeUnit <IntervalType>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetByName
 ```
-Set-CMStateMigrationPoint [-SiteCode <String>] [-SiteSystemServerName] <String>
- [-AddStorageFolder <StorageDirectoryData[]>] [-RemoveStorageFolder <StorageDirectoryData[]>]
- [-DeleteImmediately] [-TimeDeleteAfter <Int32>] [-TimeUnit <IntervalType>] [-EnableRestoreOnlyMode <Boolean>]
- [-AllowFallbackSourceLocationForContent <Boolean>] [-AddBoundaryGroupName <String[]>]
- [-RemoveBoundaryGroupName <String[]>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMStateMigrationPoint [-AddBoundaryGroupName <String[]>] [-AddStorageFolder <StorageDirectoryData[]>]
+ [-AllowFallbackSourceLocationForContent <Boolean>] [-DeleteImmediately] [-EnableRestoreOnlyMode <Boolean>]
+ [-PassThru] [-RemoveBoundaryGroupName <String[]>] [-RemoveStorageFolder <StorageDirectoryData[]>]
+ [-SiteCode <String>] [-SiteSystemServerName] <String> [-TimeDeleteAfter <Int32>] [-TimeUnit <IntervalType>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

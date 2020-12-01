@@ -1,4 +1,4 @@
----
+﻿---
 description: Gets license usage information.
 external help file: AdminUI.PS.CalTracking.dll-Help.xml
 Module Name: ConfigurationManager
@@ -21,7 +21,7 @@ Get-CMAccessLicense [-License] [-DisableWildcardHandling] [-ForceWildcardHandlin
 
 ### ByCount
 ```
-Get-CMAccessLicense -LicenseName <String> [-Count] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Get-CMAccessLicense [-Count] -LicenseName <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
  [<CommonParameters>]
 ```
 

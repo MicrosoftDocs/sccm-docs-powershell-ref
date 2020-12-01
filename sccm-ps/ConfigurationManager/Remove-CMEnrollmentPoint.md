@@ -22,7 +22,7 @@ Remove-CMEnrollmentPoint [-Force] -InputObject <IResultObject> [-DisableWildcard
 
 ### SearchByNameMandatory
 ```
-Remove-CMEnrollmentPoint [-SiteCode <String>] [-Force] [-SiteSystemServerName] <String>
+Remove-CMEnrollmentPoint [-Force] [-SiteCode <String>] [-SiteSystemServerName] <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

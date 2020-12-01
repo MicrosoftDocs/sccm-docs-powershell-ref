@@ -25,7 +25,7 @@ Discovery identifies computer and user resources that Configuration Manager can 
 If it discovers a resource, Configuration Manager creates a record in the Configuration Manager database for the resource and its associated information.
 You can then use the discovery information to help you to install the Configuration Manager client and create custom queries and collections to logically group resources for related management tasks.
 
-For more information about discovery in Configuration Manager, see [About Configuration Manager Discovery](https://docs.microsoft.com/mem/configmgr/core/servers/deploy/configure/run-discovery).
+For more information about discovery in Configuration Manager, see [About Configuration Manager Discovery](/mem/configmgr/core/servers/deploy/configure/run-discovery).
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.
@@ -133,6 +133,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[About Configuration Manager Discovery](https://docs.microsoft.com/mem/configmgr/core/servers/deploy/configure/run-discovery)
+[About Configuration Manager Discovery](/mem/configmgr/core/servers/deploy/configure/run-discovery)
 
 [Set-CMDiscoveryMethod](Set-CMDiscoveryMethod.md)

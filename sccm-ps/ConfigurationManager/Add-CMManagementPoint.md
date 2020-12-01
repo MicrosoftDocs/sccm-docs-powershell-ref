@@ -16,35 +16,35 @@ Adds a management point to Configuration Manager.
 
 ### ByValueNoReplica (Default)
 ```
-Add-CMManagementPoint [-EnableSsl] [-EnableCloudGateway] [-CommunicationType <ComputerCommunicationType>]
- [-ClientConnectionType <ClientConnectionTypes>] [-AllowDevice] [-GenerateAlert]
- [-ConnectionAccountUserName <String>] [-InputObject] <IResultObject> [-DisableWildcardHandling]
+Add-CMManagementPoint [-AllowDevice] [-ClientConnectionType <ClientConnectionTypes>]
+ [-CommunicationType <ComputerCommunicationType>] [-ConnectionAccountUserName <String>] [-EnableCloudGateway]
+ [-EnableSsl] [-GenerateAlert] [-InputObject] <IResultObject> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByNameNoReplica
 ```
-Add-CMManagementPoint [-SiteSystemServerName] <String> [-SiteCode <String>] [-EnableSsl] [-EnableCloudGateway]
- [-CommunicationType <ComputerCommunicationType>] [-ClientConnectionType <ClientConnectionTypes>]
- [-AllowDevice] [-GenerateAlert] [-ConnectionAccountUserName <String>] [-DisableWildcardHandling]
+Add-CMManagementPoint [-AllowDevice] [-ClientConnectionType <ClientConnectionTypes>]
+ [-CommunicationType <ComputerCommunicationType>] [-ConnectionAccountUserName <String>] [-EnableCloudGateway]
+ [-EnableSsl] [-GenerateAlert] [-SiteCode <String>] [-SiteSystemServerName] <String> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByNameReplica
 ```
-Add-CMManagementPoint [-SiteSystemServerName] <String> [-SiteCode <String>] [-EnableSsl] [-EnableCloudGateway]
- [-CommunicationType <ComputerCommunicationType>] [-ClientConnectionType <ClientConnectionTypes>]
- [-AllowDevice] [-GenerateAlert] -SqlServerFqdn <String> [-SqlServerInstanceName <String>]
- -DatabaseName <String> [-ConnectionAccountUserName <String>] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Add-CMManagementPoint [-AllowDevice] [-ClientConnectionType <ClientConnectionTypes>]
+ [-CommunicationType <ComputerCommunicationType>] [-ConnectionAccountUserName <String>] -DatabaseName <String>
+ [-EnableCloudGateway] [-EnableSsl] [-GenerateAlert] [-SiteCode <String>] [-SiteSystemServerName] <String>
+ -SqlServerFqdn <String> [-SqlServerInstanceName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByValueReplica
 ```
-Add-CMManagementPoint [-EnableSsl] [-EnableCloudGateway] [-CommunicationType <ComputerCommunicationType>]
- [-ClientConnectionType <ClientConnectionTypes>] [-AllowDevice] [-GenerateAlert] -SqlServerFqdn <String>
- [-SqlServerInstanceName <String>] -DatabaseName <String> [-ConnectionAccountUserName <String>]
- [-InputObject] <IResultObject> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+Add-CMManagementPoint [-AllowDevice] [-ClientConnectionType <ClientConnectionTypes>]
+ [-CommunicationType <ComputerCommunicationType>] [-ConnectionAccountUserName <String>] -DatabaseName <String>
+ [-EnableCloudGateway] [-EnableSsl] [-GenerateAlert] [-InputObject] <IResultObject> -SqlServerFqdn <String>
+ [-SqlServerInstanceName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 

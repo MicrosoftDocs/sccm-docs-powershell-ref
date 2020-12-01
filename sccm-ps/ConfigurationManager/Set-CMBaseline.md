@@ -16,45 +16,46 @@ Changes the settings of configuration baselines.
 
 ### SetByIdMandatory (Default)
 ```
-Set-CMBaseline -Id <Int32> [-NewName <String>] [-Description <String>] [-AddCategory <String[]>]
- [-RemoveCategory <String[]>] [-DesiredConfigurationDigestPath <String>] [-ClearRequiredConfigurationItem]
- [-ClearProhibitedConfigurationItem] [-ClearOptionalConfigurationItem] [-ClearOSConfigurationItem]
- [-ClearSoftwareUpdate] [-ClearBaseline] [-RemoveRequiredConfigurationItem <String[]>]
- [-RemoveProhibitedConfigurationItem <String[]>] [-RemoveOptionalConfigurationItem <String[]>]
- [-RemoveOSConfigurationItem <String[]>] [-RemoveSoftwareUpdate <String[]>] [-RemoveBaseline <String[]>]
- [-AddRequiredConfigurationItem <String[]>] [-AddProhibitedConfigurationItem <String[]>]
- [-AddOptionalConfigurationItem <String[]>] [-AddOSConfigurationItem <String[]>]
- [-AddSoftwareUpdate <String[]>] [-AddBaseline <String[]>] [-AllowComanagedClients <Boolean>] [-PassThru]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMBaseline [-AddBaseline <String[]>] [-AddCategory <String[]>] [-AddOptionalConfigurationItem <String[]>]
+ [-AddOSConfigurationItem <String[]>] [-AddProhibitedConfigurationItem <String[]>]
+ [-AddRequiredConfigurationItem <String[]>] [-AddSoftwareUpdate <String[]>] [-AllowComanagedClients <Boolean>]
+ [-ClearBaseline] [-ClearOptionalConfigurationItem] [-ClearOSConfigurationItem]
+ [-ClearProhibitedConfigurationItem] [-ClearRequiredConfigurationItem] [-ClearSoftwareUpdate]
+ [-Description <String>] [-DesiredConfigurationDigestPath <String>] -Id <Int32> [-NewName <String>] [-PassThru]
+ [-RemoveBaseline <String[]>] [-RemoveCategory <String[]>] [-RemoveOptionalConfigurationItem <String[]>]
+ [-RemoveOSConfigurationItem <String[]>] [-RemoveProhibitedConfigurationItem <String[]>]
+ [-RemoveRequiredConfigurationItem <String[]>] [-RemoveSoftwareUpdate <String[]>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetByNameMandatory
 ```
-Set-CMBaseline -Name <String> [-NewName <String>] [-Description <String>] [-AddCategory <String[]>]
- [-RemoveCategory <String[]>] [-DesiredConfigurationDigestPath <String>] [-ClearRequiredConfigurationItem]
- [-ClearProhibitedConfigurationItem] [-ClearOptionalConfigurationItem] [-ClearOSConfigurationItem]
- [-ClearSoftwareUpdate] [-ClearBaseline] [-RemoveRequiredConfigurationItem <String[]>]
- [-RemoveProhibitedConfigurationItem <String[]>] [-RemoveOptionalConfigurationItem <String[]>]
- [-RemoveOSConfigurationItem <String[]>] [-RemoveSoftwareUpdate <String[]>] [-RemoveBaseline <String[]>]
- [-AddRequiredConfigurationItem <String[]>] [-AddProhibitedConfigurationItem <String[]>]
- [-AddOptionalConfigurationItem <String[]>] [-AddOSConfigurationItem <String[]>]
- [-AddSoftwareUpdate <String[]>] [-AddBaseline <String[]>] [-AllowComanagedClients <Boolean>] [-PassThru]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMBaseline [-AddBaseline <String[]>] [-AddCategory <String[]>] [-AddOptionalConfigurationItem <String[]>]
+ [-AddOSConfigurationItem <String[]>] [-AddProhibitedConfigurationItem <String[]>]
+ [-AddRequiredConfigurationItem <String[]>] [-AddSoftwareUpdate <String[]>] [-AllowComanagedClients <Boolean>]
+ [-ClearBaseline] [-ClearOptionalConfigurationItem] [-ClearOSConfigurationItem]
+ [-ClearProhibitedConfigurationItem] [-ClearRequiredConfigurationItem] [-ClearSoftwareUpdate]
+ [-Description <String>] [-DesiredConfigurationDigestPath <String>] -Name <String> [-NewName <String>]
+ [-PassThru] [-RemoveBaseline <String[]>] [-RemoveCategory <String[]>]
+ [-RemoveOptionalConfigurationItem <String[]>] [-RemoveOSConfigurationItem <String[]>]
+ [-RemoveProhibitedConfigurationItem <String[]>] [-RemoveRequiredConfigurationItem <String[]>]
+ [-RemoveSoftwareUpdate <String[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### SetByValueMandatory
 ```
-Set-CMBaseline -InputObject <IResultObject> [-NewName <String>] [-Description <String>]
- [-AddCategory <String[]>] [-RemoveCategory <String[]>] [-DesiredConfigurationDigestPath <String>]
- [-ClearRequiredConfigurationItem] [-ClearProhibitedConfigurationItem] [-ClearOptionalConfigurationItem]
- [-ClearOSConfigurationItem] [-ClearSoftwareUpdate] [-ClearBaseline]
- [-RemoveRequiredConfigurationItem <String[]>] [-RemoveProhibitedConfigurationItem <String[]>]
+Set-CMBaseline [-AddBaseline <String[]>] [-AddCategory <String[]>] [-AddOptionalConfigurationItem <String[]>]
+ [-AddOSConfigurationItem <String[]>] [-AddProhibitedConfigurationItem <String[]>]
+ [-AddRequiredConfigurationItem <String[]>] [-AddSoftwareUpdate <String[]>] [-AllowComanagedClients <Boolean>]
+ [-ClearBaseline] [-ClearOptionalConfigurationItem] [-ClearOSConfigurationItem]
+ [-ClearProhibitedConfigurationItem] [-ClearRequiredConfigurationItem] [-ClearSoftwareUpdate]
+ [-Description <String>] [-DesiredConfigurationDigestPath <String>] -InputObject <IResultObject>
+ [-NewName <String>] [-PassThru] [-RemoveBaseline <String[]>] [-RemoveCategory <String[]>]
  [-RemoveOptionalConfigurationItem <String[]>] [-RemoveOSConfigurationItem <String[]>]
- [-RemoveSoftwareUpdate <String[]>] [-RemoveBaseline <String[]>] [-AddRequiredConfigurationItem <String[]>]
- [-AddProhibitedConfigurationItem <String[]>] [-AddOptionalConfigurationItem <String[]>]
- [-AddOSConfigurationItem <String[]>] [-AddSoftwareUpdate <String[]>] [-AddBaseline <String[]>]
- [-AllowComanagedClients <Boolean>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+ [-RemoveProhibitedConfigurationItem <String[]>] [-RemoveRequiredConfigurationItem <String[]>]
+ [-RemoveSoftwareUpdate <String[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

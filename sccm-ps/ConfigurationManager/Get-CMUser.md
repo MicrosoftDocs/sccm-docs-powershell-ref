@@ -1,4 +1,4 @@
----
+﻿---
 description: Gets a Configuration Manager user.
 external help file: AdminUI.PS.Collections.dll-Help.xml
 Module Name: ConfigurationManager
@@ -19,12 +19,6 @@ Gets a Configuration Manager user.
 Get-CMUser [-Name <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
-### SearchByValueMandatory
-```
-Get-CMUser -InputObject <IResultObject> [-Name <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [<CommonParameters>]
-```
-
 ### SearchByIdMandatory
 ```
 Get-CMUser -CollectionId <String> [-Name <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
@@ -34,6 +28,12 @@ Get-CMUser -CollectionId <String> [-Name <String>] [-DisableWildcardHandling] [-
 ### SearchByNameMandatory
 ```
 Get-CMUser -CollectionName <String> [-Name <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [<CommonParameters>]
+```
+
+### SearchByValueMandatory
+```
+Get-CMUser -InputObject <IResultObject> [-Name <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [<CommonParameters>]
 ```
 
@@ -149,7 +149,7 @@ Specifies the name of a user.
 
 ```yaml
 Type: String
-Parameter Sets: ByName, SearchByValueMandatory, SearchByIdMandatory, SearchByNameMandatory
+Parameter Sets: ByName, SearchByIdMandatory, SearchByNameMandatory, SearchByValueMandatory
 Aliases:
 
 Required: False

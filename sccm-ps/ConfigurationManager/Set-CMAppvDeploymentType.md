@@ -18,36 +18,36 @@ Sets an App-V deployment type.
 ```
 Set-CMAppvDeploymentType [-ContentFallback <Boolean>] [-FastNetworkDeploymentMode <ContentHandlingMode>]
  [-SlowNetworkDeploymentMode <ContentHandlingMode>] [-AddRequirement <Rule[]>] -ApplicationName <String>
- -DeploymentTypeName <String> [-NewName <String>] [-ContentLocation <String>] [-RemoveRequirement <Rule[]>]
- [-RemoveLanguage <String[]>] [-PassThru] [-AddLanguage <String[]>] [-Comment <String>] [-Force]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-ContentLocation <String>] -DeploymentTypeName <String> [-NewName <String>] [-PassThru]
+ [-RemoveLanguage <String[]>] [-RemoveRequirement <Rule[]>] [-AddLanguage <String[]>] [-Comment <String>]
+ [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### ByAppValue
+```
+Set-CMAppvDeploymentType [-ContentFallback <Boolean>] [-FastNetworkDeploymentMode <ContentHandlingMode>]
+ [-SlowNetworkDeploymentMode <ContentHandlingMode>] [-AddRequirement <Rule[]>] -Application <IResultObject>
+ [-ContentLocation <String>] -DeploymentTypeName <String> [-NewName <String>] [-PassThru]
+ [-RemoveLanguage <String[]>] [-RemoveRequirement <Rule[]>] [-AddLanguage <String[]>] [-Comment <String>]
+ [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByAppId
 ```
 Set-CMAppvDeploymentType [-ContentFallback <Boolean>] [-FastNetworkDeploymentMode <ContentHandlingMode>]
  [-SlowNetworkDeploymentMode <ContentHandlingMode>] [-AddRequirement <Rule[]>] -ApplicationId <Int32>
- -DeploymentTypeName <String> [-NewName <String>] [-ContentLocation <String>] [-RemoveRequirement <Rule[]>]
- [-RemoveLanguage <String[]>] [-PassThru] [-AddLanguage <String[]>] [-Comment <String>] [-Force]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### ByAppValue
-```
-Set-CMAppvDeploymentType [-ContentFallback <Boolean>] [-FastNetworkDeploymentMode <ContentHandlingMode>]
- [-SlowNetworkDeploymentMode <ContentHandlingMode>] [-AddRequirement <Rule[]>] -DeploymentTypeName <String>
- -Application <IResultObject> [-NewName <String>] [-ContentLocation <String>] [-RemoveRequirement <Rule[]>]
- [-RemoveLanguage <String[]>] [-PassThru] [-AddLanguage <String[]>] [-Comment <String>] [-Force]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-ContentLocation <String>] -DeploymentTypeName <String> [-NewName <String>] [-PassThru]
+ [-RemoveLanguage <String[]>] [-RemoveRequirement <Rule[]>] [-AddLanguage <String[]>] [-Comment <String>]
+ [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByDTValue
 ```
 Set-CMAppvDeploymentType [-ContentFallback <Boolean>] [-FastNetworkDeploymentMode <ContentHandlingMode>]
- [-SlowNetworkDeploymentMode <ContentHandlingMode>] [-AddRequirement <Rule[]>] -InputObject <IResultObject>
- [-NewName <String>] [-ContentLocation <String>] [-RemoveRequirement <Rule[]>] [-RemoveLanguage <String[]>]
- [-PassThru] [-AddLanguage <String[]>] [-Comment <String>] [-Force] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-SlowNetworkDeploymentMode <ContentHandlingMode>] [-AddRequirement <Rule[]>] [-ContentLocation <String>]
+ -InputObject <IResultObject> [-NewName <String>] [-PassThru] [-RemoveLanguage <String[]>]
+ [-RemoveRequirement <Rule[]>] [-AddLanguage <String[]>] [-Comment <String>] [-Force]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -221,7 +221,7 @@ Specifies a display name for this deployment type.
 
 ```yaml
 Type: String
-Parameter Sets: ByAppName, ByAppId, ByAppValue
+Parameter Sets: ByAppName, ByAppValue, ByAppId
 Aliases:
 
 Required: True

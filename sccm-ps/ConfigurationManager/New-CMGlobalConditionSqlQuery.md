@@ -17,16 +17,16 @@ Creates a SQL Query type global condition in Configuration Manager.
 
 ### NewQueryFromFile (Default)
 ```
-New-CMGlobalConditionSqlQuery -DataType <GlobalConditionDataType> -FilePath <String> [-AllInstances]
- [-InstanceName <String>] -Database <String> -Column <String> -Name <String> [-Description <String>]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
+New-CMGlobalConditionSqlQuery [-AllInstances] -Column <String> -Database <String>
+ -DataType <GlobalConditionDataType> -FilePath <String> [-InstanceName <String>] [-Description <String>]
+ -Name <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ### NewQueryFromText
 ```
-New-CMGlobalConditionSqlQuery -DataType <GlobalConditionDataType> -QueryText <String> [-AllInstances]
- [-InstanceName <String>] -Database <String> -Column <String> -Name <String> [-Description <String>]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
+New-CMGlobalConditionSqlQuery [-AllInstances] -Column <String> -Database <String>
+ -DataType <GlobalConditionDataType> [-InstanceName <String>] -QueryText <String> [-Description <String>]
+ -Name <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

@@ -1,4 +1,4 @@
----
+﻿---
 description: Gets a Configuration Manager application.
 external help file: AdminUI.PS.AppMan.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,26 +16,26 @@ Gets a Configuration Manager application.
 
 ### SearchByName (Default)
 ```
-Get-CMApplication [[-Name] <String>] [-Fast] [-ShowHidden] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Get-CMApplication [-Fast] [[-Name] <String>] [-ShowHidden] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory
 ```
-Get-CMApplication -Id <Int32> [-Fast] [-ShowHidden] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [<CommonParameters>]
-```
-
-### SearchByModelName
-```
-Get-CMApplication -ModelName <String> [-Fast] [-ShowHidden] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Get-CMApplication [-Fast] -Id <Int32> [-ShowHidden] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [<CommonParameters>]
 ```
 
 ### SearchByDeploymentType
 ```
-Get-CMApplication -InputObject <IResultObject> [-Fast] [-ShowHidden] [-DisableWildcardHandling]
+Get-CMApplication [-Fast] -InputObject <IResultObject> [-ShowHidden] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [<CommonParameters>]
+```
+
+### SearchByModelName
+```
+Get-CMApplication [-Fast] -ModelName <String> [-ShowHidden] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

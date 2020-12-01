@@ -22,13 +22,13 @@ Remove-CMDeployment [-Force] -InputObject <IResultObject> [-DisableWildcardHandl
 
 ### SearchByIdMandatory
 ```
-Remove-CMDeployment -DeploymentId <String> [-Force] -ApplicationName <String> [-DisableWildcardHandling]
+Remove-CMDeployment -ApplicationName <String> -DeploymentId <String> [-Force] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByNameMandatory
 ```
-Remove-CMDeployment -CollectionName <String> [-Force] -ApplicationName <String> [-DisableWildcardHandling]
+Remove-CMDeployment -ApplicationName <String> -CollectionName <String> [-Force] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

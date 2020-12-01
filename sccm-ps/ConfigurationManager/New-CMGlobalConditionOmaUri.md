@@ -1,4 +1,4 @@
----
+﻿---
 description: Creates an OMA URI type global condition in Configuration Manager.
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,8 +16,8 @@ Creates an OMA URI type global condition in Configuration Manager. This cmdlet i
 ## SYNTAX
 
 ```
-New-CMGlobalConditionOmaUri -DataType <GlobalConditionDataType> -OmaUri <String> -Name <String>
- [-Description <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
+New-CMGlobalConditionOmaUri -DataType <GlobalConditionDataType> -OmaUri <String> [-Description <String>]
+ -Name <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

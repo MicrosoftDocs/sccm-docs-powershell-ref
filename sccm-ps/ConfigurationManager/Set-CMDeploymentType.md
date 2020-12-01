@@ -17,240 +17,243 @@ Change a deployment type for a Configuration Manager application.
 
 ### SetByValuePriority (Default)
 ```
-Set-CMDeploymentType -InputObject <IResultObject> [-Priority <PriorityChangeType>] [-PassThru]
+Set-CMDeploymentType -InputObject <IResultObject> [-PassThru] [-Priority <PriorityChangeType>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetByNamePropertyMsiConfigureRule
 ```
-Set-CMDeploymentType [-AdministratorComment <String>] [-EnableBranchCache <Boolean>]
- [-EnableContentLocationFallback <Boolean>] -ApplicationName <String> [-ContentLocation <String>]
- -DeploymentTypeName <String> [-DetectDeploymentTypeByCustomScript] [-EstimatedInstallationTimeMins <Int32>]
+Set-CMDeploymentType [-AddRequirement <Rule[]>] [-AdministratorComment <String>] -ApplicationName <String>
+ [-ClearRequirements] [-ContentLocation <String>] -DeploymentTypeName <String>
+ [-DetectDeploymentTypeByCustomScript] [-EnableBranchCache <Boolean>]
+ [-EnableContentLocationFallback <Boolean>] [-EstimatedInstallationTimeMins <Int32>]
+ [-Force32BitDetectionScript <Boolean>] [-Force32BitInstaller <Boolean>]
  [-InstallationBehaviorType <InstallationBehaviorType>] [-InstallationProgram <String>]
  [-InstallationProgramVisibility <UserInteractionMode>] [-InstallationStartIn <String>] [-Language <String[]>]
  [-LogonRequirementType <LogonRequirementType>] [-MaximumAllowedRunTimeMins <Int32>] [-MsiOrScriptInstaller]
- [-NewDeploymentTypeName <String>] [-OnSlowNetworkMode <ContentHandlingMode>]
+ [-NewDeploymentTypeName <String>] [-OnSlowNetworkMode <ContentHandlingMode>] [-PassThru]
  [-PersistContentInClientCache <Boolean>] [-ProductCode <String>] [-RebootBehavior <RebootBehavior>]
- [-RequireUserInteraction <Boolean>] [-Force32BitInstaller <Boolean>] [-Force32BitDetectionScript <Boolean>]
- [-ScriptContent <String>] [-ScriptType <ScriptLanguage>] [-UninstallProgram <String>]
- [-UninstallStartIn <String>] [-AddRequirement <Rule[]>] [-RemoveRequirement <Rule[]>] [-ClearRequirements]
- [-SourceUpdateProductCode <String>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+ [-RemoveRequirement <Rule[]>] [-RequireUserInteraction <Boolean>] [-ScriptContent <String>]
+ [-ScriptType <ScriptLanguage>] [-SourceUpdateProductCode <String>] [-UninstallProgram <String>]
+ [-UninstallStartIn <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### SetByNamePropertyOtherInstaller
 ```
-Set-CMDeploymentType [-AdministratorComment <String>] -ApplicationName <String> [-ContentLocation <String>]
- -DeploymentTypeName <String> [-Language <String[]>] [-NewDeploymentTypeName <String>]
- [-AddRequirement <Rule[]>] [-RemoveRequirement <Rule[]>] [-ClearRequirements] [-PassThru]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMDeploymentType [-AddRequirement <Rule[]>] [-AdministratorComment <String>] -ApplicationName <String>
+ [-ClearRequirements] [-ContentLocation <String>] -DeploymentTypeName <String> [-Language <String[]>]
+ [-NewDeploymentTypeName <String>] [-PassThru] [-RemoveRequirement <Rule[]>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetByNamePropertyWindows8Installer
 ```
-Set-CMDeploymentType [-AdministratorComment <String>] [-EnableBranchCache <Boolean>]
- [-EnableContentLocationFallback <Boolean>] -ApplicationName <String> [-ContentLocation <String>]
- -DeploymentTypeName <String> [-Language <String[]>] [-MaximumAllowedRunTimeMins <Int32>]
- [-NewDeploymentTypeName <String>] [-OnSlowNetworkMode <ContentHandlingMode>]
- [-PersistContentInClientCache <Boolean>] [-TriggerVpn <Boolean>] [-Windows8AppInstaller]
- [-AddRequirement <Rule[]>] [-RemoveRequirement <Rule[]>] [-ClearRequirements] [-PassThru]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMDeploymentType [-AddRequirement <Rule[]>] [-AdministratorComment <String>] -ApplicationName <String>
+ [-ClearRequirements] [-ContentLocation <String>] -DeploymentTypeName <String> [-EnableBranchCache <Boolean>]
+ [-EnableContentLocationFallback <Boolean>] [-Language <String[]>] [-MaximumAllowedRunTimeMins <Int32>]
+ [-NewDeploymentTypeName <String>] [-OnSlowNetworkMode <ContentHandlingMode>] [-PassThru]
+ [-PersistContentInClientCache <Boolean>] [-RemoveRequirement <Rule[]>] [-TriggerVpn <Boolean>]
+ [-Windows8AppInstaller] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### SetByNamePropertyAppV5xInstaller
 ```
-Set-CMDeploymentType [-AdministratorComment <String>] [-EnableContentLocationFallback <Boolean>]
- [-AppV5xInstaller] -ApplicationName <String> -DeploymentTypeName <String>
- [-EnablePeerToPeerContentDistribution <Boolean>] [-Language <String[]>] [-NewDeploymentTypeName <String>]
- [-OnFastNetworkMode <OnFastNetworkMode>] [-OnSlowNetworkMode <ContentHandlingMode>]
- [-PersistContentInClientCache <Boolean>] [-AddRequirement <Rule[]>] [-RemoveRequirement <Rule[]>]
- [-ClearRequirements] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+Set-CMDeploymentType [-AddRequirement <Rule[]>] [-AdministratorComment <String>] -ApplicationName <String>
+ [-AppV5xInstaller] [-ClearRequirements] -DeploymentTypeName <String>
+ [-EnableContentLocationFallback <Boolean>] [-EnablePeerToPeerContentDistribution <Boolean>]
+ [-Language <String[]>] [-NewDeploymentTypeName <String>] [-OnFastNetworkMode <OnFastNetworkMode>]
+ [-OnSlowNetworkMode <ContentHandlingMode>] [-PassThru] [-PersistContentInClientCache <Boolean>]
+ [-RemoveRequirement <Rule[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ### SetByNamePropertyAppVInstaller
 ```
-Set-CMDeploymentType [-AdministratorComment <String>] [-EnableContentLocationFallback <Boolean>]
- [-AppVInstaller] -ApplicationName <String> -DeploymentTypeName <String>
+Set-CMDeploymentType [-AddRequirement <Rule[]>] [-AdministratorComment <String>] -ApplicationName <String>
+ [-AppVInstaller] [-ClearRequirements] -DeploymentTypeName <String> [-EnableContentLocationFallback <Boolean>]
  [-EnablePeerToPeerContentDistribution <Boolean>] [-Language <String[]>]
  [-LoadContentIntoAppVCacheBeforeLaunch <Boolean>] [-NewDeploymentTypeName <String>]
- [-OnFastNetworkMode <OnFastNetworkMode>] [-OnSlowNetworkMode <ContentHandlingMode>]
- [-PersistContentInClientCache <Boolean>] [-AddRequirement <Rule[]>] [-RemoveRequirement <Rule[]>]
- [-ClearRequirements] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-OnFastNetworkMode <OnFastNetworkMode>] [-OnSlowNetworkMode <ContentHandlingMode>] [-PassThru]
+ [-PersistContentInClientCache <Boolean>] [-RemoveRequirement <Rule[]>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetByNamePropertyMacInstaller
 ```
-Set-CMDeploymentType [-AdministratorComment <String>] -ApplicationName <String> [-ContentLocation <String>]
- -DeploymentTypeName <String> [-InstallationProgram <String>] [-Language <String[]>] [-MacInstaller]
- [-MacRebootBehavior <MacRebootBehavior>] [-NewDeploymentTypeName <String>] [-AddRequirement <Rule[]>]
- [-RemoveRequirement <Rule[]>] [-ClearRequirements] [-PassThru] [-DisableWildcardHandling]
+Set-CMDeploymentType [-AddRequirement <Rule[]>] [-AdministratorComment <String>] -ApplicationName <String>
+ [-ClearRequirements] [-ContentLocation <String>] -DeploymentTypeName <String> [-InstallationProgram <String>]
+ [-Language <String[]>] [-MacInstaller] [-MacRebootBehavior <MacRebootBehavior>]
+ [-NewDeploymentTypeName <String>] [-PassThru] [-RemoveRequirement <Rule[]>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetByNamePropertyWmInstaller
 ```
-Set-CMDeploymentType [-AdministratorComment <String>] [-EnableUserUninstall <Boolean>]
- -ApplicationName <String> [-ContentLocation <String>] -DeploymentTypeName <String> [-Language <String[]>]
- [-NewDeploymentTypeName <String>] [-WindowsMobileInstaller] [-AddRequirement <Rule[]>]
- [-RemoveRequirement <Rule[]>] [-ClearRequirements] [-PassThru] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMDeploymentType [-AddRequirement <Rule[]>] [-AdministratorComment <String>] -ApplicationName <String>
+ [-ClearRequirements] [-ContentLocation <String>] -DeploymentTypeName <String> [-EnableUserUninstall <Boolean>]
+ [-Language <String[]>] [-NewDeploymentTypeName <String>] [-PassThru] [-RemoveRequirement <Rule[]>]
+ [-WindowsMobileInstaller] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### SetByNamePropertyWindowsStoreInstaller
 ```
-Set-CMDeploymentType [-AdministratorComment <String>] -ApplicationName <String>
- [-ApplicationNameInWindowsStore <String>] [-WindowsStoreInstaller] -DeploymentTypeName <String>
- [-Language <String[]>] [-MaximumAllowedRunTimeMins <Int32>] [-NewDeploymentTypeName <String>]
- [-RemoteComputerName <String>] [-AddRequirement <Rule[]>] [-RemoveRequirement <Rule[]>] [-ClearRequirements]
- [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMDeploymentType [-AddRequirement <Rule[]>] [-AdministratorComment <String>] -ApplicationName <String>
+ [-ApplicationNameInWindowsStore <String>] [-ClearRequirements] -DeploymentTypeName <String>
+ [-Language <String[]>] [-MaximumAllowedRunTimeMins <Int32>] [-NewDeploymentTypeName <String>] [-PassThru]
+ [-RemoteComputerName <String>] [-RemoveRequirement <Rule[]>] [-WindowsStoreInstaller]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetByNamePropertyWebAppInstaller
 ```
-Set-CMDeploymentType [-AdministratorComment <String>] -ApplicationName <String> -DeploymentTypeName <String>
- [-Language <String[]>] [-NewDeploymentTypeName <String>] [-WebAppInstaller] [-AddRequirement <Rule[]>]
- [-RemoveRequirement <Rule[]>] [-ClearRequirements] [-PassThru] [-DisableWildcardHandling]
+Set-CMDeploymentType [-AddRequirement <Rule[]>] [-AdministratorComment <String>] -ApplicationName <String>
+ [-ClearRequirements] -DeploymentTypeName <String> [-Language <String[]>] [-NewDeploymentTypeName <String>]
+ [-PassThru] [-RemoveRequirement <Rule[]>] [-WebAppInstaller] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetByNamePropertyMobileMsiConfigureRule
 ```
-Set-CMDeploymentType [-AdministratorComment <String>] -ApplicationName <String> [-ContentLocation <String>]
- -DeploymentTypeName <String> [-InstallationCommandLine <String>] -Language <String[]> [-MobileMsiInstaller]
- [-NewDeploymentTypeName <String>] [-AddRequirement <Rule[]>] [-RemoveRequirement <Rule[]>]
- [-ClearRequirements] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Set-CMDeploymentType [-AddRequirement <Rule[]>] [-AdministratorComment <String>] -ApplicationName <String>
+ [-ClearRequirements] [-ContentLocation <String>] -DeploymentTypeName <String>
+ [-InstallationCommandLine <String>] -Language <String[]> [-MobileMsiInstaller]
+ [-NewDeploymentTypeName <String>] [-PassThru] [-RemoveRequirement <Rule[]>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetByValuePropertyMobileMsiConfigureRule
 ```
-Set-CMDeploymentType [-AdministratorComment <String>] [-ContentLocation <String>] -InputObject <IResultObject>
- [-InstallationCommandLine <String>] -Language <String[]> [-MobileMsiInstaller]
- [-NewDeploymentTypeName <String>] [-AddRequirement <Rule[]>] [-RemoveRequirement <Rule[]>]
- [-ClearRequirements] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+Set-CMDeploymentType [-AddRequirement <Rule[]>] [-AdministratorComment <String>] [-ClearRequirements]
+ [-ContentLocation <String>] -InputObject <IResultObject> [-InstallationCommandLine <String>]
+ -Language <String[]> [-MobileMsiInstaller] [-NewDeploymentTypeName <String>] [-PassThru]
+ [-RemoveRequirement <Rule[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ### SetByValuePropertyMsiConfigureRule
 ```
-Set-CMDeploymentType [-AdministratorComment <String>] [-EnableBranchCache <Boolean>]
- [-EnableContentLocationFallback <Boolean>] [-ContentLocation <String>] [-DetectDeploymentTypeByCustomScript]
- [-EstimatedInstallationTimeMins <Int32>] -InputObject <IResultObject>
+Set-CMDeploymentType [-AddRequirement <Rule[]>] [-AdministratorComment <String>] [-ClearRequirements]
+ [-ContentLocation <String>] [-DetectDeploymentTypeByCustomScript] [-EnableBranchCache <Boolean>]
+ [-EnableContentLocationFallback <Boolean>] [-EstimatedInstallationTimeMins <Int32>]
+ [-Force32BitDetectionScript <Boolean>] [-Force32BitInstaller <Boolean>] -InputObject <IResultObject>
  [-InstallationBehaviorType <InstallationBehaviorType>] [-InstallationProgram <String>]
  [-InstallationProgramVisibility <UserInteractionMode>] [-InstallationStartIn <String>] [-Language <String[]>]
  [-LogonRequirementType <LogonRequirementType>] [-MaximumAllowedRunTimeMins <Int32>] [-MsiOrScriptInstaller]
- [-NewDeploymentTypeName <String>] [-OnSlowNetworkMode <ContentHandlingMode>]
+ [-NewDeploymentTypeName <String>] [-OnSlowNetworkMode <ContentHandlingMode>] [-PassThru]
  [-PersistContentInClientCache <Boolean>] [-ProductCode <String>] [-RebootBehavior <RebootBehavior>]
- [-RequireUserInteraction <Boolean>] [-Force32BitInstaller <Boolean>] [-Force32BitDetectionScript <Boolean>]
- [-ScriptContent <String>] [-ScriptType <ScriptLanguage>] [-UninstallProgram <String>]
- [-UninstallStartIn <String>] [-AddRequirement <Rule[]>] [-RemoveRequirement <Rule[]>] [-ClearRequirements]
- [-SourceUpdateProductCode <String>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+ [-RemoveRequirement <Rule[]>] [-RequireUserInteraction <Boolean>] [-ScriptContent <String>]
+ [-ScriptType <ScriptLanguage>] [-SourceUpdateProductCode <String>] [-UninstallProgram <String>]
+ [-UninstallStartIn <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### SetByValuePropertyOtherInstaller
 ```
-Set-CMDeploymentType [-AdministratorComment <String>] [-ContentLocation <String>] -InputObject <IResultObject>
- [-Language <String[]>] [-NewDeploymentTypeName <String>] [-AddRequirement <Rule[]>]
- [-RemoveRequirement <Rule[]>] [-ClearRequirements] [-PassThru] [-DisableWildcardHandling]
+Set-CMDeploymentType [-AddRequirement <Rule[]>] [-AdministratorComment <String>] [-ClearRequirements]
+ [-ContentLocation <String>] -InputObject <IResultObject> [-Language <String[]>]
+ [-NewDeploymentTypeName <String>] [-PassThru] [-RemoveRequirement <Rule[]>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetByValuePropertyWindows8Installer
 ```
-Set-CMDeploymentType [-AdministratorComment <String>] [-EnableBranchCache <Boolean>]
- [-EnableContentLocationFallback <Boolean>] [-ContentLocation <String>] -InputObject <IResultObject>
- [-Language <String[]>] [-MaximumAllowedRunTimeMins <Int32>] [-NewDeploymentTypeName <String>]
- [-OnSlowNetworkMode <ContentHandlingMode>] [-PersistContentInClientCache <Boolean>] [-TriggerVpn <Boolean>]
- [-Windows8AppInstaller] [-AddRequirement <Rule[]>] [-RemoveRequirement <Rule[]>] [-ClearRequirements]
- [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMDeploymentType [-AddRequirement <Rule[]>] [-AdministratorComment <String>] [-ClearRequirements]
+ [-ContentLocation <String>] [-EnableBranchCache <Boolean>] [-EnableContentLocationFallback <Boolean>]
+ -InputObject <IResultObject> [-Language <String[]>] [-MaximumAllowedRunTimeMins <Int32>]
+ [-NewDeploymentTypeName <String>] [-OnSlowNetworkMode <ContentHandlingMode>] [-PassThru]
+ [-PersistContentInClientCache <Boolean>] [-RemoveRequirement <Rule[]>] [-TriggerVpn <Boolean>]
+ [-Windows8AppInstaller] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### SetByValuePropertyAppV5xInstaller
 ```
-Set-CMDeploymentType [-AdministratorComment <String>] [-EnableContentLocationFallback <Boolean>]
- [-AppV5xInstaller] [-EnablePeerToPeerContentDistribution <Boolean>] -InputObject <IResultObject>
- [-Language <String[]>] [-NewDeploymentTypeName <String>] [-OnFastNetworkMode <OnFastNetworkMode>]
- [-OnSlowNetworkMode <ContentHandlingMode>] [-PersistContentInClientCache <Boolean>] [-AddRequirement <Rule[]>]
- [-RemoveRequirement <Rule[]>] [-ClearRequirements] [-PassThru] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMDeploymentType [-AddRequirement <Rule[]>] [-AdministratorComment <String>] [-AppV5xInstaller]
+ [-ClearRequirements] [-EnableContentLocationFallback <Boolean>]
+ [-EnablePeerToPeerContentDistribution <Boolean>] -InputObject <IResultObject> [-Language <String[]>]
+ [-NewDeploymentTypeName <String>] [-OnFastNetworkMode <OnFastNetworkMode>]
+ [-OnSlowNetworkMode <ContentHandlingMode>] [-PassThru] [-PersistContentInClientCache <Boolean>]
+ [-RemoveRequirement <Rule[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### SetByValuePropertyAppVInstaller
 ```
-Set-CMDeploymentType [-AdministratorComment <String>] [-EnableContentLocationFallback <Boolean>]
- [-AppVInstaller] [-EnablePeerToPeerContentDistribution <Boolean>] -InputObject <IResultObject>
- [-Language <String[]>] [-LoadContentIntoAppVCacheBeforeLaunch <Boolean>] [-NewDeploymentTypeName <String>]
- [-OnFastNetworkMode <OnFastNetworkMode>] [-OnSlowNetworkMode <ContentHandlingMode>]
- [-PersistContentInClientCache <Boolean>] [-AddRequirement <Rule[]>] [-RemoveRequirement <Rule[]>]
- [-ClearRequirements] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Set-CMDeploymentType [-AddRequirement <Rule[]>] [-AdministratorComment <String>] [-AppVInstaller]
+ [-ClearRequirements] [-EnableContentLocationFallback <Boolean>]
+ [-EnablePeerToPeerContentDistribution <Boolean>] -InputObject <IResultObject> [-Language <String[]>]
+ [-LoadContentIntoAppVCacheBeforeLaunch <Boolean>] [-NewDeploymentTypeName <String>]
+ [-OnFastNetworkMode <OnFastNetworkMode>] [-OnSlowNetworkMode <ContentHandlingMode>] [-PassThru]
+ [-PersistContentInClientCache <Boolean>] [-RemoveRequirement <Rule[]>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetByValuePropertyMacInstaller
 ```
-Set-CMDeploymentType [-AdministratorComment <String>] [-ContentLocation <String>] -InputObject <IResultObject>
- [-InstallationProgram <String>] [-Language <String[]>] [-MacInstaller]
- [-MacRebootBehavior <MacRebootBehavior>] [-NewDeploymentTypeName <String>] [-AddRequirement <Rule[]>]
- [-RemoveRequirement <Rule[]>] [-ClearRequirements] [-PassThru] [-DisableWildcardHandling]
+Set-CMDeploymentType [-AddRequirement <Rule[]>] [-AdministratorComment <String>] [-ClearRequirements]
+ [-ContentLocation <String>] -InputObject <IResultObject> [-InstallationProgram <String>]
+ [-Language <String[]>] [-MacInstaller] [-MacRebootBehavior <MacRebootBehavior>]
+ [-NewDeploymentTypeName <String>] [-PassThru] [-RemoveRequirement <Rule[]>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetByValuePropertyWmInstaller
 ```
-Set-CMDeploymentType [-AdministratorComment <String>] [-EnableUserUninstall <Boolean>]
- [-ContentLocation <String>] -InputObject <IResultObject> [-Language <String[]>]
- [-NewDeploymentTypeName <String>] [-WindowsMobileInstaller] [-AddRequirement <Rule[]>]
- [-RemoveRequirement <Rule[]>] [-ClearRequirements] [-PassThru] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMDeploymentType [-AddRequirement <Rule[]>] [-AdministratorComment <String>] [-ClearRequirements]
+ [-ContentLocation <String>] [-EnableUserUninstall <Boolean>] -InputObject <IResultObject>
+ [-Language <String[]>] [-NewDeploymentTypeName <String>] [-PassThru] [-RemoveRequirement <Rule[]>]
+ [-WindowsMobileInstaller] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### SetByValuePropertyWindowsStoreInstaller
 ```
-Set-CMDeploymentType [-AdministratorComment <String>] [-ApplicationNameInWindowsStore <String>]
- [-WindowsStoreInstaller] -InputObject <IResultObject> [-Language <String[]>]
- [-MaximumAllowedRunTimeMins <Int32>] [-NewDeploymentTypeName <String>] [-RemoteComputerName <String>]
- [-AddRequirement <Rule[]>] [-RemoveRequirement <Rule[]>] [-ClearRequirements] [-PassThru]
+Set-CMDeploymentType [-AddRequirement <Rule[]>] [-AdministratorComment <String>]
+ [-ApplicationNameInWindowsStore <String>] [-ClearRequirements] -InputObject <IResultObject>
+ [-Language <String[]>] [-MaximumAllowedRunTimeMins <Int32>] [-NewDeploymentTypeName <String>] [-PassThru]
+ [-RemoteComputerName <String>] [-RemoveRequirement <Rule[]>] [-WindowsStoreInstaller]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetByValuePropertyWebAppInstaller
 ```
-Set-CMDeploymentType [-AdministratorComment <String>] -InputObject <IResultObject> [-Language <String[]>]
- [-NewDeploymentTypeName <String>] [-WebAppInstaller] [-AddRequirement <Rule[]>] [-RemoveRequirement <Rule[]>]
- [-ClearRequirements] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Set-CMDeploymentType [-AddRequirement <Rule[]>] [-AdministratorComment <String>] [-ClearRequirements]
+ -InputObject <IResultObject> [-Language <String[]>] [-NewDeploymentTypeName <String>] [-PassThru]
+ [-RemoveRequirement <Rule[]>] [-WebAppInstaller] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ### SetByNamePropertyWindowsPhoneStoreInstaller
 ```
-Set-CMDeploymentType [-AdministratorComment <String>] [-WindowsPhoneStoreInstaller] -ApplicationName <String>
- [-ContentLocation <String>] -DeploymentTypeName <String> [-Language <String[]>]
- [-NewDeploymentTypeName <String>] [-AddRequirement <Rule[]>] [-RemoveRequirement <Rule[]>]
- [-ClearRequirements] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Set-CMDeploymentType [-AddRequirement <Rule[]>] [-AdministratorComment <String>] -ApplicationName <String>
+ [-ClearRequirements] [-ContentLocation <String>] -DeploymentTypeName <String> [-Language <String[]>]
+ [-NewDeploymentTypeName <String>] [-PassThru] [-RemoveRequirement <Rule[]>] [-WindowsPhoneStoreInstaller]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetByValuePropertyWindowsPhoneStoreInstaller
 ```
-Set-CMDeploymentType [-AdministratorComment <String>] [-WindowsPhoneStoreInstaller] [-ContentLocation <String>]
- -InputObject <IResultObject> [-Language <String[]>] [-NewDeploymentTypeName <String>]
- [-AddRequirement <Rule[]>] [-RemoveRequirement <Rule[]>] [-ClearRequirements] [-PassThru]
+Set-CMDeploymentType [-AddRequirement <Rule[]>] [-AdministratorComment <String>] [-ClearRequirements]
+ [-ContentLocation <String>] -InputObject <IResultObject> [-Language <String[]>]
+ [-NewDeploymentTypeName <String>] [-PassThru] [-RemoveRequirement <Rule[]>] [-WindowsPhoneStoreInstaller]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetByNamePriority
 ```
-Set-CMDeploymentType -ApplicationName <String> -DeploymentTypeName <String> [-Priority <PriorityChangeType>]
- [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMDeploymentType -ApplicationName <String> -DeploymentTypeName <String> [-PassThru]
+ [-Priority <PriorityChangeType>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### SetByIdPriority
 ```
-Set-CMDeploymentType -ApplicationName <String> -DeploymentTypeId <Int32> [-Priority <PriorityChangeType>]
- [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMDeploymentType -ApplicationName <String> -DeploymentTypeId <Int32> [-PassThru]
+ [-Priority <PriorityChangeType>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -259,7 +262,7 @@ The **Set-CMDeploymentType** cmdlet changes a deployment type for an application
 
 You can also use this cmdlet to change the priority for dependencies of the deployment type. Configuration Manager evaluates and installs dependencies of a deployment type in order of priorities before it installs the deployment type.
 
-For more information, see [Introduction to application management - Deployment types](https://docs.microsoft.com/mem/configmgr/apps/understand/introduction-to-application-management#deployment-type).
+For more information, see [Introduction to application management - Deployment types](/mem/configmgr/apps/understand/introduction-to-application-management#deployment-type).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
@@ -1218,7 +1221,6 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -1228,8 +1230,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### IResultObject#SMS_DeploymentType
-
-For more information on this return object and its properties, see [SMS_DeploymentType server WMI class](https://docs.microsoft.com/mem/configmgr/develop/reference/apps/sms_deploymenttype-server-wmi-class).
 
 ## NOTES
 

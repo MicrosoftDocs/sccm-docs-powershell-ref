@@ -16,29 +16,29 @@ Sets a client setting client cache.
 
 ### SetCustomSettingByName (Default)
 ```
-Set-CMClientSettingClientCache [-ConfigureBranchCache <Boolean>] [-EnableBranchCache <Boolean>]
- [-MaxBranchCacheSizePercent <Int32>] [-ConfigureCacheSize <Boolean>] [-MaxCacheSize <Int32>]
- [-MaxCacheSizePercent <Int32>] [-EnableSuperPeer <Boolean>] [-BroadcastPort <Int32>] [-EnableHttps <Boolean>]
- [-DownloadPort <Int32>] -Name <String> [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMClientSettingClientCache [-BroadcastPort <Int32>] [-ConfigureBranchCache <Boolean>]
+ [-ConfigureCacheSize <Boolean>] [-DownloadPort <Int32>] [-EnableBranchCache <Boolean>]
+ [-EnableHttps <Boolean>] [-EnableSuperPeer <Boolean>] [-MaxBranchCacheSizePercent <Int32>]
+ [-MaxCacheSize <Int32>] [-MaxCacheSizePercent <Int32>] -Name <String> [-PassThru] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetDefaultSetting
 ```
-Set-CMClientSettingClientCache [-ConfigureBranchCache <Boolean>] [-EnableBranchCache <Boolean>]
- [-MaxBranchCacheSizePercent <Int32>] [-ConfigureCacheSize <Boolean>] [-MaxCacheSize <Int32>]
- [-MaxCacheSizePercent <Int32>] [-EnableSuperPeer <Boolean>] [-BroadcastPort <Int32>] [-EnableHttps <Boolean>]
- [-DownloadPort <Int32>] [-DefaultSetting] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMClientSettingClientCache [-BroadcastPort <Int32>] [-ConfigureBranchCache <Boolean>]
+ [-ConfigureCacheSize <Boolean>] [-DownloadPort <Int32>] [-EnableBranchCache <Boolean>]
+ [-EnableHttps <Boolean>] [-EnableSuperPeer <Boolean>] [-MaxBranchCacheSizePercent <Int32>]
+ [-MaxCacheSize <Int32>] [-MaxCacheSizePercent <Int32>] [-DefaultSetting] [-PassThru]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetCustomSettingByValue
 ```
-Set-CMClientSettingClientCache [-ConfigureBranchCache <Boolean>] [-EnableBranchCache <Boolean>]
- [-MaxBranchCacheSizePercent <Int32>] [-ConfigureCacheSize <Boolean>] [-MaxCacheSize <Int32>]
- [-MaxCacheSizePercent <Int32>] [-EnableSuperPeer <Boolean>] [-BroadcastPort <Int32>] [-EnableHttps <Boolean>]
- [-DownloadPort <Int32>] -InputObject <IResultObject> [-PassThru] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMClientSettingClientCache [-BroadcastPort <Int32>] [-ConfigureBranchCache <Boolean>]
+ [-ConfigureCacheSize <Boolean>] [-DownloadPort <Int32>] [-EnableBranchCache <Boolean>]
+ [-EnableHttps <Boolean>] [-EnableSuperPeer <Boolean>] [-MaxBranchCacheSizePercent <Int32>]
+ [-MaxCacheSize <Int32>] [-MaxCacheSizePercent <Int32>] -InputObject <IResultObject> [-PassThru]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

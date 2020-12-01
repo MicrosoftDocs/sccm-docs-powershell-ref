@@ -1,9 +1,9 @@
----
+﻿---
 external help file: AdminUI.PS.EP.dll-Help.xml
 Module Name: ConfigurationManager
+ms.date: 08/13/2020
 online version:
 schema: 2.0.0
-ms.date: 08/13/2020
 ---
 
 # New-CMOSPassphrase
@@ -161,7 +161,6 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -178,4 +177,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [New-CMBlmSetting](New-CMBlmSetting.md)
 
-[BitLocker settings reference](https://docs.microsoft.com/mem/configmgr/protect/tech-ref/bitlocker/settings#operating-system-drive-password-policy)
+[BitLocker settings reference](/mem/configmgr/protect/tech-ref/bitlocker/settings#operating-system-drive-password-policy)

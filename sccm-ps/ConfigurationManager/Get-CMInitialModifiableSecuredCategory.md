@@ -1,4 +1,4 @@
----
+﻿---
 description: Gets modifiable secured categories.
 external help file: AdminUI.PS.Migration.dll-Help.xml
 Module Name: ConfigurationManager
@@ -22,7 +22,7 @@ Get-CMInitialModifiableSecuredCategory [-Id <String>] [-ObjectTypeId <String>] [
 
 ### SearchByName
 ```
-Get-CMInitialModifiableSecuredCategory [-ObjectTypeId <String>] [-Name <String>] [-DisableWildcardHandling]
+Get-CMInitialModifiableSecuredCategory [-Name <String>] [-ObjectTypeId <String>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [<CommonParameters>]
 ```
 

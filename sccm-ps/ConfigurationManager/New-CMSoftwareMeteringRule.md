@@ -16,14 +16,14 @@ Creates a Configuration Manager software metering rule.
 
 ### New (Default)
 ```
-New-CMSoftwareMeteringRule -ProductName <String> [-FileName <String>] [-OriginalFileName <String>]
- [-FileVersion <String>] [-LanguageId <Int32>] [-Comment <String>] [-SiteCode <String>]
+New-CMSoftwareMeteringRule [-Comment <String>] [-FileName <String>] [-FileVersion <String>]
+ [-LanguageId <Int32>] [-OriginalFileName <String>] -ProductName <String> [-SiteCode <String>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### NewFromPath
 ```
-New-CMSoftwareMeteringRule [-ProductName <String>] [-SiteCode <String>] -Path <String>
+New-CMSoftwareMeteringRule -Path <String> [-ProductName <String>] [-SiteCode <String>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -35,7 +35,7 @@ You can obtain necessary file information from Windows Explorer.
 Software metering monitors and collects software usage data from Configuration Manager clients, such as when clients began using a particular software program and how long users have worked with that software.
 You can create software metering rules that specify which software to monitor.
 
-For more information about software metering in Configuration Manager, see [Introduction to Software Metering in Configuration Manager](https://docs.microsoft.com/mem/configmgr/apps/deploy-use/monitor-app-usage-with-software-metering).
+For more information about software metering in Configuration Manager, see [Introduction to Software Metering in Configuration Manager](/mem/configmgr/apps/deploy-use/monitor-app-usage-with-software-metering).
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.
@@ -157,7 +157,7 @@ Accept wildcard characters: False
 
 ### -LanguageId
 Specifies a LocaleID of the software that a rule meters.
-For more information and a list of locale identifiers, see [Appendix A: Product Behavior](https://docs.microsoft.com/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c).
+For more information and a list of locale identifiers, see [Appendix A: Product Behavior](/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c).
 
 ```yaml
 Type: Int32

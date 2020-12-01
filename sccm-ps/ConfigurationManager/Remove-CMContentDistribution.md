@@ -21,13 +21,6 @@ Remove-CMContentDistribution [-Force] [-CollectionName <String[]>] [-DisableCont
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### SearchByValueMandatory
-```
-Remove-CMContentDistribution [-Force] -InputObject <IResultObject> [-CollectionName <String[]>]
- [-DistributionPointGroupName <String[]>] [-DistributionPointName <String[]>] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
 ### SearchByIdMandatory_Application
 ```
 Remove-CMContentDistribution [-Force] -ApplicationId <String[]> [-CollectionName <String[]>]
@@ -83,6 +76,13 @@ Remove-CMContentDistribution [-Force] [-CollectionName <String[]>] [-Distributio
 ```
 Remove-CMContentDistribution [-Force] [-CollectionName <String[]>] [-DistributionPointGroupName <String[]>]
  [-DistributionPointName <String[]>] -DriverPackageName <String[]> [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SearchByValueMandatory
+```
+Remove-CMContentDistribution [-Force] [-CollectionName <String[]>] [-DistributionPointGroupName <String[]>]
+ [-DistributionPointName <String[]>] -InputObject <IResultObject> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -264,7 +264,7 @@ Specifies an array of IDs of deployment packages.
 ```yaml
 Type: String[]
 Parameter Sets: SearchByIdMandatory_DeploymentPackage
-Aliases: DeploymentPackageIds
+Aliases: DeploymentPackageIds, SoftwareUpdatesPackageId, SoftwareUpdatesPackageIds
 
 Required: True
 Position: Named
@@ -279,7 +279,7 @@ Specifies an array of names of deployment packages.
 ```yaml
 Type: String[]
 Parameter Sets: SearchByNameMandatory_DeploymentPackage
-Aliases: DeploymentPackageNames
+Aliases: DeploymentPackageNames, SoftwareUpdatesPackageName, SoftwareUpdatesPackageNames
 
 Required: True
 Position: Named

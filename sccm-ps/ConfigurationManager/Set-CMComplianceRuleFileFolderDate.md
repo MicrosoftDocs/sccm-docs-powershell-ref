@@ -16,38 +16,37 @@ Sets a compliance rule file folder date.
 
 ### ByCICreation (Default)
 ```
-Set-CMComplianceRuleFileFolderDate [-Creation] -InputObject <IResultObject> -RuleName <String>
- [-ExpectedValue <DateTime[]>] [-ExpressionOperator <RuleExpressionOperator>] [-ReportNoncompliance <Boolean>]
- [-NewRuleName <String>] [-PassThru] [-Remediate <Boolean>] [-NoncomplianceSeverity <NoncomplianceSeverity>]
- [-RuleDescription <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Set-CMComplianceRuleFileFolderDate [-Creation] [-ExpectedValue <DateTime[]>]
+ [-ExpressionOperator <RuleExpressionOperator>] -InputObject <IResultObject> -RuleName <String>
+ [-ReportNoncompliance <Boolean>] [-NewRuleName <String>] [-PassThru] [-Remediate <Boolean>]
+ [-NoncomplianceSeverity <NoncomplianceSeverity>] [-RuleDescription <String>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByRuleCreation
 ```
-Set-CMComplianceRuleFileFolderDate [-Creation] -Rule <Rule> [-ExpectedValue <DateTime[]>]
- [-ExpressionOperator <RuleExpressionOperator>] [-ReportNoncompliance <Boolean>] [-NewRuleName <String>]
- [-PassThru] [-Remediate <Boolean>] [-NoncomplianceSeverity <NoncomplianceSeverity>]
+Set-CMComplianceRuleFileFolderDate [-Creation] [-ExpectedValue <DateTime[]>]
+ [-ExpressionOperator <RuleExpressionOperator>] -Rule <Rule> [-ReportNoncompliance <Boolean>]
+ [-NewRuleName <String>] [-PassThru] [-Remediate <Boolean>] [-NoncomplianceSeverity <NoncomplianceSeverity>]
  [-RuleDescription <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ### ByCIModified
 ```
-Set-CMComplianceRuleFileFolderDate -InputObject <IResultObject> -RuleName <String>
- [-ExpectedValue <DateTime[]>] [-ExpressionOperator <RuleExpressionOperator>] [-Modification]
- [-ReportNoncompliance <Boolean>] [-NewRuleName <String>] [-PassThru] [-Remediate <Boolean>]
- [-NoncomplianceSeverity <NoncomplianceSeverity>] [-RuleDescription <String>] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMComplianceRuleFileFolderDate [-ExpectedValue <DateTime[]>] [-ExpressionOperator <RuleExpressionOperator>]
+ -InputObject <IResultObject> [-Modification] -RuleName <String> [-ReportNoncompliance <Boolean>]
+ [-NewRuleName <String>] [-PassThru] [-Remediate <Boolean>] [-NoncomplianceSeverity <NoncomplianceSeverity>]
+ [-RuleDescription <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### ByRuleModified
 ```
-Set-CMComplianceRuleFileFolderDate -Rule <Rule> [-ExpectedValue <DateTime[]>]
- [-ExpressionOperator <RuleExpressionOperator>] [-Modification] [-ReportNoncompliance <Boolean>]
- [-NewRuleName <String>] [-PassThru] [-Remediate <Boolean>] [-NoncomplianceSeverity <NoncomplianceSeverity>]
- [-RuleDescription <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Set-CMComplianceRuleFileFolderDate [-ExpectedValue <DateTime[]>] [-ExpressionOperator <RuleExpressionOperator>]
+ [-Modification] -Rule <Rule> [-ReportNoncompliance <Boolean>] [-NewRuleName <String>] [-PassThru]
+ [-Remediate <Boolean>] [-NoncomplianceSeverity <NoncomplianceSeverity>] [-RuleDescription <String>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

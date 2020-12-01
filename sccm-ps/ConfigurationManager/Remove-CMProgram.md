@@ -16,13 +16,13 @@ Removes programs from a Configuration Manager package.
 
 ### SearchByValueMandatory (Default)
 ```
-Remove-CMProgram -InputObject <IResultObject> [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Remove-CMProgram [-Force] -InputObject <IResultObject> [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByIdAndNameMandatory
 ```
-Remove-CMProgram -PackageId <String> -ProgramName <String> [-Force] [-DisableWildcardHandling]
+Remove-CMProgram [-Force] -PackageId <String> -ProgramName <String> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

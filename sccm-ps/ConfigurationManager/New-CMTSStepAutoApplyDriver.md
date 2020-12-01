@@ -13,10 +13,10 @@ schema: 2.0.0
 ## SYNTAX
 
 ```
-New-CMTSStepAutoApplyDriver [-DriverCategory <IResultObject[]>] [-InstallDriverOption <InstallDriverType>]
- [-AllowUnsignedDriver] -Name <String> [-Description <String>] [-ContinueOnError] [-Disable]
- [-Condition <IResultObject[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+New-CMTSStepAutoApplyDriver [-AllowUnsignedDriver] [-DriverCategory <IResultObject[]>]
+ [-InstallDriverOption <InstallDriverType>] [-Condition <IResultObject[]>] [-ContinueOnError]
+ [-Description <String>] [-Disable] -Name <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

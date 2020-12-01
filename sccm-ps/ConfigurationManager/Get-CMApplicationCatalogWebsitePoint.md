@@ -1,4 +1,4 @@
----
+﻿---
 description: Gets a Configuration Manager Application Catalog website point.
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,7 +16,7 @@ Gets a Configuration Manager Application Catalog website point.
 
 ### SearchByName (Default)
 ```
-Get-CMApplicationCatalogWebsitePoint [-SiteCode <String>] [[-SiteSystemServerName] <String>] [-AllSite]
+Get-CMApplicationCatalogWebsitePoint [-AllSite] [-SiteCode <String>] [[-SiteSystemServerName] <String>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 

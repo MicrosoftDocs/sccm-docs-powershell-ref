@@ -16,21 +16,20 @@ Adds a data warehouse service point
 
 ### DataWarehouseServicePointByValue (Default)
 ```
-Add-CMDataWarehouseServicePoint [-DataWarehouseDatabaseServerName <String>]
- [-DataWarehouseInstanceName <String>] [-DataWarehouseDatabaseName <String>] [-DataWarehouseSqlPort <Int32>]
- [-StartAftertime <DateTime>] [-WeekFrequency <Int32>] [-DaysOfWeek <DataWarehouseDaysOfWeek>]
- -UserName <String> [-DataRetentionDays <Int32>] -InputObject <IResultObject> [-Force]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Add-CMDataWarehouseServicePoint [-DataRetentionDays <Int32>] [-DataWarehouseDatabaseName <String>]
+ [-DataWarehouseDatabaseServerName <String>] [-DataWarehouseInstanceName <String>]
+ [-DataWarehouseSqlPort <Int32>] [-DaysOfWeek <DataWarehouseDaysOfWeek>] [-Force] -InputObject <IResultObject>
+ [-StartAftertime <DateTime>] -UserName <String> [-WeekFrequency <Int32>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### DataWarehouseServicePoint
 ```
-Add-CMDataWarehouseServicePoint [-SiteSystemServerName] <String> [-SiteCode <String>]
+Add-CMDataWarehouseServicePoint [-DataRetentionDays <Int32>] [-DataWarehouseDatabaseName <String>]
  [-DataWarehouseDatabaseServerName <String>] [-DataWarehouseInstanceName <String>]
- [-DataWarehouseDatabaseName <String>] [-DataWarehouseSqlPort <Int32>] [-StartAftertime <DateTime>]
- [-WeekFrequency <Int32>] [-DaysOfWeek <DataWarehouseDaysOfWeek>] -UserName <String>
- [-DataRetentionDays <Int32>] [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-DataWarehouseSqlPort <Int32>] [-DaysOfWeek <DataWarehouseDaysOfWeek>] [-Force] [-SiteCode <String>]
+ [-SiteSystemServerName] <String> [-StartAftertime <DateTime>] -UserName <String> [-WeekFrequency <Int32>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

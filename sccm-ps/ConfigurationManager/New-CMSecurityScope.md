@@ -15,7 +15,7 @@ Creates a security scope.
 ## SYNTAX
 
 ```
-New-CMSecurityScope -Name <String> [-Description <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+New-CMSecurityScope [-Description <String>] -Name <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

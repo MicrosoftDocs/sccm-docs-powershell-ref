@@ -29,7 +29,7 @@ The **Get-CMIPSubnet** cmdlet gets an IP subnet object that Configuration Manage
 
 A boundary is a network location on the intranet that can contain one or more devices that you want to manage.
 Configuration Manager can define a boundary in several ways, including an IP subnet.
-For more information about boundaries, see [Planning for Boundaries and Boundary Groups in Configuration Manager](https://docs.microsoft.com/mem/configmgr/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups).
+For more information about boundaries, see [Planning for Boundaries and Boundary Groups in Configuration Manager](/mem/configmgr/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups).
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

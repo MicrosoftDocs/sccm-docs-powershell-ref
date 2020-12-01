@@ -16,14 +16,14 @@ Removes a software update point site system role from Configuration Manager.
 
 ### SearchByValueMandatory (Default)
 ```
-Remove-CMSoftwareUpdatePoint [-Force] [-DefaultServerName <String>] -InputObject <IResultObject>
+Remove-CMSoftwareUpdatePoint [-DefaultServerName <String>] [-Force] -InputObject <IResultObject>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByNameMandatory
 ```
-Remove-CMSoftwareUpdatePoint [-SiteCode <String>] [-Force] [-SiteSystemServerName] <String>
- [-DefaultServerName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+Remove-CMSoftwareUpdatePoint [-DefaultServerName <String>] [-Force] [-SiteCode <String>]
+ [-SiteSystemServerName] <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 

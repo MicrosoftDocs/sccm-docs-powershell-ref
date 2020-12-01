@@ -17,36 +17,34 @@ Create a task sequence deployment.
 
 ### SearchByValueMandatory (Default)
 ```
-New-CMTaskSequenceDeployment [-InputObject] <IResultObject> [-DeadlineDateTime <DateTime>]
- [-DeployPurpose <DeployPurposeType>] [-Availability <MakeAvailableToType>]
- [-UseUtcForAvailableSchedule <Boolean>] [-UseUtcForExpireSchedule <Boolean>]
- [-ScheduleEvent <ScheduleEventType[]>] [-Schedule <IResultObject[]>] [-RerunBehavior <RerunBehaviorType>]
- [-RunFromSoftwareCenter <Boolean>] [-ShowTaskSequenceProgress <Boolean>] [-SoftwareInstallation <Boolean>]
- [-SystemRestart <Boolean>] [-InternetOption <Boolean>] [-PercentSuccess <Int32>] [-AlertDateTime <DateTime>]
- [-PercentFailure <Int32>] [-DeploymentOption <DeploymentOptionType>] [-AllowSharedContent <Boolean>]
- [-AllowFallback <Boolean>] [-DistributeContent] [-DistributeCollectionName <String>]
- [-DistributionPointGroupName <String>] [-DistributionPointName <String>] [-Comment <String>]
- [-AvailableDateTime <DateTime>] [-UseMeteredNetwork <Boolean>] [-PersistOnWriteFilterDevice <Boolean>]
- [-SendWakeupPacket <Boolean>] [-CollectionName <String>] [-CollectionId <String>]
- [-Collection <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+New-CMTaskSequenceDeployment [-AlertDateTime <DateTime>] [-AllowFallback <Boolean>]
+ [-AllowSharedContent <Boolean>] [-Availability <MakeAvailableToType>] [-DeadlineDateTime <DateTime>]
+ [-DeploymentOption <DeploymentOptionType>] [-DeployPurpose <DeployPurposeType>] [-InputObject] <IResultObject>
+ [-InternetOption <Boolean>] [-PercentFailure <Int32>] [-PercentSuccess <Int32>]
+ [-RerunBehavior <RerunBehaviorType>] [-RunFromSoftwareCenter <Boolean>] [-Schedule <IResultObject[]>]
+ [-ScheduleEvent <ScheduleEventType[]>] [-ShowTaskSequenceProgress <Boolean>] [-SoftwareInstallation <Boolean>]
+ [-SystemRestart <Boolean>] [-UseUtcForAvailableSchedule <Boolean>] [-UseUtcForExpireSchedule <Boolean>]
+ [-DistributeCollectionName <String>] [-DistributeContent] [-DistributionPointGroupName <String>]
+ [-DistributionPointName <String>] [-AvailableDateTime <DateTime>] [-Comment <String>]
+ [-PersistOnWriteFilterDevice <Boolean>] [-SendWakeupPacket <Boolean>] [-UseMeteredNetwork <Boolean>]
+ [-Collection <IResultObject>] [-CollectionId <String>] [-CollectionName <String>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchPackageByIdMandatory
 ```
-New-CMTaskSequenceDeployment [-DeadlineDateTime <DateTime>] [-TaskSequencePackageId] <String>
- [-DeployPurpose <DeployPurposeType>] [-Availability <MakeAvailableToType>]
- [-UseUtcForAvailableSchedule <Boolean>] [-UseUtcForExpireSchedule <Boolean>]
- [-ScheduleEvent <ScheduleEventType[]>] [-Schedule <IResultObject[]>] [-RerunBehavior <RerunBehaviorType>]
- [-RunFromSoftwareCenter <Boolean>] [-ShowTaskSequenceProgress <Boolean>] [-SoftwareInstallation <Boolean>]
- [-SystemRestart <Boolean>] [-InternetOption <Boolean>] [-PercentSuccess <Int32>] [-AlertDateTime <DateTime>]
- [-PercentFailure <Int32>] [-DeploymentOption <DeploymentOptionType>] [-AllowSharedContent <Boolean>]
- [-AllowFallback <Boolean>] [-DistributeContent] [-DistributeCollectionName <String>]
- [-DistributionPointGroupName <String>] [-DistributionPointName <String>] [-Comment <String>]
- [-AvailableDateTime <DateTime>] [-UseMeteredNetwork <Boolean>] [-PersistOnWriteFilterDevice <Boolean>]
- [-SendWakeupPacket <Boolean>] [-CollectionName <String>] [-CollectionId <String>]
- [-Collection <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+New-CMTaskSequenceDeployment [-AlertDateTime <DateTime>] [-AllowFallback <Boolean>]
+ [-AllowSharedContent <Boolean>] [-Availability <MakeAvailableToType>] [-DeadlineDateTime <DateTime>]
+ [-DeploymentOption <DeploymentOptionType>] [-DeployPurpose <DeployPurposeType>] [-InternetOption <Boolean>]
+ [-PercentFailure <Int32>] [-PercentSuccess <Int32>] [-RerunBehavior <RerunBehaviorType>]
+ [-RunFromSoftwareCenter <Boolean>] [-Schedule <IResultObject[]>] [-ScheduleEvent <ScheduleEventType[]>]
+ [-ShowTaskSequenceProgress <Boolean>] [-SoftwareInstallation <Boolean>] [-SystemRestart <Boolean>]
+ [-TaskSequencePackageId] <String> [-UseUtcForAvailableSchedule <Boolean>] [-UseUtcForExpireSchedule <Boolean>]
+ [-DistributeCollectionName <String>] [-DistributeContent] [-DistributionPointGroupName <String>]
+ [-DistributionPointName <String>] [-AvailableDateTime <DateTime>] [-Comment <String>]
+ [-PersistOnWriteFilterDevice <Boolean>] [-SendWakeupPacket <Boolean>] [-UseMeteredNetwork <Boolean>]
+ [-Collection <IResultObject>] [-CollectionId <String>] [-CollectionName <String>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -691,7 +689,6 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS

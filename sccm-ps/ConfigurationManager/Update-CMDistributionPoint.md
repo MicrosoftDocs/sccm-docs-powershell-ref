@@ -16,7 +16,7 @@ Updates content on a distribution point.
 
 ### ByValue (Default)
 ```
-Update-CMDistributionPoint [-ReloadBootImage] -InputObject <IResultObject> [-DisableWildcardHandling]
+Update-CMDistributionPoint -InputObject <IResultObject> [-ReloadBootImage] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

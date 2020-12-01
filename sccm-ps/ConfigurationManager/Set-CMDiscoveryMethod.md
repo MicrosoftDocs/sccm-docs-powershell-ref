@@ -16,58 +16,59 @@ Changes configuration settings of a discovery method.
 
 ### SearchByActiveDirectoryForestDiscovery (Default)
 ```
-Set-CMDiscoveryMethod [-ActiveDirectoryForestDiscovery] [-SiteCode <String>] [-Enabled <Boolean>]
- [-PollingSchedule <IResultObject>] [-EnableActiveDirectorySiteBoundaryCreation <Boolean>]
- [-EnableSubnetBoundaryCreation <Boolean>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### SearchByNetworkDiscovery
-```
-Set-CMDiscoveryMethod [-NetworkDiscovery] [-SiteCode <String>] [-Enabled <Boolean>]
- [-SlowNetworkSpeed <Boolean>] [-NetworkDiscoveryType <NetworkDiscoveryType>] [-PassThru]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMDiscoveryMethod [-ActiveDirectoryForestDiscovery] [-EnableActiveDirectorySiteBoundaryCreation <Boolean>]
+ [-Enabled <Boolean>] [-EnableSubnetBoundaryCreation <Boolean>] [-PassThru] [-PollingSchedule <IResultObject>]
+ [-SiteCode <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### SearchByActiveDirectorySystemDiscovery
 ```
-Set-CMDiscoveryMethod [-ActiveDirectorySystemDiscovery] [-SiteCode <String>] [-Enabled <Boolean>]
- [-PollingSchedule <IResultObject>] [-EnableDeltaDiscovery <Boolean>] [-DeltaDiscoveryMins <Int32>]
- [-AddAdditionalAttribute <String[]>] [-RemoveAdditionalAttribute <String[]>]
- [-EnableFilteringExpiredLogon <Boolean>] [-TimeSinceLastLogonDays <Int32>]
- [-EnableFilteringExpiredPassword <Boolean>] [-TimeSinceLastPasswordUpdateDays <Int32>]
- [-ActiveDirectoryContainer <String[]>] [-Recursive] [-EnableRecursive <Boolean>] [-IncludeGroup]
- [-EnableIncludeGroup <Boolean>] [-ClearActiveDirectoryContainer] [-RemoveActiveDirectoryContainer <String[]>]
- [-AddActiveDirectoryContainer <String[]>] [-UserName <String>] [-PassThru] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMDiscoveryMethod [-ActiveDirectoryContainer <String[]>] [-ActiveDirectorySystemDiscovery]
+ [-AddActiveDirectoryContainer <String[]>] [-AddAdditionalAttribute <String[]>]
+ [-ClearActiveDirectoryContainer] [-DeltaDiscoveryMins <Int32>] [-Enabled <Boolean>]
+ [-EnableDeltaDiscovery <Boolean>] [-EnableFilteringExpiredLogon <Boolean>]
+ [-EnableFilteringExpiredPassword <Boolean>] [-EnableIncludeGroup <Boolean>] [-EnableRecursive <Boolean>]
+ [-IncludeGroup] [-PassThru] [-PollingSchedule <IResultObject>] [-Recursive]
+ [-RemoveActiveDirectoryContainer <String[]>] [-RemoveAdditionalAttribute <String[]>] [-SiteCode <String>]
+ [-TimeSinceLastLogonDays <Int32>] [-TimeSinceLastPasswordUpdateDays <Int32>] [-UserName <String>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByActiveDirectoryUserDiscovery
 ```
-Set-CMDiscoveryMethod [-ActiveDirectoryUserDiscovery] [-SiteCode <String>] [-Enabled <Boolean>]
- [-PollingSchedule <IResultObject>] [-EnableDeltaDiscovery <Boolean>] [-DeltaDiscoveryMins <Int32>]
- [-AddAdditionalAttribute <String[]>] [-RemoveAdditionalAttribute <String[]>]
- [-ActiveDirectoryContainer <String[]>] [-Recursive] [-EnableRecursive <Boolean>] [-IncludeGroup]
- [-EnableIncludeGroup <Boolean>] [-ClearActiveDirectoryContainer] [-RemoveActiveDirectoryContainer <String[]>]
- [-AddActiveDirectoryContainer <String[]>] [-UserName <String>] [-PassThru] [-DisableWildcardHandling]
+Set-CMDiscoveryMethod [-ActiveDirectoryContainer <String[]>] [-ActiveDirectoryUserDiscovery]
+ [-AddActiveDirectoryContainer <String[]>] [-AddAdditionalAttribute <String[]>]
+ [-ClearActiveDirectoryContainer] [-DeltaDiscoveryMins <Int32>] [-Enabled <Boolean>]
+ [-EnableDeltaDiscovery <Boolean>] [-EnableIncludeGroup <Boolean>] [-EnableRecursive <Boolean>] [-IncludeGroup]
+ [-PassThru] [-PollingSchedule <IResultObject>] [-Recursive] [-RemoveActiveDirectoryContainer <String[]>]
+ [-RemoveAdditionalAttribute <String[]>] [-SiteCode <String>] [-UserName <String>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByActiveDirectoryGroupDiscovery
 ```
-Set-CMDiscoveryMethod [-ActiveDirectoryGroupDiscovery] [-SiteCode <String>] [-Enabled <Boolean>]
- [-AddGroupDiscoveryScope <ADGroupDiscoveryScope[]>] [-RemoveGroupDiscoveryScope <String[]>]
- [-PollingSchedule <IResultObject>] [-EnableDeltaDiscovery <Boolean>] [-DeltaDiscoveryMins <Int32>]
- [-EnableFilteringExpiredLogon <Boolean>] [-TimeSinceLastLogonDays <Int32>]
- [-EnableFilteringExpiredPassword <Boolean>] [-TimeSinceLastPasswordUpdateDays <Int32>]
- [-DiscoverDistributionGroupMembership <Boolean>] [-ClearActiveDirectoryContainer] [-PassThru]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMDiscoveryMethod [-ActiveDirectoryGroupDiscovery] [-AddGroupDiscoveryScope <ADGroupDiscoveryScope[]>]
+ [-ClearActiveDirectoryContainer] [-DeltaDiscoveryMins <Int32>]
+ [-DiscoverDistributionGroupMembership <Boolean>] [-Enabled <Boolean>] [-EnableDeltaDiscovery <Boolean>]
+ [-EnableFilteringExpiredLogon <Boolean>] [-EnableFilteringExpiredPassword <Boolean>] [-PassThru]
+ [-PollingSchedule <IResultObject>] [-RemoveGroupDiscoveryScope <String[]>] [-SiteCode <String>]
+ [-TimeSinceLastLogonDays <Int32>] [-TimeSinceLastPasswordUpdateDays <Int32>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SearchByNetworkDiscovery
+```
+Set-CMDiscoveryMethod [-Enabled <Boolean>] [-NetworkDiscovery] [-NetworkDiscoveryType <NetworkDiscoveryType>]
+ [-PassThru] [-SiteCode <String>] [-SlowNetworkSpeed <Boolean>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByHeartbeat
 ```
-Set-CMDiscoveryMethod [-Heartbeat] [-SiteCode <String>] [-Enabled <Boolean>] [-PollingSchedule <IResultObject>]
- [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMDiscoveryMethod [-Enabled <Boolean>] [-Heartbeat] [-PassThru] [-PollingSchedule <IResultObject>]
+ [-SiteCode <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

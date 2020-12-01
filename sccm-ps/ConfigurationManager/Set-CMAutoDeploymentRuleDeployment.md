@@ -16,35 +16,37 @@ Sets a deployment for an automatic deployment rule.
 
 ### ByValue (Default)
 ```
-Set-CMAutoDeploymentRuleDeployment [-InputObject] <IResultObject> [-Collection <IResultObject>]
- [-CollectionName <String>] [-CollectionId <String>] [-EnableDeployment <Boolean>]
- [-SendWakeupPacket <Boolean>] [-VerboseLevel <VerboseLevelType>] [-UseUtc <Boolean>]
+Set-CMAutoDeploymentRuleDeployment [-AlertTime <Int32>] [-AlertTimeUnit <TimeUnitType>]
+ [-AllowDownloadFromMicrosoftUpdate <Boolean>] [-AllowRestart <Boolean>]
+ [-AllowSoftwareInstallationOutsideMaintenanceWindow <Boolean>] [-AllowUseMeteredNetwork <Boolean>]
  [-AvailableImmediately <Boolean>] [-AvailableTime <Int32>] [-AvailableTimeUnit <TimeUnitType>]
+ [-Collection <IResultObject>] [-CollectionId <String>] [-CollectionName <String>]
  [-DeadlineImmediately <Boolean>] [-DeadlineTime <Int32>] [-DeadlineTimeUnit <TimeUnitType>]
- [-UserNotification <UserNotificationOption>] [-AllowSoftwareInstallationOutsideMaintenanceWindow <Boolean>]
- [-AllowRestart <Boolean>] [-SuppressRestartServer <Boolean>] [-SuppressRestartWorkstation <Boolean>]
- [-WriteFilterHandling <Boolean>] [-GenerateSuccessAlert <Boolean>] [-SuccessPercentage <Int32>]
- [-AlertTime <Int32>] [-AlertTimeUnit <TimeUnitType>] [-DisableOperationsManager <Boolean>]
- [-GenerateOperationsManagerAlert <Boolean>] [-NoInstallOnRemote <Boolean>] [-NoInstallOnUnprotected <Boolean>]
- [-UseBranchCache <Boolean>] [-AllowDownloadFromMicrosoftUpdate <Boolean>] [-AllowUseMeteredNetwork <Boolean>]
- [-SoftDeadlineEnabled <Boolean>] [-RequirePostRebootFullScan <Boolean>] [-PassThru] [-DisableWildcardHandling]
+ [-DisableOperationsManager <Boolean>] [-EnableDeployment <Boolean>]
+ [-GenerateOperationsManagerAlert <Boolean>] [-GenerateSuccessAlert <Boolean>] [-InputObject] <IResultObject>
+ [-NoInstallOnRemote <Boolean>] [-NoInstallOnUnprotected <Boolean>] [-PassThru]
+ [-RequirePostRebootFullScan <Boolean>] [-SendWakeupPacket <Boolean>] [-SoftDeadlineEnabled <Boolean>]
+ [-SuccessPercentage <Int32>] [-SuppressRestartServer <Boolean>] [-SuppressRestartWorkstation <Boolean>]
+ [-UseBranchCache <Boolean>] [-UserNotification <UserNotificationOption>] [-UseUtc <Boolean>]
+ [-VerboseLevel <VerboseLevelType>] [-WriteFilterHandling <Boolean>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ById
 ```
-Set-CMAutoDeploymentRuleDeployment [-Id] <Int32> [-Collection <IResultObject>] [-CollectionName <String>]
- [-CollectionId <String>] [-EnableDeployment <Boolean>] [-SendWakeupPacket <Boolean>]
- [-VerboseLevel <VerboseLevelType>] [-UseUtc <Boolean>] [-AvailableImmediately <Boolean>]
- [-AvailableTime <Int32>] [-AvailableTimeUnit <TimeUnitType>] [-DeadlineImmediately <Boolean>]
- [-DeadlineTime <Int32>] [-DeadlineTimeUnit <TimeUnitType>] [-UserNotification <UserNotificationOption>]
- [-AllowSoftwareInstallationOutsideMaintenanceWindow <Boolean>] [-AllowRestart <Boolean>]
- [-SuppressRestartServer <Boolean>] [-SuppressRestartWorkstation <Boolean>] [-WriteFilterHandling <Boolean>]
- [-GenerateSuccessAlert <Boolean>] [-SuccessPercentage <Int32>] [-AlertTime <Int32>]
- [-AlertTimeUnit <TimeUnitType>] [-DisableOperationsManager <Boolean>]
- [-GenerateOperationsManagerAlert <Boolean>] [-NoInstallOnRemote <Boolean>] [-NoInstallOnUnprotected <Boolean>]
- [-UseBranchCache <Boolean>] [-AllowDownloadFromMicrosoftUpdate <Boolean>] [-AllowUseMeteredNetwork <Boolean>]
- [-SoftDeadlineEnabled <Boolean>] [-RequirePostRebootFullScan <Boolean>] [-PassThru] [-DisableWildcardHandling]
+Set-CMAutoDeploymentRuleDeployment [-AlertTime <Int32>] [-AlertTimeUnit <TimeUnitType>]
+ [-AllowDownloadFromMicrosoftUpdate <Boolean>] [-AllowRestart <Boolean>]
+ [-AllowSoftwareInstallationOutsideMaintenanceWindow <Boolean>] [-AllowUseMeteredNetwork <Boolean>]
+ [-AvailableImmediately <Boolean>] [-AvailableTime <Int32>] [-AvailableTimeUnit <TimeUnitType>]
+ [-Collection <IResultObject>] [-CollectionId <String>] [-CollectionName <String>]
+ [-DeadlineImmediately <Boolean>] [-DeadlineTime <Int32>] [-DeadlineTimeUnit <TimeUnitType>]
+ [-DisableOperationsManager <Boolean>] [-EnableDeployment <Boolean>]
+ [-GenerateOperationsManagerAlert <Boolean>] [-GenerateSuccessAlert <Boolean>] [-Id] <Int32>
+ [-NoInstallOnRemote <Boolean>] [-NoInstallOnUnprotected <Boolean>] [-PassThru]
+ [-RequirePostRebootFullScan <Boolean>] [-SendWakeupPacket <Boolean>] [-SoftDeadlineEnabled <Boolean>]
+ [-SuccessPercentage <Int32>] [-SuppressRestartServer <Boolean>] [-SuppressRestartWorkstation <Boolean>]
+ [-UseBranchCache <Boolean>] [-UserNotification <UserNotificationOption>] [-UseUtc <Boolean>]
+ [-VerboseLevel <VerboseLevelType>] [-WriteFilterHandling <Boolean>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

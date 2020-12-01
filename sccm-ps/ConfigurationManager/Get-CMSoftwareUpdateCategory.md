@@ -1,4 +1,4 @@
----
+﻿---
 description: Gets a software update category.
 external help file: AdminUI.PS.Sum.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,19 +16,19 @@ Gets a software update category.
 
 ### ByName (Default)
 ```
-Get-CMSoftwareUpdateCategory [-Name <String>] [-TypeName <String>] [-Fast] [-DisableWildcardHandling]
+Get-CMSoftwareUpdateCategory [-Fast] [-Name <String>] [-TypeName <String>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ### ById
 ```
-Get-CMSoftwareUpdateCategory -Id <String> [-Fast] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Get-CMSoftwareUpdateCategory [-Fast] -Id <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
  [<CommonParameters>]
 ```
 
 ### ByUniqueId
 ```
-Get-CMSoftwareUpdateCategory -UniqueId <String> [-Fast] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Get-CMSoftwareUpdateCategory [-Fast] -UniqueId <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
  [<CommonParameters>]
 ```
 

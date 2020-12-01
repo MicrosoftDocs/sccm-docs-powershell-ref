@@ -16,29 +16,29 @@ Removes an application deployment.
 
 ### SearchByValue (Default)
 ```
-Remove-CMApplicationDeployment -InputObject <IResultObject> [-Force] [-CollectionName <String>]
- [-CollectionId <String>] [-Collection <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### SearchByName
-```
-Remove-CMApplicationDeployment [-Name <String>] [-Force] [-CollectionName <String>] [-CollectionId <String>]
- [-Collection <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
-```
-
-### SearchBySmsObjectId
-```
-Remove-CMApplicationDeployment [-SmsObjectId <Int32>] [-Force] [-CollectionName <String>]
- [-CollectionId <String>] [-Collection <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Remove-CMApplicationDeployment -InputObject <IResultObject> [-Force] [-Collection <IResultObject>]
+ [-CollectionId <String>] [-CollectionName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByDeploymentId
 ```
-Remove-CMApplicationDeployment [-DeploymentId <String>] [-Force] [-CollectionName <String>]
- [-CollectionId <String>] [-Collection <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Remove-CMApplicationDeployment [-DeploymentId <String>] [-Force] [-Collection <IResultObject>]
+ [-CollectionId <String>] [-CollectionName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SearchByName
+```
+Remove-CMApplicationDeployment [-Name <String>] [-Force] [-Collection <IResultObject>] [-CollectionId <String>]
+ [-CollectionName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### SearchBySmsObjectId
+```
+Remove-CMApplicationDeployment [-SmsObjectId <Int32>] [-Force] [-Collection <IResultObject>]
+ [-CollectionId <String>] [-CollectionName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

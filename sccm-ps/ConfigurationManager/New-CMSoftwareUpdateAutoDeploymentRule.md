@@ -17,85 +17,88 @@ Create an automatic deployment rule (ADR) for software updates.
 
 ### NewByCollection (Default)
 ```
-New-CMSoftwareUpdateAutoDeploymentRule -Name <String> [-Description <String>] -Collection <IResultObject>
- [-AddToExistingSoftwareUpdateGroup <Boolean>] [-EnabledAfterCreate <Boolean>] [-Enable <Boolean>]
- [-SendWakeupPacket <Boolean>] [-VerboseLevel <VerboseLevelType>] [-DeployWithoutLicense <Boolean>]
- [-ArticleId <String[]>] [-BulletinId <String[]>] [-CustomSeverity <SeverityType[]>] [-CMTag <CMTagTypes[]>]
- [-DateReleasedOrRevised <DateReleasedOrRevisedType>] [-UpdateDescription <String[]>] [-Language <String[]>]
- [-Required <String[]>] [-Severity <SeverityType[]>] [-Superseded <Boolean>] [-Title <String[]>]
- [-UpdateClassification <String[]>] [-Product <String[]>] [-MicrosoftAsVendor <Boolean>] [-Vendor <String[]>]
- [-ContentSize <String[]>] [-Architecture <ArchitectureType[]>] [-RunType <RunType>]
- [-Schedule <IResultObject>] [-UseUtc <Boolean>] [-AvailableImmediately <Boolean>] [-AvailableTime <Int32>]
- [-AvailableTimeUnit <TimeUnitType>] [-DeadlineImmediately <Boolean>] [-DeadlineTime <Int32>]
- [-DeadlineTimeUnit <TimeUnitType>] [-UserNotification <UserNotificationType>]
- [-AllowSoftwareInstallationOutsideMaintenanceWindow <Boolean>] [-AllowRestart <Boolean>]
- [-SuppressRestartServer <Boolean>] [-SuppressRestartWorkstation <Boolean>] [-WriteFilterHandling <Boolean>]
- [-GenerateFailureAlert <Boolean>] [-GenerateSuccessAlert <Boolean>] [-SuccessPercentage <Int32>]
- [-AlertTime <Int32>] [-AlertTimeUnit <TimeUnitType>] [-DisableOperationManager <Boolean>]
- [-GenerateOperationManagerAlert <Boolean>] [-NoInstallOnRemote <Boolean>] [-NoInstallOnUnprotected <Boolean>]
- [-UseBranchCache <Boolean>] [-DownloadFromMicrosoftUpdate <Boolean>] [-AllowUseMeteredNetwork <Boolean>]
- [-DeploymentPackageName <String>] [-DeploymentPackage <IResultObject>] [-DownloadFromInternet <Boolean>]
- [-Location <String>] [-DeploymentRing <DeploymentRing>] [-UpdateDeploymentWaitDay <Int32>]
- [-LanguageSelection <String[]>] [-O365LanguageSelection <String[]>] [-IsServicingPlan]
- [-SoftDeadlineEnabled <Boolean>] [-RequirePostRebootFullScan <Boolean>] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### NewByCollectionName
-```
-New-CMSoftwareUpdateAutoDeploymentRule -Name <String> [-Description <String>] -CollectionName <String>
- [-AddToExistingSoftwareUpdateGroup <Boolean>] [-EnabledAfterCreate <Boolean>] [-Enable <Boolean>]
- [-SendWakeupPacket <Boolean>] [-VerboseLevel <VerboseLevelType>] [-DeployWithoutLicense <Boolean>]
- [-ArticleId <String[]>] [-BulletinId <String[]>] [-CustomSeverity <SeverityType[]>] [-CMTag <CMTagTypes[]>]
- [-DateReleasedOrRevised <DateReleasedOrRevisedType>] [-UpdateDescription <String[]>] [-Language <String[]>]
- [-Required <String[]>] [-Severity <SeverityType[]>] [-Superseded <Boolean>] [-Title <String[]>]
- [-UpdateClassification <String[]>] [-Product <String[]>] [-MicrosoftAsVendor <Boolean>] [-Vendor <String[]>]
- [-ContentSize <String[]>] [-Architecture <ArchitectureType[]>] [-RunType <RunType>]
- [-Schedule <IResultObject>] [-UseUtc <Boolean>] [-AvailableImmediately <Boolean>] [-AvailableTime <Int32>]
- [-AvailableTimeUnit <TimeUnitType>] [-DeadlineImmediately <Boolean>] [-DeadlineTime <Int32>]
- [-DeadlineTimeUnit <TimeUnitType>] [-UserNotification <UserNotificationType>]
- [-AllowSoftwareInstallationOutsideMaintenanceWindow <Boolean>] [-AllowRestart <Boolean>]
- [-SuppressRestartServer <Boolean>] [-SuppressRestartWorkstation <Boolean>] [-WriteFilterHandling <Boolean>]
- [-GenerateFailureAlert <Boolean>] [-GenerateSuccessAlert <Boolean>] [-SuccessPercentage <Int32>]
- [-AlertTime <Int32>] [-AlertTimeUnit <TimeUnitType>] [-DisableOperationManager <Boolean>]
- [-GenerateOperationManagerAlert <Boolean>] [-NoInstallOnRemote <Boolean>] [-NoInstallOnUnprotected <Boolean>]
- [-UseBranchCache <Boolean>] [-DownloadFromMicrosoftUpdate <Boolean>] [-AllowUseMeteredNetwork <Boolean>]
- [-DeploymentPackageName <String>] [-DeploymentPackage <IResultObject>] [-DownloadFromInternet <Boolean>]
- [-Location <String>] [-DeploymentRing <DeploymentRing>] [-UpdateDeploymentWaitDay <Int32>]
- [-LanguageSelection <String[]>] [-O365LanguageSelection <String[]>] [-IsServicingPlan]
- [-SoftDeadlineEnabled <Boolean>] [-RequirePostRebootFullScan <Boolean>] [-DisableWildcardHandling]
+New-CMSoftwareUpdateAutoDeploymentRule [-AddToExistingSoftwareUpdateGroup <Boolean>] [-AlertTime <Int32>]
+ [-AlertTimeUnit <TimeUnitType>] [-AllowRestart <Boolean>]
+ [-AllowSoftwareInstallationOutsideMaintenanceWindow <Boolean>] [-AllowUseMeteredNetwork <Boolean>]
+ [-Architecture <ArchitectureType[]>] [-ArticleId <String[]>] [-AvailableImmediately <Boolean>]
+ [-AvailableTime <Int32>] [-AvailableTimeUnit <TimeUnitType>] [-BulletinId <String[]>] [-CMTag <CMTagTypes[]>]
+ -Collection <IResultObject> [-ContentSize <String[]>] [-CustomSeverity <SeverityType[]>]
+ [-DateReleasedOrRevised <DateReleasedOrRevisedType>] [-DeadlineImmediately <Boolean>] [-DeadlineTime <Int32>]
+ [-DeadlineTimeUnit <TimeUnitType>] [-DeploymentPackage <IResultObject>] [-DeploymentPackageName <String>]
+ [-DeploymentRing <DeploymentRing>] [-DeployWithoutLicense <Boolean>] [-Description <String>]
+ [-DisableOperationManager <Boolean>] [-DownloadFromInternet <Boolean>]
+ [-DownloadFromMicrosoftUpdate <Boolean>] [-Enable <Boolean>] [-EnabledAfterCreate <Boolean>]
+ [-GenerateFailureAlert <Boolean>] [-GenerateOperationManagerAlert <Boolean>] [-GenerateSuccessAlert <Boolean>]
+ [-IsServicingPlan] [-Language <String[]>] [-LanguageSelection <String[]>] [-Location <String>]
+ [-MicrosoftAsVendor <Boolean>] -Name <String> [-NoInstallOnRemote <Boolean>]
+ [-NoInstallOnUnprotected <Boolean>] [-O365LanguageSelection <String[]>] [-Product <String[]>]
+ [-Required <String[]>] [-RequirePostRebootFullScan <Boolean>] [-RunType <RunType>] [-Schedule <IResultObject>]
+ [-SendWakeupPacket <Boolean>] [-Severity <SeverityType[]>] [-SoftDeadlineEnabled <Boolean>]
+ [-SuccessPercentage <Int32>] [-Superseded <Boolean>] [-SuppressRestartServer <Boolean>]
+ [-SuppressRestartWorkstation <Boolean>] [-Title <String[]>] [-UpdateClassification <String[]>]
+ [-UpdateDeploymentWaitDay <Int32>] [-UpdateDescription <String[]>] [-UseBranchCache <Boolean>]
+ [-UserNotification <UserNotificationType>] [-UseUtc <Boolean>] [-Vendor <String[]>]
+ [-VerboseLevel <VerboseLevelType>] [-WriteFilterHandling <Boolean>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### NewByCollectionId
 ```
-New-CMSoftwareUpdateAutoDeploymentRule -Name <String> [-Description <String>] -CollectionId <String>
- [-AddToExistingSoftwareUpdateGroup <Boolean>] [-EnabledAfterCreate <Boolean>] [-Enable <Boolean>]
- [-SendWakeupPacket <Boolean>] [-VerboseLevel <VerboseLevelType>] [-DeployWithoutLicense <Boolean>]
- [-ArticleId <String[]>] [-BulletinId <String[]>] [-CustomSeverity <SeverityType[]>] [-CMTag <CMTagTypes[]>]
- [-DateReleasedOrRevised <DateReleasedOrRevisedType>] [-UpdateDescription <String[]>] [-Language <String[]>]
- [-Required <String[]>] [-Severity <SeverityType[]>] [-Superseded <Boolean>] [-Title <String[]>]
- [-UpdateClassification <String[]>] [-Product <String[]>] [-MicrosoftAsVendor <Boolean>] [-Vendor <String[]>]
- [-ContentSize <String[]>] [-Architecture <ArchitectureType[]>] [-RunType <RunType>]
- [-Schedule <IResultObject>] [-UseUtc <Boolean>] [-AvailableImmediately <Boolean>] [-AvailableTime <Int32>]
- [-AvailableTimeUnit <TimeUnitType>] [-DeadlineImmediately <Boolean>] [-DeadlineTime <Int32>]
- [-DeadlineTimeUnit <TimeUnitType>] [-UserNotification <UserNotificationType>]
- [-AllowSoftwareInstallationOutsideMaintenanceWindow <Boolean>] [-AllowRestart <Boolean>]
- [-SuppressRestartServer <Boolean>] [-SuppressRestartWorkstation <Boolean>] [-WriteFilterHandling <Boolean>]
- [-GenerateFailureAlert <Boolean>] [-GenerateSuccessAlert <Boolean>] [-SuccessPercentage <Int32>]
- [-AlertTime <Int32>] [-AlertTimeUnit <TimeUnitType>] [-DisableOperationManager <Boolean>]
- [-GenerateOperationManagerAlert <Boolean>] [-NoInstallOnRemote <Boolean>] [-NoInstallOnUnprotected <Boolean>]
- [-UseBranchCache <Boolean>] [-DownloadFromMicrosoftUpdate <Boolean>] [-AllowUseMeteredNetwork <Boolean>]
- [-DeploymentPackageName <String>] [-DeploymentPackage <IResultObject>] [-DownloadFromInternet <Boolean>]
- [-Location <String>] [-DeploymentRing <DeploymentRing>] [-UpdateDeploymentWaitDay <Int32>]
- [-LanguageSelection <String[]>] [-O365LanguageSelection <String[]>] [-IsServicingPlan]
- [-SoftDeadlineEnabled <Boolean>] [-RequirePostRebootFullScan <Boolean>] [-DisableWildcardHandling]
+New-CMSoftwareUpdateAutoDeploymentRule [-AddToExistingSoftwareUpdateGroup <Boolean>] [-AlertTime <Int32>]
+ [-AlertTimeUnit <TimeUnitType>] [-AllowRestart <Boolean>]
+ [-AllowSoftwareInstallationOutsideMaintenanceWindow <Boolean>] [-AllowUseMeteredNetwork <Boolean>]
+ [-Architecture <ArchitectureType[]>] [-ArticleId <String[]>] [-AvailableImmediately <Boolean>]
+ [-AvailableTime <Int32>] [-AvailableTimeUnit <TimeUnitType>] [-BulletinId <String[]>] [-CMTag <CMTagTypes[]>]
+ -CollectionId <String> [-ContentSize <String[]>] [-CustomSeverity <SeverityType[]>]
+ [-DateReleasedOrRevised <DateReleasedOrRevisedType>] [-DeadlineImmediately <Boolean>] [-DeadlineTime <Int32>]
+ [-DeadlineTimeUnit <TimeUnitType>] [-DeploymentPackage <IResultObject>] [-DeploymentPackageName <String>]
+ [-DeploymentRing <DeploymentRing>] [-DeployWithoutLicense <Boolean>] [-Description <String>]
+ [-DisableOperationManager <Boolean>] [-DownloadFromInternet <Boolean>]
+ [-DownloadFromMicrosoftUpdate <Boolean>] [-Enable <Boolean>] [-EnabledAfterCreate <Boolean>]
+ [-GenerateFailureAlert <Boolean>] [-GenerateOperationManagerAlert <Boolean>] [-GenerateSuccessAlert <Boolean>]
+ [-IsServicingPlan] [-Language <String[]>] [-LanguageSelection <String[]>] [-Location <String>]
+ [-MicrosoftAsVendor <Boolean>] -Name <String> [-NoInstallOnRemote <Boolean>]
+ [-NoInstallOnUnprotected <Boolean>] [-O365LanguageSelection <String[]>] [-Product <String[]>]
+ [-Required <String[]>] [-RequirePostRebootFullScan <Boolean>] [-RunType <RunType>] [-Schedule <IResultObject>]
+ [-SendWakeupPacket <Boolean>] [-Severity <SeverityType[]>] [-SoftDeadlineEnabled <Boolean>]
+ [-SuccessPercentage <Int32>] [-Superseded <Boolean>] [-SuppressRestartServer <Boolean>]
+ [-SuppressRestartWorkstation <Boolean>] [-Title <String[]>] [-UpdateClassification <String[]>]
+ [-UpdateDeploymentWaitDay <Int32>] [-UpdateDescription <String[]>] [-UseBranchCache <Boolean>]
+ [-UserNotification <UserNotificationType>] [-UseUtc <Boolean>] [-Vendor <String[]>]
+ [-VerboseLevel <VerboseLevelType>] [-WriteFilterHandling <Boolean>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### NewByCollectionName
+```
+New-CMSoftwareUpdateAutoDeploymentRule [-AddToExistingSoftwareUpdateGroup <Boolean>] [-AlertTime <Int32>]
+ [-AlertTimeUnit <TimeUnitType>] [-AllowRestart <Boolean>]
+ [-AllowSoftwareInstallationOutsideMaintenanceWindow <Boolean>] [-AllowUseMeteredNetwork <Boolean>]
+ [-Architecture <ArchitectureType[]>] [-ArticleId <String[]>] [-AvailableImmediately <Boolean>]
+ [-AvailableTime <Int32>] [-AvailableTimeUnit <TimeUnitType>] [-BulletinId <String[]>] [-CMTag <CMTagTypes[]>]
+ -CollectionName <String> [-ContentSize <String[]>] [-CustomSeverity <SeverityType[]>]
+ [-DateReleasedOrRevised <DateReleasedOrRevisedType>] [-DeadlineImmediately <Boolean>] [-DeadlineTime <Int32>]
+ [-DeadlineTimeUnit <TimeUnitType>] [-DeploymentPackage <IResultObject>] [-DeploymentPackageName <String>]
+ [-DeploymentRing <DeploymentRing>] [-DeployWithoutLicense <Boolean>] [-Description <String>]
+ [-DisableOperationManager <Boolean>] [-DownloadFromInternet <Boolean>]
+ [-DownloadFromMicrosoftUpdate <Boolean>] [-Enable <Boolean>] [-EnabledAfterCreate <Boolean>]
+ [-GenerateFailureAlert <Boolean>] [-GenerateOperationManagerAlert <Boolean>] [-GenerateSuccessAlert <Boolean>]
+ [-IsServicingPlan] [-Language <String[]>] [-LanguageSelection <String[]>] [-Location <String>]
+ [-MicrosoftAsVendor <Boolean>] -Name <String> [-NoInstallOnRemote <Boolean>]
+ [-NoInstallOnUnprotected <Boolean>] [-O365LanguageSelection <String[]>] [-Product <String[]>]
+ [-Required <String[]>] [-RequirePostRebootFullScan <Boolean>] [-RunType <RunType>] [-Schedule <IResultObject>]
+ [-SendWakeupPacket <Boolean>] [-Severity <SeverityType[]>] [-SoftDeadlineEnabled <Boolean>]
+ [-SuccessPercentage <Int32>] [-Superseded <Boolean>] [-SuppressRestartServer <Boolean>]
+ [-SuppressRestartWorkstation <Boolean>] [-Title <String[]>] [-UpdateClassification <String[]>]
+ [-UpdateDeploymentWaitDay <Int32>] [-UpdateDescription <String[]>] [-UseBranchCache <Boolean>]
+ [-UserNotification <UserNotificationType>] [-UseUtc <Boolean>] [-Vendor <String[]>]
+ [-VerboseLevel <VerboseLevelType>] [-WriteFilterHandling <Boolean>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-The **New-CMSoftwareUpdateAutoDeploymentRule** cmdlet creates a automatic deployment rule (ADR) for software updates. When a rule runs, Configuration Manager adds updates that qualify for the rule to a software update group. The Configuration Manager server downloads content files and copies them to distribution points, and then updates client computers. For more information, see [Automatically deploy software updates](https://docs.microsoft.com/mem/configmgr/sum/deploy-use/automatically-deploy-software-updates).
+The **New-CMSoftwareUpdateAutoDeploymentRule** cmdlet creates a automatic deployment rule (ADR) for software updates. When a rule runs, Configuration Manager adds updates that qualify for the rule to a software update group. The Configuration Manager server downloads content files and copies them to distribution points, and then updates client computers. For more information, see [Automatically deploy software updates](/mem/configmgr/sum/deploy-use/automatically-deploy-software-updates).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
@@ -1329,7 +1332,6 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -1339,8 +1341,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### IResultObject#SMS_AutoDeployment
-
-For more information on this return object and its properties, see [SMS_AutoDeployment server WMI class](https://docs.microsoft.com/mem/configmgr/develop/reference/sum/sms_autodeployment-server-wmi-class).
 
 ## NOTES
 

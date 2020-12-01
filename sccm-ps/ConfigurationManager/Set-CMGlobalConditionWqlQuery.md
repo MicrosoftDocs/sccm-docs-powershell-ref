@@ -16,7 +16,7 @@ Sets a WQL Query type global condition in Configuration Manager.
 ## SYNTAX
 
 ```
-Set-CMGlobalConditionWqlQuery [-Property <String>] [-Namespace <String>] [-Class <String>]
+Set-CMGlobalConditionWqlQuery [-Class <String>] [-Namespace <String>] [-Property <String>]
  [-WhereClause <String>] -Name <String> [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```

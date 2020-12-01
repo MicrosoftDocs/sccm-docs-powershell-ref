@@ -16,19 +16,19 @@ Removes an alert subscription object.
 
 ### SearchByValueMandatory (Default)
 ```
-Remove-CMAlertSubscription -InputObject <IResultObject> [-Force] [-DisableWildcardHandling]
+Remove-CMAlertSubscription [-Force] -InputObject <IResultObject> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory
 ```
-Remove-CMAlertSubscription -Id <String> [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+Remove-CMAlertSubscription [-Force] -Id <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
  [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByNameMandatory
 ```
-Remove-CMAlertSubscription -Name <String> [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Remove-CMAlertSubscription [-Force] -Name <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

@@ -15,20 +15,19 @@ Add the **Check Readiness** step to a task sequence. Use this step to verify tha
 ## SYNTAX
 
 ```
-New-CMTSStepPrestartCheck [-CheckSpace <Boolean>] [-DiskSpace <Int32>] [-CheckPowerState <Boolean>]
- [-CheckUefi <Boolean>] [-CheckNetworkConnected <Boolean>] [-CheckNetworkWired <Boolean>]
- [-CheckMemory <Boolean>] [-Memory <Int32>] [-CheckOSLanguageId <Boolean>] [-OSLanguageId <Int32>]
- [-CheckOS <Boolean>] [-OS <OSType>] [-CheckOSArchitecture <Boolean>] [-OSArchitecture <OSArch>]
- [-CheckMinOSVersion <Boolean>] [-MinOSVersion <String>] [-CheckMaxOSVersion <Boolean>]
- [-MaxOSVersion <String>] [-CheckCMClientMinVersion <Boolean>] [-CMClientMinVersion <String>]
- [-CheckSpeed <Boolean>] [-Speed <Int32>] -Name <String> [-Description <String>] [-ContinueOnError] [-Disable]
- [-Condition <IResultObject[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+New-CMTSStepPrestartCheck [-CheckCMClientMinVersion <Boolean>] [-CheckMaxOSVersion <Boolean>]
+ [-CheckMemory <Boolean>] [-CheckMinOSVersion <Boolean>] [-CheckNetworkConnected <Boolean>]
+ [-CheckNetworkWired <Boolean>] [-CheckOS <Boolean>] [-CheckOSArchitecture <Boolean>]
+ [-CheckOSLanguageId <Boolean>] [-CheckPowerState <Boolean>] [-CheckSpace <Boolean>] [-CheckSpeed <Boolean>]
+ [-CheckUefi <Boolean>] [-CMClientMinVersion <String>] [-DiskSpace <Int32>] [-MaxOSVersion <String>]
+ [-Memory <Int32>] [-MinOSVersion <String>] [-OS <OSType>] [-OSArchitecture <OSArch>] [-OSLanguageId <Int32>]
+ [-Speed <Int32>] [-Condition <IResultObject[]>] [-ContinueOnError] [-Description <String>] [-Disable]
+ -Name <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-Add the **Check Readiness** step to a task sequence. Use this step to verify that the target computer meets the specified deployment prerequisite conditions. For more information on this task sequence step, see [About task sequence steps](https://docs.microsoft.com/mem/configmgr/osd/understand/task-sequence-steps#BKMK_CheckReadiness).
+Add the **Check Readiness** step to a task sequence. Use this step to verify that the target computer meets the specified deployment prerequisite conditions. For more information on this task sequence step, see [About task sequence steps](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_CheckReadiness).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
@@ -528,4 +527,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[About task sequence steps - Check Readiness](https://docs.microsoft.com/mem/configmgr/osd/understand/task-sequence-steps#BKMK_CheckReadiness)
+[About task sequence steps - Check Readiness](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_CheckReadiness)

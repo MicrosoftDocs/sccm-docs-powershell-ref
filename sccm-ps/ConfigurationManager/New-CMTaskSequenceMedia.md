@@ -17,97 +17,97 @@ Creates task sequence media in Configuration Manager.
 
 ### NewBootableMedia (Default)
 ```
-New-CMTaskSequenceMedia [-BootableMedia] -MediaPath <String> [-AllowUnattendedDeployment <Boolean>]
- -MediaInputType <MediaInputType> [-DriveName <String>] [-MediaSize <MediaSize>] -ProtectPassword <Boolean>
- [-Password <SecureString>] [-Variable <Hashtable>] [-EnablePrestartCommand <Boolean>]
- [-PrestartCommandLine <String>] [-CommandIncludeFile <Boolean>] [-CommandPackageName <String>]
- [-CommandDistributionPointServerName <String>] [-EnableUnknownSupport <Boolean>]
- [-CreateMediaSelfCertificate <Boolean>] [-StartDate <DateTime>] [-ExpirationDate <DateTime>]
- [-ImportCertificatePath <String>] [-ImportCertificatePassword <SecureString>]
- [-UserDeviceAffinity <UserDeviceAffinityType>] -BootImageId <String>
- -BootImageDistributionPointServerName <String> -BootImageManagementPointServerName <String[]>
- -MediaMode <MediaMode> [-AllowUacPrompt] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+New-CMTaskSequenceMedia [-AllowUacPrompt] [-AllowUnattendedDeployment <Boolean>] [-BootableMedia]
+ -BootImageDistributionPointServerName <String> -BootImageId <String>
+ -BootImageManagementPointServerName <String[]> [-CommandDistributionPointServerName <String>]
+ [-CommandIncludeFile <Boolean>] [-CommandPackageName <String>] [-CreateMediaSelfCertificate <Boolean>]
+ [-DriveName <String>] [-EnablePrestartCommand <Boolean>] [-EnableUnknownSupport <Boolean>]
+ [-ExpirationDate <DateTime>] [-ImportCertificatePassword <SecureString>] [-ImportCertificatePath <String>]
+ -MediaInputType <MediaInputType> -MediaMode <MediaMode> -MediaPath <String> [-MediaSize <MediaSize>]
+ [-Password <SecureString>] [-PrestartCommandLine <String>] -ProtectPassword <Boolean> [-StartDate <DateTime>]
+ [-UserDeviceAffinity <UserDeviceAffinityType>] [-Variable <Hashtable>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### NewStandAloneMedia
 ```
-New-CMTaskSequenceMedia [-StandaloneMedia] -MediaPath <String> [-AllowUnattendedDeployment <Boolean>]
- -MediaInputType <MediaInputType> [-DriveName <String>] [-MediaSize <MediaSize>] -ProtectPassword <Boolean>
- [-Password <SecureString>] -TaskSequenceId <String> -TaskSequenceDistributionPointServerName <String[]>
- [-Variable <Hashtable>] [-EnablePrestartCommand <Boolean>] [-PrestartCommandLine <String>]
- [-CommandIncludeFile <Boolean>] [-CommandPackageName <String>] [-CommandDistributionPointServerName <String>]
- [-IncludeApplicationDependency <Boolean>] [-AllowUacPrompt] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+New-CMTaskSequenceMedia [-AllowUacPrompt] [-AllowUnattendedDeployment <Boolean>]
+ [-CommandDistributionPointServerName <String>] [-CommandIncludeFile <Boolean>] [-CommandPackageName <String>]
+ [-DriveName <String>] [-EnablePrestartCommand <Boolean>] [-IncludeApplicationDependency <Boolean>]
+ -MediaInputType <MediaInputType> -MediaPath <String> [-MediaSize <MediaSize>] [-Password <SecureString>]
+ [-PrestartCommandLine <String>] -ProtectPassword <Boolean> [-StandaloneMedia]
+ -TaskSequenceDistributionPointServerName <String[]> -TaskSequenceId <String> [-Variable <Hashtable>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### NewStandAloneMediaByValue
 ```
-New-CMTaskSequenceMedia [-StandaloneMedia] -MediaPath <String> [-AllowUnattendedDeployment <Boolean>]
- [-MediaInputType <MediaInputType>] [-DriveName <String>] [-MediaSize <MediaSize>] [-ProtectPassword <Boolean>]
- [-Password <SecureString>] -TaskSequence <IResultObject> -TaskSequenceDistributionPoint <IResultObject[]>
- [-Variable <Hashtable>] [-EnablePrestartCommand <Boolean>] [-PrestartCommandLine <String>]
+New-CMTaskSequenceMedia [-AllowUacPrompt] [-AllowUnattendedDeployment <Boolean>]
  [-CommandIncludeFile <Boolean>] [-CommandPackage <IResultObject>]
- [-CommandPackageDistributionPoint <IResultObject>] [-IncludeApplicationDependency <Boolean>] [-AllowUacPrompt]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-CommandPackageDistributionPoint <IResultObject>] [-DriveName <String>] [-EnablePrestartCommand <Boolean>]
+ [-IncludeApplicationDependency <Boolean>] [-MediaInputType <MediaInputType>] -MediaPath <String>
+ [-MediaSize <MediaSize>] [-Password <SecureString>] [-PrestartCommandLine <String>]
+ [-ProtectPassword <Boolean>] [-StandaloneMedia] -TaskSequence <IResultObject>
+ -TaskSequenceDistributionPoint <IResultObject[]> [-Variable <Hashtable>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### NewBootableMediaByValue
 ```
-New-CMTaskSequenceMedia [-BootableMedia] -MediaPath <String> [-AllowUnattendedDeployment <Boolean>]
- [-MediaInputType <MediaInputType>] [-DriveName <String>] [-MediaSize <MediaSize>] [-ProtectPassword <Boolean>]
- [-Password <SecureString>] [-Variable <Hashtable>] [-EnablePrestartCommand <Boolean>]
- [-PrestartCommandLine <String>] [-CommandIncludeFile <Boolean>] [-CommandPackage <IResultObject>]
- [-CommandPackageDistributionPoint <IResultObject>] [-EnableUnknownSupport <Boolean>]
- [-CreateMediaSelfCertificate <Boolean>] [-StartDate <DateTime>] [-ExpirationDate <DateTime>]
- [-ImportCertificatePath <String>] [-ImportCertificatePassword <SecureString>]
- [-UserDeviceAffinity <UserDeviceAffinityType>] -BootImage <IResultObject>
- -BootImageDistributionPoint <IResultObject> -BootImageManagementPoint <IResultObject[]>
- [-MediaMode <MediaMode>] [-AllowUacPrompt] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
-```
-
-### NewCaptureMedia
-```
-New-CMTaskSequenceMedia [-CaptureMedia] -MediaPath <String> -MediaInputType <MediaInputType>
- [-DriveName <String>] -BootImageId <String> -BootImageDistributionPointServerName <String> [-AllowUacPrompt]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### NewCaptureMediaByValue
-```
-New-CMTaskSequenceMedia [-CaptureMedia] -MediaPath <String> [-MediaInputType <MediaInputType>]
- [-DriveName <String>] -BootImage <IResultObject> -BootImageDistributionPoint <IResultObject> [-AllowUacPrompt]
+New-CMTaskSequenceMedia [-AllowUacPrompt] [-AllowUnattendedDeployment <Boolean>] [-BootableMedia]
+ -BootImage <IResultObject> -BootImageDistributionPoint <IResultObject>
+ -BootImageManagementPoint <IResultObject[]> [-CommandIncludeFile <Boolean>] [-CommandPackage <IResultObject>]
+ [-CommandPackageDistributionPoint <IResultObject>] [-CreateMediaSelfCertificate <Boolean>]
+ [-DriveName <String>] [-EnablePrestartCommand <Boolean>] [-EnableUnknownSupport <Boolean>]
+ [-ExpirationDate <DateTime>] [-ImportCertificatePassword <SecureString>] [-ImportCertificatePath <String>]
+ [-MediaInputType <MediaInputType>] [-MediaMode <MediaMode>] -MediaPath <String> [-MediaSize <MediaSize>]
+ [-Password <SecureString>] [-PrestartCommandLine <String>] [-ProtectPassword <Boolean>]
+ [-StartDate <DateTime>] [-UserDeviceAffinity <UserDeviceAffinityType>] [-Variable <Hashtable>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### NewPrestagedMedia
 ```
-New-CMTaskSequenceMedia [-PrestagedMedia] -MediaPath <String> [-AllowUnattendedDeployment <Boolean>]
- -ProtectPassword <Boolean> -TaskSequenceId <String> -TaskSequenceDistributionPointServerName <String[]>
- [-Variable <Hashtable>] [-PrestartCommandLine <String>] [-CommandIncludeFile <Boolean>]
- [-CommandPackageName <String>] [-CommandDistributionPointServerName <String>] -BootImageId <String>
- -BootImageDistributionPointServerName <String> -BootImageManagementPointServerName <String[]>
- -MediaMode <MediaMode> [-CreatedBy <String>] [-Version <String>] [-Comment <String>]
- [-OperatingSystemImagePackageId <String>] [-OperatingSystemImageName <String>]
- -OperatingSystemImageDistributionPointServerName <String> [-Application <IResultObject[]>]
- [-Package <IResultObject[]>] [-DriverPackage <IResultObject[]>] [-ApplicationName <String[]>]
- [-PackageName <String[]>] [-DriverPackageName <String[]>] [-AllowUacPrompt] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+New-CMTaskSequenceMedia [-AllowUacPrompt] [-AllowUnattendedDeployment <Boolean>]
+ [-Application <IResultObject[]>] [-ApplicationName <String[]>] -BootImageDistributionPointServerName <String>
+ -BootImageId <String> -BootImageManagementPointServerName <String[]>
+ [-CommandDistributionPointServerName <String>] [-CommandIncludeFile <Boolean>] [-CommandPackageName <String>]
+ [-Comment <String>] [-CreatedBy <String>] [-DriverPackage <IResultObject[]>] [-DriverPackageName <String[]>]
+ -MediaMode <MediaMode> -MediaPath <String> -OperatingSystemImageDistributionPointServerName <String>
+ [-OperatingSystemImageName <String>] [-OperatingSystemImagePackageId <String>] [-Package <IResultObject[]>]
+ [-PackageName <String[]>] [-PrestagedMedia] [-PrestartCommandLine <String>] -ProtectPassword <Boolean>
+ -TaskSequenceDistributionPointServerName <String[]> -TaskSequenceId <String> [-Variable <Hashtable>]
+ [-Version <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### NewPrestagedMediaByValue
 ```
-New-CMTaskSequenceMedia [-PrestagedMedia] -MediaPath <String> [-AllowUnattendedDeployment <Boolean>]
- [-ProtectPassword <Boolean>] -TaskSequence <IResultObject> -TaskSequenceDistributionPoint <IResultObject[]>
- [-Variable <Hashtable>] [-PrestartCommandLine <String>] [-CommandIncludeFile <Boolean>]
- [-CommandPackage <IResultObject>] [-CommandPackageDistributionPoint <IResultObject>]
- -BootImage <IResultObject> -BootImageDistributionPoint <IResultObject>
- -BootImageManagementPoint <IResultObject[]> -MediaMode <MediaMode> [-CreatedBy <String>] [-Version <String>]
- [-Comment <String>] [-OperatingSystemImagePackage <IResultObject>]
- -OperatingSystemImageDistributionPoint <IResultObject> [-Application <IResultObject[]>]
- [-Package <IResultObject[]>] [-DriverPackage <IResultObject[]>] [-AllowUacPrompt] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+New-CMTaskSequenceMedia [-AllowUacPrompt] [-AllowUnattendedDeployment <Boolean>]
+ [-Application <IResultObject[]>] -BootImage <IResultObject> -BootImageDistributionPoint <IResultObject>
+ -BootImageManagementPoint <IResultObject[]> [-CommandIncludeFile <Boolean>] [-CommandPackage <IResultObject>]
+ [-CommandPackageDistributionPoint <IResultObject>] [-Comment <String>] [-CreatedBy <String>]
+ [-DriverPackage <IResultObject[]>] -MediaMode <MediaMode> -MediaPath <String>
+ -OperatingSystemImageDistributionPoint <IResultObject> [-OperatingSystemImagePackage <IResultObject>]
+ [-Package <IResultObject[]>] [-PrestagedMedia] [-PrestartCommandLine <String>] [-ProtectPassword <Boolean>]
+ -TaskSequence <IResultObject> -TaskSequenceDistributionPoint <IResultObject[]> [-Variable <Hashtable>]
+ [-Version <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### NewCaptureMediaByValue
+```
+New-CMTaskSequenceMedia [-AllowUacPrompt] -BootImage <IResultObject>
+ -BootImageDistributionPoint <IResultObject> [-CaptureMedia] [-DriveName <String>]
+ [-MediaInputType <MediaInputType>] -MediaPath <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### NewCaptureMedia
+```
+New-CMTaskSequenceMedia [-AllowUacPrompt] -BootImageDistributionPointServerName <String> -BootImageId <String>
+ [-CaptureMedia] [-DriveName <String>] -MediaInputType <MediaInputType> -MediaPath <String>
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -229,7 +229,7 @@ Specifies a boot image object.
 
 ```yaml
 Type: IResultObject
-Parameter Sets: NewBootableMediaByValue, NewCaptureMediaByValue, NewPrestagedMediaByValue
+Parameter Sets: NewBootableMediaByValue, NewPrestagedMediaByValue, NewCaptureMediaByValue
 Aliases:
 
 Required: True
@@ -245,7 +245,7 @@ Specifies a boot image distribution point.
 
 ```yaml
 Type: IResultObject
-Parameter Sets: NewBootableMediaByValue, NewCaptureMediaByValue, NewPrestagedMediaByValue
+Parameter Sets: NewBootableMediaByValue, NewPrestagedMediaByValue, NewCaptureMediaByValue
 Aliases:
 
 Required: True
@@ -261,7 +261,7 @@ Specifies a boot image distribution point server name.
 
 ```yaml
 Type: String
-Parameter Sets: NewBootableMedia, NewCaptureMedia, NewPrestagedMedia
+Parameter Sets: NewBootableMedia, NewPrestagedMedia, NewCaptureMedia
 Aliases: DistributionPointServerName
 
 Required: True
@@ -277,7 +277,7 @@ Specifies the ID of the boot image package associated with the task sequence med
 
 ```yaml
 Type: String
-Parameter Sets: NewBootableMedia, NewCaptureMedia, NewPrestagedMedia
+Parameter Sets: NewBootableMedia, NewPrestagedMedia, NewCaptureMedia
 Aliases:
 
 Required: True
@@ -337,7 +337,7 @@ Accept wildcard characters: False
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: NewCaptureMedia, NewCaptureMediaByValue
+Parameter Sets: NewCaptureMediaByValue, NewCaptureMedia
 Aliases: CaptureMediaOption
 
 Required: True
@@ -515,7 +515,7 @@ Specifies a drive name.
 
 ```yaml
 Type: String
-Parameter Sets: NewBootableMedia, NewStandAloneMedia, NewStandAloneMediaByValue, NewBootableMediaByValue, NewCaptureMedia, NewCaptureMediaByValue
+Parameter Sets: NewBootableMedia, NewStandAloneMedia, NewStandAloneMediaByValue, NewBootableMediaByValue, NewCaptureMediaByValue, NewCaptureMedia
 Aliases:
 
 Required: False
@@ -1133,9 +1133,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
-
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject[]
+
+### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
 
 ## OUTPUTS
 

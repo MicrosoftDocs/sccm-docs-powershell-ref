@@ -13,10 +13,10 @@ schema: 2.0.0
 ## SYNTAX
 
 ```
-New-CMCoManagementPolicy [-CoManagementPolicyName <String>] -AutoEnroll <Boolean>
- [-CAWorkloadEnabled <Boolean>] [-RAWorkloadEnabled <Boolean>] [-WufbWorkloadEnabled <Boolean>]
- [-EPWorkloadEnabled <Boolean>] [-DCWorkloadEnabled <Boolean>] [-ClientAppsWorkloadEnabled <Boolean>]
- [-O365WorkloadEnabled <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+New-CMCoManagementPolicy -AutoEnroll <Boolean> [-CAWorkloadEnabled <Boolean>]
+ [-ClientAppsWorkloadEnabled <Boolean>] [-CoManagementPolicyName <String>] [-DCWorkloadEnabled <Boolean>]
+ [-EPWorkloadEnabled <Boolean>] [-O365WorkloadEnabled <Boolean>] [-RAWorkloadEnabled <Boolean>]
+ [-WufbWorkloadEnabled <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 

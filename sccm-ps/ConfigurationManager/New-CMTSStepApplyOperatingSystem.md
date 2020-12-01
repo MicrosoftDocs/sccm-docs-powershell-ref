@@ -13,13 +13,12 @@ schema: 2.0.0
 ## SYNTAX
 
 ```
-New-CMTSStepApplyOperatingSystem [-ImagePackage <IResultObject>] [-ImagePackageIndex <Int32>]
- [-InstallPackage <IResultObject>] [-InstallPackageIndex <Int32>] [-ConfigFilePackage <IResultObject>]
- [-ConfigFileName <String>] [-DestinationVariable <String>] [-Destination <DestinationType>]
- [-DestinationDisk <Int32>] [-DestinationPartition <Int32>] [-DestinationDriveLetter <String>]
- [-RunFromNet <Boolean>] -Name <String> [-Description <String>] [-ContinueOnError] [-Disable]
- [-Condition <IResultObject[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+New-CMTSStepApplyOperatingSystem [-ConfigFileName <String>] [-ConfigFilePackage <IResultObject>]
+ [-Destination <DestinationType>] [-DestinationDisk <Int32>] [-DestinationDriveLetter <String>]
+ [-DestinationPartition <Int32>] [-DestinationVariable <String>] [-ImagePackage <IResultObject>]
+ [-ImagePackageIndex <Int32>] [-InstallPackage <IResultObject>] [-InstallPackageIndex <Int32>]
+ [-RunFromNet <Boolean>] [-Condition <IResultObject[]>] [-ContinueOnError] [-Description <String>] [-Disable]
+ -Name <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

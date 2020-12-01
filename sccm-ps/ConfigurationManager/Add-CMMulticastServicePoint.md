@@ -17,7 +17,7 @@ Adds a multicast service point.
 ### ByValue (Default)
 ```
 Add-CMMulticastServicePoint [-ClientTransferRate <NetworkProfile>] [-EndIPAddress <String>]
- [-EndUdpPort <Int32>] -InputObject <IResultObject> [-MinimumClientCount <Int32>] [-MaximumClientCount <Int32>]
+ [-EndUdpPort <Int32>] -InputObject <IResultObject> [-MaximumClientCount <Int32>] [-MinimumClientCount <Int32>]
  [-SessionStartDelayMins <Int32>] [-StartIPAddress <String>] [-StartUdpPort <Int32>] [-UserName <String>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
@@ -25,7 +25,7 @@ Add-CMMulticastServicePoint [-ClientTransferRate <NetworkProfile>] [-EndIPAddres
 ### ByName
 ```
 Add-CMMulticastServicePoint [-ClientTransferRate <NetworkProfile>] [-EndIPAddress <String>]
- [-EndUdpPort <Int32>] [-MinimumClientCount <Int32>] [-MaximumClientCount <Int32>]
+ [-EndUdpPort <Int32>] [-MaximumClientCount <Int32>] [-MinimumClientCount <Int32>]
  [-SessionStartDelayMins <Int32>] [-SiteCode <String>] [-SiteSystemServerName] <String>
  [-StartIPAddress <String>] [-StartUdpPort <Int32>] [-UserName <String>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]

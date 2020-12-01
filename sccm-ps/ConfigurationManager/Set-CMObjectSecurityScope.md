@@ -15,7 +15,7 @@ Sets the security scopes for Configuration Manager objects.
 ## SYNTAX
 
 ```
-Set-CMObjectSecurityScope -InputObject <IResultObject[]> -Action <SecurityScopeActionType> -Name <String>
+Set-CMObjectSecurityScope -Action <SecurityScopeActionType> -InputObject <IResultObject[]> -Name <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

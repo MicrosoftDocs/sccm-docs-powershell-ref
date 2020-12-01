@@ -16,7 +16,7 @@ Sets a compliance setting assembly.
 
 ```
 Set-CMComplianceSettingAssembly [-AssemblyName <String>] [-Description <String>] -InputObject <PSObject>
- -SettingName <String> [-NewSettingName <String>] [-PassThru] [-DisableWildcardHandling]
+ [-NewSettingName <String>] [-PassThru] -SettingName <String> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
