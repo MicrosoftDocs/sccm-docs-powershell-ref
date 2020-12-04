@@ -80,11 +80,11 @@ You can continue to use the following existing CMG cmdlets:
 
 ### Application management
 
-- Add-CMCIDetectionMethod<!-- ](/powershell/module/configurationmanager/Add-CMCIDetectionMethod): Specify how the client detects an application. -->
-- Get-CMApplicationGroupDeployment<!-- ](/powershell/module/configurationmanager/Get-CMApplicationGroupDeployment): Get the deployment of an application group. -->
-- New-CMApplicationGroupDeployment<!-- ](/powershell/module/configurationmanager/New-CMApplicationGroupDeployment): Create a deployment for an application group. -->
-- Remove-CMApplicationGroupDeployment<!-- ](/powershell/module/configurationmanager/Remove-CMApplicationGroupDeployment): Remove the deployment of an application group. -->
-- Set-CMApplicationGroupDeployment<!-- ](/powershell/module/configurationmanager/Set-CMApplicationGroupDeployment): Configure the deployment of an application group. -->
+- [Add-CMCIDetectionMethod](/powershell/module/configurationmanager/Add-CMCIDetectionMethod): Specify how the client detects an application.
+- [Get-CMApplicationGroupDeployment](/powershell/module/configurationmanager/Get-CMApplicationGroupDeployment): Get the deployment of an application group.
+- [New-CMApplicationGroupDeployment](/powershell/module/configurationmanager/New-CMApplicationGroupDeployment): Create a deployment for an application group.
+- [Remove-CMApplicationGroupDeployment](/powershell/module/configurationmanager/Remove-CMApplicationGroupDeployment): Remove the deployment of an application group.
+- [Set-CMApplicationGroupDeployment](/powershell/module/configurationmanager/Set-CMApplicationGroupDeployment): Configure the deployment of an application group.
 
 ### Collection management
 
