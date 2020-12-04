@@ -114,6 +114,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Remove-CMWindows10EditionUpgrade](Remove-CMWindows10EditionUpgrade.md)
 
-[Set-CMWindowsEditionUpgradeConfigurationItem](Set-CMWindowsEditionUpgradeConfigurationItem.md)
+[Set-CMWindows10EditionUpgrade](Set-CMWindows10EditionUpgrade.md)
 
 [Upgrade Windows devices to a new edition with Configuration Manager](/mem/configmgr/compliance/deploy-use/upgrade-windows-version)
