@@ -101,9 +101,9 @@ You can continue to use the following existing CMG cmdlets:
 
 ### Windows 10 edition upgrade
 
-- New-CMWindows10EditionUpgrade<!-- ](/powershell/module/configurationmanager/new-CMWindows10EditionUpgrade): Create a Windows 10 edition upgrade policy. -->
-- Remove-CMWindows10EditionUpgrade<!-- ](/powershell/module/configurationmanager/Remove-CMWindows10EditionUpgrade): Remove a Windows 10 edition upgrade policy. -->
-- Set-CMWindows10EditionUpgrade<!-- ](/powershell/module/configurationmanager/Set-CMWindows10EditionUpgrade): Configure a Windows 10 edition upgrade policy. -->
+- [New-CMWindows10EditionUpgrade](/powershell/module/configurationmanager/new-CMWindows10EditionUpgrade): Create a Windows 10 edition upgrade policy.
+- [Remove-CMWindows10EditionUpgrade](/powershell/module/configurationmanager/Remove-CMWindows10EditionUpgrade): Remove a Windows 10 edition upgrade policy.
+- [Set-CMWindows10EditionUpgrade](/powershell/module/configurationmanager/Set-CMWindows10EditionUpgrade): Configure a Windows 10 edition upgrade policy.
 
 ### Microsoft Edge browser profiles
 

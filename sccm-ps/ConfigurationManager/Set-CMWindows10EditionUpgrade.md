@@ -2,13 +2,15 @@
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 Module Name: ConfigurationManager
 online version:
+ms.date: 12/03/2020
 schema: 2.0.0
 ---
 
 # Set-CMWindows10EditionUpgrade
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Configure a Windows 10 edition upgrade policy.
 
 ## SYNTAX
 
@@ -31,20 +33,25 @@ Set-CMWindows10EditionUpgrade [-Description <String>] -Name <String> [-NewName <
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+Configure a Windows 10 edition upgrade policy.
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
-```
 
-{{ Add example description here }}
+```powershell
+$win10UpgradePolicyId = 16777523
+
+$newDescription = "update description for the edition upgrade policy"
+
+Set-CMWindows10EditionUpgrade -Id $win10UpgradePolicyId -Description $newDescription
+```
 
 ## PARAMETERS
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -60,7 +67,8 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-{{ Fill Description Description }}
+
+Specify a new description for the edition upgrade policy.
 
 ```yaml
 Type: String
@@ -75,7 +83,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-{{ Fill DisableWildcardHandling Description }}
+
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -90,7 +99,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-{{ Fill ForceWildcardHandling Description }}
+
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -105,7 +115,8 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-{{ Fill Id Description }}
+
+Specify the ID of the Windows 10 edition upgrade policy to configure. This ID is the **CI ID** of the policy, for example: `552481`.
 
 ```yaml
 Type: Int32
@@ -120,7 +131,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{ Fill InputObject Description }}
+
+Specify an object for the Windows 10 edition upgrade policy to configure. To get this object, use the [Get-CMWindowsEditionUpgradeConfigurationItem](Get-CMWindowsEditionUpgradeConfigurationItem.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -135,7 +147,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{ Fill Name Description }}
+
+Specify the name of the Windows 10 edition upgrade policy to configure.
 
 ```yaml
 Type: String
@@ -150,7 +163,8 @@ Accept wildcard characters: False
 ```
 
 ### -NewName
-{{ Fill NewName Description }}
+
+Use this parameter to rename the edition upgrade policy.
 
 ```yaml
 Type: String
@@ -165,7 +179,8 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-{{ Fill PassThru Description }}
+
+Add this parameter to return an object that represents the item with which you're working. By default, this cmdlet may not generate any output.
 
 ```yaml
 Type: SwitchParameter
@@ -180,8 +195,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+
+Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
 
 ```yaml
 Type: SwitchParameter
@@ -196,6 +211,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -206,6 +222,16 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### IResultObject#SMS_ConfigurationPolicy
 
+For more information on this return object and its properties, see [SMS_ConfigurationPolicy server WMI class](/mem/configmgr/develop/reference/compliance/sms_configurationpolicy-server-wmi-class).
+
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-CMWindowsEditionUpgradeConfigurationItem](Get-CMWindowsEditionUpgradeConfigurationItem.md)
+
+[New-CMWindows10EditionUpgrade](New-CMWindows10EditionUpgrade.md)
+
+[Remove-CMWindows10EditionUpgrade](Remove-CMWindows10EditionUpgrade.md)
+
+[Upgrade Windows devices to a new edition with Configuration Manager](/mem/configmgr/compliance/deploy-use/upgrade-windows-version)
