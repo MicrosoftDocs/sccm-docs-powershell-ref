@@ -107,9 +107,9 @@ You can continue to use the following existing CMG cmdlets:
 
 ### Microsoft Edge browser profiles
 
-- Get-CMMicrosoftEdgeBrowserProfiles<!-- ](/powershell/module/configurationmanager/Get-CMMicrosoftEdgeBrowserProfiles): Get a policy for a Microsoft Edge Legacy browser profile. -->
-- New-CMMicrosoftEdgeBrowserProfiles<!-- ](/powershell/module/configurationmanager/New-CMMicrosoftEdgeBrowserProfiles): Create a policy to manage Microsoft Edge Legacy browser settings. -->
-- Set-CMMicrosoftEdgeBrowserProfiles<!-- ](/powershell/module/configurationmanager/Set-CMMicrosoftEdgeBrowserProfiles): Configure a policy for a Microsoft Edge Legacy browser profile. -->
+- [Get-CMMicrosoftEdgeBrowserProfiles](/powershell/module/configurationmanager/Get-CMMicrosoftEdgeBrowserProfiles): Get a policy for a Microsoft Edge Legacy browser profile.
+- [New-CMMicrosoftEdgeBrowserProfiles](/powershell/module/configurationmanager/New-CMMicrosoftEdgeBrowserProfiles): Create a policy to manage Microsoft Edge Legacy browser settings.
+- [Set-CMMicrosoftEdgeBrowserProfiles](/powershell/module/configurationmanager/Set-CMMicrosoftEdgeBrowserProfiles): Configure a policy for a Microsoft Edge Legacy browser profile.
 
 ### OneDrive for Business profiles
 
