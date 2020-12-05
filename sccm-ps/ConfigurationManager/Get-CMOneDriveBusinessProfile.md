@@ -2,13 +2,15 @@
 external help file: AdminUI.PS.Dcm-help.xml
 Module Name: ConfigurationManager
 online version:
+ms.date: 12/04/2020
 schema: 2.0.0
 ---
 
 # Get-CMOneDriveBusinessProfile
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Get a policy for a OneDrive for Business profile.
 
 ## SYNTAX
 
@@ -28,21 +30,24 @@ Get-CMOneDriveBusinessProfile [-Name] <String> [-Fast] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+Get a policy for a OneDrive for Business profile. For more information, see [OneDrive for Business profiles](/mem/configmgr/compliance/deploy-use/onedrive-profile).
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
-```
 
-{{ Add example description here }}
+```powershell
+Get-CMOneDriveBusinessProfile -Id 584750
+```
 
 ## PARAMETERS
 
 ### -Fast
-{{ Fill Fast Description }}
+
+Add this parameter to not automatically refresh lazy properties. Lazy properties contain values that are relatively inefficient to retrieve. Getting these properties can cause additional network traffic and decrease cmdlet performance.
+
+If you don't use this parameter, the cmdlet displays a warning. To disable this warning, set `$CMPSSuppressFastNotUsedCheck = $true`.
 
 ```yaml
 Type: SwitchParameter
@@ -57,7 +62,8 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-{{ Fill Id Description }}
+
+Specify the **CI ID** of the OneDrive for Business policy to get. The format is a five- to seven-digit number, for example `403823`.
 
 ```yaml
 Type: Int32
@@ -72,7 +78,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{ Fill Name Description }}
+
+Specify the name of the OneDrive for Business policy to get.
 
 ```yaml
 Type: String
@@ -87,6 +94,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -96,6 +104,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
+
+[New-CMOneDriveBusinessProfile](New-CMOneDriveBusinessProfile.md)
+
+[Set-CMOneDriveBusinessProfile](Set-CMOneDriveBusinessProfile.md)
+
+[OneDrive for Business profiles](/mem/configmgr/compliance/deploy-use/onedrive-profile)

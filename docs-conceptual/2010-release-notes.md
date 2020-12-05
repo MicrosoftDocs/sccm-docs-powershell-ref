@@ -113,9 +113,9 @@ You can continue to use the following existing CMG cmdlets:
 
 ### OneDrive for Business profiles
 
-- Get-CMOneDriveBusinessProfile<!-- ](/powershell/module/configurationmanager/Get-CMOneDriveBusinessProfile): Get a policy for a OneDrive for Business profile. -->
-- New-CMOneDriveBusinessProfile<!-- ](/powershell/module/configurationmanager/New-CMOneDriveBusinessProfile): Create a OneDrive for Business profile policy. -->
-- Set-CMOneDriveBusinessProfile<!-- ](/powershell/module/configurationmanager/Set-CMOneDriveBusinessProfile): Configure a OneDrive for Business profile policy. -->
+- [Get-CMOneDriveBusinessProfile](/powershell/module/configurationmanager/Get-CMOneDriveBusinessProfile): Get a policy for a OneDrive for Business profile.
+- [New-CMOneDriveBusinessProfile](/powershell/module/configurationmanager/New-CMOneDriveBusinessProfile): Create a OneDrive for Business profile policy.
+- [Set-CMOneDriveBusinessProfile](/powershell/module/configurationmanager/Set-CMOneDriveBusinessProfile): Configure a OneDrive for Business profile policy.
 
 ## Deprecated and removed cmdlets
 
