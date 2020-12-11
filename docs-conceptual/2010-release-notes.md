@@ -480,11 +480,9 @@ Fixed an issue for parameter **EnableQuickFormat**.
 
 For more information, see the following articles:
 
-- [Set-CMApplicationAutoPhasedDeployment](/powershell/module/configurationmanager/Set-CMApplicationAutoPhasedDeployment)
-- [Set-CMSoftwareUpdateAutoPhasedDeployment](/powershell/module/configurationmanager/Set-CMSoftwareUpdateAutoPhasedDeployment)
-- [Set-CMSoftwareUpdateManualPhasedDeployment](/powershell/module/configurationmanager/Set-CMSoftwareUpdateManualPhasedDeployment)
-- [Set-CMTaskSequenceAutoPhasedDeployment](/powershell/module/configurationmanager/Set-CMTaskSequenceAutoPhasedDeployment)
-- [Set-CMTaskSequenceManualPhasedDeployment](/powershell/module/configurationmanager/Set-CMTaskSequenceManualPhasedDeployment)
+- [Set-CMApplicationPhasedDeployment](/powershell/module/configurationmanager/Set-CMApplicationPhasedDeployment)
+- [Set-CMSoftwareUpdatePhasedDeployment](/powershell/module/configurationmanager/Set-CMSoftwareUpdatePhasedDeployment)
+- [Set-CMTaskSequencePhasedDeployment](/powershell/module/configurationmanager/Set-CMTaskSequencePhasedDeployment)
 
 **Bugs that were fixed**
 
