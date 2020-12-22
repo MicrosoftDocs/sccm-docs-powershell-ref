@@ -2,13 +2,15 @@
 external help file: AdminUI.PS.Collections.dll-Help.xml
 Module Name: ConfigurationManager
 online version:
+ms.date: 12/21/2020
 schema: 2.0.0
 ---
 
 # Get-CMCollectionEvaluationStatus
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Get the status of collection evaluation.
 
 ## SYNTAX
 
@@ -31,21 +33,35 @@ Get-CMCollectionEvaluationStatus [-IsMemberChanged <Boolean>] -EvaluationTypeOpt
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+Get the status of collection evaluation. For more information, see [How to view collection evaluation](/mem/configmgr/core/clients/manage/collections/collection-evaluation-view).
+
+> [!TIP]
+> The collection evaluation process happens on primary sites, not on the central administration site (CAS). Use this cmdlet when connected to a primary site.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Show status for collections with long full evaluation
+
+This example first uses **Get-CMCollectionEvaluationStatus** to get the status of full evaluation for all collections. It then uses the **Where-Object** cmdlet to filter the results to the collections where the full evaluation time was greater than five seconds (5000 milliseconds).
+
 ```powershell
-PS C:\> {{ Add example code here }}
+Get-CMCollectionEvaluationStatus -EvaluationTypeOption Full | Where-Object Length -gt 5000
 ```
 
-{{ Add example description here }}
+### Example 2: Show summary of full evaluation on built-in collections that recently changed
+
+This example first uses the **Get-CMCollection** cmdlet to get all collections whose name starts with `All`. The results of this query will include all built-in collections such as **All Systems** and **All Users**. It then passes those results to the **Get-CMCollectionEvaluationStatus** cmdlet to get their full evaluation status, only if they had any recent member changes. It then uses the **Select-Object** cmdlet to only display the name of the collection, how many milliseconds full evaluation took, and how many members changed. By default, the output displays as a table.
+
+```powershell
+Get-CMCollection -Name "All*" | Get-CMCollectionEvaluationStatus -EvaluationTypeOption Full -IsMemberChanged $True | Select-Object CollectionName, Length, MemberChanges
+```
 
 ## PARAMETERS
 
 ### -DisableWildcardHandling
-{{ Fill DisableWildcardHandling Description }}
+
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -60,7 +76,8 @@ Accept wildcard characters: False
 ```
 
 ### -EvaluationTypeOption
-{{ Fill EvaluationTypeOption Description }}
+
+Specify the type of evaluation for which to get the status, either `Full` or `Incremental`. For more information, see [Collection evaluation in Configuration Manager](/mem/configmgr/core/clients/manage/collections/collection-evaluation).
 
 ```yaml
 Type: EvaluationType
@@ -76,7 +93,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-{{ Fill ForceWildcardHandling Description }}
+
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -91,7 +109,8 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-{{ Fill Id Description }}
+
+Specify the ID of a collection to query. For example, `"SMS00002"`.
 
 ```yaml
 Type: String
@@ -106,7 +125,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{ Fill InputObject Description }}
+
+Specify a collection object to query. To get this object, use the [Get-CMCollection](Get-CMCollection.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -121,7 +141,8 @@ Accept wildcard characters: False
 ```
 
 ### -IsMemberChanged
-{{ Fill IsMemberChanged Description }}
+
+Set this parameter to `$true` to filter the results to collections whose membership recently changed. In other words, where the **MemberChanges** attribute isn't `0`.
 
 ```yaml
 Type: Boolean
@@ -136,7 +157,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{ Fill Name Description }}
+
+Specify the name of a collection to query. For example, `"All Users"`.
 
 ```yaml
 Type: String
@@ -151,6 +173,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -163,10 +186,32 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### IResultObject#SMS_CollectionEvaluationFull
 
+For more information on this return object and its properties, see [SMS_CollectionEvaluationFull server WMI class](/mem/configmgr/develop/reference/core/clients/collections/sms_collectionevaluationfull-server-wmi-class).
+
 ### IResultObject[]#SMS_CollectionEvaluationIncremental
 
 ### IResultObject#SMS_CollectionEvaluationIncremental
 
+For more information on this return object and its properties, see [SMS_CollectionEvaluationIncremental server WMI class](/mem/configmgr/develop/reference/core/clients/collections/sms_collectionevaluationincremental-server-wmi-class).
+
 ## NOTES
 
 ## RELATED LINKS
+
+<!-- [Get-CMCollectionFullEvaluationStatus](Get-CMCollectionFullEvaluationStatus.md)
+
+[Get-CMCollectionIncrementalEvaluationStatus](Get-CMCollectionIncrementalEvaluationStatus.md)
+ -->
+[Get-CMCollectionInfoFromEvaluationQueue](Get-CMCollectionInfoFromEvaluationQueue.md)
+
+<!-- [Get-CMCollectionInfoFromFullEvaluationQueue](Get-CMCollectionInfoFromFullEvaluationQueue.md)
+
+[Get-CMCollectionInfoFromIncrementalEvaluationQueue](Get-CMCollectionInfoFromIncrementalEvaluationQueue.md)
+
+[Get-CMCollectionInfoFromManualEvaluationQueue](Get-CMCollectionInfoFromManualEvaluationQueue.md)
+
+[Get-CMCollectionInfoFromNewEvaluationQueue](Get-CMCollectionInfoFromNewEvaluationQueue.md)
+ -->
+[How to view collection evaluation](/mem/configmgr/core/clients/manage/collections/collection-evaluation-view)
+
+[Collection evaluation in Configuration Manager](/mem/configmgr/core/clients/manage/collections/collection-evaluation)

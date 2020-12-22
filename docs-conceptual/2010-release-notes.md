@@ -88,16 +88,16 @@ You can continue to use the following existing CMG cmdlets:
 
 ### Collection management
 
-- Get-CMCollectionDependency<!-- ](/powershell/module/configurationmanager/Get-CMCollectionDependency): Get the limiting collection for the target collection. -->
-- Get-CMCollectionDependent<!-- ](/powershell/module/configurationmanager/Get-CMCollectionDependent): Get a collection's dependent relationships. -->
-- Get-CMCollectionEvaluationStatus<!-- ](/powershell/module/configurationmanager/Get-CMCollectionEvaluationStatus): Get the status of collection evaluation. -->
-- Get-CMCollectionFullEvaluationStatus<!-- ](/powershell/module/configurationmanager/Get-CMCollectionFullEvaluationStatus): Get the status of full evaluation of a collection. -->
-- Get-CMCollectionIncrementalEvaluationStatus<!-- ](/powershell/module/configurationmanager/Get-CMCollectionIncrementalEvaluationStatus): Get the status of incremental evaluation of a collection. -->
-- Get-CMCollectionInfoFromEvaluationQueue<!-- ](/powershell/module/configurationmanager/Get-CMCollectionInfoFromEvaluationQueue): Get collection information from the evaluation queue. -->
-- Get-CMCollectionInfoFromFullEvaluationQueue<!-- ](/powershell/module/configurationmanager/Get-CMCollectionInfoFromFullEvaluationQueue): Get collection information from the full evaluation queue. -->
-- Get-CMCollectionInfoFromIncrementalEvaluationQueue<!-- ](/powershell/module/configurationmanager/Get-CMCollectionInfoFromIncrementalEvaluationQueue): Get collection information from the incremental evaluation queue. -->
-- Get-CMCollectionInfoFromManualEvaluationQueue<!-- ](/powershell/module/configurationmanager/Get-CMCollectionInfoFromManualEvaluationQueue): Get collection information from the manual evaluation queue. -->
-- Get-CMCollectionInfoFromNewEvaluationQueue<!-- ](/powershell/module/configurationmanager/Get-CMCollectionInfoFromNewEvaluationQueue): Get collection information from the new evaluation queue. -->
+- [Get-CMCollectionDependency](/powershell/module/configurationmanager/Get-CMCollectionDependency): Get the limiting collection for the target collection.
+- [Get-CMCollectionDependent](/powershell/module/configurationmanager/Get-CMCollectionDependent): Get a collection's dependent relationships.
+- [Get-CMCollectionEvaluationStatus](/powershell/module/configurationmanager/Get-CMCollectionEvaluationStatus): Get the status of collection evaluation.
+<!-- - Get-CMCollectionFullEvaluationStatus<!-- ](/powershell/module/configurationmanager/Get-CMCollectionFullEvaluationStatus): Get the full evaluation status for a collection. -->
+<!-- - Get-CMCollectionIncrementalEvaluationStatus<!-- ](/powershell/module/configurationmanager/Get-CMCollectionIncrementalEvaluationStatus): Get the incremental evaluation status for a collection. -->
+- [Get-CMCollectionInfoFromEvaluationQueue](/powershell/module/configurationmanager/Get-CMCollectionInfoFromEvaluationQueue): Get collection information from the evaluation queue.
+<!-- - Get-CMCollectionInfoFromFullEvaluationQueue<!-- ](/powershell/module/configurationmanager/Get-CMCollectionInfoFromFullEvaluationQueue): Get collection information from the full evaluation queue. -->
+<!-- - Get-CMCollectionInfoFromIncrementalEvaluationQueue<!-- ](/powershell/module/configurationmanager/Get-CMCollectionInfoFromIncrementalEvaluationQueue): Get collection information from the incremental evaluation queue. -->
+<!-- - Get-CMCollectionInfoFromManualEvaluationQueue<!-- ](/powershell/module/configurationmanager/Get-CMCollectionInfoFromManualEvaluationQueue): Get collection information from the manual evaluation queue. -->
+<!-- - Get-CMCollectionInfoFromNewEvaluationQueue<!-- ](/powershell/module/configurationmanager/Get-CMCollectionInfoFromNewEvaluationQueue): Get collection information from the new evaluation queue. -->
 
 ### Windows 10 edition upgrade
 
