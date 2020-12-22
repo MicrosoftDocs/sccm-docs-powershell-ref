@@ -197,20 +197,20 @@ For more information on this return object and its properties, see [SMS_Collecti
 
 ## RELATED LINKS
 
-<!-- [Get-CMCollectionFullEvaluationStatus](Get-CMCollectionFullEvaluationStatus.md)
+[Get-CMCollectionFullEvaluationStatus](Get-CMCollectionFullEvaluationStatus.md)
 
 [Get-CMCollectionIncrementalEvaluationStatus](Get-CMCollectionIncrementalEvaluationStatus.md)
- -->
+
 [Get-CMCollectionInfoFromEvaluationQueue](Get-CMCollectionInfoFromEvaluationQueue.md)
 
-<!-- [Get-CMCollectionInfoFromFullEvaluationQueue](Get-CMCollectionInfoFromFullEvaluationQueue.md)
+[Get-CMCollectionInfoFromFullEvaluationQueue](Get-CMCollectionInfoFromFullEvaluationQueue.md)
 
 [Get-CMCollectionInfoFromIncrementalEvaluationQueue](Get-CMCollectionInfoFromIncrementalEvaluationQueue.md)
 
 [Get-CMCollectionInfoFromManualEvaluationQueue](Get-CMCollectionInfoFromManualEvaluationQueue.md)
 
 [Get-CMCollectionInfoFromNewEvaluationQueue](Get-CMCollectionInfoFromNewEvaluationQueue.md)
- -->
+
 [How to view collection evaluation](/mem/configmgr/core/clients/manage/collections/collection-evaluation-view)
 
 [Collection evaluation in Configuration Manager](/mem/configmgr/core/clients/manage/collections/collection-evaluation)

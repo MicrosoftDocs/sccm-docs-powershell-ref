@@ -185,7 +185,6 @@ For more information on this return object and its properties, see [SMS_Collecti
 
 [Get-CMCollectionEvaluationStatus](Get-CMCollectionEvaluationStatus.md)
 
-<!--
 [Get-CMCollectionFullEvaluationStatus](Get-CMCollectionFullEvaluationStatus.md)
 
 [Get-CMCollectionIncrementalEvaluationStatus](Get-CMCollectionIncrementalEvaluationStatus.md)
@@ -197,7 +196,6 @@ For more information on this return object and its properties, see [SMS_Collecti
 [Get-CMCollectionInfoFromManualEvaluationQueue](Get-CMCollectionInfoFromManualEvaluationQueue.md)
 
 [Get-CMCollectionInfoFromNewEvaluationQueue](Get-CMCollectionInfoFromNewEvaluationQueue.md)
- -->
 
 [How to view collection evaluation](/mem/configmgr/core/clients/manage/collections/collection-evaluation-view)
 
