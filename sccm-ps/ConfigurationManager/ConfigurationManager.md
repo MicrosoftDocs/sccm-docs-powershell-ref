@@ -33,7 +33,7 @@ Assigns boundaries to a boundary group in Configuration Manager.
 Adds a certificate registration point role to a site system server.
 
 ### [Add-CMCIDetectionMethod](Add-CMCIDetectionMethod.md)
-{{ Fill in the Synopsis }}
+Specify how the client detects an application.
 
 ### [Add-CMCloudManagementGatewayConnectionPoint](Add-CMCloudManagementGatewayConnectionPoint.md)
 Add a cloud management gateway connection point.
@@ -442,7 +442,7 @@ Gets an application deployment.
 Gets an application deployment status.
 
 ### [Get-CMApplicationGroupDeployment](Get-CMApplicationGroupDeployment.md)
-{{ Fill in the Synopsis }}
+Get the deployment of an application group.
 
 ### [Get-CMApplicationPhasedDeployment](Get-CMApplicationPhasedDeployment.md)
 Use this cmdlet to get a phased deployment for an application.
@@ -559,16 +559,16 @@ Get a cloud management gateway connection point.
 Gets a Configuration Manager collection.
 
 ### [Get-CMCollectionDependency](Get-CMCollectionDependency.md)
-{{ Fill in the Synopsis }}
+Get the limiting collection for the target collection.
 
 ### [Get-CMCollectionDependent](Get-CMCollectionDependent.md)
-{{ Fill in the Synopsis }}
+Get a collection's dependent relationships.
 
 ### [Get-CMCollectionDirectMembershipRule](Get-CMCollectionDirectMembershipRule.md)
 Gets a collection direct membership rule.
 
 ### [Get-CMCollectionEvaluationStatus](Get-CMCollectionEvaluationStatus.md)
-{{ Fill in the Synopsis }}
+Get the status of collection evaluation.
 
 ### [Get-CMCollectionExcludeMembershipRule](Get-CMCollectionExcludeMembershipRule.md)
 Gets a collection exclude membership rule.
@@ -583,7 +583,7 @@ Gets a collection include membership rule.
 {{ Fill in the Synopsis }}
 
 ### [Get-CMCollectionInfoFromEvaluationQueue](Get-CMCollectionInfoFromEvaluationQueue.md)
-{{ Fill in the Synopsis }}
+Get collection information from the evaluation queue.
 
 ### [Get-CMCollectionInfoFromFullEvaluationQueue](Get-CMCollectionInfoFromFullEvaluationQueue.md)
 {{ Fill in the Synopsis }}
@@ -802,7 +802,7 @@ Gets a management point.
 Gets a component for a Configuration Manager management point.
 
 ### [Get-CMMicrosoftEdgeBrowserProfiles](Get-CMMicrosoftEdgeBrowserProfiles.md)
-{{ Fill in the Synopsis }}
+Get a policy for a Microsoft Edge Legacy browser profile.
 
 ### [Get-CMMigrationCollection](Get-CMMigrationCollection.md)
 Gets collections selected for migration.
@@ -829,7 +829,7 @@ Gets object lock details.
 Gets the security scope associated with a Configuration Manager object.
 
 ### [Get-CMOneDriveBusinessProfile](Get-CMOneDriveBusinessProfile.md)
-{{ Fill in the Synopsis }}
+Get a policy for a OneDrive for Business profile.
 
 ### [Get-CMOperatingSystemImage](Get-CMOperatingSystemImage.md)
 Gets OS images.
@@ -1012,7 +1012,7 @@ Gets an object representing a status reporting component.
 Gets a status summarizer object for Configuration Manager.
 
 ### [Get-CMSupportedPlatform](Get-CMSupportedPlatform.md)
-Gets a supported platform.
+Get a supported platform.
 
 ### [Get-CMTaskSequence](Get-CMTaskSequence.md)
 Gets Configuration Manager task sequences.
@@ -1216,7 +1216,7 @@ Gets a vpn profile configuration item.
 Get one or all of the Microsoft Defender Application Control policies from the site.
 
 ### [Get-CMWindowsEditionUpgradeConfigurationItem](Get-CMWindowsEditionUpgradeConfigurationItem.md)
-Gets a windows edition upgrade configuration item.
+Get a Windows 10 edition upgrade policy.
 
 ### [Get-CMWindowsFirewallPolicy](Get-CMWindowsFirewallPolicy.md)
 Gets a windows firewall policy.
@@ -1453,7 +1453,7 @@ Create an application deployment.
 {{ Fill in the Synopsis }}
 
 ### [New-CMApplicationGroupDeployment](New-CMApplicationGroupDeployment.md)
-{{ Fill in the Synopsis }}
+Create a deployment for an application group.
 
 ### [New-CMAppVVirtualEnvironment](New-CMAppVVirtualEnvironment.md)
 Creates an App-V virtual environment.
@@ -1738,7 +1738,7 @@ Creates an installation source file for Configuration Manager.
 Creates a maintenance window for a collection.
 
 ### [New-CMMicrosoftEdgeBrowserProfiles](New-CMMicrosoftEdgeBrowserProfiles.md)
-{{ Fill in the Synopsis }}
+Create a policy to manage Microsoft Edge Legacy browser settings.
 
 ### [New-CMMigrationJob](New-CMMigrationJob.md)
 Creates a migration job in Configuration Manager.
@@ -1750,7 +1750,7 @@ Create a policy to specify the **Security Policy** link that BitLocker displays 
 Create a policy to control computer restart performance at the risk of exposing BitLocker secrets.
 
 ### [New-CMOneDriveBusinessProfile](New-CMOneDriveBusinessProfile.md)
-{{ Fill in the Synopsis }}
+Create a OneDrive for Business profile policy.
 
 ### [New-CMOperatingSystemImage](New-CMOperatingSystemImage.md)
 Creates an operating system image.
@@ -2116,7 +2116,7 @@ Creates a VPN profile.
 Create a Microsoft Defender Application Control settings policy object.
 
 ### [New-CMWindows10EditionUpgrade](New-CMWindows10EditionUpgrade.md)
-{{ Fill in the Synopsis }}
+Create a Windows 10 edition upgrade policy.
 
 ### [New-CMWindowsFirewallPolicy](New-CMWindowsFirewallPolicy.md)
 Creates a new Windows Firewall policy in Configuration Manager.
@@ -2173,7 +2173,7 @@ Removes a Configuration Manager Application Catalog website point.
 Removes an application deployment.
 
 ### [Remove-CMApplicationGroupDeployment](Remove-CMApplicationGroupDeployment.md)
-{{ Fill in the Synopsis }}
+Remove the deployment of an application group.
 
 ### [Remove-CMApplicationPhasedDeployment](Remove-CMApplicationPhasedDeployment.md)
 Use this cmdlet to remove a phased deployment for an application.
@@ -2632,7 +2632,7 @@ Removes VHD images.
 Delete a Microsoft Defender Application Control policy from the site.
 
 ### [Remove-CMWindows10EditionUpgrade](Remove-CMWindows10EditionUpgrade.md)
-{{ Fill in the Synopsis }}
+Remove a Windows 10 edition upgrade policy.
 
 ### [Rename-CMCategory](Rename-CMCategory.md)
 Renames a category.
@@ -2692,7 +2692,7 @@ Changes the settings of an Application Catalog website point.
 Modifies properties for an application deployment in Configuration Manager.
 
 ### [Set-CMApplicationGroupDeployment](Set-CMApplicationGroupDeployment.md)
-{{ Fill in the Synopsis }}
+Configure the deployment of an application group.
 
 ### [Set-CMApplicationPhasedDeployment](Set-CMApplicationPhasedDeployment.md)
 Configure a phased deployment for an application.
@@ -3073,7 +3073,7 @@ Changes settings for a management point in Configuration Manager.
 Sets a component for a management point in Configuration Manager.
 
 ### [Set-CMMicrosoftEdgeBrowserProfiles](Set-CMMicrosoftEdgeBrowserProfiles.md)
-{{ Fill in the Synopsis }}
+Configure a policy for a Microsoft Edge Legacy browser profile.
 
 ### [Set-CMMigrationExclusionList](Set-CMMigrationExclusionList.md)
 Edits the global exclusion list for migration jobs.
@@ -3097,7 +3097,7 @@ Sets a multicast service point.
 Sets the security scopes for Configuration Manager objects.
 
 ### [Set-CMOneDriveBusinessProfile](Set-CMOneDriveBusinessProfile.md)
-{{ Fill in the Synopsis }}
+Configure a OneDrive for Business profile policy.
 
 ### [Set-CMOperatingSystemImage](Set-CMOperatingSystemImage.md)
 Changes configuration settings of OS images.
@@ -3367,7 +3367,7 @@ Modify an existing Microsoft Defender Application Control policy.
 Sets a web application deployment type.
 
 ### [Set-CMWindows10EditionUpgrade](Set-CMWindows10EditionUpgrade.md)
-{{ Fill in the Synopsis }}
+Configure a Windows 10 edition upgrade policy.
 
 ### [Set-CMWindowsAppxDeploymentType](Set-CMWindowsAppxDeploymentType.md)
 Sets a Windows app package deployment type.
