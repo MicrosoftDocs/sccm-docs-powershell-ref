@@ -1,7 +1,7 @@
 ---
 title: Configuration Manager PowerShell cmdlets
 description: Manage your Configuration Manager hierarchy using Windows PowerShell. 
-ms.date: 11/30/2020
+ms.date: 12/21/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: overview
@@ -33,6 +33,24 @@ The easiest method to open PowerShell is directly from the Configuration Manager
 1. After Windows PowerShell loads, you'll see a prompt that contains your site code. For example, if the site code is "ABC", the prompt looks like: `PS ABC:\>`
 
 1. To verify it works, use the **Get-CMSite** cmdlet. This cmdlet returns information about the Configuration Manager site you're currently connected to and any child sites. For example, the site server name, installation director, site name, and version.
+
+## Common parameters
+
+All Configuration Manager cmdlets support the common PowerShell parameters:
+
+- Debug
+- ErrorAction
+- ErrorVariable
+- InformationAction
+- InformationVariable
+- OutVariable
+- OutBuffer
+- PipelineVariable
+- Verbose
+- WarningAction
+- WarningVariable
+
+For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## Import the Configuration Manager PowerShell module
 
@@ -103,7 +121,7 @@ Get-Help Get-CMDevice -Examples
 Get-Help Get-CMDevice -Parameter *
 ```
 
-For more information, see the following PowerShell blog post: [You’ve got Help!](https://devblogs.microsoft.com/powershell/youve-got-help/).
+For more information, see the following PowerShell blog post: [You've got Help!](https://devblogs.microsoft.com/powershell/youve-got-help/).
 
 ## Support for PowerShell version 7
 
@@ -146,6 +164,12 @@ When you send a frown, include the following additional information specific to 
     ```powershell
     $Error[0].Exception | Format-List * -Force
     ```
+
+## Preview release notes
+
+Starting with technical preview branch version 2012, the technical preview features article in the core documentation library includes release notes for PowerShell.
+
+- [Technical preview version 2012](/mem/configmgr/core/get-started/2020/technical-preview-2012#bkmk_powershell)
 
 ## Next steps
 

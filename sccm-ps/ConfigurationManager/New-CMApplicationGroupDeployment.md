@@ -1,6 +1,7 @@
 ---
 external help file: AdminUI.PS.Deployments.dll-Help.xml
 Module Name: ConfigurationManager
+ms.date: 12/03/2020
 online version:
 schema: 2.0.0
 ---
@@ -8,7 +9,8 @@ schema: 2.0.0
 # New-CMApplicationGroupDeployment
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Create a deployment for an application group.
 
 ## SYNTAX
 
@@ -52,21 +54,30 @@ New-CMApplicationGroupDeployment [-DeadlineDateTime <DateTime>] [-DeployAction <
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+Create a deployment for an application group. An app group contains multiple applications, and users see the group in Software Center as a single entity. For more information, see [Create application groups](/mem/configmgr/apps/deploy-use/create-app-groups).
+
+Before you can deploy an app group, you need to create it. Then you can deploy it to a user or device collection as a single deployment.
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
-```
 
-{{ Add example description here }}
+```powershell
+$collection = Get-CMCollection -Name "co1"
+
+$distributionPointName = "dp1.contoso.com"
+
+New-CMApplicationGroupDeployment -Id 16777536 -Collection $collection -DistributionPointName $distributionPointName -DistributeContent
+```
 
 ## PARAMETERS
 
 ### -AvailableDateTime
-{{ Fill AvailableDateTime Description }}
+
+Specify a **DateTime** object for when this deployment is _available_. To get this object, use the [Get-Date](/powershell/module/microsoft.powershell.utility/get-date) built-in cmdlet.
+
+Use **DeadlineDateTime** to specify the deployment assignment, or _deadline_.
 
 ```yaml
 Type: DateTime
@@ -81,7 +92,8 @@ Accept wildcard characters: False
 ```
 
 ### -Collection
-{{ Fill Collection Description }}
+
+Specify a collection object as the target for this app group deployment. To get this object, use the [Get-CMCollection](Get-CMCollection.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -96,7 +108,8 @@ Accept wildcard characters: False
 ```
 
 ### -CollectionId
-{{ Fill CollectionId Description }}
+
+Specify a collection ID as the target for this app group deployment.
 
 ```yaml
 Type: String
@@ -111,7 +124,8 @@ Accept wildcard characters: False
 ```
 
 ### -CollectionName
-{{ Fill CollectionName Description }}
+
+Specify a collection name as the target for this app group deployment.
 
 ```yaml
 Type: String
@@ -126,7 +140,8 @@ Accept wildcard characters: False
 ```
 
 ### -Comment
-{{ Fill Comment Description }}
+
+Specify an optional comment for the app group deployment.
 
 ```yaml
 Type: String
@@ -141,6 +156,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -156,7 +172,10 @@ Accept wildcard characters: False
 ```
 
 ### -DeadlineDateTime
-{{ Fill DeadlineDateTime Description }}
+
+Specify a **DateTime** object for when this deployment is assigned, also known as the _deadline_. To get this object, use the [Get-Date](/powershell/module/microsoft.powershell.utility/get-date) built-in cmdlet.
+
+Use **-AvailableDateTime** to specify when the deployment is _available_.
 
 ```yaml
 Type: DateTime
@@ -171,7 +190,8 @@ Accept wildcard characters: False
 ```
 
 ### -DeployAction
-{{ Fill DeployAction Description }}
+
+Specify whether this deployment is to install or uninstall the app group.
 
 ```yaml
 Type: DeployActionType
@@ -187,7 +207,8 @@ Accept wildcard characters: False
 ```
 
 ### -DeployPurpose
-{{ Fill DeployPurpose Description }}
+
+Specify whether this deployment is available for users to install, or it's required to install at the deadline.
 
 ```yaml
 Type: DeployPurposeType
@@ -203,7 +224,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-{{ Fill DisableWildcardHandling Description }}
+
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -218,7 +240,8 @@ Accept wildcard characters: False
 ```
 
 ### -DistributeCollectionName
-{{ Fill DistributeCollectionName Description }}
+
+The site distributes content to the distribution point groups that are associated with this collection name.
 
 ```yaml
 Type: String
@@ -233,7 +256,8 @@ Accept wildcard characters: False
 ```
 
 ### -DistributeContent
-{{ Fill DistributeContent Description }}
+
+Add this parameter to distribute the app group content when you create this deployment. Clients can't install the applications until you distribute content to distribution points that the clients can access.
 
 ```yaml
 Type: SwitchParameter
@@ -248,7 +272,8 @@ Accept wildcard characters: False
 ```
 
 ### -DistributionPointGroupName
-{{ Fill DistributionPointGroupName Description }}
+
+The site distributes content to this distribution point group.
 
 ```yaml
 Type: String
@@ -263,7 +288,8 @@ Accept wildcard characters: False
 ```
 
 ### -DistributionPointName
-{{ Fill DistributionPointName Description }}
+
+The site distributes content to this distribution point.
 
 ```yaml
 Type: String
@@ -278,7 +304,8 @@ Accept wildcard characters: False
 ```
 
 ### -EnableMomAlert
-{{ Fill EnableMomAlert Description }}
+
+Set this parameter to `$true` to enable System Center Operations Manager maintenance mode for this deployment.
 
 ```yaml
 Type: Boolean
@@ -293,7 +320,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-{{ Fill ForceWildcardHandling Description }}
+
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -308,7 +336,8 @@ Accept wildcard characters: False
 ```
 
 ### -GenerateScomAlertOnFailure
-{{ Fill GenerateScomAlertOnFailure Description }}
+
+Set this parameter to `$true` to generate a System Center Operations Manager alert when the deployment fails.
 
 ```yaml
 Type: Boolean
@@ -323,7 +352,8 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-{{ Fill Id Description }}
+
+Specify the ID of the application group to deploy.
 
 ```yaml
 Type: Int32
@@ -338,7 +368,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{ Fill InputObject Description }}
+
+Specify an object for the app group.
 
 ```yaml
 Type: IResultObject
@@ -353,7 +384,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{ Fill Name Description }}
+
+Specify a name for this app group deployment.
 
 ```yaml
 Type: String
@@ -368,7 +400,8 @@ Accept wildcard characters: False
 ```
 
 ### -OverrideServiceWindow
-{{ Fill OverrideServiceWindow Description }}
+
+Set this parameter to `$true` to install the app group outside a maintenance window.
 
 ```yaml
 Type: Boolean
@@ -383,7 +416,8 @@ Accept wildcard characters: False
 ```
 
 ### -PersistOnWriteFilterDevice
-{{ Fill PersistOnWriteFilterDevice Description }}
+
+Use this parameter to handle write filters for Windows Embedded devices. If you set it to `$true`, the device commits changes at the deadline or during a maintenance window. This action requires a restart. If you set it to `$false`, the device saves changes to the temporary overlay and commits them later.
 
 ```yaml
 Type: Boolean
@@ -398,7 +432,8 @@ Accept wildcard characters: False
 ```
 
 ### -RebootOutsideServiceWindow
-{{ Fill RebootOutsideServiceWindow Description }}
+
+Set this parameter to `$true` to allow the device to restart outside a maintenance window.
 
 ```yaml
 Type: Boolean
@@ -413,7 +448,8 @@ Accept wildcard characters: False
 ```
 
 ### -SendWakeupPacket
-{{ Fill SendWakeupPacket Description }}
+
+Indicates whether to send a wake-up packet to computers before the deployment begins. If this value is `$True`, Configuration Manager wakes a computer from sleep. If this value is `$False`, it doesn't wake computers from sleep. For computers to wake, first configure Wake On LAN.
 
 ```yaml
 Type: Boolean
@@ -428,7 +464,11 @@ Accept wildcard characters: False
 ```
 
 ### -TimeBaseOn
-{{ Fill TimeBaseOn Description }}
+
+Specify which time zone to use:
+
+- `LocalTime`: Use the local time of the device.
+- `UTC`: Use Coordinated Universal Time (UTC).
 
 ```yaml
 Type: TimeType
@@ -444,7 +484,8 @@ Accept wildcard characters: False
 ```
 
 ### -UseMeteredNetwork
-{{ Fill UseMeteredNetwork Description }}
+
+Indicates whether to allow clients on a metered internet connection to download content after the installation deadline, which might incur additional costs.
 
 ```yaml
 Type: Boolean
@@ -459,7 +500,12 @@ Accept wildcard characters: False
 ```
 
 ### -UserNotification
-{{ Fill UserNotification Description }}
+
+Use this parameter to specify the user experience for this deployment:
+
+- `DisplayAll`: Display in Software Center and show all notifications
+- `DisplaySoftwareCenterOnly`: Display in Software Center, and only show notifications of computer restarts.
+- `HideAll`: Hide in Software Center and all notifications
 
 ```yaml
 Type: UserNotificationType
@@ -475,8 +521,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+
+Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
 
 ```yaml
 Type: SwitchParameter
@@ -504,3 +550,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-CMApplicationGroupDeployment](Get-CMApplicationGroupDeployment.md)
+
+[Remove-CMApplicationGroupDeployment](Remove-CMApplicationGroupDeployment.md)
+
+[Set-CMApplicationGroupDeployment](Set-CMApplicationGroupDeployment.md)
+
+[Create application groups](/mem/configmgr/apps/deploy-use/create-app-groups)

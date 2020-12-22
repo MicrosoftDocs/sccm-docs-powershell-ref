@@ -1,6 +1,7 @@
 ---
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 Module Name: ConfigurationManager
+ms.date: 12/04/2020
 online version:
 schema: 2.0.0
 ---
@@ -8,7 +9,8 @@ schema: 2.0.0
 # New-CMOneDriveBusinessProfile
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Create a OneDrive for Business profile policy.
 
 ## SYNTAX
 
@@ -20,20 +22,25 @@ New-CMOneDriveBusinessProfile [-Description <String>] [-KnownFolderMoveOption <M
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+Create a OneDrive for Business profile policy. Use this policy to move Windows known folders to OneDrive for Business. These folders include Desktop, Documents, and Pictures. In each profile, you can specify settings for moving the Windows known folders. For more information on OneDrive for Business, see [Redirect and move Windows known folders to OneDrive](/onedrive/redirect-known-folders).
+
+For more information on this Configuration Manager policy, see [OneDrive for Business profiles](/mem/configmgr/compliance/deploy-use/onedrive-profile).
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
-```
 
-{{ Add example description here }}
+```powershell
+$plats = Get-CMSupportedPlatform -Name "*Windows*10*" -Fast
+
+New-CMOneDriveBusinessProfile -Name "ODfB policy" -SupportedPlatform $plats -O365TenantId "05d683b9-caed-4eea-b229-45f72b89ca05" -KnownFolderMoveOption SilentlyMove -ShowNotification $true -PreventRedirectKnownFolders $true
+```
 
 ## PARAMETERS
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -49,7 +56,8 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-{{ Fill Description Description }}
+
+Specify an optional description for the OneDrive for Business policy to better identify it.
 
 ```yaml
 Type: String
@@ -64,7 +72,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-{{ Fill DisableWildcardHandling Description }}
+
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -79,7 +88,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-{{ Fill ForceWildcardHandling Description }}
+
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -94,7 +104,11 @@ Accept wildcard characters: False
 ```
 
 ### -KnownFolderMoveOption
-{{ Fill KnownFolderMoveOption Description }}
+
+Specify how you want to move the known folders to OneDrive:
+
+- `PromptToMove`: Prompt users to move Windows known folders to OneDrive. The user sees a wizard to move their files. If they choose to postpone or decline moving their folders, OneDrive periodically reminds them.
+- `SilentlyMove`: Silently move Windows known folders to OneDrive. When this policy applies to the device, the OneDrive client automatically redirects the known folders to OneDrive for Business.
 
 ```yaml
 Type: MoveKnownFolderOptionType
@@ -110,7 +124,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{ Fill Name Description }}
+
+Specify a name for this OneDrive for Business policy.
 
 ```yaml
 Type: String
@@ -125,7 +140,8 @@ Accept wildcard characters: False
 ```
 
 ### -O365TenantId
-{{ Fill O365TenantId Description }}
+
+Specify your Microsoft 365 tenant ID. [Find your Microsoft 365 tenant ID](/onedrive/find-your-office-365-tenant-id).
 
 ```yaml
 Type: String
@@ -140,7 +156,8 @@ Accept wildcard characters: False
 ```
 
 ### -PreventRedirectKnownFolders
-{{ Fill PreventRedirectKnownFolders Description }}
+
+Set this parameter to `$true` to prevent users from redirecting their Windows known folders back to their PC. It disables the option in OneDrive for Business on the client for users to move these folders back to the device.
 
 ```yaml
 Type: Boolean
@@ -155,7 +172,8 @@ Accept wildcard characters: False
 ```
 
 ### -ShowNotification
-{{ Fill ShowNotification Description }}
+
+When you use `SilentlyMove` for the **KnownFolderMoveOption** parameter, if you set this parameter to `$true`, the OneDrive client notifies the user after it moves their folders.
 
 ```yaml
 Type: Boolean
@@ -170,7 +188,8 @@ Accept wildcard characters: False
 ```
 
 ### -SupportedPlatform
-{{ Fill SupportedPlatform Description }}
+
+Specify a supported platform object to which this policy is applicable. To get this object, use the [Get-CMSupportedPlatform](Get-CMSupportedPlatform.md) cmdlet.
 
 ```yaml
 Type: IResultObject[]
@@ -185,8 +204,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+
+Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
 
 ```yaml
 Type: SwitchParameter
@@ -211,6 +230,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### IResultObject#SMS_ConfigurationPolicy
 
+For more information on this return object and its properties, see [SMS_ConfigurationPolicy server WMI class](/mem/configmgr/develop/reference/compliance/sms_configurationpolicy-server-wmi-class).
+
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-CMOneDriveBusinessProfile](Get-CMOneDriveBusinessProfile.md)
+
+[Set-CMOneDriveBusinessProfile](Set-CMOneDriveBusinessProfile.md)
+
+[OneDrive for Business profiles](/mem/configmgr/compliance/deploy-use/onedrive-profile)

@@ -2,7 +2,7 @@
 title: Version 2010 release notes
 titleSuffix: Configuration Manager
 description: Release notes for the changes to PowerShell cmdlets in Configuration Manager version 2010. 
-ms.date: 11/30/2020
+ms.date: 12/21/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -75,47 +75,44 @@ You can continue to use the following existing CMG cmdlets:
 
 <!-- - [<cmdlet>](/powershell/module/configurationmanager/) -->
 
-> [!NOTE]
-> The specific articles for these new cmdlets aren't yet updated. These release notes will be updated with links to the cmdlet articles as they are ready.
-
 ### Application management
 
-- Add-CMCIDetectionMethod<!-- ](/powershell/module/configurationmanager/Add-CMCIDetectionMethod): Specify how the client detects an application. -->
-- Get-CMApplicationGroupDeployment<!-- ](/powershell/module/configurationmanager/Get-CMApplicationGroupDeployment): Get the deployment of an application group. -->
-- New-CMApplicationGroupDeployment<!-- ](/powershell/module/configurationmanager/New-CMApplicationGroupDeployment): Create a deployment for an application group. -->
-- Remove-CMApplicationGroupDeployment<!-- ](/powershell/module/configurationmanager/Remove-CMApplicationGroupDeployment): Remove the deployment of an application group. -->
-- Set-CMApplicationGroupDeployment<!-- ](/powershell/module/configurationmanager/Set-CMApplicationGroupDeployment): Configure the deployment of an application group. -->
+- [Add-CMCIDetectionMethod](/powershell/module/configurationmanager/Add-CMCIDetectionMethod): Specify how the client detects an application.
+- [Get-CMApplicationGroupDeployment](/powershell/module/configurationmanager/Get-CMApplicationGroupDeployment): Get the deployment of an application group.
+- [New-CMApplicationGroupDeployment](/powershell/module/configurationmanager/New-CMApplicationGroupDeployment): Create a deployment for an application group.
+- [Remove-CMApplicationGroupDeployment](/powershell/module/configurationmanager/Remove-CMApplicationGroupDeployment): Remove the deployment of an application group.
+- [Set-CMApplicationGroupDeployment](/powershell/module/configurationmanager/Set-CMApplicationGroupDeployment): Configure the deployment of an application group.
 
 ### Collection management
 
-- Get-CMCollectionDependency<!-- ](/powershell/module/configurationmanager/Get-CMCollectionDependency): Get the limiting collection for the target collection. -->
-- Get-CMCollectionDependent<!-- ](/powershell/module/configurationmanager/Get-CMCollectionDependent): Get a collection's dependent relationships. -->
-- Get-CMCollectionEvaluationStatus<!-- ](/powershell/module/configurationmanager/Get-CMCollectionEvaluationStatus): Get the status of collection evaluation. -->
-- Get-CMCollectionFullEvaluationStatus<!-- ](/powershell/module/configurationmanager/Get-CMCollectionFullEvaluationStatus): Get the status of full evaluation of a collection. -->
-- Get-CMCollectionIncrementalEvaluationStatus<!-- ](/powershell/module/configurationmanager/Get-CMCollectionIncrementalEvaluationStatus): Get the status of incremental evaluation of a collection. -->
-- Get-CMCollectionInfoFromEvaluationQueue<!-- ](/powershell/module/configurationmanager/Get-CMCollectionInfoFromEvaluationQueue): Get collection information from the evaluation queue. -->
-- Get-CMCollectionInfoFromFullEvaluationQueue<!-- ](/powershell/module/configurationmanager/Get-CMCollectionInfoFromFullEvaluationQueue): Get collection information from the full evaluation queue. -->
-- Get-CMCollectionInfoFromIncrementalEvaluationQueue<!-- ](/powershell/module/configurationmanager/Get-CMCollectionInfoFromIncrementalEvaluationQueue): Get collection information from the incremental evaluation queue. -->
-- Get-CMCollectionInfoFromManualEvaluationQueue<!-- ](/powershell/module/configurationmanager/Get-CMCollectionInfoFromManualEvaluationQueue): Get collection information from the manual evaluation queue. -->
-- Get-CMCollectionInfoFromNewEvaluationQueue<!-- ](/powershell/module/configurationmanager/Get-CMCollectionInfoFromNewEvaluationQueue): Get collection information from the new evaluation queue. -->
+- [Get-CMCollectionDependency](/powershell/module/configurationmanager/Get-CMCollectionDependency): Get the limiting collection for the target collection.
+- [Get-CMCollectionDependent](/powershell/module/configurationmanager/Get-CMCollectionDependent): Get a collection's dependent relationships.
+- [Get-CMCollectionEvaluationStatus](/powershell/module/configurationmanager/Get-CMCollectionEvaluationStatus): Get the status of collection evaluation.
+- [Get-CMCollectionFullEvaluationStatus](/powershell/module/configurationmanager/Get-CMCollectionFullEvaluationStatus): Get the full evaluation status for a collection.
+- [Get-CMCollectionIncrementalEvaluationStatus](/powershell/module/configurationmanager/Get-CMCollectionIncrementalEvaluationStatus): Get the incremental evaluation status for a collection.
+- [Get-CMCollectionInfoFromEvaluationQueue](/powershell/module/configurationmanager/Get-CMCollectionInfoFromEvaluationQueue): Get collection information from the evaluation queue.
+- [Get-CMCollectionInfoFromFullEvaluationQueue](/powershell/module/configurationmanager/Get-CMCollectionInfoFromFullEvaluationQueue): Get collection information from the full evaluation queue.
+- [Get-CMCollectionInfoFromIncrementalEvaluationQueue](/powershell/module/configurationmanager/Get-CMCollectionInfoFromIncrementalEvaluationQueue): Get collection information from the incremental evaluation queue.
+- [Get-CMCollectionInfoFromManualEvaluationQueue](/powershell/module/configurationmanager/Get-CMCollectionInfoFromManualEvaluationQueue): Get collection information from the manual evaluation queue.
+- [Get-CMCollectionInfoFromNewEvaluationQueue](/powershell/module/configurationmanager/Get-CMCollectionInfoFromNewEvaluationQueue): Get collection information from the new evaluation queue.
 
 ### Windows 10 edition upgrade
 
-- New-CMWindows10EditionUpgrade<!-- ](/powershell/module/configurationmanager/new-CMWindows10EditionUpgrade): Create a Windows 10 edition upgrade policy. -->
-- Remove-CMWindows10EditionUpgrade<!-- ](/powershell/module/configurationmanager/Remove-CMWindows10EditionUpgrade): Remove a Windows 10 edition upgrade policy. -->
-- Set-CMWindows10EditionUpgrade<!-- ](/powershell/module/configurationmanager/Set-CMWindows10EditionUpgrade): Configure a Windows 10 edition upgrade policy. -->
+- [New-CMWindows10EditionUpgrade](/powershell/module/configurationmanager/new-CMWindows10EditionUpgrade): Create a Windows 10 edition upgrade policy.
+- [Remove-CMWindows10EditionUpgrade](/powershell/module/configurationmanager/Remove-CMWindows10EditionUpgrade): Remove a Windows 10 edition upgrade policy.
+- [Set-CMWindows10EditionUpgrade](/powershell/module/configurationmanager/Set-CMWindows10EditionUpgrade): Configure a Windows 10 edition upgrade policy.
 
 ### Microsoft Edge browser profiles
 
-- Get-CMMicrosoftEdgeBrowserProfiles<!-- ](/powershell/module/configurationmanager/Get-CMMicrosoftEdgeBrowserProfiles): Get a policy for a Microsoft Edge Legacy browser profile. -->
-- New-CMMicrosoftEdgeBrowserProfiles<!-- ](/powershell/module/configurationmanager/New-CMMicrosoftEdgeBrowserProfiles): Create a policy to manage Microsoft Edge Legacy browser settings. -->
-- Set-CMMicrosoftEdgeBrowserProfiles<!-- ](/powershell/module/configurationmanager/Set-CMMicrosoftEdgeBrowserProfiles): Configure a policy for a Microsoft Edge Legacy browser profile. -->
+- [Get-CMMicrosoftEdgeBrowserProfiles](/powershell/module/configurationmanager/Get-CMMicrosoftEdgeBrowserProfiles): Get a policy for a Microsoft Edge Legacy browser profile.
+- [New-CMMicrosoftEdgeBrowserProfiles](/powershell/module/configurationmanager/New-CMMicrosoftEdgeBrowserProfiles): Create a policy to manage Microsoft Edge Legacy browser settings.
+- [Set-CMMicrosoftEdgeBrowserProfiles](/powershell/module/configurationmanager/Set-CMMicrosoftEdgeBrowserProfiles): Configure a policy for a Microsoft Edge Legacy browser profile.
 
 ### OneDrive for Business profiles
 
-- Get-CMOneDriveBusinessProfile<!-- ](/powershell/module/configurationmanager/Get-CMOneDriveBusinessProfile): Get a policy for a OneDrive for Business profile. -->
-- New-CMOneDriveBusinessProfile<!-- ](/powershell/module/configurationmanager/New-CMOneDriveBusinessProfile): Create a OneDrive for Business profile policy. -->
-- Set-CMOneDriveBusinessProfile<!-- ](/powershell/module/configurationmanager/Set-CMOneDriveBusinessProfile): Configure a OneDrive for Business profile policy. -->
+- [Get-CMOneDriveBusinessProfile](/powershell/module/configurationmanager/Get-CMOneDriveBusinessProfile): Get a policy for a OneDrive for Business profile.
+- [New-CMOneDriveBusinessProfile](/powershell/module/configurationmanager/New-CMOneDriveBusinessProfile): Create a OneDrive for Business profile policy.
+- [Set-CMOneDriveBusinessProfile](/powershell/module/configurationmanager/Set-CMOneDriveBusinessProfile): Configure a OneDrive for Business profile policy.
 
 ## Deprecated and removed cmdlets
 
@@ -480,11 +477,9 @@ Fixed an issue for parameter **EnableQuickFormat**.
 
 For more information, see the following articles:
 
-- [Set-CMApplicationAutoPhasedDeployment](/powershell/module/configurationmanager/Set-CMApplicationAutoPhasedDeployment)
-- [Set-CMSoftwareUpdateAutoPhasedDeployment](/powershell/module/configurationmanager/Set-CMSoftwareUpdateAutoPhasedDeployment)
-- [Set-CMSoftwareUpdateManualPhasedDeployment](/powershell/module/configurationmanager/Set-CMSoftwareUpdateManualPhasedDeployment)
-- [Set-CMTaskSequenceAutoPhasedDeployment](/powershell/module/configurationmanager/Set-CMTaskSequenceAutoPhasedDeployment)
-- [Set-CMTaskSequenceManualPhasedDeployment](/powershell/module/configurationmanager/Set-CMTaskSequenceManualPhasedDeployment)
+- [Set-CMApplicationPhasedDeployment](/powershell/module/configurationmanager/Set-CMApplicationPhasedDeployment)
+- [Set-CMSoftwareUpdatePhasedDeployment](/powershell/module/configurationmanager/Set-CMSoftwareUpdatePhasedDeployment)
+- [Set-CMTaskSequencePhasedDeployment](/powershell/module/configurationmanager/Set-CMTaskSequencePhasedDeployment)
 
 **Bugs that were fixed**
 

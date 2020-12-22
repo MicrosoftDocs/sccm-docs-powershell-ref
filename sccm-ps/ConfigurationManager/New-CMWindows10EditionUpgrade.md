@@ -1,6 +1,7 @@
 ---
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 Module Name: ConfigurationManager
+ms.date: 12/03/2020
 online version:
 schema: 2.0.0
 ---
@@ -8,7 +9,8 @@ schema: 2.0.0
 # New-CMWindows10EditionUpgrade
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Create a Windows 10 edition upgrade policy.
 
 ## SYNTAX
 
@@ -19,20 +21,21 @@ New-CMWindows10EditionUpgrade [-Description <String>] [-EditionUpgradeWithClient
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+Create a Windows 10 edition upgrade policy. Specify a product key or license information to upgrade Windows 10 to a different edition. For more information, see [Upgrade Windows devices to a new edition with Configuration Manager](/mem/configmgr/compliance/deploy-use/upgrade-windows-version).
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
-```
 
-{{ Add example description here }}
+```powershell
+New-CMWindows10EditionUpgrade -Name "NewEditionPolicyByKey" -WindowsEdition Windows10Enterprise -ProductKey "123ab-cd456-789ef-2j3k4-0ghi1"
+```
 
 ## PARAMETERS
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -48,7 +51,8 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-{{ Fill Description Description }}
+
+Specify an optional description for the policy.
 
 ```yaml
 Type: String
@@ -63,7 +67,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-{{ Fill DisableWildcardHandling Description }}
+
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -78,7 +83,11 @@ Accept wildcard characters: False
 ```
 
 ### -EditionUpgradeWithClient
-{{ Fill EditionUpgradeWithClient Description }}
+
+Use this parameter to specify the type of edition upgrade to create:
+
+- `$true`: The policy is for devices managed with the Configuration Manager client. Use the **ProductKey** parameter to specify the license key.
+- `$false`: This policy is for devices running Windows 10 Mobile that you manage with on-premises MDM. Use the **LicenseFile** parameter to provide the XML license file.
 
 ```yaml
 Type: Boolean
@@ -93,7 +102,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-{{ Fill ForceWildcardHandling Description }}
+
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -108,7 +118,8 @@ Accept wildcard characters: False
 ```
 
 ### -LicenseFile
-{{ Fill LicenseFile Description }}
+
+When you set the **EditionUpgradeWithClient** parameter to `$false`, use this parameter to specify the path to the XML license file. Get the license file from the Microsoft Volume Licensing Service Center (VLSC). This file contains the licensing information for the new version of Windows on all devices you target with the policy. Download the ISO file for **Windows 10 Mobile Enterprise**, which includes the licensing XML.
 
 ```yaml
 Type: String
@@ -123,7 +134,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{ Fill Name Description }}
+
+Specify a name for this Windows 10 edition upgrade policy.
 
 ```yaml
 Type: String
@@ -138,7 +150,8 @@ Accept wildcard characters: False
 ```
 
 ### -ProductKey
-{{ Fill ProductKey Description }}
+
+When you set the **EditionUpgradeWithClient** parameter to `$true`, use this parameter to specify a valid product key for the new version of Windows. This product key can be a multiple activation key (MAK), or a generic volume licensing key (GVLK). A GVLK is also referred to as a key management service (KMS) client setup key. For more information, see [Plan for volume activation](/windows/deployment/volume-activation/plan-for-volume-activation-client). For a list of KMS client setup keys, see [Appendix A](/windows-server/get-started/kmsclientkeys) of the Windows Server activation guide.
 
 ```yaml
 Type: String
@@ -153,8 +166,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+
+Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
 
 ```yaml
 Type: SwitchParameter
@@ -169,7 +182,8 @@ Accept wildcard characters: False
 ```
 
 ### -WindowsEdition
-{{ Fill WindowsEdition Description }}
+
+Specify the target edition of Windows 10 that corresponds with the **LicenseFile** or **ProductKey**.
 
 ```yaml
 Type: WindowsEditionType
@@ -195,6 +209,16 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### IResultObject#SMS_ConfigurationPolicy
 
+For more information on this return object and its properties, see [SMS_ConfigurationPolicy server WMI class](/mem/configmgr/develop/reference/compliance/sms_configurationpolicy-server-wmi-class).
+
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-CMWindowsEditionUpgradeConfigurationItem](Get-CMWindowsEditionUpgradeConfigurationItem.md)
+
+[Remove-CMWindows10EditionUpgrade](Remove-CMWindows10EditionUpgrade.md)
+
+[Set-CMWindows10EditionUpgrade](Set-CMWindows10EditionUpgrade.md)
+
+[Upgrade Windows devices to a new edition with Configuration Manager](/mem/configmgr/compliance/deploy-use/upgrade-windows-version)

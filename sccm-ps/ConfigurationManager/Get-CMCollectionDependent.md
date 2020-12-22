@@ -1,6 +1,7 @@
 ---
 external help file: AdminUI.PS.Collections.dll-Help.xml
 Module Name: ConfigurationManager
+ms.date: 12/21/2020
 online version:
 schema: 2.0.0
 ---
@@ -8,7 +9,8 @@ schema: 2.0.0
 # Get-CMCollectionDependent
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Get a collection's dependent relationships.
 
 ## SYNTAX
 
@@ -30,21 +32,32 @@ Get-CMCollectionDependent -InputObject <IResultObject> [-DisableWildcardHandling
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+This cmdlet gets the target collection's dependent relationships. The target collection is a limiting collection for one or more other collections.
+
+For more information, see [View collection relationships](/mem/configmgr/core/clients/manage/collections/manage-collections#view-collection-relationships).
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Get the collection relationships by pipeline object
+
 ```powershell
-PS C:\> {{ Add example code here }}
+Get-CMCollection -Name "All Users" | Get-CMCollectionDependent
 ```
 
-{{ Add example description here }}
+### Example 2: Get the collection relationships by ID
+
+This example is functionally the same as the first, where the built-in **All Users** collection typically has ID **SMS00002**.
+
+```powershell
+Get-CMCollectionDependent -Id "SMS00002"
+```
 
 ## PARAMETERS
 
 ### -DisableWildcardHandling
-{{ Fill DisableWildcardHandling Description }}
+
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -59,7 +72,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-{{ Fill ForceWildcardHandling Description }}
+
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -74,7 +88,8 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-{{ Fill Id Description }}
+
+Specify the ID of a collection to query. For example, `"SMS00002"`.
 
 ```yaml
 Type: String
@@ -89,7 +104,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{ Fill InputObject Description }}
+
+Specify a collection object to query. To get this object, use the [Get-CMCollection](Get-CMCollection.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -104,7 +120,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{ Fill Name Description }}
+
+Specify a collection name to query. For example, `"All Users"`.
 
 ```yaml
 Type: String
@@ -128,6 +145,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-CMCollectionDependency](Get-CMCollectionDependency.md)
+
+[View collection relationships](/mem/configmgr/core/clients/manage/collections/manage-collections#view-collection-relationships)

@@ -1,6 +1,7 @@
 ---
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 Module Name: ConfigurationManager
+ms.date: 12/04/2020
 online version:
 schema: 2.0.0
 ---
@@ -8,7 +9,8 @@ schema: 2.0.0
 # New-CMMicrosoftEdgeBrowserProfiles
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Create a policy to manage Microsoft Edge Legacy browser settings.
 
 ## SYNTAX
 
@@ -27,21 +29,26 @@ New-CMMicrosoftEdgeBrowserProfiles [-AllowAddressBarDropDown <EdgeBrowserSetting
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+Create a policy to manage Microsoft Edge Legacy browser settings. This policy only applies to clients on Windows 10, version 1703 or later, and Microsoft Edge Legacy version 45 and earlier. For more information, see [Configure Microsoft Edge Legacy settings in Configuration Manager](/mem/configmgr/compliance/deploy-use/browser-profiles). This article also includes more details on the specific policy settings.
+
+For more information on managing Microsoft Edge version 77 or later with Configuration Manager, see [Deploy Microsoft Edge, version 77 and later](/mem/configmgr/apps/deploy-use/deploy-edge). For more information on configuring policies for Microsoft Edge version 77 or later, see [Microsoft Edge - Policies](/DeployEdge/microsoft-edge-policies).
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
-```
 
-{{ Add example description here }}
+```powershell
+$os1 = Get-CMSupportedPlatform -Name "*Windows*10*" -Fast
+
+New-CMMicrosoftEdgeBrowserProfiles -Name "Edge1" -SupportedPlatform $os1 -AllowAddressBarDropDown Allow -AllowAutoFill Allow -AllowCookies Allow -AllowDeveloperTools Allow -AllowDoNotTrack Allow -AllowExtensions Allow -AllowPasswordManager Allow -AllowPopups Allow -AllowSearchSuggestions Allow -AllowSmartScreen Allow -ClearBrowsingDataOnExit Allow -Description "Edge1" -PreventOverrideFiles Allow -PreventPromptOverride Allow -SendIntranetTrafficToIE Allow -SetEdgeBrowserAsDefault Configured -SyncFavoritesIEAndEdge Allow
+```
 
 ## PARAMETERS
 
 ### -AllowAddressBarDropDown
-{{ Fill AllowAddressBarDropDown Description }}
+
+Configure the setting to **Allow address bar drop-down**.
 
 ```yaml
 Type: EdgeBrowserSettingType
@@ -57,7 +64,8 @@ Accept wildcard characters: False
 ```
 
 ### -AllowAutoFill
-{{ Fill AllowAutoFill Description }}
+
+Configure the setting to **Allow autofill**.
 
 ```yaml
 Type: EdgeBrowserSettingType
@@ -73,7 +81,8 @@ Accept wildcard characters: False
 ```
 
 ### -AllowCookies
-{{ Fill AllowCookies Description }}
+
+Configure the setting to **Allow cookies**.
 
 ```yaml
 Type: EdgeBrowserSettingType
@@ -89,7 +98,8 @@ Accept wildcard characters: False
 ```
 
 ### -AllowDeveloperTools
-{{ Fill AllowDeveloperTools Description }}
+
+Configure the setting to **Allow Developer Tools**.
 
 ```yaml
 Type: EdgeBrowserSettingType
@@ -105,7 +115,8 @@ Accept wildcard characters: False
 ```
 
 ### -AllowDoNotTrack
-{{ Fill AllowDoNotTrack Description }}
+
+Configure the setting to **Allow Do Not Track headers**.
 
 ```yaml
 Type: EdgeBrowserSettingType
@@ -121,7 +132,8 @@ Accept wildcard characters: False
 ```
 
 ### -AllowExtensions
-{{ Fill AllowExtensions Description }}
+
+Configure the setting to **Allow extensions**.
 
 ```yaml
 Type: EdgeBrowserSettingType
@@ -137,7 +149,8 @@ Accept wildcard characters: False
 ```
 
 ### -AllowPasswordManager
-{{ Fill AllowPasswordManager Description }}
+
+Configure the setting to **Allow password manager**.
 
 ```yaml
 Type: EdgeBrowserSettingType
@@ -153,7 +166,8 @@ Accept wildcard characters: False
 ```
 
 ### -AllowPopups
-{{ Fill AllowPopups Description }}
+
+Configure the setting to **Allow pop-up blocker**.
 
 ```yaml
 Type: EdgeBrowserSettingType
@@ -169,7 +183,8 @@ Accept wildcard characters: False
 ```
 
 ### -AllowSearchSuggestions
-{{ Fill AllowSearchSuggestions Description }}
+
+Configure the setting to **Allow search suggestions in address bar**.
 
 ```yaml
 Type: EdgeBrowserSettingType
@@ -185,7 +200,8 @@ Accept wildcard characters: False
 ```
 
 ### -AllowSmartScreen
-{{ Fill AllowSmartScreen Description }}
+
+Configure the Microsoft Defender SmartScreen setting to **Allow SmartScreen**.
 
 ```yaml
 Type: EdgeBrowserSettingType
@@ -201,7 +217,8 @@ Accept wildcard characters: False
 ```
 
 ### -ClearBrowsingDataOnExit
-{{ Fill ClearBrowsingDataOnExit Description }}
+
+Configure the setting to **Allow clear browsing data on exit**.
 
 ```yaml
 Type: EdgeBrowserSettingType
@@ -217,6 +234,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -232,7 +250,8 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-{{ Fill Description Description }}
+
+Specify an optional description for the browser profile policy.
 
 ```yaml
 Type: String
@@ -247,7 +266,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-{{ Fill DisableWildcardHandling Description }}
+
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -262,7 +282,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-{{ Fill ForceWildcardHandling Description }}
+
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -277,7 +298,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{ Fill Name Description }}
+
+Specify a name for the browser profile policy.
 
 ```yaml
 Type: String
@@ -292,7 +314,8 @@ Accept wildcard characters: False
 ```
 
 ### -PreventOverrideFiles
-{{ Fill PreventOverrideFiles Description }}
+
+Configure the Microsoft Defender SmartScreen setting: **Users can override SmartScreen prompt for files**.
 
 ```yaml
 Type: EdgeBrowserSettingType
@@ -308,7 +331,8 @@ Accept wildcard characters: False
 ```
 
 ### -PreventPromptOverride
-{{ Fill PreventPromptOverride Description }}
+
+Configure the Microsoft Defender SmartScreen setting: **Users can override SmartScreen prompt for sites**.
 
 ```yaml
 Type: EdgeBrowserSettingType
@@ -324,7 +348,8 @@ Accept wildcard characters: False
 ```
 
 ### -SendIntranetTrafficToIE
-{{ Fill SendIntranetTrafficToIE Description }}
+
+Configure the setting to **Allow send intranet traffic to Internet Explorer**.
 
 ```yaml
 Type: EdgeBrowserSettingType
@@ -340,7 +365,8 @@ Accept wildcard characters: False
 ```
 
 ### -SetEdgeBrowserAsDefault
-{{ Fill SetEdgeBrowserAsDefault Description }}
+
+Configure the setting to **Set Microsoft Edge browser as default**. If you configure this setting, Configuration Manager configures the Windows 10 default app setting for web browser to Microsoft Edge Legacy.
 
 ```yaml
 Type: EdgeBrowserAsDefaultSettingType
@@ -356,7 +382,8 @@ Accept wildcard characters: False
 ```
 
 ### -SupportedPlatform
-{{ Fill SupportedPlatform Description }}
+
+Specify a supported platform object to which this policy is applicable. To get this object, use the [Get-CMSupportedPlatform](Get-CMSupportedPlatform.md) cmdlet.
 
 ```yaml
 Type: IResultObject[]
@@ -371,7 +398,8 @@ Accept wildcard characters: False
 ```
 
 ### -SyncFavoritesIEAndEdge
-{{ Fill SyncFavoritesIEAndEdge Description }}
+
+Configure the setting to **Allow sync favorites between Microsoft browsers**.
 
 ```yaml
 Type: EdgeBrowserSettingType
@@ -387,8 +415,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+
+Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
 
 ```yaml
 Type: SwitchParameter
@@ -413,6 +441,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### IResultObject#SMS_ConfigurationPolicy
 
+For more information on this return object and its properties, see [SMS_ConfigurationPolicy server WMI class](/mem/configmgr/develop/reference/compliance/sms_configurationpolicy-server-wmi-class).
+
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-CMMicrosoftEdgeBrowserProfiles](Get-CMMicrosoftEdgeBrowserProfiles.md)
+
+[Set-CMMicrosoftEdgeBrowserProfiles](Set-CMMicrosoftEdgeBrowserProfiles.md)
+
+[Configure Microsoft Edge Legacy settings in Configuration Manager](/mem/configmgr/compliance/deploy-use/browser-profiles)
