@@ -574,28 +574,28 @@ Get the status of collection evaluation.
 Gets a collection exclude membership rule.
 
 ### [Get-CMCollectionFullEvaluationStatus](Get-CMCollectionFullEvaluationStatus.md)
-{{ Fill in the Synopsis }}
+Get the full evaluation status for a collection.
 
 ### [Get-CMCollectionIncludeMembershipRule](Get-CMCollectionIncludeMembershipRule.md)
 Gets a collection include membership rule.
 
 ### [Get-CMCollectionIncrementalEvaluationStatus](Get-CMCollectionIncrementalEvaluationStatus.md)
-{{ Fill in the Synopsis }}
+Get the incremental evaluation status for a collection.
 
 ### [Get-CMCollectionInfoFromEvaluationQueue](Get-CMCollectionInfoFromEvaluationQueue.md)
 Get collection information from the evaluation queue.
 
 ### [Get-CMCollectionInfoFromFullEvaluationQueue](Get-CMCollectionInfoFromFullEvaluationQueue.md)
-{{ Fill in the Synopsis }}
+Get collection information from the full evaluation queue.
 
 ### [Get-CMCollectionInfoFromIncrementalEvaluationQueue](Get-CMCollectionInfoFromIncrementalEvaluationQueue.md)
-{{ Fill in the Synopsis }}
+Get collection information from the incremental evaluation queue.
 
 ### [Get-CMCollectionInfoFromManualEvaluationQueue](Get-CMCollectionInfoFromManualEvaluationQueue.md)
-{{ Fill in the Synopsis }}
+Get collection information from the manual evaluation queue.
 
 ### [Get-CMCollectionInfoFromNewEvaluationQueue](Get-CMCollectionInfoFromNewEvaluationQueue.md)
-{{ Fill in the Synopsis }}
+Get collection information from the new evaluation queue.
 
 ### [Get-CMCollectionMember](Get-CMCollectionMember.md)
 Get members of a collection.
