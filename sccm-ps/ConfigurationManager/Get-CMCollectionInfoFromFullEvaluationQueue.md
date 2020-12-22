@@ -1,6 +1,7 @@
 ---
 external help file: AdminUI.PS.Collections-help.xml
 Module Name: ConfigurationManager
+ms.date: 12/21/2020
 online version:
 schema: 2.0.0
 ---
@@ -8,7 +9,8 @@ schema: 2.0.0
 # Get-CMCollectionInfoFromFullEvaluationQueue
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Get collection information from the full evaluation queue.
 
 ## SYNTAX
 
@@ -28,21 +30,25 @@ Get-CMCollectionInfoFromFullEvaluationQueue -InputObject <IResultObject> [<Commo
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+Get collection information from the full evaluation queue. For more information, see [How to view collection evaluation](/mem/configmgr/core/clients/manage/collections/collection-evaluation-view).
+
+> [!TIP]
+> The collection evaluation process happens on primary sites, not on the central administration site (CAS). Use this cmdlet when connected to a primary site.
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
-```
 
-{{ Add example description here }}
+```powershell
+Get-CMCollectionInfoFromFullEvaluationQueue -Id "SMS00002"
+```
 
 ## PARAMETERS
 
 ### -Id
-{{ Fill Id Description }}
+
+Specify the ID of a collection to query. For example, `"SMS00002"`.
 
 ```yaml
 Type: String
@@ -57,7 +63,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{ Fill InputObject Description }}
+
+Specify a collection object to query. To get this object, use the [Get-CMCollection](Get-CMCollection.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -72,7 +79,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{ Fill Name Description }}
+
+Specify the name of a collection to query. For example, `"All Users"`.
 
 ```yaml
 Type: String
@@ -96,6 +104,25 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-CMCollectionEvaluationStatus](Get-CMCollectionEvaluationStatus.md)
+
+[Get-CMCollectionFullEvaluationStatus](Get-CMCollectionFullEvaluationStatus.md)
+
+[Get-CMCollectionIncrementalEvaluationStatus](Get-CMCollectionIncrementalEvaluationStatus.md)
+
+[Get-CMCollectionInfoFromEvaluationQueue](Get-CMCollectionInfoFromEvaluationQueue.md)
+
+[Get-CMCollectionInfoFromIncrementalEvaluationQueue](Get-CMCollectionInfoFromIncrementalEvaluationQueue.md)
+
+[Get-CMCollectionInfoFromManualEvaluationQueue](Get-CMCollectionInfoFromManualEvaluationQueue.md)
+
+[Get-CMCollectionInfoFromNewEvaluationQueue](Get-CMCollectionInfoFromNewEvaluationQueue.md)
+
+[How to view collection evaluation](/mem/configmgr/core/clients/manage/collections/collection-evaluation-view)
+
+[Collection evaluation in Configuration Manager](/mem/configmgr/core/clients/manage/collections/collection-evaluation)
