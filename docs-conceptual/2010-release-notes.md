@@ -2,7 +2,7 @@
 title: Version 2010 release notes
 titleSuffix: Configuration Manager
 description: Release notes for the changes to PowerShell cmdlets in Configuration Manager version 2010. 
-ms.date: 11/30/2020
+ms.date: 12/21/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -74,9 +74,6 @@ You can continue to use the following existing CMG cmdlets:
 ## New cmdlets
 
 <!-- - [<cmdlet>](/powershell/module/configurationmanager/) -->
-
-> [!NOTE]
-> The specific articles for these new cmdlets aren't yet updated. These release notes will be updated with links to the cmdlet articles as they are ready.
 
 ### Application management
 
