@@ -430,6 +430,8 @@ Accept wildcard characters: False
 
 When you set **CreateAlertBaseOnPercentSuccess** to `$true`, use this parameter to specify a **DateTime** object. Configuration Manager creates a deployment alert when the threshold is lower than the **SuccessParameterValue** after this date.
 
+To get this object, use the [Get-Date](/powershell/module/microsoft.powershell.utility/get-date) built-in cmdlet.
+
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
@@ -656,6 +658,12 @@ For more information on this return object and its properties, see [SMS_Applicat
 
 [Get-CMApplicationDeployment](Get-CMApplicationDeployment.md)
 
+[New-CMApplicationDeployment](New-CMApplicationDeployment.md)
+
+[Remove-CMApplicationDeployment](Remove-CMApplicationDeployment.md)
+
 [Start-CMApplicationDeployment](Start-CMApplicationDeployment.md)
 
 [Start-CMApplicationDeploymentSimulation](Start-CMApplicationDeploymentSimulation.md)
+
+[Deploy applications with Configuration Manager](/mem/configmgr/apps/deploy-use/deploy-applications)
