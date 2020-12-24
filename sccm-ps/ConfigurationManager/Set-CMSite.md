@@ -2,7 +2,7 @@
 description: Configure a Configuration Manager site.
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 08/06/2020
+ms.date: 12/23/2020
 schema: 2.0.0
 title: Set-CMSite
 ---
@@ -121,6 +121,14 @@ This command changes the warning threshold for free disk space on the site datab
 
 ```powershell
 Set-CMSite -SiteCode "XYZ" -FreeSpaceThresholdWarningGB 15
+```
+
+### Example 3: Promote a site server to active mode
+
+This command first uses the **Get-CMSite** cmdlet to get the **ADC** site. It then passes that object through the pipeline to the **Set-CMSite** cmdlet, which promotes the site server in passive mode to be the active site server.<!-- 7648486 -->
+
+```powershell
+Get-CMSite -SiteCode "ADC" | Set-CMSite -PromotePassiveSiteToActive
 ```
 
 ## PARAMETERS
@@ -514,7 +522,7 @@ Accept wildcard characters: False
 
 ### -PromotePassiveSiteToActive
 
-Starting in version 2002, use this parameter to promote a passive site server to the active site server.
+Starting in version 2002, use this parameter to promote a site server in passive mode to the active site server. For more information, see [Site server high availability in Configuration Manager](/mem/configmgr/core/servers/deploy/configure/site-server-high-availability).
 
 ```yaml
 Type: SwitchParameter
