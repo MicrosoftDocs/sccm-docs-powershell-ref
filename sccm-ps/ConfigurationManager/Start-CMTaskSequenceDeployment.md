@@ -1,8 +1,8 @@
 ---
-description: Starts a task sequence deployment in Configuration Manager.
+description: Start a task sequence deployment
 external help file: AdminUI.PS.Osd.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 10/28/2020
+ms.date: 12/23/2020
 schema: 2.0.0
 title: Start-CMTaskSequenceDeployment
 ---
@@ -11,7 +11,7 @@ title: Start-CMTaskSequenceDeployment
 
 ## SYNOPSIS
 
-Starts a task sequence deployment in Configuration Manager.
+Start a task sequence deployment.
 
 ## SYNTAX
 
@@ -51,38 +51,36 @@ Start-CMTaskSequenceDeployment [-AlertDateTime <DateTime>] [-AlertDay <DateTime>
 
 ## DESCRIPTION
 
-The **Start-CMTaskSequenceDeployment** cmdlet starts a task sequence deployment.
-A task sequence deployment assigns a task sequence to a collection of computers.
+Use this cmdlet to start a task sequence deployment. A task sequence deployment assigns a task sequence to a collection of computers. For more information, see [Deploy a task sequence in Configuration Manager](/mem/configmgr/osd/deploy-use/deploy-a-task-sequence).
 
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
-### Example 1: Start a task sequence deployment
-
-```powershell
-PS XYZ:\> Start-CMTaskSequenceDeployment -Name "Task Sequence 1333" -CollectionName "Collection 01"
-```
+### Example 1: Start a task sequence deployment with default options
 
 This command starts a task sequence deployment by using the name of the task sequence deployment and the name of a collection.
 
-### Example 2: Start a task sequence deployment for devices
-
 ```powershell
-PS XYZ:\> Start-CMTaskSequenceDeployment -Name "Task Sequence 1333" -CollectionName "Collection 02" -Comment "Task sequence test" -DeployPurpose Required -SendWakeUpPacket $True -UseMeteredNetwork $True -ScheduleEvent AsSoonAsPossible -RerunBehavior NeverRerunDeployedProgram -AllowUsersRunIndependently $True -ShowTaskSequenceProgress $False -SoftwareInstallation $True -SystemRestart $True -PersistOnWriteFilterDevice $False -AllowFallback $True -CreatAlertBaseOnPercentSuccess $True -CreatAlertBaseOnPercentFailure $True -DeploymentOption DownloadAllContentLocallyBeforeStartingTaskSequence -AllowSharedContent $True -InternetOption $True
+Get-CMTaskSequence -Name "Upgrade Windows 10" | Start-CMTaskSequenceDeployment -CollectionName "Collection 01"
 ```
 
-This command starts a task sequence deployment for mobile devices.
-The command does not allow the use of the *PersistOnWriteFilterDevice* parameter.
+### Example 2: Start a task sequence deployment with configured options
+
+This command starts a task sequence deployment with several configured options.
+
+```powershell
+Start-CMTaskSequenceDeployment -TaskSequencePackageId "XYZ00003" -CollectionName "Collection 02" -Comment "Task sequence test" -DeployPurpose Required -SendWakeUpPacket $True -UseMeteredNetwork $True -ScheduleEvent AsSoonAsPossible -RerunBehavior NeverRerunDeployedProgram -RunFromSoftwareCenter $True -ShowTaskSequenceProgress $False -SoftwareInstallation $True -SystemRestart $True -PersistOnWriteFilterDevice $False -AllowFallback $True -DeploymentOption DownloadAllContentLocallyBeforeStartingTaskSequence -AllowSharedContent $True -InternetOption $True
+```
 
 ## PARAMETERS
 
 ### -AlertDateTime
 
-Specifies a day and time to notify clients of a new deployment.
+When you configure the deployment to create an alert for successful deployment, use this parameter to specify a **DateTime** object. Configuration Manager creates a deployment alert when the threshold is lower than the **PercentSuccess** after this date.
+
+To get this object, use the [Get-Date](/powershell/module/microsoft.powershell.utility/get-date) built-in cmdlet.
 
 ```yaml
 Type: DateTime
@@ -98,7 +96,7 @@ Accept wildcard characters: False
 
 ### -AlertDay
 
-This parameter is deprecated. Use *AlertDateTime*.
+This parameter is deprecated. Use **AlertDateTime**.
 
 ```yaml
 Type: DateTime
@@ -114,7 +112,7 @@ Accept wildcard characters: False
 
 ### -AlertTime
 
-This parameter is deprecated. Use *AlertDateTime*.
+This parameter is deprecated. Use **AlertDateTime**.
 
 ```yaml
 Type: DateTime
@@ -130,7 +128,7 @@ Accept wildcard characters: False
 
 ### -AllowFallback
 
-Indicates whether to allow a fallback status point for clients.
+Allow clients to use distribution points from the default site boundary group.
 
 ```yaml
 Type: Boolean
@@ -146,7 +144,7 @@ Accept wildcard characters: False
 
 ### -AllowSharedContent
 
-Indicates whether to allow shared content, such as a shared network folder.
+Allow clients to use distribution points from a neighbor boundary group.
 
 ```yaml
 Type: Boolean
@@ -162,15 +160,10 @@ Accept wildcard characters: False
 
 ### -Availability
 
-Specifies the collections that receive this deployment. Valid values for this parameter are:
+Specify whether to make this task sequence available to Configuration Manager clients, and whether it's available to run when you deploy an OS by using boot media, prestaged media, or PXE.
 
-- Clients
-- ClientsMediaAndPxe
-- MediaAndPxe
-- MediaAndPxeHidden
-
-If you specify Clients for the for this parameter, the default value for the *DeploymentOption* parameter is DownloadAllContentLocallyBeforeStartingTaskSequence.
-If you specify ClientsMediaAndPxe, MediaAndPxe, or MediaAndPxeHidden for this parameter, the default value for the *DeploymentOption* parameter is DownloadContentLocallyWhenNeededByRunningTaskSequence.
+If you specify `Clients`, the default value for the **DeploymentOption** parameter is `DownloadAllContentLocallyBeforeStartingTaskSequence`.
+If you specify `ClientsMediaAndPxe`, `MediaAndPxe`, or `MediaAndPxeHidden`, the default value for the **DeploymentOption** parameter is `DownloadContentLocallyWhenNeededByRunningTaskSequence`.
 
 ```yaml
 Type: MakeAvailableToType
@@ -187,7 +180,7 @@ Accept wildcard characters: False
 
 ### -Collection
 
-Specifies a collection object. To obtain a collection object, use the **Get-CMCollection** cmdlet.
+Specify a collection object to which this task sequence is deployed. To get this object, use the [Get-CMCollection](Get-CMCollection.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -203,7 +196,7 @@ Accept wildcard characters: False
 
 ### -CollectionId
 
-Specifies the ID of a collection designated to receive a task sequence deployment.
+Specify the ID of the collection to which this task sequence is deployed.
 
 ```yaml
 Type: String
@@ -219,8 +212,7 @@ Accept wildcard characters: False
 
 ### -CollectionName
 
-Specifies a name of a collection designated to receive a task sequence deployment.
-A collection is a group of client computers.
+Specify the name of the collection to which this task sequence is deployed.
 
 ```yaml
 Type: String
@@ -236,7 +228,7 @@ Accept wildcard characters: False
 
 ### -Comment
 
-Specifies a comment for the task sequence deployment.
+Specify an optional comment for the task sequence deployment.
 
 ```yaml
 Type: String
@@ -268,12 +260,7 @@ Accept wildcard characters: False
 
 ### -DeployPurpose
 
-Specifies a task sequence as either required or available.
-A required task sequence installation is mandatory.
-The acceptable values for this parameter are:
-
-- Available
-- Required
+Specify whether this deployment is available for users to install, or it's required to install at the deadline.
 
 ```yaml
 Type: DeployPurposeType
@@ -290,8 +277,9 @@ Accept wildcard characters: False
 
 ### -DeploymentAvailableDateTime
 
-Specifies a date and time when a deployment becomes available to clients.
-By default, the deployment becomes available immediately.
+Specify a **DateTime** object for when this deployment is _available_. To get this object, use the [Get-Date](/powershell/module/microsoft.powershell.utility/get-date) built-in cmdlet.
+
+Use **DeploymentExpireDateTime** to specify when the deployment _expires_, and **Schedule** to specify the deployment assignment, or _deadline_.
 
 ```yaml
 Type: DateTime
@@ -307,7 +295,7 @@ Accept wildcard characters: False
 
 ### -DeploymentAvailableDay
 
-This parameter is deprecated. Use *DeploymentAvailableDateTime*.
+This parameter is deprecated. Use **DeploymentAvailableDateTime**.
 
 ```yaml
 Type: DateTime
@@ -323,7 +311,7 @@ Accept wildcard characters: False
 
 ### -DeploymentAvailableTime
 
-This parameter is deprecated. Use *DeploymentAvailableDateTime*.
+This parameter is deprecated. Use **DeploymentAvailableDateTime**.
 
 ```yaml
 Type: DateTime
@@ -339,8 +327,9 @@ Accept wildcard characters: False
 
 ### -DeploymentExpireDateTime
 
-Specifies a date and time when a deployment expires.
-By default, a deployment never expires.
+Specify a **DateTime** object for when this deployment _expires_. To get this object, use the [Get-Date](/powershell/module/microsoft.powershell.utility/get-date) built-in cmdlet.
+
+Use **DeploymentAvailableDateTime** to specify when the deployment is _available_, and **Schedule** to specify the deployment assignment, or _deadline_.
 
 ```yaml
 Type: DateTime
@@ -356,7 +345,7 @@ Accept wildcard characters: False
 
 ### -DeploymentExpireDay
 
-This parameter is deprecated. Use *DeploymentExpireDateTime*.
+This parameter is deprecated. Use **DeploymentExpireDateTime**.
 
 ```yaml
 Type: DateTime
@@ -372,7 +361,7 @@ Accept wildcard characters: False
 
 ### -DeploymentExpireTime
 
-This parameter is deprecated. Use *DeploymentExpireDateTime*.
+This parameter is deprecated. Use **DeploymentExpireDateTime**.
 
 ```yaml
 Type: DateTime
@@ -388,16 +377,10 @@ Accept wildcard characters: False
 
 ### -DeploymentOption
 
-Specifies if clients download all content before starting the task sequence, or download content as needed by the running task sequence.
-By default, clients download content as needed.
-The acceptable values for this parameter are:
+Specify how clients interact with the distribution points to get content for the task sequence. Not all options are available in specific scenarios. For more information, see [Deploy a task sequence - Deployment options](/mem/configmgr/osd/deploy-use/deploy-a-task-sequence#bkmk_deploy-options).
 
-- DownloadAllContentLocallyBeforeStartingTaskSequence
-- DownloadContentLocallyWhenNeededByRunningTaskSequence
-- RunFromDistributionPoint
-
-If you specify Clients for the *Availability* parameter, the default value for this parameter is DownloadAllContentLocallyBeforeStartingTaskSequence.
-If you specify ClientsMediaAndPxe, MediaAndPxe, or MediaAndPxeHidden for the *Availability* parameter, the default value for this parameter is DownloadContentLocallyWhenNeededByRunningTaskSequence.
+If you specify `Clients` for the **Availability** parameter, the default value for this parameter is `DownloadAllContentLocallyBeforeStartingTaskSequence`.
+If you specify `ClientsMediaAndPxe`, `MediaAndPxe`, or `MediaAndPxeHidden` for the **Availability** parameter, the default value for this parameter is `DownloadContentLocallyWhenNeededByRunningTaskSequence`.
 
 ```yaml
 Type: DeploymentOptionType
@@ -414,7 +397,7 @@ Accept wildcard characters: False
 
 ### -DisableWildcardHandling
 
-DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -430,7 +413,7 @@ Accept wildcard characters: False
 
 ### -ForceWildcardHandling
 
-ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -446,8 +429,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 
-Specifies a task sequence deployment object.
-To obtain a task sequence object, use the [Get-CMTaskSequenceDeployment](Get-CMTaskSequenceDeployment.md) cmdlet.
+Specify a task sequence deployment object. To get this object, use the [Get-CMTaskSequenceDeployment](Get-CMTaskSequenceDeployment.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -463,7 +445,7 @@ Accept wildcard characters: False
 
 ### -InternetOption
 
-Indicates whether the task sequence runs on clients connecting over the Internet.
+Indicates whether the task sequence runs on clients connecting over the internet.
 
 ```yaml
 Type: Boolean
@@ -479,8 +461,7 @@ Accept wildcard characters: False
 
 ### -PassThru
 
-Returns the current working object.
-By default, this cmdlet does not generate any output.
+Add this parameter to return an object that represents the item with which you're working. By default, this cmdlet may not generate any output.
 
 ```yaml
 Type: SwitchParameter
@@ -496,7 +477,7 @@ Accept wildcard characters: False
 
 ### -PercentFailure
 
-Specifies a percentage for failed task sequence deployment.
+If you create an alert for failed deployments, the site generates an alert when the percentage of failed deployments is higher than this number.
 
 ```yaml
 Type: Int32
@@ -512,7 +493,7 @@ Accept wildcard characters: False
 
 ### -PercentSuccess
 
-Specifies a percentage for successful task sequence deployment.
+If you create an alert for successful deployments, the site generates an alert when the percentage of successful deployments is lower than this number.
 
 ```yaml
 Type: Int32
@@ -528,7 +509,10 @@ Accept wildcard characters: False
 
 ### -PersistOnWriteFilterDevice
 
-Indicates whether to install a task sequence on the temporary overlay and commit changes later, or commit the changes at an installation deadline or a maintenance window.
+Configure how the client handles the write filter on Windows Embedded devices.
+
+- `$true`: Commit changes at the deadline or during a maintenance window. A restart is required.
+- `$false`: Apply content on the overlay and commit later.
 
 ```yaml
 Type: Boolean
@@ -544,14 +528,7 @@ Accept wildcard characters: False
 
 ### -RerunBehavior
 
-Specifies that a task sequence will be rerun on a computer if it has previously been run before the scheduled mandatory time.
-By default, the task sequence is always rerun.
-The acceptable values for this parameter are:
-
-- AlwaysRerunProgram
-- NeverRerunDeployedProgram
-- RerunIfFailedPreviousAttempt
-- RerunIfSucceededOnPreviousAttempt
+Specify whether the task sequence reruns on a computer if it previously ran before the scheduled mandatory time. By default, the task sequence always reruns.
 
 ```yaml
 Type: RerunBehaviorType
@@ -568,7 +545,7 @@ Accept wildcard characters: False
 
 ### -RunFromSoftwareCenter
 
-Indicates whether to allow users to independently run the program, regardless of its assignment status.
+Allow users to run the program independently of assignments.
 
 ```yaml
 Type: Boolean
@@ -584,7 +561,11 @@ Accept wildcard characters: False
 
 ### -Schedule
 
-Specifies an array of schedule objects.
+Use this parameter to specify the deployment assignment, or _deadline_.
+
+Use **AvailableDateTime** to specify when the deployment is _available_, and **DeadlineDateTime** to specify when the deployment _expires_.
+
+Specify an array of schedule objects. A schedule object defines the mandatory assignment schedule for a deployment. To create a schedule object, use the [New-CMSchedule](New-CMSchedule.md) cmdlet.
 
 ```yaml
 Type: IResultObject[]
@@ -601,11 +582,6 @@ Accept wildcard characters: False
 ### -ScheduleEvent
 
 Specifies an array of events that determine when the task sequence deployment runs.
-The acceptable values for this parameter are:
-
-- AsSoonAsPossible
-- LogOff
-- LogOn
 
 ```yaml
 Type: ScheduleEventType[]
@@ -622,11 +598,7 @@ Accept wildcard characters: False
 
 ### -SendWakeupPacket
 
-Indicates whether to send a wake-up packet to computers before the deployment begins.
-If this value is $True, Configuration Manager wakes a computer from sleep.
-If this value is $False, it does not wake computers from sleep.
-For computers to wake, you must first configure Wake On LAN.
-The *Purpose* parameter must be set to Required.
+Indicates whether to send a wake-up packet to computers before the deployment begins. If this value is `$True`, Configuration Manager wakes a computer from sleep. If this value is `$False`, it doesn't wake computers from sleep. For computers to wake, first configure Wake On LAN.
 
 ```yaml
 Type: Boolean
@@ -658,7 +630,7 @@ Accept wildcard characters: False
 
 ### -SoftwareInstallation
 
-Indicates whether to allow the application to install, even if the installation occurs outside of a maintenance window.
+When the installation deadline is reached, set this parameter to `$true` to allow the task sequence to install outside the maintenance window.
 
 ```yaml
 Type: Boolean
@@ -674,7 +646,7 @@ Accept wildcard characters: False
 
 ### -SystemRestart
 
-Indicates whether to allow an advertised program to restart the system, even if the restart occurs outside of a maintenance window.
+When the installation deadline is reached, set this parameter to `$true` to allow system restart if necessary outside the maintenance window.
 
 ```yaml
 Type: Boolean
@@ -690,7 +662,7 @@ Accept wildcard characters: False
 
 ### -TaskSequencePackageId
 
-Specifies an array of IDs for a task sequence package.
+Specify the ID of the task sequence to deploy.
 
 ```yaml
 Type: String
@@ -706,7 +678,7 @@ Accept wildcard characters: False
 
 ### -UseMeteredNetwork
 
-Indicates whether to allow clients to connect to a metered network to download a program.
+Indicates whether to allow clients on a metered internet connection to download content after the installation deadline, which might incur extra costs.
 
 ```yaml
 Type: Boolean
@@ -722,8 +694,7 @@ Accept wildcard characters: False
 
 ### -UseUtcForAvailableSchedule
 
-Indicates whether client computers use UTC time to determine the availability of a program.
-UTC time makes the task sequence available at the same time for all computers.
+Indicates whether client computers use UTC time to determine the availability of a program. UTC time makes the task sequence available at the same time for all computers.
 
 ```yaml
 Type: Boolean
@@ -739,8 +710,7 @@ Accept wildcard characters: False
 
 ### -UseUtcForExpireSchedule
 
-Indicates whether client computers use UTC time to determine the expiration of a program.
-UTC time makes the task sequence available at the same time for all computers.
+Indicates whether client computers use UTC time to determine the expiration of a program. UTC time makes the task sequence available at the same time for all computers.
 
 ```yaml
 Type: Boolean
@@ -756,8 +726,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
 
 ```yaml
 Type: SwitchParameter
@@ -782,6 +751,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### IResultObject#SMS_Advertisement
 
+For more information on this return object and its properties, see [SMS_Advertisement server WMI class](/mem/configmgr/develop/reference/core/servers/configure/sms_advertisement-server-wmi-class).
+
 ## NOTES
 
 ## RELATED LINKS
@@ -790,3 +761,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-CMTaskSequenceDeployment](./Get-CMTaskSequenceDeployment.md)
 [Set-CMTaskSequenceDeployment](./Set-CMTaskSequenceDeployment.md)
 [Remove-CMTaskSequenceDeployment](./Remove-CMTaskSequenceDeployment.md)
+
+[Deploy a task sequence in Configuration Manager](/mem/configmgr/osd/deploy-use/deploy-a-task-sequence)
