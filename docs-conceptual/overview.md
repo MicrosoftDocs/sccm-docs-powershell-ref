@@ -34,24 +34,6 @@ The easiest method to open PowerShell is directly from the Configuration Manager
 
 1. To verify it works, use the **Get-CMSite** cmdlet. This cmdlet returns information about the Configuration Manager site you're currently connected to and any child sites. For example, the site server name, installation director, site name, and version.
 
-## Common parameters
-
-All Configuration Manager cmdlets support the common PowerShell parameters:
-
-- Debug
-- ErrorAction
-- ErrorVariable
-- InformationAction
-- InformationVariable
-- OutVariable
-- OutBuffer
-- PipelineVariable
-- Verbose
-- WarningAction
-- WarningVariable
-
-For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
-
 ## Import the Configuration Manager PowerShell module
 
 Connect to Configuration Manager from an existing Windows PowerShell session by manually loading the Configuration Manager module.
@@ -122,6 +104,24 @@ Get-Help Get-CMDevice -Parameter *
 ```
 
 For more information, see the following PowerShell blog post: [You've got Help!](https://devblogs.microsoft.com/powershell/youve-got-help/).
+
+## Common parameters
+
+All Configuration Manager cmdlets support the common PowerShell parameters:
+
+- Debug
+- ErrorAction
+- ErrorVariable
+- InformationAction
+- InformationVariable
+- OutVariable
+- OutBuffer
+- PipelineVariable
+- Verbose
+- WarningAction
+- WarningVariable
+
+For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## Support for PowerShell version 7
 
