@@ -1,8 +1,8 @@
 ---
-description: Modifies a site system server.
+description: Configure the site system server role.
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/07/2019
+ms.date: 12/28/2020
 schema: 2.0.0
 title: Set-CMSiteSystemServer
 ---
@@ -10,7 +10,8 @@ title: Set-CMSiteSystemServer
 # Set-CMSiteSystemServer
 
 ## SYNOPSIS
-Modifies a site system server.
+
+Configure the site system server role.
 
 ## SYNTAX
 
@@ -31,34 +32,45 @@ Set-CMSiteSystemServer [-AccountName <String>] [-EnableProxy <Boolean>] [-FdmOpe
 ```
 
 ## DESCRIPTION
-The **Set-CMSiteSystemServer** cmdlet modifies a site system server in Configuration Manager.
+
+Use this cmdlet to configure the site system server role. A server with the **Site system** role hosts one or more other roles for a Configuration Manager site.
+
+To configure specific site system roles, use one of the following cmdlets:
+
+- [Set-CMAssetIntelligenceSynchronizationPoint](Set-CMAssetIntelligenceSynchronizationPoint.md)
+- [Set-CMCertificateRegistrationPoint](Set-CMCertificateRegistrationPoint.md)
+- [Set-CMCloudManagementGatewayConnectionPoint](Set-CMCloudManagementGatewayConnectionPoint.md)
+- [Set-CMDataWarehouseServicePoint](Set-CMDataWarehouseServicePoint.md)
+- [Set-CMDistributionPoint](Set-CMDistributionPoint.md)
+- [Set-CMEndpointProtectionPoint](Set-CMEndpointProtectionPoint.md)
+- [Set-CMFallbackStatusPoint](Set-CMFallbackStatusPoint.md)
+- [Set-CMManagementPoint](Set-CMManagementPoint.md)
+- [Set-CMMulticastServicePoint](Set-CMMulticastServicePoint.md)
+- [Set-CMReportingServicePoint](Set-CMReportingServicePoint.md)
+- [Set-CMServiceConnectionPoint](Set-CMServiceConnectionPoint.md)
+- [Set-CMSoftwareUpdatePoint](Set-CMSoftwareUpdatePoint.md)
+- [Set-CMStateMigrationPoint](Set-CMStateMigrationPoint.md)
 
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
-### Example 1: Modify a site system server by using the pipeline operator
-```
-PS XYZ:\> Get-CMSiteSystemServer -Name "Server2.contoso.com" -SiteCode MP5 | Set-CMSiteSystemServer -SiteCode MP5 -PublicFqdn "Internetsrv2New.contoso.com" -FdmOperation $False -AccountName "contoso\administrator" -EnableProxy $True -ProxyServerName "ProxyServer1" -ProxyServerPort 80 -ProxyAccessAccount (Get-CMAccount "contoso\administrator") -PassThru
-```
+### Example 1: Modify a site system server
 
-This command gets the site system server object named Server2.contoso.com with the site code MP5 and uses the pipeline operator to pass the object to **Set-CMSiteSystemServer**.
-**Set-CMSiteSystemServer** adds an FQDN to the site system server to use on the Internet, and enables a proxy server named ProxyServer1 to connect to the Internet using port 80.
+This command first uses the **Get-CMSiteSystemServer** cmdlet to get the site system server object for **Server2.contoso.com**. It then uses the pipeline operator to pass the object to **Set-CMSiteSystemServer**, which configures the server. It adds an FQDN to the server, and enables it to use a proxy server named **ProxyServer1** to connect to the internet using port 80.
 
-### Example 2: Modify a site system server
+```powershell
+Get-CMSiteSystemServer -Name "Server2.contoso.com" -SiteCode "MP5" | Set-CMSiteSystemServer -PublicFqdn "Internetsrv2New.contoso.com" -FdmOperation $False -AccountName "contoso\cmsvc" -EnableProxy $True -ProxyServerName "ProxyServer1" -ProxyServerPort 80 -ProxyAccessAccount (Get-CMAccount "contoso\proxysvc") -PassThru
 ```
-PS XYZ:\> Set-CMSiteSystemServer -SiteSystemServerName "Server2.contoso.com" -SiteCode "MP5" -PublicFqdn "Internetsrv2New.contoso.com" -FdmOperation $False -AccountName "contoso\administrator" -EnableProxy $True -ProxyServerName "ProxyServer1" -ProxyServerPort 80 -ProxyAccessAccount (Get-CMAccount "contoso\administrator") -PassThru
-```
-
-This command gets the site system server object named Server2.contoso.com with the site code MP5, adds an FQDN to the site system server to use on the Internet, and enables a proxy server named ProxyServer1 to connect to the Internet using port 80.
 
 ## PARAMETERS
 
 ### -AccountName
-Specifies the account name for the site system.
+
+Specify the account for installing this site system, and the account used for all connections from the site server. For more information, see [Site system installation account](/mem/configmgr/core/plan-design/hierarchy/accounts#site-system-installation-account).
+
+To use the site server's computer account, use the **UseSiteServerAccount** parameter.
 
 ```yaml
 Type: String
@@ -73,6 +85,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -88,7 +101,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
+
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -103,7 +117,14 @@ Accept wildcard characters: False
 ```
 
 ### -EnableProxy
-Indicates whether to enable a proxy server to use when the server synchronizes information from the Internet.
+
+Set this parameter to `$true` for the site system to use a proxy server when it synchronizes information from the internet.
+
+If you enable this option, also configure the following parameters:
+
+- ProxyServerName
+- ProxyServerPort
+- ProxyAccessAccount
 
 ```yaml
 Type: Boolean
@@ -118,7 +139,8 @@ Accept wildcard characters: False
 ```
 
 ### -FdmOperation
-Indicates whether the site system server is required to initiate connections to this site system.
+
+Set this parameter to `$true` to require the site server to initiate connections to this site system.
 
 ```yaml
 Type: Boolean
@@ -133,7 +155,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
+
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -148,8 +171,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies a site system server object.
-To obtain a site system server object, use the [Get-CMSiteSystemServer](Get-CMSiteSystemServer.md) cmdlet.
+
+Specify a site system server object to configure. To get this object, use the [Get-CMSiteSystemServer](Get-CMSiteSystemServer.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -164,8 +187,8 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Returns the current working object.
-By default, this cmdlet does not generate any output.
+
+Add this parameter to return an object that represents the item with which you're working. By default, this cmdlet may not generate any output.
 
 ```yaml
 Type: SwitchParameter
@@ -180,8 +203,8 @@ Accept wildcard characters: False
 ```
 
 ### -ProxyAccessAccount
-Specifies the credentials to use to authenticate with the proxy server.
-Do not use user principal name (UPN) format.
+
+If you set **EnableProxy** to `$true`, use this parameter to specify an account object. The site system uses these credentials to authenticate to the proxy server. To get this account object, use the [Get-CMAccount](Get-CMAccount.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -196,8 +219,12 @@ Accept wildcard characters: False
 ```
 
 ### -ProxyServerName
-Specifies the name of a proxy server.
-Use a fully qualified domain name (FQDN), short name, or IPv4/IPv6 address.
+
+If you set **EnableProxy** to `$true`, use this parameter to specify the name of the proxy server. This parameter accepts the following types of values:
+
+- Fully qualified domain name (FQDN)
+- Hostname
+- IPv4 or IPv6 address
 
 ```yaml
 Type: String
@@ -212,7 +239,8 @@ Accept wildcard characters: False
 ```
 
 ### -ProxyServerPort
-Specifies the proxy server port number to use when connecting to the Internet.
+
+If you set **EnableProxy** to `$true`, use this parameter to specify the proxy server port number.
 
 ```yaml
 Type: UInt32
@@ -227,7 +255,8 @@ Accept wildcard characters: False
 ```
 
 ### -PublicFqdn
-Specifies a FQDN for the site system for use on the Internet.
+
+Specify an FQDN for the site system to use on the internet.
 
 ```yaml
 Type: String
@@ -242,7 +271,8 @@ Accept wildcard characters: False
 ```
 
 ### -SiteCode
-Specifies the site code of a Configuration Manager site.
+
+Specify the site code for this site system.
 
 ```yaml
 Type: String
@@ -257,7 +287,8 @@ Accept wildcard characters: False
 ```
 
 ### -SiteSystemServerName
-Specifies a server name for the site system.
+
+Specify the name of the site system server to configure.
 
 ```yaml
 Type: String
@@ -272,7 +303,10 @@ Accept wildcard characters: False
 ```
 
 ### -UseSiteServerAccount
-Indicates that the cmdlet uses the site server's computer account to install the site system.
+
+Add this parameter to use the site server's computer account to install this site system. For more information, see [Site system installation account](/mem/configmgr/core/plan-design/hierarchy/accounts#site-system-installation-account).
+
+To use another account, use the **UseSiteServerAccount** parameter.
 
 ```yaml
 Type: SwitchParameter
@@ -287,8 +321,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+
+Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
 
 ```yaml
 Type: SwitchParameter
@@ -313,11 +347,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### IResultObject#SMS_SCI_SysResUse
 
+For more information on this return object and its properties, see [SMS_SCI_SysResUse server WMI class](/mem/configmgr/develop/reference/core/servers/configure/sms_sci_sysresuse-server-wmi-class).
+
 ## NOTES
 
 ## RELATED LINKS
-
-[Get-CMAccount](Get-CMAccount.md)
 
 [Get-CMSiteSystemServer](Get-CMSiteSystemServer.md)
 

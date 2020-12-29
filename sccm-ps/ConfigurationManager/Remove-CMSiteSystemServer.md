@@ -1,8 +1,8 @@
 ---
-description: Removes a site system server.
+description: Remove the site system server role.
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/07/2019
+ms.date: 12/28/2020
 schema: 2.0.0
 title: Remove-CMSiteSystemServer
 ---
@@ -10,7 +10,8 @@ title: Remove-CMSiteSystemServer
 # Remove-CMSiteSystemServer
 
 ## SYNOPSIS
-Removes a site system server.
+
+Remove the site system server role.
 
 ## SYNTAX
 
@@ -27,33 +28,44 @@ Remove-CMSiteSystemServer [-Force] [-SiteCode <String>] [-SiteSystemServerName] 
 ```
 
 ## DESCRIPTION
-The **Remove-CMSiteSystemServer** cmdlet removes a site system server from Configuration Manager.
-If the site system server has other site system roles besides the site system role, this cmdlet will fail.
+
+Use this cmdlet to remove the site system server role. A server with the **Site system** role hosts one or more other roles for a Configuration Manager site.
+
+If the server has other site system roles besides the site system role, this cmdlet fails.
+
+To remove other roles, use one of the following cmdlets:
+
+- [Remove-CMAssetIntelligenceSynchronizationPoint](Remove-CMAssetIntelligenceSynchronizationPoint.md)
+- [Remove-CMCertificateRegistrationPoint](Remove-CMCertificateRegistrationPoint.md)
+- [Remove-CMCloudManagementGatewayConnectionPoint](Remove-CMCloudManagementGatewayConnectionPoint.md)
+- [Remove-CMDataWarehouseServicePoint](Remove-CMDataWarehouseServicePoint.md)
+- [Remove-CMDistributionPoint](Remove-CMDistributionPoint.md)
+- [Remove-CMEndpointProtectionPoint](Remove-CMEndpointProtectionPoint.md)
+- [Remove-CMFallbackStatusPoint](Remove-CMFallbackStatusPoint.md)
+- [Remove-CMManagementPoint](Remove-CMManagementPoint.md)
+- [Remove-CMMulticastServicePoint](Remove-CMMulticastServicePoint.md)
+- [Remove-CMReportingServicePoint](Remove-CMReportingServicePoint.md)
+- [Remove-CMServiceConnectionPoint](Remove-CMServiceConnectionPoint.md)
+- [Remove-CMSoftwareUpdatePoint](Remove-CMSoftwareUpdatePoint.md)
+- [Remove-CMStateMigrationPoint](Remove-CMStateMigrationPoint.md)
 
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
-### Example 1: Remove a site system server by using the pipeline
-```
-PS XYZ:\> Get-CMSiteSystemServer -SiteSystemServerName "Server2.contoso.com" -SiteCode "MP5" | Remove-CMSiteSystemServer -Force
-```
+### Example 1: Remove a site system server
 
-This command gets the site system server object named Server2.contoso.com with the site code MP5 and uses the pipeline operator to pass the object to **Remove-CMSiteSystemServer**, which removes the site system server object.
+This command first uses the **Get-CMSiteSystemServer** cmdlet to get the site system server object for **Server2.contoso.com** in the site **MP5**. It then uses the pipeline operator to pass the object to **Remove-CMSiteSystemServer**, which removes the site system server role.
 
-### Example 2: Remove a site system server
+```powershell
+Get-CMSiteSystemServer -SiteSystemServerName "Server2.contoso.com" -SiteCode "MP5" | Remove-CMSiteSystemServer -Force
 ```
-PS XYZ:\> Remove-CMSiteSystemServer -SiteSystemServerName "Server2.contoso.com" -SiteCode "MP5" -Force
-```
-
-This command removes the site system server named Server2.contoso.com with the site code MP5.
 
 ## PARAMETERS
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -69,7 +81,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
+
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -84,7 +97,8 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Forces the command to run without asking for user confirmation.
+
+Run the command without asking for confirmation.
 
 ```yaml
 Type: SwitchParameter
@@ -99,7 +113,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
+
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -114,8 +129,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies a site system server object.
-To obtain a site system server object, use the [Get-CMSiteSystemServer](Get-CMSiteSystemServer.md) cmdlet.
+
+Specify a site system server object to remove. To get this object, use the [Get-CMSiteSystemServer](Get-CMSiteSystemServer.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -130,7 +145,8 @@ Accept wildcard characters: False
 ```
 
 ### -SiteCode
-Specifies a site code of a Configuration Manager site.
+
+Specify the Configuration Manager site code.
 
 ```yaml
 Type: String
@@ -145,7 +161,8 @@ Accept wildcard characters: False
 ```
 
 ### -SiteSystemServerName
-Specifies a server name for the site system.
+
+Specify the name of the server with the site system role to remove.
 
 ```yaml
 Type: String
@@ -160,8 +177,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+
+Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
 
 ```yaml
 Type: SwitchParameter
@@ -184,8 +201,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-###  
-
 ## NOTES
 
 ## RELATED LINKS
@@ -195,5 +210,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-CMSiteSystemServer](New-CMSiteSystemServer.md)
 
 [Set-CMSiteSystemServer](Set-CMSiteSystemServer.md)
-
-
