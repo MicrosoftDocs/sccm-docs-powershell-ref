@@ -47,9 +47,9 @@ Use this cmdlet to configure the relationship between boundary groups. For more 
 
 ## EXAMPLES
 
-This example first uses the **Get-CMBoundaryGroupRelationship** cmdlet to get a boundary group relationship object. It then passes that object to the **Set-CMBoundaryGroupRelationship** cmdlet to change the fallback times. It changes the fallback for software update points to 120 minutes and for management points to immediate (0 minutes).
-
 ### Example 1
+
+This example first uses the **Get-CMBoundaryGroupRelationship** cmdlet to get a boundary group relationship object. It then passes that object to the **Set-CMBoundaryGroupRelationship** cmdlet to change the fallback times. It changes the fallback for software update points to 120 minutes and for management points to immediate (0 minutes).
 
 ```powershell
 Get-CMBoundaryGroupRelationship -DestinationGroupName "Swindon" -SourceGroupName "London" | Set-CMBoundaryGroupRelationship -FallbackSupMinutes 120 -FallbackMPMinutes 0
