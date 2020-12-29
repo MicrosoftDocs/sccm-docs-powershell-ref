@@ -1,8 +1,8 @@
 ---
-description: Copies content to distribution points.
+description: Distribute content to distribution points.
 external help file: AdminUI.PS.Sum.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/07/2019
+ms.date: 12/29/2020
 schema: 2.0.0
 title: Start-CMContentDistribution
 ---
@@ -10,7 +10,8 @@ title: Start-CMContentDistribution
 # Start-CMContentDistribution
 
 ## SYNOPSIS
-Copies content to distribution points.
+
+Distribute content to distribution points.
 
 ## SYNTAX
 
@@ -150,85 +151,44 @@ Start-CMContentDistribution [-CollectionName <String[]>] [-DistributionPointGrou
 ```
 
 ## DESCRIPTION
-The **Start-CMContentDistribution** cmdlet copies content from the content library on a site server to the content library on the distribution points.
 
-You can use this cmdlet to distribute several types of content, including application deployment types, packages, deployment packages, driver packages, operating system images, operating system installers, boot images, and task sequences.
+Use this cmdlet to distribute content from the content library on the site server to distribution points.
+
+You can use this cmdlet to distribute content for the following deployable objects:
+
+- Applications
+- Legacy packages
+- Software update deployment packages
+- Driver packages
+- OS images
+- OS upgrade packages
+- Boot images
+- Content referenced by task sequences
+
 You can distribute the content to distribution points, distribution point groups, or collections associated with distribution point groups.
 
+For more information, see [Deploy and manage content in Configuration Manager](/mem/configmgr/core/servers/deploy/configure/deploy-and-manage-content).
+
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
 ### Example 1: Distribute a boot image
-```
-PS XYZ:\> Start-CMContentDistribution -BootImageId "CM200004" -CollectionName "All Systems" -DistributionPointName "CMDIV-TSQA04.CORP.CONTOSO.COM" -DistributionPointGroupName "DistPtGroup02"
-```
 
-This command distributes the boot image that has the ID CM200004.
-The command distributes the boot image to the collection named All Systems, the distribution point named CMDIV-TSQA04.CORP.CONTOSO.COM, and the distribution point group named DistPtGroup02.
+This command distributes the boot image with ID **CM200004** to the distribution point named **CMDIV-TSQA04.CORP.CONTOSO.COM**.
 
-### Example 2: Distribute a task sequence
+```powershell
+Start-CMContentDistribution -BootImageId "CM200004" -DistributionPointName "CMDIV-TSQA04.CORP.CONTOSO.COM"
 ```
-PS XYZ:\> Start-CMContentDistribution -TaskSequenceId "CM200007" -CollectionName "All Systems" -DistributionPointName "CMDIV-TSQA04.CORP.CONTOSO.COM"
-```
-
-This command distributes the task sequence that has the ID CM200007 to the collection named All Systems and the distribution point named CMDIV-TSQA04.CORP.CONTOSO.COM.
-
-### Example 3: Distribute an application
-```
-PS XYZ:\> Start-CMContentDistribution -ApplicationName "Dict.app" -CollectionName "All Systems" -DistributionPointName "CMDIV-TSQA04.CORP.CONTOSO.COM" -DistributionPointGroupName "DistPtGroup02"
-```
-
-This command distributes the application named Dict.app.
-The command distributes the application to the collection named All Systems, the distribution point named CMDIV-TSQA04.CORP.CONTOSO.COM, and the distribution point group named DistPtGroup02.
-
-### Example 4: Distribute a package
-```
-PS XYZ:\> Start-CMContentDistribution -PackageId "CM200001" -CollectionName "All Systems" -DistributionPointName "CMDIV-TSQA04.CORP.CONTOSO.COM" -DistributionPointGroupName "DistPtGroup02"
-```
-
-This command distributes the package that has the ID CM200001.
-The command distributes the package to the collection named All Systems, the distribution point named CMDIV-TSQA04.CORP.CONTOSO.COM, and the distribution point group named DistPtGroup02.
-
-### Example 5: Distribute a deployment package
-```
-PS XYZ:\> Start-CMContentDistribution -DeploymentPackageName "DivDeployPkg01" -CollectionName "All Systems" -DistributionPointName "CMDIV-TSQA04.CORP.CONTOSO.COM" -DistributionPointGroupName "DistPtGroup02"
-```
-
-This command distributes the deployment package named DivDeployPkg01.
-The command distributes the deployment package to the collection named All Systems, the distribution point named CMDIV-TSQA04.CORP.CONTOSO.COM, and the distribution point group named DistPtGroup02.
-
-### Example 6: Distribute a driver package
-```
-PS XYZ:\> Start-CMContentDistribution -DriverPackageName "DrvPkg02" -CollectionName "All Systems" -DistributionPointName "CMDIV-TSQA04.CORP.CONTOSO.COM" -DistributionPointGroupName "DistPtGroup02"
-```
-
-This command distributes the driver package named DrvPkg02.
-The command distributes the driver package to the collection named All Systems, the distribution point named CMDIV-TSQA04.CORP.CONTOSO.COM, and the distribution point group named DistPtGroup02.
-
-### Example 7: Distribute an operating system image
-```
-PS XYZ:\> Start-CMContentDistribution -OperatingSystemImageId "CM200013" -CollectionName "All Systems" -DistributionPointName "CMDIV-TSQA04.CORP.CONTOSO.COM -DistributionPointGroupName "DistPtGroup02"
-```
-
-This command distributes the operating system image that has the ID CM200013.
-The command distributes the operating system image to the collection named All Systems, the distribution point named CMDIV-TSQA04.CORP.CONTOSO.COM, and the distribution point group named DistPtGroup02.
-
-### Example 8: Distribute an operating system installer
-```
-PS XYZ:\> Start-CMContentDistribution -OperatingSystemInstallerId "CM200017" -CollectionName "All Systems" -DistributionPointName CMDIV- TSQA04.CORP.CONTOSO.COM -DistributionPointGroupName "DistPtGroup02"
-```
-
-This command distributes the operating system installer that has the ID CM200017.
-The command distributes the operating system installer to the collection named All Systems, the distribution point named CMDIV-TSQA04.CORP.CONTOSO.COM, and the distribution point group named DistPtGroup02.
 
 ## PARAMETERS
 
 ### -ApplicationId
-Specifies an array of application IDs.
+
+Specify an array of application IDs to distribute. These IDs are GUIDs as strings.
+
+By default, Configuration Manager also distributes the content for dependent applications. To disable this behavior, use the **DisableContentDependencyDetection** parameter.
 
 ```yaml
 Type: String[]
@@ -243,7 +203,10 @@ Accept wildcard characters: False
 ```
 
 ### -ApplicationName
-Specifies an array of application names.
+
+Specify an array of application names to distribute.
+
+By default, Configuration Manager also distributes the content for dependent applications. To disable this behavior, use the **DisableContentDependencyDetection** parameter.
 
 ```yaml
 Type: String[]
@@ -258,7 +221,8 @@ Accept wildcard characters: False
 ```
 
 ### -BootImageId
-Specifies an array of IDs of boot images.
+
+Specify an array of boot image IDs to distribute. For example, `"XYZ00015"`.
 
 ```yaml
 Type: String[]
@@ -273,7 +237,8 @@ Accept wildcard characters: False
 ```
 
 ### -BootImageName
-Specifies an array of names of boot images.
+
+Specify an array of boot image names to distribute.
 
 ```yaml
 Type: String[]
@@ -288,7 +253,8 @@ Accept wildcard characters: False
 ```
 
 ### -CollectionName
-Specifies the name of a Configuration Manager collection.
+
+Specify an array of Configuration Manager collection names. Use this collection to target the distribution points to which to distribute the content.
 
 ```yaml
 Type: String[]
@@ -303,6 +269,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -318,7 +285,8 @@ Accept wildcard characters: False
 ```
 
 ### -DeploymentPackageId
-Specifies an array of IDs of deployment packages.
+
+Specify an array of software update deployment package IDs to distribute. For example, `"XYZ00016"`.
 
 ```yaml
 Type: String[]
@@ -333,7 +301,8 @@ Accept wildcard characters: False
 ```
 
 ### -DeploymentPackageName
-Specifies an array of names of deployment packages.
+
+Specify an array of software update deployment package names to distribute.
 
 ```yaml
 Type: String[]
@@ -348,6 +317,9 @@ Accept wildcard characters: False
 ```
 
 ### -DisableContentDependencyDetection
+
+Add this parameter to not automatically distribute content for dependent apps.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: SearchByValueMandatory_Application, SearchByIdMandatory_Application, SearchByNameMandatory_Application
@@ -361,7 +333,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
+
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -376,7 +349,8 @@ Accept wildcard characters: False
 ```
 
 ### -DistributionPointGroupName
-Specifies the name of a distribution point group.
+
+Specify an array of distribution point group names to which to distribute the content.
 
 ```yaml
 Type: String[]
@@ -391,7 +365,8 @@ Accept wildcard characters: False
 ```
 
 ### -DistributionPointName
-Specifies the name of a distribution point that is associated with the deployment package.
+
+Specify an array of distribution point names to which to distribute the content.
 
 ```yaml
 Type: String[]
@@ -406,7 +381,8 @@ Accept wildcard characters: False
 ```
 
 ### -DriverPackageId
-Specifies an array of IDs of driver packages.
+
+Specify an array of driver package IDs to distribute. For example, `"XYZ00017"`.
 
 ```yaml
 Type: String[]
@@ -421,7 +397,8 @@ Accept wildcard characters: False
 ```
 
 ### -DriverPackageName
-Specifies an array of names of driver packages.
+
+Specify an array of driver package names to distribute.
 
 ```yaml
 Type: String[]
@@ -436,7 +413,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
+
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -451,6 +429,19 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
+
+Specify an object type to distribute. To get these objects, use one of the following cmdlets:
+
+- [Get-CMApplication](Get-CMApplication.md) for an application
+- [Get-CMPackage](Get-CMPackage.md) for a legacy package
+- [Get-CMBootImage](Get-CMBootImage.md) for a boot image
+- [Get-CMDeploymentPackage](Get-CMDeploymentPackage.md) for a software update deployment package
+- [Get-CMSoftwareUpdateGroup](Get-CMSoftwareUpdateGroup.md) for the content in a software update group
+- [Get-CMDriverPackage](Get-CMDriverPackage.md) for a driver package
+- [Get-CMOperatingSystemImage](Get-CMOperatingSystemImage.md) for an OS image
+- [Get-CMOperatingSystemInstaller](Get-CMOperatingSystemInstaller.md) for an OS upgrade package
+- [Get-CMTaskSequence](Get-CMTaskSequence.md) for the content referenced by a task sequence
+
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
@@ -464,8 +455,8 @@ Accept wildcard characters: False
 ```
 
 ### -OperatingSystemImage
-Specifies an operating system image object.
-To get a **CMOperatingSystemImage** object, use the [Get-CMOperatingSystemImage](Get-CMOperatingSystemImage.md) cmdlet.
+
+Specify an OS image object to distribute. To get this object, use the [Get-CMOperatingSystemImage](Get-CMOperatingSystemImage.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -480,7 +471,8 @@ Accept wildcard characters: False
 ```
 
 ### -OperatingSystemImageId
-Specifies an array of IDs of operating system images.
+
+Specify an array of OS image IDs to distribute. For example, `"XYZ00018"`.
 
 ```yaml
 Type: String[]
@@ -495,7 +487,8 @@ Accept wildcard characters: False
 ```
 
 ### -OperatingSystemImageName
-Specifies an array of names of operating system images.
+
+Specify an array of OS image names to distribute.
 
 ```yaml
 Type: String[]
@@ -510,7 +503,8 @@ Accept wildcard characters: False
 ```
 
 ### -OperatingSystemInstallerId
-Specifies  an array of IDs of operating system installers.
+
+Specify an array of OS upgrade package IDs to distribute. For example, `"XYZ00019"`.
 
 ```yaml
 Type: String[]
@@ -525,7 +519,8 @@ Accept wildcard characters: False
 ```
 
 ### -OperatingSystemInstallerName
-Specifies an array of names of operating system installers.
+
+Specify an array of OS upgrade package names to distribute.
 
 ```yaml
 Type: String[]
@@ -540,7 +535,8 @@ Accept wildcard characters: False
 ```
 
 ### -PackageId
-Specifies an array of IDs of packages.
+
+Specify an array of legacy package IDs to distribute. For example, `"XYZ00020"`.
 
 ```yaml
 Type: String[]
@@ -555,7 +551,8 @@ Accept wildcard characters: False
 ```
 
 ### -PackageName
-Specifies an array of names of packages.
+
+Specify an array of legacy package names to distribute.
 
 ```yaml
 Type: String[]
@@ -570,7 +567,8 @@ Accept wildcard characters: False
 ```
 
 ### -TaskSequenceId
-Specifies an array of IDs of task sequences.
+
+Specify an array of task sequence IDs to distribute referenced content. For example, `"XYZ00021"`.
 
 ```yaml
 Type: String[]
@@ -585,7 +583,8 @@ Accept wildcard characters: False
 ```
 
 ### -TaskSequenceName
-Specifies an array of names of task sequences.
+
+Specify an array of task sequence names to distribute referenced content.
 
 ```yaml
 Type: String[]
@@ -600,8 +599,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+
+Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
 
 ```yaml
 Type: SwitchParameter
@@ -625,6 +624,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
@@ -646,5 +646,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-CMTaskSequence](Get-CMTaskSequence.md)
 
 [Remove-CMContentDistribution](Remove-CMContentDistribution.md)
+
+[Invoke-CMContentValidation](Invoke-CMContentValidation.md)
 
 [Update-CMDistributionPoint](Update-CMDistributionPoint.md)

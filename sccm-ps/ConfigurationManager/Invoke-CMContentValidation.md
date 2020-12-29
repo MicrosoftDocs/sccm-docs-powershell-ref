@@ -1,8 +1,8 @@
 ---
-description: Validates packages on a distribution point.
+description: Validate content on a distribution point.
 external help file: AdminUI.PS.Sum.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/05/2019
+ms.date: 12/29/2020
 schema: 2.0.0
 title: Invoke-CMContentValidation
 ---
@@ -10,7 +10,8 @@ title: Invoke-CMContentValidation
 # Invoke-CMContentValidation
 
 ## SYNOPSIS
-Validates packages on a distribution point.
+
+Validate content on a distribution point.
 
 ## SYNTAX
 
@@ -150,28 +151,29 @@ Invoke-CMContentValidation [-CollectionName <String[]>] [-DistributionPointGroup
 ```
 
 ## DESCRIPTION
-The **Invoke-CMContentValidation** cmdlet validates one or more packages on a distribution point.
-Validating the content ensures that the entire set of files transferred successfully to the distribution point.
+
+Use this cmdlet to validate content on a distribution point. When you validate the content, Configuration Manager makes sure that the entire set of files transferred successfully to the distribution point. For more information, see [Deploy and manage content in Configuration Manager](/mem/configmgr/core/servers/deploy/configure/deploy-and-manage-content#validate-content).
 
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
 ### Example 1: Validate content for an application
-```
-PS XYZ:\>Invoke-CMContentValidation -ApplicationName "Dict.app" -DistributionPointName "DPServer01"
-```
 
-This command validates the package for the application named Dict.app one the distribution point named DPServer01.
+This command validates the content for the application named **Dictionary** one the distribution point named **DPServer01**.
+
+```powershell
+Invoke-CMContentValidation -ApplicationName "Dictionary" -DistributionPointName "DPServer01"
+```
 
 ## PARAMETERS
 
 ### -ApplicationId
-Specifies an array of application IDs.
-These IDs are GUIDs as strings.
+
+Specify an array of application IDs to validate. These IDs are GUIDs as strings.
+
+By default, Configuration Manager also validates the content for dependent applications. To disable this behavior, use the **DisableContentDependencyDetection** parameter.
 
 ```yaml
 Type: String[]
@@ -186,7 +188,10 @@ Accept wildcard characters: False
 ```
 
 ### -ApplicationName
-Specifies an array of application names.
+
+Specify an array of application names to validate.
+
+By default, Configuration Manager also validates the content for dependent applications. To disable this behavior, use the **DisableContentDependencyDetection** parameter.
 
 ```yaml
 Type: String[]
@@ -201,7 +206,8 @@ Accept wildcard characters: False
 ```
 
 ### -BootImageId
-Specifies an array of IDs of boot images.
+
+Specify an array of boot image IDs to validate. For example, `"XYZ00015"`.
 
 ```yaml
 Type: String[]
@@ -216,7 +222,8 @@ Accept wildcard characters: False
 ```
 
 ### -BootImageName
-Specifies an array of names of boot images.
+
+Specify an array of boot image names to validate.
 
 ```yaml
 Type: String[]
@@ -231,7 +238,8 @@ Accept wildcard characters: False
 ```
 
 ### -CollectionName
-Specifies the name of a Configuration Manager collection.
+
+Specify an array of Configuration Manager collection names. Use this collection to target the distribution points on which to validate the content.
 
 ```yaml
 Type: String[]
@@ -246,6 +254,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -261,7 +270,8 @@ Accept wildcard characters: False
 ```
 
 ### -DeploymentPackageId
-Specifies an array of IDs of deployment packages.
+
+Specify an array of software update deployment package IDs to validate. For example, `"XYZ00016"`.
 
 ```yaml
 Type: String[]
@@ -276,7 +286,8 @@ Accept wildcard characters: False
 ```
 
 ### -DeploymentPackageName
-Specifies an array of names of deployment packages.
+
+Specify an array of software update deployment package names to validate.
 
 ```yaml
 Type: String[]
@@ -291,6 +302,9 @@ Accept wildcard characters: False
 ```
 
 ### -DisableContentDependencyDetection
+
+Add this parameter to not automatically validate content for dependent apps.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: SearchByValueMandatory_Application, SearchByIdMandatory_Application, SearchByNameMandatory_Application
@@ -304,7 +318,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
+
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -319,7 +334,8 @@ Accept wildcard characters: False
 ```
 
 ### -DistributionPointGroupName
-Specifies the name of a distribution point group.
+
+Specify an array of distribution point group names on which to validate the content.
 
 ```yaml
 Type: String[]
@@ -334,7 +350,8 @@ Accept wildcard characters: False
 ```
 
 ### -DistributionPointName
-Specifies the name of a distribution point that is associated with the content.
+
+Specify an array of distribution point names on which to validate the content.
 
 ```yaml
 Type: String[]
@@ -349,7 +366,8 @@ Accept wildcard characters: False
 ```
 
 ### -DriverPackageId
-Specifies an array of IDs of driver packages.
+
+Specify an array of driver package IDs to validate. For example, `"XYZ00017"`.
 
 ```yaml
 Type: String[]
@@ -364,7 +382,8 @@ Accept wildcard characters: False
 ```
 
 ### -DriverPackageName
-Specifies an array of names of driver packages.
+
+Specify an array of driver package names to validate.
 
 ```yaml
 Type: String[]
@@ -379,7 +398,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
+
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -394,6 +414,19 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
+
+Specify an object type to validate. To get these objects, use one of the following cmdlets:
+
+- [Get-CMApplication](Get-CMApplication.md) for an application
+- [Get-CMPackage](Get-CMPackage.md) for a legacy package
+- [Get-CMBootImage](Get-CMBootImage.md) for a boot image
+- [Get-CMDeploymentPackage](Get-CMDeploymentPackage.md) for a software update deployment package
+- [Get-CMSoftwareUpdateGroup](Get-CMSoftwareUpdateGroup.md) for the content in a software update group
+- [Get-CMDriverPackage](Get-CMDriverPackage.md) for a driver package
+- [Get-CMOperatingSystemImage](Get-CMOperatingSystemImage.md) for an OS image
+- [Get-CMOperatingSystemInstaller](Get-CMOperatingSystemInstaller.md) for an OS upgrade package
+- [Get-CMTaskSequence](Get-CMTaskSequence.md) for the content referenced by a task sequence
+
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
@@ -407,8 +440,8 @@ Accept wildcard characters: False
 ```
 
 ### -OperatingSystemImage
-Specifies an operating system image object.
-To get a **CMOperatingSystemImage** object, use the [Get-CMOperatingSystemImage](Get-CMOperatingSystemImage.md) cmdlet.
+
+Specify an OS image object to validate. To get this object, use the [Get-CMOperatingSystemImage](Get-CMOperatingSystemImage.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -423,7 +456,8 @@ Accept wildcard characters: False
 ```
 
 ### -OperatingSystemImageId
-Specifies an array of IDs of operating system images.
+
+Specify an array of OS image IDs to validate. For example, `"XYZ00018"`.
 
 ```yaml
 Type: String[]
@@ -438,7 +472,8 @@ Accept wildcard characters: False
 ```
 
 ### -OperatingSystemImageName
-Specifies an array of names of operating system images.
+
+Specify an array of OS image names to validate.
 
 ```yaml
 Type: String[]
@@ -453,7 +488,8 @@ Accept wildcard characters: False
 ```
 
 ### -OperatingSystemInstallerId
-Specifies an array of IDs of operating system installers.
+
+Specify an array of OS upgrade package IDs to validate. For example, `"XYZ00019"`.
 
 ```yaml
 Type: String[]
@@ -468,7 +504,8 @@ Accept wildcard characters: False
 ```
 
 ### -OperatingSystemInstallerName
-Specifies an array of names of operating system installers.
+
+Specify an array of OS upgrade package names to validate.
 
 ```yaml
 Type: String[]
@@ -483,7 +520,8 @@ Accept wildcard characters: False
 ```
 
 ### -PackageId
-Specifies an array of IDs of packages.
+
+Specify an array of legacy package IDs to validate. For example, `"XYZ00020"`.
 
 ```yaml
 Type: String[]
@@ -498,7 +536,8 @@ Accept wildcard characters: False
 ```
 
 ### -PackageName
-Specifies an array of names of packages.
+
+Specify an array of legacy package names to validate.
 
 ```yaml
 Type: String[]
@@ -513,7 +552,8 @@ Accept wildcard characters: False
 ```
 
 ### -TaskSequenceId
-Specifies an array of IDs of task sequences.
+
+Specify an array of task sequence IDs to validate referenced content. For example, `"XYZ00021"`.
 
 ```yaml
 Type: String[]
@@ -528,7 +568,8 @@ Accept wildcard characters: False
 ```
 
 ### -TaskSequenceName
-Specifies an array of names of task sequences.
+
+Specify an array of task sequence names to validate referenced content.
 
 ```yaml
 Type: String[]
@@ -543,8 +584,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+
+Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
 
 ```yaml
 Type: SwitchParameter
@@ -568,6 +609,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
@@ -584,6 +626,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Get-CMTaskSequence](Get-CMTaskSequence.md)
 
+[Remove-CMContentDistribution](Remove-CMContentDistribution.md)
+
 [Start-CMContentDistribution](Start-CMContentDistribution.md)
 
-
+[Update-CMDistributionPoint](Update-CMDistributionPoint.md)
