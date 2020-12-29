@@ -1,8 +1,8 @@
 ﻿---
-description: Gets a boundary group relationship.
+description: Get a boundary group relationship.
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/02/2019
+ms.date: 12/28/2020
 schema: 2.0.0
 title: Get-CMBoundaryGroupRelationship
 ---
@@ -10,7 +10,8 @@ title: Get-CMBoundaryGroupRelationship
 # Get-CMBoundaryGroupRelationship
 
 ## SYNOPSIS
-Gets a boundary group relationship.
+
+Get a boundary group relationship.
 
 ## SYNTAX
 
@@ -28,21 +29,27 @@ Get-CMBoundaryGroupRelationship [-DestinationGroupId <Int32>] [-SourceGroupId <I
 
 ## DESCRIPTION
 
+Use this cmdlet to get the relationship between boundary groups. For more information, see [Configure boundary groups for Configuration Manager](/mem/configmgr/core/servers/deploy/configure/boundary-groups).
+
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
 ### Example 1
-```
-PS XYZ:\>
+
+```powershell
+Get-CMBoundaryGroupRelationship -DestinationGroupName "Swindon" -SourceGroupName "London"
 ```
 
 ## PARAMETERS
 
 ### -DestinationGroupId
+
+Specify the ID of the neighbor boundary group. This integer value is the **GroupID** property.
+
+The destination boundary group can't be the same as the source boundary group.
+
 ```yaml
 Type: Int32
 Parameter Sets: SearchById
@@ -56,6 +63,11 @@ Accept wildcard characters: False
 ```
 
 ### -DestinationGroupName
+
+Specify the name of the neighbor boundary group.
+
+The destination boundary group can't be the same as the source boundary group.
+
 ```yaml
 Type: String
 Parameter Sets: SearchByName
@@ -69,7 +81,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
+
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -84,7 +97,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
+
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -99,6 +113,9 @@ Accept wildcard characters: False
 ```
 
 ### -SourceGroupId
+
+Specify the ID of the boundary group that has the relationship. This integer value is the **GroupID** property.
+
 ```yaml
 Type: Int32
 Parameter Sets: SearchById
@@ -112,6 +129,9 @@ Accept wildcard characters: False
 ```
 
 ### -SourceGroupName
+
+Specify the name of the boundary group that has the relationship.
+
 ```yaml
 Type: String
 Parameter Sets: SearchByName
@@ -137,6 +157,16 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### IResultObject#SMS_BoundaryGroupRelationships
 
+For more information on this return object and its properties, see [SMS_BoundaryGroupRelationships server WMI class](/mem/configmgr/develop/reference/core/servers/configure/sms-boundarygrouprelationships-server-wmi-class).
+
 ## NOTES
 
 ## RELATED LINKS
+
+[New-CMBoundaryGroupRelationship](New-CMBoundaryGroupRelationship.md)
+
+[Remove-CMBoundaryGroupRelationship](Remove-CMBoundaryGroupRelationship.md)
+
+[Set-CMBoundaryGroupRelationship](Set-CMBoundaryGroupRelationship.md)
+
+[Configure boundary groups for Configuration Manager](/mem/configmgr/core/servers/deploy/configure/boundary-groups)

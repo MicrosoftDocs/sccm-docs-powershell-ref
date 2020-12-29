@@ -1,8 +1,8 @@
 ---
-description: Removes a boundary group relationship.
+description: Remove a boundary group relationship.
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/07/2019
+ms.date: 12/28/2020
 schema: 2.0.0
 title: Remove-CMBoundaryGroupRelationship
 ---
@@ -10,7 +10,8 @@ title: Remove-CMBoundaryGroupRelationship
 # Remove-CMBoundaryGroupRelationship
 
 ## SYNOPSIS
-Removes a boundary group relationship.
+
+Remove a boundary group relationship.
 
 ## SYNTAX
 
@@ -34,21 +35,23 @@ Remove-CMBoundaryGroupRelationship [-DestinationGroupName <String>] [-Force] [-S
 
 ## DESCRIPTION
 
+Use this cmdlet to remove the relationship between boundary groups. For more information, see [Configure boundary groups for Configuration Manager](/mem/configmgr/core/servers/deploy/configure/boundary-groups).
+
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
 ### Example 1
-```
-PS XYZ:\>
+
+```powershell
+Remove-CMBoundaryGroupRelationship -DestinationGroupName "Swindon" -SourceGroupName "London" -Force
 ```
 
 ## PARAMETERS
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -64,6 +67,11 @@ Accept wildcard characters: False
 ```
 
 ### -DestinationGroupId
+
+Specify the ID of the neighbor boundary group to remove. This integer value is the **GroupID** property.
+
+The destination boundary group can't be the same as the source boundary group.
+
 ```yaml
 Type: Int32
 Parameter Sets: SearchByIdMandatory
@@ -77,6 +85,11 @@ Accept wildcard characters: False
 ```
 
 ### -DestinationGroupName
+
+Specify the name of the neighbor boundary group to remove.
+
+The destination boundary group can't be the same as the source boundary group.
+
 ```yaml
 Type: String
 Parameter Sets: SearchByName
@@ -90,7 +103,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
+
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -105,6 +119,9 @@ Accept wildcard characters: False
 ```
 
 ### -Force
+
+Run the command without asking for confirmation.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -118,7 +135,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
+
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -133,6 +151,9 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
+
+Specify a boundary group relationship object to remove. To get this object, use the [Get-CMBoundaryGroupRelationship](Get-CMBoundaryGroupRelationship.md) cmdlet.
+
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
@@ -146,6 +167,9 @@ Accept wildcard characters: False
 ```
 
 ### -SourceGroupId
+
+Specify the ID of the boundary group from which to remove the relationship. This integer value is the **GroupID** property.
+
 ```yaml
 Type: Int32
 Parameter Sets: SearchByIdMandatory
@@ -159,6 +183,9 @@ Accept wildcard characters: False
 ```
 
 ### -SourceGroupName
+
+Specify the name of the boundary group from which to remove the relationship.
+
 ```yaml
 Type: String
 Parameter Sets: SearchByName
@@ -172,8 +199,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+
+Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
 
 ```yaml
 Type: SwitchParameter
@@ -196,8 +223,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-###  
-
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-CMBoundaryGroupRelationship](Get-CMBoundaryGroupRelationship.md)
+
+[New-CMBoundaryGroupRelationship](New-CMBoundaryGroupRelationship.md)
+
+[Set-CMBoundaryGroupRelationship](Set-CMBoundaryGroupRelationship.md)
+
+[Configure boundary groups for Configuration Manager](/mem/configmgr/core/servers/deploy/configure/boundary-groups)
