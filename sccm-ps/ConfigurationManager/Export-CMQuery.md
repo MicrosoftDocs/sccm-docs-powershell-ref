@@ -2,7 +2,7 @@
 description: Export a query from Configuration Manager.
 external help file: AdminUI.PS.SystemStatus.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 08/06/2020
+ms.date: 12/29/2020
 schema: 2.0.0
 title: Export-CMQuery
 ---
@@ -35,38 +35,48 @@ Export-CMQuery [-Comment <String>] -ExportFilePath <String> [-InputObject] <IRes
 
 ## DESCRIPTION
 
-The **Export-CMQuery** cmdlet exports a query from Configuration Manager. Queries define and store the criteria for sets of database objects that you want to find. For more information, see [Introduction to queries in Configuration Manager](/mem/configmgr/core/servers/manage/introduction-to-queries).
+Use this cmdlet to export a query from Configuration Manager. Configuration Manager queries define a WMI Query Language (WQL) expression to get information from the site database based on the criteria you provide.
+
+You can export a query to copy it from one site to another. For example, to copy a query from a test lab to a production environment.
+
+Configuration Manager exports the query to a managed object format (MOF) file. You can then use the [Import-CMQuery](Import-CMQuery.md) cmdlet to import the query to another site.
+
+For more information, see [Introduction to queries in Configuration Manager](/mem/configmgr/core/servers/manage/introduction-to-queries).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Export a query
 
-This command exports a query called **My Systems** to an exported file called **Query.mof**.
+This command exports a query called **My systems** to an exported file called **query.mof**.
 
 ```powershell
-Export-CMQuery -Name "My Systems" -ExportFilePath "C:\Export\Query.mof"
+Export-CMQuery -Name "My systems" -ExportFilePath "C:\export\query.mof"
+```
+
+### Example 2: Export a query with a comment
+
+This example sets a comment in the exported file.
+
+```powershell
+Export-CMQuery -Name "My Systems" -ExportFilePath "C:\Export\Query.mof" -Comment "This is a comment"
+```
+
+```mof
+// Comments :
+//
+// This is a comment
 ```
 
 ## PARAMETERS
 
 ### -Comment
 
-Add a comment to the exported MOF file. For example:
+Specify an optional comment. Configuration Manager includes the comment in the MOF file. If you use the Configuration Manager console to import the query, the comment displays in the Import Objects Wizard.
 
-
-
-Export-CMQuery -Name "My Systems" -ExportFilePath "C:\Export\Query.mof" -Comment "This is a comment"
-
-This example sets the following comment in the exported file:
-
-
-
-// Comments :
-//
-// This is a comment
+This comment has a limit of 1024 characters.
 
 ```yaml
 Type: String
@@ -114,7 +124,7 @@ Accept wildcard characters: False
 
 ### -ExportFilePath
 
-Specify the path to the exported file. The file extension is **.mof**.
+Specify the path to the exported file. The file extension is **.mof**. It can be a local or network path. Create the target folder first.
 
 ```yaml
 Type: String
@@ -162,7 +172,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 
-Specify a query object to export.
+Specify a query object to export. To get this object, use the [Get-CMQuery](Get-CMQuery.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -218,13 +228,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
 
-[Import-CMQuery](Import-CMQuery.md)
-
 [Get-CMQuery](Get-CMQuery.md)
+
+[Import-CMQuery](Import-CMQuery.md)
 
 [Invoke-CMQuery](Invoke-CMQuery.md)
 
@@ -233,3 +244,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-CMQuery](Remove-CMQuery.md)
 
 [Set-CMQuery](Set-CMQuery.md)
+
+[Introduction to queries in Configuration Manager](/mem/configmgr/core/servers/manage/introduction-to-queries)

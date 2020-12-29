@@ -1,8 +1,8 @@
 ---
-description: Gets Configuration Manager queries.
+description: Get a Configuration Manager query.
 external help file: AdminUI.PS.SystemStatus.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/02/2019
+ms.date: 12/29/2020
 schema: 2.0.0
 title: Get-CMQuery
 ---
@@ -10,7 +10,8 @@ title: Get-CMQuery
 # Get-CMQuery
 
 ## SYNOPSIS
-Gets Configuration Manager queries.
+
+Get a Configuration Manager query.
 
 ## SYNTAX
 
@@ -25,28 +26,31 @@ Get-CMQuery [-Id <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [
 ```
 
 ## DESCRIPTION
-The **Get-CMQuery** cmdlet gets the queries stored in Configuration Manager.
-Configuration Manager queries define and store the criteria for sets of database objects that you want to find.
+
+Use this cmdlet to get a query from the Configuration Manager site. Configuration Manager queries define a WMI Query Language (WQL) expression to get information from the site database based on the criteria you provide. WQL is similar to SQL, but still goes through the SMS Provider instead of directly to the database. So WQL still abides by your role-based access configuration.
+
+Queries can return most types of Configuration Manager objects, which include computers, sites, collections, applications, and inventory data. For more information, see [Introduction to queries in Configuration Manager](/mem/configmgr/core/servers/manage/introduction-to-queries).
+
+By default, Configuration Manager includes several queries. You can use this cmdlet to review the default queries.
 
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
 ### Example 1
 
-```powershell
-PS XYZ:\> Get-CMQuery -Name "*ConfigMgr clients *"
-```
+This command returns all queries with the name containing "ConfigMgr clients".
 
-This command gets the Configuration Manager queries with the names containing "ConfigMgr clients".
+```powershell
+Get-CMQuery -Name "*ConfigMgr clients *"
+```
 
 ## PARAMETERS
 
 ### -DisableWildcardHandling
-DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
+
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -61,7 +65,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
+
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -76,6 +81,9 @@ Accept wildcard characters: False
 ```
 
 ### -Id
+
+Specify the ID of the query to get. For example, `"XYZ00006"`.
+
 ```yaml
 Type: String
 Parameter Sets: ById
@@ -89,6 +97,14 @@ Accept wildcard characters: False
 ```
 
 ### -Name
+
+Specify the name of the query to get.
+
+You can use wildcard characters:
+
+- `*`: Multiple characters
+- `?`: Single character
+
 ```yaml
 Type: String
 Parameter Sets: ByName
@@ -114,6 +130,16 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### IResultObject#SMS_Query
 
+For more information on this return object and its properties, see [SMS_Query server WMI class](/mem/configmgr/develop/reference/core/clients/manage/sms_query-server-wmi-class).
+
 ## NOTES
 
 ## RELATED LINKS
+
+[Export-CMQuery](Export-CMQuery.md)
+[Import-CMQuery](Import-CMQuery.md)
+[Invoke-CMQuery](Invoke-CMQuery.md)
+[New-CMQuery](New-CMQuery.md)
+[Remove-CMQuery](Remove-CMQuery.md)
+[Set-CMQuery](Set-CMQuery.md)
+[Introduction to queries in Configuration Manager](/mem/configmgr/core/servers/manage/introduction-to-queries)
