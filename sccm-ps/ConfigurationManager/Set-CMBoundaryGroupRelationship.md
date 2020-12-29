@@ -1,8 +1,8 @@
 ---
-description: Sets a boundary group relationship.
+description: Configure a boundary group relationship.
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/07/2019
+ms.date: 12/28/2020
 schema: 2.0.0
 title: Set-CMBoundaryGroupRelationship
 ---
@@ -10,7 +10,8 @@ title: Set-CMBoundaryGroupRelationship
 # Set-CMBoundaryGroupRelationship
 
 ## SYNOPSIS
-Sets a boundary group relationship.
+
+Configure a boundary group relationship.
 
 ## SYNTAX
 
@@ -39,21 +40,25 @@ Set-CMBoundaryGroupRelationship -DestinationGroupName <String> [-FallbackDPMinut
 
 ## DESCRIPTION
 
+Use this cmdlet to configure the relationship between boundary groups. For more information, see [Configure boundary groups for Configuration Manager](/mem/configmgr/core/servers/deploy/configure/boundary-groups).
+
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
+This example first uses the **Get-CMBoundaryGroupRelationship** cmdlet to get a boundary group relationship object. It then passes that object to the **Set-CMBoundaryGroupRelationship** cmdlet to change the fallback times. It changes the fallback for software update points to 120 minutes and for management points to immediate (0 minutes).
+
 ### Example 1
-```
-PS XYZ:\>
+
+```powershell
+Get-CMBoundaryGroupRelationship -DestinationGroupName "Swindon" -SourceGroupName "London" | Set-CMBoundaryGroupRelationship -FallbackSupMinutes 120 -FallbackMPMinutes 0
 ```
 
 ## PARAMETERS
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -69,6 +74,11 @@ Accept wildcard characters: False
 ```
 
 ### -DestinationGroupId
+
+Specify the ID of the neighbor boundary group. This integer value is the **GroupID** property.
+
+The destination boundary group can't be the same as the source boundary group.
+
 ```yaml
 Type: Int32
 Parameter Sets: SetByIdMandatory
@@ -82,6 +92,11 @@ Accept wildcard characters: False
 ```
 
 ### -DestinationGroupName
+
+Specify the name of the neighbor boundary group.
+
+The destination boundary group can't be the same as the source boundary group.
+
 ```yaml
 Type: String
 Parameter Sets: SetByNameMandatory
@@ -95,7 +110,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
+
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -110,6 +126,9 @@ Accept wildcard characters: False
 ```
 
 ### -FallbackDPMinutes
+
+Specify an integer value for the fallback time in minutes for distribution points (DP) from the source to the destination boundary group. To set the option to **Never fallback**, specify the value `-1`.
+
 ```yaml
 Type: Int32
 Parameter Sets: (All)
@@ -123,6 +142,9 @@ Accept wildcard characters: False
 ```
 
 ### -FallbackMPMinutes
+
+Specify an integer value for the fallback time in minutes for management points (MP) from the source to the destination boundary group. To set the option to **Never fallback**, specify the value `-1`.
+
 ```yaml
 Type: Int32
 Parameter Sets: (All)
@@ -136,6 +158,9 @@ Accept wildcard characters: False
 ```
 
 ### -FallbackSmpMinutes
+
+Specify an integer value for the fallback time in minutes for state migration points (SMP) from the source to the destination boundary group. To set the option to **Never fallback**, specify the value `-1`.
+
 ```yaml
 Type: Int32
 Parameter Sets: (All)
@@ -149,6 +174,9 @@ Accept wildcard characters: False
 ```
 
 ### -FallbackSupMinutes
+
+Specify an integer value for the fallback time in minutes for software update points (SUP) from the source to the destination boundary group. To set the option to **Never fallback**, specify the value `-1`.
+
 ```yaml
 Type: Int32
 Parameter Sets: (All)
@@ -162,7 +190,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
+
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -177,6 +206,9 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
+
+Specify a boundary group relationship object to configure. To get this object, use the [Get-CMBoundaryGroupRelationship](Get-CMBoundaryGroupRelationship.md) cmdlet.
+
 ```yaml
 Type: IResultObject
 Parameter Sets: SetByValueMandatory
@@ -190,7 +222,8 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Returns an object representing the item with which you are working. By default, this cmdlet may not generate any output.
+
+Add this parameter to return an object that represents the item with which you're working. By default, this cmdlet may not generate any output.
 
 ```yaml
 Type: SwitchParameter
@@ -205,6 +238,9 @@ Accept wildcard characters: False
 ```
 
 ### -SourceGroupId
+
+Specify the ID of the boundary group from which to configure the relationship. This integer value is the **GroupID** property.
+
 ```yaml
 Type: Int32
 Parameter Sets: SetByIdMandatory
@@ -218,6 +254,9 @@ Accept wildcard characters: False
 ```
 
 ### -SourceGroupName
+
+Specify the name of the boundary group from which to configure the relationship.
+
 ```yaml
 Type: String
 Parameter Sets: SetByNameMandatory
@@ -231,8 +270,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+
+Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
 
 ```yaml
 Type: SwitchParameter
@@ -257,6 +296,16 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### IResultObject#SMS_BoundaryGroupRelationships
 
+For more information on this return object and its properties, see [SMS_BoundaryGroupRelationships server WMI class](/mem/configmgr/develop/reference/core/servers/configure/sms-boundarygrouprelationships-server-wmi-class).
+
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-CMBoundaryGroupRelationship](Get-CMBoundaryGroupRelationship.md)
+
+[New-CMBoundaryGroupRelationship](New-CMBoundaryGroupRelationship.md)
+
+[Remove-CMBoundaryGroupRelationship](Remove-CMBoundaryGroupRelationship.md)
+
+[Configure boundary groups for Configuration Manager](/mem/configmgr/core/servers/deploy/configure/boundary-groups)
