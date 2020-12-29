@@ -1,8 +1,8 @@
 ---
-description: Creates a boundary group relationship.
+description: Create a boundary group relationship.
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/05/2019
+ms.date: 12/28/2020
 schema: 2.0.0
 title: New-CMBoundaryGroupRelationship
 ---
@@ -10,7 +10,8 @@ title: New-CMBoundaryGroupRelationship
 # New-CMBoundaryGroupRelationship
 
 ## SYNOPSIS
-Creates a boundary group relationship.
+
+Create a boundary group relationship.
 
 ## SYNTAX
 
@@ -40,21 +41,29 @@ New-CMBoundaryGroupRelationship -DestinationGroupId <Int32> [-FallbackDPMinutes 
 
 ## DESCRIPTION
 
+Use this cmdlet to create a relationship between boundary groups. Boundary groups that you link together are called _neighbor_ boundary groups. A boundary group can have more than one relationship, each with a specific neighbor boundary group.
+
+When a client fails to find an available site system in its current boundary group, the configuration of each relationship determines when it begins to search a neighbor boundary group. This search of other groups is called _fallback_.
+
+For more information, see [Configure boundary groups for Configuration Manager](/mem/configmgr/core/servers/deploy/configure/boundary-groups).
+
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
-### Example 1
-```
-PS XYZ:\>
+### Example 1: Create a relationship for only content
+
+This command creates a relationship between the **Swindon** and **London** boundary groups. Distribution points fall back after five minutes. Software update points and management points never fall back.
+
+```powershell
+New-CMBoundaryGroupRelationship -SourceGroupName "Swindon" -DestinationGroupName "London" -FallbackDPMinutes 5 -FallbackSupMinutes -1 -FallbackMPMinutes -1
 ```
 
 ## PARAMETERS
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -70,6 +79,11 @@ Accept wildcard characters: False
 ```
 
 ### -DestinationGroup
+
+Specify a boundary group object for the neighbor. To get this object, use the [Get-CMBoundaryGroup](Get-CMBoundaryGroup.md) cmdlet.
+
+The destination boundary group can't be the same as the source boundary group.
+
 ```yaml
 Type: IResultObject
 Parameter Sets: SetByValueMandatory
@@ -83,6 +97,11 @@ Accept wildcard characters: False
 ```
 
 ### -DestinationGroupId
+
+Specify the ID of the neighbor boundary group. This integer value is the **GroupID** property.
+
+The destination boundary group can't be the same as the source boundary group.
+
 ```yaml
 Type: Int32
 Parameter Sets: IdMandatory
@@ -96,6 +115,11 @@ Accept wildcard characters: False
 ```
 
 ### -DestinationGroupName
+
+Specify the name of the neighbor boundary group.
+
+The destination boundary group can't be the same as the source boundary group.
+
 ```yaml
 Type: String
 Parameter Sets: NameMandatory
@@ -109,7 +133,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
+
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -124,6 +149,9 @@ Accept wildcard characters: False
 ```
 
 ### -FallbackDPMinutes
+
+Specify an integer value for the fallback time in minutes for distribution points (DP) from the source to the destination boundary group. To set the option to **Never fallback**, specify the value `-1`.
+
 ```yaml
 Type: Int32
 Parameter Sets: (All)
@@ -137,6 +165,9 @@ Accept wildcard characters: False
 ```
 
 ### -FallbackMPMinutes
+
+Specify an integer value for the fallback time in minutes for management points (MP) from the source to the destination boundary group. To set the option to **Never fallback**, specify the value `-1`.
+
 ```yaml
 Type: Int32
 Parameter Sets: (All)
@@ -150,6 +181,9 @@ Accept wildcard characters: False
 ```
 
 ### -FallbackSmpMinutes
+
+Specify an integer value for the fallback time in minutes for state migration points (SMP) from the source to the destination boundary group. To set the option to **Never fallback**, specify the value `-1`.
+
 ```yaml
 Type: Int32
 Parameter Sets: (All)
@@ -163,6 +197,9 @@ Accept wildcard characters: False
 ```
 
 ### -FallbackSupMinutes
+
+Specify an integer value for the fallback time in minutes for software update points (SUP) from the source to the destination boundary group. To set the option to **Never fallback**, specify the value `-1`.
+
 ```yaml
 Type: Int32
 Parameter Sets: (All)
@@ -176,7 +213,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
+
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -191,6 +229,9 @@ Accept wildcard characters: False
 ```
 
 ### -SourceGroup
+
+Specify a boundary group object from which to create the relationship. To get this object, use the [Get-CMBoundaryGroup](Get-CMBoundaryGroup.md) cmdlet.
+
 ```yaml
 Type: IResultObject
 Parameter Sets: SetByValueMandatory
@@ -204,6 +245,9 @@ Accept wildcard characters: False
 ```
 
 ### -SourceGroupId
+
+Specify the ID of the boundary group from which to create the relationship. This integer value is the **GroupID** property.
+
 ```yaml
 Type: Int32
 Parameter Sets: IdMandatory
@@ -217,6 +261,9 @@ Accept wildcard characters: False
 ```
 
 ### -SourceGroupName
+
+Specify the name of the boundary group from which to create the relationship.
+
 ```yaml
 Type: String
 Parameter Sets: NameMandatory
@@ -230,8 +277,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+
+Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
 
 ```yaml
 Type: SwitchParameter
@@ -256,6 +303,18 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### IResultObject#SMS_BoundaryGroupRelationships
 
+For more information on this return object and its properties, see [SMS_BoundaryGroupRelationships server WMI class](/mem/configmgr/develop/reference/core/servers/configure/sms-boundarygrouprelationships-server-wmi-class).
+
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-CMBoundaryGroupRelationship](Get-CMBoundaryGroupRelationship.md)
+
+[Remove-CMBoundaryGroupRelationship](Remove-CMBoundaryGroupRelationship.md)
+
+[Set-CMBoundaryGroupRelationship](Set-CMBoundaryGroupRelationship.md)
+
+[Get-CMBoundaryGroup](Get-CMBoundaryGroup.md)
+
+[Configure boundary groups for Configuration Manager](/mem/configmgr/core/servers/deploy/configure/boundary-groups)
