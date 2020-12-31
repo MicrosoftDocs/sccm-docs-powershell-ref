@@ -1,6 +1,7 @@
 ---
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 Module Name: ConfigurationManager
+ms.date: 12/30/2020
 online version:
 schema: 2.0.0
 ---
@@ -190,6 +191,26 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
+
+[New-CMRequirementRuleActiveDirectorySiteValue](New-CMRequirementRuleActiveDirectorySiteValue.md)
+[New-CMRequirementRuleBooleanValue](New-CMRequirementRuleBooleanValue.md)
+[New-CMRequirementRuleCMSiteValue](New-CMRequirementRuleCMSiteValue.md)
+[New-CMRequirementRuleCommonValue](New-CMRequirementRuleCommonValue.md)
+[New-CMRequirementRuleDeviceOwnershipValue](New-CMRequirementRuleDeviceOwnershipValue.md)
+[New-CMRequirementRuleExistential](New-CMRequirementRuleExistential.md)
+[New-CMRequirementRuleExpression](New-CMRequirementRuleExpression.md)
+[New-CMRequirementRuleFilePermissionValue](New-CMRequirementRuleFilePermissionValue.md)
+[New-CMRequirementRuleFreeDiskSpaceValue](New-CMRequirementRuleFreeDiskSpaceValue.md)
+[New-CMRequirementRuleInputTypeValue](New-CMRequirementRuleInputTypeValue.md)
+[New-CMRequirementRuleOperatingSystemLanguageValue](New-CMRequirementRuleOperatingSystemLanguageValue.md)
+[New-CMRequirementRuleOperatingSystemValue](New-CMRequirementRuleOperatingSystemValue.md)
+[New-CMRequirementRuleOUValue](New-CMRequirementRuleOUValue.md)
+[New-CMRequirementRuleRegistryKeyPermissionValue](New-CMRequirementRuleRegistryKeyPermissionValue.md)
+[New-CMRequirementRuleScreenResolutionValue](New-CMRequirementRuleScreenResolutionValue.md)
+[Get-CMGlobalCondition](Get-CMGlobalCondition.md)
+[Deployment type Requirements](/mem/configmgr/apps/deploy-use/create-applications#bkmk_dt-require)
+[Create global conditions](/mem/configmgr/apps/deploy-use/create-global-conditions)
