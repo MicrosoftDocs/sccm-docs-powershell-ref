@@ -1,8 +1,8 @@
 ﻿---
-description: Gets the deployment type of a Configuration Manager deployment application.
+description: Get a deployment type for a Configuration Manager application.
 external help file: AdminUI.PS.AppMan.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 01/02/2019
+ms.date: 12/29/2020
 schema: 2.0.0
 title: Get-CMDeploymentType
 ---
@@ -11,7 +11,7 @@ title: Get-CMDeploymentType
 
 ## SYNOPSIS
 
-Gets the deployment type of a Configuration Manager deployment application.
+Get a deployment type for an application.
 
 ## SYNTAX
 
@@ -35,47 +35,39 @@ Get-CMDeploymentType [-DeploymentTypeName <String>] -InputObject <IResultObject>
 
 ## DESCRIPTION
 
-The **Get-CMDeploymentType** cmdlet gets the deployment type of a Configuration Manager application.
+Use this cmdlet to get a deployment type for a Configuration Manager application.
 
 A deployment type is contained within an application and contains the information that Configuration Manager requires to install software.
 A deployment type also contains rules that specify if and how the software is deployed.
 
+For more information, see [Introduction to application management in Configuration Manager](/mem/configmgr/apps/understand/introduction-to-application-management).
+
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
-### Example 1: Get the deployment type of an application
+### Example 1: Get all deployment types for an application
+
+This command gets all of the deployment types for the application named **CenterApp**.
 
 ```powershell
-PS XYZ:\> Get-CMDeploymentType -ApplicationName "CenterApp"
+Get-CMDeploymentType -ApplicationName "CenterApp"
 ```
 
-This command gets the deployment type for the application named CenterApp.
+### Example 2: Get a specific deployment type by name
 
-### Example 2: Get the deployment type of an application by name
+This command gets the deployment type named **InterDept - Windows app package (.appx file)** for the application named **CenterApp**.
 
 ```powershell
-PS XYZ:\> Get-CMDeploymentType -ApplicationName "CenterApp" -DeploymentTypeName "InterDept - Windows app package (.appx file)"
+Get-CMDeploymentType -ApplicationName "CenterApp" -DeploymentTypeName "InterDept - Windows app package (.appx file)"
 ```
-
-This command gets the deployment type for the application named CenterApp that has a deployment type named InterDept - Windows app package (.appx file).
-
-### Example 3: Get the deployment type of an application by ID
-
-```powershell
-PS XYZ:\> Get-CMDeploymentType -ApplicationName "CenterApp" -DeploymentTypeID "16777457"
-```
-
-This command gets the deployment type for the application named CenterApp that has a deployment type that has the ID 16777457.
 
 ## PARAMETERS
 
 ### -ApplicationName
 
-Specifies the name of an application that is associated with the deployment type.
+Specify the name of the application for the deployment type.
 
 ```yaml
 Type: String
@@ -91,7 +83,7 @@ Accept wildcard characters: False
 
 ### -DeploymentTypeId
 
-Specifies the ID of a deployment type.
+Specify the ID of a deployment type to get. This value is the **CI_ID**, for example: `33554475`.
 
 ```yaml
 Type: Int32
@@ -107,7 +99,7 @@ Accept wildcard characters: False
 
 ### -DeploymentTypeName
 
-Specifies the name of a deployment type.
+Specify the name of a deployment type to get.
 
 ```yaml
 Type: String
@@ -123,7 +115,7 @@ Accept wildcard characters: False
 
 ### -DisableWildcardHandling
 
-DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -139,7 +131,7 @@ Accept wildcard characters: False
 
 ### -ForceWildcardHandling
 
-ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -155,8 +147,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 
-Specifies the input to this cmdlet.
-You can use this parameter, or you can pipe the input to this cmdlet.
+Specify an application object to get its deployment types. To get this object, use the [Get-CMApplication](Get-CMApplication.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -183,17 +174,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### IResultObject#SMS_DeploymentType
 
+For more information on this return object and its properties, see [SMS_DeploymentType server WMI class](/mem/configmgr/develop/reference/apps/sms_deploymenttype-server-wmi-class).
+
 ## NOTES
 
 ## RELATED LINKS
 
 [Convert-CMDeploymentType](Convert-CMDeploymentType.md)
-
-[Get-CMDeployment](Get-CMDeployment.md)
-
-[Get-CMDeploymentPackage](Get-CMDeploymentPackage.md)
-
-[Get-CMPackageDeploymentStatus](Get-CMPackageDeploymentStatus.md)
 
 [Remove-CMDeploymentType](Remove-CMDeploymentType.md)
 
