@@ -94,7 +94,10 @@ Accept wildcard characters: False
 ```
 
 ### -Exclusive
-{{ Fill Exclusive Description }}
+
+If this parameter is `$true`, for the rule to be compliant, it needs to exactly match the specified ACE exactly. Any other permissions on the registry key cause the rule to fail.
+
+If set to `$false`, for the rule to be compliant, the specified ACE must exist, and other permissions can exist as well.
 
 ```yaml
 Type: Boolean
