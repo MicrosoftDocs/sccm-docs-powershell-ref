@@ -1,8 +1,8 @@
 ---
-description: Add a deployment type supersedence in Configuration Manager.
+description: Add a supersedence relationship to an application.
 external help file: AdminUI.PS.AppMan.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 08/06/2020
+ms.date: 01/05/2021
 schema: 2.0.0
 title: Add-CMDeploymentTypeSupersedence
 ---
@@ -23,7 +23,9 @@ Add-CMDeploymentTypeSupersedence [-IsUninstall <Boolean>] [-SupersededDeployment
 
 ## DESCRIPTION
 
-The **Add-CMDeploymentTypeSupersedence** cmdlet sets one deployment type to supersede another. Required inputs are the superseding deployment type and the superseded deployment type. You can get both objects from the [Get-CMDeploymentType](Get-CMDeploymentType.md) cmdlet.
+Use this cmdlet to set one deployment type to supersede another.
+
+For more information, see [Supersede applications in Configuration Manager](/mem/configmgr/apps/deploy-use/revise-and-supersede-applications#supersedence).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
@@ -32,12 +34,13 @@ The **Add-CMDeploymentTypeSupersedence** cmdlet sets one deployment type to supe
 
 ### Example 1
 
-This example gets the deployment type from **MyApp** and stores it as a variable **$oldAppVer**. It then supersedes this app deployment type with a newer version, using a deployment type from **MySupersedingApp**.
+There are two example applications, **LOB app v7** and **LOB app v6**. **V7** supersedes **v6**. The first two commands use the **Get-CMDeploymentType** cmdlet to get deployment type objects. It then uses those objects with to configure the supersedence relationship.
 
 ```powershell
-$oldAppVer = Get-CMDeploymentType -ApplicationName "MyApp"
+$dt7 = Get-CMDeploymentType -ApplicationName "LOB app v7" -DeploymentTypeName "Install"
+$dt6 = Get-CMDeploymentType -ApplicationName "LOB app v6" -DeploymentTypeName "Install"
 
-Add-CMDeploymentTypeSupersedence -SupersededDeploymentType $oldAppVer -SupersedingDeploymentType (Get-CMDeploymentType -ApplicationName "MySupersedingApp")
+Add-CMDeploymentTypeSupersedence -SupersedingDeploymentType $dt7 -SupersededDeploymentType $dt6 -IsUninstall $true
 ```
 
 ## PARAMETERS
@@ -108,7 +111,7 @@ Accept wildcard characters: False
 
 ### -SupersededDeploymentType
 
-Specifies a superseded (old) deployment type object. Get this object with the [Get-CMDeploymentType](Get-CMDeploymentType.md) cmdlet.
+Specify a deployment type object for the application to supersede. In other words, the _old_ deployment type. To get this object, use the [Get-CMDeploymentType](Get-CMDeploymentType.md) or [Get-CMDeploymentTypeSupersedence](Get-CMDeploymentTypeSupersedence.md) cmdlets.
 
 ```yaml
 Type: IResultObject
@@ -124,7 +127,7 @@ Accept wildcard characters: False
 
 ### -SupersedingDeploymentType
 
-Specifies a superseding (new) deployment type object. Get this object with the [Get-CMDeploymentType](Get-CMDeploymentType.md) cmdlet.
+Specify a deployment type object for the application to supersede the other. In other words, the _replacement_ deployment type. To get this object, use the [Get-CMDeploymentType](Get-CMDeploymentType.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -173,3 +176,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Set-CMDeploymentTypeSupersedence](./Set-CMDeploymentTypeSupersedence.md)
 
 [Remove-CMDeploymentTypeSupersedence](./Remove-CMDeploymentTypeSupersedence.md)
+
+[Supersede applications in Configuration Manager](/mem/configmgr/apps/deploy-use/revise-and-supersede-applications#supersedence)

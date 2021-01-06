@@ -1,8 +1,8 @@
 ---
-description: Gets a deployment type supersedence in Configuration Manager.
+description: Get the old deployment types that an application supersedes.
 external help file: AdminUI.PS.AppMan.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 01/02/2019
+ms.date: 01/05/2021
 schema: 2.0.0
 title: Get-CMDeploymentTypeSupersedence
 ---
@@ -11,7 +11,7 @@ title: Get-CMDeploymentTypeSupersedence
 
 ## SYNOPSIS
 
-Gets a deployment type supersedence in Configuration Manager.
+Get the old deployment types that an application supersedes.
 
 ## SYNTAX
 
@@ -22,26 +22,31 @@ Get-CMDeploymentTypeSupersedence -InputObject <IResultObject> [-DisableWildcardH
 
 ## DESCRIPTION
 
-The **Get-CMDeploymentTypeSupersedence** cmdlet gets supersedence objects for a superseded deployment type. Required input is a superseded deployment type.
+Use this cmdlet to get the old deployment types that an application supersedes.
+
+For more information, see [Supersede applications in Configuration Manager](/mem/configmgr/apps/deploy-use/revise-and-supersede-applications#supersedence).
 
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
 ### Example 1
 
+There are two example applications, **LOB app v7** and **LOB app v6**. **V7** supersedes **v6**. The first command uses the **Get-CMDeploymentType** cmdlet to get a deployment type object for **v7**. It then uses that object with **Get-CMDeploymentTypeSupersedence** to get the superseded deployment type for **v6**.
+
 ```powershell
-PS XYZ:\>  Get-CMDeploymentType -ApplicationName MyApp | Get-CMDeploymentTypeSupersedence
+$dt7 = Get-CMDeploymentType -ApplicationName "LOB app v7" -DeploymentTypeName "Install"
+$dt6 = Get-CMDeploymentTypeSupersedence -InputObject $dt7
 ```
+
+The output of this cmdlet is a deployment type object for **LOB app v6**, stored in the **dt6** variable.
 
 ## PARAMETERS
 
 ### -DisableWildcardHandling
 
-DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -57,7 +62,7 @@ Accept wildcard characters: False
 
 ### -ForceWildcardHandling
 
-ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -73,7 +78,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 
-Specifies a superseded deployment type object.
+Specify a deployment type object for an application that supersedes another. In other words, the _replacement_ deployment type. To get this object, use the [Get-CMDeploymentType](Get-CMDeploymentType.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -100,6 +105,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### IResultObject#SMS_DeploymentType
 
+For more information on this return object and its properties, see [SMS_DeploymentType server WMI class](/mem/configmgr/develop/reference/apps/sms_deploymenttype-server-wmi-class).
+
 ## NOTES
 
 ## RELATED LINKS
@@ -109,3 +116,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Set-CMDeploymentTypeSupersedence](./Set-CMDeploymentTypeSupersedence.md)
 
 [Remove-CMDeploymentTypeSupersedence](./Remove-CMDeploymentTypeSupersedence.md)
+
+[Get-CMDeploymentType](Get-CMDeploymentType.md)
+
+[Supersede applications in Configuration Manager](/mem/configmgr/apps/deploy-use/revise-and-supersede-applications#supersedence)
