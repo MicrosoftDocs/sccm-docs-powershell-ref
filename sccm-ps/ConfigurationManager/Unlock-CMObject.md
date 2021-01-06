@@ -1,8 +1,8 @@
 ---
-description: Releases locks to global objects in Configuration Manager.
+description: Release a SEDO lock on an object.
 external help file: AdminUI.PS.Common.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/07/2019
+ms.date: 01/05/2021
 schema: 2.0.0
 title: Unlock-CMObject
 ---
@@ -10,7 +10,8 @@ title: Unlock-CMObject
 # Unlock-CMObject
 
 ## SYNOPSIS
-Releases locks to global objects in Configuration Manager.
+
+Release a SEDO lock on an object.
 
 ## SYNTAX
 
@@ -20,33 +21,33 @@ Unlock-CMObject [-Force] [-InputObject] <IResultObject[]> [-DisableWildcardHandl
 ```
 
 ## DESCRIPTION
-The **Unlock-CMObject** cmdlet releases locks of one or more objects in Configuration Manager.
-You can use the *InputObject* parameter to specify the input to this cmdlet, or you can pipe the input to this cmdlet.
-When you obtain the lock, the lock is assigned to you, your computer and the site in which the computer resides.
-While the lock is assigned to you, no other user or computer can edit the object until you release the lock.
 
-**Important:** Configuration Manager cmdlets now automatically handle the locking and unlocking of objects. Therefore, we do not recommend you use this cmdlet to unlock objects because this may interfere with the functionality of the cmdlets.
+> [!WARNING]
+> Configuration Manager cmdlets automatically lock and unlock objects. Use of this cmdlet may interfere with the functionality of other cmdlets.
+
+The **Unlock-CMObject** cmdlet releases the SEDO lock on one or more objects. Configuration Manager SEDO (Serialized Editing of Distributed Objects) is a mechanism to assign locks to globally replicated objects. If a user wants to edit and save an object, they have to get a lock from the site. The site assigns a lock to the user for that object, on their computer, and in the site. While the user has the lock, no one else can edit the object.
+
+For more information, see [Configuration Manager SEDO](/mem/configmgr/develop/core/understand/sedo).
 
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
-### Example 1: Unlock a global object
-```
-PS XYZ:\> $CIObj = Get-CMDriverPackage -Id "CM100042"
-PS XYZ:\> Unlock-CMObject $CIObj
-```
+### Example 1: Unlock a driver package
 
-The first command gets the driver package object that has the ID CM100042, and stores the object in the $CIObj variable.
+The first command gets the driver package with the ID **CM100042**, and stores it in the **$CIObj** variable. The second command releases the lock it. The third command shows the details of the lock, which is now blank.
 
-The second command releases the lock the object in $CIObj.
+```powershell
+$CIObj = Get-CMDriverPackage -Id "CM100042"
+Unlock-CMObject $CIObj
+Get-CMObjectLockDetails -InputObject $CIObj
+```
 
 ## PARAMETERS
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -62,7 +63,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
+
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -77,6 +79,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
+
 Forces the command to run without asking for user confirmation.
 
 ```yaml
@@ -92,7 +95,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
+
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -107,7 +111,10 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies an array of Configuration Manager objects output from another cmdlet.
+
+Specify an array of Configuration Manager objects that are output from another cmdlet. For example, to get an application object, use the [Get-CMApplication](Get-CMApplication.md) cmdlet.
+
+For a list of objects that are SEDO-enabled, see [Configuration Manager SEDO](/mem/configmgr/develop/core/understand/sedo).
 
 ```yaml
 Type: IResultObject[]
@@ -122,8 +129,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+
+Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
 
 ```yaml
 Type: SwitchParameter
@@ -147,10 +154,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
 
 [Lock-CMObject](Lock-CMObject.md)
 
-[Move-CMObject](Move-CMObject.md)
+[Get-CMObjectLockDetails](Get-CMObjectLockDetails.md)
+
+[Configuration Manager SEDO](/mem/configmgr/develop/core/understand/sedo)

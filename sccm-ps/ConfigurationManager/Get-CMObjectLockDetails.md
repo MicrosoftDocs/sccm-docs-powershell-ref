@@ -1,8 +1,8 @@
 ---
-description: Gets object lock details.
+description: Get the details of a SEDO lock for an object.
 external help file: AdminUI.PS.Common.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/02/2019
+ms.date: 01/05/2021
 schema: 2.0.0
 title: Get-CMObjectLockDetails
 ---
@@ -10,7 +10,8 @@ title: Get-CMObjectLockDetails
 # Get-CMObjectLockDetails
 
 ## SYNOPSIS
-Gets object lock details.
+
+Get the details of a SEDO lock for an object.
 
 ## SYNTAX
 
@@ -20,36 +21,56 @@ Get-CMObjectLockDetails [-InputObject] <IResultObject> [-DisableWildcardHandling
 ```
 
 ## DESCRIPTION
-The **Get-CMObjectLockDetails** cmdlet gets the object lock details for an object.
+
+Use this cmdlet to get the SEDO lock details for an object. Configuration Manager SEDO (Serialized Editing of Distributed Objects) is a mechanism to assign locks to globally replicated objects. If a user wants to edit and save an object, they have to get a lock from the site. The site assigns a lock to the user for that object, on their computer, and in the site. While the user has the lock, no one else can edit the object.
+
+For more information, see [Configuration Manager SEDO](/mem/configmgr/develop/core/understand/sedo).
 
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
-### Example 1: Get object lock details by passing an application object through the pipeline
-```
-PS ABC:\> Get-CMApplication -Name "Application01" | Get-CMObjectLockDetails
+### Example 1: Get object lock details for an application
+
+This example shows the output for the lock details of an application.
+
+```powershell
+PS XYZ:\> Get-CMApplication -Name "Central app" | Get-CMObjectLockDetails
+
+
+SmsProviderObjectPath     : __PARAMETERS
+AssignedMachine           : DESKTOP-VKJQV9N
+AssignedObjectLockContext : 36b0ab13-ebe3-4977-8aab-19a701b1c1b6
+AssignedSiteCode          : XYZ
+AssignedTimeUTC           : 1/5/2021 08:08:39
+AssignedUser              : CONTOSO\jqpublic
+LockState                 : 1
+ReturnValue               : 0
 ```
 
-This command gets the application object named Application01 and uses the pipeline operator to pass the object to **Get-CMObjectLockDetails**, which gets the object lock details for the application.
+When there's no lock on the object, the output is similar but many of the properties are blank. The values aren't `$null`, but an empty string `""`.
 
-### Example 2: Get object lock details by getting an application object
+### Example 2: Check for a lock before editing an object
+
+This example first uses the **Get-CMApplication** cmdlet to get an app object. It then uses the **Get-CMObjectLockDetails** cmdlet for that app, and assigns the **AssignedUser** property to the variable **lockUser**. If that value is blank, then it uses the **Set-CMApplication** cmdlet to change the name of the app. If the **lockUser** variable isn't blank, it writes a warning.
+
+```powershell
+$app617 = Get-CMApplication -ApplicationName "LOB app v6.17"
+$lockUser = ($app617 | Get-CMObjectLockDetails).AssignedUser
+
+if ( $lockUser -eq "" ) {
+  Set-CMApplication -InputObject $app617 -NewName "Central app v6.17"
+} else {
+  Write-Warning "There's a SEDO lock on app $($app617.LocalizedDisplayName)"
+}
 ```
-PS ABC:\> $AppObject = Get-CMApplication -Name "testApp"
-PS ABC:\> Get-CMObjectLockDetails -InputObject $AppObject
-```
-
-The first command gets the application object named testApp and stores the object in the $AppObject variable.
-
-The second object gets the object lock details for the application stored in $AppObject.
 
 ## PARAMETERS
 
 ### -DisableWildcardHandling
-DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
+
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -64,7 +85,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
+
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -79,7 +101,10 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies a Configuration Manager object output from another cmdlet.
+
+Specify a Configuration Manager object that's output from another cmdlet. For example, to get an application object, use the [Get-CMApplication](Get-CMApplication.md) cmdlet.
+
+For a list of objects that are SEDO-enabled, see [Configuration Manager SEDO](/mem/configmgr/develop/core/understand/sedo).
 
 ```yaml
 Type: IResultObject
@@ -103,6 +128,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
@@ -110,3 +136,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Lock-CMObject](Lock-CMObject.md)
 
 [Unlock-CMObject](Unlock-CMObject.md)
+
+[Configuration Manager SEDO](/mem/configmgr/develop/core/understand/sedo)
