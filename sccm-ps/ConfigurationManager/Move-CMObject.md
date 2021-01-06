@@ -96,12 +96,19 @@ Specifies a destination folder path, in the following format: `<site code>:\<obj
 - `<site code>`: The Configuration Manager site code.
 - `<object type>`: One of the following keywords for the type of object to move:
   - **Application**
-  - **Package**
+  - **BootImage**
+  - **ConfigurationBaseline**
+  - **ConfigurationItem**
+  - **DeviceCollection**
+  - **Driver**
   - **DriverPackage**
   - **OperatingSystemImage**
   - **OperatingSystemInstaller**
-  - **BootImage**
+  - **Package**
+  - **Query**
   - **TaskSequence**
+  - **UserCollection**
+  - **UserStateMigration**
 
 For example, a folder named **LOB Apps** for an application at the site CM1 has the following file path: `CM1:\Application\LOB Apps`.
 
