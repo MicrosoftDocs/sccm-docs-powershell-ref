@@ -1,8 +1,8 @@
 ---
-description: Sets a deployment type supersedence in Configuration Manager.
+description: Configure a supersedence relationship on an application.
 external help file: AdminUI.PS.AppMan.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 01/02/2019
+ms.date: 01/05/2021
 schema: 2.0.0
 title: Set-CMDeploymentTypeSupersedence
 ---
@@ -11,7 +11,7 @@ title: Set-CMDeploymentTypeSupersedence
 
 ## SYNOPSIS
 
-Sets a deployment type supersedence in Configuration Manager.
+Configure a supersedence relationship on an application.
 
 ## SYNTAX
 
@@ -23,19 +23,24 @@ Set-CMDeploymentTypeSupersedence -InputObject <IResultObject> [-IsUninstall <Boo
 
 ## DESCRIPTION
 
-The **Set-CMDeploymentTypeSupersedence** cmdlet configures settings for a deployment type supersedence. Required input is a superseding type from [Get-CMDeploymentType](./Get-CMDeploymentType.md) or [Get-CMDeploymentTypeSupersedence](./Get-CMDeploymentTypeSupersedence.md) and superseded deployment type from [Get-CMDeploymentType](./Get-CMDeploymentType.md).
+Use this cmdlet to configure a supersedence relationship on an application.
+
+For more information, see [Supersede applications in Configuration Manager](/mem/configmgr/apps/deploy-use/revise-and-supersede-applications#supersedence).
 
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
 ### Example 1
 
-```
-PS XYZ:\>  Get-CMDeploymentType -ApplicationName MyApp | Set-CMDeploymentTypeSupersedence -SupersedingDeploymentType (Get-CMDeploymentType -ApplicationName MySupersedingApp) -IsUninstall $true
+There are two example applications, **LOB app v7** and **LOB app v6**. **V7** supersedes **v6**. The first two commands use the **Get-CMDeploymentType** cmdlet to get deployment type objects. It then uses those objects with to configure the supersedence relationship.
+
+```powershell
+$dt7 = Get-CMDeploymentType -ApplicationName "LOB app v7" -DeploymentTypeName "Install"
+$dt6 = Get-CMDeploymentType -ApplicationName "LOB app v6" -DeploymentTypeName "Install"
+
+Set-CMDeploymentTypeSupersedence -SupersedingDeploymentType $dt7 -InputObject $dt6 -IsUninstall $true
 ```
 
 ## PARAMETERS
@@ -58,7 +63,7 @@ Accept wildcard characters: False
 
 ### -DisableWildcardHandling
 
-DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -74,7 +79,7 @@ Accept wildcard characters: False
 
 ### -ForceWildcardHandling
 
-ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -90,7 +95,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 
-Specifies a superseded deployment type object.
+Specify a deployment type object for the application to supersede. In other words, the _old_ deployment type. To get this object, use the [Get-CMDeploymentType](Get-CMDeploymentType.md) or [Get-CMDeploymentTypeSupersedence](Get-CMDeploymentTypeSupersedence.md) cmdlets.
 
 ```yaml
 Type: IResultObject
@@ -106,6 +111,8 @@ Accept wildcard characters: False
 
 ### -IsUninstall
 
+If `$false`, the new deployment type (superseding) will upgrade the installed deployment type (superseded). If you set this parameter to `$true`, Configuration Manager uninstalls the previous deployment type when it installs the new deployment type.
+
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
@@ -120,7 +127,7 @@ Accept wildcard characters: False
 
 ### -PassThru
 
-Returns an object representing the item with which you are working. By default, this cmdlet may not generate any output.
+Add this parameter to return an object that represents the item with which you're working. By default, this cmdlet may not generate any output.
 
 ```yaml
 Type: SwitchParameter
@@ -136,7 +143,7 @@ Accept wildcard characters: False
 
 ### -SupersedingDeploymentType
 
-Specifies a superseding deployment type object.
+Specify a deployment type object for the application to supersede the other. In other words, the _replacement_ deployment type. To get this object, use the [Get-CMDeploymentType](Get-CMDeploymentType.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -152,8 +159,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
 
 ```yaml
 Type: SwitchParameter
@@ -177,6 +183,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
@@ -186,3 +193,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-CMDeploymentTypeSupersedence](./Get-CMDeploymentTypeSupersedence.md)
 
 [Remove-CMDeploymentTypeSupersedence](./Remove-CMDeploymentTypeSupersedence.md)
+
+[Supersede applications in Configuration Manager](/mem/configmgr/apps/deploy-use/revise-and-supersede-applications#supersedence)

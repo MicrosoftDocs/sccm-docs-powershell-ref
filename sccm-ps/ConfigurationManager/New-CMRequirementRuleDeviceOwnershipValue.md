@@ -1,6 +1,7 @@
 ﻿---
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 Module Name: ConfigurationManager
+ms.date: 12/30/2020
 online version:
 schema: 2.0.0
 ---
@@ -8,7 +9,8 @@ schema: 2.0.0
 # New-CMRequirementRuleDeviceOwnershipValue
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Create a device ownership requirement rule for an application deployment type.
 
 ## SYNTAX
 
@@ -19,25 +21,34 @@ New-CMRequirementRuleDeviceOwnershipValue -OwnershipOption <OwnershipType>
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+Use this cmdlet to create a device ownership requirement rule for an application deployment type. The **Ownership** default global condition determines whether the device is **Personal** or **Company** owned.
+
+After you use this cmdlet, then use one of the **Add-** or **Set-** cmdlets for deployment types. Pass this requirement rule object to either the **AddRequirement** or **RemoveRequirement** parameters.
+
+For more information, see [Deployment type Requirements](/mem/configmgr/apps/deploy-use/create-applications#bkmk_dt-require) and [Create global conditions](/mem/configmgr/apps/deploy-use/create-global-conditions).
 
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS XYZ:\> {{ Add example code here }}
-```
+### Example 1: Add a requirement rule for device ownership
 
-{{ Add example description here }}
+This example first uses the **Get-CMGlobalCondition** cmdlet to get the default **Ownership** global condition. Next it creates the requirement rule object. Finally it passes that rule object to the **Set-CMScriptDeploymentType** cmdlet to add the requirement.
+
+```powershell
+$gc = Get-CMGlobalCondition -Name "Configuration Manager site"
+$sites = @('XYZ', 'ABC')
+$rule = New-CMRequirementRuleActiveDirectorySiteValue -InputObject $gc -RuleOperator IsEquals -OwnershipOption Company
+
+Set-CMScriptDeploymentType -ApplicationName "Central App" -DeploymentTypeName "Install" -AddRequirement $rule
+```
 
 ## PARAMETERS
 
 ### -DisableWildcardHandling
+
 This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
@@ -53,6 +64,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
+
 This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
@@ -68,7 +80,10 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{ Fill InputObject Description }}
+
+Specify a global condition object to use as the basis for this requirement rule. To get this object, use the [Get-CMGlobalCondition](Get-CMGlobalCondition.md) cmdlet.
+
+In most instances, you'll use the default **Ownership** global condition, for example: `Get-CMGlobalCondition -Name "Ownership"`.
 
 ```yaml
 Type: IResultObject
@@ -83,7 +98,8 @@ Accept wildcard characters: False
 ```
 
 ### -OwnershipOption
-{{ Fill OwnershipOption Description }}
+
+Specify the device ownership type to compare against the device's configuration.
 
 ```yaml
 Type: OwnershipType
@@ -99,7 +115,8 @@ Accept wildcard characters: False
 ```
 
 ### -RuleOperator
-{{ Fill RuleOperator Description }}
+
+Specify the operator to compare the device's setting with the **OwnershipOption**.
 
 ```yaml
 Type: RuleExpressionOperator
@@ -124,6 +141,26 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
+
+[New-CMRequirementRuleActiveDirectorySiteValue](New-CMRequirementRuleActiveDirectorySiteValue.md)
+[New-CMRequirementRuleBooleanValue](New-CMRequirementRuleBooleanValue.md)
+[New-CMRequirementRuleCMSiteValue](New-CMRequirementRuleCMSiteValue.md)
+[New-CMRequirementRuleCommonValue](New-CMRequirementRuleCommonValue.md)
+[New-CMRequirementRuleExistential](New-CMRequirementRuleExistential.md)
+[New-CMRequirementRuleExpression](New-CMRequirementRuleExpression.md)
+[New-CMRequirementRuleFileAttributeValue](New-CMRequirementRuleFileAttributeValue.md)
+[New-CMRequirementRuleFilePermissionValue](New-CMRequirementRuleFilePermissionValue.md)
+[New-CMRequirementRuleFreeDiskSpaceValue](New-CMRequirementRuleFreeDiskSpaceValue.md)
+[New-CMRequirementRuleInputTypeValue](New-CMRequirementRuleInputTypeValue.md)
+[New-CMRequirementRuleOperatingSystemLanguageValue](New-CMRequirementRuleOperatingSystemLanguageValue.md)
+[New-CMRequirementRuleOperatingSystemValue](New-CMRequirementRuleOperatingSystemValue.md)
+[New-CMRequirementRuleOUValue](New-CMRequirementRuleOUValue.md)
+[New-CMRequirementRuleRegistryKeyPermissionValue](New-CMRequirementRuleRegistryKeyPermissionValue.md)
+[New-CMRequirementRuleScreenResolutionValue](New-CMRequirementRuleScreenResolutionValue.md)
+[Get-CMGlobalCondition](Get-CMGlobalCondition.md)
+[Deployment type Requirements](/mem/configmgr/apps/deploy-use/create-applications#bkmk_dt-require)
+[Create global conditions](/mem/configmgr/apps/deploy-use/create-global-conditions)

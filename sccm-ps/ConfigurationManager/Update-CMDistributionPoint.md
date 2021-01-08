@@ -1,8 +1,8 @@
 ---
-description: Updates content on a distribution point.
+description: Update content on a distribution point.
 external help file: AdminUI.PS.Osd.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/07/2019
+ms.date: 12/29/2020
 schema: 2.0.0
 title: Update-CMDistributionPoint
 ---
@@ -10,7 +10,8 @@ title: Update-CMDistributionPoint
 # Update-CMDistributionPoint
 
 ## SYNOPSIS
-Updates content on a distribution point.
+
+Update content on a distribution point.
 
 ## SYNTAX
 
@@ -99,28 +100,31 @@ Update-CMDistributionPoint -SoftwareUpdateDeploymentPackageName <String> [-Disab
 ```
 
 ## DESCRIPTION
-The **Update-CMDistributionPoint** cmdlet updates distribution points with the latest content for clients to download.
-You can update the distribution points for application content, software packages, software updates, operating system images, and boot images.
-Manually updating the distribution points does not interfere with the recurring update schedule.
+
+Use this cmdlet to update distribution points with the latest content for clients to download.
+
+If you manually update a distribution point, it doesn't interfere with a recurring update schedule.
+
+For more information, see [Deploy and manage content in Configuration Manager](/mem/configmgr/core/servers/deploy/configure/deploy-and-manage-content#update-content).
 
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
 ### Example 1: Update distribution points by package name
-```
-PS XYZ:\>Update-CMDistributionPoint -PackageName "Package01"
-```
 
-This command updates distribution points with the package named Package01.
+This command updates all distribution points that have the package named **Package01**.
+
+```powershell
+Update-CMDistributionPoint -PackageName "Package01"
+```
 
 ## PARAMETERS
 
 ### -ApplicationName
-Specifies the name of an application.
+
+Specify the name of an application, and use the **DeploymentTypeName** parameter to specify the name of the deployment type with the content to update.
 
 ```yaml
 Type: String
@@ -135,7 +139,8 @@ Accept wildcard characters: False
 ```
 
 ### -BootImageId
-Specifies the ID of a boot image.
+
+Specify the ID of a boot image to update. For example, `"XYZ00015"`.
 
 ```yaml
 Type: String
@@ -150,7 +155,8 @@ Accept wildcard characters: False
 ```
 
 ### -BootImageName
-Specifies the name of a boot image.
+
+Specify the name of a boot image to update.
 
 ```yaml
 Type: String
@@ -165,6 +171,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -180,7 +187,8 @@ Accept wildcard characters: False
 ```
 
 ### -DeploymentTypeName
-Specifies the name of a deployment type.
+
+Specify the name of an application deployment type to update its content. Use the **ApplicationName** parameter to specify the application.
 
 ```yaml
 Type: String
@@ -195,7 +203,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
+
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -210,7 +219,8 @@ Accept wildcard characters: False
 ```
 
 ### -DriverPackageId
-Specifies the ID of a driver package.
+
+Specify the ID of a driver package to update. For example, `"XYZ00017"`.
 
 ```yaml
 Type: String
@@ -225,7 +235,8 @@ Accept wildcard characters: False
 ```
 
 ### -DriverPackageName
-Specifies the name of a driver package.
+
+Specify the name of a driver package to update.
 
 ```yaml
 Type: String
@@ -240,7 +251,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
+
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -255,8 +267,15 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies a package object.
-To obtain a package object, use the [Get-CMPackage](Get-CMPackage.md) cmdlet.
+
+Specify an object type to update. To get these objects, use one of the following cmdlets:
+
+- [Get-CMPackage](Get-CMPackage.md) for a legacy package
+- [Get-CMBootImage](Get-CMBootImage.md) for a boot image
+- [Get-CMDeploymentPackage](Get-CMDeploymentPackage.md) for a software update deployment package
+- [Get-CMDriverPackage](Get-CMDriverPackage.md) for a driver package
+- [Get-CMOperatingSystemImage](Get-CMOperatingSystemImage.md) for an OS image
+- [Get-CMOperatingSystemInstaller](Get-CMOperatingSystemInstaller.md) for an OS upgrade package
 
 ```yaml
 Type: IResultObject
@@ -271,8 +290,8 @@ Accept wildcard characters: False
 ```
 
 ### -ManifestPath
-Specifies the UNC path of the virtual application's XML manifest file.
-Specify the manifest path if you specify Microsoft Application Virtualization for the *DeploymentTypeName* parameter.
+
+Specify the UNC path of a Microsoft App-V virtual application's XML manifest file.
 
 ```yaml
 Type: String
@@ -287,7 +306,8 @@ Accept wildcard characters: False
 ```
 
 ### -OperatingSystemImageId
-Specifies the ID of an operating system image.
+
+Specify the ID of an OS image to update. For example, `"XYZ00018"`.
 
 ```yaml
 Type: String
@@ -302,7 +322,8 @@ Accept wildcard characters: False
 ```
 
 ### -OperatingSystemImageName
-Specifies the name of an operating system image.
+
+Specify the name of an OS image to update.
 
 ```yaml
 Type: String
@@ -317,7 +338,8 @@ Accept wildcard characters: False
 ```
 
 ### -OperatingSystemInstallerId
-Specifies the ID of an operating system installer.
+
+Specify the ID of an OS upgrade package to update. For example, `"XYZ00019"`.
 
 ```yaml
 Type: String
@@ -332,7 +354,8 @@ Accept wildcard characters: False
 ```
 
 ### -OperatingSystemInstallerName
-Specifies the name of an operating system installer.
+
+Specify the name of an OS upgrade package to update.
 
 ```yaml
 Type: String
@@ -347,7 +370,8 @@ Accept wildcard characters: False
 ```
 
 ### -PackageId
-Specifies the ID of a package.
+
+Specify the ID of a legacy package to update. For example, `"XYZ00020"`.
 
 ```yaml
 Type: String
@@ -362,7 +386,8 @@ Accept wildcard characters: False
 ```
 
 ### -PackageName
-Specifies the name of a package.
+
+Specify the name of a legacy package to update.
 
 ```yaml
 Type: String
@@ -377,6 +402,9 @@ Accept wildcard characters: False
 ```
 
 ### -ReloadBootImage
+
+When you update a boot image, add this parameter to reload it with the current Windows PE version from the Windows ADK. For more information, see [Manage boot images in Configuration Manager](/mem/configmgr/osd/get-started/manage-boot-images#update-distribution-points-with-the-boot-image).
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ByValue, SearchByBootImageId, SearchByBootImageName
@@ -390,7 +418,8 @@ Accept wildcard characters: False
 ```
 
 ### -SoftwareUpdateDeploymentPackageId
-Specifies the ID of a software update deployment package.
+
+Specify the ID of a software update deployment package to update. For example, `"XYZ00016"`.
 
 ```yaml
 Type: String
@@ -405,7 +434,8 @@ Accept wildcard characters: False
 ```
 
 ### -SoftwareUpdateDeploymentPackageName
-Specifies the name of a software update deployment package.
+
+Specify the name of a software update deployment package to update.
 
 ```yaml
 Type: String
@@ -420,8 +450,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+
+Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
 
 ```yaml
 Type: SwitchParameter
@@ -445,6 +475,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
@@ -468,3 +499,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-CMPackage](Get-CMPackage.md)
 
 [Get-CMSoftwareUpdateDeploymentPackage](Get-CMSoftwareUpdateDeploymentPackage.md)
+
+[Invoke-CMContentValidation](Invoke-CMContentValidation.md)
+
+[Remove-CMContentDistribution](Remove-CMContentDistribution.md)
+
+[Start-CMContentDistribution](Start-CMContentDistribution.md)

@@ -1,7 +1,7 @@
 ---
 external help file: AdminUI.PS.AppMan.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 07/31/2020
+ms.date: 12/29/2020
 online version:
 schema: 2.0.0
 ---
@@ -153,7 +153,16 @@ Add-CMTaskSequenceDeploymentType -ApplicationName "CBI" -DeploymentTypeName "Com
 ## PARAMETERS
 
 ### -AddDetectionClause
-{{ Fill AddDetectionClause Description }}
+
+Specify an array of detection method clauses for this deployment type. To create a detection clause, use one of the following cmdlets:
+
+- [New-CMDetectionClauseDirectory](New-CMDetectionClauseDirectory.md)
+- [New-CMDetectionClauseFile](New-CMDetectionClauseFile.md)
+- [New-CMDetectionClauseRegistryKey](New-CMDetectionClauseRegistryKey.md)
+- [New-CMDetectionClauseRegistryKeyValue](New-CMDetectionClauseRegistryKeyValue.md)
+- [New-CMDetectionClauseWindowsInstaller](New-CMDetectionClauseWindowsInstaller.md)
+
+Save the output of these cmdlets into a variable. Then specify those variables as an array for this parameter. For example, `-AddDetectionClause $clauseFile1,$clauseFile2,$clauseFile3`.
 
 ```yaml
 Type: DetectionClause[]
@@ -169,7 +178,9 @@ Accept wildcard characters: False
 
 ### -AddLanguage
 
-Adds an array of languages that this deployment type supports.
+Specify an array of language tags that the deployment type supports. For example, to add **Russian (Russia)**, specify the tag `ru-RU`.
+
+For more information and a list of language tags, see [Windows Language Code Identifier (LCID) Reference](/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c).
 
 ```yaml
 Type: String[]
@@ -185,7 +196,24 @@ Accept wildcard characters: False
 
 ### -AddRequirement
 
-Adds an array of requirements for this deployment type.
+Specify an array of requirement objects for the deployment type. To create a requirement rule object, use one of the following cmdlets:
+
+- [New-CMRequirementRuleActiveDirectorySiteValue](New-CMRequirementRuleActiveDirectorySiteValue.md)
+- [New-CMRequirementRuleBooleanValue](New-CMRequirementRuleBooleanValue.md)
+- [New-CMRequirementRuleCMSiteValue](New-CMRequirementRuleCMSiteValue.md)
+- [New-CMRequirementRuleCommonValue](New-CMRequirementRuleCommonValue.md)
+- [New-CMRequirementRuleDeviceOwnershipValue](New-CMRequirementRuleDeviceOwnershipValue.md)
+- [New-CMRequirementRuleExistential](New-CMRequirementRuleExistential.md)
+- [New-CMRequirementRuleExpression](New-CMRequirementRuleExpression.md)
+- [New-CMRequirementRuleFileAttributeValue](New-CMRequirementRuleFileAttributeValue.md)
+- [New-CMRequirementRuleFilePermissionValue](New-CMRequirementRuleFilePermissionValue.md)
+- [New-CMRequirementRuleFreeDiskSpaceValue](New-CMRequirementRuleFreeDiskSpaceValue.md)
+- [New-CMRequirementRuleInputTypeValue](New-CMRequirementRuleInputTypeValue.md)
+- [New-CMRequirementRuleOperatingSystemLanguageValue](New-CMRequirementRuleOperatingSystemLanguageValue.md)
+- [New-CMRequirementRuleOperatingSystemValue](New-CMRequirementRuleOperatingSystemValue.md)
+- [New-CMRequirementRuleOUValue](New-CMRequirementRuleOUValue.md)
+- [New-CMRequirementRuleRegistryKeyPermissionValue](New-CMRequirementRuleRegistryKeyPermissionValue.md)
+- [New-CMRequirementRuleScreenResolutionValue](New-CMRequirementRuleScreenResolutionValue.md)
 
 ```yaml
 Type: Rule[]
@@ -201,7 +229,7 @@ Accept wildcard characters: False
 
 ### -ApplicationId
 
-Specifies the ID of the application that is associated with this deployment type.
+Specify the ID of the application for this deployment type.
 
 ```yaml
 Type: Int32
@@ -217,7 +245,7 @@ Accept wildcard characters: False
 
 ### -ApplicationName
 
-Specifies the name of the application that is associated with this deployment type.
+Specify the name of the application for this deployment type.
 
 ```yaml
 Type: String
@@ -233,7 +261,7 @@ Accept wildcard characters: False
 
 ### -Comment
 
-Specifies a description for this deployment type.
+Specify an optional description for the deployment type.
 
 ```yaml
 Type: String
@@ -265,7 +293,7 @@ Accept wildcard characters: False
 
 ### -DeploymentTypeName
 
-Specifies a display name for this deployment type.
+Specify a display name for this deployment type.
 
 ```yaml
 Type: String
@@ -292,7 +320,10 @@ Accept wildcard characters: False
 ```
 
 ### -DetectionClauseConnector
-{{ Fill DetectionClauseConnector Description }}
+
+When you use the **GroupDetectionClauses** parameter to group detection clauses, use this parameter to specify the connector.
+
+The following example defines the **OR** connector: `@{"LogicalName"=$clauseFile3.Setting.LogicalName;"Connector"="OR"}`
 
 ```yaml
 Type: Hashtable[]
@@ -324,7 +355,7 @@ Accept wildcard characters: False
 
 ### -EstimatedRuntimeMins
 
-Specifies the estimated installation time, in minutes, of the deployment program for the application. This estimate is displayed to the user before the application installs.
+Specify the estimated installation time, in minutes, of this deployment type for the application. Software Center displays this estimate to the user before the application installs.
 
 ```yaml
 Type: Int32
@@ -356,7 +387,7 @@ Accept wildcard characters: False
 
 ### -ForceScriptDetection32Bit
 
-Indicates that the deployment type uses the Microsoft Windows-32-on-Windows-64 (WOW64) subsystem to run a script on a 64-bit client computer.
+If you use a custom script to detect the presence of this deployment type, set this parameter to `$true` to run the script as a 32-bit process on 64-bit clients.
 
 ```yaml
 Type: SwitchParameter
@@ -387,7 +418,19 @@ Accept wildcard characters: False
 ```
 
 ### -GroupDetectionClauses
-{{ Fill GroupDetectionClauses Description }}
+
+When you configure rules to detect the presence of this deployment type, use this parameter to group clauses. To create a detection clause, use one of the following cmdlets:
+
+- [New-CMDetectionClauseDirectory](New-CMDetectionClauseDirectory.md)
+- [New-CMDetectionClauseFile](New-CMDetectionClauseFile.md)
+- [New-CMDetectionClauseRegistryKey](New-CMDetectionClauseRegistryKey.md)
+- [New-CMDetectionClauseRegistryKeyValue](New-CMDetectionClauseRegistryKeyValue.md)
+- [New-CMDetectionClauseWindowsInstaller](New-CMDetectionClauseWindowsInstaller.md)
+
+Save the output of these cmdlets into a variable. Then use the following format to group clauses: `$clause2.Setting.LogicalName, $clause3.Setting.LogicalName`.
+
+> [!TIP]
+> In the Configuration Manager console, when you select the **Group** action, the clauses show parentheses before and after the grouped clauses.
 
 ```yaml
 Type: String[]
@@ -403,7 +446,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 
-Specifies an application object. To get an application object, use the [Get-CMApplication](Get-CMApplication.md) cmdlet.
+Specify an application object to configure. To get this object, use the [Get-CMApplication](Get-CMApplication.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -419,7 +462,7 @@ Accept wildcard characters: False
 
 ### -InstallTaskSequenceId
 
-The ID of the task sequence to install the app
+The ID of the task sequence to install the app.
 
 ```yaml
 Type: String
@@ -435,12 +478,11 @@ Accept wildcard characters: False
 
 ### -InstallationBehaviorType
 
-Specifies the installation behavior of the deployment type.
-Valid values are:
+Specify the installation behavior for this deployment type:
 
-- InstallForUser
-- InstallForSystem
-- InstallForSystemIfResourceIsDeviceOtherwiseInstallForUser
+- `InstallForUser`: The client only installs the application for the user to whom you deploy the application.
+- `InstallForSystem`: The client installs the application only once. It's available to all users.
+- `InstallForSystemIfResourceIsDeviceOtherwiseInstallForUser`: If you deploy the application to a device, the client installs it for all users. If you deploy the application to a user, the client only installs it for that user.
 
 ```yaml
 Type: InstallationBehaviorType
@@ -457,12 +499,16 @@ Accept wildcard characters: False
 
 ### -LogonRequirementType
 
-Specifies the logon requirement for the deployment type. Valid values are:
+Specify the requirement for a signed-in user:
 
-- OnlyWhenNoUserLoggedOn
-- OnlyWhenUserLoggedOn
-- WhereOrNotUserLoggedOn
-- WhetherOrNotUserLoggedOn
+- `OnlyWhenNoUserLoggedOn`: Only when no user is signed into Windows.
+- `OnlyWhenUserLoggedOn`: Only when a user is signed in. This option is the default.
+- `WhetherOrNotUserLoggedOn`: Whether or not a user is signed in.
+
+    > [!NOTE]
+    > The value `WhereOrNotUserLoggedOn` is deprecated. It's replaced by `WhetherOrNotUserLoggedOn`.
+
+If you set **InstallationBehaviorType** to `InstallForUser`, then you can't set this parameter.
 
 ```yaml
 Type: LogonRequirementType
@@ -479,7 +525,7 @@ Accept wildcard characters: False
 
 ### -MaximumRuntimeMins
 
-Specifies the maximum run time in minutes of the deployment program for this application.
+Specify the maximum allowed run time of the deployment program for this application. Set an integer value in minutes.
 
 ```yaml
 Type: Int32
@@ -495,7 +541,7 @@ Accept wildcard characters: False
 
 ### -ProductCode
 
-Specifies the product code in the detection method for the deployment type.
+If the application uses Windows Installer technology, specify an MSI product code to set as the detection method. When you use this parameter, it overwrites any existing detection methods.
 
 ```yaml
 Type: String
@@ -511,7 +557,17 @@ Accept wildcard characters: False
 
 ### -RebootBehavior
 
-Specifies the reboot behavior.
+Specify the post-installation behavior:
+
+- `BasedOnExitCode`: Determine behavior based on return codes.
+
+- `NoAction`: No specific action.
+
+- `ProgramReboot`: The software install program might force a device restart.
+
+- `ForceReboot`: Configuration Manager client will force a mandatory device restart.
+
+For more information on these behaviors, see [Create applications in Configuration Manager](/mem/configmgr/apps/deploy-use/create-applications#deployment-type-properties-user-experience-options).
 
 ```yaml
 Type: PostExecutionBehavior
@@ -528,7 +584,7 @@ Accept wildcard characters: False
 
 ### -RemoveLanguage
 
-Removes the existing supported languages from this deployment type.
+Specify an array of supported languages to remove from this deployment type.
 
 ```yaml
 Type: String[]
@@ -544,7 +600,7 @@ Accept wildcard characters: False
 
 ### -RemoveRequirement
 
-Removes the existing installation requirements from this deployment type.
+Specify an array of requirement rules to remove from this deployment type.
 
 ```yaml
 Type: Rule[]
@@ -560,7 +616,7 @@ Accept wildcard characters: False
 
 ### -RequireUserInteraction
 
-Indicates whether a user can interact with the deployment type installation to configure the installation options.
+Set this parameter to `$true` to allow users to view and interact with the deployment type installation.
 
 ```yaml
 Type: SwitchParameter
@@ -576,7 +632,7 @@ Accept wildcard characters: False
 
 ### -ScriptFile
 
-The path to the script to use to detect this deployment type. Use the **-ScriptLanguage** parameter to set the type of script.
+Specify the script file to use to detect this deployment type. Also use the **ScriptLanguage** parameter.
 
 ```yaml
 Type: String
@@ -592,12 +648,7 @@ Accept wildcard characters: False
 
 ### -ScriptLanguage
 
-Specifies the script language that you want to use to detect this deployment type.
-Valid values are:
-
-- PowerShell
-- VBScript
-- JavaScript
+If you use the **ScriptFile** or **ScriptText** parameters, use this parameter to specify the script language.
 
 ```yaml
 Type: ScriptLanguage
@@ -614,7 +665,9 @@ Accept wildcard characters: False
 
 ### -ScriptText
 
-Specifies the script to use to detect this deployment type.
+Specify the text of a script to detect this deployment type. Also use the **ScriptLanguage** parameter.
+
+For more information, see [About custom script detection methods](/mem/configmgr/apps/deploy-use/create-applications#about-custom-script-detection-methods).
 
 ```yaml
 Type: String
@@ -630,12 +683,10 @@ Accept wildcard characters: False
 
 ### -SlowNetworkDeploymentMode
 
-Specifies the installation behavior of the deployment type on a slow network.
-Valid values are:
+When a client uses a distribution point from a neighbor boundary group or the default site boundary group, specify the deployment option:
 
-- DoNothing
-- Download
-- DownloadContentForStreaming
+- `DoNothing`: Don't download content
+- `Download`: Download content from the distribution point and run locally
 
 ```yaml
 Type: ContentHandlingMode
@@ -668,13 +719,12 @@ Accept wildcard characters: False
 
 ### -UserInteractionMode
 
-Specifies the mode in which the deployment type runs on client devices.
-Valid values are:
+Specify the installation program visibility:
 
-- Normal
-- Minimized
-- Maximized
-- Hidden
+- `Normal`: The deployment type runs in the normal mode based on system and program defaults. This mode is the default.
+- `Minimized`: The deployment type runs minimized on client devices. Users might see the installation activity in the notification area or taskbar.
+- `Maximized`: The deployment type runs maximized on client devices. Users see all installation activity.
+- `Hidden`: The deployment type runs hidden on client devices. Users see no installation activity.
 
 ```yaml
 Type: UserInteractionMode
@@ -715,8 +765,17 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
+
+[Set-CMTaskSequenceDeploymentType](Set-CMTaskSequenceDeploymentType.md)
+
+[Get-CMDeploymentType](Get-CMDeploymentType.md)
+
+[Remove-CMDeploymentType](Remove-CMDeploymentType.md)
+
+[Get-CMApplication](Get-CMApplication.md)
 
 [Task sequence deployment type](/mem/configmgr/apps/get-started/creating-windows-applications#bkmk_tsdt)

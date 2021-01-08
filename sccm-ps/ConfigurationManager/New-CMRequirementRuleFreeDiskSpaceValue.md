@@ -1,6 +1,7 @@
-﻿---
+---
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 Module Name: ConfigurationManager
+ms.date: 12/30/2020
 online version:
 schema: 2.0.0
 ---
@@ -8,7 +9,8 @@ schema: 2.0.0
 # New-CMRequirementRuleFreeDiskSpaceValue
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Create a disk space requirement rule for an application deployment type.
 
 ## SYNTAX
 
@@ -19,25 +21,38 @@ New-CMRequirementRuleFreeDiskSpaceValue [-DriverLetter <String>] -PartitionOptio
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+Use this cmdlet to create a disk space requirement rule for an application deployment type.
+
+After you use this cmdlet, then use one of the **Add-** or **Set-** cmdlets for deployment types. Pass this requirement rule object to either the **AddRequirement** or **RemoveRequirement** parameters.
+
+For more information, see [Deployment type Requirements](/mem/configmgr/apps/deploy-use/create-applications#bkmk_dt-require) and [Create global conditions](/mem/configmgr/apps/deploy-use/create-global-conditions).
 
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS XYZ:\> {{ Add example code here }}
-```
+### Example 1: Add a requirement rule for disk space
 
-{{ Add example description here }}
+This example first uses the **Get-CMGlobalCondition** cmdlet to get the default **Disk space** global condition. It then creates the requirement rule object to check free space on the **E:** drive is between 5 MB and 10 MB. Finally it passes that rule object to the **Set-CMScriptDeploymentType** cmdlet to add the requirement.
+
+```powershell
+$value1 = 5
+
+$value2 = 10
+
+$myGC = Get-CMGlobalCondition -Name "Disk space"
+
+$myRule = $myGC | New-CMRequirementRuleFreeDiskSpaceValue -PartitionOption Special -RuleOperator Between -Value1 $value1 -Value2 $value2 -DriverLetter "E:"
+
+Set-CMScriptDeploymentType -ApplicationName "Central App" -DeploymentTypeName "Install" -AddRequirement $myRule
+```
 
 ## PARAMETERS
 
 ### -DisableWildcardHandling
+
 This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
@@ -53,7 +68,8 @@ Accept wildcard characters: False
 ```
 
 ### -DriverLetter
-{{ Fill DriverLetter Description }}
+
+When you set the **PartitionOption** parameter to `Special`, use this parameter to specify the drive letter. For example, `"C:"`.
 
 ```yaml
 Type: String
@@ -68,6 +84,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
+
 This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
@@ -83,7 +100,10 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{ Fill InputObject Description }}
+
+Specify a global condition object to use as the basis for this requirement rule. To get this object, use the [Get-CMGlobalCondition](Get-CMGlobalCondition.md) cmdlet.
+
+In most instances, you'll use the default **Disk space** global condition, for example: `Get-CMGlobalCondition -Name "Disk space"`.
 
 ```yaml
 Type: IResultObject
@@ -98,7 +118,12 @@ Accept wildcard characters: False
 ```
 
 ### -PartitionOption
-{{ Fill PartitionOption Description }}
+
+Specify the type of partition to evaluate with this requirement rule:
+
+- `Any`: Any drive on the device
+- `System`: The Windows system drive
+- `Special`: A specific drive. Use the **DriverLetter** parameter to specify the drive letter.
 
 ```yaml
 Type: PartitionType
@@ -114,7 +139,8 @@ Accept wildcard characters: False
 ```
 
 ### -RuleOperator
-{{ Fill RuleOperator Description }}
+
+Specify the operator to compare the device's setting with the expected value.
 
 ```yaml
 Type: RuleExpressionOperator
@@ -130,7 +156,8 @@ Accept wildcard characters: False
 ```
 
 ### -Value1
-{{ Fill Value1 Description }}
+
+Specify an integer or array of expected values to compare. This value is the amount of free space in megabytes (MB).
 
 ```yaml
 Type: Int64[]
@@ -145,7 +172,12 @@ Accept wildcard characters: False
 ```
 
 ### -Value2
-{{ Fill Value2 Description }}
+
+If you use a **RuleOperator** like `Between`, use this parameter to specify the upper value.
+
+For example:
+
+`$myRule = New-CMRequirementRuleFreeDiskSpaceValue -InputObject $GC -PartitionOption System -RuleOperator Between -Value1 1024 -Value2 2048`
 
 ```yaml
 Type: Int64
@@ -169,6 +201,26 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
+
+[New-CMRequirementRuleActiveDirectorySiteValue](New-CMRequirementRuleActiveDirectorySiteValue.md)
+[New-CMRequirementRuleBooleanValue](New-CMRequirementRuleBooleanValue.md)
+[New-CMRequirementRuleCMSiteValue](New-CMRequirementRuleCMSiteValue.md)
+[New-CMRequirementRuleCommonValue](New-CMRequirementRuleCommonValue.md)
+[New-CMRequirementRuleDeviceOwnershipValue](New-CMRequirementRuleDeviceOwnershipValue.md)
+[New-CMRequirementRuleExistential](New-CMRequirementRuleExistential.md)
+[New-CMRequirementRuleExpression](New-CMRequirementRuleExpression.md)
+[New-CMRequirementRuleFileAttributeValue](New-CMRequirementRuleFileAttributeValue.md)
+[New-CMRequirementRuleFilePermissionValue](New-CMRequirementRuleFilePermissionValue.md)
+[New-CMRequirementRuleInputTypeValue](New-CMRequirementRuleInputTypeValue.md)
+[New-CMRequirementRuleOperatingSystemLanguageValue](New-CMRequirementRuleOperatingSystemLanguageValue.md)
+[New-CMRequirementRuleOperatingSystemValue](New-CMRequirementRuleOperatingSystemValue.md)
+[New-CMRequirementRuleOUValue](New-CMRequirementRuleOUValue.md)
+[New-CMRequirementRuleRegistryKeyPermissionValue](New-CMRequirementRuleRegistryKeyPermissionValue.md)
+[New-CMRequirementRuleScreenResolutionValue](New-CMRequirementRuleScreenResolutionValue.md)
+[Get-CMGlobalCondition](Get-CMGlobalCondition.md)
+[Deployment type Requirements](/mem/configmgr/apps/deploy-use/create-applications#bkmk_dt-require)
+[Create global conditions](/mem/configmgr/apps/deploy-use/create-global-conditions)

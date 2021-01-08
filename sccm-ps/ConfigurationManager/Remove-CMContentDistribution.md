@@ -1,8 +1,8 @@
 ---
-description: Removes packages from a distribution point.
+description: Remove packages from a distribution point.
 external help file: AdminUI.PS.Sum.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/07/2019
+ms.date: 12/29/2020
 schema: 2.0.0
 title: Remove-CMContentDistribution
 ---
@@ -10,7 +10,8 @@ title: Remove-CMContentDistribution
 # Remove-CMContentDistribution
 
 ## SYNOPSIS
-Removes packages from a distribution point.
+
+Remove packages from a distribution point.
 
 ## SYNTAX
 
@@ -150,26 +151,29 @@ Remove-CMContentDistribution [-Force] [-CollectionName <String[]>] [-Distributio
 ```
 
 ## DESCRIPTION
-The **Remove-CMContentDistribution** cmdlet removes one or more packages from a distribution point.
+
+Use this cmdlet to remove one or more packages from a distribution point.
 
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
 ### Example 1: Remove a driver package from a distribution point
-```
-PS XYZ:\> Remove-CMContentDistribution -DriverPackageID "PCP00019" -DistributionPointName "distribution-server.contoso.com"
-```
 
-This command removes the driver package PCO00019 from the distribution point distribution-server.contoso.com.
+This command removes the driver package PCO00019 from the distribution point **distribution-server.contoso.com**.
+
+```powershell
+Remove-CMContentDistribution -DriverPackageID "PCP00019" -DistributionPointName "distribution-server.contoso.com"
+```
 
 ## PARAMETERS
 
 ### -ApplicationId
-Specifies an array of application IDs.
+
+Specify an array of application IDs to remove. These IDs are GUIDs as strings.
+
+By default, Configuration Manager also removes the content for dependent applications. To disable this behavior, use the **DisableContentDependencyDetection** parameter.
 
 ```yaml
 Type: String[]
@@ -184,7 +188,10 @@ Accept wildcard characters: False
 ```
 
 ### -ApplicationName
-Specifies an array of application names.
+
+Specify an array of application names to remove.
+
+By default, Configuration Manager also removes the content for dependent applications. To disable this behavior, use the **DisableContentDependencyDetection** parameter.
 
 ```yaml
 Type: String[]
@@ -199,7 +206,8 @@ Accept wildcard characters: False
 ```
 
 ### -BootImageId
-Specifies an array of IDs of boot images.
+
+Specify an array of boot image IDs to remove. For example, `"XYZ00015"`.
 
 ```yaml
 Type: String[]
@@ -214,7 +222,8 @@ Accept wildcard characters: False
 ```
 
 ### -BootImageName
-Specifies an array of names of boot images.
+
+Specify an array of boot image names to remove.
 
 ```yaml
 Type: String[]
@@ -229,7 +238,8 @@ Accept wildcard characters: False
 ```
 
 ### -CollectionName
-Specifies the name of a Configuration Manager collection.
+
+Specify an array of Configuration Manager collection names. Use this collection to target the distribution points from which to remove the content.
 
 ```yaml
 Type: String[]
@@ -244,6 +254,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -259,7 +270,8 @@ Accept wildcard characters: False
 ```
 
 ### -DeploymentPackageId
-Specifies an array of IDs of deployment packages.
+
+Specify an array of software update deployment package IDs to remove. For example, `"XYZ00016"`.
 
 ```yaml
 Type: String[]
@@ -274,7 +286,8 @@ Accept wildcard characters: False
 ```
 
 ### -DeploymentPackageName
-Specifies an array of names of deployment packages.
+
+Specify an array of software update deployment package names to remove.
 
 ```yaml
 Type: String[]
@@ -289,6 +302,9 @@ Accept wildcard characters: False
 ```
 
 ### -DisableContentDependencyDetection
+
+Add this parameter to not automatically remove content for dependent apps.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: SearchByValueMandatory_Application, SearchByIdMandatory_Application, SearchByNameMandatory_Application
@@ -302,7 +318,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
+
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -317,7 +334,8 @@ Accept wildcard characters: False
 ```
 
 ### -DistributionPointGroupName
-Specifies the name of a distribution point group.
+
+Specify an array of distribution point group names from which to remove the content.
 
 ```yaml
 Type: String[]
@@ -332,7 +350,8 @@ Accept wildcard characters: False
 ```
 
 ### -DistributionPointName
-Specifies the name of a distribution point that is associated with the deployment package.
+
+Specify an array of distribution point names from which to remove the content.
 
 ```yaml
 Type: String[]
@@ -347,7 +366,8 @@ Accept wildcard characters: False
 ```
 
 ### -DriverPackageId
-Specifies an array of IDs of driver packages.
+
+Specify an array of driver package IDs to remove. For example, `"XYZ00017"`.
 
 ```yaml
 Type: String[]
@@ -362,7 +382,8 @@ Accept wildcard characters: False
 ```
 
 ### -DriverPackageName
-Specifies an array of names of driver packages.
+
+Specify an array of driver package names to remove.
 
 ```yaml
 Type: String[]
@@ -377,7 +398,8 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Forces the command to run without asking for user confirmation.
+
+Run the command without asking for confirmation.
 
 ```yaml
 Type: SwitchParameter
@@ -392,7 +414,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
+
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -407,6 +430,19 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
+
+Specify an object type to remove. To get these objects, use one of the following cmdlets:
+
+- [Get-CMApplication](Get-CMApplication.md) for an application
+- [Get-CMPackage](Get-CMPackage.md) for a legacy package
+- [Get-CMBootImage](Get-CMBootImage.md) for a boot image
+- [Get-CMDeploymentPackage](Get-CMDeploymentPackage.md) for a software update deployment package
+- [Get-CMSoftwareUpdateGroup](Get-CMSoftwareUpdateGroup.md) for the content in a software update group
+- [Get-CMDriverPackage](Get-CMDriverPackage.md) for a driver package
+- [Get-CMOperatingSystemImage](Get-CMOperatingSystemImage.md) for an OS image
+- [Get-CMOperatingSystemInstaller](Get-CMOperatingSystemInstaller.md) for an OS upgrade package
+- [Get-CMTaskSequence](Get-CMTaskSequence.md) for the content referenced by a task sequence
+
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
@@ -420,8 +456,8 @@ Accept wildcard characters: False
 ```
 
 ### -OperatingSystemImage
-Specifies a **CMOperatingSystemImage** object.
-To get a **CMOperatingSystemImage** object, use the [Get-CMOperatingSystemImage](Get-CMOperatingSystemImage.md) cmdlet.
+
+Specify an OS image object to remove. To get this object, use the [Get-CMOperatingSystemImage](Get-CMOperatingSystemImage.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -436,7 +472,8 @@ Accept wildcard characters: False
 ```
 
 ### -OperatingSystemImageId
-Specifies an array of IDs of operating system images.
+
+Specify an array of OS image IDs to remove. For example, `"XYZ00018"`.
 
 ```yaml
 Type: String[]
@@ -451,7 +488,8 @@ Accept wildcard characters: False
 ```
 
 ### -OperatingSystemImageName
-Specifies an array of names of operating system images.
+
+Specify an array of OS image names to remove.
 
 ```yaml
 Type: String[]
@@ -466,7 +504,8 @@ Accept wildcard characters: False
 ```
 
 ### -OperatingSystemInstallerId
-Specifies an array of IDs of operating system installers.
+
+Specify an array of OS upgrade package IDs to remove. For example, `"XYZ00019"`.
 
 ```yaml
 Type: String[]
@@ -481,7 +520,8 @@ Accept wildcard characters: False
 ```
 
 ### -OperatingSystemInstallerName
-Specifies an array of names of operating system installers.
+
+Specify an array of OS upgrade package names to remove.
 
 ```yaml
 Type: String[]
@@ -496,7 +536,8 @@ Accept wildcard characters: False
 ```
 
 ### -PackageId
-Specifies an array of IDs of packages.
+
+Specify an array of legacy package IDs to remove. For example, `"XYZ00020"`.
 
 ```yaml
 Type: String[]
@@ -511,7 +552,8 @@ Accept wildcard characters: False
 ```
 
 ### -PackageName
-Specifies an array of names of packages.
+
+Specify an array of legacy package names to remove.
 
 ```yaml
 Type: String[]
@@ -526,7 +568,8 @@ Accept wildcard characters: False
 ```
 
 ### -TaskSequenceId
-Specifies an array of IDs of task sequences.
+
+Specify an array of task sequence IDs to remove referenced content. For example, `"XYZ00021"`.
 
 ```yaml
 Type: String[]
@@ -541,7 +584,8 @@ Accept wildcard characters: False
 ```
 
 ### -TaskSequenceName
-Specifies an array of names of task sequences.
+
+Specify an array of task sequence names to remove referenced content.
 
 ```yaml
 Type: String[]
@@ -556,8 +600,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+
+Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
 
 ```yaml
 Type: SwitchParameter
@@ -581,6 +625,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
@@ -605,4 +650,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Start-CMContentDistribution](Start-CMContentDistribution.md)
 
-
+[Update-CMDistributionPoint](Update-CMDistributionPoint.md)

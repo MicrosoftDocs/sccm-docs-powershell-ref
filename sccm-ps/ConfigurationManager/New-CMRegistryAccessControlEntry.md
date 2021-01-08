@@ -1,6 +1,7 @@
 ﻿---
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 Module Name: ConfigurationManager
+ms.date: 12/30/2020
 online version:
 schema: 2.0.0
 ---
@@ -8,7 +9,8 @@ schema: 2.0.0
 # New-CMRegistryAccessControlEntry
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Create a registry key access control entry.
 
 ## SYNTAX
 
@@ -18,26 +20,37 @@ New-CMRegistryAccessControlEntry [-AccessOption <AccessType>] -GroupOrUserName <
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+Use this cmdlet to create an access control entry (ACE) for a registry key. An access control entry defines specific permissions for a specific user or group. You can use this object with the **New-CMRequirementRuleRegistryKeyPermissionValue** cmdlet to create a requirement rule on an application deployment type that verifies registry key permissions.
 
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS XYZ:\> {{ Add example code here }}
-```
+### Example 1: Add a requirement rule for registry key permissions
 
-{{ Add example description here }}
+This example first uses the **Get-CMGlobalCondition** cmdlet to get a custom global condition. Then it creates two access control entries for specific users. Next it uses the **New-CMRequirementRuleRegistryKeyPermissionValue** cmdlet to create the requirement rule object. Finally it passes that rule object to the **Set-CMScriptDeploymentType** cmdlet to add the requirement.
+
+```powershell
+$myGC = Get-CMGlobalCondition -Name "LOB app registry key"
+
+$userName = "contoso\jqpublic"
+$ce = New-CMRegistryAccessControlEntry -GroupOrUserName $userName -AccessOption Allow -Permission Read,Write
+
+$userName2 = "contoso\jdoe"
+$ce2 = New-CMRegistryAccessControlEntry -GroupOrUserName $userName2 -AccessOption Allow -Permission Read
+
+$myRule = $myGC | New-CMRequirementRuleRegistryKeyPermissionValue -Exclusive $false -ControlEntry $ce,$ce2
+
+Set-CMScriptDeploymentType -ApplicationName "Central app" -DeploymentTypeName "Install" -AddRequirement $myRule
+```
 
 ## PARAMETERS
 
 ### -AccessOption
-{{ Fill AccessOption Description }}
+
+Specify whether this ACE is to `Allow` or `Deny` access.
 
 ```yaml
 Type: AccessType
@@ -53,6 +66,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
+
 This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
@@ -68,6 +82,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
+
 This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
@@ -83,7 +98,8 @@ Accept wildcard characters: False
 ```
 
 ### -GroupOrUserName
-{{ Fill GroupOrUserName Description }}
+
+Specify the group or user name for this ACE. Use standard "domain\name" format. For example, `contoso\jqpublic` or `"nwtraders\All IT Users"`.
 
 ```yaml
 Type: String
@@ -98,7 +114,8 @@ Accept wildcard characters: False
 ```
 
 ### -Permission
-{{ Fill Permission Description }}
+
+Specify an array of one or more permissions for this ACE. Use the **AccessOption** parameter to specify whether these permissions `Allow` or `Deny` access.
 
 ```yaml
 Type: RegistryPermissions[]
@@ -123,6 +140,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
+
+[New-CMRequirementRuleRegistryKeyPermissionValue](New-CMRequirementRuleRegistryKeyPermissionValue.md)
