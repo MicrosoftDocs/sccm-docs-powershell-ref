@@ -1,5 +1,5 @@
 ﻿---
-description: Creates a detection clause windows installer.
+description: Create a detection method clause for an MSI product code.
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 05/05/2019
@@ -10,7 +10,8 @@ title: New-CMDetectionClauseWindowsInstaller
 # New-CMDetectionClauseWindowsInstaller
 
 ## SYNOPSIS
-Creates a detection clause windows installer.
+
+Create a detection method clause for an MSI product code.
 
 ## SYNTAX
 
@@ -29,22 +30,32 @@ New-CMDetectionClauseWindowsInstaller -ProductCode <Guid> [-Existence] [-Disable
 
 ## DESCRIPTION
 
+Use this cmdlet to create a clause in a detection method on an application. This clause is a rule for a Windows Installer (MSI) product code that indicates the presence of an application.
+
+After you use this cmdlet, then use one of the **Add-** or **Set-** cmdlets for deployment types. Pass this detection clause object to either the **AddDetectionClause** or **RemoveDetectionClause** parameters.
+
+To group detection clauses, use the **GroupDetectionClauses** parameter on the deployment type cmdlets.
+
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
-### Example 1
-```
-PS XYZ:\>
+### Example 1: Detect the existence of an MSI product code
+
+This example adds the Configuration Manager console MSI product code to the deployment type.
+
+```powershell
+$clause = New-CMDetectionClauseWindowsInstaller -Existence -ProductCode 4F7840A9-9816-45E2-9F6C-F7067A8BC0FD
+
+Set-CMScriptDeploymentType -ApplicationName "Configuration Manager console" -DeploymentTypeName "Install" -AddDetectionClause $clause
 ```
 
 ## PARAMETERS
 
 ### -DisableWildcardHandling
-DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
+
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -59,6 +70,11 @@ Accept wildcard characters: False
 ```
 
 ### -Existence
+
+When you add this parameter, the MSI product code must exist on the target system to indicate presence of this application.
+
+Instead of just existence, to also evaluate a version condition, use the **Value** parameter.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Existence
@@ -72,6 +88,11 @@ Accept wildcard characters: False
 ```
 
 ### -ExpectedValue
+
+When you add the **Value** parameter, use **ExpectedValue** with **PropertyType** and **ExpressionOperator**. When you use these parameters, the MSI version must satisfy the rule to indicate the presence of this application. This **ExpectedValue** parameter specifies the value to compare against the device.
+
+<!-- The value to compare depends upon the specified **PropertyType**. -->
+
 ```yaml
 Type: String
 Parameter Sets: Value
@@ -85,6 +106,9 @@ Accept wildcard characters: False
 ```
 
 ### -ExpressionOperator
+
+When you add the **Value** parameter, use **ExpressionOperator** with **PropertyType** and **ExpectedValue**. When you use these parameters, the MSI version must satisfy the rule to indicate the presence of this application. This **ExpressionOperator** parameter specifies the operator to compare the device's value with the expected value.
+
 ```yaml
 Type: WindowsInstallerRuleExpressionOperator
 Parameter Sets: Value
@@ -99,7 +123,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
+
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -114,6 +139,9 @@ Accept wildcard characters: False
 ```
 
 ### -ProductCode
+
+Specify the Windows Installer product code that indicates the presence of this application. The format is a GUID, for example `4F7840A9-9816-45E2-9F6C-F7067A8BC0FD`.
+
 ```yaml
 Type: Guid
 Parameter Sets: (All)
@@ -127,6 +155,11 @@ Accept wildcard characters: False
 ```
 
 ### -PropertyType
+
+When you add the **Value** parameter, use **PropertyType** with **ExpressionOperator** and **ExpectedValue**. When you use these parameters, the MSI version must satisfy the rule to indicate the presence of this application.
+
+This **PropertyType** parameter currently only supports a single value, `ProductVersion`.
+
 ```yaml
 Type: MSIProperty
 Parameter Sets: Value
@@ -141,6 +174,11 @@ Accept wildcard characters: False
 ```
 
 ### -Value
+
+When you add the **Value** parameter, along with the product code, the MSI version must also satisfy the rule to indicate the presence of this application. Use this parameter with the following parameters: **ExpectedValue**, **ExpressionOperator**, and **PropertyType**.
+
+Instead of evaluating a rule, to just check the MSI product code, use the **Existence** parameter.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Value
@@ -163,6 +201,15 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
+
+[New-CMDetectionClauseDirectory](New-CMDetectionClauseDirectory.md)
+
+[New-CMDetectionClauseFile](New-CMDetectionClauseFile.md)
+
+[New-CMDetectionClauseRegistryKey](New-CMDetectionClauseRegistryKey.md)
+
+[New-CMDetectionClauseRegistryKeyValue](New-CMDetectionClauseRegistryKeyValue.md)

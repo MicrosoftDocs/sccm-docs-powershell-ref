@@ -1,8 +1,8 @@
 ---
-description: Removes a collection direct membership rule.
+description: Remove a direct membership rule from a collection.
 external help file: AdminUI.PS.Collections-help.xml
 Module Name: ConfigurationManager
-ms.date: 05/07/2019
+ms.date: 01/05/2021
 schema: 2.0.0
 title: Remove-CMCollectionDirectMembershipRule
 ---
@@ -10,7 +10,8 @@ title: Remove-CMCollectionDirectMembershipRule
 # Remove-CMCollectionDirectMembershipRule
 
 ## SYNOPSIS
-Removes a collection direct membership rule.
+
+Remove a direct membership rule from a collection.
 
 ## SYNTAX
 
@@ -70,21 +71,27 @@ Remove-CMCollectionDirectMembershipRule -InputObject <IResultObject> -ResourceNa
 
 ## DESCRIPTION
 
+Use this cmdlet to remove a direct membership rule from either a device or user collection. A direct membership rule specifies a single resource as a member of a collection. For example, to add a specific device to a collection, use a direct rule.
+
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
-### Example 1
-```
-PS XYZ:\>
+### Example 1: Remove the local machine from a collection of test devices
+
+This example uses the Windows environment variable **ComputerName** to remove it from the collection named **Test Devices**. It uses the **Force** parameter to not prompt for confirmation.
+
+```powershell
+Remove-CMCollectionDirectMembershipRule -CollectionName 'Test Devices' -ResourceName $env:ComputerName -Force
 ```
 
 ## PARAMETERS
 
 ### -CollectionId
+
+Specify the ID of the collection with the direct rule to remove. For example, `"XYZ0003F"`.
+
 ```yaml
 Type: String
 Parameter Sets: ByIdAndValue, ByIdAndId, ByIdAndName
@@ -98,6 +105,9 @@ Accept wildcard characters: False
 ```
 
 ### -CollectionName
+
+Specify the name of the collection with the direct rule to remove.
+
 ```yaml
 Type: String
 Parameter Sets: ByNameAndName, ByNameAndValue, ByNameAndId
@@ -111,6 +121,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -126,6 +137,9 @@ Accept wildcard characters: False
 ```
 
 ### -Force
+
+Run the command without asking for confirmation.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -139,6 +153,9 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
+
+Specify a collection object with the direct rule to remove. To get this object, use the [Get-CMCollection](Get-CMCollection.md) cmdlet.
+
 ```yaml
 Type: IResultObject
 Parameter Sets: ByValueAndValue, ByValueAndId, ByValueAndName
@@ -152,6 +169,9 @@ Accept wildcard characters: False
 ```
 
 ### -Resource
+
+Specify an array of resource objects to remove from the collection. To get this object, use the [Get-CMResource](Get-CMResource.md) cmdlet.
+
 ```yaml
 Type: IResultObject[]
 Parameter Sets: ByNameAndValue, ByIdAndValue, ByValueAndValue
@@ -165,6 +185,9 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceId
+
+Specify an array of resource IDs to remove from the collection. This value is the **ResourceId** property of the SMS_Resource class. For example, `"33555693"`.
+
 ```yaml
 Type: String[]
 Parameter Sets: ByNameAndId, ByIdAndId, ByValueAndId
@@ -178,6 +201,9 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceName
+
+Specify an array of resource names to remove from the collection.
+
 ```yaml
 Type: String[]
 Parameter Sets: ByNameAndName, ByIdAndName, ByValueAndName
@@ -191,8 +217,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+
+Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
 
 ```yaml
 Type: SwitchParameter
@@ -216,6 +242,23 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
+This cmdlet is similar to **Remove-CMDeviceCollectionDirectMembershipRule** and **Remove-CMUserCollectionDirectMembershipRule**, which are specific to the type of collection. This cmdlet works with either device or user collections.
+
 ## RELATED LINKS
+
+[Get-CMCollection](Get-CMCollection.md)
+[Get-CMResource](Get-CMResource.md)
+
+[Add-CMCollectionMembershipRule](Add-CMCollectionMembershipRule.md)
+[Get-CMCollectionMembershipRule](Get-CMCollectionMembershipRule.md)
+[Remove-CMCollectionMembershipRule](Remove-CMCollectionMembershipRule.md)
+
+[Get-CMCollectionDirectMembershipRule](Get-CMCollectionDirectMembershipRule.md)
+
+[Remove-CMDeviceCollectionDirectMembershipRule](Remove-CMDeviceCollectionDirectMembershipRule.md)
+[Remove-CMUserCollectionDirectMembershipRule](Remove-CMUserCollectionDirectMembershipRule.md)
+
+[Introduction to collections in Configuration Manager](/mem/configmgr/core/clients/manage/collections/introduction-to-collections)

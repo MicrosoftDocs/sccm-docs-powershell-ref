@@ -1,8 +1,8 @@
 ---
-description: Removes a Configuration Manager query.
+description: Remove a Configuration Manager query.
 external help file: AdminUI.PS.SystemStatus.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/07/2019
+ms.date: 12/29/2020
 schema: 2.0.0
 title: Remove-CMQuery
 ---
@@ -10,7 +10,8 @@ title: Remove-CMQuery
 # Remove-CMQuery
 
 ## SYNOPSIS
-Removes a Configuration Manager query.
+
+Remove a Configuration Manager query.
 
 ## SYNTAX
 
@@ -33,26 +34,26 @@ Remove-CMQuery [-Force] -Name <String> [-DisableWildcardHandling] [-ForceWildcar
 ```
 
 ## DESCRIPTION
-The **Remove-CMQuery** cmdlet removes queries stored in Configuration Manager.
-Configuration Manager queries define and store the criteria for sets of database objects that you want to find.
+
+Use this cmdlet to remove queries from the Configuration Manager site.
 
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
 ### Example 1
-```
-PS XYZ:\>  Get-CMQuery -Name "My Systems" | Remove-CMQuery -Force
-```
 
-This command removes the Configuration Manager queries with the name called "My Systems".
+This command removes the query named "My systems".
+
+```powershell
+Get-CMQuery -Name "My systems" | Remove-CMQuery -Force
+```
 
 ## PARAMETERS
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -68,7 +69,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
+
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -83,6 +85,9 @@ Accept wildcard characters: False
 ```
 
 ### -Force
+
+Run the command without asking for confirmation.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -96,7 +101,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
+
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -111,6 +117,9 @@ Accept wildcard characters: False
 ```
 
 ### -Id
+
+Specify the ID of the query to remove. For example, `"XYZ00006"`.
+
 ```yaml
 Type: String
 Parameter Sets: SearchByIdMandatory
@@ -124,6 +133,9 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
+
+Specify a query object to remove. To get this object, use the [Get-CMQuery](Get-CMQuery.md) cmdlet.
+
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
@@ -137,6 +149,9 @@ Accept wildcard characters: False
 ```
 
 ### -Name
+
+Specify the name of the query to remove.
+
 ```yaml
 Type: String
 Parameter Sets: SearchByNameMandatory
@@ -150,8 +165,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+
+Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
 
 ```yaml
 Type: SwitchParameter
@@ -175,6 +190,15 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
+
+[Export-CMQuery](Export-CMQuery.md)
+[Get-CMQuery](Get-CMQuery.md)
+[Import-CMQuery](Import-CMQuery.md)
+[Invoke-CMQuery](Invoke-CMQuery.md)
+[New-CMQuery](New-CMQuery.md)
+[Set-CMQuery](Set-CMQuery.md)
+[Introduction to queries in Configuration Manager](/mem/configmgr/core/servers/manage/introduction-to-queries)

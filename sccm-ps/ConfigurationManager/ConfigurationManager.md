@@ -2,7 +2,7 @@
 Module Name: ConfigurationManager
 Module Guid: 7f590131-5253-4425-8b32-eeab51a4c393
 Download Help Link: https://aka.ms/configmgrps-help
-Help Version: 5.2010.1.0
+Help Version: 5.2010.1.1
 Locale: en-US
 ---
 
@@ -141,7 +141,7 @@ Adds a management point to Configuration Manager.
 Adds a mobile Windows Installer deployment type.
 
 ### [Add-CMMsiDeploymentType](Add-CMMsiDeploymentType.md)
-Adds a Windows Installer deployment type.
+Add a Windows Installer deployment type.
 
 ### [Add-CMMulticastServicePoint](Add-CMMulticastServicePoint.md)
 Adds a multicast service point.
@@ -156,7 +156,7 @@ Use this cmdlet to add a site server in passive mode.
 Adds a reporting service point to Configuration Manager.
 
 ### [Add-CMScriptDeploymentType](Add-CMScriptDeploymentType.md)
-Adds a script installer deployment type.
+Add a script installer deployment type.
 
 ### [Add-CMSecurityRoleToAdministrativeUser](Add-CMSecurityRoleToAdministrativeUser.md)
 Adds a security role to an administrative user or group in Configuration Manager.
@@ -499,7 +499,7 @@ Get a site boundary.
 Gets a boundary group.
 
 ### [Get-CMBoundaryGroupRelationship](Get-CMBoundaryGroupRelationship.md)
-Gets a boundary group relationship.
+Get a boundary group relationship.
 
 ### [Get-CMBoundaryGroupSiteSystem](Get-CMBoundaryGroupSiteSystem.md)
 {{ Fill in the Synopsis }}
@@ -637,7 +637,7 @@ Gets the previous versions of a configuration item in Configuration Manager.
 Gets an XML definition of a configuration item in Configuration Manager.
 
 ### [Get-CMConfigurationPlatform](Get-CMConfigurationPlatform.md)
-{{ Fill in the Synopsis }}
+Get an OS platform for a requirement rule.
 
 ### [Get-CMConfigurationPolicy](Get-CMConfigurationPolicy.md)
 Gets a configuration policy.
@@ -679,7 +679,7 @@ Gets information about deployment packages on a distribution point.
 Get the status details of a Configuration Manager deployment.
 
 ### [Get-CMDeploymentType](Get-CMDeploymentType.md)
-Gets the deployment type of a Configuration Manager deployment application.
+Get a deployment type for an application.
 
 ### [Get-CMDeploymentTypeDependency](Get-CMDeploymentTypeDependency.md)
 Gets a deployment type from a dependency group.
@@ -688,7 +688,7 @@ Gets a deployment type from a dependency group.
 Gets a deployment type dependency group from Configuration Manager.
 
 ### [Get-CMDeploymentTypeSupersedence](Get-CMDeploymentTypeSupersedence.md)
-Gets a deployment type supersedence in Configuration Manager.
+Get the old deployment types that an application supersedes.
 
 ### [Get-CMDetectedMalware](Get-CMDetectedMalware.md)
 Gets detected malware.
@@ -823,7 +823,7 @@ Gets a migration source.
 Gets a multicast service point.
 
 ### [Get-CMObjectLockDetails](Get-CMObjectLockDetails.md)
-Gets object lock details.
+Get the details of a SEDO lock for an object.
 
 ### [Get-CMObjectSecurityScope](Get-CMObjectSecurityScope.md)
 Gets the security scope associated with a Configuration Manager object.
@@ -865,7 +865,7 @@ Gets a power management schema.
 Gets programs in Configuration Manager.
 
 ### [Get-CMQuery](Get-CMQuery.md)
-Gets Configuration Manager queries.
+Get a Configuration Manager query.
 
 ### [Get-CMQueryResultMaximum](Get-CMQueryResultMaximum.md)
 Gets the maximum number of rows that a Configuration Manager report query can return.
@@ -931,7 +931,7 @@ Gets site system status messages.
 Gets a site summary task.
 
 ### [Get-CMSiteSystemServer](Get-CMSiteSystemServer.md)
-Gets a site system server.
+Get the site system server role.
 
 ### [Get-CMSiteUpdate](Get-CMSiteUpdate.md)
 Gets a site update.
@@ -1276,7 +1276,7 @@ Imports a driver package.
 Imports a Configuration Manager package.
 
 ### [Import-CMQuery](Import-CMQuery.md)
-Import a set of exported queries to Configuration Manager.
+Import a query to Configuration Manager.
 
 ### [Import-CMSecurityRole](Import-CMSecurityRole.md)
 Imports a security role into Configuration Manager.
@@ -1318,7 +1318,7 @@ Updates the membership of a Configuration Manager collection.
 Invokes a content redistribution.
 
 ### [Invoke-CMContentValidation](Invoke-CMContentValidation.md)
-Validates packages on a distribution point.
+Validate content on a distribution point.
 
 ### [Invoke-CMConvertPackage](Invoke-CMConvertPackage.md)
 Convert a package to an application.
@@ -1348,7 +1348,7 @@ Invokes a group discovery.
 Invokes a promote pre production client.
 
 ### [Invoke-CMQuery](Invoke-CMQuery.md)
-Invokes a Configuration Manager query.
+Run a Configuration Manager query.
 
 ### [Invoke-CMRemoteControl](Invoke-CMRemoteControl.md)
 Enables remote control on computers.
@@ -1390,10 +1390,10 @@ Invokes a user discovery.
 Calls a WMI method.
 
 ### [Invoke-CMWmiQuery](Invoke-CMWmiQuery.md)
-Runs a WMI query.
+Run a WMI query.
 
 ### [Lock-CMObject](Lock-CMObject.md)
-Locks global objects in Configuration Manager.
+Create a SEDO lock on an object.
 
 ### [Merge-CMAntimalwarePolicy](Merge-CMAntimalwarePolicy.md)
 Merges antimalware policies for Endpoint Protection.
@@ -1504,7 +1504,7 @@ Creates a Configuration Manager boundary.
 Creates a new boundary group.
 
 ### [New-CMBoundaryGroupRelationship](New-CMBoundaryGroupRelationship.md)
-Creates a boundary group relationship.
+Create a boundary group relationship.
 
 ### [New-CMCaptureMedia](New-CMCaptureMedia.md)
 Creates capture media.
@@ -1588,10 +1588,10 @@ Creates a configuration policy deployment.
 Creates a deployment type dependency group in Configuration Manager.
 
 ### [New-CMDetectionClauseDirectory](New-CMDetectionClauseDirectory.md)
-Creates a detection clause directory.
+Create a detection method clause for a file system directory.
 
 ### [New-CMDetectionClauseFile](New-CMDetectionClauseFile.md)
-Create a detection clause for a file in a configuration item or app detection method.
+Create a detection method clause for a file.
 
 ### [New-CMDetectionClauseMacBundle](New-CMDetectionClauseMacBundle.md)
 Creates a detection clause mac bundle.
@@ -1600,13 +1600,13 @@ Creates a detection clause mac bundle.
 Creates a detection clause mac package.
 
 ### [New-CMDetectionClauseRegistryKey](New-CMDetectionClauseRegistryKey.md)
-Creates a detection clause registry key.
+Create a detection method clause for a registry key.
 
 ### [New-CMDetectionClauseRegistryKeyValue](New-CMDetectionClauseRegistryKeyValue.md)
-Create a detection clause for a registry key in a configuration item or app detection method.
+Create a detection method clause for a registry key value.
 
 ### [New-CMDetectionClauseWindowsInstaller](New-CMDetectionClauseWindowsInstaller.md)
-Creates a detection clause windows installer.
+Create a detection method clause for an MSI product code.
 
 ### [New-CMDeviceCategory](New-CMDeviceCategory.md)
 {{ Fill in the Synopsis }}
@@ -1684,7 +1684,7 @@ Create a policy to specify whether a password is required to unlock BitLocker-pr
 Creates a file replication route for Configuration Manager.
 
 ### [New-CMFileSystemAccessControlEntry](New-CMFileSystemAccessControlEntry.md)
-{{ Fill in the Synopsis }}
+Create a file system access control entry.
 
 ### [New-CMGlobalCondition](New-CMGlobalCondition.md)
 Creates a Configuration Manager global condition object.
@@ -1786,7 +1786,7 @@ Create an OS deployment prestaged media file.
 Create a new program for a package.
 
 ### [New-CMQuery](New-CMQuery.md)
-Creates a Configuration Manager query.
+Create a Configuration Manager query.
 
 ### [New-CMRDVConfigureBDEPolicy](New-CMRDVConfigureBDEPolicy.md)
 Create a policy to control the use of BitLocker on removable data drives.
@@ -1801,55 +1801,55 @@ Create a policy to configure whether BitLocker protection is required for remova
 Create a policy to specify whether a password is required to unlock BitLocker-protected removable data drives.
 
 ### [New-CMRegistryAccessControlEntry](New-CMRegistryAccessControlEntry.md)
-{{ Fill in the Synopsis }}
+Create a registry key access control entry.
 
 ### [New-CMRemoteConnectionProfileConfigurationItem](New-CMRemoteConnectionProfileConfigurationItem.md)
 Creates a remote connection profile.
 
 ### [New-CMRequirementRuleActiveDirectorySiteValue](New-CMRequirementRuleActiveDirectorySiteValue.md)
-{{ Fill in the Synopsis }}
+Create an Active Directory site value requirement rule for an application deployment type.
 
 ### [New-CMRequirementRuleBooleanValue](New-CMRequirementRuleBooleanValue.md)
-{{ Fill in the Synopsis }}
+Create a requirement rule to evaluate a boolean global condition on an application deployment type.
 
 ### [New-CMRequirementRuleCMSiteValue](New-CMRequirementRuleCMSiteValue.md)
-{{ Fill in the Synopsis }}
+Create a Configuration Manager site requirement rule for an application deployment type.
 
 ### [New-CMRequirementRuleCommonValue](New-CMRequirementRuleCommonValue.md)
-{{ Fill in the Synopsis }}
+Create a requirement rule to evaluate a value-based global condition on an application deployment type.
 
 ### [New-CMRequirementRuleDeviceOwnershipValue](New-CMRequirementRuleDeviceOwnershipValue.md)
-{{ Fill in the Synopsis }}
+Create a device ownership requirement rule for an application deployment type.
 
 ### [New-CMRequirementRuleExistential](New-CMRequirementRuleExistential.md)
-{{ Fill in the Synopsis }}
+Create a requirement rule to evaluate an existential-based global condition on an application deployment type.
 
 ### [New-CMRequirementRuleExpression](New-CMRequirementRuleExpression.md)
-{{ Fill in the Synopsis }}
+Create a requirement rule to evaluate a custom global condition with a complex expression.
 
 ### [New-CMRequirementRuleFileAttributeValue](New-CMRequirementRuleFileAttributeValue.md)
-{{ Fill in the Synopsis }}
+Create a requirement rule to verify file attributes.
 
 ### [New-CMRequirementRuleFilePermissionValue](New-CMRequirementRuleFilePermissionValue.md)
-{{ Fill in the Synopsis }}
+Create a requirement rule to verify file permissions.
 
 ### [New-CMRequirementRuleFreeDiskSpaceValue](New-CMRequirementRuleFreeDiskSpaceValue.md)
-{{ Fill in the Synopsis }}
+Create a disk space requirement rule for an application deployment type.
 
 ### [New-CMRequirementRuleInputTypeValue](New-CMRequirementRuleInputTypeValue.md)
 {{ Fill in the Synopsis }}
 
 ### [New-CMRequirementRuleOperatingSystemLanguageValue](New-CMRequirementRuleOperatingSystemLanguageValue.md)
-{{ Fill in the Synopsis }}
+Create an OS language requirement rule for an application deployment type.
 
 ### [New-CMRequirementRuleOperatingSystemValue](New-CMRequirementRuleOperatingSystemValue.md)
-{{ Fill in the Synopsis }}
+Create an OS requirement rule for an application deployment type.
 
 ### [New-CMRequirementRuleOUValue](New-CMRequirementRuleOUValue.md)
-{{ Fill in the Synopsis }}
+Create an Active Directory organizational unit (OU) requirement rule for an application deployment type.
 
 ### [New-CMRequirementRuleRegistryKeyPermissionValue](New-CMRequirementRuleRegistryKeyPermissionValue.md)
-{{ Fill in the Synopsis }}
+Create a requirement rule to verify registry key permissions.
 
 ### [New-CMRequirementRuleScreenResolutionValue](New-CMRequirementRuleScreenResolutionValue.md)
 {{ Fill in the Synopsis }}
@@ -1876,7 +1876,7 @@ Creates a security scope.
 Deploy a settings policy object to a collection.
 
 ### [New-CMSiteSystemServer](New-CMSiteSystemServer.md)
-Creates a site system server.
+Add a new site system server.
 
 ### [New-CMSoftwareCenterTabItem](New-CMSoftwareCenterTabItem.md)
 Use this cmdlet to create a custom Software Center tab.
@@ -2218,7 +2218,7 @@ Removes a Configuration Manager boundary from a boundary group.
 Removes a boundary group.
 
 ### [Remove-CMBoundaryGroupRelationship](Remove-CMBoundaryGroupRelationship.md)
-Removes a boundary group relationship.
+Remove a boundary group relationship.
 
 ### [Remove-CMCategory](Remove-CMCategory.md)
 Removes a configuration category in Configuration Manager.
@@ -2248,7 +2248,7 @@ Remove a cloud management gateway connection point.
 Removes a Configuration Manager collection.
 
 ### [Remove-CMCollectionDirectMembershipRule](Remove-CMCollectionDirectMembershipRule.md)
-Removes a collection direct membership rule.
+Remove a direct membership rule from a collection.
 
 ### [Remove-CMCollectionExcludeMembershipRule](Remove-CMCollectionExcludeMembershipRule.md)
 Removes a collection exclude membership rule.
@@ -2287,7 +2287,7 @@ Removes a configuration policy.
 Removes a configuration policy deployment.
 
 ### [Remove-CMContentDistribution](Remove-CMContentDistribution.md)
-Removes packages from a distribution point.
+Remove packages from a distribution point.
 
 ### [Remove-CMDataWarehouseServicePoint](Remove-CMDataWarehouseServicePoint.md)
 Removes a data warehouse service point.
@@ -2305,7 +2305,7 @@ Removes a deployment type dependency from Configuration Manager deployment type 
 Removes a deployment type dependency group from Configuration Manager deployment type.
 
 ### [Remove-CMDeploymentTypeSupersedence](Remove-CMDeploymentTypeSupersedence.md)
-Removes a deployment type supersedence in Configuration Manager.
+Remove a deployment type supersedence relationship.
 
 ### [Remove-CMDevice](Remove-CMDevice.md)
 Removes a client device from Configuration Manager.
@@ -2317,7 +2317,7 @@ Removes device affinity from a Configuration Manager user.
 {{ Fill in the Synopsis }}
 
 ### [Remove-CMDeviceCollectionDirectMembershipRule](Remove-CMDeviceCollectionDirectMembershipRule.md)
-Removes a direct membership rule from a device collection.
+Remove a direct membership rule from a device collection.
 
 ### [Remove-CMDeviceCollectionExcludeMembershipRule](Remove-CMDeviceCollectionExcludeMembershipRule.md)
 Removes an exclude membership rule from one or more device collection in the Configuration Manager hierarchy.
@@ -2410,7 +2410,7 @@ Removes a package deployment from Configuration Manager.
 Removes programs from a Configuration Manager package.
 
 ### [Remove-CMQuery](Remove-CMQuery.md)
-Removes a Configuration Manager query.
+Remove a Configuration Manager query.
 
 ### [Remove-CMReportingServicePoint](Remove-CMReportingServicePoint.md)
 Removes a reporting service point.
@@ -2446,7 +2446,7 @@ Remove a deployment for a settings policy object.
 Remove a site role.
 
 ### [Remove-CMSiteSystemServer](Remove-CMSiteSystemServer.md)
-Removes a site system server.
+Remove the site system server role.
 
 ### [Remove-CMSoftwareMeteringRule](Remove-CMSoftwareMeteringRule.md)
 Removes Configuration Manager software metering rules.
@@ -2614,7 +2614,7 @@ Removes a user from Configuration Manager.
 Removes a primary user from one or more devices in the Configuration Manager hierarchy.
 
 ### [Remove-CMUserCollectionDirectMembershipRule](Remove-CMUserCollectionDirectMembershipRule.md)
-Removes a direct membership rule from one or more user collections in the Configuration Manager hierarchy.
+Remove a direct membership rule from a user collection.
 
 ### [Remove-CMUserCollectionExcludeMembershipRule](Remove-CMUserCollectionExcludeMembershipRule.md)
 Removes an exclude membership rule from one or more user collection in the Configuration Manager hierarchy.
@@ -2689,7 +2689,7 @@ Configure the properties of an application.
 Changes the settings of an Application Catalog website point.
 
 ### [Set-CMApplicationDeployment](Set-CMApplicationDeployment.md)
-Modifies properties for an application deployment in Configuration Manager.
+Configure an application deployment
 
 ### [Set-CMApplicationGroupDeployment](Set-CMApplicationGroupDeployment.md)
 Configure the deployment of an application group.
@@ -2746,7 +2746,7 @@ Modifies Configuration Manager boundary settings.
 Modify the properties of a boundary group.
 
 ### [Set-CMBoundaryGroupRelationship](Set-CMBoundaryGroupRelationship.md)
-Sets a boundary group relationship.
+Configure a boundary group relationship.
 
 ### [Set-CMCertificateProfilePfx](Set-CMCertificateProfilePfx.md)
 Sets a PFX certificate profile.
@@ -2959,7 +2959,7 @@ Sets a deployment type dependency in Configuration Manager.
 Sets a deployment type dependency group in Configuration Manager.
 
 ### [Set-CMDeploymentTypeSupersedence](Set-CMDeploymentTypeSupersedence.md)
-Sets a deployment type supersedence in Configuration Manager.
+Configure a supersedence relationship on an application.
 
 ### [Set-CMDeviceCategory](Set-CMDeviceCategory.md)
 {{ Fill in the Synopsis }}
@@ -3088,7 +3088,7 @@ Specifies or changes settings for a migration source site in Configuration Manag
 Sets a mobile Windows Installer deployment type.
 
 ### [Set-CMMsiDeploymentType](Set-CMMsiDeploymentType.md)
-Set a Windows Installer deployment type.
+Configure a Windows Installer deployment type.
 
 ### [Set-CMMulticastServicePoint](Set-CMMulticastServicePoint.md)
 Sets a multicast service point.
@@ -3130,7 +3130,7 @@ Modifies a Configuration Manager reporting service point.
 Use this cmdlet to edit a script.
 
 ### [Set-CMScriptDeploymentType](Set-CMScriptDeploymentType.md)
-Set a script installer deployment type.
+Configure a script installer deployment type.
 
 ### [Set-CMSecurityRole](Set-CMSecurityRole.md)
 Changes configuration settings of a security role.
@@ -3157,7 +3157,7 @@ Change settings for a Configuration Manager maintenance task.
 Sets a site summary task.
 
 ### [Set-CMSiteSystemServer](Set-CMSiteSystemServer.md)
-Modifies a site system server.
+Configure the site system server role.
 
 ### [Set-CMSoftwareDistributionComponent](Set-CMSoftwareDistributionComponent.md)
 Sets properties of a software distribution component in Configuration Manager.
@@ -3415,7 +3415,7 @@ Start a cloud management gateway service in Azure.
 Deploys policies for a Configuration Manager collection.
 
 ### [Start-CMContentDistribution](Start-CMContentDistribution.md)
-Copies content to distribution points.
+Distribute content to distribution points.
 
 ### [Start-CMDistributionPointUpgrade](Start-CMDistributionPointUpgrade.md)
 Upgrades a shared distribution point.
@@ -3430,7 +3430,7 @@ Starts deployment of a software package to a Configuration Manager collection.
 Initiates a software update deployment in Configuration Manager.
 
 ### [Start-CMTaskSequenceDeployment](Start-CMTaskSequenceDeployment.md)
-Starts a task sequence deployment in Configuration Manager.
+Start a task sequence deployment.
 
 ### [Stop-CMCloudDistributionPoint](Stop-CMCloudDistributionPoint.md)
 Stops the cloud distribution point service.
@@ -3478,7 +3478,7 @@ Unblocks a client device.
 Stops collecting software inventory data on files.
 
 ### [Unlock-CMObject](Unlock-CMObject.md)
-Releases locks to global objects in Configuration Manager.
+Release a SEDO lock on an object.
 
 ### [Update-CMApplicationStatistic](Update-CMApplicationStatistic.md)
 Updates the statistics for an application.
@@ -3490,5 +3490,5 @@ Updates a certificate.
 Updates client status.
 
 ### [Update-CMDistributionPoint](Update-CMDistributionPoint.md)
-Updates content on a distribution point.
+Update content on a distribution point.
 

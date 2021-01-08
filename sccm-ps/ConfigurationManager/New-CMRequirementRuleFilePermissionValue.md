@@ -1,6 +1,7 @@
-﻿---
+---
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 Module Name: ConfigurationManager
+ms.date: 12/30/2020
 online version:
 schema: 2.0.0
 ---
@@ -8,7 +9,8 @@ schema: 2.0.0
 # New-CMRequirementRuleFilePermissionValue
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Create a requirement rule to verify file permissions.
 
 ## SYNTAX
 
@@ -18,26 +20,49 @@ New-CMRequirementRuleFilePermissionValue -ControlEntry <FileSystemAccessControlE
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+Use this cmdlet to create a requirement rule on an application deployment type that verifies file permissions. It requires a custom global condition of data type **File**.
+
+> [!TIP]
+> For comparison, if you manually create this requirement rule in the Configuration Manager console, select the following options:
+>
+> - Category: **Custom**
+> - Condition: Select a custom global condition of data type **File**
+> - Rule type: **Value**
+> - Property: **Permissions**
+
+After you use this cmdlet, then use one of the **Add-** or **Set-** cmdlets for deployment types. Pass this requirement rule object to either the **AddRequirement** or **RemoveRequirement** parameters.
+
+For more information, see [Deployment type Requirements](/mem/configmgr/apps/deploy-use/create-applications#bkmk_dt-require) and [Create global conditions](/mem/configmgr/apps/deploy-use/create-global-conditions).
 
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS XYZ:\> {{ Add example code here }}
-```
+### Example 1: Add a requirement rule for file permissions
 
-{{ Add example description here }}
+This example first uses the **Get-CMGlobalCondition** cmdlet to get a custom global condition. Then it uses the **New-CMFileSystemAccessControlEntry** cmdlet to create two access control entries for specific users. Next it creates the requirement rule object to check that the file has the permissions specified in the access control entries. Finally it passes that rule object to the **Set-CMScriptDeploymentType** cmdlet to add the requirement.
+
+```powershell
+$myGC = Get-CMGlobalCondition -Name "LOB app data file"
+
+$userName = "contoso\jqpublic"
+$ce = New-CMFileSystemAccessControlEntry -GroupOrUserName $userName -AccessOption Allow -Permission Read,Write
+
+$userName2 = "contoso\jdoe"
+$ce2 = New-CMFileSystemAccessControlEntry -GroupOrUserName $userName2 -AccessOption Allow -Permission Read
+
+$myRule = New-CMRequirementRuleFilePermissionValue -GlobalCondition $myGC -ControlEntry $ce,$ce2
+
+Set-CMScriptDeploymentType -ApplicationName "Central app" -DeploymentTypeName "Install" -AddRequirement $myRule
+```
 
 ## PARAMETERS
 
 ### -ControlEntry
-{{ Fill ControlEntry Description }}
+
+Specify an array of access control entry objects. An access control entry defines specific permissions for a specific user or group. To get this object, use the [New-CMFileSystemAccessControlEntry](New-CMFileSystemAccessControlEntry.md) cmdlet.
 
 ```yaml
 Type: FileSystemAccessControlEntry[]
@@ -52,6 +77,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
+
 This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
@@ -67,7 +93,10 @@ Accept wildcard characters: False
 ```
 
 ### -Exclusive
-{{ Fill Exclusive Description }}
+
+If this parameter is `$true`, for the rule to be compliant, it needs to exactly match the specified ACE exactly. Any other permissions on the file cause the rule to fail.
+
+If set to `$false`, for the rule to be compliant, the specified ACE must exist, and other permissions can exist as well.
 
 ```yaml
 Type: Boolean
@@ -82,6 +111,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
+
 This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
@@ -97,7 +127,12 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{ Fill InputObject Description }}
+
+Specify a custom global condition object to use as the basis for this requirement rule. To get this object, use the [Get-CMGlobalCondition](Get-CMGlobalCondition.md) cmdlet.
+
+To see the list of available **File** global conditions at the site, use the following PowerShell command:
+
+`Get-CMGlobalCondition | Where-Object DataType -eq "File" | Select-Object LocalizedDisplayName`
 
 ```yaml
 Type: IResultObject
@@ -121,6 +156,27 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
+
+[New-CMFileSystemAccessControlEntry](New-CMFileSystemAccessControlEntry.md)
+[New-CMRequirementRuleActiveDirectorySiteValue](New-CMRequirementRuleActiveDirectorySiteValue.md)
+[New-CMRequirementRuleBooleanValue](New-CMRequirementRuleBooleanValue.md)
+[New-CMRequirementRuleCMSiteValue](New-CMRequirementRuleCMSiteValue.md)
+[New-CMRequirementRuleCommonValue](New-CMRequirementRuleCommonValue.md)
+[New-CMRequirementRuleDeviceOwnershipValue](New-CMRequirementRuleDeviceOwnershipValue.md)
+[New-CMRequirementRuleExistential](New-CMRequirementRuleExistential.md)
+[New-CMRequirementRuleExpression](New-CMRequirementRuleExpression.md)
+[New-CMRequirementRuleFileAttributeValue](New-CMRequirementRuleFileAttributeValue.md)
+[New-CMRequirementRuleFreeDiskSpaceValue](New-CMRequirementRuleFreeDiskSpaceValue.md)
+[New-CMRequirementRuleInputTypeValue](New-CMRequirementRuleInputTypeValue.md)
+[New-CMRequirementRuleOperatingSystemLanguageValue](New-CMRequirementRuleOperatingSystemLanguageValue.md)
+[New-CMRequirementRuleOperatingSystemValue](New-CMRequirementRuleOperatingSystemValue.md)
+[New-CMRequirementRuleOUValue](New-CMRequirementRuleOUValue.md)
+[New-CMRequirementRuleRegistryKeyPermissionValue](New-CMRequirementRuleRegistryKeyPermissionValue.md)
+[New-CMRequirementRuleScreenResolutionValue](New-CMRequirementRuleScreenResolutionValue.md)
+[Get-CMGlobalCondition](Get-CMGlobalCondition.md)
+[Deployment type Requirements](/mem/configmgr/apps/deploy-use/create-applications#bkmk_dt-require)
+[Create global conditions](/mem/configmgr/apps/deploy-use/create-global-conditions)

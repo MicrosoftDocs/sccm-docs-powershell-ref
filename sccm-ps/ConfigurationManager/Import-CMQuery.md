@@ -1,8 +1,8 @@
 ---
-description: Import a set of exported queries to Configuration Manager.
+description: Import a query to Configuration Manager.
 external help file: AdminUI.PS.SystemStatus.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 08/06/2020
+ms.date: 12/29/2020
 schema: 2.0.0
 title: Import-CMQuery
 ---
@@ -11,7 +11,7 @@ title: Import-CMQuery
 
 ## SYNOPSIS
 
-Import a set of exported queries to Configuration Manager.
+Import a query to Configuration Manager.
 
 ## SYNTAX
 
@@ -22,7 +22,13 @@ Import-CMQuery [-ImportFilePath] <String> [-DisableWildcardHandling] [-ForceWild
 
 ## DESCRIPTION
 
-The **Import-CMQuery** cmdlet imports a set of exported queries to Configuration Manager. Queries define and store the criteria for sets of database objects that you want to find. For more information, see [Introduction to queries in Configuration Manager](/mem/configmgr/core/servers/manage/introduction-to-queries).
+Use this cmdlet to import one or more queries to the Configuration Manager site. Configuration Manager queries define a WMI Query Language (WQL) expression to get information from the site database based on the criteria you provide.
+
+You import a query that you exported from another site. For example, export a query from a test lab, and then import it to a production environment.
+
+Use the [Export-CMQuery](Export-CMQuery.md) cmdlet to export the query from another site. Configuration Manager exports the query to a managed object format (MOF) file.
+
+For more information, see [Introduction to queries in Configuration Manager](/mem/configmgr/core/servers/manage/introduction-to-queries).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
@@ -31,7 +37,7 @@ The **Import-CMQuery** cmdlet imports a set of exported queries to Configuration
 
 ### Example 1
 
-This command imports a set of queries from an exported file, `C:\Export\Query.mof`.
+This command imports queries from the file `C:\Export\Query.mof`.
 
 ```powershell
 Import-CMQuery -ImportFilePath "C:\Export\Query.nof"
@@ -129,13 +135,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
 
-[Export-CMQuery](Export-CMQuery.md)
-
 [Get-CMQuery](Get-CMQuery.md)
+
+[Export-CMQuery](Export-CMQuery.md)
 
 [Invoke-CMQuery](Invoke-CMQuery.md)
 
@@ -144,3 +151,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-CMQuery](Remove-CMQuery.md)
 
 [Set-CMQuery](Set-CMQuery.md)
+
+[Introduction to queries in Configuration Manager](/mem/configmgr/core/servers/manage/introduction-to-queries)
