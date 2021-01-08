@@ -120,7 +120,6 @@ SMS_R_System                  :
                                         LastLogonUserName = "jqpublic";
                                         Name = "millcreek01";
                                 };
-
 ```
 
 This query has a more complex **Expression** that joins two classes. The result of the query is then more complex.

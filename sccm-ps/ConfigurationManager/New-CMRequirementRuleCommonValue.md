@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 12/30/2020
@@ -122,9 +122,7 @@ If the global condition supports it, specify a file or folder property to compar
 
 For example:
 
-```powershell
-$myRule = New-CMRequirementRuleCommonValue -GlobalCondition $myGC -PropertyForFileFolder DateCreated -Value1 "2018-08-07T05:32:45Z" -RuleOperator GreaterEquals
-```
+`$myRule = New-CMRequirementRuleCommonValue -GlobalCondition $myGC -PropertyForFileFolder DateCreated -Value1 "2018-08-07T05:32:45Z" -RuleOperator GreaterEquals`
 
 ```yaml
 Type: FileFolderProperty
@@ -178,9 +176,9 @@ If you use a **RuleOperator** like `Between`, use this parameter to specify the 
 
 For example:
 
-```powershell
+
+
 $myRule = New-CMRequirementRuleCommonValue -GlobalCondition $GC -PropertyForFileFolder Size -Value1 200 -Value2 300 -RuleOperator Between
-```
 
 ```yaml
 Type: String[]

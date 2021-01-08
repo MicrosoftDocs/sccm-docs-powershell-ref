@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 12/30/2020
@@ -132,9 +132,7 @@ Specify a custom global condition object to use as the basis for this requiremen
 
 To see the list of available **File** global conditions at the site, use the following PowerShell command:
 
-```powershell
-Get-CMGlobalCondition | Where-Object DataType -eq "File" | Select-Object LocalizedDisplayName
-```
+`Get-CMGlobalCondition | Where-Object DataType -eq "File" | Select-Object LocalizedDisplayName`
 
 ```yaml
 Type: IResultObject

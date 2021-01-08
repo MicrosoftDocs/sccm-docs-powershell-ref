@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 01/05/2021
@@ -133,9 +133,7 @@ Specify a custom global condition object to use as the basis for this requiremen
 
 To see the list of available **Registry key** global conditions at the site, use the following PowerShell command:
 
-```powershell
-Get-CMGlobalCondition | Where-Object DataType -eq "RegistryKey" | Select-Object LocalizedDisplayName
-```
+`Get-CMGlobalCondition | Where-Object DataType -eq "RegistryKey" | Select-Object LocalizedDisplayName`
 
 ```yaml
 Type: IResultObject

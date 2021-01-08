@@ -1,4 +1,4 @@
-﻿---
+---
 description: Create a detection method clause for a registry key value.
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 Module Name: ConfigurationManager
@@ -157,9 +157,7 @@ Specify the registry hive where the key exists. Use the **KeyName** parameter to
 
 For example, the following PowerShell command translates to the following parameter values:
 
-```powershell
-Get-ItemProperty 'HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion' | Select-Object CurrentVersion
-```
+`Get-ItemProperty 'HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion' | Select-Object CurrentVersion`
 
 |Parameter|Value|
 |---------|---------|
@@ -202,9 +200,9 @@ Specify the name of the registry key that must exist to indicate the presence of
 
 For example, the following PowerShell command translates to the following parameter values:
 
-```powershell
+
+
 Get-ItemProperty 'HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion' | Select-Object CurrentVersion
-```
 
 |Parameter|Value|
 |---------|---------|
@@ -267,9 +265,9 @@ Specify the registry key value that indicates the presence of the application. U
 
 For example, the following PowerShell command translates to the following parameter values:
 
-```powershell
+
+
 Get-ItemProperty 'HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion' | Select-Object CurrentVersion
-```
 
 |Parameter|Value|
 |---------|---------|

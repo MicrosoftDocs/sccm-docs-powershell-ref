@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 01/04/2021
@@ -131,9 +131,7 @@ Instead of using the **Get-CMConfigurationPlatform** cmdlet with the **Platform*
 
 Use a command similar to the following to discover the CI_ID for a platform:
 
-```powershell
-Get-CMConfigurationPlatform -Name "*Server 2019*" | Select-Object LocalizedDisplayName, CI_ID
-```
+`Get-CMConfigurationPlatform -Name "*Server 2019*" | Select-Object LocalizedDisplayName, CI_ID`
 
 ```yaml
 Type: String[]

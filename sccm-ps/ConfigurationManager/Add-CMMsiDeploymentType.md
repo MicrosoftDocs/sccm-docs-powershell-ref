@@ -178,7 +178,7 @@ Add-CMMSiDeploymentType -ApplicationName "testMsi" -DeploymentTypeName "DTMsi" -
 
 This example adds a detection clause that requires a specific product ID and directory name to exist.
 
-``` powershell
+```powershell
 $app = Get-CMApplication -ApplicationName "CentralApp"
 $guid = "9900a338-484b-4a18-884e-bce87654ce1b"
 $clause1 = New-CMDetectionClauseWindowsInstaller -ProductCode $guid -Value -ExpressionOperator IsEquals -ExpectedValue "1.1.1.1"

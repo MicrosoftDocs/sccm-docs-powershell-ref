@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 12/30/2020
@@ -177,9 +177,7 @@ If you use a **RuleOperator** like `Between`, use this parameter to specify the 
 
 For example:
 
-```powershell
-$myRule = New-CMRequirementRuleFreeDiskSpaceValue -InputObject $GC -PartitionOption System -RuleOperator Between -Value1 1024 -Value2 2048
-```
+`$myRule = New-CMRequirementRuleFreeDiskSpaceValue -InputObject $GC -PartitionOption System -RuleOperator Between -Value1 1024 -Value2 2048`
 
 ```yaml
 Type: Int64
