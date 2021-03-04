@@ -49,8 +49,7 @@ This command gets the deployment package named Depack01 that is distributed to c
 ## PARAMETERS
 
 ### -DeploymentPackageName
-Specifies an array of names of distribution points that are associated with deployment packages.
-If you do not specify this parameter, the cmdlet returns status information about all deployment packages on the distribution point.
+Specifies an array of names of deployment packages. If you do not specify this parameter, the cmdlet returns status information about all deployment packages on the distribution point.
 
 ```yaml
 Type: String
@@ -80,7 +79,7 @@ Accept wildcard characters: False
 ```
 
 ### -DistributionPointName
-Specifies an array of names of deployment packages.
+Specifies an array of names of distribution points that are associated with deployment packages.
 
 ```yaml
 Type: String
