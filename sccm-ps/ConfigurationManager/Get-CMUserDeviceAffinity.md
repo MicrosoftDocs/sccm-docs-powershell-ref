@@ -1,6 +1,6 @@
 ﻿---
 description: Get the relationships between a device and its primary users.
-external help file: AdminUI.PS.Collections.dll-Help.xml
+external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 09/04/2020
 schema: 2.0.0

@@ -1,6 +1,6 @@
 ﻿---
 description: Creates a new Active Directory Query type global condition in Configuration Manager.
-external help file: AdminUI.PS.Dcm.dll-Help.xml
+external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 01/07/2019
 schema: 2.0.0

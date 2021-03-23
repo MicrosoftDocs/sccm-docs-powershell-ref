@@ -1,6 +1,6 @@
 ﻿---
 description: Gets cloud-based distribution points.
-external help file: AdminUI.PS.Content.dll-Help.xml
+external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 05/02/2019
 schema: 2.0.0

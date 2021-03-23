@@ -1,6 +1,6 @@
----
+﻿---
 description: Changes settings of a client push installation.
-external help file: AdminUI.PS.HS.dll-Help.xml
+external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 05/07/2019
 schema: 2.0.0
@@ -16,36 +16,40 @@ Changes settings of a client push installation.
 
 ### SearchByValueMandatory (Default)
 ```
-Set-CMClientPushInstallation [-AddAccount <String[]>] [-ChosenAccount <String[]>] [-ClearAccount]
- [-EnableAutomaticClientPushInstallation <Boolean>] [-EnableSystemTypeConfigurationManager <Boolean>]
- [-EnableSystemTypeServer <Boolean>] [-EnableSystemTypeWorkstation <Boolean>] -InputObject <IResultObject>
- [-InstallationProperty <String>] [-InstallClientToDomainController <Boolean>] [-RemoveAccount <String[]>]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMClientPushInstallation [-AddAccount <String[]>] [-AllownNTLMFallback <Boolean>]
+ [-ChosenAccount <String[]>] [-ClearAccount] [-EnableAutomaticClientPushInstallation <Boolean>]
+ [-EnableSystemTypeConfigurationManager <Boolean>] [-EnableSystemTypeServer <Boolean>]
+ [-EnableSystemTypeWorkstation <Boolean>] -InputObject <IResultObject> [-InstallationProperty <String>]
+ [-InstallClientToDomainController <Boolean>] [-RemoveAccount <String[]>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByComponentValueMandatory
 ```
-Set-CMClientPushInstallation [-AddAccount <String[]>] [-ChosenAccount <String[]>] [-ClearAccount]
- [-EnableAutomaticClientPushInstallation <Boolean>] [-EnableSystemTypeConfigurationManager <Boolean>]
- [-EnableSystemTypeServer <Boolean>] [-EnableSystemTypeWorkstation <Boolean>] -InputObject <IResultObject>
- [-InstallationProperty <String>] [-InstallClientToDomainController <Boolean>] [-RemoveAccount <String[]>]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMClientPushInstallation [-AddAccount <String[]>] [-AllownNTLMFallback <Boolean>]
+ [-ChosenAccount <String[]>] [-ClearAccount] [-EnableAutomaticClientPushInstallation <Boolean>]
+ [-EnableSystemTypeConfigurationManager <Boolean>] [-EnableSystemTypeServer <Boolean>]
+ [-EnableSystemTypeWorkstation <Boolean>] -InputObject <IResultObject> [-InstallationProperty <String>]
+ [-InstallClientToDomainController <Boolean>] [-RemoveAccount <String[]>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByNameMandatory
 ```
-Set-CMClientPushInstallation [-AddAccount <String[]>] [-ChosenAccount <String[]>] [-ClearAccount]
- [-EnableAutomaticClientPushInstallation <Boolean>] [-EnableSystemTypeConfigurationManager <Boolean>]
- [-EnableSystemTypeServer <Boolean>] [-EnableSystemTypeWorkstation <Boolean>] [-InstallationProperty <String>]
+Set-CMClientPushInstallation [-AddAccount <String[]>] [-AllownNTLMFallback <Boolean>]
+ [-ChosenAccount <String[]>] [-ClearAccount] [-EnableAutomaticClientPushInstallation <Boolean>]
+ [-EnableSystemTypeConfigurationManager <Boolean>] [-EnableSystemTypeServer <Boolean>]
+ [-EnableSystemTypeWorkstation <Boolean>] [-InstallationProperty <String>]
  [-InstallClientToDomainController <Boolean>] -Name <String> [-RemoveAccount <String[]>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchBySiteCodeMandatory
 ```
-Set-CMClientPushInstallation [-AddAccount <String[]>] [-ChosenAccount <String[]>] [-ClearAccount]
- [-EnableAutomaticClientPushInstallation <Boolean>] [-EnableSystemTypeConfigurationManager <Boolean>]
- [-EnableSystemTypeServer <Boolean>] [-EnableSystemTypeWorkstation <Boolean>] [-InstallationProperty <String>]
+Set-CMClientPushInstallation [-AddAccount <String[]>] [-AllownNTLMFallback <Boolean>]
+ [-ChosenAccount <String[]>] [-ClearAccount] [-EnableAutomaticClientPushInstallation <Boolean>]
+ [-EnableSystemTypeConfigurationManager <Boolean>] [-EnableSystemTypeServer <Boolean>]
+ [-EnableSystemTypeWorkstation <Boolean>] [-InstallationProperty <String>]
  [-InstallClientToDomainController <Boolean>] [-RemoveAccount <String[]>] [-SiteCode <String>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
@@ -90,6 +94,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -AllownNTLMFallback
+{{ Fill AllownNTLMFallback Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ChosenAccount
 Specifies an array of accounts for Configuration Manager to use when it connects to the computer to install the client software.
 
@@ -114,21 +133,6 @@ Aliases: ClearAccounts
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -239,21 +243,6 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### -InstallClientToDomainController
-Indicates whether to use automatic site-wide client push installation to install the Configuration Manager client software on domain controllers.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -InstallationProperty
 Specifies any installation properties to use when installing the Configuration Manager client.
 
@@ -270,6 +259,21 @@ For Configuration Manager SP1: You can specify installation properties for the W
 
 ```yaml
 Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InstallClientToDomainController
+Indicates whether to use automatic site-wide client push installation to install the Configuration Manager client software on domain controllers.
+
+```yaml
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 
@@ -323,6 +327,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
@@ -348,7 +367,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-###  
+### 
 
 ## NOTES
 

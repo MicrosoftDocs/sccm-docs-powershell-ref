@@ -1,6 +1,6 @@
----
+﻿---
 description: Changes the settings of configuration baselines.
-external help file: AdminUI.PS.Dcm.dll-Help.xml
+external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 05/07/2019
 schema: 2.0.0
@@ -112,11 +112,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AddOSConfigurationItem
+### -AddOptionalConfigurationItem
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: AddOSConfigurationItems
+Aliases: AddOptionalConfigurationItems
 
 Required: False
 Position: Named
@@ -125,11 +125,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AddOptionalConfigurationItem
+### -AddOSConfigurationItem
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: AddOptionalConfigurationItems
+Aliases: AddOSConfigurationItems
 
 Required: False
 Position: Named
@@ -206,7 +206,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ClearOSConfigurationItem
+### -ClearOptionalConfigurationItem
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -219,7 +219,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ClearOptionalConfigurationItem
+### -ClearOSConfigurationItem
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -267,21 +267,6 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -451,11 +436,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -RemoveOSConfigurationItem
+### -RemoveOptionalConfigurationItem
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: RemoveOSConfigurationItems
+Aliases: RemoveOptionalConfigurationItems
 
 Required: False
 Position: Named
@@ -464,11 +449,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -RemoveOptionalConfigurationItem
+### -RemoveOSConfigurationItem
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: RemoveOptionalConfigurationItems
+Aliases: RemoveOSConfigurationItems
 
 Required: False
 Position: Named
@@ -512,6 +497,21 @@ Aliases: RemoveSoftwareUpdates
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

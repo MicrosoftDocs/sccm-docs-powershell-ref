@@ -1,4 +1,4 @@
----
+﻿---
 Module Name: ConfigurationManager
 Module Guid: 7f590131-5253-4425-8b32-eeab51a4c393
 Download Help Link: https://aka.ms/configmgrps-help
@@ -1674,9 +1674,6 @@ Configures a new Exchange Server connector.
 ### [New-CMFDVDenyWriteAccessPolicy](New-CMFDVDenyWriteAccessPolicy.md)
 Create a new policy to determine whether BitLocker protection is required for fixed data drives to be writable on a computer.
 
-### [New-CMFDVHybridAccessPolicy](New-CMFDVHybridAccessPolicy.md)
-{{ Fill in the Synopsis }}
-
 ### [New-CMFDVPassPhrasePolicy](New-CMFDVPassPhrasePolicy.md)
 Create a policy to specify whether a password is required to unlock BitLocker-protected fixed data drives.
 
@@ -1793,9 +1790,6 @@ Create a policy to control the use of BitLocker on removable data drives.
 
 ### [New-CMRDVDenyWriteAccessPolicy](New-CMRDVDenyWriteAccessPolicy.md)
 Create a policy to configure whether BitLocker protection is required for removable data drives to be writable on a computer.
-
-### [New-CMRDVHybridAccessPolicy](New-CMRDVHybridAccessPolicy.md)
-{{ Fill in the Synopsis }}
 
 ### [New-CMRDVPassPhrasePolicy](New-CMRDVPassPhrasePolicy.md)
 Create a policy to specify whether a password is required to unlock BitLocker-protected removable data drives.

@@ -1,6 +1,6 @@
----
+﻿---
 description: Sets a File System type global condition in Configuration Manager.
-external help file: AdminUI.PS.Dcm.dll-Help.xml
+external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 01/08/2019
 schema: 2.0.0
@@ -57,22 +57,6 @@ PS XYZ:\> $GlobalFile = Set-CMGlobalConditionFile -FilePath c:\test  -Name file
 This command sets a File System type file global condition in Configuration Manager.
 
 ## PARAMETERS
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -DisableWildcardHandling
 
@@ -211,6 +195,22 @@ Specifies the path to the specified file or folder on client computers. You can 
 Type: String
 Parameter Sets: SetFileSystem
 Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
 
 Required: False
 Position: Named

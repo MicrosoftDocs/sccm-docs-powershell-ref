@@ -1,6 +1,6 @@
 ﻿---
 description: Gets a Configuration Manager object that represents the revision history for an application.
-external help file: AdminUI.PS.AppMan.dll-Help.xml
+external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 05/02/2019
 schema: 2.0.0

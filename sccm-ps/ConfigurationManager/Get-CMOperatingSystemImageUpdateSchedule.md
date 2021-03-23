@@ -1,6 +1,6 @@
----
+﻿---
 description: Retrieves an operating system image update schedule object in Configuration Manager.
-external help file: AdminUI.PS.Osd.dll-Help.xml
+external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 05/02/2019
 schema: 2.0.0

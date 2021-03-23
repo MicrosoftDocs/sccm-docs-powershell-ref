@@ -1,6 +1,6 @@
 ﻿---
 description: Gets a deployment type dependency group from Configuration Manager.
-external help file: AdminUI.PS.AppMan.dll-Help.xml
+external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 12/03/2018
 schema: 2.0.0

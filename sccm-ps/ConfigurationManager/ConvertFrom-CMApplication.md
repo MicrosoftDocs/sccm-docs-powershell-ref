@@ -1,6 +1,6 @@
----
+﻿---
 description: Converts an application SDK object to an application object.
-external help file: AdminUI.PS.AppMan.dll-Help.xml
+external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 04/29/2019
 schema: 2.0.0

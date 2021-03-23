@@ -1,6 +1,6 @@
----
+﻿---
 description: Gets Configuration Manager task sequences.
-external help file: AdminUI.PS.Osd.dll-Help.xml
+external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 11/30/2018
 schema: 2.0.0
@@ -17,12 +17,13 @@ Gets Configuration Manager task sequences.
 
 ### SearchByName (Default)
 ```
-Get-CMTaskSequence [-Name <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
+Get-CMTaskSequence [-Fast] [-Name <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory
 ```
-Get-CMTaskSequence -TaskSequencePackageId <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
+Get-CMTaskSequence [-Fast] -TaskSequencePackageId <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
  [<CommonParameters>]
 ```
 
@@ -54,6 +55,21 @@ This command gets the task sequence named taskSequence.
 ### -DisableWildcardHandling
 
 DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Fast
+{{ Fill Fast Description }}
 
 ```yaml
 Type: SwitchParameter

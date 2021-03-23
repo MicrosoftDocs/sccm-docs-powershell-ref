@@ -1,6 +1,6 @@
----
+﻿---
 description: Gets a PFX certificate profile.
-external help file: AdminUI.PS.Dcm-help.xml
+external help file: AdminUI.PS-help.xml
 Module Name: ConfigurationManager
 ms.date: 05/02/2019
 schema: 2.0.0

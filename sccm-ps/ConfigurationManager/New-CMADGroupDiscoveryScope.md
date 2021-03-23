@@ -1,6 +1,6 @@
----
+﻿---
 description: Creates an a d group discovery scope.
-external help file: AdminUI.PS.HS.dll-Help.xml
+external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 05/05/2019
 schema: 2.0.0

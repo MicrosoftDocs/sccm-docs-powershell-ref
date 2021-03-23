@@ -1,6 +1,6 @@
 ﻿---
 description: Gets a baseline deployment.
-external help file: AdminUI.PS.Deployments.dll-Help.xml
+external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 05/02/2019
 schema: 2.0.0
@@ -16,27 +16,28 @@ Gets a baseline deployment.
 
 ### SearchByName (Default)
 ```
-Get-CMBaselineDeployment [-Name <String>] [-Summary] [-Collection <IResultObject>] [-CollectionId <String>]
- [-CollectionName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
+Get-CMBaselineDeployment [-Fast] [-Name <String>] [-Summary] [-Collection <IResultObject>]
+ [-CollectionId <String>] [-CollectionName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [<CommonParameters>]
 ```
 
 ### SearchByDeploymentId
 ```
-Get-CMBaselineDeployment [-DeploymentId <String>] [-Summary] [-Collection <IResultObject>]
+Get-CMBaselineDeployment [-Fast] [-DeploymentId <String>] [-Summary] [-Collection <IResultObject>]
  [-CollectionId <String>] [-CollectionName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [<CommonParameters>]
 ```
 
 ### SearchByValue
 ```
-Get-CMBaselineDeployment [-InputObject <IResultObject>] [-Summary] [-Collection <IResultObject>]
+Get-CMBaselineDeployment [-Fast] [-InputObject <IResultObject>] [-Summary] [-Collection <IResultObject>]
  [-CollectionId <String>] [-CollectionName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [<CommonParameters>]
 ```
 
 ### SearchById
 ```
-Get-CMBaselineDeployment [-SmsObjectId <Int32>] [-Summary] [-Collection <IResultObject>]
+Get-CMBaselineDeployment [-Fast] [-SmsObjectId <Int32>] [-Summary] [-Collection <IResultObject>]
  [-CollectionId <String>] [-CollectionName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [<CommonParameters>]
 ```
@@ -111,6 +112,21 @@ Accept wildcard characters: False
 
 ### -DisableWildcardHandling
 DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Fast
+{{ Fill Fast Description }}
 
 ```yaml
 Type: SwitchParameter

@@ -1,6 +1,6 @@
----
+﻿---
 description:
-external help file: AdminUI.PS.Dcm.dll-Help.xml
+external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 11/29/2018
 schema: 2.0.0

@@ -1,6 +1,6 @@
----
+﻿---
 description: Change a deployment type for a Configuration Manager application.
-external help file: AdminUI.PS.AppMan.dll-Help.xml
+external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 08/06/2020
 schema: 2.0.0
@@ -311,38 +311,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AppV5xInstaller
-
-Indicates that the deployment type detects application information and deployment types from a Application Virtualization (App-V) 5.0 .appv package file.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: SetByNamePropertyAppV5xInstaller, SetByValuePropertyAppV5xInstaller
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AppVInstaller
-
-Indicates that the deployment type detects application information and deployment types from an App-V .appv package file.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: SetByNamePropertyAppVInstaller, SetByValuePropertyAppVInstaller
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -ApplicationName
 
 Specifies the name of the deployment application that contains the deployment type.
@@ -375,6 +343,38 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -AppV5xInstaller
+
+Indicates that the deployment type detects application information and deployment types from a Application Virtualization (App-V) 5.0 .appv package file.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: SetByNamePropertyAppV5xInstaller, SetByValuePropertyAppV5xInstaller
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AppVInstaller
+
+Indicates that the deployment type detects application information and deployment types from an App-V .appv package file.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: SetByNamePropertyAppVInstaller, SetByValuePropertyAppVInstaller
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ClearRequirements
 
 Indicates that this cmdlet clears the deployment type requirements.
@@ -387,22 +387,6 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -1146,22 +1130,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhatIf
-
-Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Windows8AppInstaller
 
 Indicates that the deployment type detects application information and deployment types from a Windows app package (.appx) file.
@@ -1216,6 +1184,38 @@ Aliases: DeepLinkInstaller
 Required: True
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+
+Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

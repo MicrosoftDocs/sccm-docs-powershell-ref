@@ -1,6 +1,6 @@
 ﻿---
 description: Get a Configuration Manager legacy package.
-external help file: AdminUI.PS.AppModel.dll-Help.xml
+external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 08/06/2020
 schema: 2.0.0
@@ -17,12 +17,14 @@ Get a Configuration Manager legacy package.
 
 ### SearchByName (Default)
 ```
-Get-CMPackage [-Fast] [-Name <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
+Get-CMPackage [-Fast] [-Name <String>] [-PackageType <PackageType>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory
 ```
-Get-CMPackage [-Fast] -Id <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
+Get-CMPackage [-Fast] -Id <String> [-PackageType <PackageType>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -134,6 +136,22 @@ Specifies the name of a package to get. For example `"Configuration Manager Clie
 Type: String
 Parameter Sets: SearchByName
 Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PackageType
+{{ Fill PackageType Description }}
+
+```yaml
+Type: PackageType
+Parameter Sets: (All)
+Aliases:
+Accepted values: RegularPackage, Driver, TaskSequence, SoftwareUpdate, ContentPackage, ImageDeployment, BootImage, OSInstallPackage
 
 Required: False
 Position: Named

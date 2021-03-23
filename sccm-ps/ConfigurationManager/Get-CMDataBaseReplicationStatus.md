@@ -1,6 +1,6 @@
----
+﻿---
 description: Gets the status for database replication.
-external help file: AdminUI.PS.DatabaseReplication.dll-Help.xml
+external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 05/02/2019
 schema: 2.0.0

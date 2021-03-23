@@ -1,6 +1,6 @@
----
+﻿---
 description: Gets one or more alert subscription objects.
-external help file: AdminUI.PS.Alerts.dll-Help.xml
+external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 05/01/2019
 schema: 2.0.0
@@ -16,13 +16,14 @@ Gets one or more alert subscription objects.
 
 ### SearchByName (Default)
 ```
-Get-CMAlertSubscription [-Name <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Get-CMAlertSubscription [-Fast] [-Name <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory
 ```
-Get-CMAlertSubscription -Id <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
+Get-CMAlertSubscription [-Fast] -Id <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -63,6 +64,21 @@ This command displays the Configuration Manager alert subscription named Subscri
 
 ### -DisableWildcardHandling
 DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Fast
+{{ Fill Fast Description }}
 
 ```yaml
 Type: SwitchParameter

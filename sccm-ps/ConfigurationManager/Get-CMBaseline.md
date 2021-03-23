@@ -1,6 +1,6 @@
 ﻿---
 description: Gets configuration baselines.
-external help file: AdminUI.PS.Dcm.dll-Help.xml
+external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 05/02/2019
 schema: 2.0.0
@@ -16,29 +16,30 @@ Gets configuration baselines.
 
 ### SearchByName (Default)
 ```
-Get-CMBaseline [[-Name] <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
+Get-CMBaseline [-Fast] [[-Name] <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory
 ```
-Get-CMBaseline [-Id] <Int32> [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
+Get-CMBaseline [-Fast] [-Id] <Int32> [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ### SearchByParentBaseline
 ```
-Get-CMBaseline [-ParentBaseline] <IResultObject> [-DisableWildcardHandling] [-ForceWildcardHandling]
+Get-CMBaseline [-Fast] [-ParentBaseline] <IResultObject> [-DisableWildcardHandling] [-ForceWildcardHandling]
  [<CommonParameters>]
 ```
 
 ### SearchByParentBaselineIdMandatory
 ```
-Get-CMBaseline -ParentBaselineId <Int32> [-DisableWildcardHandling] [-ForceWildcardHandling]
+Get-CMBaseline [-Fast] -ParentBaselineId <Int32> [-DisableWildcardHandling] [-ForceWildcardHandling]
  [<CommonParameters>]
 ```
 
 ### SearchByParentBaselineNameMandatory
 ```
-Get-CMBaseline -ParentBaselineName <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
+Get-CMBaseline [-Fast] -ParentBaselineName <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
  [<CommonParameters>]
 ```
 
@@ -70,6 +71,21 @@ This command gets the child configuration baselines in the parent baseline confi
 
 ### -DisableWildcardHandling
 DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Fast
+{{ Fill Fast Description }}
 
 ```yaml
 Type: SwitchParameter

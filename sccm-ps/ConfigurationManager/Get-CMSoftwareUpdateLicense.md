@@ -1,6 +1,6 @@
 ﻿---
 description: Gets a EULA or SLT for a software update in Configuration Manager.
-external help file: AdminUI.PS.Sum.dll-Help.xml
+external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 05/02/2019
 schema: 2.0.0

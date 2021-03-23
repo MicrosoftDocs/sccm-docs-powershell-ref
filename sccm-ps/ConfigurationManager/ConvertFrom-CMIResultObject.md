@@ -1,6 +1,6 @@
----
+﻿---
 description: Converts from an **IResultObject** to a **ManagementBaseObject**.
-external help file: AdminUI.PS.Common.dll-Help.xml
+external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 04/29/2019
 schema: 2.0.0

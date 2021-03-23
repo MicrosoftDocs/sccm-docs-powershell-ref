@@ -1,6 +1,6 @@
----
+﻿---
 description: Get Configuration Manager PowerShell scripts.
-external help file: AdminUI.PS.ClientOperations.dll-Help.xml
+external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 11/17/2020
 schema: 2.0.0

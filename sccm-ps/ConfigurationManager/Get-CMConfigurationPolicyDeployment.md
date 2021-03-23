@@ -1,6 +1,6 @@
 ﻿---
 description: Gets a configuration policy deployment.
-external help file: AdminUI.PS.Deployments.dll-Help.xml
+external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 05/02/2019
 schema: 2.0.0
@@ -16,28 +16,28 @@ Gets a configuration policy deployment.
 
 ### SearchByName (Default)
 ```
-Get-CMConfigurationPolicyDeployment [-Name <String>] [-Summary] [-Collection <IResultObject>]
+Get-CMConfigurationPolicyDeployment [-Fast] [-Name <String>] [-Summary] [-Collection <IResultObject>]
  [-CollectionId <String>] [-CollectionName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [<CommonParameters>]
 ```
 
 ### SearchByDeploymentId
 ```
-Get-CMConfigurationPolicyDeployment [-DeploymentId <String>] [-Summary] [-Collection <IResultObject>]
+Get-CMConfigurationPolicyDeployment [-Fast] [-DeploymentId <String>] [-Summary] [-Collection <IResultObject>]
  [-CollectionId <String>] [-CollectionName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [<CommonParameters>]
 ```
 
 ### SearchByValue
 ```
-Get-CMConfigurationPolicyDeployment [-InputObject <IResultObject>] [-Summary] [-Collection <IResultObject>]
- [-CollectionId <String>] [-CollectionName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [<CommonParameters>]
+Get-CMConfigurationPolicyDeployment [-Fast] [-InputObject <IResultObject>] [-Summary]
+ [-Collection <IResultObject>] [-CollectionId <String>] [-CollectionName <String>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ### SearchById
 ```
-Get-CMConfigurationPolicyDeployment [-SmsObjectId <Int32>] [-Summary] [-Collection <IResultObject>]
+Get-CMConfigurationPolicyDeployment [-Fast] [-SmsObjectId <Int32>] [-Summary] [-Collection <IResultObject>]
  [-CollectionId <String>] [-CollectionName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [<CommonParameters>]
 ```
@@ -112,6 +112,21 @@ Accept wildcard characters: False
 
 ### -DisableWildcardHandling
 DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Fast
+{{ Fill Fast Description }}
 
 ```yaml
 Type: SwitchParameter

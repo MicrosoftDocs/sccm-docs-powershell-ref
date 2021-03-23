@@ -1,6 +1,6 @@
----
+﻿---
 description: Creates an exchange connector general setting.
-external help file: AdminUI.PS.HS.dll-Help.xml
+external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 05/07/2019
 schema: 2.0.0
@@ -127,7 +127,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.ConfigurationManagement.Cmdlets.HS.Commands.ExchangeConnectorGeneralSetting
+### Microsoft.ConfigurationManagement.PowerShell.Cmdlets.HS.ExchangeConnectorGeneralSetting
 
 ## NOTES
 

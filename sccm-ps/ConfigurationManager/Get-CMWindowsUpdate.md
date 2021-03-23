@@ -1,6 +1,6 @@
----
+﻿---
 description: Gets a windows update.
-external help file: AdminUI.PS.Sum-help.xml
+external help file: AdminUI.PS-help.xml
 Module Name: ConfigurationManager
 ms.date: 05/05/2019
 schema: 2.0.0

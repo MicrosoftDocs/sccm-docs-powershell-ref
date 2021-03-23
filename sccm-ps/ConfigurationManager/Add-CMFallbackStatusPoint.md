@@ -1,6 +1,6 @@
----
+﻿---
 description: Adds a fallback status point to a Configuration Manager site.
-external help file: AdminUI.PS.HS.dll-Help.xml
+external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 04/29/2019
 schema: 2.0.0
@@ -16,14 +16,14 @@ Adds a fallback status point to a Configuration Manager site.
 
 ### ByValue (Default)
 ```
-Add-CMFallbackStatusPoint -InputObject <IResultObject> [-StateMessageNum <Int32>] [-ThrottleMins <Int32>]
+Add-CMFallbackStatusPoint -InputObject <IResultObject> [-StateMessageCount <Int32>] [-ThrottleMins <Int32>]
  [-ThrottleSec <Int32>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ### ByName
 ```
-Add-CMFallbackStatusPoint [-SiteCode <String>] [-SiteSystemServerName] <String> [-StateMessageNum <Int32>]
+Add-CMFallbackStatusPoint [-SiteCode <String>] [-SiteSystemServerName] <String> [-StateMessageCount <Int32>]
  [-ThrottleMins <Int32>] [-ThrottleSec <Int32>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
  [-Confirm] [<CommonParameters>]
 ```
@@ -54,21 +54,6 @@ The specified computer hosts the role.
 The command also specifies number of messages and throttle time period for the fallback status point.
 
 ## PARAMETERS
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -DisableWildcardHandling
 DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
@@ -146,13 +131,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -StateMessageNum
-Specifies the number of state messages that a fallback status point can send to Configuration Manager within a throttle interval.
+### -StateMessageCount
+{{ Fill StateMessageCount Description }}
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases:
+Aliases: StateMessagesCount, StateMessageNum
 
 Required: False
 Position: Named
@@ -183,6 +168,21 @@ Aliases: ThrottleIntervalSeconds, ThrottleInterval
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

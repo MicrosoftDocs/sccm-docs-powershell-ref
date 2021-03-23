@@ -1,6 +1,6 @@
 ﻿---
 description: Gets Configuration Manager alerts.
-external help file: AdminUI.PS.Alerts.dll-Help.xml
+external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 05/01/2019
 schema: 2.0.0
@@ -16,13 +16,13 @@ Gets Configuration Manager alerts.
 
 ### SearchByName (Default)
 ```
-Get-CMAlert [[-Name] <String>] [-TypeId <Int32>] [-TypeInstanceId <String>] [-DisableWildcardHandling]
+Get-CMAlert [-Fast] [[-Name] <String>] [-TypeId <Int32>] [-TypeInstanceId <String>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory
 ```
-Get-CMAlert -Id <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
+Get-CMAlert [-Fast] -Id <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -56,6 +56,21 @@ This command gets all alerts that have a name that begins with the letter D.
 
 ### -DisableWildcardHandling
 DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Fast
+{{ Fill Fast Description }}
 
 ```yaml
 Type: SwitchParameter

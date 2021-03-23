@@ -1,6 +1,6 @@
 ﻿---
 description: Gets a package deployment from Configuration Manager.
-external help file: AdminUI.PS.Deployments.dll-Help.xml
+external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 11/30/2018
 schema: 2.0.0

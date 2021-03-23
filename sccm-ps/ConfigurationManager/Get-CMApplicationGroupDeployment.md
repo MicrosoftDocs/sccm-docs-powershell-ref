@@ -1,5 +1,5 @@
----
-external help file: AdminUI.PS.Deployments.dll-Help.xml
+﻿---
+external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 12/03/2020
 online version:
@@ -234,8 +234,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### IResultObject[]#SMS_DeploymentSummary
 
 ### IResultObject#SMS_DeploymentSummary
-
-For more information on this return object and its properties, see [SMS_DeploymentSummary server WMI class](/mem/configmgr/develop/reference/apps/sms_deploymentsummary-server-wmi-class).
 
 ### IResultObject[]#SMS_ApplicationGroupAssignment
 

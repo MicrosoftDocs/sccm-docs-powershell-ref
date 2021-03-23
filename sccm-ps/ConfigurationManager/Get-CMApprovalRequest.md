@@ -1,6 +1,6 @@
 ﻿---
 description: Gets an approval request to allow the installation of a Configuration Manager application.
-external help file: AdminUI.PS.AppModel.dll-Help.xml
+external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 05/02/2019
 schema: 2.0.0

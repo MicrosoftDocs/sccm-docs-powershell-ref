@@ -1,6 +1,6 @@
 ﻿---
 description: Gets a task sequence deployment in Configuration Manager.
-external help file: AdminUI.PS.Deployments.dll-Help.xml
+external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 12/03/2018
 schema: 2.0.0
@@ -17,27 +17,28 @@ Gets a task sequence deployment in Configuration Manager.
 
 ### SearchByName (Default)
 ```
-Get-CMTaskSequenceDeployment [-Name <String>] [-Summary] [-Collection <IResultObject>] [-CollectionId <String>]
- [-CollectionName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
+Get-CMTaskSequenceDeployment [-Fast] [-Name <String>] [-Summary] [-Collection <IResultObject>]
+ [-CollectionId <String>] [-CollectionName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [<CommonParameters>]
 ```
 
 ### SearchByDeploymentId
 ```
-Get-CMTaskSequenceDeployment [-DeploymentId <String>] [-Summary] [-Collection <IResultObject>]
+Get-CMTaskSequenceDeployment [-Fast] [-DeploymentId <String>] [-Summary] [-Collection <IResultObject>]
  [-CollectionId <String>] [-CollectionName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [<CommonParameters>]
 ```
 
 ### SearchByValue
 ```
-Get-CMTaskSequenceDeployment [-InputObject <IResultObject>] [-Summary] [-Collection <IResultObject>]
+Get-CMTaskSequenceDeployment [-Fast] [-InputObject <IResultObject>] [-Summary] [-Collection <IResultObject>]
  [-CollectionId <String>] [-CollectionName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [<CommonParameters>]
 ```
 
 ### SearchById
 ```
-Get-CMTaskSequenceDeployment [-TaskSequenceId <String>] [-Summary] [-Collection <IResultObject>]
+Get-CMTaskSequenceDeployment [-Fast] [-TaskSequenceId <String>] [-Summary] [-Collection <IResultObject>]
  [-CollectionId <String>] [-CollectionName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [<CommonParameters>]
 ```
@@ -132,6 +133,21 @@ Accept wildcard characters: False
 ### -DisableWildcardHandling
 
 DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Fast
+{{ Fill Fast Description }}
 
 ```yaml
 Type: SwitchParameter

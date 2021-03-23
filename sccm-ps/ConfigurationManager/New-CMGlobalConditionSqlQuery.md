@@ -1,6 +1,6 @@
----
+﻿---
 description: Creates a SQL Query type global condition in Configuration Manager.
-external help file: AdminUI.PS.Dcm.dll-Help.xml
+external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 01/08/2019
 schema: 2.0.0
@@ -86,6 +86,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Database
+
+Specifies a database name.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -DataType
 
 Specifies a data type.
@@ -95,22 +111,6 @@ Type: GlobalConditionDataType
 Parameter Sets: (All)
 Aliases:
 Accepted values: String, DateTime, Integer, FloatingPoint, Version, Boolean
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Database
-
-Specifies a database name.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
 
 Required: True
 Position: Named

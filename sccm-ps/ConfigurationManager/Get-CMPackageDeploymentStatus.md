@@ -1,6 +1,6 @@
 ﻿---
 description: Get the status of classic software distribution deployments.
-external help file: AdminUI.PS.Deployments.dll-Help.xml
+external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 07/30/2020
 schema: 2.0.0

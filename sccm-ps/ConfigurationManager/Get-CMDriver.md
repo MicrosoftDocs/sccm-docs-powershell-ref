@@ -1,6 +1,6 @@
 ﻿---
 description: Gets a device driver.
-external help file: AdminUI.PS.Osd.dll-Help.xml
+external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 05/02/2019
 schema: 2.0.0
@@ -16,29 +16,36 @@ Gets a device driver.
 
 ### SearchByName (Default)
 ```
-Get-CMDriver [-Name <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
+Get-CMDriver [-Fast] [-Name <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ### SearchByDriverPackageIdMandatory
 ```
-Get-CMDriver -DriverPackageId <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
+Get-CMDriver [-Fast] -DriverPackageId <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [<CommonParameters>]
 ```
 
 ### SearchByDriverPackageNameMandatory
 ```
-Get-CMDriver -DriverPackageName <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
+Get-CMDriver [-Fast] -DriverPackageName <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
  [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory
 ```
-Get-CMDriver -Id <Int32> [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
+Get-CMDriver [-Fast] -Id <Int32> [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ### SearchByDriverPackage
 ```
-Get-CMDriver -InputObject <IResultObject> [-DisableWildcardHandling] [-ForceWildcardHandling]
+Get-CMDriver [-Fast] -InputObject <IResultObject> [-DisableWildcardHandling] [-ForceWildcardHandling]
  [<CommonParameters>]
+```
+
+### SearchByCategory
+```
+Get-CMDriver [-Fast] [-AdministrativeCategory <IResultObject[]>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -59,6 +66,21 @@ PS XYZ:\> Get-CMDriver -Name "Driver01"
 This command gets the driver named Driver01.
 
 ## PARAMETERS
+
+### -AdministrativeCategory
+{{ Fill AdministrativeCategory Description }}
+
+```yaml
+Type: IResultObject[]
+Parameter Sets: SearchByCategory
+Aliases: AdministrativeCategories
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -DisableWildcardHandling
 DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
@@ -99,6 +121,21 @@ Parameter Sets: SearchByDriverPackageNameMandatory
 Aliases: PackageName
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Fast
+{{ Fill Fast Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False

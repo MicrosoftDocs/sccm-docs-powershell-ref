@@ -1,5 +1,5 @@
----
-external help file: AdminUI.PS.Sum.dll-Help.xml
+﻿---
+external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 online version:
 schema: 2.0.0
@@ -17,7 +17,8 @@ Use this cmdlet to modify a third-party updates catalog.
 ```
 Set-CMThirdPartyUpdateCatalog [-Description <String>] [-Force] [[-Name] <String>] [-NewName <String>]
  [-PassThru] [-PublisherName <String>] [-Schedule <IResultObject>] [-Subscribe] [-SupportContact <String>]
- [-SupportUrl <Uri>] [-SyncNow] [-Unsubscribe] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+ [-SupportUrl <Uri>] [-SyncNow] [-Unsubscribe] [-CategoryNamePublishOption <Hashtable>]
+ [-CategoryIdPublishOption <Hashtable>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
  [-Confirm] [<CommonParameters>]
 ```
 
@@ -25,7 +26,8 @@ Set-CMThirdPartyUpdateCatalog [-Description <String>] [-Force] [[-Name] <String>
 ```
 Set-CMThirdPartyUpdateCatalog [-Description <String>] [-Force] [-Id] <String> [-NewName <String>] [-PassThru]
  [-PublisherName <String>] [-Schedule <IResultObject>] [-Subscribe] [-SupportContact <String>]
- [-SupportUrl <Uri>] [-SyncNow] [-Unsubscribe] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+ [-SupportUrl <Uri>] [-SyncNow] [-Unsubscribe] [-CategoryNamePublishOption <Hashtable>]
+ [-CategoryIdPublishOption <Hashtable>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
  [-Confirm] [<CommonParameters>]
 ```
 
@@ -33,7 +35,8 @@ Set-CMThirdPartyUpdateCatalog [-Description <String>] [-Force] [-Id] <String> [-
 ```
 Set-CMThirdPartyUpdateCatalog [-Description <String>] [-Force] [-InputObject] <IResultObject>
  [-NewName <String>] [-PassThru] [-PublisherName <String>] [-Schedule <IResultObject>] [-Subscribe]
- [-SupportContact <String>] [-SupportUrl <Uri>] [-SyncNow] [-Unsubscribe] [-DisableWildcardHandling]
+ [-SupportContact <String>] [-SupportUrl <Uri>] [-SyncNow] [-Unsubscribe]
+ [-CategoryNamePublishOption <Hashtable>] [-CategoryIdPublishOption <Hashtable>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -69,14 +72,28 @@ $catalog | Set-CMThirdPartyUpdateCatalog -SupportContact "Contoso hardware suppo
 
 ## PARAMETERS
 
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
+### -CategoryIdPublishOption
+{{ Fill CategoryIdPublishOption Description }}
 
 ```yaml
-Type: SwitchParameter
+Type: Hashtable
 Parameter Sets: (All)
-Aliases: cf
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CategoryNamePublishOption
+{{ Fill CategoryNamePublishOption Description }}
+
+```yaml
+Type: Hashtable
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named
@@ -329,6 +346,22 @@ Configure the site to unsubscribe from the third-party updates catalog. This par
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
 
 Required: False
 Position: Named

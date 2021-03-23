@@ -1,6 +1,6 @@
----
+﻿---
 description: Converts an application object to an application SDK object.
-external help file: AdminUI.PS.AppMan.dll-Help.xml
+external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 04/29/2019
 schema: 2.0.0
@@ -82,7 +82,7 @@ To obtain an application object, use the [Get-CMApplication](./Get-CMApplication
 ```yaml
 Type: IResultObject
 Parameter Sets: (All)
-Aliases: Application, DeploymentType
+Aliases: Application, DeploymentType, ApplicationGroup
 
 Required: True
 Position: Named

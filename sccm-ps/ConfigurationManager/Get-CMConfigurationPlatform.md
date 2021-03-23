@@ -1,5 +1,5 @@
----
-external help file: AdminUI.PS.Dcm.dll-Help.xml
+﻿---
+external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 01/04/2021
 online version:
@@ -16,13 +16,13 @@ Get an OS platform for a requirement rule.
 
 ### SearchByName (Default)
 ```
-Get-CMConfigurationPlatform [-IsSupported <Boolean>] [[-Name] <String>] [-PlatformOption <PlatformType>]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
+Get-CMConfigurationPlatform [-Fast] [-IsSupported <Boolean>] [[-Name] <String>]
+ [-PlatformOption <PlatformType>] [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ### SearchById
 ```
-Get-CMConfigurationPlatform [-Id] <Int32> [-IsSupported <Boolean>] [-PlatformOption <PlatformType>]
+Get-CMConfigurationPlatform [-Fast] [-Id] <Int32> [-IsSupported <Boolean>] [-PlatformOption <PlatformType>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
@@ -56,6 +56,21 @@ Set-CMScriptDeploymentType -ApplicationName "Central App" -DeploymentTypeName "I
 ### -DisableWildcardHandling
 
 This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Fast
+{{ Fill Fast Description }}
 
 ```yaml
 Type: SwitchParameter
@@ -169,8 +184,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### IResultObject[]#SMS_ConfigurationPlatform
 
 ### IResultObject#SMS_ConfigurationPlatform
-
-For more information on this return object and its properties, see [SMS_ConfigurationPlatform server WMI class](/mem/configmgr/develop/reference/compliance/sms_configurationplatform-server-wmi-class).
 
 ## NOTES
 

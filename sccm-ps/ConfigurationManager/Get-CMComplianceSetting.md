@@ -1,6 +1,6 @@
----
+﻿---
 description: Gets a compliance setting.
-external help file: AdminUI.PS.Dcm.dll-Help.xml
+external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 05/02/2019
 schema: 2.0.0
@@ -16,19 +16,19 @@ Gets a compliance setting.
 
 ### ById
 ```
-Get-CMComplianceSetting [-Id] <Int32> [-SettingName <String>] [-DisableWildcardHandling]
+Get-CMComplianceSetting [-Fast] [-Id] <Int32> [-SettingName <String>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ### ByValue
 ```
-Get-CMComplianceSetting -InputObject <IResultObject> [-SettingName <String>] [-DisableWildcardHandling]
+Get-CMComplianceSetting [-Fast] -InputObject <IResultObject> [-SettingName <String>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ### ByName
 ```
-Get-CMComplianceSetting [-Name] <String> [-SettingName <String>] [-DisableWildcardHandling]
+Get-CMComplianceSetting [-Fast] [-Name] <String> [-SettingName <String>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
@@ -50,6 +50,21 @@ PS XYZ:\>
 
 ### -DisableWildcardHandling
 DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Fast
+{{ Fill Fast Description }}
 
 ```yaml
 Type: SwitchParameter

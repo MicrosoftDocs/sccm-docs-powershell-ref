@@ -1,6 +1,6 @@
----
+﻿---
 description: Gets a schedule interval of the client status update task.
-external help file: AdminUI.PS.Sum.dll-Help.xml
+external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 05/02/2019
 schema: 2.0.0

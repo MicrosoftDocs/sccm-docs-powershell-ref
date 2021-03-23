@@ -1,6 +1,6 @@
----
+﻿---
 description: Gets the query membership rules from one or more device collections in the Configuration Manager hierarchy.
-external help file: AdminUI.PS.Collections-help.xml
+external help file: AdminUI.PS-help.xml
 Module Name: ConfigurationManager
 ms.date: 05/02/2019
 schema: 2.0.0

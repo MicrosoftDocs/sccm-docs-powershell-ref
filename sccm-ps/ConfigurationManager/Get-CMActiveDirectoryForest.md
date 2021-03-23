@@ -1,6 +1,6 @@
----
+﻿---
 description: Gets one or more Active Directory forest objects.
-external help file: AdminUI.PS.HS.dll-Help.xml
+external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 05/01/2019
 schema: 2.0.0

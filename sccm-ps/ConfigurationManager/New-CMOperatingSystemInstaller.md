@@ -1,6 +1,6 @@
----
+﻿---
 description: Adds an operating system installer.
-external help file: AdminUI.PS.Osd.dll-Help.xml
+external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 05/07/2019
 schema: 2.0.0
@@ -15,8 +15,9 @@ Adds an operating system installer.
 ## SYNTAX
 
 ```
-New-CMOperatingSystemInstaller [-Description <String>] [-Name <String>] -Path <String> [-Version <String>]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+New-CMOperatingSystemInstaller [-Description <String>] [-Name <String>] [-Index <Int32>] -Path <String>
+ [-Version <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -38,21 +39,6 @@ PS XYZ:\> New-CMOperatingSystemInstaller -Name "INSTALL01" -Path "\\Contoso01\CM
 This command adds an operating system installer named INSTALL01 and specifies the network path to the installation source files of the operating system installer.
 
 ## PARAMETERS
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -Description
 Specifies a description for an operating system installer.
@@ -91,6 +77,21 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Index
+{{ Fill Index Description }}
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases: ImageIndex
 
 Required: False
 Position: Named
@@ -140,6 +141,21 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

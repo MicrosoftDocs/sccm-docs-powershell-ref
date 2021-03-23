@@ -1,6 +1,6 @@
----
+﻿---
 description: Change client settings for Configuration Manager devices and users.
-external help file: AdminUI.PS.ClientSettings.dll-Help.xml
+external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 11/20/2020
 schema: 2.0.0
@@ -594,21 +594,6 @@ Aliases: ComputerRestartSettings
 Required: True
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -1823,6 +1808,19 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -UserDeviceAffinity
+```yaml
+Type: SwitchParameter
+Parameter Sets: SetUserDeviceAffinitySettingsByName
+Aliases: UserDeviceAffinitySettings
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -UseUtcForEvaluationTime
 Indicates whether to use Coordinated Universal Time (UTC), also known as Greenwich Mean Time, to configure a recurring interval.
 If you specify $False, Configuration Manager uses local time.
@@ -1833,19 +1831,6 @@ Parameter Sets: SetNetworkAccessProtectionSettingsByName
 Aliases:
 
 Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -UserDeviceAffinity
-```yaml
-Type: SwitchParameter
-Parameter Sets: SetUserDeviceAffinitySettingsByName
-Aliases: UserDeviceAffinitySettings
-
-Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -1891,6 +1876,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
@@ -1917,7 +1917,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
-
 ## NOTES
 
 Starting in version 2010, this cmdlet is deprecated. Use one of the cmdlets specific to the client settings group, listed in the [Related links](#related-links).
