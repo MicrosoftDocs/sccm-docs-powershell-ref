@@ -2,7 +2,7 @@
 description: Configure a distribution point
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 11/20/2020
+ms.date: 03/23/2021
 schema: 2.0.0
 title: Set-CMDistributionPoint
 ---
@@ -133,7 +133,7 @@ Accept wildcard characters: False
 
 ### -AgreeDoincLicense
 
-When you use the **EnableDoinc** parameter, set this parameter to `$true` to accept the Microsoft Connected Cache server license terms. For more information, [download the license terms](https://go.microsoft.com/fwlink/?linkid=2093422).
+When you use the **EnableDoinc** parameter, set this parameter to `$true` to accept the Microsoft Connected Cache server license terms. For more information, [download the license terms](https://go.microsoft.com/fwlink/?linkid=2157308).
 
 ```yaml
 Type: Boolean
@@ -636,7 +636,7 @@ Accept wildcard characters: False
 
 ### -Force
 
-Applies to version 1910 and later. Use this parameter to add a duplicate certificate without asking for confirmation.
+Use this parameter to add a duplicate certificate without asking for confirmation.
 
 ```yaml
 Type: SwitchParameter
@@ -813,7 +813,7 @@ Accept wildcard characters: False
 
 ### -ReassignSiteCode
 
-Starting in version 1906, use this parameter to reassign the distribution point to a new site. Specify the three-letter site code as a string value.
+Use this parameter to reassign the distribution point to a new site. Specify the three-letter site code as a string value.
 
 ```yaml
 Type: String
@@ -1110,6 +1110,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### IResultObject#SMS_SCI_SysResUse
+
+For more information on this return object and its properties, see [SMS_SCI_SysResUse server WMI class](/mem/configmgr/develop/reference/core/servers/configure/sms_sci_sysresuse-server-wmi-class).
 
 ## NOTES
 
