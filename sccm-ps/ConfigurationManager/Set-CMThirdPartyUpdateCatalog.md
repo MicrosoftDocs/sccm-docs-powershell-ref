@@ -1,6 +1,7 @@
 ﻿---
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
+ms.date: 03/24/2021
 online version:
 schema: 2.0.0
 ---
@@ -9,7 +10,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-Use this cmdlet to modify a third-party updates catalog.
+Modify a third-party updates catalog.
 
 ## SYNTAX
 
@@ -42,7 +43,10 @@ Set-CMThirdPartyUpdateCatalog [-Description <String>] [-Force] [-InputObject] <I
 
 ## DESCRIPTION
 
-Starting in version 1910, use this cmdlet to modify a third-party updates catalog.
+Use this cmdlet to modify a third-party updates catalog. For more information, see [Enable third-party updates](/mem/configmgr/sum/deploy-use/third-party-software-updates).
+
+> [!NOTE]
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
@@ -70,10 +74,28 @@ This example gets a third-party update catalog piped on the command line, and th
 $catalog | Set-CMThirdPartyUpdateCatalog -SupportContact "Contoso hardware support" -SupportUrl "https://hardware.contoso.com"
 ```
 
+### Example 4: Set the category publishing options for a v3 catalog
+
+This example shows the syntax to create the hashtables to set the categories when you subscribe to a v3 catalog.
+
+```powershell
+$id = "5768207d-6c40-465b-ad65-50501661368f"
+$option = [Microsoft.ConfigurationManagement.Cmdlets.Sum.Commands.PublishOptionType]::MetadataOnly
+$idOptionPair = @{$id = $option}
+Set-CMThirdPartyUpdateCatalog -CatalogName 'pmp' -CategoryIdPublishOption $idOptionPair -Subscribe -Force
+
+$name = "2BrightSparks"
+$name1 = "8x8, Inc."
+$option = [Microsoft.ConfigurationManagement.Cmdlets.Sum.Commands.PublishOptionType]::MetadataOnly
+$nameOptionPair = @{$name = $option; $name1 = $option}
+Set-CMThirdPartyUpdateCatalog -CatalogName 'pmp' -CategoryNamePublishOption $nameOptionPair -Subscribe -Force
+```
+
 ## PARAMETERS
 
 ### -CategoryIdPublishOption
-{{ Fill CategoryIdPublishOption Description }}
+
+Set the category ID publish option when you subscribe to a v3 catalog.
 
 ```yaml
 Type: Hashtable
@@ -88,7 +110,8 @@ Accept wildcard characters: False
 ```
 
 ### -CategoryNamePublishOption
-{{ Fill CategoryNamePublishOption Description }}
+
+Set the category name publish option when you subscribe to a v3 catalog.
 
 ```yaml
 Type: Hashtable
@@ -136,6 +159,8 @@ Accept wildcard characters: False
 
 ### -Force
 
+Run the command without asking for confirmation.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -166,7 +191,7 @@ Accept wildcard characters: False
 
 ### -Id
 
-Specify the ID of the the third-party updates catalog to change.
+Specify the ID of the third-party updates catalog to change.
 
 ```yaml
 Type: String
@@ -229,6 +254,8 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
+
+Add this parameter to return an object that represents the item with which you're working. By default, this cmdlet may not generate any output.
 
 ```yaml
 Type: SwitchParameter
@@ -399,4 +426,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## NOTES
 
+This cmdlet returns an object of the **SMS_ISVCatalogs** WMI class.
+
 ## RELATED LINKS
+
+[Get-CMThirdPartyUpdateCatalog](Get-CMThirdPartyUpdateCatalog.md)
+[New-CMThirdPartyUpdateCatalog](New-CMThirdPartyUpdateCatalog.md)
+[Remove-CMThirdPartyUpdateCatalog](Remove-CMThirdPartyUpdateCatalog.md)
+
+[Get-CMThirdPartyUpdateCategory](Get-CMThirdPartyUpdateCategory.md)
+[Set-CMThirdPartyUpdateCategory](Set-CMThirdPartyUpdateCategory.md)

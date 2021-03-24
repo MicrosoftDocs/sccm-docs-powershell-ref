@@ -1,8 +1,8 @@
 ﻿---
-description: Gets a client PFX certificate.
+description: Get a client PFX certificate.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/02/2019
+ms.date: 03/23/2021
 schema: 2.0.0
 title: Get-CMClientCertificatePfx
 ---
@@ -10,7 +10,8 @@ title: Get-CMClientCertificatePfx
 # Get-CMClientCertificatePfx
 
 ## SYNOPSIS
-Gets a client PFX certificate.
+
+Get a client PFX certificate.
 
 ## SYNTAX
 
@@ -20,26 +21,27 @@ Get-CMClientCertificatePfx [-Fast] [-InputObject <IResultObject>] [-Thumbprint <
 ```
 
 ## DESCRIPTION
-The **Get-CMClientCertificatePfx** cmdlet gets a client Personal Information Exchange (PFX) certificate.
+
+Use this cmdlet to get a client Personal Information Exchange (PFX) certificate. For more information, see [Introduction to certificate profiles in Configuration Manager](/mem/configmgr/protect/deploy-use/introduction-to-certificate-profiles).
 
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
 ### Example 1: Get a client PFX certificate
-```
-PS XYZ:\> Get-CMClientCertificatePfx -UserName (Get-CMUser -Name "Contoso\Administrator").SMSID -Thumbprint  e1c2fff14282b61f79f78fbfca6721f0517ab767
-```
 
-This command gets the Pfx client certificate for the user named Administrator with the specified thumbprint.
+This command gets the PFX client certificate for the user named **jqpublic** with the specified thumbprint.
+
+```powershell
+Get-CMClientCertificatePfx -UserName (Get-CMUser -Name "contoso\jqpublic").SMSID -Thumbprint e1c2fff14282b61f79f78fbfca6721f0517ab767
+```
 
 ## PARAMETERS
 
 ### -DisableWildcardHandling
-DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
+
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -54,7 +56,10 @@ Accept wildcard characters: False
 ```
 
 ### -Fast
-{{ Fill Fast Description }}
+
+Add this parameter to not automatically refresh lazy properties. Lazy properties contain values that are relatively inefficient to retrieve. Getting these properties can cause additional network traffic and decrease cmdlet performance.
+
+If you don't use this parameter, the cmdlet displays a warning. To disable this warning, set `$CMPSSuppressFastNotUsedCheck = $true`.
 
 ```yaml
 Type: SwitchParameter
@@ -69,7 +74,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
+
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -84,8 +90,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies a PFX certificate profile object.
-To obtain a PFX certificate profile object, use the Get-CMCertificateProfilePfx cmdlet.
+
+Specify a PFX certificate profile object. To get this object, use the [Get-CMCertificateProfilePfx](Get-CMCertificateProfilePfx.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -100,7 +106,8 @@ Accept wildcard characters: False
 ```
 
 ### -Thumbprint
-Specifies the thumbprint of the client PFX certificate. If you do not specify this parameter, all certificates for the user are returned.
+
+Specify the thumbprint of the client PFX certificate. If you don't specify this parameter, it returns all certificates for the user.
 
 ```yaml
 Type: String
@@ -115,8 +122,8 @@ Accept wildcard characters: False
 ```
 
 ### -UserName
-Specifies the name of the user whose client PFX certificate you want to get.
-To get a value for this parameter, you can use the following command: `(Get-CMUser -Name "Contoso\Administrator").SMSID`.
+
+Specify the name of the user whose client PFX certificate you want to get. To get a value for this parameter, you can use the following command: `(Get-CMUser -Name "contoso\jqpublic").SMSID`.
 
 ```yaml
 Type: String
@@ -142,6 +149,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### IResultObject#SMS_ClientPfxCertificate
 
 ## NOTES
+
+For more information on this return object and its properties, see [SMS_ClientPfxCertificate server WMI class](/mem/configmgr/develop/reference/core/clients/deploy/sms_clientpfxcertificate-server-wmi-class).
 
 ## RELATED LINKS
 

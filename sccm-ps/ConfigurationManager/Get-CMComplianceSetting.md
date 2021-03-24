@@ -1,8 +1,8 @@
 ﻿---
-description: Gets a compliance setting.
+description: Get a setting for a configuration item.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/02/2019
+ms.date: 03/24/2021
 schema: 2.0.0
 title: Get-CMComplianceSetting
 ---
@@ -10,7 +10,8 @@ title: Get-CMComplianceSetting
 # Get-CMComplianceSetting
 
 ## SYNOPSIS
-Gets a compliance setting.
+
+Get a setting for a configuration item.
 
 ## SYNTAX
 
@@ -34,22 +35,26 @@ Get-CMComplianceSetting [-Fast] [-Name] <String> [-SettingName <String>] [-Disab
 
 ## DESCRIPTION
 
+Use this cmdlet to get a setting for a configuration item. Settings represent the business or technical conditions to assess compliance on client devices. Configure a new setting or browse to an existing setting on a reference computer. For more information, see [Get started with compliance settings in Configuration Manager](/mem/configmgr/compliance/get-started/get-started-with-compliance-settings).
+
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
-### Example 1
-```
-PS XYZ:\>
+### Example 1: Get the location for a setting in a configuration item
+
+This example queries the setting named **appevents** for the configuration item **Windows health check** and returns just the location attribute. This attribute includes the registry or file path for the setting.
+
+```powershell
+Get-CMComplianceSetting -Name "Windows health check" -SettingName "appevents" -Fast | Select-Object Location
 ```
 
 ## PARAMETERS
 
 ### -DisableWildcardHandling
-DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
+
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -64,7 +69,10 @@ Accept wildcard characters: False
 ```
 
 ### -Fast
-{{ Fill Fast Description }}
+
+Add this parameter to not automatically refresh lazy properties. Lazy properties contain values that are relatively inefficient to retrieve. Getting these properties can cause additional network traffic and decrease cmdlet performance.
+
+If you don't use this parameter, the cmdlet displays a warning. To disable this warning, set `$CMPSSuppressFastNotUsedCheck = $true`.
 
 ```yaml
 Type: SwitchParameter
@@ -79,7 +87,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
+
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -94,6 +103,9 @@ Accept wildcard characters: False
 ```
 
 ### -Id
+
+Specify the **CI_ID** for the configuration item that has the setting you want to get. For example, `258895`.
+
 ```yaml
 Type: Int32
 Parameter Sets: ById
@@ -107,6 +119,9 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
+
+Specify a configuration item object that has the setting you want to get. To get this object, use the [Get-CMConfigurationItem](Get-CMConfigurationItem.md).
+
 ```yaml
 Type: IResultObject
 Parameter Sets: ByValue
@@ -120,6 +135,9 @@ Accept wildcard characters: False
 ```
 
 ### -Name
+
+Specify the name of the configuration item that has the setting you want to get.
+
 ```yaml
 Type: String
 Parameter Sets: ByName
@@ -133,6 +151,9 @@ Accept wildcard characters: False
 ```
 
 ### -SettingName
+
+Specify the name of the setting in the configuration item. This value is the same as the **Name** value on the **Settings** tab of the configuration item properties in the console.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -159,3 +180,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-CMConfigurationItem](Get-CMConfigurationItem.md)
+
+[Get-CMComplianceRule](Get-CMComplianceRule.md)

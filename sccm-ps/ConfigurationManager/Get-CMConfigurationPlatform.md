@@ -1,7 +1,7 @@
 ﻿---
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 01/04/2021
+ms.date: 03/24/2021
 online version:
 schema: 2.0.0
 ---
@@ -70,7 +70,10 @@ Accept wildcard characters: False
 ```
 
 ### -Fast
-{{ Fill Fast Description }}
+
+Add this parameter to not automatically refresh lazy properties. Lazy properties contain values that are relatively inefficient to retrieve. Getting these properties can cause additional network traffic and decrease cmdlet performance.
+
+If you don't use this parameter, the cmdlet displays a warning. To disable this warning, set `$CMPSSuppressFastNotUsedCheck = $true`.
 
 ```yaml
 Type: SwitchParameter
@@ -186,6 +189,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### IResultObject#SMS_ConfigurationPlatform
 
 ## NOTES
+
+For more information on this return object and its properties, see [SMS_ConfigurationPlatform server WMI class](/mem/configmgr/develop/reference/compliance/sms_configurationplatform-server-wmi-class).
 
 This cmdlet is different from the similar **Get-CMSupportedPlatform** cmdlet.
 

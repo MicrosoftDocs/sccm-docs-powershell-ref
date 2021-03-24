@@ -1,8 +1,8 @@
 ﻿---
-description: Gets a driver package.
+description: Get a driver package.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/02/2019
+ms.date: 03/24/2021
 schema: 2.0.0
 title: Get-CMDriverPackage
 ---
@@ -10,7 +10,8 @@ title: Get-CMDriverPackage
 # Get-CMDriverPackage
 
 ## SYNOPSIS
-Gets a driver package.
+
+Get a driver package.
 
 ## SYNTAX
 
@@ -27,26 +28,27 @@ Get-CMDriverPackage [-Fast] -Id <String[]> [-DisableWildcardHandling] [-ForceWil
 ```
 
 ## DESCRIPTION
-The **Get-CMDriverPackage** cmdlet gets a driver package.
+
+Use this cmdlet to get a driver package. Group similar device drivers in packages to help streamline OS deployments. For example, create a driver package for each computer manufacturer on your network. For more information, see [Manage drivers in Configuration Manager](/mem/configmgr/osd/get-started/manage-drivers).
 
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
-### Example 1: Get a driver package that is specified by its identifier
-```
-PS XYZ:\> Get-CMDriverPackage -Id "CM100042"
-```
+### Example 1: Get a driver package by ID
 
-This command gets a driver package that is specified by its identifier.
+This command gets a driver package with ID **XYZ00042**.
+
+```powershell
+Get-CMDriverPackage -Id "XYZ00042" -Fast
+```
 
 ## PARAMETERS
 
 ### -DisableWildcardHandling
-DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
+
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -61,7 +63,10 @@ Accept wildcard characters: False
 ```
 
 ### -Fast
-{{ Fill Fast Description }}
+
+Add this parameter to not automatically refresh lazy properties. Lazy properties contain values that are relatively inefficient to retrieve. Getting these properties can cause additional network traffic and decrease cmdlet performance.
+
+If you don't use this parameter, the cmdlet displays a warning. To disable this warning, set `$CMPSSuppressFastNotUsedCheck = $true`.
 
 ```yaml
 Type: SwitchParameter
@@ -76,7 +81,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
+
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -91,7 +97,8 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-Specifies an array of identifiers for a driver package.
+
+Specify an array of IDs for a driver package. This value is a standard package ID format, for example, `XYZ00204`.
 
 ```yaml
 Type: String[]
@@ -106,7 +113,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies the name of a driver package.
+
+Specify the name of a driver package.
 
 ```yaml
 Type: String
@@ -135,6 +143,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## NOTES
 
+For more information on this return object and its properties, see [SMS_DriverPackage server WMI class](/mem/configmgr/develop/reference/osd/sms_driverpackage-server-wmi-class).
+
 ## RELATED LINKS
 
 [Export-CMDriverPackage](Export-CMDriverPackage.md)
@@ -146,3 +156,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-CMDriverPackage](Remove-CMDriverPackage.md)
 
 [Set-CMDriverPackage](Set-CMDriverPackage.md)
+
+[Get-CMDriver](Get-CMDriver.md)
+
+[Manage drivers in Configuration Manager](/mem/configmgr/osd/get-started/manage-drivers)
