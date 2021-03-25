@@ -26,9 +26,13 @@ These release notes summarize changes to the Configuration Manager cmdlet librar
 
 Starting in version 2010, you could use the **Update-Help** cmdlet to download the latest information for the Configuration Manager PowerShell module.
 
-Because of a change in how the updateable content is structured and published with the release of version 2103, don't use **Update-Help** on a version 2010 site. Update the site to version 2103, and then update the local help content.
+In version 2103, the PowerShell module structure changed from 29 DLLs to two. The PowerShell XML help files are associated with the DLL for the cmdlets. So the version 2010 help content is incompatible with a version 2103 console, and the version 2103 help content is incompatible with a version 2010 console.
 
-The cmdlet will successfully download content on a version 2010 console, but **Get-Help** will only return default usage information. Before the release of version 2103, if you used **Update-Help** with a version 2010 site, you can continue to use **Get-Help** now.
+Because of this change in how the updateable content is structured and published with the release of version 2103, don't use **Update-Help** on a version 2010 site. Update the site to version 2103, and then update the local help content.
+
+The cmdlet will successfully download content on a version 2010 console, but **Get-Help** will only return default usage information. This behavior is because PowerShell isn't able to find the cmdlet information in the right XML file, which is different now. Before the release of version 2103, if you used **Update-Help** with a version 2010 site, you can continue to use **Get-Help** now.
+
+Similarly, if you used **Update-Help** on a version 2010 site, after you update to version 2103, run **Update-Help** again to get the compatible version of the help content. Otherwise **Get-Help** will only return default usage information.
 
 > [!NOTE]
 > This issue is unique to version 2010. Because of how the structure changed, it shouldn't be an issue for later versions.
