@@ -1,6 +1,7 @@
 ---
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
+ms.date: 03/25/2021
 online version:
 schema: 2.0.0
 ---
@@ -8,7 +9,8 @@ schema: 2.0.0
 # Set-CMCISupportedPlatform
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Configure the supported platforms for a configuration item.
 
 ## SYNTAX
 
@@ -21,21 +23,37 @@ Set-CMCISupportedPlatform [-InputObject] <PSObject> [-DefineVersionManually] [-V
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+Use this cmdlet to configure the supported platforms for a configuration item. For more information, see [Create configuration items in Configuration Manager](/mem/configmgr/compliance/deploy-use/create-configuration-items).
+
+> [!NOTE]
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
-```
+### Example 1: Set platform for configuration item
 
-{{ Add example description here }}
+This example removes two OS platforms for macOS, and adds two new platforms.
+
+```powershell
+$mac_ci = Get-CMConfigurationItem -Name "Mac CI"
+
+$mac_platform1 = Get-CMSupportedPlatform -Name "Mac OS X 10.8"
+$mac_platform2 = Get-CMSupportedPlatform -Name "Mac OS X 10.9"
+$mac_platforms = $mac_platform1,$mac_platform2
+
+$mac_platform3 = Get-CMSupportedPlatform -Name "Mac OS X 10.7"
+$mac_platform4 = Get-CMSupportedPlatform -Name "Mac OS X 10.6"
+$mac_platforms2 = $mac_platform3,$mac_platform4
+
+Set-CMCISupportedPlatform -InputObject $mac_ci -AddSupportedPlatform $mac_platforms -RemoveSupportedPlatform $mac_platforms2
+```
 
 ## PARAMETERS
 
 ### -AddSupportedPlatform
-{{ Fill AddSupportedPlatform Description }}
+
+Specify one or more supported platform objects to add to the configuration item. To get this object, use the [Get-CMSupportedPlatform](Get-CMSupportedPlatform.md) cmdlet.
 
 ```yaml
 Type: IResultObject[]
@@ -50,7 +68,8 @@ Accept wildcard characters: False
 ```
 
 ### -DefineVersionManually
-{{ Fill DefineVersionManually Description }}
+
+Add this parameter to manually specify the OS version.
 
 ```yaml
 Type: SwitchParameter
@@ -65,7 +84,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-{{ Fill DisableWildcardHandling Description }}
+
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -80,7 +100,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-{{ Fill ForceWildcardHandling Description }}
+
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -95,7 +116,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{ Fill InputObject Description }}
+
+Specify a configuration item object to add the supported platforms. To get this object, use the [Get-CMConfigurationItem](Get-CMConfigurationItem.md) cmdlet.
 
 ```yaml
 Type: PSObject
@@ -110,7 +132,8 @@ Accept wildcard characters: False
 ```
 
 ### -Is64BitRequired
-{{ Fill Is64BitRequired Description }}
+
+Set this parameter to **$true** to require 64-bit OS platforms.
 
 ```yaml
 Type: Boolean
@@ -125,7 +148,8 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-{{ Fill PassThru Description }}
+
+Add this parameter to return an object that represents the item with which you're working. By default, this cmdlet may not generate any output.
 
 ```yaml
 Type: SwitchParameter
@@ -140,7 +164,8 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveSupportedPlatform
-{{ Fill RemoveSupportedPlatform Description }}
+
+Specify one or more supported platform objects to remove from the configuration item. To get this object, use the [Get-CMSupportedPlatform](Get-CMSupportedPlatform.md) cmdlet.
 
 ```yaml
 Type: IResultObject[]
@@ -155,7 +180,8 @@ Accept wildcard characters: False
 ```
 
 ### -ServicePackMajor
-{{ Fill ServicePackMajor Description }}
+
+If you use the **DefineVersionManually** parameter, specify the service pack major version as an integer value.
 
 ```yaml
 Type: Int32
@@ -170,7 +196,8 @@ Accept wildcard characters: False
 ```
 
 ### -ServicePackMinor
-{{ Fill ServicePackMinor Description }}
+
+If you use the **DefineVersionManually** parameter, specify the service pack minor version as an integer value.
 
 ```yaml
 Type: Int32
@@ -185,7 +212,8 @@ Accept wildcard characters: False
 ```
 
 ### -VersionBuild
-{{ Fill VersionBuild Description }}
+
+If you use the **DefineVersionManually** parameter, specify the build number as an integer value.
 
 ```yaml
 Type: Int32
@@ -200,7 +228,8 @@ Accept wildcard characters: False
 ```
 
 ### -VersionMajor
-{{ Fill VersionMajor Description }}
+
+If you use the **DefineVersionManually** parameter, specify the major version as an integer value.
 
 ```yaml
 Type: Int32
@@ -215,7 +244,8 @@ Accept wildcard characters: False
 ```
 
 ### -VersionMinor
-{{ Fill VersionMinor Description }}
+
+If you use the **DefineVersionManually** parameter, specify the minor version as an integer value.
 
 ```yaml
 Type: Int32
@@ -230,6 +260,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -245,8 +276,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+
+Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
 
 ```yaml
 Type: SwitchParameter
@@ -273,3 +304,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-CMSupportedPlatform](Get-CMSupportedPlatform.md)
+
+[Get-CMConfigurationItem](Get-CMConfigurationItem.md)
+
+[Create configuration items in Configuration Manager](/mem/configmgr/compliance/deploy-use/create-configuration-items)

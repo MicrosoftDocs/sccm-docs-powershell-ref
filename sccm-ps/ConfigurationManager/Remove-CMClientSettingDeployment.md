@@ -1,6 +1,7 @@
 ---
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
+ms.date: 03/25/2021
 online version:
 schema: 2.0.0
 ---
@@ -8,7 +9,8 @@ schema: 2.0.0
 # Remove-CMClientSettingDeployment
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Remove a specific deployment of a custom client setting.
 
 ## SYNTAX
 
@@ -25,21 +27,31 @@ Remove-CMClientSettingDeployment -CollectionId <String> -ClientSettingsId <Strin
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+Use this cmdlet to remove a specific deployment of a custom client setting. When you deploy custom settings, they override the default client settings. Custom client settings with a higher priority can also override other settings. For more information, see [Create and deploy custom client settings](/mem/configmgr/core/clients/deploy/configure-client-settings#create-and-deploy-custom-client-settings).
+
+> [!NOTE]
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
-```
+### Example 1: Remove a client setting deployment by ID
 
-{{ Add example description here }}
+This example removes the deployment of the **Remote control** client settings to the collection with ID **XYZ0003F**.
+
+```powershell
+$clientSettingId = (Get-CMClientSetting -Name "Remote control").SettingsID
+
+Remove-CMClientSettingDeployment -CollectionID 'XYZ0003F' -ClientSettingsID $clientSettingId
+```
 
 ## PARAMETERS
 
 ### -ClientSettingsId
-{{ Fill ClientSettingsId Description }}
+
+Specify the ID of the client settings that's deployed. This ID is the **Settings ID** in the console, and the **SettingsID** property on the **SMS_ClientSettings** WMI class.
+
+You can use the [Get-CMClientSetting](Get-CMClientSetting.md) cmdlet to get this property. For example, `(Get-CMClientSetting -Name "Remote control").SettingsID`
 
 ```yaml
 Type: String
@@ -54,7 +66,8 @@ Accept wildcard characters: False
 ```
 
 ### -CollectionId
-{{ Fill CollectionId Description }}
+
+Specify the collection ID to which the client settings are deployed. This value is the standard collection ID format, for example, `XYZ00042`.
 
 ```yaml
 Type: String
@@ -69,7 +82,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-{{ Fill DisableWildcardHandling Description }}
+
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -84,7 +98,8 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-{{ Fill Force Description }}
+
+Run the command without asking for confirmation.
 
 ```yaml
 Type: SwitchParameter
@@ -99,7 +114,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-{{ Fill ForceWildcardHandling Description }}
+
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -114,7 +130,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{ Fill InputObject Description }}
+
+Specify a client settings deployment object to remove.
 
 ```yaml
 Type: IResultObject
@@ -144,8 +161,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
 
 ```yaml
 Type: SwitchParameter
@@ -172,3 +188,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[New-CMClientSettingDeployment](New-CMClientSettingDeployment.md)
+[Start-CMClientSettingDeployment](Start-CMClientSettingDeployment.md)
+
+[Get-CMClientSetting](Get-CMClientSetting.md)
+
+[Create and deploy custom client settings](/mem/configmgr/core/clients/deploy/configure-client-settings#create-and-deploy-custom-client-settings)
