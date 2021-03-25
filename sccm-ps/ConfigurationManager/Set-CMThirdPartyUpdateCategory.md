@@ -1,6 +1,7 @@
 ﻿---
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
+ms.date: 03/25/2021
 online version:
 schema: 2.0.0
 ---
@@ -9,7 +10,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-Use this cmdlet to modify third-party update categories.
+Modify third-party software update categories.
 
 ## SYNTAX
 
@@ -43,7 +44,10 @@ Set-CMThirdPartyUpdateCategory [-EnableCategory <Boolean>] [-Id <String>] -Input
 
 ## DESCRIPTION
 
-Starting in version 2002, use this cmdlet to modify third-party update categories.
+Use this cmdlet to modify third-party software update categories. For more information, see [Enable third-party updates](/mem/configmgr/sum/deploy-use/third-party-software-updates).
+
+> [!NOTE]
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
@@ -173,7 +177,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 
-Specify an object for the third-party update catalog.
+Specify an object for the third-party update catalog. To get this object, use the [Get-CMThirdPartyUpdateCatalog](Get-CMThirdPartyUpdateCatalog.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -220,6 +224,8 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
+
+Add this parameter to return an object that represents the item with which you're working. By default, this cmdlet may not generate any output.
 
 ```yaml
 Type: SwitchParameter
@@ -293,4 +299,17 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## NOTES
 
+This cmdlet returns an object of the **SMS_ISVCatalogCategories** WMI class.
+
 ## RELATED LINKS
+
+[Get-CMThirdPartyUpdateCategory](Get-CMThirdPartyUpdateCategory.md)
+
+[Get-CMThirdPartyUpdateCatalog](Get-CMThirdPartyUpdateCatalog.md)
+[New-CMThirdPartyUpdateCatalog](New-CMThirdPartyUpdateCatalog.md)
+[Remove-CMThirdPartyUpdateCatalog](Remove-CMThirdPartyUpdateCatalog.md)
+[Set-CMThirdPartyUpdateCatalog](Set-CMThirdPartyUpdateCatalog.md)
+
+[Publish-CMThirdPartySoftwareUpdateContent](Publish-CMThirdPartySoftwareUpdateContent.md)
+
+[Enable third-party software updates](/mem/configmgr/sum/deploy-use/third-party-software-updates)

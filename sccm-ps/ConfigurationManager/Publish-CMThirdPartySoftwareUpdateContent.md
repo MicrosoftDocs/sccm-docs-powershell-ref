@@ -1,6 +1,7 @@
 ---
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
+ms.date: 03/25/2021
 online version:
 schema: 2.0.0
 ---
@@ -8,7 +9,8 @@ schema: 2.0.0
 # Publish-CMThirdPartySoftwareUpdateContent
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Publish third-party software update content
 
 ## SYNTAX
 
@@ -31,21 +33,25 @@ Publish-CMThirdPartySoftwareUpdateContent -Name <String[]> [-DisableWildcardHand
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+Use this cmdlet to publish third-party software update content. When you publish an update, the binary files are downloaded from the vendor and placed into the `WSUSContent` directory on the top-level software update point. For more information, see [Publish and deploy third-party software updates](/mem/configmgr/sum/deploy-use/third-party-software-updates#publish-and-deploy-third-party-software-updates).
+
+> [!NOTE]
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
-```
+### Example 1: Get and publish a third-party update
 
-{{ Add example description here }}
+```powershell
+Get-CMSoftwareUpdate -Name "third-party update" | Publish-CMThirdPartySoftwareUpdateContent
+```
 
 ## PARAMETERS
 
 ### -CIId
-{{ Fill CIId Description }}
+
+Specify one or more **CI_ID**s for updates to publish.
 
 ```yaml
 Type: Int32[]
@@ -60,7 +66,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-{{ Fill DisableWildcardHandling Description }}
+
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -75,7 +82,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-{{ Fill ForceWildcardHandling Description }}
+
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -90,7 +98,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{ Fill InputObject Description }}
+
+Specify a software update object for a third-party update to publish. To get this object, use the [Get-CMSoftwareUpdate](Get-CMSoftwareUpdate.md) cmdlet.
 
 ```yaml
 Type: IResultObject[]
@@ -105,7 +114,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{ Fill Name Description }}
+
+Specify the name of one or more updates to publish.
 
 ```yaml
 Type: String[]
@@ -135,8 +145,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
 
 ```yaml
 Type: SwitchParameter
@@ -163,3 +172,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-CMThirdPartyUpdateCatalog](Get-CMThirdPartyUpdateCatalog.md)
+[New-CMThirdPartyUpdateCatalog](New-CMThirdPartyUpdateCatalog.md)
+[Remove-CMThirdPartyUpdateCatalog](Remove-CMThirdPartyUpdateCatalog.md)
+[Set-CMThirdPartyUpdateCatalog](Set-CMThirdPartyUpdateCatalog.md)
+
+[Get-CMThirdPartyUpdateCategory](Get-CMThirdPartyUpdateCategory.md)
+[Set-CMThirdPartyUpdateCategory](Set-CMThirdPartyUpdateCategory.md)
+
+[Enable third-party software updates](/mem/configmgr/sum/deploy-use/third-party-software-updates)

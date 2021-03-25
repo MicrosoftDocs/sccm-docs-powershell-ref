@@ -1,6 +1,7 @@
 ﻿---
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
+ms.date: 03/25/2021
 online version:
 schema: 2.0.0
 ---
@@ -9,7 +10,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-Use this cmdlet to remove a third-party updates catalog.
+Remove a third-party software updates catalog.
 
 ## SYNTAX
 
@@ -33,7 +34,10 @@ Remove-CMThirdPartyUpdateCatalog [-Force] [-InputObject] <IResultObject> [-Disab
 
 ## DESCRIPTION
 
-Starting in version 1910, use this cmdlet to remove a third-party updates catalog.
+Use this cmdlet to remove a third-party software updates catalog. For more information, see [Enable third-party software updates](/mem/configmgr/sum/deploy-use/third-party-software-updates).
+
+> [!NOTE]
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
@@ -122,7 +126,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 
-Specify an object for the third-party updates catalog.
+Specify an object for the third-party updates catalog. To get this object, use the [Get-CMThirdPartyUpdateCatalog](Get-CMThirdPartyUpdateCatalog.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -197,3 +201,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-CMThirdPartyUpdateCatalog](Get-CMThirdPartyUpdateCatalog.md)
+[New-CMThirdPartyUpdateCatalog](New-CMThirdPartyUpdateCatalog.md)
+[Set-CMThirdPartyUpdateCatalog](Set-CMThirdPartyUpdateCatalog.md)
+
+[Publish-CMThirdPartySoftwareUpdateContent](Publish-CMThirdPartySoftwareUpdateContent.md)
+
+[Get-CMThirdPartyUpdateCategory](Get-CMThirdPartyUpdateCategory.md)
+[Set-CMThirdPartyUpdateCategory](Set-CMThirdPartyUpdateCategory.md)
+
+[Enable third-party software updates](/mem/configmgr/sum/deploy-use/third-party-software-updates)

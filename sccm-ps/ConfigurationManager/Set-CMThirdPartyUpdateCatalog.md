@@ -207,7 +207,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 
-Specify an object for the third-party updates catalog to change.
+Specify an object for the third-party updates catalog to change. To get this object, use the [Get-CMThirdPartyUpdateCatalog](Get-CMThirdPartyUpdateCatalog.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -434,5 +434,9 @@ This cmdlet returns an object of the **SMS_ISVCatalogs** WMI class.
 [New-CMThirdPartyUpdateCatalog](New-CMThirdPartyUpdateCatalog.md)
 [Remove-CMThirdPartyUpdateCatalog](Remove-CMThirdPartyUpdateCatalog.md)
 
+[Publish-CMThirdPartySoftwareUpdateContent](Publish-CMThirdPartySoftwareUpdateContent.md)
+
 [Get-CMThirdPartyUpdateCategory](Get-CMThirdPartyUpdateCategory.md)
 [Set-CMThirdPartyUpdateCategory](Set-CMThirdPartyUpdateCategory.md)
+
+[Enable third-party software updates](/mem/configmgr/sum/deploy-use/third-party-software-updates)
