@@ -1,6 +1,7 @@
 ---
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
+ms.date: 03/25/2021
 online version:
 schema: 2.0.0
 ---
@@ -8,7 +9,8 @@ schema: 2.0.0
 # Remove-CMApplicationGroup
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Remove an application group.
 
 ## SYNTAX
 
@@ -37,21 +39,25 @@ Remove-CMApplicationGroup [-Force] [-Name] <String> [-DisableWildcardHandling] [
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+Use this cmdlet to remove an application group from the site.
+
+> [!NOTE]
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
-```
+### Example 1: Remove an app group by ID
 
-{{ Add example description here }}
+```powershell
+Remove-CMApplicationGroup -Id '16778064' -Force
+```
 
 ## PARAMETERS
 
 ### -DisableWildcardHandling
-{{ Fill DisableWildcardHandling Description }}
+
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -66,7 +72,8 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-{{ Fill Force Description }}
+
+Run the command without asking for confirmation.
 
 ```yaml
 Type: SwitchParameter
@@ -81,7 +88,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-{{ Fill ForceWildcardHandling Description }}
+
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -96,7 +104,8 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-{{ Fill Id Description }}
+
+Specify the ID of the app group to remove. This value is the same as the **CI_ID**, for example `1025866`.
 
 ```yaml
 Type: Int32
@@ -111,7 +120,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{ Fill InputObject Description }}
+
+Specify an app group object to remove. To get this object, use the [Get-CMApplicationGroup](Get-CMApplicationGroup.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -126,7 +136,8 @@ Accept wildcard characters: False
 ```
 
 ### -ModelName
-{{ Fill ModelName Description }}
+
+Specify the application model identifier of the app group to remove. This value is also known as the **CI Unique ID**. For example, `ScopeId_0D7D8B60-F2F9-484A-B9F3-4A8B68D14D59/ApplicationGroup_047fbf05-55f4-42ab-9581-e63fd0337fed`.
 
 ```yaml
 Type: String
@@ -141,7 +152,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{ Fill Name Description }}
+
+Specify the name of the app group to remove.
 
 ```yaml
 Type: String
@@ -156,6 +168,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -171,8 +184,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+
+Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
 
 ```yaml
 Type: SwitchParameter
@@ -199,3 +212,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-CMApplicationGroup](Get-CMApplicationGroup.md)
+[New-CMApplicationGroup](New-CMApplicationGroup.md)
+[Set-CMApplicationGroup](Set-CMApplicationGroup.md)
+
+[Get-CMApplicationGroupDeployment](Get-CMApplicationGroupDeployment.md)
+[New-CMApplicationGroupDeployment](New-CMApplicationGroupDeployment.md)
+[Remove-CMApplicationGroupDeployment](Remove-CMApplicationGroupDeployment.md)
+[Set-CMApplicationGroupDeployment](Set-CMApplicationGroupDeployment.md)
+
+[Create application groups](/mem/configmgr/apps/deploy-use/create-app-groups)

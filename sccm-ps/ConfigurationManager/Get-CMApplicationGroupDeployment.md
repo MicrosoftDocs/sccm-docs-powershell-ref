@@ -1,7 +1,7 @@
 ﻿---
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 12/03/2020
+ms.date: 03/25/2021
 online version:
 schema: 2.0.0
 ---
@@ -45,6 +45,9 @@ Get-CMApplicationGroupDeployment [-SmsObjectId <Int32>] [-Summary] [-Collection 
 ## DESCRIPTION
 
 Get the deployment of an application group. An app group contains multiple applications, and users see the group in Software Center as a single entity. For more information, see [Create application groups](/mem/configmgr/apps/deploy-use/create-app-groups).
+
+> [!NOTE]
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
@@ -160,7 +163,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 
-Specify an object for the app group.
+Specify an object for the app group. To get this object, use the [Get-CMApplicationGroup](Get-CMApplicationGroup.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -208,7 +211,7 @@ Accept wildcard characters: False
 
 ### -Summary
 
-Add this parameter to show a summary for the deployment. This summary includes the number of devices targeted, in progress, success, and errors.
+Add this parameter to return the [SMS_DeploymentSummary WMI class](/mem/configmgr/develop/reference/apps/sms_deploymentsummary-server-wmi-class) object.
 
 ```yaml
 Type: SwitchParameter
@@ -241,6 +244,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## NOTES
 
+This cmdlet returns the following WMI class objects:
+
+- SMS_DeploymentSummary
+
+- SMS_ApplicationGroupAssignment
+
 ## RELATED LINKS
 
 [New-CMApplicationGroupDeployment](New-CMApplicationGroupDeployment.md)
@@ -248,5 +257,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-CMApplicationGroupDeployment](Remove-CMApplicationGroupDeployment.md)
 
 [Set-CMApplicationGroupDeployment](Set-CMApplicationGroupDeployment.md)
+
+[Get-CMApplicationGroup](Get-CMApplicationGroup.md)
 
 [Create application groups](/mem/configmgr/apps/deploy-use/create-app-groups)
