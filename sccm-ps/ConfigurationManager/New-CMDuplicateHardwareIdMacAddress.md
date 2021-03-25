@@ -1,6 +1,7 @@
 ﻿---
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
+ms.date: 03/25/2021
 online version:
 schema: 2.0.0
 ---
@@ -9,7 +10,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-Use this cmdlet to add duplicate hardware identifiers by MAC address.
+Add duplicate hardware identifiers by MAC address.
 
 ## SYNTAX
 
@@ -20,13 +21,16 @@ New-CMDuplicateHardwareIdMacAddress -MacAddress <String> [-DisableWildcardHandli
 
 ## DESCRIPTION
 
-Starting in version 1910, use this cmdlet to add duplicate hardware identifiers by MAC address.
+Use this cmdlet to add duplicate hardware identifiers by MAC address. Configuration Manager ignores these MAC addresses for PXE boot and client registration. For more information, see [Manage duplicate hardware identifiers](/mem/configmgr/core/clients/manage/manage-clients#manage-duplicate-hardware-identifiers).
+
+>[!NOTE]
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
 ### Example 1: Add a duplicate hardware entry for a MAC address
 
-This example adds a duplicate hardware entry for the site by the device's network MAC address.
+This example adds a duplicate hardware entry to the site by the device's network MAC address.
 
 ```powershell
 New-CMDuplicateHardwareIdMacAddress -MacAddress '01:02:03:04:05:E0'
@@ -35,6 +39,8 @@ New-CMDuplicateHardwareIdMacAddress -MacAddress '01:02:03:04:05:E0'
 ## PARAMETERS
 
 ### -DisableWildcardHandling
+
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -49,6 +55,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
+
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -123,4 +131,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## NOTES
 
+This cmdlet returns the **SMS_CommonMacAddresses** WMI class object.
+
 ## RELATED LINKS
+
+[Get-CMDuplicateHardwareIdMacAddress](Get-CMDuplicateHardwareIdMacAddress.md)
+[Remove-CMDuplicateHardwareIdMacAddress](Remove-CMDuplicateHardwareIdMacAddress.md)
+
+[New-CMDuplicateHardwareIdGuid](New-CMDuplicateHardwareIdGuid.md)
+
+[Manage duplicate hardware identifiers](/mem/configmgr/core/clients/manage/manage-clients#manage-duplicate-hardware-identifiers)
