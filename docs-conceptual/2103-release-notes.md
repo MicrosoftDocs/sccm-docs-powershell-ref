@@ -267,12 +267,6 @@ Set-CMThirdPartyUpdateCatalog -CatalogName pmp -CategoryNamePublishOption $nameO
 
 Fixed an issue with the **PublishOption** parameter set to `FullContent`.
 
-### Set-CMTSStepConditionVariable
-
-**Non-breaking changes**
-
-Parameter **OperatorType** has another possible value: `NotLike`
-
 ### Set-CMTSStep*
 
 For example, **Set-CMTSStepApplyDataImage** and the 34 other similar cmdlets.

@@ -2,7 +2,7 @@
 description: Create an automatic deployment rule (ADR) for software updates.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 08/20/2020
+ms.date: 03/24/2021
 schema: 2.0.0
 title: New-CMSoftwareUpdateAutoDeploymentRule
 ---
@@ -132,7 +132,7 @@ New-CMSoftwareUpdateAutoDeploymentRule -CollectionName "Laptops" -DeploymentPack
 This example creates an ADR that adds the **Language** criteria for three languages: English, Hungarian, and Chinese (Simplified, PRC). It also adds these languages for the Windows and Office 365 update binaries to download. This example rule is disabled by default.
 
 ```powershell
-New-CMSoftwareUpdateAutoDeploymentRule -Name "Multi-language ADR" -CollectionId "XYZ0003F" -Language "English","Hungarian","Chinese (Simplified, PRC)" -Enable $false -EnabledAfterCreate $false -RunType DoNotRunThisRuleAutomatically -LanguageSelection "English","Hungarian","Chinese (Simplified, PRC)" -O365LanguageSelection "English","Hungarian","Chinese (Simplified, PRC)"
+New-CMSoftwareUpdateAutoDeploymentRule -Name "Multi-language ADR" -CollectionId "XYZ0003F" -Language "English","Hungarian","Chinese (Simplified, PRC)" -Enable $false -EnabledAfterCreate $false -RunType DoNotRunThisRuleAutomatically -LanguageSelection "English","Hungarian","Chinese (Simplified, PRC)" -O365LanguageSelection "English (United States)","Hungarian (Hungary)","Chinese (Simplified, PRC)"
 ```
 
 ## PARAMETERS
@@ -247,7 +247,7 @@ Accept wildcard characters: False
 
 ### -Architecture
 
-Starting in version 1906, use this parameter to set the **Architecture** property filter on the Software Updates page of the ADR properties.
+Use this parameter to set the **Architecture** property filter on the Software Updates page of the ADR properties.
 
 ```yaml
 Type: ArchitectureType[]
@@ -410,7 +410,7 @@ Accept wildcard characters: False
 
 ### -ContentSize
 
-Starting in version 1906, use this parameter to set the **Content Size (KB)** property filter on the Software Updates page of the ADR properties.
+Use this parameter to set the **Content Size (KB)** property filter on the Software Updates page of the ADR properties.
 
 ```yaml
 Type: String[]
@@ -509,7 +509,7 @@ Accept wildcard characters: False
 
 ### -DeploymentPackage
 
-Starting in version 1906, use this parameter to specify an object for the deployment package to use with this automatic deployment rule. To not require a package, set the value to `$null`.
+Use this parameter to specify an object for the deployment package to use with this automatic deployment rule. To not require a package, set the value to `$null`.
 
 ```yaml
 Type: IResultObject
@@ -525,7 +525,7 @@ Accept wildcard characters: False
 
 ### -DeploymentPackageName
 
-Starting in version 1906, specify the name of the deployment package to use with this automatic deployment rule. To not require a package, set the value to `$null`.
+Specify the name of the deployment package to use with this automatic deployment rule. To not require a package, set the value to `$null`.
 
 ```yaml
 Type: String
@@ -903,7 +903,7 @@ Accept wildcard characters: False
 
 ### -O365LanguageSelection
 
-Applies to version 1906 and later. Use this parameter to set the **Office 365 Client Update** language selection. Specify a string array of languages. Clients download software updates available in the specified languages, and language-neutral updates.
+Use this parameter to set the **Office 365 Client Update** language selection. Specify a string array of languages. Clients download software updates available in the specified languages, and language-neutral updates.
 
 Use the format of the language as displayed in the console for the **Windows Update** language selection. This format is the same as the with the **LanguageSelection** parameter. For example:
 
@@ -917,6 +917,8 @@ The format for the string array is: `"English","Hungarian","Chinese (Simplified,
 > If you run this cmdlet on a computer where Windows has a localized UI, the language names may be different. For example, the English version of Windows uses "Danish", but the Danish version of Windows uses "Dansk".
 
 You currently can't specify with this parameter all of the languages that are available in the Configuration Manager console. For example, you can't specify "Irish (Ireland)" or "Maltese (Malta)".<!-- CMADO-7059972 -->
+
+Starting in version 2103, you need to specify a language with a country name. This change aligns this parameter with the options in the Configuration Manager console. For example, `-O365LanguageSelection "English (United States)"`
 
 ```yaml
 Type: String[]
@@ -964,7 +966,7 @@ Accept wildcard characters: False
 
 ### -RequirePostRebootFullScan
 
-Starting in version 1906, use this parameter to set the following option on the **User Experience** page of the ADR deployment settings: **If any update in this deployment requires a system restart, run updates deployment evaluation cycle after restart**.
+Use this parameter to set the following option on the **User Experience** page of the ADR deployment settings: **If any update in this deployment requires a system restart, run updates deployment evaluation cycle after restart**.
 
 ```yaml
 Type: Boolean
@@ -1053,7 +1055,7 @@ Accept wildcard characters: False
 
 ### -SoftDeadlineEnabled
 
-Starting in version 1906, use this parameter to set the following option on the **Deployment Schedule** page of the ADR deployment settings: **Delay enforcement of this deployment according to user preferences, up to the grace period defined in client settings**.
+Use this parameter to set the following option on the **Deployment Schedule** page of the ADR deployment settings: **Delay enforcement of this deployment according to user preferences, up to the grace period defined in client settings**.
 
 ```yaml
 Type: Boolean

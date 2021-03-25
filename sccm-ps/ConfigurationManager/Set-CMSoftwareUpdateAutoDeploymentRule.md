@@ -132,7 +132,7 @@ Set-CMSoftwareUpdateAutoDeploymentRule -Name $ReferenceADRName -DeploymentPackag
 This example changes the ADR to use the **Language** criteria for three languages: English, Hungarian, and Chinese (Simplified, PRC). It also changes to these languages for the Windows and Office 365 update binaries to download.
 
 ```powershell
-Set-CMSoftwareUpdateAutoDeploymentRule -Name "Multi-language ADR" -Language "English","Hungarian","Chinese (Simplified, PRC)" -LanguageSelection "English","Hungarian","Chinese (Simplified, PRC)" -O365LanguageSelection "English","Hungarian","Chinese (Simplified, PRC)"
+Set-CMSoftwareUpdateAutoDeploymentRule -Name "Multi-language ADR" -Language "English","Hungarian","Chinese (Simplified, PRC)" -LanguageSelection "English","Hungarian","Chinese (Simplified, PRC)" -O365LanguageSelection "English (United States)","Hungarian (Hungary)","Chinese (Simplified, PRC)"
 ```
 
 ## PARAMETERS
@@ -938,6 +938,8 @@ The format for the string array is: `"English","Hungarian","Chinese (Simplified,
 > If you run this cmdlet on a computer where Windows has a localized UI, the language names may be different. For example, the English version of Windows uses "Danish", but the Danish version of Windows uses "Dansk".
 
 You currently can't specify with this parameter all of the languages that are available in the Configuration Manager console. For example, you can't specify "Irish (Ireland)" or "Maltese (Malta)".<!-- CMADO-7059972 -->
+
+Starting in version 2103, you need to specify a language with a country name. This change aligns this parameter with the options in the Configuration Manager console. For example, `-O365LanguageSelection "English (United States)"`
 
 This parameter overwrites any existing values with the values that you specify.
 

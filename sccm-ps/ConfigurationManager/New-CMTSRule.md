@@ -1,6 +1,7 @@
 ﻿---
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
+ms.date: 03/24/2021
 online version:
 schema: 2.0.0
 ---
@@ -8,7 +9,8 @@ schema: 2.0.0
 # New-CMTSRule
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Create a rule to add to a Set Dynamic Variables task sequence step.
 
 ## SYNTAX
 
@@ -45,26 +47,47 @@ New-CMTSRule [-ReferencedVariableName <String>] [-ReferencedVariableOperator <Va
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+Use this cmdlet to create a rule that you can add to a [Set Dynamic Variables](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_SetDynamicVariables) task sequence step. When the task sequence runs this step, it evaluates the dynamic rules and variables in order. When it evaluates the rules on the specific device, it can then set task sequence variables based on those rules.
+
+There are four types of rules:
+
+- **Computer**: Evaluate values for hardware asset tag, UUID, serial number, or MAC address.
+- **Location**: Evaluate values for the default network gateway.
+- **Make and Model**: Evaluate values for the make and model of a computer.
+- **Task sequence variable**: Add a task sequence variable, condition, and value to evaluate.
+
+For more information, see [Dynamic rules and variables](/mem/configmgr/osd/understand/task-sequence-steps#dynamic-rules-and-variables).
 
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS XYZ:\> {{ Add example code here }}
-```
+### Example 1: Set the download destination if in Windows PE
 
-{{ Add example description here }}
+This example creates the following rule:
+
+`IF _SMSTSInWinPE equals "TRUE" THEN SET OSDDownloadDestinationLocationType = "TSCache"`
+
+It then adds this rule to an existing instance of this step in a task sequence.
+
+```powershell
+$tsrule = New-CMTSRule -Variable @{'OSDDownloadDestinationLocationType' = 'TSCache'} -ReferencedVariableName "_SMSTSInWinPE" -ReferencedVariableOperator equals -ReferencedVariableValue TRUE
+
+$tsname = "Default IPU"
+$tsstep = "Set Dynamic Variables"
+
+Set-CMTSStepSetDynamicVariable -TaskSequenceName $tsname -StepName $tsstep -AddRule $tsrule
+```
 
 ## PARAMETERS
 
 ### -AssetTag
-{{ Fill AssetTag Description }}
+
+Specify an **Asset tag** for the **Computer** rule type. The maximum value is 255 characters.
+
+For example, if you set this value to `123456`, it adds the following rule: `IF Asset tag equals "123456" THEN`
 
 ```yaml
 Type: String
@@ -79,7 +102,10 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultGateway
-{{ Fill DefaultGateway Description }}
+
+Specify the **Default gateway** for the **Location** rule type.
+
+For example, if you set this value to `192.168.10.1`, it adds the following rule: `IF Default gateway equals "192.168.10.1" THEN`
 
 ```yaml
 Type: String
@@ -94,6 +120,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
+
 This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
@@ -109,6 +136,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
+
 This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
@@ -124,7 +152,10 @@ Accept wildcard characters: False
 ```
 
 ### -MacAddress
-{{ Fill MacAddress Description }}
+
+Specify the **MAC address** for the **Computer** rule type.
+
+For example, if you set this value to `00:11:22:33:44:55`, it adds the following rule: `IF MAC address equals "00:11:22:33:44:55" THEN`
 
 ```yaml
 Type: String
@@ -139,7 +170,15 @@ Accept wildcard characters: False
 ```
 
 ### -Make
-{{ Fill Make Description }}
+
+Specify the **Make** for the **Make and Model** rule type. To set the other value, use the **Model** parameter. The rule evaluates true when both values are true.
+
+You can use wildcard characters:
+
+- `*`: Multiple characters
+- `?`: Single character
+
+For example, if you set this value to `Surface` and the **Model** to `*`, it adds the following rule: `IF Make equals "Surface" AND Model equals "*" THEN`
 
 ```yaml
 Type: String
@@ -154,7 +193,15 @@ Accept wildcard characters: False
 ```
 
 ### -Model
-{{ Fill Model Description }}
+
+Specify the **Model** for the **Make and Model** rule type. To set the other value, use the **Make** parameter. The rule evaluates true when both values are true.
+
+You can use wildcard characters:
+
+- `*`: Multiple characters
+- `?`: Single character
+
+For example, if you set this value to `*` and the **Make** to `Surface`, it adds the following rule: `IF Make equals "Surface" AND Model equals "*" THEN`
 
 ```yaml
 Type: String
@@ -169,7 +216,18 @@ Accept wildcard characters: False
 ```
 
 ### -ReferencedVariableName
-{{ Fill ReferencedVariableName Description }}
+
+Specify the **Variable** for the **Task Sequence Variable** rule type. It requires that you also set the **ReferencedVariableOperator** and **ReferencedVariableValue** parameters.
+
+This variable name can be a built-in task sequence variable or a custom one that you created. For more information, see [How to use task sequence variables in Configuration Manager](/mem/configmgr/osd/understand/using-task-sequence-variables).
+
+For example, if you set the following values:
+
+- **ReferencedVariableName**: `OSDRegisteredOrgName`
+- **ReferencedVariableOperator**: `Equals`
+- **ReferencedVariableValue**: `Contoso`
+
+Then it adds the following rule: `IF OSDRegisteredOrgName equals "Contoso" THEN`
 
 ```yaml
 Type: String
@@ -184,7 +242,16 @@ Accept wildcard characters: False
 ```
 
 ### -ReferencedVariableOperator
-{{ Fill ReferencedVariableOperator Description }}
+
+Specify the **Condition** for the **Task Sequence Variable** rule type. It requires that you also set the **ReferencedVariableName** and **ReferencedVariableValue** parameters. For the available operators, see the list of accepted values for this parameter.
+
+For example, if you set the following values:
+
+- **ReferencedVariableName**: `OSDRegisteredOrgName`
+- **ReferencedVariableOperator**: `Equals`
+- **ReferencedVariableValue**: `Contoso`
+
+Then it adds the following rule: `IF OSDRegisteredOrgName equals "Contoso" THEN`
 
 ```yaml
 Type: VariableOperatorType
@@ -200,7 +267,16 @@ Accept wildcard characters: False
 ```
 
 ### -ReferencedVariableValue
-{{ Fill ReferencedVariableValue Description }}
+
+Specify the **Value** for the **Task Sequence Variable** rule type. It requires that you also set the **ReferencedVariableName** and **ReferencedVariableOperator** parameters.
+
+For example, if you set the following values:
+
+- **ReferencedVariableName**: `OSDRegisteredOrgName`
+- **ReferencedVariableOperator**: `Equals`
+- **ReferencedVariableValue**: `Contoso`
+
+Then it adds the following rule: `IF OSDRegisteredOrgName equals "Contoso" THEN`
 
 ```yaml
 Type: String
@@ -215,7 +291,10 @@ Accept wildcard characters: False
 ```
 
 ### -SerialNumber
-{{ Fill SerialNumber Description }}
+
+Specify a **Serial number** for the **Computer** rule type.
+
+For example, if you set this value to `123456`, it adds the following rule: `IF Asset tag equals "123456" THEN`
 
 ```yaml
 Type: String
@@ -230,7 +309,10 @@ Accept wildcard characters: False
 ```
 
 ### -Uuid
-{{ Fill Uuid Description }}
+
+Specify a **UUID** for the **Computer** rule type.
+
+For example, if you set this value to `de5ba380-f692-45e0-bbd3-0e40543b549e`, it adds the following rule: `IF UUID equals "de5ba380-f692-45e0-bbd3-0e40543b549e" THEN`
 
 ```yaml
 Type: String
@@ -245,7 +327,12 @@ Accept wildcard characters: False
 ```
 
 ### -Variable
-{{ Fill Variable Description }}
+
+Specify the existing or custom task sequence variables and associated values that the step should set when the rule evaluates to true.
+
+For example, if you set this value to  `@{'OSDDownloadDestinationLocationType' = 'TSCache'}`, it adds the following variable after the `THEN` of the rule: `SET OSDDownloadDestinationLocationType = "TSCache"`
+
+To specify more than one variable in the same hashtable, use a semi-colon (`;`) delimiter. For example: `@{'OSDRegisteredUserName' = 'Contoso';'OSDRegisteredOrgName' = 'Contoso'}`
 
 ```yaml
 Type: Hashtable
@@ -275,8 +362,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
 
 ```yaml
 Type: SwitchParameter
@@ -304,3 +390,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[Set-CMTSStepSetDynamicVariable](Set-CMTSStepSetDynamicVariable.md)
+
+[New-CMTSStepSetDynamicVariable](New-CMTSStepSetDynamicVariable.md)
+
+[About task sequence steps - Set Dynamic Variables](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_SetDynamicVariables)
+
+[How to use task sequence variables in Configuration Manager](/mem/configmgr/osd/understand/using-task-sequence-variables)

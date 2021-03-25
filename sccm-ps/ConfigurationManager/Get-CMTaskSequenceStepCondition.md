@@ -1,5 +1,5 @@
 ﻿---
-description: Gets a Configuration Manager task sequence step condition.
+description: Get a condition on a task sequence step.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 11/30/2018
@@ -11,7 +11,7 @@ title: Get-CMTaskSequenceStepCondition
 
 ## SYNOPSIS
 
-Gets a Configuration Manager task sequence step condition.
+Get a condition on a task sequence step.
 
 ## SYNTAX
 
@@ -22,28 +22,37 @@ Get-CMTaskSequenceStepCondition -InputObject <IResultObject> [-DisableWildcardHa
 
 ## DESCRIPTION
 
-The **Get-CMTaskSequenceStepCondition** cmdlet gets task sequence condition object(s) in a task sequence group or step.  The cmdlet supports pipeline from a task sequence group or step object.
+Use this cmdlet to get a condition on a task sequence step. The task sequence evaluates the condition before it runs the step or group. For more information, see [How to use task sequence variables](/mem/configmgr/osd/understand/using-task-sequence-variables#bkmk_access-condition).
 
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Get a default condition
+
+This example shows how to get the default condition on the **Post-Processing** group of an in-place upgrade task sequence.
 
 ```powershell
-PS XYZ:\>$ReferencedTaskSequence | Get-CMTaskSequenceGroup -StepName $gpName | Get-CMTaskSequenceStepCondition
+$tsname = "Default IPU"
+$tsgroup = "Post-Processing"
+$ts = Get-CMTaskSequence -Name $tsname
+
+$ts | Get-CMTaskSequenceGroup -StepName $tsgroup | Get-CMTaskSequenceStepCondition
 ```
 
-The command gets the task sequence condition objects from a task sequence group with a specific name.
+```output
+SmsProviderObjectPath : SMS_TaskSequence_VariableConditionExpression
+Operator              : equals
+Value                 : false
+Variable              : _SMSTSSetupRollback
+```
 
 ## PARAMETERS
 
 ### -DisableWildcardHandling
 
-DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -59,7 +68,7 @@ Accept wildcard characters: False
 
 ### -ForceWildcardHandling
 
-ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -75,7 +84,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 
-Specifies a task sequence step object.
+Specify a task sequence group or step object. To get this object, use the [Get-CMTaskSequenceGroup](Get-CMTaskSequenceGroup.md) or [Get-CMTaskSequenceStep](Get-CMTaskSequenceStep.md) cmdlets.
 
 ```yaml
 Type: IResultObject
@@ -104,12 +113,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## NOTES
 
+For more information on this return object and its properties, see [SMS_TaskSequence_Condition server WMI class](/mem/configmgr/develop/reference/osd/sms_tasksequence_condition-server-wmi-class).
+
 ## RELATED LINKS
 
-[Add-CMTaskSequenceStep](./Add-CMTaskSequenceStep.md)
-
 [Get-CMTaskSequenceStep](./Get-CMTaskSequenceStep.md)
-
-[Remove-CMTaskSequenceStep](./Remove-CMTaskSequenceStep.md)
 
 [Get-CMTaskSequenceGroup](./Get-CMTaskSequenceGroup.md)

@@ -1,8 +1,8 @@
 ﻿---
-description: Exports a Configuration Manager package.
+description: Export a legacy package.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/01/2019
+ms.date: 03/24/2021
 schema: 2.0.0
 title: Export-CMPackage
 ---
@@ -10,7 +10,8 @@ title: Export-CMPackage
 # Export-CMPackage
 
 ## SYNOPSIS
-Exports a Configuration Manager package.
+
+Export a legacy package.
 
 ## SYNTAX
 
@@ -36,36 +37,44 @@ Export-CMPackage [-Comment <String>] -FileName <String> [-Force] -Name <String> 
 ```
 
 ## DESCRIPTION
-The **Export-CMPackage** cmdlet exports a Configuration Manager package.
-You can use this cmdlet in Configuration Manager to create a package of collections, queries, or reports and then export that package so that you can later deploy these items to a different location.
+
+Use this cmdlet to export a Configuration Manager legacy package. You can use the [Import-CMPackage](Import-CMPackage.md) cmdlet to import a legacy package to another site.
+
+Configuration Manager current branch continues to support packages and programs that were used in Configuration Manager 2007. For more information, see [Packages and programs in Configuration Manager](/mem/configmgr/apps/deploy-use/packages-and-programs).
+
+> [!IMPORTANT]
+> This cmdlet doesn't support [PowerShell 7](/powershell/sccm/overview#support-for-powershell-version-7).<!-- 6337796 --> It requires the .NET Framework instead of .NET Core that's used with PowerShell version 7.
+>
+> Starting in version 2103, if you try to use this cmdlet in a PowerShell version 7 session, it fails with the following error: `This cmdlet only supports the ".NET Framework" runtime.`
 
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
 ### Example 1: Export a package by using an ID
-```
-PS XYZ:\>Export-CMPackage -Id "ST120001" -ExportFilePath "\\Deploy01\ExportPackages"
-```
 
-This command exports a package that has the ID ST120001 to the output path \\\\Deploy01\ExportPackages.
+This command exports a package that has the ID **ST120001** to a network path.
+
+```powershell
+Export-CMPackage -Id "ST120001" -FileName "\\Deploy01\ExportPackages\ST120001.zip"
+```
 
 ### Example 2: Export a package by using a variable
-```
-PS XYZ:\> $DeplObj = Get-CMPackage -Id "ST120001"
-PS XYZ:\> Export-CMPackage - "ST120001" -ExportFilePath"\\Deploy01\ExportPackages" -InputObject $DeplObj
-```
 
-The first command gets the package that has the ID ST120001, and then stores it in the variable $DeplObj.
+The first command gets the package that has the ID **ST120001**, and then stores it in the variable **$DeplObj**. The second command exports the package to the network path by using the variable.
 
-The second command exports the package to the path \\\\Deploy01\ExportPackages by using the $DeplObj variable.
+```powershell
+$DeplObj = Get-CMPackage -Id "ST120001"
+Export-CMPackage - "ST120001" -FileName "\\Deploy01\ExportPackages\ST120001.zip" -InputObject $DeplObj
+```
 
 ## PARAMETERS
 
 ### -Comment
+
+Specify an optional administrator comment. This comment displays in the Import Package Wizard.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -79,7 +88,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
+
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -94,6 +104,9 @@ Accept wildcard characters: False
 ```
 
 ### -FileName
+
+Specify the network path for the package. The path needs to specify the file, including the `.zip` extension.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -107,7 +120,8 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-{{ Fill Force Description }}
+
+Run the command without asking for confirmation.
 
 ```yaml
 Type: SwitchParameter
@@ -122,7 +136,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
+
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -137,7 +152,8 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-Specifies an array of IDs for packages.
+
+Specify the package ID to export. This value is the standard package ID, for example `XYZ00123`.
 
 ```yaml
 Type: String
@@ -152,8 +168,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies the package that you export by using a Configuration Manager package object.
-To obtain a package object, use the [Get-CMPackage](Get-CMPackage.md) cmdlet.
+
+Specify a package object to export. To get this object, use the [Get-CMPackage](Get-CMPackage.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -168,7 +184,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies a name of a package.
+
+Specify the name of a package to export.
 
 ```yaml
 Type: String
@@ -183,7 +200,8 @@ Accept wildcard characters: False
 ```
 
 ### -WithContent
-Indicates whether to include content in the package.
+
+Set this parameter to **$true** to export all content for the package and dependencies.
 
 ```yaml
 Type: Boolean
@@ -198,7 +216,8 @@ Accept wildcard characters: False
 ```
 
 ### -WithDependence
-Indicates whether to include dependencies in the package.
+
+Set this parameter to **$true** to export all package dependencies.
 
 ```yaml
 Type: Boolean
@@ -228,8 +247,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
 
 ```yaml
 Type: SwitchParameter
@@ -266,5 +284,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-CMPackage](Remove-CMPackage.md)
 
 [Set-CMPackage](Set-CMPackage.md)
-
-
