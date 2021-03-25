@@ -132,7 +132,7 @@ Fixed validation with **NewName** parameter to align with console.
 
 - Fixed input object type validation issue for types like **SMS_DCMDeploymentErrorStatus**, **SMS_DCMDeploymentNonCompliantStatus**, and **SMS_DCMDeploymentCompliantStatus**.
 - Fixed output invalid class type issue by changing output object type **SMS_AppDeploymentRequirementsNotMetStatus** to **SMS_AppDeploymentRequirementsNotMetAssetDetails**.
-- Changed the output object type from **SMS_AppDeploymentAssetDetails** to [SMS_AppDeploymentErrorAssetDetails](../../../../../develop/reference/apps/sms_appdeploymenterrorassetdetails-server-wmi-class.md) to get more error details.
+- Changed the output object type from **SMS_AppDeploymentAssetDetails** to [SMS_AppDeploymentErrorAssetDetails](/mem/configmgr/develop/reference/apps/sms_appdeploymenterrorassetdetails-server-wmi-class) to get more error details.
 - Added an input object type **SMS_UpdateDeploymentSummary** so that this cmdlet can get update deployment details. When passing the output of [Get-CMSoftwareUpdateDeploymentStatus](/powershell/module/configurationmanager/get-cmsoftwareupdatedeploymentstatus) to Get-CMDeploymentStatusDetails, it returns deployment details from **SMS_SUMDeploymentAssetDetails**.
 
 ### Get-CMDriver
