@@ -109,6 +109,8 @@ Accept wildcard characters: False
 
 When you add the **Value** parameter, use **ExpressionOperator** with **PropertyType** and **ExpectedValue**. When you use these parameters, the MSI version must satisfy the rule to indicate the presence of this application. This **ExpressionOperator** parameter specifies the operator to compare the device's value with the expected value.
 
+Starting in version 2010, the parameter type changed from _RuleExpressionOperator_ to _WindowsInstallerRuleExpressionOperator_.
+
 ```yaml
 Type: WindowsInstallerRuleExpressionOperator
 Parameter Sets: Value

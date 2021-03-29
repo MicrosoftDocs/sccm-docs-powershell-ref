@@ -1,6 +1,7 @@
 ﻿---
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
+ms.date: 03/26/2021
 online version:
 schema: 2.0.0
 ---
@@ -8,7 +9,8 @@ schema: 2.0.0
 # New-CMCoManagementPolicy
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Create a co-management policy for a site.
 
 ## SYNTAX
 
@@ -21,26 +23,33 @@ New-CMCoManagementPolicy -AutoEnroll <Boolean> [-CAWorkloadEnabled <Boolean>]
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+Use this cmdlet to create a co-management policy for a site. You can also switch workloads at the same time. For more information, see [How to enable co-management in Configuration Manager](/mem/configmgr/comanage/how-to-enable).
+
+After you create this policy, use the [New-CMConfigurationPolicyDeployment](New-CMConfigurationPolicyDeployment.md) cmdlet to deploy it to a collection.
 
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS XYZ:\> {{ Add example code here }}
-```
 
-{{ Add example description here }}
+This example creates a co-management policy that enables auto-enrollment, but doesn't switch any workloads. It then deploys the policy to the collection with ID **XYZ00042**.
+
+```powershell
+$CoMgmtPolicyName = "CoMgmtSettingsProd"
+
+New-CMCoManagementPolicy -CoManagementPolicyName $CoMgmtPolicyName -AutoEnroll $true -CAWorkloadEnabled $false -RAWorkloadEnabled $false -WufbWorkloadEnabled $false -EPWorkloadEnabled $false -DCWorkloadEnabled $false -O365WorkloadEnabled $false -ClientAppsWorkloadEnabled $false
+
+New-CMConfigurationPolicyDeployment -CoManagementPolicyName $CoMgmtPolicyName -CollectionId "XYZ00042"
+```
 
 ## PARAMETERS
 
 ### -AutoEnroll
-{{ Fill AutoEnroll Description }}
+
+Set this parameter to **$true** to enable automatic client enrollment in Intune for existing Configuration Manager clients.
 
 ```yaml
 Type: Boolean
@@ -55,7 +64,8 @@ Accept wildcard characters: False
 ```
 
 ### -CAWorkloadEnabled
-{{ Fill CAWorkloadEnabled Description }}
+
+Set this parameter to **$true** to switch the **Compliance policies** workload to Intune. For more information, see [Co-management workloads](/mem/configmgr/comanage/workloads).
 
 ```yaml
 Type: Boolean
@@ -70,7 +80,8 @@ Accept wildcard characters: False
 ```
 
 ### -ClientAppsWorkloadEnabled
-{{ Fill ClientAppsWorkloadEnabled Description }}
+
+Set this parameter to **$true** to switch the **Client apps** workload to Intune. For more information, see [Co-management workloads](/mem/configmgr/comanage/workloads).
 
 ```yaml
 Type: Boolean
@@ -85,7 +96,8 @@ Accept wildcard characters: False
 ```
 
 ### -CoManagementPolicyName
-{{ Fill CoManagementPolicyName Description }}
+
+Specify the name for the policy to create.
 
 ```yaml
 Type: String
@@ -100,7 +112,8 @@ Accept wildcard characters: False
 ```
 
 ### -DCWorkloadEnabled
-{{ Fill DCWorkloadEnabled Description }}
+
+Set this parameter to **$true** to switch the **Device configuration** workload to Intune. For more information, see [Co-management workloads](/mem/configmgr/comanage/workloads).
 
 ```yaml
 Type: Boolean
@@ -115,6 +128,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
+
 This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
@@ -130,7 +144,8 @@ Accept wildcard characters: False
 ```
 
 ### -EPWorkloadEnabled
-{{ Fill EPWorkloadEnabled Description }}
+
+Set this parameter to **$true** to switch the **Endpoint protection** workload to Intune. For more information, see [Co-management workloads](/mem/configmgr/comanage/workloads).
 
 ```yaml
 Type: Boolean
@@ -145,6 +160,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
+
 This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
@@ -160,7 +176,8 @@ Accept wildcard characters: False
 ```
 
 ### -O365WorkloadEnabled
-{{ Fill O365WorkloadEnabled Description }}
+
+Set this parameter to **$true** to switch the **Office Click-to-Run apps** workload to Intune. For more information, see [Co-management workloads](/mem/configmgr/comanage/workloads).
 
 ```yaml
 Type: Boolean
@@ -175,7 +192,8 @@ Accept wildcard characters: False
 ```
 
 ### -RAWorkloadEnabled
-{{ Fill RAWorkloadEnabled Description }}
+
+Set this parameter to **$true** to switch the **Resource access policies** workload to Intune. For more information, see [Co-management workloads](/mem/configmgr/comanage/workloads).
 
 ```yaml
 Type: Boolean
@@ -190,7 +208,8 @@ Accept wildcard characters: False
 ```
 
 ### -WufbWorkloadEnabled
-{{ Fill WufbWorkloadEnabled Description }}
+
+Set this parameter to **$true** to switch the **Windows Update policies** workload to Intune. For more information, see [Co-management workloads](/mem/configmgr/comanage/workloads).
 
 ```yaml
 Type: Boolean
@@ -205,6 +224,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -220,8 +240,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+
+Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
 
 ```yaml
 Type: SwitchParameter
@@ -248,4 +268,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## NOTES
 
+For more information on this return object and its properties, see [SMS_ConfigurationPolicy server WMI class](/mem/configmgr/develop/reference/compliance/sms_configurationpolicy-server-wmi-class).
+
 ## RELATED LINKS
+
+[New-CMConfigurationPolicyDeployment](New-CMConfigurationPolicyDeployment.md)
+
+[Get-CMConfigurationPolicy](Get-CMConfigurationPolicy.md)
+[Remove-CMConfigurationPolicy](Remove-CMConfigurationPolicy.md)
+
+[How to enable co-management in Configuration Manager](/mem/configmgr/comanage/how-to-enable)
+[Co-management workloads](/mem/configmgr/comanage/workloads)

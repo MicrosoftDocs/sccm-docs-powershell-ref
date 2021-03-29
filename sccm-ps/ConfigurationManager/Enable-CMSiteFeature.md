@@ -1,8 +1,8 @@
 ﻿---
-description: Enables a site feature
+description: Enable an optional feature
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/01/2019
+ms.date: 03/26/2021
 schema: 2.0.0
 title: Enable-CMSiteFeature
 ---
@@ -10,7 +10,8 @@ title: Enable-CMSiteFeature
 # Enable-CMSiteFeature
 
 ## SYNOPSIS
-Enables a site feature
+
+Enable a an optional feature.
 
 ## SYNTAX
 
@@ -28,22 +29,30 @@ Enable-CMSiteFeature [-Force] -Name <String> [-PassThru] [-DisableWildcardHandli
 
 ## DESCRIPTION
 
+Use this cmdlet to enable optional features for the site. For more information, see [Enable optional features from updates](/mem/configmgr/core/servers/manage/install-in-console-updates#bkmk_options).
+
+If a pre-release feature isn't enabled for the hierarchy, the cmdlet fails with an error message.
+
+If the feature is already enabled for the site, the cmdlet returns a warning message.
+
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
-### Example 1
-```
-PS XYZ:\>
+### Example 1: Get a feature and enable it
+
+This example uses the **Get-CMSiteFeature** cmdlet to get the **Task Sequence Debugger** feature. It then passes that object through the pipeline to enable it.
+
+```powershell
+Get-CMSiteFeature -Fast -Name "Task Sequence Debugger" | Enable-CMSiteFeature
 ```
 
 ## PARAMETERS
 
 ### -DisableWildcardHandling
-DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
+
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -58,6 +67,9 @@ Accept wildcard characters: False
 ```
 
 ### -Force
+
+Run the command without asking for confirmation.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -71,7 +83,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
+
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -86,6 +99,9 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
+
+Specify a site feature object to enable. To get this object, use the [Get-CMSiteFeature](Get-CMSiteFeature.md) cmdlet.
+
 ```yaml
 Type: IResultObject
 Parameter Sets: ByValue
@@ -99,6 +115,14 @@ Accept wildcard characters: False
 ```
 
 ### -Name
+
+Specify the site feature name to enable.
+
+You can use wildcard characters:
+
+- `*`: Multiple characters
+- `?`: Single character
+
 ```yaml
 Type: String
 Parameter Sets: ByName
@@ -112,7 +136,8 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Returns an object representing the item with which you are working. By default, this cmdlet may not generate any output.
+
+Add this parameter to return an object that represents the item with which you're working. By default, this cmdlet may not generate any output.
 
 ```yaml
 Type: SwitchParameter
@@ -127,6 +152,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -142,8 +168,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+
+Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
 
 ```yaml
 Type: SwitchParameter
@@ -170,4 +196,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## NOTES
 
+For more information on this return object and its properties, see [SMS_CM_UpdateFeatures server WMI class](/mem/configmgr/develop/reference/sum/sms_cm_updatefeatures-server-wmi-class).
+
 ## RELATED LINKS
+
+[Get-CMSiteFeature](Get-CMSiteFeature.md)

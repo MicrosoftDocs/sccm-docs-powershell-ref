@@ -158,6 +158,8 @@ Accept wildcard characters: False
 
 Specify the folder property to compare and assess for compliance. Use the **-ExpectedValue** parameter to specify the value of this property, and the **-ExpressionOperator** parameter to specify the means of comparison.
 
+Starting in version 2010, the parameter type changed from _FileFolderProperty_ to _SimpleFileFolderProperty_ type.
+
 ```yaml
 Type: SimpleFileFolderProperty
 Parameter Sets: (All)

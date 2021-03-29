@@ -122,6 +122,8 @@ Accept wildcard characters: False
 
 When you add the **Value** parameter, use **ExpressionOperator** with **PropertyType** and **ExpectedValue**. When you use these parameters, the registry key value must satisfy the rule to indicate the presence of this application. This **ExpressionOperator** parameter specifies the operator to compare the registry key value with the expected value.
 
+Starting in version 2010, the parameter type changed from _RuleExpressionOperator_ to _RegistryValueRuleExpressionOperator_.
+
 ```yaml
 Type: RegistryValueRuleExpressionOperator
 Parameter Sets: Value
