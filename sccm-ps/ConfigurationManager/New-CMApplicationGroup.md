@@ -1,7 +1,7 @@
 ---
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 03/25/2021
+ms.date: 03/29/2021
 online version:
 schema: 2.0.0
 ---
@@ -95,7 +95,18 @@ Accept wildcard characters: False
 ```
 
 ### -AppGroupCatalog
-{{ Fill AppGroupCatalog Description }}
+
+Use this parameter to specify a Software Center entry for a specific language. This entry can include all of the localized information about the app group:
+
+- Description
+- IconLocationFile
+- Keyword
+- LinkText
+- PrivacyUrl
+- Title
+- UserDocumentation
+
+To get this object, use the [New-CMApplicationDisplayInfo](New-CMApplicationDisplayInfo.md) cmdlet.
 
 ```yaml
 Type: AppDisplayInfo[]
@@ -200,6 +211,9 @@ Accept wildcard characters: False
 ### -Keyword
 
 Specify a list of keywords in the selected language. These keywords help Software Center users search for the app group.
+
+> [!TIP]
+> To add multiple keywords, use **CultureInfo.CurrentCulture.TextInfo.ListSeparator** as the delimiter.
 
 ```yaml
 Type: String[]
@@ -380,6 +394,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -395,6 +410,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
 Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
 
 ```yaml
@@ -429,6 +445,8 @@ This cmdlet returns the **SMS_ApplicationGroup** WMI class object.
 [Get-CMApplicationGroup](Get-CMApplicationGroup.md)
 [Remove-CMApplicationGroup](Remove-CMApplicationGroup.md)
 [Set-CMApplicationGroup](Set-CMApplicationGroup.md)
+
+[New-CMApplicationDisplayInfo](New-CMApplicationDisplayInfo.md)
 
 [Get-CMApplicationGroupDeployment](Get-CMApplicationGroupDeployment.md)
 [New-CMApplicationGroupDeployment](New-CMApplicationGroupDeployment.md)

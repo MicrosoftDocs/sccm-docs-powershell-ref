@@ -1,7 +1,7 @@
 ---
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 03/25/2021
+ms.date: 03/29/2021
 online version:
 schema: 2.0.0
 ---
@@ -104,7 +104,18 @@ Set-CMApplicationGroup -Name "Contoso Welcome app" -ApplyToLanguageById 60 -Loca
 ## PARAMETERS
 
 ### -AddAppCatalog
-{{ Fill AddAppCatalog Description }}
+
+Use this parameter to specify a Software Center entry for a specific language. This entry can include all of the localized information about the app group:
+
+- Description
+- IconLocationFile
+- Keyword
+- LinkText
+- PrivacyUrl
+- Title
+- UserDocumentation
+
+To get this object, use the [New-CMApplicationDisplayInfo](New-CMApplicationDisplayInfo.md) cmdlet.
 
 ```yaml
 Type: AppDisplayInfo[]
@@ -257,7 +268,8 @@ Accept wildcard characters: False
 ```
 
 ### -ClearAppCatalog
-{{ Fill ClearAppCatalog Description }}
+
+Add this parameter to remove all localized Software Center entries. To remove a single entry, use the **RemoveAppCatalog** parameter.
 
 ```yaml
 Type: SwitchParameter
@@ -427,6 +439,9 @@ Accept wildcard characters: False
 
 Specify a list of keywords in the selected language. These keywords help Software Center users search for the app group.
 
+> [!TIP]
+> To add multiple keywords, use **CultureInfo.CurrentCulture.TextInfo.ListSeparator** as the delimiter.
+
 ```yaml
 Type: String[]
 Parameter Sets: (All)
@@ -509,7 +524,7 @@ Accept wildcard characters: False
 
 ### -Name
 
-Specify the name of the app group to remove.
+Specify the name of the app group to configure.
 
 ```yaml
 Type: String
@@ -620,7 +635,14 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveAppCatalog
-{{ Fill RemoveAppCatalog Description }}
+
+Specify an array of language IDs to remove the associated Software Center entries. To remove all entries, use the **ClearAppCatalog** parameter.
+
+This ID is the decimal equivalent of the Windows language ID. For example, `1033` is `0x0409` for **English (United States)**, and `2108` is `0x083C` for **Irish (Ireland)**. For more information, see [[MS-LCID]: Windows Language Code Identifier (LCID) Reference](/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c).
+
+For example, to remove the localized Software Center entry for **Irish (Ireland)**:
+
+`-RemoveAppCatalog 2108`
 
 ```yaml
 Type: Int32[]
@@ -798,6 +820,8 @@ This cmdlet returns the **SMS_ApplicationGroup** WMI class object.
 [Get-CMApplicationGroup](Get-CMApplicationGroup.md)
 [New-CMApplicationGroup](New-CMApplicationGroup.md)
 [Remove-CMApplicationGroup](Remove-CMApplicationGroup.md)
+
+[New-CMApplicationDisplayInfo](New-CMApplicationDisplayInfo.md)
 
 [Get-CMApplicationGroupDeployment](Get-CMApplicationGroupDeployment.md)
 [New-CMApplicationGroupDeployment](New-CMApplicationGroupDeployment.md)
