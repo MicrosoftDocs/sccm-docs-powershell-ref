@@ -650,6 +650,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## NOTES
 
+For more information on this return object and its properties, see [SMS_ApplicationAssignment server WMI class](/mem/configmgr/develop/reference/apps/sms_applicationassignment-server-wmi-class).
+
 ## RELATED LINKS
 
 [Get-CMApplication](Get-CMApplication.md)
