@@ -1,8 +1,7 @@
 ﻿---
-description: Gets Configuration Manager component status settings.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/02/2019
+ms.date: 03/30/2021
 schema: 2.0.0
 title: Get-CMComponentStatusSetting
 ---
@@ -10,7 +9,8 @@ title: Get-CMComponentStatusSetting
 # Get-CMComponentStatusSetting
 
 ## SYNOPSIS
-Gets Configuration Manager component status settings.
+
+Get the settings for the site's component status summarizer.
 
 ## SYNTAX
 
@@ -20,36 +20,30 @@ Get-CMComponentStatusSetting [-ComponentName <String>] [-SiteSystemServerName <S
 ```
 
 ## DESCRIPTION
-The **Get-CMComponentStatusSetting** cmdlet gets component status setting objects.
-These objects contain thresholds for Configuration Manager component status messages.
+
+Use this cmdlet to get the settings for the site's **Component Status Summarizer**. For more information, see [Use the status system in Configuration Manager](/mem/configmgr/core/servers/manage/use-status-system#configure-status-reporting).
 
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
 ### Example 1: Get settings for components
-```
-PS XYZ:\> Get-CMComponentStatusSetting -SiteCode "CAS" -ComponentName SMS_REPL*
-```
 
-This command gets status setting objects for the site that has the site code CAS for components with names that begin with SMS_REPL.
+This command gets status summarizer settings for components whose name begins with **SMS_REPL**.
 
-### Example 2: Get settings for components on specified systems
+```powershell
+Get-CMComponentStatusSetting -ComponentName "SMS_REPL*"
 ```
-PS XYZ:\> Get-CMComponentStatusSetting -SiteSystemName VM* -ComponentName SMS_REPL*
-```
-
-This command gets status setting objects for systems with names that begin with VM for components with names that begin with SMS_REPL.
 
 ## PARAMETERS
 
 ### -ComponentName
-Specifies a name of a thread or process.
-A thread or process sends a component status message.
-You can use wildcards.
+
+Specify a name of a component. You can use wildcard characters:
+
+- `*`: Multiple characters
+- `?`: Single character
 
 ```yaml
 Type: String
@@ -64,7 +58,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
+
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -79,7 +74,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
+
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -94,6 +90,9 @@ Accept wildcard characters: False
 ```
 
 ### -SiteSystemServerName
+
+Specify the name of a site system server that hosts a component.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -125,4 +124,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Get-CMComponentStatusMessage](Get-CMComponentStatusMessage.md)
 
-
+[Use the status system in Configuration Manager](/mem/configmgr/core/servers/manage/use-status-system#configure-status-reporting)
