@@ -96,21 +96,16 @@ Use the **Set-CMApplication** cmdlet to configure the settings of an application
 
 ## EXAMPLES
 
-### Example 1: Set the properties of an application by using the pipeline
+### Example 1: Reconfigure the properties of an application
 
-The first command gets the application object named **Application01** and uses the pipeline operator to pass the object to **Set-CMApplication**.
-**Set-CMApplication** sets the specified properties on **Applicaton01**.
-
-```powershell
-Get-CMApplication -Name "Application01" | Set-CMApplication -NewName "Application01_New" -Description "Application updated" -Publisher "Test group" -SoftwareVersion 1.0.0.1 -OptionalReference "Reference" -ReleaseDate 2/24/2016 -AutoInstall $True -Owner "Administrator1" -SupportContact "Administrator" -LocalizedApplicationName "Localized Application01" -UserDocumentation "https://contoso.com/content" -LinkText "Linktext" -LocalizedDescription "Localized Application New" -Keyword "Application" -PrivacyUrl "https://contoso.com/privacy" -IsFeatured $True -IconLocationFile "C:\Users\art\icon.png" -DisplaySupersedenceInApplicationCatalog $True -DistributionPriority Medium -SendToProtectedDistributionPoint $True -DistributionPointSetting NoDownload -AddUserCategory "userCategory1","userCategory2" -AddAppCategory "adminCategory1","adminCategory2"
-```
-
-### Example 2: Get an application, rename it, and update its settings
-
-This command gets the application named **Application01**, renames it to **Application01_New**, and sets the specified properties on the application.
+The first command gets the application object named **Application01**. The next two commands use the **Get-CMCategory** cmdlet to get objects for a user and administrator category. The **Set-CMApplication** cmdlet then sets the specified properties on **Applicaton01**.
 
 ```powershell
-Set-CMApplication -Name "Application01" -NewName "Application01_New" -Description "Application updated" -Publisher "Test group" -SoftwareVersion 1.0.0.1 -OptionalReference "Reference" -ReleaseDate 2/24/2016 -AutoInstall $True -Owner "Administrator1" -SupportContact "Administrator" -LocalizedApplicationName Localized "Application01" -UserDocumentation "https://contoso.com/content" -LinkText "LinkText" -LocalizedDescription "Localized Application New" -Keyword "Application" -PrivacyUrl "https://contoso.com/privacy" -IsFeatured $True -IconLocationFile "C:\Users\art\icon.png" -DisplaySupersedenceInApplicationCatalog $True -DistributionPriority Medium -SendToProtectedDistributionPoint $True -DistributionPointSetting NoDownload -AddUserCategory "userCategory1","userCategory2" -AddAppCategory "adminCategory1","adminCategory2"
+$app = Get-CMApplication -Name "Application01"
+$userCat = Get-CMCategory -Name "Test Applications" -CategoryType CatalogCategories
+$adminCat = Get-CMCategory -Name "Testing" -CategoryType AppCategories
+
+Set-CMApplication -InputObject $app -NewName "Application01_New" -Description "Application updated" -Publisher "Test group" -SoftwareVersion "1.0.0.1" -OptionalReference "Reference" -ReleaseDate 2/24/2016 -AutoInstall $True -Owner "jqpublic" -SupportContact "jqpublic" -LocalizedApplicationName "Localized Application01" -UserDocumentation "https://contoso.com/content" -LinkText "For more info" -LocalizedDescription "Localized Application New" -Keyword "Application" -PrivacyUrl "https://contoso.com/privacy" -IsFeatured $True -IconLocationFile "C:\Users\art\icon.png" -DistributionPriority Medium -SendToProtectedDistributionPoint $True -DistributionPointSetting NoDownload -AddUserCategory $userCat -AddAppCategory $adminCat
 ```
 
 ## PARAMETERS

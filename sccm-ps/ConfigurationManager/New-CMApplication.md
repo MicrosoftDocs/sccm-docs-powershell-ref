@@ -39,7 +39,7 @@ Use this cmdlet to create an application. A Configuration Manager application de
 This command creates an application named Application01.
 
 ```powershell
-New-CMApplication -Name "Application01" -Description "New Application" -Publisher "Contoso" -SoftwareVersion 1.0.0.1 -OptionalReference "Reference" -ReleaseDate 2/24/2016 -AutoInstall $True -Owner "Administrator" -SupportContact "Administrator" -LocalizedName "Application01" -UserDocumentation "https://contoso.com/content" -LinkText "For more information" -LocalizedDescription "New Localized Application" -Keyword "application" -PrivacyUrl "https://contoso.com/library/privacy" -IsFeatured $True -IconLocationFile "\\central\icons\icon.png"
+New-CMApplication -Name "Application01" -Description "New Application" -Publisher "Contoso" -SoftwareVersion "1.0.0.1" -OptionalReference "Reference" -ReleaseDate 2/24/2016 -AutoInstall $True -Owner "Administrator" -SupportContact "Administrator" -LocalizedName "Application01" -UserDocumentation "https://contoso.com/content" -LinkText "For more information" -LocalizedDescription "New Localized Application" -Keyword "application" -PrivacyUrl "https://contoso.com/library/privacy" -IsFeatured $True -IconLocationFile "\\central\icons\icon.png"
 ```
 
 ## PARAMETERS
