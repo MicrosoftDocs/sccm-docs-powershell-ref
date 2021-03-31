@@ -28,9 +28,7 @@ New-CMScript [-Fast] -ScriptName <String> -ScriptText <String> [-DisableWildcard
 {{ Fill in the Description }}
 
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
@@ -59,7 +57,10 @@ Accept wildcard characters: False
 ```
 
 ### -Fast
-{{ Fill Fast Description }}
+
+Add this parameter to not automatically refresh lazy properties. Lazy properties contain values that are relatively inefficient to retrieve. Getting these properties can cause additional network traffic and decrease cmdlet performance.
+
+If you don't use this parameter, the cmdlet displays a warning. To disable this warning, set `$CMPSSuppressFastNotUsedCheck = $true`.
 
 ```yaml
 Type: SwitchParameter

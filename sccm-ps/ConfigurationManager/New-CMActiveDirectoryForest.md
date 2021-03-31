@@ -29,9 +29,7 @@ After you enable discovery, Configuration Manager discovers Active Directory sit
 Active Directory Forest Discovery requires a global account to discover or publish to untrusted forests.
 
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
@@ -61,6 +59,9 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
+
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -91,6 +92,9 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
+
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)

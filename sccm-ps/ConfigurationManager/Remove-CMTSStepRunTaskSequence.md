@@ -44,7 +44,7 @@ $ReferenceTaskSequence | Remove-CMTSStepRunTaskSequence -StepName $myStep.Name -
 ## PARAMETERS
 
 ### -Force
-{{ Fill Force Description }}
+Run the command without asking for confirmation.
 
 ```yaml
 Type: SwitchParameter
