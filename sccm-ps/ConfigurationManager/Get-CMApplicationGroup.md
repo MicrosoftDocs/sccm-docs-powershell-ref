@@ -1,7 +1,7 @@
 ---
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 03/25/2021
+ms.date: 03/31/2021
 online version:
 schema: 2.0.0
 ---
@@ -132,7 +132,16 @@ Accept wildcard characters: False
 ```
 
 ### -ShowHidden
-{{ Fill ShowHidden Description }}
+
+Add this parameter to show hidden application groups. A hidden app group has the **IsHidden** property set to `$true`. A hidden app group doesn't display in the Configuration Manager console, and it only returns with this cmdlet when you specify this parameter.
+
+To hide an app group, use the following commands:
+
+```powershell
+$appGroup = Get-CMApplicationGroup -Name "test app group"
+$appGroup.IsHidden = $true
+$appGroup.Put()
+```
 
 ```yaml
 Type: SwitchParameter
