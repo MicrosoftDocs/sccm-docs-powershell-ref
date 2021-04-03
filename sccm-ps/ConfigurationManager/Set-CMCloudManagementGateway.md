@@ -1,4 +1,4 @@
-﻿---
+---
 description: Configure a cloud management gateway (CMG).
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -136,6 +136,22 @@ Set this parameter to `true` to verify client certificate revocation. A certific
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
 
 Required: False
 Position: Named
@@ -504,22 +520,6 @@ Applies to version 2010 and later. Specify the instance count of virtual machine
 Type: Int32
 Parameter Sets: (All)
 Aliases: VMInstancesCount
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
 
 Required: False
 Position: Named

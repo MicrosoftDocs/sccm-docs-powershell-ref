@@ -1,4 +1,4 @@
-﻿---
+---
 description: Sets a Registry Key type global condition in Configuration Manager.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -40,8 +40,23 @@ This command sets a Registry Key type global condition in Configuration Manager.
 
 ## PARAMETERS
 
-### -DisableWildcardHandling
+### -Confirm
 
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DisableWildcardHandling
 
 This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
@@ -58,7 +73,6 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-
 
 This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
@@ -148,22 +162,6 @@ Type: RegistryRootKey
 Parameter Sets: (All)
 Aliases:
 Accepted values: ClassesRoot, CurrentConfig, CurrentUser, LocalMachine, Users
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
 
 Required: False
 Position: Named

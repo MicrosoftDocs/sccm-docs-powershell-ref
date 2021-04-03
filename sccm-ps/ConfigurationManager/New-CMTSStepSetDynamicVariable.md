@@ -1,4 +1,4 @@
-﻿---
+---
 description: Create a task sequence Set Dynamic Variable step in Configuration Manager.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -72,6 +72,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ContinueOnError
 
 Indicates whether the operation continues when there is an error.
@@ -122,7 +138,6 @@ Accept wildcard characters: False
 
 ### -DisableWildcardHandling
 
-
 This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
@@ -138,7 +153,6 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-
 
 This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
@@ -164,22 +178,6 @@ Parameter Sets: (All)
 Aliases: StepName
 
 Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False

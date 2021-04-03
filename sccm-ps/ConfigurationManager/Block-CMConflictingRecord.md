@@ -1,4 +1,4 @@
-﻿---
+---
 description: Creates a blocked Configuration Manager record for client that has a conflicting record.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -66,6 +66,21 @@ The first command gets a conflicting record named CR07 and saves it in the $CMCR
 The second command creates a blocked record for the conflict in $CMCR.
 
 ## PARAMETERS
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -DisableWildcardHandling
 
@@ -141,21 +156,6 @@ Aliases: AgentName
 Required: True
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

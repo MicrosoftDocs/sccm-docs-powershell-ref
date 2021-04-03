@@ -1,4 +1,4 @@
-﻿---
+---
 description: Adds a compliance setting x path query.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -55,6 +55,21 @@ PS XYZ:\>
 ```
 
 ## PARAMETERS
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -DataType
 ```yaml
@@ -246,12 +261,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -NoncomplianceSeverity
+### -NoRule
 ```yaml
-Type: NoncomplianceSeverity
-Parameter Sets: ExistentialRule, ValueRule
-Aliases:
-Accepted values: None, Informational, Warning, Critical, CriticalWithEvent
+Type: SwitchParameter
+Parameter Sets: EmptyRule
+Aliases: NoRules
 
 Required: False
 Position: Named
@@ -260,11 +274,12 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -NoRule
+### -NoncomplianceSeverity
 ```yaml
-Type: SwitchParameter
-Parameter Sets: EmptyRule
-Aliases: NoRules
+Type: NoncomplianceSeverity
+Parameter Sets: ExistentialRule, ValueRule
+Aliases:
+Accepted values: None, Informational, Warning, Critical, CriticalWithEvent
 
 Required: False
 Position: Named
@@ -353,24 +368,14 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -XmlFileName
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
+### -WhatIf
 
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
+Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
 
-### -XmlNamespace
 ```yaml
-Type: Hashtable
+Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: XmlNamespaces
+Aliases: wi
 
 Required: False
 Position: Named
@@ -405,29 +410,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
+### -XmlFileName
 ```yaml
-Type: SwitchParameter
+Type: String
 Parameter Sets: (All)
-Aliases: cf
+Aliases:
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhatIf
-
-Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
-
+### -XmlNamespace
 ```yaml
-Type: SwitchParameter
+Type: Hashtable
 Parameter Sets: (All)
-Aliases: wi
+Aliases: XmlNamespaces
 
 Required: False
 Position: Named

@@ -1,4 +1,4 @@
-﻿---
+---
 description: Gets an XML definition of a configuration item in Configuration Manager.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -74,7 +74,6 @@ The second command gets a configuration item formatted in XML for the item store
 
 ### -DisableWildcardHandling
 
-
 This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
@@ -90,7 +89,6 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-
 
 This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 

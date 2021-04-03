@@ -1,4 +1,4 @@
-﻿---
+---
 description: Create a boundary group relationship.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -61,6 +61,22 @@ New-CMBoundaryGroupRelationship -SourceGroupName "Swindon" -DestinationGroupName
 ```
 
 ## PARAMETERS
+
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -DestinationGroup
 
@@ -254,22 +270,6 @@ Parameter Sets: NameMandatory
 Aliases:
 
 Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False

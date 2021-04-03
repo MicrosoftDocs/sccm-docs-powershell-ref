@@ -1,4 +1,4 @@
-﻿---
+---
 description: Convert a Configuration Manager management iResultObject to a configuration item object.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -65,7 +65,6 @@ Accept wildcard characters: False
 
 ### -DisableWildcardHandling
 
-
 This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
@@ -97,7 +96,6 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-
 
 This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 

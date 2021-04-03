@@ -1,4 +1,4 @@
-﻿---
+---
 description: Adds a primary user to one or more devices in the Configuration Manager hierarchy.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -48,6 +48,21 @@ PS XYZ:\>Add-CMUserAffinityToDevice -DeviceName "CMCEN-DIST-02" -UserId "2063597
 This command adds the primary user that has the ID 2063597981 to the device named CMCEN-DIST-02.
 
 ## PARAMETERS
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -DeviceId
 Specifies an array of IDs of the devices that you want to associate with the primary user.
@@ -137,21 +152,6 @@ Aliases: UserNames
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

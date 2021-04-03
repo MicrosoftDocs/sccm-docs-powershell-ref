@@ -1,4 +1,4 @@
-﻿---
+---
 description: Removes an administrative user.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -58,6 +58,21 @@ This command removes the administrative user named AdminUser1 who is a member of
 Specifying the *Force* parameter indicates that the user is not prompted for confirmation prior to the user being removed.
 
 ## PARAMETERS
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -DisableWildcardHandling
 
@@ -148,21 +163,6 @@ Aliases: DisplayName, LogonName, UserName
 Required: True
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 03/31/2021
@@ -186,11 +186,11 @@ Add this parameter to show hidden applications. A hidden application has the **I
 
 To hide an application, use the following commands:
 
-```powershell
+
+
 $app = Get-CMApplication -Name "test app"
 $app.IsHidden = $true
 $app.Put()
-```
 
 ```yaml
 Type: SwitchParameter

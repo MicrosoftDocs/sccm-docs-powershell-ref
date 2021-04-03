@@ -137,11 +137,11 @@ Add this parameter to show hidden application groups. A hidden app group has the
 
 To hide an app group, use the following commands:
 
-```powershell
+
+
 $appGroup = Get-CMApplicationGroup -Name "test app group"
 $appGroup.IsHidden = $true
 $appGroup.Put()
-```
 
 ```yaml
 Type: SwitchParameter

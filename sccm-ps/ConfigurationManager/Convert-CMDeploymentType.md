@@ -1,4 +1,4 @@
-﻿---
+---
 description: Converts the deployment type of a Configuration Manager deployment application.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -47,7 +47,6 @@ This command gets the deployment type for the application named CenterApp, and t
 
 ### -DisableWildcardHandling
 
-
 This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
@@ -63,7 +62,6 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-
 
 This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 

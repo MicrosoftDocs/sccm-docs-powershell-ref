@@ -1,4 +1,4 @@
-﻿---
+---
 description: Disables programs in Configuration Manager packages.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -55,6 +55,21 @@ PS XYZ:\>Disable-CMProgram -PackageId "CM400007" -ProgramName "ProgramD02"
 This command disables the program named ProgramD02 in the package that has the ID CM400007.
 
 ## PARAMETERS
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -DisableWildcardHandling
 
@@ -161,21 +176,6 @@ Aliases:
 Required: True
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

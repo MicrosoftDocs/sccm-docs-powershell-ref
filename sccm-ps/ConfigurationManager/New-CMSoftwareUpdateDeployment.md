@@ -1,4 +1,4 @@
-﻿---
+---
 description: Create a software update deployment.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -239,12 +239,44 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -DeadlineDateTime
 
 Specify an installation deadline for required software updates. When the deadline is reached, the client installs required software updates on the device, and restarts the device if necessary. 
 
 ```yaml
 Type: DateTime
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DeployWithNoPackage
+
+Set this parameter to `$true` to not use a deployment package. Clients download software update content from peers or the Microsoft cloud.
+
+```yaml
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 
@@ -280,22 +312,6 @@ Type: DeploymentType
 Parameter Sets: (All)
 Aliases:
 Accepted values: Required, Available
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DeployWithNoPackage
-
-Set this parameter to `$true` to not use a deployment package. Clients download software update content from peers or the Microsoft cloud.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
 
 Required: False
 Position: Named
@@ -851,22 +867,6 @@ Type: VerbosityLevelType
 Parameter Sets: (All)
 Aliases:
 Accepted values: AllMessages, OnlySuccessAndErrorMessages, OnlyErrorMessages
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
 
 Required: False
 Position: Named

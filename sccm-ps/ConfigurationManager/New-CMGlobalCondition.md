@@ -1,4 +1,4 @@
-﻿---
+---
 description: Creates a Configuration Manager global condition object.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -214,19 +214,18 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Database
+### -Confirm
 
-Specifies the name of a database.
-The SQL query runs on this database.
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: String
-Parameter Sets: NewSqlQueryAllInstances, NewSqlQueryDefaultInstance, NewSqlQuerySpecificInstance
-Aliases:
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
 
-Required: True
+Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -250,6 +249,23 @@ Type: GlobalConditionDataType
 Parameter Sets: NewADQuery, NewSqlQueryAllInstances, NewWqlQuery, NewSqlQueryDefaultInstance, NewSqlQuerySpecificInstance, NewIisMetabase, NewRegistryValue, NewScript, NewXPathQuery, NewXPathQueryFromFile, NewOmaUri
 Aliases:
 Accepted values: String, DateTime, Integer, FloatingPoint, Version, Boolean, StringArray, IntegerArray, Base64, Xml
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Database
+
+Specifies the name of a database.
+The SQL query runs on this database.
+
+```yaml
+Type: String
+Parameter Sets: NewSqlQueryAllInstances, NewSqlQueryDefaultInstance, NewSqlQuerySpecificInstance
+Aliases:
 
 Required: True
 Position: Named
@@ -311,7 +327,6 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-
 
 This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
@@ -376,7 +391,6 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-
 
 This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
@@ -736,6 +750,23 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -WhatIf
+
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhereClause
 
 Specifies a WQL query WHERE clause to apply to the specified namespace, class, and property on client computers.
@@ -746,6 +777,22 @@ Parameter Sets: NewWqlQuery
 Aliases:
 
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -XPathQuery
+
+Specifies a XPath query.
+
+```yaml
+Type: String
+Parameter Sets: NewXPathQuery
+Aliases:
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -780,55 +827,6 @@ Aliases: XmlNamespaces
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -XPathQuery
-
-Specifies a XPath query.
-
-```yaml
-Type: String
-Parameter Sets: NewXPathQuery
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WhatIf
-
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

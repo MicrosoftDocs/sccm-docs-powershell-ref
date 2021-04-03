@@ -1,4 +1,4 @@
-﻿---
+---
 description: Modifies settings for a Configuration Manager filter rule for status messages.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -74,6 +74,21 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -411,37 +426,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WriteToDatabase
-Indicates whether to write a message to the database.
-Specify a value of $True for this parameter to enable the *AllowUserDeleteMessagesAfterThresholdDays* parameter.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -WhatIf
 
 Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
@@ -458,6 +442,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -WriteToDatabase
+Indicates whether to write a message to the database.
+Specify a value of $True for this parameter to enable the *AllowUserDeleteMessagesAfterThresholdDays* parameter.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
@@ -467,7 +467,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### 
+###  
 
 ## NOTES
 

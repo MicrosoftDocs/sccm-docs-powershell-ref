@@ -1,4 +1,4 @@
-﻿---
+---
 description: Removes a Configuration Manager global condition object.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -75,8 +75,23 @@ This command does not use the *Force* parameter, so it prompts you for confirmat
 
 ## PARAMETERS
 
-### -DisableWildcardHandling
+### -Confirm
 
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DisableWildcardHandling
 
 This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
@@ -109,7 +124,6 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-
 
 This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
@@ -172,22 +186,6 @@ Aliases: LocalizedDisplayName
 Required: True
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

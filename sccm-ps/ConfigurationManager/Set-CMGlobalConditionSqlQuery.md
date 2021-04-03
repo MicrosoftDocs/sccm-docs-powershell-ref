@@ -1,4 +1,4 @@
-﻿---
+---
 description: Sets a SQL Query type global condition in Configuration Manager.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -64,6 +64,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Database
 
 Specifies the name of the Microsoft SQL Server database for which the SQL query will be run.
@@ -81,7 +97,6 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-
 
 This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
@@ -114,7 +129,6 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-
 
 This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
@@ -219,22 +233,6 @@ Indicates running the SQL query on the default instance.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
 
 Required: False
 Position: Named

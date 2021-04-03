@@ -1,4 +1,4 @@
-﻿---
+---
 description: Modifies a remote connection profile.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -59,6 +59,21 @@ This command modifies the remote connection profile configuration item with the 
 In this case, the *EnablePrimaryUsers*, *EnableTSConnection*, and *EnableTSFirewallRule* properties are all set to $False.
 
 ## PARAMETERS
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -Description
 Specifies a description for a remote connection profile.
@@ -307,21 +322,6 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

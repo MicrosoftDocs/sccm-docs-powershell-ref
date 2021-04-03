@@ -1,4 +1,4 @@
-﻿---
+---
 description: Changes configuration settings for Configuration Manager packages.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -93,6 +93,21 @@ The first command gets the package that has the ID ST120001, and stores the resu
 The second command changes the name of the package stored in $Pkg to ScriptsPackage02, and adds a description for the package.
 
 ## PARAMETERS
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -CopyToPackageShareOnDistributionPoint
 ```yaml
@@ -532,21 +547,6 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

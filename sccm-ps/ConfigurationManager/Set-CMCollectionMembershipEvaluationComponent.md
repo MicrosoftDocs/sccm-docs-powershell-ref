@@ -1,4 +1,4 @@
-﻿---
+---
 description: Sets how often Configuration Manager evaluates collections for membership.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -45,6 +45,21 @@ PS XYZ:\> Set-CMCollectionMembershipEvaluationComponent -MinutesInterval 6 -Site
 This command sets the evaluation frequency to six minutes for the server named CM01.West01.Contoso.com.
 
 ## PARAMETERS
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -DisableWildcardHandling
 
@@ -133,21 +148,6 @@ Aliases: Name
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

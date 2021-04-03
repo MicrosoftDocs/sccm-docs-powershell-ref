@@ -1,4 +1,4 @@
-﻿---
+---
 description: Enable an optional feature
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -49,6 +49,22 @@ Get-CMSiteFeature -Fast -Name "Task Sequence Debugger" | Enable-CMSiteFeature
 ```
 
 ## PARAMETERS
+
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -DisableWildcardHandling
 
@@ -143,22 +159,6 @@ Add this parameter to return an object that represents the item with which you'r
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
 
 Required: False
 Position: Named

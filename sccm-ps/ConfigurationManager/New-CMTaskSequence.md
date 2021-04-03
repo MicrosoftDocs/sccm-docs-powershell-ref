@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 03/30/2021
@@ -120,7 +120,7 @@ $clientProps = '/mp:mp01.contoso.com CCMDEBUGLOGGING="1" CCMLOGGINGENABLED="TRUE
 
 $tz = Get-TimeZone -Name "Eastern Standard Time"
 
-New-CMTaskSequence -BuildOperatingSystemImage -Name "Build and capture" -Description "NewBuildOSImage parameter set" -BootImagePackageId "XYZ00002" -HighPerformance $true -ApplyAll $false -OperatingSystemImagePackageId "XYZ001A0" -OperatingSystemImageIndex 1 -ProductKey "6NMRW-2C8FM-D24W7-TQWMY-CWH2D" -GeneratePassword $true -TimeZone $tz -JoinDomain WorkgroupType -WorkgroupName "groupwork" -ClientPackagePackageId "XYZ00003" -InstallationProperty $clientProps -ApplicationName "Admin Console" -IgnoreInvalidApplication $true -SoftwareUpdateStyle All -OperatingSystemFilePath "\\server1\images\capture.wim" -ImageDescription "image description" -ImageVersion "image version 1" -CreatedBy "jqpublic" -OperatingSystemFileAccount $acct -OperatingSystemFileAccountPassword $pwd 
+New-CMTaskSequence -BuildOperatingSystemImage -Name "Build and capture" -Description "NewBuildOSImage parameter set" -BootImagePackageId "XYZ00002" -HighPerformance $true -ApplyAll $false -OperatingSystemImagePackageId "XYZ001A0" -OperatingSystemImageIndex 1 -ProductKey "6NMRW-2C8FM-D24W7-TQWMY-CWH2D" -GeneratePassword $true -TimeZone $tz -JoinDomain WorkgroupType -WorkgroupName "groupwork" -ClientPackagePackageId "XYZ00003" -InstallationProperty $clientProps -ApplicationName "Admin Console" -IgnoreInvalidApplication $true -SoftwareUpdateStyle All -OperatingSystemFilePath "\\server1\images\capture.wim" -ImageDescription "image description" -ImageVersion "image version 1" -CreatedBy "jqpublic" -OperatingSystemFileAccount $acct -OperatingSystemFileAccountPassword $pwd
 ```
 
 ### Example 4: Create a task sequence to upgrade an OS
@@ -319,6 +319,22 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -571,6 +587,38 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -InstallOperatingSystemImage
+
+Add this parameter to create a task sequence for the install OS image scenario. For more information, see [Create a task sequence to install an OS](/mem/configmgr/osd/deploy-use/create-a-task-sequence-to-install-an-operating-system).
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: NewInstallOSImage
+Aliases: InstallOperatingSystemImageOption
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InstallOperatingSystemImageVhd
+
+Don't use this parameter. Support for VHD files was removed in Configuration Manager version 1710.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: NewInstallOSImageVhd
+Aliases: InstallOperatingSystemImageVhdOption
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -InstallationLicensingMode
 
 This setting only applies to legacy versions of Windows that are no longer supported. Starting in version 2010, the setting is no longer visible in the task sequence editor. Existing task sequences that still use this setting will continue to function the same.
@@ -602,38 +650,6 @@ Parameter Sets: NewBuildOSImage, NewInstallOSImage, NewInstallOSImageVhd
 Aliases:
 
 Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InstallOperatingSystemImage
-
-Add this parameter to create a task sequence for the install OS image scenario. For more information, see [Create a task sequence to install an OS](/mem/configmgr/osd/deploy-use/create-a-task-sequence-to-install-an-operating-system).
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: NewInstallOSImage
-Aliases: InstallOperatingSystemImageOption
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InstallOperatingSystemImageVhd
-
-Don't use this parameter. Support for VHD files was removed in Configuration Manager version 1710.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: NewInstallOSImageVhd
-Aliases: InstallOperatingSystemImageVhdOption
-
-Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -954,38 +970,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WorkgroupName
-
-If you set the **JoinDomain** parameter to `WorkgroupType`, use this parameter to specify the workgroup name. This parameter configures the [Apply Network Settings](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_ApplyNetworkSettings) task sequence step.
-
-```yaml
-Type: String
-Parameter Sets: NewBuildOSImage, NewInstallOSImage, NewInstallOSImageVhd
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -WhatIf
 
 Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
@@ -998,6 +982,22 @@ Aliases: wi
 Required: False
 Position: Named
 Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WorkgroupName
+
+If you set the **JoinDomain** parameter to `WorkgroupType`, use this parameter to specify the workgroup name. This parameter configures the [Apply Network Settings](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_ApplyNetworkSettings) task sequence step.
+
+```yaml
+Type: String
+Parameter Sets: NewBuildOSImage, NewInstallOSImage, NewInstallOSImageVhd
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

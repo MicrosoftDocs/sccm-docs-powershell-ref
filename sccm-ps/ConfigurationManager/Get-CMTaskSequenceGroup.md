@@ -1,4 +1,4 @@
-﻿---
+---
 description: Gets a Configuration Manager task sequence group.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -54,7 +54,6 @@ The command gets the task sequence groups in a task sequence with name specified
 
 ### -DisableWildcardHandling
 
-
 This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
@@ -70,7 +69,6 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-
 
 This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 

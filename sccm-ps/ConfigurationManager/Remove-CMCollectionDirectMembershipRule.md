@@ -1,4 +1,4 @@
-﻿---
+---
 description: Remove a direct membership rule from a collection.
 external help file: AdminUI.PS-help.xml
 Module Name: ConfigurationManager
@@ -120,6 +120,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Force
 
 Run the command without asking for confirmation.
@@ -194,22 +210,6 @@ Parameter Sets: ByNameAndName, ByIdAndName, ByValueAndName
 Aliases: ResourceNames
 
 Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False

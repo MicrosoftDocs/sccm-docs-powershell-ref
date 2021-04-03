@@ -1,4 +1,4 @@
-﻿---
+---
 description: Creates a SQL Query type global condition in Configuration Manager.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -84,22 +84,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Database
-
-Specifies a database name.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -DataType
 
 Specifies a data type.
@@ -109,6 +93,22 @@ Type: GlobalConditionDataType
 Parameter Sets: (All)
 Aliases:
 Accepted values: String, DateTime, Integer, FloatingPoint, Version, Boolean
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Database
+
+Specifies a database name.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
 
 Required: True
 Position: Named
@@ -134,7 +134,6 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-
 
 This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
@@ -167,7 +166,6 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-
 
 This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
