@@ -1,8 +1,7 @@
 ﻿---
-description: Modifies a software update deployment package.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/07/2019
+ms.date: 04/02/2021
 schema: 2.0.0
 title: Set-CMSoftwareUpdateDeploymentPackage
 ---
@@ -10,7 +9,8 @@ title: Set-CMSoftwareUpdateDeploymentPackage
 # Set-CMSoftwareUpdateDeploymentPackage
 
 ## SYNOPSIS
-Modifies a software update deployment package.
+
+Modify a software update deployment package.
 
 ## SYNTAX
 
@@ -39,39 +39,27 @@ Set-CMSoftwareUpdateDeploymentPackage [-Description <String>] [-Force] -Name <St
 ```
 
 ## DESCRIPTION
-The **Set-CMSoftwareUpdateDeploymentPackage** cmdlet modifies a software update deployment package.
-A software update deployment package contains one or more software updates for deployment to a collection of computers.
+
+Use this cmdlet to modify a software update deployment package. A software update deployment package contains one or more software updates for deployment to a collection of computers. For more information, see [Deploy software updates](/mem/configmgr/sum/deploy-use/download-software-updates).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
-### Example 1: Update the name and description of a software update deployment package
-```
-PS XYZ:\> Set-CMSoftwareUpdateDeploymentPackage -Id "ST10000C" -Description "Deployment pack 107" -NewName "SDPTest"
-```
+### Example 1: Update the name and description of a deployment package
 
-This command sets a new name and description for the deployment package that has the ID ST10000C.
+This command sets a new name and description for the deployment package that has the ID **ST10000C**.
 
-### Example 2: Add membership to a security scope of a software update deployment package
+```powershell
+Set-CMSoftwareUpdateDeploymentPackage -Id "ST10000C" -Description "Deployment pack 107" -NewName "SDPTest"
 ```
-PS XYZ:\> Set-CMSoftwareUpdateDeploymentPackage -Name "DP107" -SecurityScopeAction AddMembership -SecurityScopeName "testScopeName"
-```
-
-This command adds membership for the security scope named testScopeName.
-
-### Example 3: Remove membership from a security scope of a software update deployment package
-```
-PS XYZ:\> Set-CMSoftwareUpdateDeploymentPackage -Name "DP107" -SecurityScopeAction RemoveMembership -SecurityScopeName "testScopeName"
-```
-
-This command removes membership for the security scope named testScopeName.
 
 ## PARAMETERS
 
 ### -Description
-Specifies a description for the deployment package.
+
+Specify an optional description for the deployment package.
 
 ```yaml
 Type: String
@@ -102,7 +90,8 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Starting in version 1910, use this parameter to force remove an expired NAP update.
+
+Add this parameter to force remove an expired NAP update.
 
 ```yaml
 Type: SwitchParameter
@@ -133,7 +122,8 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-Specifies an array of identifiers for the deployment package.
+
+Specify the ID of a deployment package to modify.
 
 ```yaml
 Type: String
@@ -148,8 +138,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies a **CMSoftwareUpdateDeploymentPackage** object.
-To obtain an **CMSoftwareUpdateDeploymentPackage** object, use the [Get-CMSoftwareUpdateDeploymentPackage](Get-CMSoftwareUpdateDeploymentPackage.md) cmdlet.
+
+Specify a deployment package object to modify. To get this object, use the [Get-CMSoftwareUpdateDeploymentPackage](Get-CMSoftwareUpdateDeploymentPackage.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -164,7 +154,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies a name for the deployment package.
+
+Specify the name of the deployment package to modify.
 
 ```yaml
 Type: String
@@ -179,7 +170,8 @@ Accept wildcard characters: False
 ```
 
 ### -NewName
-Specifies a new name for the deployment package.
+
+Specify a new name for the deployment package.
 
 ```yaml
 Type: String
@@ -210,7 +202,8 @@ Accept wildcard characters: False
 ```
 
 ### -Path
-Specifies a package source (URL) for the deployment package.
+
+Specify a package source path for the deployment package.
 
 ```yaml
 Type: String
@@ -225,7 +218,10 @@ Accept wildcard characters: False
 ```
 
 ### -Priority
-Specifies a distribution priority for the deployment package.
+
+Specify the order in which the site sends the content to other sites and the distribution points in this site.
+
+The site sends high priority content before packages with medium or low priority. Packages with equal priority are sent in the order in which they're created.
 
 ```yaml
 Type: Priorities
@@ -241,6 +237,9 @@ Accept wildcard characters: False
 ```
 
 ### -RefreshDistributionPoint
+
+Add this parameter to refresh the package on distribution points.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -254,6 +253,9 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveExpired
+
+Add this parameter to decline updates that aren't approved and have been expired by Microsoft.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -267,6 +269,9 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveSuperseded
+
+Add this parameter to decline updates that haven't been approved for 30 days or more, aren't currently needed by any clients, and are superseded by an approved update.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -280,6 +285,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -327,3 +333,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-CMSoftwareUpdateDeploymentPackage](Get-CMSoftwareUpdateDeploymentPackage.md)
 
 [Remove-CMSoftwareUpdateDeploymentPackage](Remove-CMSoftwareUpdateDeploymentPackage.md)
+
+[Deploy software updates](/mem/configmgr/sum/deploy-use/download-software-updates)
+
+[Software updates maintenance](/mem/configmgr/sum/deploy-use/software-updates-maintenance)

@@ -1,8 +1,7 @@
 ﻿---
-description: Removes a driver from a driver package.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/07/2019
+ms.date: 04/02/2021
 schema: 2.0.0
 title: Remove-CMDriverPackage
 ---
@@ -10,7 +9,8 @@ title: Remove-CMDriverPackage
 # Remove-CMDriverPackage
 
 ## SYNOPSIS
-Removes a driver package.
+
+Remove a driver package.
 
 ## SYNTAX
 
@@ -33,20 +33,21 @@ Remove-CMDriverPackage [-Force] -Name <String> [-DisableWildcardHandling] [-Forc
 ```
 
 ## DESCRIPTION
-The **Remove-CMDriverPackage** cmdlet removes a driver package from Configuration Manager.
-After the driver package is removed, it cannot be used by any task sequence.
+
+Use this cmdlet to remove a driver package. After you remove the driver package, you can't use it in a task sequence.
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
-### Example 1: Remove a driver package that is specified by its identifier
-```
-PS XYZ:\> Remove-CMDriverPackage -Id "ST100062"
-```
+### Example 1: Remove a driver package
 
-This command removes a driver package that is specified by its identifier.
+This command removes a driver package with the ID **XYZ00062**.
+
+```powershell
+Remove-CMDriverPackage -Id "XYZ00062"
+```
 
 ## PARAMETERS
 
@@ -67,7 +68,8 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Forces the command to run without asking for user confirmation.
+
+Run the command without asking for confirmation.
 
 ```yaml
 Type: SwitchParameter
@@ -98,7 +100,8 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-Specifies an array of identifiers for a driver package.
+
+Specify an array of driver package IDs to remove.
 
 ```yaml
 Type: String[]
@@ -113,8 +116,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies a driver package object.
-To obtain a driver package object, use the [Get-CMDriverPackage](Get-CMDriverPackage.md) cmdlet.
+
+Specify a driver package object to remove. To get this object, use the [Get-CMDriverPackage](Get-CMDriverPackage.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -129,7 +132,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies the name of a driver.
+
+Specify the name of a driver package to remove.
 
 ```yaml
 Type: String
@@ -144,6 +148,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -197,5 +202,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-CMDriverPackage](New-CMDriverPackage.md)
 
 [Set-CMDriverPackage](Set-CMDriverPackage.md)
-
-

@@ -345,7 +345,7 @@ Accept wildcard characters: False
 
 ### -CMTag
 
-{{ Fill CMTag Description }}
+This property is reserved for future use.
 
 ```yaml
 Type: CMTagTypes[]
@@ -1345,6 +1345,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### IResultObject#SMS_AutoDeployment
 
 ## NOTES
+
+For more information on this return object and its properties, see [SMS_AutoDeployment server WMI class](/mem/configmgr/develop/reference/sum/sms_autodeployment-server-wmi-class).
 
 ## RELATED LINKS
 

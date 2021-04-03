@@ -1,8 +1,7 @@
 ﻿---
-description: Creates a driver package.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/05/2019
+ms.date: 03/30/2021
 schema: 2.0.0
 title: New-CMDriverPackage
 ---
@@ -10,7 +9,8 @@ title: New-CMDriverPackage
 # New-CMDriverPackage
 
 ## SYNOPSIS
-Creates a driver package.
+
+Create a driver package.
 
 ## SYNTAX
 
@@ -21,7 +21,8 @@ New-CMDriverPackage [-Description <String>] [-DriverManufacturer <String>] [-Dri
 ```
 
 ## DESCRIPTION
-The **New-CMDriverPackage** cmdlet creates a driver package.
+
+Use this cmdlet to create a driver package. Group similar device drivers in packages to help streamline OS deployments. For example, create a driver package for each computer manufacturer on your network. For more information, see [Manage drivers in Configuration Manager](/mem/configmgr/osd/get-started/manage-drivers).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
@@ -29,16 +30,26 @@ The **New-CMDriverPackage** cmdlet creates a driver package.
 ## EXAMPLES
 
 ### Example 1: Create a new driver package
-```
-PS XYZ:\> New-CMDriverPackage -Name "Pckg01" -Path "\\Contoso01\Users\pattifuller\Desktop\pckg"
-```
 
 This command creates a new driver package named Pckg01.
+
+```powershell
+New-CMDriverPackage -Name "Pckg01" -Path "\\Contoso01\Users\pattifuller\Desktop\pckg"
+```
+
+### Example 2: Create a driver package with manufacturer and model
+
+This command creates a driver package and specifies the manufacturer and model properties.
+
+```powershell
+New-CMDriverPackage -Name "Surface Book 2 Drivers" -Description "Some descriptive text" -DriverManufacturer "Microsoft" -DriverModel "Surface 2"
+```
 
 ## PARAMETERS
 
 ### -Description
-Specifies a description of a driver package.
+
+Specify an optional description of a driver package. The maximum length is 127 characters.
 
 ```yaml
 Type: String
@@ -69,7 +80,10 @@ Accept wildcard characters: False
 ```
 
 ### -DriverManufacturer
-Starting in version 1910, use this parameter to set the manufacturer. Use with the DriverModel parameter. You can use them for managing the driver catalog, and with task sequence pre-caching.
+
+Use this parameter to set the manufacturer of the device. The maximum length is 100 characters.
+
+Use it with the **DriverModel** parameter. You can use them for managing the driver catalog, and with task sequence pre-caching. For more information, see [Configure pre-cache content for task sequences](/mem/configmgr/osd/deploy-use/configure-precache-content).
 
 ```yaml
 Type: String
@@ -84,8 +98,10 @@ Accept wildcard characters: False
 ```
 
 ### -DriverModel
-Starting in version 1910, use this parameter to set the model. Use with the DriverManufacturer parameter. You can use them for managing the driver catalog, and with task sequence pre-caching.
 
+Use this parameter to set the model of the device. The maximum length is 100 characters.
+
+Use it with the **DriverManufacturer** parameter. You can use them for managing the driver catalog, and with task sequence pre-caching. For more information, see [Configure pre-cache content for task sequences](/mem/configmgr/osd/deploy-use/configure-precache-content).
 
 ```yaml
 Type: String
@@ -116,7 +132,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies a name for a driver package.
+
+Specify a name for a driver package. The maximum length is 50 characters.
 
 ```yaml
 Type: String
@@ -131,7 +148,12 @@ Accept wildcard characters: False
 ```
 
 ### -Path
-Specifies a file path to the location where Configuration Manager stores the compressed version of the source files on the site server.
+
+Specify a file path to the network location to source the driver files.
+
+When you create a driver package, the source location of the package must point to an empty network share that's not used by another driver package. The SMS Provider must have **Full control** permissions to that location.
+
+When you add device drivers to a driver package, Configuration Manager copies it to this path. You can add to a driver package only device drivers that you've imported and that are enabled in the driver catalog.
 
 ```yaml
 Type: String
@@ -146,6 +168,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -189,6 +212,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## NOTES
 
+For more information on this return object and its properties, see [SMS_DriverPackage server WMI class](/mem/configmgr/develop/reference/osd/sms_driverpackage-server-wmi-class).
+
 ## RELATED LINKS
 
 [Export-CMDriverPackage](Export-CMDriverPackage.md)
@@ -200,3 +225,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-CMDriverPackage](Remove-CMDriverPackage.md)
 
 [Set-CMDriverPackage](Set-CMDriverPackage.md)
+
+[Manage drivers in Configuration Manager](/mem/configmgr/osd/get-started/manage-drivers)

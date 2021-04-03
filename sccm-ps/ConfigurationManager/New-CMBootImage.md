@@ -1,8 +1,7 @@
 ﻿---
-description: Adds a new operating system boot image.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/05/2019
+ms.date: 04/01/2021
 schema: 2.0.0
 title: New-CMBootImage
 ---
@@ -10,7 +9,8 @@ title: New-CMBootImage
 # New-CMBootImage
 
 ## SYNOPSIS
-Adds a new operating system boot image.
+
+Create a custom boot image.
 
 ## SYNTAX
 
@@ -20,31 +20,27 @@ New-CMBootImage [-Description <String>] -Index <Int32> -Name <String> -Path <Str
 ```
 
 ## DESCRIPTION
-The **New-CMBootImage** cmdlet adds a new Windows Preinstallation Environment (Windows PE) operating system boot image to Configuration Manager.
-Operating system images are .wim format files.
-These files contain a compressed set of reference files and folders that are required to successfully install and configure a boot image on a computer.
-By default, Configuration Manager includes both x86 and x64 operating system images.
 
-You must run **New-CMBootImage** on the computer that is running the Systems Management Server (SMS) provider.
-The computer account of the computer that is running the SMS provider must have Read and Write access to the package source of the boot image.
-For more information about the SMS provider, see [Planning for the SMS Provider in Configuration Manager](/mem/configmgr/core/plan-design/hierarchy/plan-for-the-sms-provider).
+Use this cmdlet to create a custom Windows Preinstallation Environment (Windows PE) OS boot image. By default, Configuration Manager includes two boot images for x86 and x64 architectures. For more information, see [Manage boot images with Configuration Manager](/mem/configmgr/osd/get-started/manage-boot-images).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
-### Example 1: Create a new boot image object
-```
-PS XYZ:\> New-CMBootImage -Path "\\Server99.Contoso.com\SMS_CCC\osd\boot\i386\boot.wim" -Index 1 -Name "WinPE Boot Image" -Version 11 -Description "WinPE Boot Image x86 Approved 9/1/2012"
-```
+### Example 1: Create a custom boot image
 
-This command creates a new boot image object and provides it with a source path for its WIM file, an index value, a name, an operating system version, and a description.
+This command creates a custom boot image. It specifies a source path for its WIM file, an index value, a name, a version, and a description.
+
+```powershell
+New-CMBootImage -Path "\\Server99.Contoso.com\SMS_CCC\osd\boot\x64\boot.wim" -Index 1 -Name "Custom boot image" -Version "11" -Description "WinPE Boot Image x64 Approved 9/1/2012"
+```
 
 ## PARAMETERS
 
 ### -Description
-Specifies a description of the boot image.
+
+Specify an optional description of a boot image to help you identify it.
 
 ```yaml
 Type: String
@@ -91,8 +87,8 @@ Accept wildcard characters: False
 ```
 
 ### -Index
-Specifies an index.
-An index is the number of an image in a .wim file.
+
+Specify the index of the image in the WinPE file to use for this boot image.
 
 ```yaml
 Type: Int32
@@ -107,7 +103,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies the name of a new boot image.
+
+Specify the name of the boot image.
 
 ```yaml
 Type: String
@@ -122,7 +119,8 @@ Accept wildcard characters: False
 ```
 
 ### -Path
-Specifies the location of the original WIM file for the boot image.
+
+Specify the network path of the original WIM file for the boot image.
 
 ```yaml
 Type: String
@@ -137,7 +135,8 @@ Accept wildcard characters: False
 ```
 
 ### -Version
-Specifies the version of the boot image.
+
+Specify the version of the boot image. This value isn't the OS version, but a string that you manage.
 
 ```yaml
 Type: String
@@ -152,6 +151,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -195,9 +195,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## NOTES
 
-## RELATED LINKS
+For more information on this return object and its properties, see [SMS_BootImagePackage server WMI class](/mem/configmgr/develop/reference/osd/sms_bootimagepackage-server-wmi-class).
 
-[Planning for the SMS Provider in Configuration Manager](/mem/configmgr/core/plan-design/hierarchy/plan-for-the-sms-provider)
+## RELATED LINKS
 
 [Get-CMBootImage](Get-CMBootImage.md)
 
@@ -205,4 +205,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Set-CMBootImage](Set-CMBootImage.md)
 
-
+[Manage boot images with Configuration Manager](/mem/configmgr/osd/get-started/manage-boot-images)

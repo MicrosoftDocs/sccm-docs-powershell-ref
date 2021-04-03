@@ -1,8 +1,7 @@
 ﻿---
-description: Gets an operating system boot image.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/02/2019
+ms.date: 04/01/2021
 schema: 2.0.0
 title: Get-CMBootImage
 ---
@@ -10,7 +9,8 @@ title: Get-CMBootImage
 # Get-CMBootImage
 
 ## SYNOPSIS
-Gets an operating system boot image.
+
+Get an OS boot image.
 
 ## SYNTAX
 
@@ -26,15 +26,8 @@ Get-CMBootImage -Id <String> [-Reload] [-DisableWildcardHandling] [-ForceWildcar
 ```
 
 ## DESCRIPTION
-The **Get-CMBootImage** cmdlet gets a Windows Preinstallation Environment (PE) operating system boot image that Configuration Manager can use to deploy an operating system.
 
-Operating system boot images are .wim format files.
-These files contain a compressed set of reference files and folders that are required to successfully install and configure an operating system image.
-By default, Configuration Manager includes both x86 and x64 boot images.
-
-You must run the **Get-CMBootImage** cmdlet on the computer that is running the Systems Management Server (SMS) provider.
-The computer account of the computer that is running the SMS provider must have Read and Write access to the source package of the boot image.
-For more information about the SMS provider, see [Planning for the SMS Provider in Configuration Manager](/mem/configmgr/core/plan-design/hierarchy/plan-for-the-sms-provider).
+Use this cmdlet to get a Windows Preinstallation Environment (PE) OS boot image that Configuration Manager uses to deploy an OS. By default, Configuration Manager includes both x86 and x64 boot images. For more information, see [Manage boot images with Configuration Manager](/mem/configmgr/osd/get-started/manage-boot-images).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
@@ -46,15 +39,15 @@ For more information about the SMS provider, see [Planning for the SMS Provider 
 This command gets a boot image by using its ID.
 
 ```Powershell
-Get-CMBootImage -Id "c0eb2912-0de8-4a2a-9c77-603b35bcf7e4"
+Get-CMBootImage -Id "XYZ00002"
 ```
 
-### Example 2: Get a boot image by using its name
+### Example 2: List all boot images
 
-This command gets a boot image by using its name.
+This command gets all boot images at the site and lists several properties in a table format.
 
 ```powershell
-Get-CMBootImage -Name "SMS_BootImagePackage"
+Get-CMBootImage | Select-Object PackageId, Name, ImageOSVersion, ProductionClientVersion, InputLocale | Format-Table
 ```
 
 ## PARAMETERS
@@ -92,7 +85,8 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-Specifies an array of boot image identifiers.
+
+Specify a boot image ID to get. This value is a standard package ID, for example, `XYZ00002`.
 
 ```yaml
 Type: String
@@ -107,7 +101,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies a name of a boot image.
+
+Specify the name of a boot image to get.
 
 ```yaml
 Type: String
@@ -123,7 +118,7 @@ Accept wildcard characters: False
 
 ### -Reload
 
-Applies to version 2006 and later. If the version of the Windows ADK components in the boot image are out of date, use this parameter to reload this boot image with the current Windows PE version from the Windows ADK. For more information on this process, see [Update distribution points with the boot image](/mem/configmgr/osd/get-started/manage-boot-images#update-distribution-points-with-the-boot-image).
+Applies to version 2006 and later. If the version of the Windows ADK components in the boot image are out of date, use this parameter to reload this boot image with the current Windows PE version from the Windows ADK. For more information, see [Update distribution points with the boot image](/mem/configmgr/osd/get-started/manage-boot-images#update-distribution-points-with-the-boot-image).
 
 ```yaml
 Type: SwitchParameter
@@ -152,12 +147,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## NOTES
 
-## RELATED LINKS
+For more information on this return object and its properties, see [SMS_BootImagePackage server WMI class](/mem/configmgr/develop/reference/osd/sms_bootimagepackage-server-wmi-class).
 
-[Planning for the SMS Provider in Configuration Manager](/mem/configmgr/core/plan-design/hierarchy/plan-for-the-sms-provider)
+## RELATED LINKS
 
 [New-CMBootImage](New-CMBootImage.md)
 
 [Remove-CMBootImage](Remove-CMBootImage.md)
 
 [Set-CMBootImage](Set-CMBootImage.md)
+
+[Manage boot images with Configuration Manager](/mem/configmgr/osd/get-started/manage-boot-images)

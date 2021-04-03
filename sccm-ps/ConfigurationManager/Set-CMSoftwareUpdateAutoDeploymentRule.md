@@ -2,7 +2,7 @@
 description: Modify an automatic deployment rule (ADR) for software updates.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 08/20/2020
+ms.date: 04/02/2021
 schema: 2.0.0
 title: Set-CMSoftwareUpdateAutoDeploymentRule
 ---
@@ -340,7 +340,7 @@ Accept wildcard characters: False
 
 ### -CMTag
 
-{{ Fill CMTag Description }}
+This property is reserved for future use.
 
 ```yaml
 Type: CMTagTypes[]
@@ -373,8 +373,7 @@ Accept wildcard characters: False
 
 ### -ContentSize
 
-Starting in version 1906, use this parameter to set the **Content Size (KB)** property filter on the Software Updates page of the ADR properties.
-
+Use this parameter to set the **Content Size (KB)** property filter on the Software Updates page of the ADR properties.
 
 ```yaml
 Type: String[]
@@ -473,8 +472,7 @@ Accept wildcard characters: False
 
 ### -DeploymentPackage
 
-Starting in version 1906, use this parameter to set the deployment package for the existing software update auto deployment rule. To not require a package, set the value to `$null`.
-
+Use this parameter to set the deployment package for the existing software update auto deployment rule. To not require a package, set the value to `$null`.
 
 ```yaml
 Type: IResultObject
@@ -489,8 +487,8 @@ Accept wildcard characters: False
 ```
 
 ### -DeploymentPackageName
-Starting in version 1906, use this parameter to set the deployment package for the existing software update auto deployment rule. To not require a package, set the value to `$null`.
 
+Use this parameter to set the deployment package for the existing software update auto deployment rule. To not require a package, set the value to `$null`.
 
 ```yaml
 Type: String

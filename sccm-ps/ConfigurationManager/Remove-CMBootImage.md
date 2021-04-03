@@ -1,8 +1,7 @@
 ﻿---
-description: Removes an operating system boot image.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/07/2019
+ms.date: 04/01/2021
 schema: 2.0.0
 title: Remove-CMBootImage
 ---
@@ -10,7 +9,8 @@ title: Remove-CMBootImage
 # Remove-CMBootImage
 
 ## SYNOPSIS
-Removes an operating system boot image.
+
+Remove an OS boot image.
 
 ## SYNTAX
 
@@ -33,32 +33,21 @@ Remove-CMBootImage [-Force] -Name <String> [-DisableWildcardHandling] [-ForceWil
 ```
 
 ## DESCRIPTION
-The **Remove-CMBootImage** cmdlet removes a Windows Preinstallation Environment (Windows PE) operating system boot image from Configuration Manager.
 
-You must run **Remove-CMBootImage** on the computer that is running the Systems Management Server (SMS) provider.
-The computer account of the computer that is running the SMS provider must have Read and Write access to the package source of the boot image.
-For more information about the SMS provider, see [Planning for the SMS Provider in Configuration Manager](/mem/configmgr/core/plan-design/hierarchy/plan-for-the-sms-provider).
+Use this cmdlet to remove a Windows Preinstallation Environment (Windows PE) OS boot image from Configuration Manager.
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
-### Example 1: Remove a boot image object that is identified by using its ID
-```
-PS XYZ:\> Remove-CMBootImage -Id "CM100004" -Confirm
-```
+### Example 1: Remove a boot image by ID
 
-This command removes a boot image object that is identified by using its ID.
-You must confirm the action before the command performs it.
+This command removes the boot image with ID **CM100004**. You have to confirm the action.
 
-### Example 2: Remove a boot image object that is identified by using its name
+```powershell
+Remove-CMBootImage -Id "CM100004" -Confirm
 ```
-PS XYZ:\> Remove-CMBootImage -Name "Boot image (86)" -Confirm
-```
-
-This command removes a boot image object that is identified by using its name.
-You must confirm the action before the command performs it.
 
 ## PARAMETERS
 
@@ -79,7 +68,8 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Forces the command to run without asking for user confirmation.
+
+Run the command without asking for confirmation.
 
 ```yaml
 Type: SwitchParameter
@@ -110,8 +100,8 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-Specifies an array of boot images identifiers.
-You can get a boot image object by using the [Get-CMBootImage](Get-CMBootImage.md) cmdlet.
+
+Specify a boot image ID to remove. This value is a standard package ID, for example, `XYZ00002`.
 
 ```yaml
 Type: String
@@ -126,7 +116,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies a boot image object.
+
+Specify a boot image object to remove. To get this object, use the [Get-CMBootImage](Get-CMBootImage.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -141,7 +132,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies a name of a boot image.
+
+Specify the name of a boot image to remove.
 
 ```yaml
 Type: String
@@ -156,6 +148,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -200,12 +193,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Planning for the SMS Provider in Configuration Manager](/mem/configmgr/core/plan-design/hierarchy/plan-for-the-sms-provider)
-
 [Get-CMBootImage](Get-CMBootImage.md)
 
 [New-CMBootImage](New-CMBootImage.md)
 
 [Set-CMBootImage](Set-CMBootImage.md)
 
-
+[Manage boot images with Configuration Manager](/mem/configmgr/osd/get-started/manage-boot-images)
