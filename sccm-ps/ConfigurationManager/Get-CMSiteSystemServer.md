@@ -1,6 +1,6 @@
 ﻿---
 description: Get the site system server role.
-external help file: AdminUI.PS.HS.dll-Help.xml
+external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 12/28/2020
 schema: 2.0.0
@@ -174,8 +174,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### IResultObject[]#SMS_SCI_SysResUse
 
 ### IResultObject#SMS_SCI_SysResUse
-
-For more information on this return object and its properties, see [SMS_SCI_SysResUse server WMI class](/mem/configmgr/develop/reference/core/servers/configure/sms_sci_sysresuse-server-wmi-class).
 
 ## NOTES
 

@@ -1,6 +1,6 @@
 ---
 description: Creates a rule in Configuration Manager.
-external help file: AdminUI.PS.HS.dll-Help.xml
+external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 07/31/2020
 schema: 2.0.0

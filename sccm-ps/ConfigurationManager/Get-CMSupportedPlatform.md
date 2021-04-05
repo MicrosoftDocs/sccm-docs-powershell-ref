@@ -1,6 +1,6 @@
----
+﻿---
 description: Get a supported platform.
-external help file: AdminUI.PS.Dcm.dll-Help.xml
+external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 12/04/2020
 schema: 2.0.0
@@ -192,8 +192,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### IResultObject[]#SMS_SupportedPlatforms
 
 ### IResultObject#SMS_SupportedPlatforms
-
-For more information on this return object and its properties, see [SMS_SupportedPlatforms server WMI class](/mem/configmgr/develop/reference/core/servers/configure/sms_supportedplatforms-server-wmi-class).
 
 ## NOTES
 

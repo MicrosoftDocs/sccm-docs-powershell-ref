@@ -1,6 +1,6 @@
 ---
 description: Removes a collection exclude membership rule.
-external help file: AdminUI.PS.Collections-help.xml
+external help file: AdminUI.PS-help.xml
 Module Name: ConfigurationManager
 ms.date: 05/07/2019
 schema: 2.0.0
@@ -71,9 +71,7 @@ Remove-CMCollectionExcludeMembershipRule -InputObject <IResultObject> -ExcludeCo
 ## DESCRIPTION
 
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
@@ -165,6 +163,9 @@ Accept wildcard characters: False
 ```
 
 ### -Force
+
+Run the command without asking for confirmation.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -191,8 +192,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+
+Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
 
 ```yaml
 Type: SwitchParameter

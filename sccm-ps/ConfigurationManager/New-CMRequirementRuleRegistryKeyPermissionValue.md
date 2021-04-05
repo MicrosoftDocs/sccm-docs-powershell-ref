@@ -1,5 +1,5 @@
----
-external help file: AdminUI.PS.Dcm.dll-Help.xml
+﻿---
+external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 01/05/2021
 online version:
@@ -157,7 +157,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
-
 ## NOTES
 
 ## RELATED LINKS

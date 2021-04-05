@@ -1,6 +1,6 @@
----
+﻿---
 description: Converts an application object.
-external help file: AdminUI.PS.AppMan.dll-Help.xml
+external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 04/29/2019
 schema: 2.0.0
@@ -23,9 +23,7 @@ Convert-CMApplication -InputObject <PSObject> [-DisableWildcardHandling] [-Force
 The **Convert-CMApplication** cmdlet converts an application object to an application SDK object or an application SDK object to an application object.
 
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
@@ -49,7 +47,8 @@ The second command converts the SDK application object in $SdkApp to an applicat
 ## PARAMETERS
 
 ### -DisableWildcardHandling
-DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
+
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -64,7 +63,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
+
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -86,7 +86,7 @@ To obtain an application SDK object, use the [ConvertTo-CMApplication](ConvertTo
 ```yaml
 Type: PSObject
 Parameter Sets: (All)
-Aliases: IResultObject, Application, ProviderApplicationObject
+Aliases: IResultObject, Application, ProviderApplicationObject, ApplicationGroup
 
 Required: True
 Position: Named

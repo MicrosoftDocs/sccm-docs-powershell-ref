@@ -1,8 +1,8 @@
 ---
-description: Exports a Configuration Manager task sequence.
-external help file: AdminUI.PS.Osd.dll-Help.xml
+description: Export a task sequence.
+external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 11/30/2018
+ms.date: 03/24/2021
 schema: 2.0.0
 title: Export-CMTaskSequence
 ---
@@ -11,7 +11,7 @@ title: Export-CMTaskSequence
 
 ## SYNOPSIS
 
-Exports a Configuration Manager task sequence.
+Export a task sequence.
 
 ## SYNTAX
 
@@ -38,39 +38,42 @@ Export-CMTaskSequence [-Comment <String>] -ExportFilePath <String> [-Force] -Tas
 
 ## DESCRIPTION
 
-The **Export-CMTaskSequence** cmdlet exports a Configuration Manager task sequence to a .zip file.
+Use this cmdlet to export a task sequence from Configuration Manager. You can use the [Import-CMTaskSequence](Import-CMTaskSequence.md) cmdlet to import a task sequence to another site.
+
+> [!IMPORTANT]
+> This cmdlet doesn't support [PowerShell 7](/powershell/sccm/overview#support-for-powershell-version-7).<!-- 6337796 --> It requires the .NET Framework instead of .NET Core that's used with PowerShell version 7.
+>
+> Starting in version 2103, if you try to use this cmdlet in a PowerShell version 7 session, it fails with the following error: `This cmdlet only supports the ".NET Framework" runtime.`
 
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
 ### Example 1: Get a task sequence and export it
 
-```powershell
-PS XYZ:\> $TaskSequence = Get-CMTaskSequence -Name "TaskSequence01"
-PS XYZ:\> Export-CMTaskSequence -InputObject $TaskSequence -ExportFilePath "\\Server1\TS\TaskSequence01.zip"
-```
-
 The first command gets the task sequence object named TaskSequence01 and stores the object in the $TaskSequence variable.
 
 The second command exports the task sequence stored in $TaskSequence to the specified location.
 
-### Example 2: Get a task sequence and use the pipeline to export it
-
 ```powershell
-PS XYZ:\> Get-CMTaskSequence -Name "TaskSequence02" | Export-CMTaskSequence -ExportFilePath "\\Server1\TS\TaskSequence02.zip"
+$TaskSequence = Get-CMTaskSequence -Name "TaskSequence01"
+Export-CMTaskSequence -InputObject $TaskSequence -ExportFilePath "\\Server1\TS\TaskSequence01.zip"
 ```
 
+### Example 2: Get a task sequence and use the pipeline to export it
+
 This command gets the task sequence object named TaskSequence02 and uses the pipeline operator to pass the object to **Export-CMTaskSequence**, which exports the task sequence object to the specified location.
+
+```powershell
+Get-CMTaskSequence -Name "TaskSequence02" | Export-CMTaskSequence -ExportFilePath "\\Server1\TS\TaskSequence02.zip"
+```
 
 ## PARAMETERS
 
 ### -Comment
 
-Specifies a comment for the task sequence.
+Specify an optional administrator comment. This comment displays in the Import Task Sequence Wizard.
 
 ```yaml
 Type: String
@@ -102,7 +105,7 @@ Accept wildcard characters: False
 
 ### -DisableWildcardHandling
 
-DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -118,7 +121,7 @@ Accept wildcard characters: False
 
 ### -ExportFilePath
 
-Specifies a path for the exported .zip file.
+Specify the network path for the task sequence. The path needs to specify the file, including the `.zip` extension.
 
 ```yaml
 Type: String
@@ -134,7 +137,7 @@ Accept wildcard characters: False
 
 ### -Force
 
-Forces the command to run without asking for user confirmation.
+Run the command without asking for confirmation.
 
 ```yaml
 Type: SwitchParameter
@@ -150,7 +153,7 @@ Accept wildcard characters: False
 
 ### -ForceWildcardHandling
 
-ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -166,8 +169,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 
-Specifies a task sequence object.
-To obtain a task sequence object, use the [Get-CMTaskSequence](Get-CMTaskSequence.md) cmdlet.
+Specify a task sequence object to export. To get this object, use the [Get-CMTaskSequence](Get-CMTaskSequence.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -183,7 +185,7 @@ Accept wildcard characters: False
 
 ### -Name
 
-Specifies a name for the task sequence.
+Specify the name of a task sequence to export.
 
 ```yaml
 Type: String
@@ -199,7 +201,7 @@ Accept wildcard characters: False
 
 ### -TaskSequencePackageId
 
-Specifies the ID of a task sequence.
+Specify the task sequence ID to export. This value is the standard package ID, for example `XYZ00123`.
 
 ```yaml
 Type: String
@@ -215,8 +217,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
 
 ```yaml
 Type: SwitchParameter
@@ -232,9 +233,7 @@ Accept wildcard characters: False
 
 ### -WithContent
 
-Indicates whether to include content associated with the task sequence in the export .zip file.
-
-If you specify a value of $True, the cmdlet copies the content from the package source to the export location, and uses the import path as the new package source location.
+Set this parameter to **$true** to export all content for the task sequence and dependencies.
 
 ```yaml
 Type: Boolean
@@ -250,10 +249,7 @@ Accept wildcard characters: False
 
 ### -WithDependence
 
-Indicates whether to include dependencies in the export .zip file.
-
-Specify a value of $True to scan for all the related objects and export them with the task sequence that includes any dependencies for applications.
-To export only the task sequence XML without the other referenced objects, set this parameter to $False.
+Set this parameter to **$true** to export all task sequence dependencies.
 
 ```yaml
 Type: Boolean

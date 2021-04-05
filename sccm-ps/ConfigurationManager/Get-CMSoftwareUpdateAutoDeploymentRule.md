@@ -1,6 +1,6 @@
 ﻿---
 description: Get an automatic deployment rule for software updates.
-external help file: AdminUI.PS.Sum.dll-Help.xml
+external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 08/20/2020
 schema: 2.0.0

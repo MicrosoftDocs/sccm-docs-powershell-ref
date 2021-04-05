@@ -1,6 +1,6 @@
 ---
 description: Remove a deployment type supersedence relationship.
-external help file: AdminUI.PS.AppMan.dll-Help.xml
+external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 01/05/2021
 schema: 2.0.0
@@ -167,7 +167,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
-
 ## NOTES
 
 ## RELATED LINKS

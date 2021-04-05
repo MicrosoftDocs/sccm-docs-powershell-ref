@@ -182,6 +182,22 @@ For more information, see [Add-CMManagementPoint](/powershell/module/configurati
 
 Fixed an issue for cloud management gateway support.
 
+### Add-CMPassiveSite
+
+For more information, see [Add-CMPassiveSite](/powershell/module/configurationmanager/Add-CMPassiveSite).
+
+**Bugs that were fixed**
+
+Fixed an issue for passive site in hierarchy.
+
+### Add-CMTaskSequenceStep
+
+For more information, see [Add-CMTaskSequenceStep](/powershell/module/configurationmanager/Add-CMTaskSequenceStep).
+
+**Bugs that were fixed**
+
+Fixed a policy size issue when using multiple PowerShell steps that contain large scripts.
+
 ### Add-CMWindowsAppxDeploymentType
 
 For more information, see [Add-CMWindowsAppxDeploymentType](/powershell/module/configurationmanager/Add-CMWindowsAppxDeploymentType).
@@ -198,6 +214,14 @@ For more information, see [Approve-CMDevice](/powershell/module/configurationman
 
 Fixed an issue when working with **Get-CMDevice**.
 
+### Enable-CMSiteFeature
+
+For more information, see [Enable-CMSiteFeature](/powershell/module/configurationmanager/Enable-CMSiteFeature).
+
+**Non-breaking changes**
+
+Added new flags to support cloud features.
+
 ### Get-CMScript
 
 For more information, see [Get-CMScript](/powershell/module/configurationmanager/Get-CMScript).
@@ -205,6 +229,14 @@ For more information, see [Get-CMScript](/powershell/module/configurationmanager
 **Non-breaking changes**
 
 Added new parameter **ScriptGuid** to support query by script GUID.
+
+### Get-CMSiteFeature
+
+For more information, see [Get-CMSiteFeature](/powershell/module/configurationmanager/Get-CMSiteFeature).
+
+**Non-breaking changes**
+
+Added new flags to support cloud features.
 
 ### Get-CMSoftwareUpdate
 
@@ -316,6 +348,22 @@ $Hash = @{"FolderName"="c:\test\test1"; "FileName"="test2"}
 Invoke-CMScript -ScriptGuid $scriptGuid -Device (Get-CMDevice -Name $targetPCName) -ScriptParameter $Hash
 ```
 
+### New-CMBMSClientConfigureCheckIntervalPolicy
+
+For more information, see [New-CMBMSClientConfigureCheckIntervalPolicy](/powershell/module/configurationmanager/New-CMBMSClientConfigureCheckIntervalPolicy).
+
+**Bugs that were fixed**
+
+Fixed an issue when creating a new policy setting instance.
+
+### New-CMBoundary
+
+For more information, see [New-CMBoundary](/powershell/module/configurationmanager/New-CMBoundary).
+
+**Non-breaking changes**
+
+Added VPN option in BoundaryType parameter.
+
 ### New-CMBootableMedia
 
 For more information, see [New-CMBootableMedia](/powershell/module/configurationmanager/New-CMBootableMedia).
@@ -371,6 +419,16 @@ The following parameters are removed from this cmdlet:
 - ServiceCertificatePath
 - ServiceCName
 
+### New-CMCoManagementPolicy
+
+For more information, see [New-CMCoManagementPolicy](/powershell/module/configurationmanager/New-CMCoManagementPolicy).
+
+**Non-breaking changes**
+
+Added multi-session applicability
+
+Added ARM64 applicability
+
 ### New-CMComplianceRuleFileFolderDate
 
 For more information, see [New-CMComplianceRuleFileFolderDate](/powershell/module/configurationmanager/New-CMComplianceRuleFileFolderDate).
@@ -387,13 +445,57 @@ For more information, see [New-CMComplianceRuleFileFolderSimple](/powershell/mod
 
 Changed the type of the parameter **PropertyType** from _FileFolderProperty_ to _SimpleFileFolderProperty_ type.
 
+### New-CMDetectionClauseDirectory
+
+For more information, see [New-CMDetectionClauseDirectory](/powershell/module/configurationmanager/New-CMDetectionClauseDirectory).
+
+**Breaking changes**
+
+Changed the type of the parameter **ExpressionOperator** from _RuleExpressionOperator_ to _FileFolderRuleExpressionOperator_ type.
+
+### New-CMDetectionClauseFile
+
+For more information, see [New-CMDetectionClauseFile](/powershell/module/configurationmanager/New-CMDetectionClauseFile).
+
+**Breaking changes**
+
+Changed the type of the parameter **ExpressionOperator** from _RuleExpressionOperator_ to _FileFolderRuleExpressionOperator_ type.
+
 ### New-CMDetectionClauseMacBundle
 
 For more information, see [New-CMDetectionClauseMacBundle](/powershell/module/configurationmanager/New-CMDetectionClauseMacBundle).
 
+**Breaking changes**
+
+Changed the type of the parameter **ExpressionOperator** from _RuleExpressionOperator_ to _MacRuleExpressionOperator_ type.
+
 **Bugs that were fixed**
 
 Fixed an issue for parameter **PropertyType**.
+
+### New-CMDetectionClauseMacPackage
+
+For more information, see [New-CMDetectionClauseMacPackage](/powershell/module/configurationmanager/New-CMDetectionClauseMacPackage).
+
+**Breaking changes**
+
+Changed the type of the parameter **ExpressionOperator** from _RuleExpressionOperator_ to _MacRuleExpressionOperator_ type.
+
+### New-CMDetectionClauseRegistryKeyValue
+
+For more information, see [New-CMDetectionClauseRegistryKeyValue](/powershell/module/configurationmanager/New-CMDetectionClauseRegistryKeyValue).
+
+**Breaking changes**
+
+Changed the type of the parameter **ExpressionOperator** from _RuleExpressionOperator_ to _RegistryValueRuleExpressionOperator_ type.
+
+### New-CMDetectionClauseWindowsInstaller
+
+For more information, see [New-CMDetectionClauseWindowsInstaller](/powershell/module/configurationmanager/New-CMDetectionClauseWindowsInstaller).
+
+**Breaking changes**
+
+Changed the type of the parameter **ExpressionOperator** from _RuleExpressionOperator_ to _WindowsInstallerRuleExpressionOperator_ type.
 
 ### New-CMDriverPackage
 
@@ -453,6 +555,14 @@ For more information, see [New-CMStandaloneMedia](/powershell/module/configurati
 
 Fixed an issue for parameter **PrestartPackage**
 
+### New-CMTaskSequence
+
+For more information, see [New-CMTaskSequence](/powershell/module/configurationmanager/New-CMTaskSequence).
+
+**Bugs that were fixed**
+
+Fixed a policy size issue when you use multiple PowerShell steps that contain large scripts.
+
 ### New-CMTaskSequenceDeployment
 
 For more information, see [New-CMTaskSequenceDeployment](/powershell/module/configurationmanager/New-CMTaskSequenceDeployment).
@@ -465,6 +575,14 @@ Fixed an issue for parameter **AllowFallback**.
 
 Added validation for parameter **Schedule** to avoid duplicated value with existing assignment.
 
+### New-CMTaskSequenceMedia
+
+For more information, see [New-CMTaskSequenceMedia](/powershell/module/configurationmanager/New-CMTaskSequenceMedia).
+
+**Non-breaking changes**
+
+Changed timeout in media creation from one day to three days.
+
 ### New-CMTSPartitionSetting
 
 For more information, see [New-CMTSPartitionSetting](/powershell/module/configurationmanager/New-CMTSPartitionSetting).
@@ -472,6 +590,44 @@ For more information, see [New-CMTSPartitionSetting](/powershell/module/configur
 **Bugs that were fixed**
 
 Fixed an issue for parameter **EnableQuickFormat**.
+
+### New-CMTSStepEnableBitLocker
+
+For more information, see [New-CMTSStepEnableBitLocker](/powershell/module/configurationmanager/New-CMTSStepEnableBitLocker).
+
+**Bugs that were fixed**
+
+Fixed an issue for user-specified encryption method.
+
+### New-CMTSStepOfflineEnableBitLocker
+
+For more information, see [New-CMTSStepOfflineEnableBitLocker](/powershell/module/configurationmanager/New-CMTSStepOfflineEnableBitLocker).
+
+**Bugs that were fixed**
+
+Fixed an issue for user-specified encryption method.
+
+### New-CMTSStepPreStartCheck
+
+For more information, see [New-CMTSStepPreStartCheck](/powershell/module/configurationmanager/New-CMTSStepPreStartCheck).
+
+**Bugs that were fixed**
+
+Fixed an issue for new check readiness step.
+
+Fixed an issue for parameter **OSLanguageId**.
+
+**Non-breaking changes**
+
+Add a new parameter for UEFI check, **CheckUefi**.
+
+### Remove-CMTaskSequenceGroup
+
+For more information, see [Remove-CMTaskSequenceGroup](/powershell/module/configurationmanager/Remove-CMTaskSequenceGroup).
+
+**Bugs that were fixed**
+
+Fixed a policy size issue when you use multiple PowerShell steps that contain large scripts.
 
 ### Set-CM*PhasedDeployment
 
@@ -484,6 +640,22 @@ For more information, see the following articles:
 **Bugs that were fixed**
 
 Fixed an issue for parameter **WhatIf**.
+
+### Set-CMBoundary
+
+For more information, see [Set-CMBoundary](/powershell/module/configurationmanager/Set-CMBoundary).
+
+**Non-breaking changes**
+
+Added `VPN` option in **BoundaryType**.
+
+### Set-CMClientSettingComputerRestart
+
+For more information, see [Set-CMClientSettingComputerRestart](/powershell/module/configurationmanager/Set-CMClientSettingComputerRestart).
+
+**Non-breaking changes**
+
+Added a new parameter **NoRebootEnforcement**.
 
 ### Set-CMClientSettingSoftwareUpdate
 
@@ -669,6 +841,36 @@ $ReferenceDeployment | Set-CMTaskSequenceDeployment -AddSchedule $schedule1, $sc
 $ReferenceDeployment | Set-CMTaskSequenceDeployment -AddScheduleEvent LogOn, LogOff
 ```
 
+### Set-CMTSStep*
+
+**Bugs that were fixed**
+
+Fixed a policy size issue when you use multiple PowerShell steps that contain large scripts.
+
+### Set-CMTSStepEnableBitLocker
+
+For more information, see [Set-CMTSStepEnableBitLocker](/powershell/module/configurationmanager/Set-CMTSStepEnableBitLocker).
+
+**Bugs that were fixed**
+
+Fixed an issue for user-specified encryption method.
+
+### Set-CMTSStepOfflineEnableBitLocker
+
+For more information, see [Set-CMTSStepOfflineEnableBitLocker](/powershell/module/configurationmanager/Set-CMTSStepOfflineEnableBitLocker).
+
+**Bugs that were fixed**
+
+Fixed an issue for user-specified encryption method.
+
+### Set-CMTSStepPreStartCheck
+
+For more information, see [Set-CMTSStepPreStartCheck](/powershell/module/configurationmanager/Set-CMTSStepPreStartCheck).
+
+**Non-breaking changes**
+
+Added a new parameter for UEFI check:, **CheckUefi**.
+
 ### Set-CMWindowsAppxDeploymentType
 
 For more information, see [Set-CMWindowsAppxDeploymentType](/powershell/module/configurationmanager/Set-CMWindowsAppxDeploymentType).
@@ -677,6 +879,14 @@ For more information, see [Set-CMWindowsAppxDeploymentType](/powershell/module/c
 
 Added function to support MSIX.
 
+### Start-CMCloudManagementGateway
+
+For more information, see [Start-CMCloudManagementGateway](/powershell/module/configurationmanager/Start-CMCloudManagementGateway).
+
+**Bugs that were fixed**
+
+Corrected the validation for CMG status.
+
 ### Start-CMContentDistribution
 
 For more information, see [Start-CMContentDistribution](/powershell/module/configurationmanager/Start-CMContentDistribution).
@@ -684,6 +894,14 @@ For more information, see [Start-CMContentDistribution](/powershell/module/confi
 **Non-breaking changes**
 
 Added aliases for parameter **DeploymentPackageId** and **DeploymentPackageName** for better understanding.
+
+### Stop-CMCloudManagementGateway
+
+For more information, see [Stop-CMCloudManagementGateway](/powershell/module/configurationmanager/Stop-CMCloudManagementGateway).
+
+**Bugs that were fixed**
+
+Corrected the validation for CMG status.
 
 ## How to provide feedback or report issues
 

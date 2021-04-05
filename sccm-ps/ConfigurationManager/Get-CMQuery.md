@@ -1,6 +1,6 @@
----
+﻿---
 description: Get a Configuration Manager query.
-external help file: AdminUI.PS.SystemStatus.dll-Help.xml
+external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 12/29/2020
 schema: 2.0.0
@@ -129,8 +129,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### IResultObject[]#SMS_Query
 
 ### IResultObject#SMS_Query
-
-For more information on this return object and its properties, see [SMS_Query server WMI class](/mem/configmgr/develop/reference/core/clients/manage/sms_query-server-wmi-class).
 
 ## NOTES
 

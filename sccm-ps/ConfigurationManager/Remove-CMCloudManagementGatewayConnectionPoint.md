@@ -1,6 +1,6 @@
 ---
 description: Remove a cloud management gateway connection point.
-external help file: AdminUI.PS.HS.dll-Help.xml
+external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 11/20/2020
 schema: 2.0.0
@@ -182,6 +182,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
 
 ## OUTPUTS
+
+###  
 
 ## NOTES
 

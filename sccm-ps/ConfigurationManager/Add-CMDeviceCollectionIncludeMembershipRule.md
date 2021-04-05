@@ -1,6 +1,6 @@
 ---
 description: Adds an Include Collections membership rule to a device collection.
-external help file: AdminUI.PS.Collections-help.xml
+external help file: AdminUI.PS-help.xml
 Module Name: ConfigurationManager
 ms.date: 04/29/2019
 schema: 2.0.0
@@ -73,9 +73,7 @@ The **Add-CMDeviceCollectionIncludeMembershipRule** cmdlet adds an Include Colle
 An Include Collections membership rule includes members of other device collections in the device collection where the rule is applied.
 
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
@@ -204,8 +202,8 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Returns the current working object.
-By default, this cmdlet does not generate any output.
+
+Add this parameter to return an object that represents the item with which you're working. By default, this cmdlet may not generate any output.
 
 ```yaml
 Type: SwitchParameter
@@ -220,8 +218,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+
+Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
 
 ```yaml
 Type: SwitchParameter

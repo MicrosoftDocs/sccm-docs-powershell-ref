@@ -1,6 +1,6 @@
 ---
 description: Configure a boundary group relationship.
-external help file: AdminUI.PS.HS.dll-Help.xml
+external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 12/28/2020
 schema: 2.0.0
@@ -295,8 +295,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### IResultObject#SMS_BoundaryGroupRelationships
-
-For more information on this return object and its properties, see [SMS_BoundaryGroupRelationships server WMI class](/mem/configmgr/develop/reference/core/servers/configure/sms-boundarygrouprelationships-server-wmi-class).
 
 ## NOTES
 

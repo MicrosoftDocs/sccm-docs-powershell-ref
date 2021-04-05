@@ -1,5 +1,5 @@
 ---
-external help file: AdminUI.PS.Osd-help.xml
+external help file: AdminUI.PS-help.xml
 Module Name: ConfigurationManager
 online version:
 schema: 2.0.0
@@ -59,7 +59,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-{{ Fill Force Description }}
+Run the command without asking for confirmation.
 
 ```yaml
 Type: SwitchParameter
@@ -134,8 +134,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+
+Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
 
 ```yaml
 Type: SwitchParameter

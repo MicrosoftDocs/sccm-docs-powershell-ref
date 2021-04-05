@@ -1,6 +1,6 @@
 ---
 description: Configure distribution point groups
-external help file: AdminUI.PS.Content.dll-Help.xml
+external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 08/26/2020
 schema: 2.0.0

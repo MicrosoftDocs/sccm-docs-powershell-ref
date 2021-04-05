@@ -1,6 +1,7 @@
 ---
-external help file: AdminUI.PS.Osd.dll-Help.xml
+external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
+ms.date: 03/25/2021
 online version:
 schema: 2.0.0
 ---
@@ -9,7 +10,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-Use this cmdlet to remove duplicate hardware identifiers by MAC address.
+Remove duplicate hardware identifiers by MAC address.
 
 ## SYNTAX
 
@@ -27,7 +28,10 @@ Remove-CMDuplicateHardwareIdMacAddress -MacAddress <String> [-DisableWildcardHan
 
 ## DESCRIPTION
 
-Starting in version 1910, use this cmdlet to remove duplicate hardware identifiers by MAC address.
+Use this cmdlet to remove duplicate hardware identifiers by MAC address. Configuration Manager ignores these MAC addresses for PXE boot and client registration. For more information, see [Manage duplicate hardware identifiers](/mem/configmgr/core/clients/manage/manage-clients#manage-duplicate-hardware-identifiers).
+
+>[!NOTE]
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
@@ -41,9 +45,10 @@ Remove-CMDuplicateHardwareIdMacAddress -MacAddress '01:02:03:04:05:E0'
 
 ### Example 2: Remove an ID for an input object
 
-This example removes a hardware identifier for an input object `$myMacAddress`. This variable stores the identifier as `IResultObject#SMS_CommonMacAddresses`.
+This example removes a hardware identifier for an input object **myMacAddress**.
 
 ```powershell
+$myMacAddress ='01:02:03:04:05:E0'
 Remove-CMDuplicateHardwareIdMacAddress -InputObject $myMacAddress
 ```
 
@@ -99,7 +104,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 
-Specify an object for the hardware identifier to remove from the site. This object is of type `IResultObject#SMS_CommonMacAddresses`.
+Specify an object for the hardware identifier to remove from the site. This object is of type `IResultObject#SMS_CommonMacAddresses`. It also accepts string values.
 
 ```yaml
 Type: IResultObject
@@ -115,7 +120,7 @@ Accept wildcard characters: False
 
 ### -MacAddress
 
-Specify a network MAC address of the hardware identifier to remove from the site. It's a colon-delimited (`:`) string value.
+Specify a network MAC address of the hardware identifier to remove from the site. It's a colon-delimited (`:`) string value, for example `'01:02:03:04:05:E0'`.
 
 ```yaml
 Type: String
@@ -158,3 +163,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-CMDuplicateHardwareIdMacAddress](Get-CMDuplicateHardwareIdMacAddress.md)
+[New-CMDuplicateHardwareIdMacAddress](New-CMDuplicateHardwareIdMacAddress.md)
+
+[Remove-CMDuplicateHardwareIdGuid](Remove-CMDuplicateHardwareIdGuid.md)
+
+[Manage duplicate hardware identifiers](/mem/configmgr/core/clients/manage/manage-clients#manage-duplicate-hardware-identifiers)

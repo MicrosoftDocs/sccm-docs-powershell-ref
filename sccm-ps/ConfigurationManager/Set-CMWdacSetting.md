@@ -1,5 +1,5 @@
 ---
-external help file: AdminUI.PS.EP.dll-Help.xml
+external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 08/20/2020
 online version:
@@ -224,11 +224,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.ConfigurationManagement.Cmdlets.BitLockerManagement.Commands.CMWdacSettings
+### Microsoft.ConfigurationManagement.PowerShell.Cmdlets.EP.WDAC.CMWdacSettings
 
 ## OUTPUTS
 
-### Microsoft.ConfigurationManagement.Cmdlets.BitLockerManagement.Commands.CMWdacSettings
+### Microsoft.ConfigurationManagement.PowerShell.Cmdlets.EP.WDAC.CMWdacSettings
 
 ## NOTES
 

@@ -1,6 +1,6 @@
 ---
 description: Modifies settings for a state migration point in Configuration Manager.
-external help file: AdminUI.PS.HS.dll-Help.xml
+external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 05/07/2019
 schema: 2.0.0
@@ -40,9 +40,7 @@ Use this cmdlet to modify the boundary groups and storage folders associated wit
 You can specify which migration point to modify by using the site system server name and the site code, or use the [Get-CMStateMigrationPoint](Get-CMStateMigrationPoint.md) cmdlet.
 
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
@@ -165,7 +163,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
+
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -196,7 +195,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
+
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -227,8 +227,8 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Returns the current working object.
-By default, this cmdlet does not generate any output.
+
+Add this parameter to return an object that represents the item with which you're working. By default, this cmdlet may not generate any output.
 
 ```yaml
 Type: SwitchParameter
@@ -341,8 +341,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+
+Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
 
 ```yaml
 Type: SwitchParameter

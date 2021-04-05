@@ -1,6 +1,6 @@
 ---
 description: Create a SEDO lock on an object.
-external help file: AdminUI.PS.Common.dll-Help.xml
+external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 01/05/2021
 schema: 2.0.0
@@ -138,7 +138,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
-
 ## NOTES
 
 ## RELATED LINKS

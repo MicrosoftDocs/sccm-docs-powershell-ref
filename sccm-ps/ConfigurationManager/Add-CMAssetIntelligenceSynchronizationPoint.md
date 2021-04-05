@@ -1,6 +1,6 @@
 ---
 description: Installs an Asset Intelligence synchronization point.
-external help file: AdminUI.PS.HS.dll-Help.xml
+external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 04/27/2019
 schema: 2.0.0
@@ -35,9 +35,7 @@ Configuration Manager uses the Asset Intelligence synchronization point site sys
 You can install the Asset Intelligence synchronization point only on a site system located at the top-level site of the Configuration Manager hierarchy.
 
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
@@ -93,6 +91,9 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
+
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -106,6 +107,9 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
+
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -167,8 +171,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+
+Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
 
 ```yaml
 Type: SwitchParameter

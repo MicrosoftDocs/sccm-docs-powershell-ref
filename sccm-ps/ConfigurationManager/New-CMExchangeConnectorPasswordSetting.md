@@ -1,6 +1,6 @@
----
+﻿---
 description: Add new password settings to a Exchange Server connector in Configuration Manager.
-external help file: AdminUI.PS.HS.dll-Help.xml
+external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 07/30/2020
 schema: 2.0.0
@@ -225,7 +225,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.ConfigurationManagement.Cmdlets.HS.Commands.ExchangeConnectorPasswordSetting
+### Microsoft.ConfigurationManagement.PowerShell.Cmdlets.HS.ExchangeConnectorPasswordSetting
 
 ## NOTES
 

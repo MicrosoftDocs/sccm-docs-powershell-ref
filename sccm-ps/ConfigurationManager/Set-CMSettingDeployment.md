@@ -1,5 +1,5 @@
 ﻿---
-external help file: AdminUI.PS.Deployments.dll-Help.xml
+external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 08/20/2020
 online version:
@@ -145,11 +145,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.ConfigurationManagement.Cmdlets.Deployments.Commands.SettingsDeployment
+### Microsoft.ConfigurationManagement.PowerShell.Cmdlets.Deployments.SettingsDeployment.SettingsDeployment
 
 ## OUTPUTS
 
-### Microsoft.ConfigurationManagement.Cmdlets.Deployments.Commands.SettingsDeployment
+### Microsoft.ConfigurationManagement.PowerShell.Cmdlets.Deployments.SettingsDeployment.SettingsDeployment
 
 ## NOTES
 

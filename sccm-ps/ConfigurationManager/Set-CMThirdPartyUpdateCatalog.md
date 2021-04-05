@@ -1,6 +1,7 @@
 ---
-external help file: AdminUI.PS.Sum.dll-Help.xml
+external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
+ms.date: 03/24/2021
 online version:
 schema: 2.0.0
 ---
@@ -9,7 +10,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-Use this cmdlet to modify a third-party updates catalog.
+Modify a third-party updates catalog.
 
 ## SYNTAX
 
@@ -17,7 +18,8 @@ Use this cmdlet to modify a third-party updates catalog.
 ```
 Set-CMThirdPartyUpdateCatalog [-Description <String>] [-Force] [[-Name] <String>] [-NewName <String>]
  [-PassThru] [-PublisherName <String>] [-Schedule <IResultObject>] [-Subscribe] [-SupportContact <String>]
- [-SupportUrl <Uri>] [-SyncNow] [-Unsubscribe] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+ [-SupportUrl <Uri>] [-SyncNow] [-Unsubscribe] [-CategoryNamePublishOption <Hashtable>]
+ [-CategoryIdPublishOption <Hashtable>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
  [-Confirm] [<CommonParameters>]
 ```
 
@@ -25,7 +27,8 @@ Set-CMThirdPartyUpdateCatalog [-Description <String>] [-Force] [[-Name] <String>
 ```
 Set-CMThirdPartyUpdateCatalog [-Description <String>] [-Force] [-Id] <String> [-NewName <String>] [-PassThru]
  [-PublisherName <String>] [-Schedule <IResultObject>] [-Subscribe] [-SupportContact <String>]
- [-SupportUrl <Uri>] [-SyncNow] [-Unsubscribe] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+ [-SupportUrl <Uri>] [-SyncNow] [-Unsubscribe] [-CategoryNamePublishOption <Hashtable>]
+ [-CategoryIdPublishOption <Hashtable>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
  [-Confirm] [<CommonParameters>]
 ```
 
@@ -33,13 +36,17 @@ Set-CMThirdPartyUpdateCatalog [-Description <String>] [-Force] [-Id] <String> [-
 ```
 Set-CMThirdPartyUpdateCatalog [-Description <String>] [-Force] [-InputObject] <IResultObject>
  [-NewName <String>] [-PassThru] [-PublisherName <String>] [-Schedule <IResultObject>] [-Subscribe]
- [-SupportContact <String>] [-SupportUrl <Uri>] [-SyncNow] [-Unsubscribe] [-DisableWildcardHandling]
+ [-SupportContact <String>] [-SupportUrl <Uri>] [-SyncNow] [-Unsubscribe]
+ [-CategoryNamePublishOption <Hashtable>] [-CategoryIdPublishOption <Hashtable>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-Starting in version 1910, use this cmdlet to modify a third-party updates catalog.
+Use this cmdlet to modify a third-party updates catalog. For more information, see [Enable third-party updates](/mem/configmgr/sum/deploy-use/third-party-software-updates).
+
+> [!NOTE]
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
@@ -67,7 +74,56 @@ This example gets a third-party update catalog piped on the command line, and th
 $catalog | Set-CMThirdPartyUpdateCatalog -SupportContact "Contoso hardware support" -SupportUrl "https://hardware.contoso.com"
 ```
 
+### Example 4: Set the category publishing options for a v3 catalog
+
+This example shows the syntax to create the hashtables to set the categories when you subscribe to a v3 catalog.
+
+```powershell
+$id = "5768207d-6c40-465b-ad65-50501661368f"
+$option = [Microsoft.ConfigurationManagement.Cmdlets.Sum.Commands.PublishOptionType]::MetadataOnly
+$idOptionPair = @{$id = $option}
+Set-CMThirdPartyUpdateCatalog -CatalogName 'pmp' -CategoryIdPublishOption $idOptionPair -Subscribe -Force
+
+$name = "2BrightSparks"
+$name1 = "8x8, Inc."
+$option = [Microsoft.ConfigurationManagement.Cmdlets.Sum.Commands.PublishOptionType]::MetadataOnly
+$nameOptionPair = @{$name = $option; $name1 = $option}
+Set-CMThirdPartyUpdateCatalog -CatalogName 'pmp' -CategoryNamePublishOption $nameOptionPair -Subscribe -Force
+```
+
 ## PARAMETERS
+
+### -CategoryIdPublishOption
+
+Set the category ID publish option when you subscribe to a v3 catalog.
+
+```yaml
+Type: Hashtable
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CategoryNamePublishOption
+
+Set the category name publish option when you subscribe to a v3 catalog.
+
+```yaml
+Type: Hashtable
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -Confirm
 
@@ -119,6 +175,8 @@ Accept wildcard characters: False
 
 ### -Force
 
+Run the command without asking for confirmation.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -149,7 +207,7 @@ Accept wildcard characters: False
 
 ### -Id
 
-Specify the ID of the the third-party updates catalog to change.
+Specify the ID of the third-party updates catalog to change.
 
 ```yaml
 Type: String
@@ -165,7 +223,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 
-Specify an object for the third-party updates catalog to change.
+Specify an object for the third-party updates catalog to change. To get this object, use the [Get-CMThirdPartyUpdateCatalog](Get-CMThirdPartyUpdateCatalog.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -212,6 +270,8 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
+
+Add this parameter to return an object that represents the item with which you're working. By default, this cmdlet may not generate any output.
 
 ```yaml
 Type: SwitchParameter
@@ -366,4 +426,17 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## NOTES
 
+This cmdlet returns an object of the **SMS_ISVCatalogs** WMI class.
+
 ## RELATED LINKS
+
+[Get-CMThirdPartyUpdateCatalog](Get-CMThirdPartyUpdateCatalog.md)
+[New-CMThirdPartyUpdateCatalog](New-CMThirdPartyUpdateCatalog.md)
+[Remove-CMThirdPartyUpdateCatalog](Remove-CMThirdPartyUpdateCatalog.md)
+
+[Publish-CMThirdPartySoftwareUpdateContent](Publish-CMThirdPartySoftwareUpdateContent.md)
+
+[Get-CMThirdPartyUpdateCategory](Get-CMThirdPartyUpdateCategory.md)
+[Set-CMThirdPartyUpdateCategory](Set-CMThirdPartyUpdateCategory.md)
+
+[Enable third-party software updates](/mem/configmgr/sum/deploy-use/third-party-software-updates)

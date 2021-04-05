@@ -1,6 +1,6 @@
 ﻿---
 description: Get a Configuration Manager device.
-external help file: AdminUI.PS.Collections.dll-Help.xml
+external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 10/01/2020
 schema: 2.0.0

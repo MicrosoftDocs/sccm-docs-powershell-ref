@@ -1,6 +1,6 @@
----
+﻿---
 description: Gets a collection exclude membership rule.
-external help file: AdminUI.PS.Collections-help.xml
+external help file: AdminUI.PS-help.xml
 Module Name: ConfigurationManager
 ms.date: 05/02/2019
 schema: 2.0.0
@@ -70,9 +70,7 @@ Get-CMCollectionExcludeMembershipRule -InputObject <IResultObject> [-ExcludeColl
 ## DESCRIPTION
 
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 

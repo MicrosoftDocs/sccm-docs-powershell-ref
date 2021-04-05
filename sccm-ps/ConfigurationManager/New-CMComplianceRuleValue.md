@@ -1,6 +1,6 @@
 ---
 description: Create a compliance rule value.
-external help file: AdminUI.PS.Dcm.dll-Help.xml
+external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 07/31/2020
 schema: 2.0.0

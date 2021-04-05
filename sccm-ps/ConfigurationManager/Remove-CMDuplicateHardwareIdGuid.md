@@ -1,6 +1,7 @@
 ---
-external help file: AdminUI.PS.Osd.dll-Help.xml
+external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
+ms.date: 03/25/2021
 online version:
 schema: 2.0.0
 ---
@@ -9,7 +10,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-Use this cmdlet to remove duplicate hardware identifiers by GUID.
+Remove duplicate hardware identifiers by GUID.
 
 ## SYNTAX
 
@@ -27,7 +28,10 @@ Remove-CMDuplicateHardwareIdGuid -Id <Guid> [-DisableWildcardHandling] [-ForceWi
 
 ## DESCRIPTION
 
-Starting in version 1910, use this cmdlet to remove duplicate hardware identifiers by GUID.
+Use this cmdlet to remove duplicate hardware identifiers by GUID. Configuration Manager ignores these GUIDs for PXE boot and client registration. For more information, see [Manage duplicate hardware identifiers](/mem/configmgr/core/clients/manage/manage-clients#manage-duplicate-hardware-identifiers).
+
+>[!NOTE]
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
@@ -41,9 +45,11 @@ Remove-CMDuplicateHardwareIdGuid -Id 24D0F753-B2E2-4D9C-B07C-099C4FC1EF3C
 
 ### Example 2: Remove an ID for an input object
 
-This example removes a hardware identifier for an input object `$myGuid`. This variable stores the identifier as `IResultObject#SMS_CommonSmbiosGuids`.
+This example removes a hardware identifier for an input object **myGuid**.
 
 ```powershell
+$myGuid = [guid]"24D0F753-B2E2-4D9C-B07C-099C4FC1EF3C"
+
 Remove-CMDuplicateHardwareIdGuid -InputObject $myGuid
 ```
 
@@ -99,7 +105,7 @@ Accept wildcard characters: False
 
 ### -Id
 
-Specify the GUID of the hardware identifier to remove from the site.
+Specify the GUID of the hardware identifier to remove from the site. This value is a standard guide, for example `24D0F753-B2E2-4D9C-B07C-099C4FC1EF3C`.
 
 ```yaml
 Type: Guid
@@ -115,7 +121,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 
-Specify a GUID object for the hardware identifier to remove from the site. This object is of type `IResultObject#SMS_CommonSmbiosGuids`.
+Specify a GUID object for the hardware identifier to remove from the site. This object is of type `IResultObject#SMS_CommonSmbiosGuids`. It also accepts string and GUID type values.
 
 ```yaml
 Type: IResultObject
@@ -158,3 +164,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-CMDuplicateHardwareIdGuid](Get-CMDuplicateHardwareIdGuid.md)
+[New-CMDuplicateHardwareIdGuid](New-CMDuplicateHardwareIdGuid.md)
+
+[Remove-CMDuplicateHardwareIdMacAddress](Remove-CMDuplicateHardwareIdMacAddress.md)
+
+[Manage duplicate hardware identifiers](/mem/configmgr/core/clients/manage/manage-clients#manage-duplicate-hardware-identifiers)

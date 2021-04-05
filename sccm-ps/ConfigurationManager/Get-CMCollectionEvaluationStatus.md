@@ -1,5 +1,5 @@
----
-external help file: AdminUI.PS.Collections.dll-Help.xml
+﻿---
+external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 12/21/2020
 online version:
@@ -185,13 +185,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### IResultObject#SMS_CollectionEvaluationFull
 
-For more information on this return object and its properties, see [SMS_CollectionEvaluationFull server WMI class](/mem/configmgr/develop/reference/core/clients/collections/sms_collectionevaluationfull-server-wmi-class).
-
 ### IResultObject[]#SMS_CollectionEvaluationIncremental
 
 ### IResultObject#SMS_CollectionEvaluationIncremental
-
-For more information on this return object and its properties, see [SMS_CollectionEvaluationIncremental server WMI class](/mem/configmgr/develop/reference/core/clients/collections/sms_collectionevaluationincremental-server-wmi-class).
 
 ## NOTES
 

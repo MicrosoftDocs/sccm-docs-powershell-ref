@@ -1,6 +1,6 @@
 ---
 description: Change settings for a Configuration Manager maintenance task.
-external help file: AdminUI.PS.HS.dll-Help.xml
+external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 11/20/2020
 schema: 2.0.0

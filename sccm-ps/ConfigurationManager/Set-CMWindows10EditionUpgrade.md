@@ -1,5 +1,5 @@
 ---
-external help file: AdminUI.PS.Dcm.dll-Help.xml
+external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 12/03/2020
 online version:
@@ -220,8 +220,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### IResultObject#SMS_ConfigurationPolicy
-
-For more information on this return object and its properties, see [SMS_ConfigurationPolicy server WMI class](/mem/configmgr/develop/reference/compliance/sms_configurationpolicy-server-wmi-class).
 
 ## NOTES
 

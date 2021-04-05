@@ -1,8 +1,8 @@
 ---
-description: Imports a driver package.
-external help file: AdminUI.PS.Osd.dll-Help.xml
+description: Import a driver package.
+external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/05/2019
+ms.date: 03/24/2021
 schema: 2.0.0
 title: Import-CMDriverPackage
 ---
@@ -10,7 +10,8 @@ title: Import-CMDriverPackage
 # Import-CMDriverPackage
 
 ## SYNOPSIS
-Imports a driver package.
+
+Import a driver package.
 
 ## SYNTAX
 
@@ -21,13 +22,16 @@ Import-CMDriverPackage [-ImportActionType <ImportActionType>] [-ImportActionType
 ```
 
 ## DESCRIPTION
-The **Import-CMDriverPackage** cmdlet imports a driver packages to Configuration Manager.
-You can use the [Export-CMDriverPackage](Export-CMDriverPackage.md) cmdlet to export a driver package to a .zip file.
+
+Use this cmdlet to import driver packages to the driver catalog. You can use the [Export-CMDriverPackage](Export-CMDriverPackage.md) cmdlet to export a driver package to a .zip file.
+
+> [!IMPORTANT]
+> This cmdlet doesn't support [PowerShell 7](/powershell/sccm/overview#support-for-powershell-version-7).<!-- 6337796 --> It requires the .NET Framework instead of .NET Core that's used with PowerShell version 7.
+>
+> Starting in version 2103, if you try to use this cmdlet in a PowerShell version 7 session, it fails with the following error: `This cmdlet only supports the ".NET Framework" runtime.`
 
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
@@ -66,7 +70,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
+
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -81,7 +86,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
+
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -96,6 +102,9 @@ Accept wildcard characters: False
 ```
 
 ### -ImportActionType
+
+If this package already exists in the site, use this parameter how to handle it. By default, Configuration Manager ignores duplicates.
+
 ```yaml
 Type: ImportActionType
 Parameter Sets: (All)
@@ -110,7 +119,8 @@ Accept wildcard characters: False
 ```
 
 ### -ImportActionTypeSpec
-Starting in version 1906, use this parameter to specify import action type for different classes of object.
+
+Use this parameter to specify import action type for different classes of object.
 
 ```yaml
 Type: Hashtable
@@ -125,7 +135,8 @@ Accept wildcard characters: False
 ```
 
 ### -ImportFilePath
-Specifies the Universal Naming Convention (UNC) path of the import file.
+
+Specify the network path for the exported package. The cmdlet imports all packages in the file. The path needs to specify the file, including the `.zip` extension.
 
 ```yaml
 Type: String
@@ -140,8 +151,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
 
 ```yaml
 Type: SwitchParameter
@@ -178,5 +188,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-CMDriverPackage](Remove-CMDriverPackage.md)
 
 [Set-CMDriverPackage](Set-CMDriverPackage.md)
-
-

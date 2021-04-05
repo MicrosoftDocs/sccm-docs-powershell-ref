@@ -1,6 +1,6 @@
 ﻿---
 description: Get component status messages in Configuration Manager.
-external help file: AdminUI.PS.SystemStatus.dll-Help.xml
+external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 08/25/2020
 schema: 2.0.0

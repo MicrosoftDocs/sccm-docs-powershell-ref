@@ -1,6 +1,6 @@
 ---
 description: Create bootable media.
-external help file: AdminUI.PS.Osd.dll-Help.xml
+external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 11/20/2020
 schema: 2.0.0
@@ -521,7 +521,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
-
 ## NOTES
 
 ## RELATED LINKS

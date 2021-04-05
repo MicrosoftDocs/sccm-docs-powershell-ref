@@ -1,6 +1,6 @@
 ---
 description: Validate content on a distribution point.
-external help file: AdminUI.PS.Sum.dll-Help.xml
+external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 12/29/2020
 schema: 2.0.0
@@ -609,7 +609,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
-
 ## NOTES
 
 ## RELATED LINKS

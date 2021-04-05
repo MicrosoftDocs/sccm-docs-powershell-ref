@@ -1,5 +1,5 @@
 ---
-external help file: AdminUI.PS.Osd.dll-Help.xml
+external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 07/31/2020
 online version:
@@ -739,7 +739,7 @@ Specify an operator to use with a task sequence variable condition.
 Type: VariableOperatorType
 Parameter Sets: ByIdSetConditionVariable, ByNameSetConditionVariable, ByValueSetConditionVariable
 Aliases:
-Accepted values: Exists, NotExists, Equals, NotEquals, Greater, GreaterEqual, Less, LessEqual, Like
+Accepted values: Exists, NotExists, Equals, NotEquals, Greater, GreaterEqual, Less, LessEqual, Like, NotLike
 
 Required: False
 Position: Named

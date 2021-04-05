@@ -1,6 +1,6 @@
----
+﻿---
 description: Get a software update.
-external help file: AdminUI.PS.Sum.dll-Help.xml
+external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 11/20/2020
 schema: 2.0.0
@@ -549,8 +549,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### IResultObject[]#SMS_SoftwareUpdate
 
 ### IResultObject#SMS_SoftwareUpdate
-
-For more information on this return object and its properties, see [SMS_SoftwareUpdate server WMI class](/mem/configmgr/develop/reference/sum/sms_softwareupdate-server-wmi-class).
 
 ## NOTES
 

@@ -1,6 +1,6 @@
 ---
 description: Create a baseline deployment
-external help file: AdminUI.PS.Deployments.dll-Help.xml
+external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 08/24/2020
 schema: 2.0.0
