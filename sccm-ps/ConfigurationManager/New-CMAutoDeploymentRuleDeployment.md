@@ -1,6 +1,6 @@
 ---
 description: Create a deployment for an automatic deployment rule.
-external help file: AdminUI.PS.Sum.dll-Help.xml
+external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 08/06/2020
 schema: 2.0.0

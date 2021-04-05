@@ -1,6 +1,6 @@
-﻿---
+---
 description: Gets a package deployment from Configuration Manager.
-external help file: AdminUI.PS.Deployments.dll-Help.xml
+external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 11/30/2018
 schema: 2.0.0
@@ -48,9 +48,7 @@ Get-CMPackageDeployment [-PackageId <String>] [-ProgramName <String>] [-Summary]
 The **Get-CMPackageDeployment** cmdlet starts deployment of a specified software package to computers that belong to a Configuration Manager collection.
 
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
@@ -130,7 +128,7 @@ Accept wildcard characters: False
 
 ### -DisableWildcardHandling
 
-DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -146,7 +144,7 @@ Accept wildcard characters: False
 
 ### -ForceWildcardHandling
 
-ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -226,6 +224,8 @@ Accept wildcard characters: False
 
 ### -Summary
 
+Add this parameter to return the [SMS_DeploymentSummary WMI class](/mem/configmgr/develop/reference/apps/sms_deploymentsummary-server-wmi-class) object.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -256,6 +256,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### IResultObject#SMS_Advertisement
 
 ## NOTES
+
+For more information on these return objects and their properties, see the following articles:
+
+- [SMS_DeploymentSummary server WMI class](/mem/configmgr/develop/reference/apps/sms_deploymentsummary-server-wmi-class)
+- [SMS_Advertisement server WMI class](/mem/configmgr/develop/reference/core/servers/configure/sms_advertisement-server-wmi-class)
 
 ## RELATED LINKS
 

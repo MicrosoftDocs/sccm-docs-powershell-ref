@@ -1,6 +1,6 @@
 ﻿---
 description: Create a detection method clause for an MSI product code.
-external help file: AdminUI.PS.Dcm.dll-Help.xml
+external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 05/05/2019
 schema: 2.0.0
@@ -109,6 +109,8 @@ Accept wildcard characters: False
 
 When you add the **Value** parameter, use **ExpressionOperator** with **PropertyType** and **ExpectedValue**. When you use these parameters, the MSI version must satisfy the rule to indicate the presence of this application. This **ExpressionOperator** parameter specifies the operator to compare the device's value with the expected value.
 
+Starting in version 2010, the parameter type changed from _RuleExpressionOperator_ to _WindowsInstallerRuleExpressionOperator_.
+
 ```yaml
 Type: WindowsInstallerRuleExpressionOperator
 Parameter Sets: Value
@@ -201,7 +203,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
-
 ## NOTES
 
 ## RELATED LINKS

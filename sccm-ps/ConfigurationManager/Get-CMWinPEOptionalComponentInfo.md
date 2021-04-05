@@ -1,8 +1,7 @@
 ﻿---
-description: Gets WinPE optional component information.
-external help file: AdminUI.PS.Osd.dll-Help.xml
+external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/05/2019
+ms.date: 04/01/2021
 schema: 2.0.0
 title: Get-CMWinPEOptionalComponentInfo
 ---
@@ -10,7 +9,8 @@ title: Get-CMWinPEOptionalComponentInfo
 # Get-CMWinPEOptionalComponentInfo
 
 ## SYNOPSIS
-Gets WinPE optional component information.
+
+Get a Windows PE optional component.
 
 ## SYNTAX
 
@@ -27,37 +27,31 @@ Get-CMWinPEOptionalComponentInfo -UniqueId <String> [-DisableWildcardHandling] [
 ```
 
 ## DESCRIPTION
-The **Get-CMWinPEOptionalComponentInfo** cmdlet gets Windows PE (Preinstallation Environment) optional component information.
+
+Use this cmdlet to get a Windows PE (WinPE) optional component. Use this object to add it to or remove it from a boot image with the [Set-CMBootImage](Set-CMBootImage.md) cmdlet. For more information, see [Manage boot images - Optional components](/mem/configmgr/osd/get-started/manage-boot-images#optional-components).
 
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
-### Example 1: Get WinPE optional component information by name, architecture, and language ID
-```
-PS ABC:\> Get-CMWinPEOptionalComponentInfo -Name "WinPE-WMI" -Architecture X64 -LanguageId 1033
-```
+### Example 1: Get optional components and add to a boot image
 
-This command gets the information for the Win PE optional component named WinPE-WMI for the x64 architecture and the language ID of 1033.
+This example gets the .NET and PowerShell optional components, and then adds them to a boot image.
 
-### Example 2: Get WinPE optional component information by unique ID
-```
-PS ABC:\> Get-CMWinPEOptionalComponentInfo -UniqueId 52
-```
+```powershell
+$netfxOC = Get-CMWinPEOptionalComponentInfo -Architecture 'x64' -Name 'WinPE-NetFX' -LanguageId 1033
+$pwshOC = Get-CMWinPEOptionalComponentInfo -Architecture 'x64' -Name 'WinPE-PowerShell' -LanguageId 1033
+$OCs = @($netfxOC, $pwshOC)
 
-This command gets the information for all WinPE optional components with the unique ID of 52.
+Set-CMBootImage -Id 'XYZ00556' -AddOptionalComponent $OCs
+```
 
 ## PARAMETERS
 
 ### -Architecture
-Specifies the architecture of a WinPE optional component.
-Valid values are:
 
-- X64
-- X86
+Specify the architecture of a WinPE optional component.
 
 ```yaml
 Type: String
@@ -73,7 +67,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
+
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -88,7 +83,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
+
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -103,8 +99,12 @@ Accept wildcard characters: False
 ```
 
 ### -LanguageId
-Specifies the language ID of the boot image.
-Provide a locale ID, such as 1033.
+
+Specify the _language ID_ for the optional component.
+
+This ID is the decimal equivalent of the Windows _language ID_. For example, `1033` is `0x0409` for **English (United States)**, and `2070` is `0x0816` for **Portuguese (Portugal)**. For more information, see [[MS-LCID]: Windows Language Code Identifier (LCID) Reference](/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c).
+
+Configuration Manager supports 22 languages. For more information, see [Client languages](/mem/configmgr/core/servers/deploy/install/language-packs#client-languages).
 
 ```yaml
 Type: UInt32
@@ -119,7 +119,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies the name of a WinPE optional component.
+
+Specify the name of the WinPE optional component to get.
 
 ```yaml
 Type: String
@@ -134,7 +135,8 @@ Accept wildcard characters: False
 ```
 
 ### -UniqueId
-Specifies the unique ID of a WinPE optional component.
+
+Specify the unique ID of the WinPE optional component to get.
 
 ```yaml
 Type: String
@@ -163,4 +165,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## NOTES
 
+For more information on this return object and its properties, see [SMS_WinPEOptionalComponentInfo server WMI class](/mem/configmgr/develop/reference/osd/sms_winpeoptionalcomponentinfo-server-wmi-class).
+
 ## RELATED LINKS
+
+[Set-CMBootImage](Set-CMBootImage.md)
+
+[Manage boot images - Optional components](/mem/configmgr/osd/get-started/manage-boot-images#optional-components)

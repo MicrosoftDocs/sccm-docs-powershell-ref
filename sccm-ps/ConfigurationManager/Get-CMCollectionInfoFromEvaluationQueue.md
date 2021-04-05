@@ -1,5 +1,5 @@
----
-external help file: AdminUI.PS.Collections.dll-Help.xml
+﻿---
+external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 12/21/2020
 online version:
@@ -159,25 +159,17 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### IResultObject#SMS_CollectionInfoInFullEvaluationQueue
 
-For more information on this return object and its properties, see [SMS_CollectionInfoInFullEvaluationQueue server WMI class](/mem/configmgr/develop/reference/core/clients/collections/sms_collectioninfoinfullevaluationqueue-server-wmi-class).
-
 ### IResultObject[]#SMS_CollectionInfoInIncrementalEvaluationQueue
 
 ### IResultObject#SMS_CollectionInfoInIncrementalEvaluationQueue
-
-For more information on this return object and its properties, see [SMS_CollectionInfoInIncrementalEvaluationQueue server WMI class](/mem/configmgr/develop/reference/core/clients/collections/sms_collectioninfoinincrementalevaluationqueue-server-wmi-class).
 
 ### IResultObject[]#SMS_CollectionInfoInManualEvaluationQueue
 
 ### IResultObject#SMS_CollectionInfoInManualEvaluationQueue
 
-For more information on this return object and its properties, see [SMS_CollectionInfoInManualEvaluationQueue server WMI class](/mem/configmgr/develop/reference/core/clients/collections/sms_collectioninfoinmanualevaluationqueue-server-wmi-class).
-
 ### IResultObject[]#SMS_CollectionInfoInNewEvaluationQueue
 
 ### IResultObject#SMS_CollectionInfoInNewEvaluationQueue
-
-For more information on this return object and its properties, see [SMS_CollectionInfoInNewEvaluationQueue server WMI class](/mem/configmgr/develop/reference/core/clients/collections/sms_collectioninfoinnewevaluationqueue-server-wmi-class).
 
 ## NOTES
 

@@ -1,6 +1,6 @@
----
+﻿---
 description: Gets one or more user collections in the Configuration Manager hierarchy.
-external help file: AdminUI.PS.Collections-help.xml
+external help file: AdminUI.PS-help.xml
 Module Name: ConfigurationManager
 ms.date: 05/02/2019
 schema: 2.0.0
@@ -44,9 +44,7 @@ The **Get-CMUserCollection** cmdlet retrieves collections that contain users in 
 For more information about collections, see [Introduction to Collections in Configuration Manager](/mem/configmgr/core/clients/manage/collections/introduction-to-collections).
 
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 

@@ -1,7 +1,7 @@
 ---
 title: Configuration Manager PowerShell cmdlets
 description: Manage your Configuration Manager hierarchy using Windows PowerShell. 
-ms.date: 12/21/2020
+ms.date: 03/24/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: overview
@@ -89,6 +89,11 @@ Connect to Configuration Manager from an existing Windows PowerShell session by 
 
 Starting in version 2010, to get the latest information for the Configuration Manager PowerShell module, use the [Update-Help](/powershell/module/microsoft.powershell.core/update-help) cmdlet. This content is the same as what's published on docs.microsoft.com for the [ConfigurationManager module](/powershell/module/configurationmanager/).
 
+> [!IMPORTANT]
+> Because of a change in how the updateable content is structured and published with the release of version 2103, don't use **Update-Help** on a version 2010 site. Update the site to version 2103, and then update the local help content.
+>
+> For more information, see [PowerShell version 2103 release notes](/powershell/sccm/2103-release-notes#known-issue-with-updateable-powershell-help).
+
 The computer on which you run this cmdlet needs internet access, specifically `pshelpprod.blob.core.windows.net`. Then run the following command:
 
 ```powershell
@@ -132,11 +137,25 @@ Starting in version 2010, the Configuration Manager PowerShell cmdlet library su
 > [!TIP]
 > PowerShell 7 runs as `pwsh.exe`. Earlier versions of PowerShell run as `powershell.exe`.
 
+### Cmdlets that don't support PowerShell version 7
+
+<!-- 6337796 -->
+The following cmdlets don't support PowerShell 7:
+
+- Import-CMPackage
+- Import-CMDriverPackage
+- Import-CMTaskSequence
+- Export-CMPackage
+- Export-CMDriverPackage
+- Export-CMTaskSequence
+
+They require the .NET Framework instead of .NET Core that's used with PowerShell version 7.
+
+Starting in version 2103, if you try to use these cmdlets in a PowerShell version 7 session, they fail with the following error: `This cmdlet only supports the ".NET Framework" runtime.`
+
 ### Known issues with PowerShell version 7
 
 - You can't launch PowerShell 7 directly from the Configuration Manager console. Manually start PowerShell 7, and then [import the Configuration Manager module](#import-the-configuration-manager-powershell-module).
-
-- Configuration Manager cmdlets with **Import-** and **Export-** verbs may not function as expected.
 
 - Current support is only for the Configuration Manager cmdlets. Other features of Configuration Manager that rely on PowerShell may not support version 7. For example, [Run Scripts](/mem/configmgr/apps/deploy-use/create-deploy-scripts), [CMPivot](/mem/configmgr/core/servers/manage/cmpivot), or the [Run PowerShell Script](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_RunPowerShellScript) task sequence step.
 

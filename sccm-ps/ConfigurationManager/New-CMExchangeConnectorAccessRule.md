@@ -1,6 +1,6 @@
 ﻿---
 description: Configure access settings for a mobile device that uses a Microsoft Exchange Server connector.
-external help file: AdminUI.PS.HS.dll-Help.xml
+external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 07/30/2020
 schema: 2.0.0
@@ -120,7 +120,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.ConfigurationManagement.Cmdlets.HS.Commands.ExchangeConnectorAccessRule
+### Microsoft.ConfigurationManagement.PowerShell.Cmdlets.HS.ExchangeConnectorAccessRule
 
 ## NOTES
 

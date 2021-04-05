@@ -1,7 +1,7 @@
 ---
-external help file: AdminUI.PS.Deployments.dll-Help.xml
+external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 12/03/2020
+ms.date: 03/25/2021
 online version:
 schema: 2.0.0
 ---
@@ -58,6 +58,9 @@ New-CMApplicationGroupDeployment [-DeadlineDateTime <DateTime>] [-DeployAction <
 Create a deployment for an application group. An app group contains multiple applications, and users see the group in Software Center as a single entity. For more information, see [Create application groups](/mem/configmgr/apps/deploy-use/create-app-groups).
 
 Before you can deploy an app group, you need to create it. Then you can deploy it to a user or device collection as a single deployment.
+
+> [!NOTE]
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
@@ -369,7 +372,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 
-Specify an object for the app group.
+Specify an object for the app group. To get this object, use the [Get-CMApplicationGroup](Get-CMApplicationGroup.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -549,6 +552,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## NOTES
 
+This cmdlet returns the SMS_ApplicationGroupAssignment WMI class object.
+
 ## RELATED LINKS
 
 [Get-CMApplicationGroupDeployment](Get-CMApplicationGroupDeployment.md)
@@ -556,5 +561,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-CMApplicationGroupDeployment](Remove-CMApplicationGroupDeployment.md)
 
 [Set-CMApplicationGroupDeployment](Set-CMApplicationGroupDeployment.md)
+
+[Get-CMApplicationGroup](Get-CMApplicationGroup.md)
 
 [Create application groups](/mem/configmgr/apps/deploy-use/create-app-groups)

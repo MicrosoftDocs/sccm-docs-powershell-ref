@@ -1,5 +1,5 @@
----
-external help file: AdminUI.PS.Deployments.dll-Help.xml
+﻿---
+external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 online version:
 schema: 2.0.0
@@ -140,7 +140,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.ConfigurationManagement.Cmdlets.Deployments.Commands.PhasedDeploymentInfo
+### Microsoft.ConfigurationManagement.PowerShell.Cmdlets.Deployments.PhasedDeploymentInfo
 
 ## NOTES
 

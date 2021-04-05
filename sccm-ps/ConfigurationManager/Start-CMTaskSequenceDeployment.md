@@ -1,6 +1,6 @@
 ---
 description: Start a task sequence deployment
-external help file: AdminUI.PS.Osd.dll-Help.xml
+external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 12/23/2020
 schema: 2.0.0
@@ -750,8 +750,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### IResultObject#SMS_Advertisement
-
-For more information on this return object and its properties, see [SMS_Advertisement server WMI class](/mem/configmgr/develop/reference/core/servers/configure/sms_advertisement-server-wmi-class).
 
 ## NOTES
 

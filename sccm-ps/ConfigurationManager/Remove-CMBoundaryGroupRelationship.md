@@ -1,6 +1,6 @@
 ---
 description: Remove a boundary group relationship.
-external help file: AdminUI.PS.HS.dll-Help.xml
+external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 12/28/2020
 schema: 2.0.0
@@ -222,6 +222,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
 
 ## OUTPUTS
+
+###  
 
 ## NOTES
 

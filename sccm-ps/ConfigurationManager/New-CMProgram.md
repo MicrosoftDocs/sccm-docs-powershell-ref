@@ -1,6 +1,6 @@
 ---
 description: Create a new program for a package.
-external help file: AdminUI.PS.AppModel.dll-Help.xml
+external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 11/20/2020
 schema: 2.0.0
@@ -509,8 +509,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### IResultObject#SMS_Program
-
-For more information on this return object and its properties, see [SMS_Program server WMI class](/mem/configmgr/develop/reference/core/servers/configure/sms_program-server-wmi-class).
 
 ## NOTES
 

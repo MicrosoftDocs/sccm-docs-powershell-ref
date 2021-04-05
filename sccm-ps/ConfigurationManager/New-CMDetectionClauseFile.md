@@ -1,6 +1,6 @@
 ﻿---
 description: Create a detection method clause for a file.
-external help file: AdminUI.PS.Dcm.dll-Help.xml
+external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 12/30/2020
 schema: 2.0.0
@@ -125,6 +125,8 @@ Accept wildcard characters: False
 ### -ExpressionOperator
 
 When you add the **Value** parameter, use **ExpressionOperator** with **PropertyType** and **ExpectedValue**. When you use these parameters, the file must satisfy the rule to indicate the presence of this application. This **ExpressionOperator** parameter specifies the operator to compare the file system value with the expected value.
+
+Starting in version 2010, the parameter type changed from _RuleExpressionOperator_ to _FileFolderRuleExpressionOperator_.
 
 ```yaml
 Type: FileFolderRuleExpressionOperator
@@ -254,7 +256,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
-
 ## NOTES
 
 ## RELATED LINKS

@@ -1,6 +1,6 @@
 ---
 description: Add a supersedence relationship to an application.
-external help file: AdminUI.PS.AppMan.dll-Help.xml
+external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 01/05/2021
 schema: 2.0.0

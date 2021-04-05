@@ -1,8 +1,8 @@
----
+﻿---
 description: Get a cloud management gateway.
-external help file: AdminUI.PS.HS.dll-Help.xml
+external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 11/20/2020
+ms.date: 03/26/2021
 schema: 2.0.0
 title: Get-CMCloudManagementGateway
 ---
@@ -130,5 +130,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Set-CMCloudManagementGateway](Set-CMCloudManagementGateway.md)
 [Start-CMCloudManagementGateway](Start-CMCloudManagementGateway.md)
 [Stop-CMCloudManagementGateway](Stop-CMCloudManagementGateway.md)
+
+[Sync-CMCloudManagementGateway](Sync-CMCloudManagementGateway.md)
 
 [CMG Overview](/mem/configmgr/core/clients/manage/cmg/overview)

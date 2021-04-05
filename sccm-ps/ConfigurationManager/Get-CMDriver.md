@@ -1,8 +1,8 @@
 ﻿---
-description: Gets a device driver.
-external help file: AdminUI.PS.Osd.dll-Help.xml
+description: Get a device driver.
+external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/02/2019
+ms.date: 03/24/2021
 schema: 2.0.0
 title: Get-CMDriver
 ---
@@ -10,58 +10,103 @@ title: Get-CMDriver
 # Get-CMDriver
 
 ## SYNOPSIS
-Gets a device driver.
+
+Get a device driver.
 
 ## SYNTAX
 
 ### SearchByName (Default)
 ```
-Get-CMDriver [-Name <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
+Get-CMDriver [-Fast] [-Name <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ### SearchByDriverPackageIdMandatory
 ```
-Get-CMDriver -DriverPackageId <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
+Get-CMDriver [-Fast] -DriverPackageId <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [<CommonParameters>]
 ```
 
 ### SearchByDriverPackageNameMandatory
 ```
-Get-CMDriver -DriverPackageName <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
+Get-CMDriver [-Fast] -DriverPackageName <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
  [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory
 ```
-Get-CMDriver -Id <Int32> [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
+Get-CMDriver [-Fast] -Id <Int32> [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ### SearchByDriverPackage
 ```
-Get-CMDriver -InputObject <IResultObject> [-DisableWildcardHandling] [-ForceWildcardHandling]
+Get-CMDriver [-Fast] -InputObject <IResultObject> [-DisableWildcardHandling] [-ForceWildcardHandling]
  [<CommonParameters>]
 ```
 
+### SearchByCategory
+```
+Get-CMDriver [-Fast] [-AdministrativeCategory <IResultObject[]>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [<CommonParameters>]
+```
+
 ## DESCRIPTION
-The **Get-CMDriver** cmdlet gets a device driver.
+
+Use this cmdlet to get a device driver. Configuration Manager provides a driver catalog that you can use to manage the Windows device drivers in your environment. For more information, see [Manage drivers in Configuration Manager](/mem/configmgr/osd/get-started/manage-drivers).
 
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
-### Example 1: Get a device driver
-```
-PS XYZ:\> Get-CMDriver -Name "Driver01"
+### Example 1: Get a device driver by name
+
+This command gets the driver named **Surface Serial Hub Driver**.
+
+```powershell
+Get-CMDriver -Name "Surface Serial Hub Driver"
 ```
 
-This command gets the driver named Driver01.
+### Example 2: Get specific information about drivers from a specific manufacturer
+
+This command gets all drivers whose name starts with **Surface** and only display three attributes.
+
+```powershell
+Get-CMDriver -Fast -Name "Surface*" | Select-Object LocalizedDisplayName,DriverVersion,DriverDate
+```
+
+### Example 3: Get all drivers for a specific category
+
+This command gets all drivers in the **Surface** driver category.
+
+```powershell
+$category = Get-CMCategory -Name "Surface"
+
+Get-CMDriver -Fast -AdministrativeCategory $category
+```
 
 ## PARAMETERS
 
+### -AdministrativeCategory
+
+Specify an array of driver category objects. You can assign a driver to a category for filtering purposes. For example, "Surface" or "Boot image".
+
+To get this object, use the [Get-CMCategory](Get-CMCategory.md) cmdlet.
+
+```yaml
+Type: IResultObject[]
+Parameter Sets: SearchByCategory
+Aliases: AdministrativeCategories
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -DisableWildcardHandling
-DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
+
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -76,7 +121,8 @@ Accept wildcard characters: False
 ```
 
 ### -DriverPackageId
-Specifies the ID of a driver package.
+
+Specify the ID of a driver package to get all drivers in it. This value is a standard package ID format, for example, `XYZ00204`.
 
 ```yaml
 Type: String
@@ -91,7 +137,8 @@ Accept wildcard characters: False
 ```
 
 ### -DriverPackageName
-Specifies the name of a driver package.
+
+Specify the name of a driver package to get all drivers in it.
 
 ```yaml
 Type: String
@@ -105,8 +152,27 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Fast
+
+Add this parameter to not automatically refresh lazy properties. Lazy properties contain values that are relatively inefficient to retrieve. Getting these properties can cause additional network traffic and decrease cmdlet performance.
+
+If you don't use this parameter, the cmdlet displays a warning. To disable this warning, set `$CMPSSuppressFastNotUsedCheck = $true`.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ForceWildcardHandling
-ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
+
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -121,7 +187,8 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-Specifies the ID of a driver.
+
+Specify the ID of a specific device driver. This value is the same as the **CI_ID** attribute, for example `66383`.
 
 ```yaml
 Type: Int32
@@ -136,8 +203,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies a driver package object.
-To obtain a driver package object, use the [Get-CMDriverPackage](Get-CMDriverPackage.md) cmdlet.
+
+Specify a driver package object to get all drivers in it. To get this object, use the [Get-CMDriverPackage](Get-CMDriverPackage.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -152,7 +219,13 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies the name of a driver.
+
+Specify the name of a specific device driver to get.
+
+You can use wildcard characters:
+
+- `*`: Multiple characters
+- `?`: Single character
 
 ```yaml
 Type: String
@@ -181,6 +254,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## NOTES
 
+For more information on this return object and its properties, see [SMS_Driver server WMI class](/mem/configmgr/develop/reference/osd/sms_driver-server-wmi-class).
+
 ## RELATED LINKS
 
 [Disable-CMDriver](Disable-CMDriver.md)
@@ -195,4 +270,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Get-CMDriverPackage](Get-CMDriverPackage.md)
 
-
+[Manage drivers in Configuration Manager](/mem/configmgr/osd/get-started/manage-drivers)

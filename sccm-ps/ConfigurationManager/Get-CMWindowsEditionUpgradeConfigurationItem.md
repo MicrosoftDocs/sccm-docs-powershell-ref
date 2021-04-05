@@ -1,6 +1,6 @@
----
+﻿---
 description: Get a Windows 10 edition upgrade policy.
-external help file: AdminUI.PS.Dcm-help.xml
+external help file: AdminUI.PS-help.xml
 Module Name: ConfigurationManager
 ms.date: 12/03/2020
 schema: 2.0.0
@@ -104,7 +104,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
-
 ## NOTES
 
 ## RELATED LINKS

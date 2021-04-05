@@ -1,6 +1,6 @@
 ---
 description: Create a compliance rule for a simple file folder.
-external help file: AdminUI.PS.Dcm.dll-Help.xml
+external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 11/20/2020
 schema: 2.0.0
@@ -174,6 +174,8 @@ Accept wildcard characters: False
 
 Specify the folder property to compare and assess for compliance. Use the **-ExpectedValue** parameter to specify the value of this property, and the **-ExpressionOperator** parameter to specify the means of comparison.
 
+Starting in version 2010, the parameter type changed from _FileFolderProperty_ to _SimpleFileFolderProperty_ type.
+
 ```yaml
 Type: SimpleFileFolderProperty
 Parameter Sets: (All)
@@ -261,7 +263,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
-
 ## NOTES
 
 ## RELATED LINKS

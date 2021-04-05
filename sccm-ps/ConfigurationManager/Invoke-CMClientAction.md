@@ -1,6 +1,6 @@
 ---
 description: Sends a notification to client computers to trigger an immediate client action.
-external help file: AdminUI.PS.Collections.dll-Help.xml
+external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 07/30/2020
 online version:

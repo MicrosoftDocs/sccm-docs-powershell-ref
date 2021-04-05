@@ -1,6 +1,6 @@
 ---
 description: Configure an application deployment
-external help file: AdminUI.PS.Deployments.dll-Help.xml
+external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 12/23/2020
 schema: 2.0.0
@@ -648,9 +648,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### IResultObject#SMS_ApplicationAssignment
 
-For more information on this return object and its properties, see [SMS_ApplicationAssignment server WMI class](/mem/configmgr/develop/reference/apps/sms_applicationassignment-server-wmi-class).
-
 ## NOTES
+
+For more information on this return object and its properties, see [SMS_ApplicationAssignment server WMI class](/mem/configmgr/develop/reference/apps/sms_applicationassignment-server-wmi-class).
 
 ## RELATED LINKS
 

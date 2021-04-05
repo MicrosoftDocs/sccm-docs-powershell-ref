@@ -1,8 +1,8 @@
 ---
-description: Sets properties, options, specific conditions for a task sequence Set Dynamic Variable step in Configuration Manager.
-external help file: AdminUI.PS.Osd.dll-Help.xml
+description: Configure the Set Dynamic Variable task sequence step.
+external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 01/08/2019
+ms.date: 03/25/2021
 schema: 2.0.0
 title: Set-CMTSStepSetDynamicVariable
 ---
@@ -11,7 +11,7 @@ title: Set-CMTSStepSetDynamicVariable
 
 ## SYNOPSIS
 
-Sets properties, options, specific conditions for a task sequence Set Dynamic Variable step in Configuration Manager.
+Configure the Set Dynamic Variable task sequence step.
 
 ## SYNTAX
 
@@ -225,26 +225,43 @@ Set-CMTSStepSetDynamicVariable [-SetConditionOperatingSystem] [-StepName <String
 
 ## DESCRIPTION
 
-The **Set-CMTSStepSetDynamicVariable** cmdlet sets properties, options, specific conditions for "Set Dynamic Variable" steps in a task sequence.  The cmdlet supports pipeline from a task sequence object, and could be filtered by the name of the step.
+Use this cmdlet to set the properties, options, and specific conditions for the **Set Dynamic Variable** step in a task sequence. For more information, see [About task sequence steps - Set Dynamic Variables](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_SetDynamicVariables).
 
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Configure the step with a condition and two rules
+
+This command first saves the target task sequence object in a variable. It then creates a task sequence condition object. There are two uses of **New-CMTSRule** to create rule objects. The last line runs this cmdlet, passing in the task sequence object. It clears all existing conditions and rules, and adds the new ones.
 
 ```powershell
-PS XYZ:\> $ReferencedTaskSequence | Set-CMTaskSequenceStepSetDynamicVariable -ClearCondition -AddCondition $cd1 -CleanRule -AddRule ($rule5,$rule6)
+$ts = Get-CMTaskSequence -Name "Default IPU"
+
+$tscondition = New-CMTSStepConditionVariable -ConditionVariableName "_SMSTSInWinPE" -ConditionVariableValue "false" -OperatorType Equals
+
+$tsrule1 = New-CMTSRule -DefaultGateway "192.168.10.1" -Variable @{'OSDRegisteredUserName' = 'Contoso';'OSDRegisteredOrgName' = 'Contoso'}
+$tsrule2 = New CMTSRule -Make "Surface" -Model "*" -Variable @{'custTattoo1' = 'AllSurface'}
+
+$ts | Set-CMTaskSequenceStepSetDynamicVariable -ClearCondition -AddCondition $tscondition -CleanRule -AddRule ($tsrule1,$tsrule2)
 ```
 
 ## PARAMETERS
 
 ### -AddCondition
 
-Specifies the conditions. The types of the conditions include: task sequence variable, operating system version, operating system language, file properties, folder properties, registry setting, query WMI, and installed software.
+Specify task sequence condition objects to add. To get this object, use one of the following cmdlets:
+
+- [New-CMTSStepConditionFile](New-CMTSStepConditionFile.md)
+- [New-CMTSStepConditionFolder](New-CMTSStepConditionFolder.md)
+- [New-CMTSStepConditionIfStatement](New-CMTSStepConditionIfStatement.md)
+- [New-CMTSStepConditionOperatingSystem](New-CMTSStepConditionOperatingSystem.md)
+- [New-CMTSStepConditionOperatingSystemLanguage](New-CMTSStepConditionOperatingSystemLanguage.md)
+- [New-CMTSStepConditionQueryWmi](New-CMTSStepConditionQueryWmi.md)
+- [New-CMTSStepConditionRegistry](New-CMTSStepConditionRegistry.md)
+- [New-CMTSStepConditionSoftware](New-CMTSStepConditionSoftware.md)
+- [New-CMTSStepConditionVariable](New-CMTSStepConditionVariable.md)
 
 ```yaml
 Type: IResultObject[]
@@ -260,7 +277,7 @@ Accept wildcard characters: False
 
 ### -AddRule
 
-Specifies the rules and the order of the rules.
+Specify a task sequence rule object. Rules define the criteria and variables to set when they evaluate true. To get this object, use the [New-CMTSRule](New-CMTSRule.md) cmdlet.
 
 ```yaml
 Type: IResultObject[]
@@ -276,7 +293,7 @@ Accept wildcard characters: False
 
 ### -CleanRule
 
-Indicates removing all the existing rules. This parameter must be used in conjunction with the **AddRule** parameter.
+Add this parameter to remove all the existing rules. Use this parameter with the **AddRule** parameter.
 
 ```yaml
 Type: SwitchParameter
@@ -292,7 +309,7 @@ Accept wildcard characters: False
 
 ### -ClearCondition
 
-Indicates removing all the existing conditions.
+Add this parameter to remove all the existing conditions.
 
 ```yaml
 Type: SwitchParameter
@@ -372,7 +389,7 @@ Accept wildcard characters: False
 
 ### -Description
 
-Specifies a description.
+Specify an optional description to help describe the step in the task sequence.
 
 ```yaml
 Type: String
@@ -388,7 +405,7 @@ Accept wildcard characters: False
 
 ### -DisableWildcardHandling
 
-DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -518,7 +535,7 @@ Accept wildcard characters: False
 
 ### -ForceWildcardHandling
 
-ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -534,7 +551,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 
-Specifies a task sequence object.
+Specify a task sequence object in which to add this step. To get this object, use the [Get-CMTaskSequence](Get-CMTaskSequence.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -566,7 +583,7 @@ Accept wildcard characters: False
 
 ### -IsContinueOnError
 
-Indicates the command continues when there is an exception.
+Set this parameter to **$true** to enable the step option for **Continue on error**. When you enable this option, if an error occurs when this step runs, the task sequence continues.
 
 ```yaml
 Type: Boolean
@@ -582,7 +599,7 @@ Accept wildcard characters: False
 
 ### -IsEnabled
 
-Indicates whether this step can be ran.
+Set this parameter to **$false** to disable the step in the task sequence. The task sequence doesn't run disabled steps.
 
 ```yaml
 Type: Boolean
@@ -646,7 +663,7 @@ Accept wildcard characters: False
 
 ### -NewStepName
 
-Specifies a new step name.
+Specify a new step name to rename it.
 
 ```yaml
 Type: String
@@ -668,7 +685,7 @@ Specifies an operator type.
 Type: VariableOperatorType
 Parameter Sets: ByIdSetConditionVariable, ByNameSetConditionVariable, ByValueSetConditionVariable
 Aliases:
-Accepted values: Exists, NotExists, Equals, NotEquals, Greater, GreaterEqual, Less, LessEqual, Like
+Accepted values: Exists, NotExists, Equals, NotEquals, Greater, GreaterEqual, Less, LessEqual, Like, NotLike
 
 Required: False
 Position: Named
@@ -1050,7 +1067,7 @@ Accept wildcard characters: False
 
 ### -StepName
 
-Specifies a step name.
+Specify the name of the step to configure.
 
 ```yaml
 Type: String
@@ -1099,7 +1116,7 @@ Accept wildcard characters: False
 
 ### -TaskSequenceId
 
-Specifies a task sequence ID.
+Specify a task sequence ID in which the step exists. This value is a standard package ID, for example, `XYZ00042`.
 
 ```yaml
 Type: String
@@ -1115,7 +1132,7 @@ Accept wildcard characters: False
 
 ### -TaskSequenceName
 
-Specifies a task sequence name.
+Specify a task sequence name in which the step exists.
 
 ```yaml
 Type: String
@@ -1165,8 +1182,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
 
 ```yaml
 Type: SwitchParameter
@@ -1194,8 +1210,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CMTSStepSetDynamicVariable](./New-CMTSStepSetDynamicVariable.md)
+[New-CMTSStepSetDynamicVariable](New-CMTSStepSetDynamicVariable.md)
 
-[Get-CMTSStepSetDynamicVariable](./Get-CMTSStepSetDynamicVariable.md)
+[Get-CMTSStepSetDynamicVariable](Get-CMTSStepSetDynamicVariable.md)
 
-[Remove-CMTSStepSetDynamicVariable](./Remove-CMTSStepSetDynamicVariable.md)
+[Remove-CMTSStepSetDynamicVariable](Remove-CMTSStepSetDynamicVariable.md)
+
+[New-CMTSRule](New-CMTSRule.md)
+
+[About task sequence steps - Set Dynamic Variables](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_SetDynamicVariables)

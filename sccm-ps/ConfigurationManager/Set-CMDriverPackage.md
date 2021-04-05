@@ -1,8 +1,7 @@
 ---
-description: Modifies a driver package.
-external help file: AdminUI.PS.Osd.dll-Help.xml
+external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/07/2019
+ms.date: 04/01/2021
 schema: 2.0.0
 title: Set-CMDriverPackage
 ---
@@ -10,7 +9,8 @@ title: Set-CMDriverPackage
 # Set-CMDriverPackage
 
 ## SYNOPSIS
-Modifies a driver package.
+
+Modify a driver package.
 
 ## SYNTAX
 
@@ -53,32 +53,28 @@ Set-CMDriverPackage [-CopyToPackageShareOnDistributionPoint <Boolean>] [-CustomP
 ```
 
 ## DESCRIPTION
-The **Set-CMDriverPackage** cmdlet modifies a driver package in Configuration Manager.
+
+Use this cmdlet to modify a driver package.
+
+For more information, see [Manage drivers in Configuration Manager](/mem/configmgr/osd/get-started/manage-drivers).
 
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
-### Example 1: Add a security scope action to a driver package
-```
-PS XYZ:\> Set-CMDriverPackage -SecurityScopeAction AddMembership -SecurityScopeName "Scope 001" -Name "Windows 7 Standard Hardware Package"
-```
+### Example 1: Configure the manufacturer and model of a driver package
 
-This command adds a security scope action to the driver package that is named Windows 7 Standard Hardware Package.
+This command configures the manufacturer and model of the driver package with the ID **XYZ00091**.
 
-### Example 2: Remove a security scope action from a driver package
+```powershell
+Set-CMDriverPackage -PackageId "XYZ00091" -DriverManufacturer "Microsoft" -DriverModel "Surface 2"
 ```
-PS XYZ:\> Set-CMDriverPackage -SecurityScopeAction RemoveMembership -SecurityScopeName "Scope 001" -Name "Windows 7 Standard Hardware Package"
-```
-
-This command removes a security scope action from the driver package that is named Windows 7 Standard Hardware Package.
 
 ## PARAMETERS
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -94,6 +90,11 @@ Accept wildcard characters: False
 ```
 
 ### -CopyToPackageShareOnDistributionPoint
+
+Clients can always download a driver package from a distribution point. If you set this parameter to **$true**, the site makes it available via a named network share on distribution points. Use **CustomPackageShareName** to specify a custom share name.
+
+When you enable this option, more space is required on distribution points. It applies to all distribution points to which you distribute this driver package.
+
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
@@ -107,6 +108,9 @@ Accept wildcard characters: False
 ```
 
 ### -CustomPackageShareName
+
+If you enable **CopyToPackageShareOnDistributionPoint**, you can use this parameter to customize the share name. The maximum length is 127 characters, and can't include any of the following characters: `" / [ ] : | < > + = ; , ? *`. You can specify a share name and a folder name, but then the maximum for each is 80 characters. For example, `ShareName\FolderName`.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -120,7 +124,8 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-Specifies a description of a driver package.
+
+Specify an optional description of a driver package to help you identify it.
 
 ```yaml
 Type: String
@@ -135,7 +140,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
+
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -150,6 +156,9 @@ Accept wildcard characters: False
 ```
 
 ### -DisconnectUserFromDistributionPoint
+
+This option is deprecated. It sets the **ForcedDisconnectEnabled** property of the driver package.
+
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
@@ -163,6 +172,9 @@ Accept wildcard characters: False
 ```
 
 ### -DisconnectUserFromDistributionPointMins
+
+This option is deprecated. It sets the **ForcedDisconnectDelay** property of the driver package.
+
 ```yaml
 Type: UInt32
 Parameter Sets: (All)
@@ -176,6 +188,9 @@ Accept wildcard characters: False
 ```
 
 ### -DisconnectUserFromDistributionPointRetryCount
+
+This option is deprecated. It sets the **ForcedDisconnectNumRetries** property of the driver package.
+
 ```yaml
 Type: UInt32
 Parameter Sets: (All)
@@ -189,6 +204,9 @@ Accept wildcard characters: False
 ```
 
 ### -DistributionPointUpdateSchedule
+
+Use this parameter to update distribution points on a schedule. To get a schedule object, use the [New-CMSchedule](New-CMSchedule.md) cmdlet.
+
 ```yaml
 Type: IResultObject
 Parameter Sets: (All)
@@ -202,7 +220,10 @@ Accept wildcard characters: False
 ```
 
 ### -DriverManufacturer
-Starting in version 1910, use this parameter to set the manufacturer. Use with the DriverModel parameter. You can use them for managing the driver catalog, and with task sequence pre-caching.
+
+Use this parameter to set the manufacturer of the device. The maximum length is 100 characters.
+
+Use it with the **DriverModel** parameter. You can use them for managing the driver catalog, and with task sequence pre-caching. For more information, see [Configure pre-cache content for task sequences](/mem/configmgr/osd/deploy-use/configure-precache-content).
 
 ```yaml
 Type: String
@@ -217,8 +238,10 @@ Accept wildcard characters: False
 ```
 
 ### -DriverModel
-Starting in version 1910, use this parameter to set the model. Use with the DriverManufacturer parameter. You can use them for managing the driver catalog, and with task sequence pre-caching.
 
+Use this parameter to set the model of the device. The maximum length is 100 characters.
+
+Use it with the **DriverManufacturer** parameter. You can use them for managing the driver catalog, and with task sequence pre-caching. For more information, see [Configure pre-cache content for task sequences](/mem/configmgr/osd/deploy-use/configure-precache-content).
 
 ```yaml
 Type: String
@@ -233,6 +256,13 @@ Accept wildcard characters: False
 ```
 
 ### -DriverPackageSource
+
+Specify a file path to the network location to source the driver files.
+
+When you create a driver package, the source location of the package must point to an empty network share that's not used by another driver package. The SMS Provider must have **Full control** permissions to that location.
+
+When you add device drivers to a driver package, Configuration Manager copies it to this path. You can add to a driver package only device drivers that you've imported and that are enabled in the driver catalog.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -246,7 +276,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
+
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -261,7 +292,8 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-Specifies an array of identifiers for a driver package.
+
+Specify the ID of a driver package to configure. This value is a standard package ID, for example: `XYZ00020`.
 
 ```yaml
 Type: String
@@ -276,8 +308,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies a driver package object.
-To obtain a driver package object, use the [Get-CMDriverPackage](Get-CMDriverPackage.md) cmdlet.
+
+Specify a driver package object to configure. To get this object, use the [Get-CMDriverPackage](Get-CMDriverPackage.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -292,6 +324,9 @@ Accept wildcard characters: False
 ```
 
 ### -MulticastAllow
+
+Set this parameter to **$true** to allow this package to be transferred via multicast. For more information, see [Use multicast to deploy Windows over the network with Configuration Manager](/mem/configmgr/osd/deploy-use/use-multicast-to-deploy-windows-over-the-network).
+
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
@@ -305,6 +340,9 @@ Accept wildcard characters: False
 ```
 
 ### -MulticastEncrypt
+
+If you enable **MulticastAllow**, set this parameter to **$true** to encrypt multicast packages.
+
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
@@ -318,6 +356,9 @@ Accept wildcard characters: False
 ```
 
 ### -MulticastTransferOnly
+
+If you enable **MulticastAllow**, set this parameter to **$true** to only transfer this driver package via multicast.
+
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
@@ -331,7 +372,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies a name of a driver package.
+
+Specify the name of a driver package to configure.
 
 ```yaml
 Type: String
@@ -346,7 +388,8 @@ Accept wildcard characters: False
 ```
 
 ### -NewName
-Specifies a new name of a driver package.
+
+Specify a new name for the driver package.
 
 ```yaml
 Type: String
@@ -361,8 +404,8 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Returns the current working object.
-By default, this cmdlet does not generate any output.
+
+Add this parameter to return an object that represents the item with which you're working. By default, this cmdlet may not generate any output.
 
 ```yaml
 Type: SwitchParameter
@@ -377,6 +420,15 @@ Accept wildcard characters: False
 ```
 
 ### -PrestageBehavior
+
+Specify the behavior when you enable a distribution point for prestaged content:
+
+- `ManualCopy`: Manually copy the content in this package to the distribution point
+- `DownloadDelta`: Download only content changes to the distribution point
+- `OnDemand`: Automatically download content when packages are assigned to distribution points
+
+For more information, see [Use prestaged content](/mem/configmgr/core/servers/deploy/configure/deploy-and-manage-content#bkmk_prestage).
+
 ```yaml
 Type: PrestageBehavior
 Parameter Sets: (All)
@@ -391,8 +443,10 @@ Accept wildcard characters: False
 ```
 
 ### -Priority
-Specifies a change for the priority of the deployment type.
-Valid values are: Increase and Decrease.
+
+Specify the order in which the site sends the content to other sites and the distribution points in this site.
+
+The site sends high priority content before packages with medium or low priority. Packages with equal priority are sent in the order in which they're created.
 
 ```yaml
 Type: Priority
@@ -408,6 +462,9 @@ Accept wildcard characters: False
 ```
 
 ### -SendToPreferredDistributionPoint
+
+If you want to enable on-demand content distribution to preferred distribution points, set this parameter to **$true**. When you enable this setting, if a client requests the content for the package and the content isn't available on any distribution points, then the management point distributes the content. For more information, see [On-demand content distribution](/mem/configmgr/core/plan-design/hierarchy/fundamental-concepts-for-content-management#on-demand-content-distribution).
+
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
@@ -421,7 +478,8 @@ Accept wildcard characters: False
 ```
 
 ### -Version
-Specifies the version of a security scope.
+
+Specify the version of the driver package. This value is a string that you manage.
 
 ```yaml
 Type: String
@@ -436,8 +494,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+
+Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
 
 ```yaml
 Type: SwitchParameter
@@ -474,3 +532,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-CMDriverPackage](New-CMDriverPackage.md)
 
 [Remove-CMDriverPackage](Remove-CMDriverPackage.md)
+
+[Manage drivers in Configuration Manager](/mem/configmgr/osd/get-started/manage-drivers)

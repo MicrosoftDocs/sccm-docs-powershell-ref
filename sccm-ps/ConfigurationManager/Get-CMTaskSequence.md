@@ -1,8 +1,8 @@
----
-description: Gets Configuration Manager task sequences.
-external help file: AdminUI.PS.Osd.dll-Help.xml
+﻿---
+description: Get a task sequence.
+external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 11/30/2018
+ms.date: 03/24/2021
 schema: 2.0.0
 title: Get-CMTaskSequence
 ---
@@ -11,49 +11,62 @@ title: Get-CMTaskSequence
 
 ## SYNOPSIS
 
-Gets Configuration Manager task sequences.
+Get a task sequence.
 
 ## SYNTAX
 
 ### SearchByName (Default)
 ```
-Get-CMTaskSequence [-Name <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
+Get-CMTaskSequence [-Fast] [-Name <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory
 ```
-Get-CMTaskSequence -TaskSequencePackageId <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
+Get-CMTaskSequence [-Fast] -TaskSequencePackageId <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-The **Get-CMTaskSequence** cmdlet gets Configuration Manager task sequences.
-A task sequence includes configuration and operating system deployment settings for a Configuration Manager client computer.
-
-You can specify a name or ID to get a specific sequence.
-You can also specify a security scope, by itself or with a name or ID, to get sequences with that security scope.
+Use this cmdlet to get a Configuration Manager task sequence. You typically use a task sequence to deploy an OS to a client, but you can use them for various purposes. To create a task sequence, use the [New-CMTaskSequence](New-CMTaskSequence.md) cmdlet, or the Configuration Manager console. For more information, see [Manage task sequences to automate tasks](/mem/configmgr/osd/deploy-use/manage-task-sequences-to-automate-tasks).
 
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
 ### Example 1: Get a task sequence by name
 
-```powershell
-PS XYZ:\> Get-CMTaskSequence -Name "taskSequence"
-```
+This command gets the task sequence named **Upgrade to Windows 10 latest**.
 
-This command gets the task sequence named taskSequence.
+```powershell
+Get-CMTaskSequence -Name "Upgrade to Windows 10 latest"
+```
 
 ## PARAMETERS
 
 ### -DisableWildcardHandling
 
-DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Fast
+
+Add this parameter to not automatically refresh lazy properties. Lazy properties contain values that are relatively inefficient to retrieve. Getting these properties can cause additional network traffic and decrease cmdlet performance.
+
+If you don't use this parameter, the cmdlet displays a warning. To disable this warning, set `$CMPSSuppressFastNotUsedCheck = $true`.
 
 ```yaml
 Type: SwitchParameter
@@ -69,7 +82,7 @@ Accept wildcard characters: False
 
 ### -ForceWildcardHandling
 
-ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -85,7 +98,7 @@ Accept wildcard characters: False
 
 ### -Name
 
-Specifies a name for a task sequence.
+Specify the name of a task sequence to get.
 
 ```yaml
 Type: String
@@ -101,7 +114,7 @@ Accept wildcard characters: False
 
 ### -TaskSequencePackageId
 
-Specifies the ID of a task sequence package.
+Specify the package ID of the task sequence to get. This value is a standard package ID, for example, `XYZ007C0`.
 
 ```yaml
 Type: String
@@ -130,6 +143,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## NOTES
 
+For more information on this return object and its properties, see [SMS_TaskSequence_Step server WMI class](/mem/configmgr/develop/reference/osd/sms_tasksequence_step-server-wmi-class).
+
 ## RELATED LINKS
 
 [New-CMTaskSequence](New-CMTaskSequence.md)
@@ -138,3 +153,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Import-CMTaskSequence](Import-CMTaskSequence.md)
 [Export-CMTaskSequence](Export-CMTaskSequence.md)
 [Remove-CMTaskSequence](Remove-CMTaskSequence.md)
+
+[Manage task sequences to automate tasks](/mem/configmgr/osd/deploy-use/manage-task-sequences-to-automate-tasks)

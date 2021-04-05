@@ -1,8 +1,8 @@
 ---
 description: Configure the properties of an application.
-external help file: AdminUI.PS.AppMan.dll-Help.xml
+external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 08/06/2020
+ms.date: 03/29/2021
 schema: 2.0.0
 title: Set-CMApplication
 ---
@@ -96,27 +96,33 @@ Use the **Set-CMApplication** cmdlet to configure the settings of an application
 
 ## EXAMPLES
 
-### Example 1: Set the properties of an application by using the pipeline
+### Example 1: Reconfigure the properties of an application
 
-The first command gets the application object named **Application01** and uses the pipeline operator to pass the object to **Set-CMApplication**.
-**Set-CMApplication** sets the specified properties on **Applicaton01**.
-
-```powershell
-Get-CMApplication -Name "Application01" | Set-CMApplication -NewName "Application01_New" -Description "Application updated" -Publisher "Test group" -SoftwareVersion 1.0.0.1 -OptionalReference "Reference" -ReleaseDate 2/24/2016 -AutoInstall $True -Owner "Administrator1" -SupportContact "Administrator" -LocalizedApplicationName "Localized Application01" -UserDocumentation "https://contoso.com/content" -LinkText "Linktext" -LocalizedDescription "Localized Application New" -Keyword "Application" -PrivacyUrl "https://contoso.com/privacy" -IsFeatured $True -IconLocationFile "C:\Users\art\icon.png" -DisplaySupersedenceInApplicationCatalog $True -DistributionPriority Medium -SendToProtectedDistributionPoint $True -DistributionPointSetting NoDownload -AddUserCategory "userCategory1","userCategory2" -AddAppCategory "adminCategory1","adminCategory2"
-```
-
-### Example 2: Get an application, rename it, and update its settings
-
-This command gets the application named **Application01**, renames it to **Application01_New**, and sets the specified properties on the application.
+The first command gets the application object named **Application01**. The next two commands use the **Get-CMCategory** cmdlet to get objects for a user and administrator category. The **Set-CMApplication** cmdlet then sets the specified properties on **Applicaton01**.
 
 ```powershell
-Set-CMApplication -Name "Application01" -NewName "Application01_New" -Description "Application updated" -Publisher "Test group" -SoftwareVersion 1.0.0.1 -OptionalReference "Reference" -ReleaseDate 2/24/2016 -AutoInstall $True -Owner "Administrator1" -SupportContact "Administrator" -LocalizedApplicationName Localized "Application01" -UserDocumentation "https://contoso.com/content" -LinkText "LinkText" -LocalizedDescription "Localized Application New" -Keyword "Application" -PrivacyUrl "https://contoso.com/privacy" -IsFeatured $True -IconLocationFile "C:\Users\art\icon.png" -DisplaySupersedenceInApplicationCatalog $True -DistributionPriority Medium -SendToProtectedDistributionPoint $True -DistributionPointSetting NoDownload -AddUserCategory "userCategory1","userCategory2" -AddAppCategory "adminCategory1","adminCategory2"
+$app = Get-CMApplication -Name "Application01"
+$userCat = Get-CMCategory -Name "Test Applications" -CategoryType CatalogCategories
+$adminCat = Get-CMCategory -Name "Testing" -CategoryType AppCategories
+
+Set-CMApplication -InputObject $app -NewName "Application01_New" -Description "Application updated" -Publisher "Test group" -SoftwareVersion "1.0.0.1" -OptionalReference "Reference" -ReleaseDate 2/24/2016 -AutoInstall $True -Owner "jqpublic" -SupportContact "jqpublic" -LocalizedApplicationName "Localized Application01" -UserDocumentation "https://contoso.com/content" -LinkText "For more info" -LocalizedDescription "Localized Application New" -Keyword "Application" -PrivacyUrl "https://contoso.com/privacy" -IsFeatured $True -IconLocationFile "C:\Users\art\icon.png" -DistributionPriority Medium -SendToProtectedDistributionPoint $True -DistributionPointSetting NoDownload -AddUserCategory $userCat -AddAppCategory $adminCat
 ```
 
 ## PARAMETERS
 
 ### -AddAppCatalog
-{{ Fill AddAppCatalog Description }}
+
+Use this parameter to specify a Software Center entry for a specific language. This entry can include all of the localized information about the app:
+
+- Description
+- IconLocationFile
+- Keyword
+- LinkText
+- PrivacyUrl
+- Title
+- UserDocumentation
+
+To get this object, use the [New-CMApplicationDisplayInfo](New-CMApplicationDisplayInfo.md) cmdlet.
 
 ```yaml
 Type: AppDisplayInfo[]
@@ -132,7 +138,9 @@ Accept wildcard characters: False
 
 ### -AddAppCategory
 
-Specifies an administrative category assigned to the application. Provide the category by its name. Only categories of the type AppCategories are supported.
+Specify one or more administrative category objects to help you filter and find the app in the console. To get these objects, use the [Get-CMCategory](Get-CMCategory.md) cmdlet. These categories are of type **AppCategories**.
+
+To add categories to help users filter and find applications in Software Center, use the **AddUserCategory** parameter.
 
 ```yaml
 Type: IResultObject[]
@@ -147,6 +155,9 @@ Accept wildcard characters: False
 ```
 
 ### -AddOwner
+
+Specify one or more administrative users who are responsible for this app.
+
 ```yaml
 Type: String[]
 Parameter Sets: (All)
@@ -160,6 +171,9 @@ Accept wildcard characters: False
 ```
 
 ### -AddSupportContact
+
+Specify one or more administrative users that end users can contact for help with this application.
+
 ```yaml
 Type: String[]
 Parameter Sets: (All)
@@ -174,7 +188,9 @@ Accept wildcard characters: False
 
 ### -AddUserCategory
 
-Specifies a user category assigned to the application for Software Center filtering use. Provide the category by its name. Only categories of the type CatalogCategories are supported.
+Specify one or more user category objects to help you filter and find the app group in the console. To get these objects, use the [Get-CMCategory](Get-CMCategory.md) cmdlet. These categories are of type **CatalogCategories**.
+
+To add categories to help users filter and find applications in Software Center, use the **AddAppCategory** parameter.
 
 ```yaml
 Type: IResultObject[]
@@ -190,7 +206,7 @@ Accept wildcard characters: False
 
 ### -AppCategory
 
-This parameter is deprecated in version 1802. For more information, see **-AddAppCategory**.
+This parameter is deprecated, use **-AddAppCategory**.
 
 ```yaml
 Type: String[]
@@ -205,7 +221,14 @@ Accept wildcard characters: False
 ```
 
 ### -ApplyToLanguageById
-{{ Fill ApplyToLanguageById Description }}
+
+For settings that display in Software Center, use this parameter to specify the language ID for the settings.
+
+This ID is the decimal equivalent of the Windows language ID. For example, `1033` is `0x0409` for **English (United States)**, and `2108` is `0x083C` for **Irish (Ireland)**. For more information, see [[MS-LCID]: Windows Language Code Identifier (LCID) Reference](/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c).
+
+For example, to add a localized app name for **Irish (Ireland)**:
+
+`-ApplyToLanguageById 2108 -LocalizedName "Fáilte romhat"`
 
 ```yaml
 Type: Int32
@@ -220,7 +243,8 @@ Accept wildcard characters: False
 ```
 
 ### -AutoInstall
-Indicates whether a task sequence action can install the application.
+
+Set this parameter to **$true** to allow the app to be installed from the Install Application task sequence step without being deployed.
 
 ```yaml
 Type: Boolean
@@ -235,7 +259,8 @@ Accept wildcard characters: False
 ```
 
 ### -CleanAppCategory
-{{ Fill CleanAppCategory Description }}
+
+Add this parameter to remove all administrative categories. To remove a single category, use the **RemoveAppCategory** parameter.
 
 ```yaml
 Type: SwitchParameter
@@ -250,7 +275,8 @@ Accept wildcard characters: False
 ```
 
 ### -CleanUserCategory
-{{ Fill CleanUserCategory Description }}
+
+Add this parameter to remove all user categories. To remove a single category, use the **RemoveUserCategory** parameter.
 
 ```yaml
 Type: SwitchParameter
@@ -265,7 +291,8 @@ Accept wildcard characters: False
 ```
 
 ### -ClearAppCatalog
-{{ Fill ClearAppCatalog Description }}
+
+Add this parameter to remove all localized Software Center entries. To remove a single entry, use the **RemoveAppCatalog** parameter.
 
 ```yaml
 Type: SwitchParameter
@@ -280,6 +307,9 @@ Accept wildcard characters: False
 ```
 
 ### -ClearOwner
+
+Add this parameter to remove all owners. To remove a single owner, use the **RemoveOwner** parameter.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -293,6 +323,9 @@ Accept wildcard characters: False
 ```
 
 ### -ClearSupportContact
+
+Add this parameter to remove all support contacts. To remove a single contact, use the **RemoveSupportContact** parameter.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -306,6 +339,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -321,7 +355,10 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultLanguageId
-{{ Fill DefaultLanguageId Description }}
+
+Specify the language ID for the default Software Center language.
+
+This ID is the decimal equivalent of the Windows language ID. For example, `1033` is `0x0409` for **English (United States)**, and `2108` is `0x083C` for **Irish (Ireland)**. For more information, see [[MS-LCID]: Windows Language Code Identifier (LCID) Reference](/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c).
 
 ```yaml
 Type: Int32
@@ -336,8 +373,8 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-Specifies a description for the application.
-The description appears in the Configuration Manager console
+
+Specify an optional administrator comment for the app. The maximum length is 2048 characters.
 
 ```yaml
 Type: String
@@ -352,7 +389,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
+
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -367,7 +405,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisplaySupersedenceInApplicationCatalog
-Indicates whether the application displays supersedence in the Application Catalog.
+
+Don't use this parameter. The application catalog is no longer supported.
 
 ```yaml
 Type: Boolean
@@ -382,17 +421,14 @@ Accept wildcard characters: False
 ```
 
 ### -DistributionPointSetting
-Specifies the prestaged distribution point settings.
-Valid values are:
 
-- AutoDownload.
-Automatically download content when packages are assigned to distribution points.
+Specify the prestaged distribution point settings:
 
-- DeltaCopy.
-Download only content changes to distribution points.
+- `AutoDownload`: Automatically download content when packages are assigned to distribution points.
 
-- NoDownload.
-Manually copy the content in this package to distribution points.
+- `DeltaCopy`: Download only content changes to distribution points.
+
+- `NoDownload`: Manually copy the content in this package to distribution points.
 
 ```yaml
 Type: DistributionPointSettingType
@@ -408,15 +444,10 @@ Accept wildcard characters: False
 ```
 
 ### -DistributionPriority
-Specifies the order in which packages are sent to other sites.
-Valid values are:
 
-- High
-- Medium
-- Low
+Specify the order in which the site sends the content to other sites and the distribution points in this site.
 
-High priority packages are sent before packages with medium or low priority.
-Packages with equal priority are sent in the order in which they are created.
+The site sends high priority content before content with medium or low priority. Content with equal priority are sent in the order in which they're created.
 
 ```yaml
 Type: DistributionPriorityType
@@ -432,7 +463,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
+
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -447,8 +479,14 @@ Accept wildcard characters: False
 ```
 
 ### -IconLocationFile
-Specifies the location of the icon file.
-This is set to the single default language.
+
+Specify the path to the file that contains the icon for this app. Icons can have pixel dimensions of up to 512x512. The file can be of the following image and icon file types:
+
+- DLL
+- EXE
+- JPG
+- ICO
+- PNG
 
 ```yaml
 Type: String
@@ -463,7 +501,8 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-Specifies the CI_ID and ModelID properties (the same value) of an application.
+
+Specify the ID of the app to configure. This value is the same as the **CI_ID**, for example `1025866`.
 
 ```yaml
 Type: Int32
@@ -478,8 +517,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies an application object.
-To obtain an application object, use the [Get-CMApplication](Get-CMApplication.md) cmdlet.
+
+Specify an app object to configure. To get this object, use the [Get-CMApplication](Get-CMApplication.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -494,7 +533,8 @@ Accept wildcard characters: False
 ```
 
 ### -IsFeatured
-Indicates whether the application displays as a featured app and is highlighted in the company portal.
+
+Set this parameter to **$true** to display this application as a featured app and highlight it in the Company Portal.
 
 ```yaml
 Type: Boolean
@@ -509,11 +549,11 @@ Accept wildcard characters: False
 ```
 
 ### -Keyword
-Specifies a keyword for the application.
-Provide the keyword in the default language.
-To add multiple keywords, use CultureInfo.CurrentCulture.TextInfo.ListSeparator as the delimiter.
 
-This keyword will help users of Software Center search for the application.
+Specify a list of keywords in the selected language. These keywords help Software Center users search for the app group.
+
+> [!TIP]
+> To add multiple keywords, use **CultureInfo.CurrentCulture.TextInfo.ListSeparator** as the delimiter.
 
 ```yaml
 Type: String[]
@@ -528,8 +568,8 @@ Accept wildcard characters: False
 ```
 
 ### -LinkText
-Specifies a description that appears in the Application Catalog with a hyperlink to additional information or documentation for the application.
-This is set to the single default language.
+
+When you use the **UserDocumentation** parameter, use this parameter to show a string in place of "Additional information" in Software Center. The maximum length is 128 characters.
 
 ```yaml
 Type: String
@@ -544,7 +584,12 @@ Accept wildcard characters: False
 ```
 
 ### -LocalizedApplicationName
-Specifies a localized name string that appears in the client software center or catalog web site.
+
+Specify the app name in the selected language. This name appears in Software Center.
+
+A name is required for each language that you add.
+
+The maximum length is 256 characters.
 
 ```yaml
 Type: String
@@ -559,8 +604,8 @@ Accept wildcard characters: False
 ```
 
 ### -LocalizedDescription
-Specifies a localized description string that appears in the client software center or catalog web site.
-This is set to the single default language.
+
+Specify a description for this app in the selected language. The maximum length is 2048 characters.
 
 ```yaml
 Type: String
@@ -575,7 +620,8 @@ Accept wildcard characters: False
 ```
 
 ### -ModelName
-Specifies the model name of the application.
+
+Specify the application model identifier of the app to configure. This value is also known as the **CI Unique ID**. For example, `ScopeId_0D7D8B60-F2F9-484A-B9F3-4A8B68D14D59/ApplicationGroup_047fbf05-55f4-42ab-9581-e63fd0337fed`.
 
 ```yaml
 Type: String
@@ -590,7 +636,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies the name of the application.
+
+Specify the name of the app to configure.
 
 ```yaml
 Type: String
@@ -605,7 +652,8 @@ Accept wildcard characters: False
 ```
 
 ### -NewName
-Specifies a new name for the application.
+
+Use this parameter to rename the app. The maximum length is 256 characters.
 
 ```yaml
 Type: String
@@ -620,7 +668,8 @@ Accept wildcard characters: False
 ```
 
 ### -OptionalReference
-Specifies optional reference information for this application.
+
+Specify an optional string to help you find the app in the console. The maximum length is 256 characters.
 
 ```yaml
 Type: String
@@ -635,7 +684,8 @@ Accept wildcard characters: False
 ```
 
 ### -Owner
-Specifies an owner for the application.
+
+Specify an administrative user who's responsible for this app.
 
 ```yaml
 Type: String
@@ -650,8 +700,8 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Returns the current working object.
-By default, this cmdlet does not generate any output.
+
+Add this parameter to return an object that represents the item with which you're working. By default, this cmdlet may not generate any output.
 
 ```yaml
 Type: SwitchParameter
@@ -666,8 +716,8 @@ Accept wildcard characters: False
 ```
 
 ### -PrivacyUrl
-Specifies a hyperlink, in URI format, to privacy information about the application.
-This is set to the single default language.
+
+Specify a website address to the privacy statement for the app. The format needs to be a valid URL, for example `https://contoso.com/privacy`. The maximum length of the entire string is 128 characters.
 
 ```yaml
 Type: String
@@ -682,7 +732,8 @@ Accept wildcard characters: False
 ```
 
 ### -Publisher
-Specifies the name of a software publisher.
+
+Specify optional vendor information for this app. The maximum length is 256 characters.
 
 ```yaml
 Type: String
@@ -697,7 +748,8 @@ Accept wildcard characters: False
 ```
 
 ### -ReleaseDate
-Specifies a release date for the application.
+
+Specify a date object for when this app was released. To get this object, use the [Get-Date](/powershell/module/microsoft.powershell.utility/get-date) built-in cmdlet.
 
 ```yaml
 Type: DateTime
@@ -712,7 +764,14 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveAppCatalog
-{{ Fill RemoveAppCatalog Description }}
+
+Specify an array of language IDs to remove the associated Software Center entries. To remove all entries, use the **ClearAppCatalog** parameter.
+
+This ID is the decimal equivalent of the Windows language ID. For example, `1033` is `0x0409` for **English (United States)**, and `2108` is `0x083C` for **Irish (Ireland)**. For more information, see [[MS-LCID]: Windows Language Code Identifier (LCID) Reference](/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c).
+
+For example, to remove the localized Software Center entry for **Irish (Ireland)**:
+
+`-RemoveAppCatalog 2108`
 
 ```yaml
 Type: Int32[]
@@ -727,7 +786,8 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveAppCategoryName
-{{ Fill RemoveAppCategoryName Description }}
+
+Specify an array of administrative category names to remove. To remove all administrative categories, use the **CleanAppCategory** parameter.
 
 ```yaml
 Type: String[]
@@ -742,6 +802,9 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveOwner
+
+Specify an array of owners to remove. To remove all owners, use the **ClearOwner** parameter.
+
 ```yaml
 Type: String[]
 Parameter Sets: (All)
@@ -755,6 +818,9 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveSupportContact
+
+Specify an array of support contacts to remove. To remove all support contacts, use the **ClearSupportContact** parameter.
+
 ```yaml
 Type: String[]
 Parameter Sets: (All)
@@ -768,7 +834,8 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveUserCategoryName
-{{ Fill RemoveUserCategoryName Description }}
+
+Specify an array of user category names to remove. To remove all user categories, use the **CleanUserCategory** parameter.
 
 ```yaml
 Type: String[]
@@ -798,7 +865,8 @@ Accept wildcard characters: False
 ```
 
 ### -SoftwareVersion
-Specifies a software version for an application.
+
+Specify an optional version string for the app. The maximum length is 64 characters.
 
 ```yaml
 Type: String
@@ -813,7 +881,8 @@ Accept wildcard characters: False
 ```
 
 ### -SupportContact
-Specifies one or more administrative users who are support contacts for the application.
+
+Specify an administrative user that end users can contact for help with this application.
 
 ```yaml
 Type: String
@@ -829,7 +898,7 @@ Accept wildcard characters: False
 
 ### -UserCategory
 
-This parameter is deprecated in version 1802. For more information, see **-AddUserCategory**.
+This parameter is deprecated, use **-AddUserCategory**.
 
 ```yaml
 Type: String[]
@@ -844,8 +913,10 @@ Accept wildcard characters: False
 ```
 
 ### -UserDocumentation
-Specifies a hyperlink, in URI format, to additional information about the application.
-This is set to the single default language.
+
+Specify the location of a file from which Software Center users can get more information about this app. This location is a website address, or a network path and file name. Make sure that users have access to this location.
+
+The maximum length of the entire string is 256 characters.
 
 ```yaml
 Type: String
@@ -860,8 +931,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+
+Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
 
 ```yaml
 Type: SwitchParameter
@@ -888,6 +959,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## NOTES
 
+For more information on this return object and its properties, see [SMS_Application server WMI class](/mem/configmgr/develop/reference/apps/sms_application-server-wmi-class).
+
 ## RELATED LINKS
 
 [Convert-CMApplication](Convert-CMApplication.md)
@@ -909,3 +982,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Resume-CMApplication](Resume-CMApplication.md)
 
 [Suspend-CMApplication](Suspend-CMApplication.md)
+
+[New-CMApplicationDisplayInfo](New-CMApplicationDisplayInfo.md)
+
+[Create applications in Configuration Manager](/mem/configmgr/apps/deploy-use/create-applications)

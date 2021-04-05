@@ -1,6 +1,6 @@
 ---
 description: Change a deployment type for a Configuration Manager application.
-external help file: AdminUI.PS.AppMan.dll-Help.xml
+external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 08/06/2020
 schema: 2.0.0

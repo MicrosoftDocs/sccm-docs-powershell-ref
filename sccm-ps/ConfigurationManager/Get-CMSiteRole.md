@@ -1,6 +1,6 @@
 ﻿---
 description: Get a site role object.
-external help file: AdminUI.PS.HS.dll-Help.xml
+external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 08/25/2020
 schema: 2.0.0

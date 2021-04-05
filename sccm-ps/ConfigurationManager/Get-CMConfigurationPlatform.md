@@ -1,7 +1,7 @@
----
-external help file: AdminUI.PS.Dcm.dll-Help.xml
+﻿---
+external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 01/04/2021
+ms.date: 03/24/2021
 online version:
 schema: 2.0.0
 ---
@@ -16,13 +16,13 @@ Get an OS platform for a requirement rule.
 
 ### SearchByName (Default)
 ```
-Get-CMConfigurationPlatform [-IsSupported <Boolean>] [[-Name] <String>] [-PlatformOption <PlatformType>]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
+Get-CMConfigurationPlatform [-Fast] [-IsSupported <Boolean>] [[-Name] <String>]
+ [-PlatformOption <PlatformType>] [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ### SearchById
 ```
-Get-CMConfigurationPlatform [-Id] <Int32> [-IsSupported <Boolean>] [-PlatformOption <PlatformType>]
+Get-CMConfigurationPlatform [-Fast] [-Id] <Int32> [-IsSupported <Boolean>] [-PlatformOption <PlatformType>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
@@ -56,6 +56,24 @@ Set-CMScriptDeploymentType -ApplicationName "Central App" -DeploymentTypeName "I
 ### -DisableWildcardHandling
 
 This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Fast
+
+Add this parameter to not automatically refresh lazy properties. Lazy properties contain values that are relatively inefficient to retrieve. Getting these properties can cause additional network traffic and decrease cmdlet performance.
+
+If you don't use this parameter, the cmdlet displays a warning. To disable this warning, set `$CMPSSuppressFastNotUsedCheck = $true`.
 
 ```yaml
 Type: SwitchParameter
@@ -170,9 +188,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### IResultObject#SMS_ConfigurationPlatform
 
-For more information on this return object and its properties, see [SMS_ConfigurationPlatform server WMI class](/mem/configmgr/develop/reference/compliance/sms_configurationplatform-server-wmi-class).
-
 ## NOTES
+
+For more information on this return object and its properties, see [SMS_ConfigurationPlatform server WMI class](/mem/configmgr/develop/reference/compliance/sms_configurationplatform-server-wmi-class).
 
 This cmdlet is different from the similar **Get-CMSupportedPlatform** cmdlet.
 

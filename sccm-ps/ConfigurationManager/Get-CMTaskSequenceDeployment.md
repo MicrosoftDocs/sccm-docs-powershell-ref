@@ -1,8 +1,8 @@
 ﻿---
-description: Gets a task sequence deployment in Configuration Manager.
-external help file: AdminUI.PS.Deployments.dll-Help.xml
+description: Get a task sequence deployment.
+external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 12/03/2018
+ms.date: 03/24/2021
 schema: 2.0.0
 title: Get-CMTaskSequenceDeployment
 ---
@@ -11,62 +11,68 @@ title: Get-CMTaskSequenceDeployment
 
 ## SYNOPSIS
 
-Gets a task sequence deployment in Configuration Manager.
+Get a task sequence deployment.
 
 ## SYNTAX
 
 ### SearchByName (Default)
 ```
-Get-CMTaskSequenceDeployment [-Name <String>] [-Summary] [-Collection <IResultObject>] [-CollectionId <String>]
- [-CollectionName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
+Get-CMTaskSequenceDeployment [-Fast] [-Name <String>] [-Summary] [-Collection <IResultObject>]
+ [-CollectionId <String>] [-CollectionName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [<CommonParameters>]
 ```
 
 ### SearchByDeploymentId
 ```
-Get-CMTaskSequenceDeployment [-DeploymentId <String>] [-Summary] [-Collection <IResultObject>]
+Get-CMTaskSequenceDeployment [-Fast] [-DeploymentId <String>] [-Summary] [-Collection <IResultObject>]
  [-CollectionId <String>] [-CollectionName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [<CommonParameters>]
 ```
 
 ### SearchByValue
 ```
-Get-CMTaskSequenceDeployment [-InputObject <IResultObject>] [-Summary] [-Collection <IResultObject>]
+Get-CMTaskSequenceDeployment [-Fast] [-InputObject <IResultObject>] [-Summary] [-Collection <IResultObject>]
  [-CollectionId <String>] [-CollectionName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [<CommonParameters>]
 ```
 
 ### SearchById
 ```
-Get-CMTaskSequenceDeployment [-TaskSequenceId <String>] [-Summary] [-Collection <IResultObject>]
+Get-CMTaskSequenceDeployment [-Fast] [-TaskSequenceId <String>] [-Summary] [-Collection <IResultObject>]
  [-CollectionId <String>] [-CollectionName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-The **Get-CMTaskSequenceDeployment** cmdlet gets a task sequence deployment.
-A task sequence deployment assigns a task sequence to a collection of computers.
+Use this cmdlet to get a task sequence deployment. A task sequence deployment assigns a task sequence to a collection of computers. For more information, see [Deploy a task sequence in Configuration Manager](/mem/configmgr/osd/deploy-use/deploy-a-task-sequence).
 
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Get all deployments for a task sequence by name
+
+This command gets the deployments for the task sequence named **Upgrade to Windows 10 latest**.
 
 ```powershell
-PS XYZ:\> Get-CMTaskSequenceDeployment -Name "Task Sequence 1333"
+Get-CMTaskSequenceDeployment -Name "Upgrade to Windows 10 latest"
 ```
 
-This command gets a task sequence deployment by name.
+### Example 2: Get all task sequence deployments to a specific collection
+
+This command gets all task sequence deployments to the collection with ID **XYZ00112**
+
+```powershell
+Get-CMTaskSequenceDeployment -Fast -CollectionId "XYZ00112"
+```
 
 ## PARAMETERS
 
 ### -Collection
 
-Specifies a collection object.
+Specify a collection object to which a task sequence is deployed. To get this object, use the [Get-CMCollection](Get-CMCollection.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -82,7 +88,7 @@ Accept wildcard characters: False
 
 ### -CollectionId
 
-Specifies a collection ID.
+Specify a collection ID to which a task sequence is deployed. This value is a standard collection ID, for example, `XYZ00581`.
 
 ```yaml
 Type: String
@@ -98,8 +104,7 @@ Accept wildcard characters: False
 
 ### -CollectionName
 
-Specifies a name of a collection designated to receive a task sequence deployment.
-A collection is a group of client computers.
+Specify a collection name to which a task sequence is deployed.
 
 ```yaml
 Type: String
@@ -115,7 +120,7 @@ Accept wildcard characters: False
 
 ### -DeploymentId
 
-Specifies a deployment ID.
+Specify the ID for the deployment. This value is a standard ID, for example, `XYZ20174`. It's the same value as the **Deployment ID** property in the console, and the **AdvertisementID** attribute of the SMS_Advertisement WMI class that this cmdlet returns.
 
 ```yaml
 Type: String
@@ -131,7 +136,25 @@ Accept wildcard characters: False
 
 ### -DisableWildcardHandling
 
-DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Fast
+
+Add this parameter to not automatically refresh lazy properties. Lazy properties contain values that are relatively inefficient to retrieve. Getting these properties can cause additional network traffic and decrease cmdlet performance.
+
+If you don't use this parameter, the cmdlet displays a warning. To disable this warning, set `$CMPSSuppressFastNotUsedCheck = $true`.
 
 ```yaml
 Type: SwitchParameter
@@ -147,7 +170,7 @@ Accept wildcard characters: False
 
 ### -ForceWildcardHandling
 
-ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -163,8 +186,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 
-Specifies a task sequence deployment object.
-To obtain a task sequence object, use the [Get-CMTaskSequenceDeployment](Get-CMTaskSequenceDeployment.md) cmdlet.
+Specify a task sequence object to get its deployments. To get this object, use the [Get-CMTaskSequence](Get-CMTaskSequence.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -180,7 +202,7 @@ Accept wildcard characters: False
 
 ### -Name
 
-Specifies the name of a task sequence.
+Specify the name of a task sequence to get its deployments.
 
 ```yaml
 Type: String
@@ -196,6 +218,8 @@ Accept wildcard characters: False
 
 ### -Summary
 
+Add this parameter to return the [SMS_DeploymentSummary WMI class](/mem/configmgr/develop/reference/apps/sms_deploymentsummary-server-wmi-class) object.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -210,7 +234,7 @@ Accept wildcard characters: False
 
 ### -TaskSequenceId
 
-Specifies the ID of a task sequence
+Specify the ID of a task sequence to get its deployments. This value is a standard ID, for example, `XYZ00279`.
 
 ```yaml
 Type: String
@@ -243,9 +267,16 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## NOTES
 
+For more information on these return objects and their properties, see the following articles:
+
+- [SMS_DeploymentSummary server WMI class](/mem/configmgr/develop/reference/apps/sms_deploymentsummary-server-wmi-class)
+- [SMS_Advertisement server WMI class](/mem/configmgr/develop/reference/core/servers/configure/sms_advertisement-server-wmi-class)
+
 ## RELATED LINKS
 
 [New-CMTaskSequenceDeployment](./New-CMTaskSequenceDeployment.md)
 [Set-CMTaskSequenceDeployment](./Set-CMTaskSequenceDeployment.md)
 [Start-CMTaskSequenceDeployment](./Start-CMTaskSequenceDeployment.md)
 [Remove-CMTaskSequenceDeployment](./Remove-CMTaskSequenceDeployment.md)
+
+[Deploy a task sequence in Configuration Manager](/mem/configmgr/osd/deploy-use/deploy-a-task-sequence)
