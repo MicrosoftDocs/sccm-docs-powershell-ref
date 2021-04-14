@@ -61,7 +61,7 @@ Connect to Configuration Manager from an existing Windows PowerShell session by 
     > You can also use the **SMS_ADMIN_UI_PATH** environment variable. For example:
     >
     > ```powershell
-    > Set-Location $env:SMS_ADMIN_UI_PATH\..\
+    > Set-Location "$env:SMS_ADMIN_UI_PATH\..\"
     > ```
     >
     > Also, you can use the **cd** alias to change directories instead of the **Set-Location** cmdlet.
