@@ -2,7 +2,7 @@
 Module Name: ConfigurationManager
 Module Guid: 7f590131-5253-4425-8b32-eeab51a4c393
 Download Help Link: https://aka.ms/configmgrps-help
-Help Version: 5.2103.0.0
+Help Version: 5.2103.0.1
 Locale: en-US
 ---
 
@@ -333,7 +333,7 @@ Disables a Configuration Manager filter rule for status messages.
 This cmdlet is deprecated. Use the [Set-CMTaskSequence](Set-CMTaskSequence.md) cmdlet to disable a task sequence.
 
 ### [Disconnect-CMTrackedObject](Disconnect-CMTrackedObject.md)
-Disconnects a tracked object
+Cleanup unused PowerShell objects to avoid SMS Provider quota violation errors.
 
 ### [Enable-CMAlert](Enable-CMAlert.md)
 Enables Configuration Manager alerts.
@@ -3127,7 +3127,7 @@ Changes configuration settings of OS images.
 Changes configuration settings of OS upgrade packages.
 
 ### [Set-CMPackage](Set-CMPackage.md)
-Changes configuration settings for Configuration Manager packages.
+Modify a package.
 
 ### [Set-CMPackageDeployment](Set-CMPackageDeployment.md)
 Changes values that define how Configuration Manager deploys a software package.
@@ -3442,7 +3442,7 @@ Distribute content to distribution points.
 Upgrades a shared distribution point.
 
 ### [Start-CMObjectTracking](Start-CMObjectTracking.md)
-Starts an object tracking.
+Start tracking SMS Provider objects used by PowerShell to reclaim them.
 
 ### [Start-CMPackageDeployment](Start-CMPackageDeployment.md)
 Starts deployment of a software package to a Configuration Manager collection.
@@ -3463,7 +3463,7 @@ Stop a cloud management gateway service in Azure.
 Stops a migration source.
 
 ### [Stop-CMObjectTracking](Stop-CMObjectTracking.md)
-Stops an object tracking.
+Turn off SMS Provider object tracking after they're reclaimed.
 
 ### [Suspend-CMAlert](Suspend-CMAlert.md)
 Suspends monitoring alerts.

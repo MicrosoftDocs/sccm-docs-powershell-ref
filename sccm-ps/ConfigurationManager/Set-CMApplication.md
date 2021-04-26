@@ -406,7 +406,7 @@ Accept wildcard characters: False
 
 ### -DisplaySupersedenceInApplicationCatalog
 
-Don't use this parameter. The application catalog is no longer supported.
+While the application catalog is no longer supported, you can still use this parameter to allow users to see in Software Center deployments for this application and all applications that it supersedes.
 
 ```yaml
 Type: Boolean
