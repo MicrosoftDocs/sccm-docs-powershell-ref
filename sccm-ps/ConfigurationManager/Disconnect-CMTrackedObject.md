@@ -1,8 +1,7 @@
 ---
-description: Disconnects a tracked object
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/01/2019
+ms.date: 04/26/2021
 schema: 2.0.0
 title: Disconnect-CMTrackedObject
 ---
@@ -10,7 +9,8 @@ title: Disconnect-CMTrackedObject
 # Disconnect-CMTrackedObject
 
 ## SYNOPSIS
-Disconnects a tracked object
+
+Cleanup unused PowerShell objects to avoid SMS Provider quota violation errors.
 
 ## SYNTAX
 
@@ -28,19 +28,45 @@ Disconnect-CMTrackedObject [-All] [-Force] [-DisableWildcardHandling] [-ForceWil
 
 ## DESCRIPTION
 
+When you use **Start-CMObjectTracking** to track SMS Provider objects used by the PowerShell runtime, use this cmdlet to clean up these resources when they're no longer needed.
+
+When you run **Start-CMObjectTracking**, the PowerShell runtime tracks **IResultObject** objects created by Configuration Manager cmdlets. For objects that aren't manually cleaned up with `.Dispose()`, reclaim them by using **Disconnect-CMObject** against an individual object.
+
+Once an object is reclaimed, it can no longer be reused or passed to another cmdlet through the object pipeline.
+
+**Stop-CMObjectTracking** can be used to turn off object tracking. Previously allocated objects remain active.
+
+Unclaimed resources can cause the SMS Provider to raise quota violation errors. These quota issues typically manifest from working with large sets of SMS Provider objects or in long-running environments.
+
 > [!NOTE]
+> This feature is experimental and may be subject to change or removal in a future release.
+>
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
 ### Example 1
-```
-PS XYZ:\>
+
+The first command turns on object tracking. The second command reclaims a single object specified by the **$obj** variable. The third command reclaims all tracked objects. The last command turns off object tracking.
+
+```powershell
+Start-CMObjectTracking
+
+# Reclaim a single tracked object
+$obj | Disconnect-CMObject
+
+# Reclaim all tracked objects
+Disconnect-CMObject -All
+
+Stop-CMObjectTracking
 ```
 
 ## PARAMETERS
 
 ### -All
+
+Add this parameter to reclaim all tracked objects.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ByAll
@@ -54,7 +80,8 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-Prompts you for confirmation before running the cmdlet.
+
+Add this parameter to prompt for confirmation before the cmdlet runs.
 
 ```yaml
 Type: SwitchParameter
@@ -86,7 +113,7 @@ Accept wildcard characters: False
 
 ### -Force
 
-Run the command without asking for confirmation.
+Add this parameter to run the command without asking for confirmation.
 
 ```yaml
 Type: SwitchParameter
@@ -117,6 +144,9 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
+
+Specify any **IResultObject** that you previously created with a Configuration Manager cmdlet.
+
 ```yaml
 Type: IDisposable[]
 Parameter Sets: ByValue
@@ -158,3 +188,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[Start-CMObjectTracking](Start-CMObjectTracking.md)
+[Stop-CMObjectTracking](Stop-CMObjectTracking.md)
