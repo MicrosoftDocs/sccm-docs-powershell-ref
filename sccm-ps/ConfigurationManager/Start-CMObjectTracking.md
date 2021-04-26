@@ -21,9 +21,9 @@ Start-CMObjectTracking [-DisableWildcardHandling] [-ForceWildcardHandling] [-Wha
 
 ## DESCRIPTION
 
-Use **Start-CMObjectTracking** to track SMS Provider objects used by the PowerShell runtime. Then use **Disconnect-CMObject** to clean up these resources when they're no longer needed.
+Use **Start-CMObjectTracking** to track SMS Provider objects used by the PowerShell runtime. Then use **Disconnect-CMTrackedObject** to clean up these resources when they're no longer needed.
 
-When you run **Start-CMObjectTracking**, the PowerShell runtime tracks **IResultObject** objects created by Configuration Manager cmdlets. For objects that aren't manually cleaned up with `.Dispose()`, reclaim them by using **Disconnect-CMObject** against an individual object.
+When you run **Start-CMObjectTracking**, the PowerShell runtime tracks **IResultObject** objects created by Configuration Manager cmdlets. For objects that aren't manually cleaned up with `.Dispose()`, reclaim them by using **Disconnect-CMTrackedObject** against an individual object.
 
 Once an object is reclaimed, it can no longer be reused or passed to another cmdlet through the object pipeline.
 
@@ -46,10 +46,10 @@ The first command turns on object tracking. The second command reclaims a single
 Start-CMObjectTracking
 
 # Reclaim a single tracked object
-$obj | Disconnect-CMObject
+$obj | Disconnect-CMTrackedObject
 
 # Reclaim all tracked objects
-Disconnect-CMObject -All
+Disconnect-CMTrackedObject -All
 
 Stop-CMObjectTracking
 ```

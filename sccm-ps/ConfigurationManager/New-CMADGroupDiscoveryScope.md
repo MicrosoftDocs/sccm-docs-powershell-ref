@@ -10,7 +10,7 @@ title: New-CMADGroupDiscoveryScope
 # New-CMADGroupDiscoveryScope
 
 ## SYNOPSIS
-Creates an a d group discovery scope.
+Creates an Active Directory group discovery scope.
 
 ## SYNTAX
 

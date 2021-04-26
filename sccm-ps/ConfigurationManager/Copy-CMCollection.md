@@ -10,7 +10,7 @@ title: Copy-CMCollection
 # Copy-CMCollection
 
 ## SYNOPSIS
-Copys a Configuration Manager collection.
+Clone a collection to a new one.
 
 ## SYNTAX
 

@@ -10,7 +10,7 @@ title: Get-CMUserDataAndProfileConfigurationItem
 # Get-CMUserDataAndProfileConfigurationItem
 
 ## SYNOPSIS
-Gets an user data and profile configuration item.
+Gets a user data and profile configuration item.
 
 ## SYNTAX
 

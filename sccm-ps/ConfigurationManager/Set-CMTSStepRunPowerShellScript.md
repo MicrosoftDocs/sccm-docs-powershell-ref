@@ -10,7 +10,7 @@ title: Set-CMTSStepRunPowerShellScript
 # Set-CMTSStepRunPowerShellScript
 
 ## SYNOPSIS
-Sets a TS step run power shell script.
+Configure the **Run PowerShell Script** step in a task sequence.
 
 ## SYNTAX
 
