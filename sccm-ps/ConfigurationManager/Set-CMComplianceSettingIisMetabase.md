@@ -10,7 +10,7 @@ title: Set-CMComplianceSettingIisMetabase
 # Set-CMComplianceSettingIisMetabase
 
 ## SYNOPSIS
-Sets a compliance setting iis metabase.
+Configure a compliance setting for the IIS metabase.
 
 ## SYNTAX
 

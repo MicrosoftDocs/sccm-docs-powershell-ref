@@ -114,16 +114,16 @@ This cmdlet allows for getting a native ```DeploymentType``` object from an ```S
 ### Resource tracking and recovery (BETA)
 New cmdlets have been added to support tracking SMS Provider objects used by the PowerShell runtime, and to clean up these resources when they're no longer needed.
 
-- Disconnect-CMObject
+- Disconnect-CMTrackedObject
 - Start-CMObjectTracking
 - Stop-CMObjectTracking
 
-When ```Start-CMObjectTracking``` is run, the PowerShell runtime will track ```IResultObject``` objects created by Cmdlet Library cmdlets. Cmdlets that aren't manually cleaned up with ```.Dispose()``` can be reclaimed by using ```Disconnect-CMObject``` against an individual object.
+When ```Start-CMObjectTracking``` is run, the PowerShell runtime will track ```IResultObject``` objects created by Cmdlet Library cmdlets. Cmdlets that aren't manually cleaned up with ```.Dispose()``` can be reclaimed by using ```Disconnect-CMTrackedObject``` against an individual object.
 
 #### Example
 ```powershell
 # Reclaim all tracked objects
-$o | Disconnect-CMObject```), or ```Disconnect-CMObject -All
+$o | Disconnect-CMTrackedObject```), or ```Disconnect-CMTrackedObject -All
 ```
 
 Once an object is reclaimed, it can no longer be reused or passed to another cmdlet through the object pipeline.

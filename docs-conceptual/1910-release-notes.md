@@ -176,20 +176,20 @@ Changes to **Schedule** may not be shown in the Configuration Manager console ev
 
 This version adds new cmdlets to support tracking SMS Provider objects used by the PowerShell runtime, and to clean up these resources when they're no longer needed.
 
-- Disconnect-CMObject
+- Disconnect-CMTrackedObject
 - Start-CMObjectTracking
 - Stop-CMObjectTracking
 
-When you run `Start-CMObjectTracking`, the PowerShell runtime tracks `IResultObject` objects created by Cmdlet Library cmdlets. For cmdlets that aren't manually cleaned up with `.Dispose()`, reclaim them by using `Disconnect-CMObject` against an individual object.
+When you run `Start-CMObjectTracking`, the PowerShell runtime tracks `IResultObject` objects created by Cmdlet Library cmdlets. For cmdlets that aren't manually cleaned up with `.Dispose()`, reclaim them by using `Disconnect-CMTrackedObject` against an individual object.
 
 #### Example
 
 ```powershell
 # Reclaim a single tracked object
-$o | Disconnect-CMObject
+$o | Disconnect-CMTrackedObject
 
 # Reclaim all tracked objects
-Disconnect-CMObject -All
+Disconnect-CMTrackedObject -All
 ```
 
 Once an object is reclaimed, it can no longer be reused or passed to another cmdlet through the object pipeline.

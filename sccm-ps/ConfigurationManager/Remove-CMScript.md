@@ -11,7 +11,7 @@ title: Remove-CMScript
 
 ## SYNOPSIS
 
-Removes Configuration Manager Powershell scripts.
+Remove a Configuration Manager PowerShell script.
 
 ## SYNTAX
 

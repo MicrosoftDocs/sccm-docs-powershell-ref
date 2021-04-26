@@ -8,7 +8,7 @@ schema: 2.0.0
 # Remove-CMTSStepSetupWindowsAndConfigMgr
 
 ## SYNOPSIS
-Removes a TS step setup windows and config mgr
+Remove the **Setup Windows and ConfigMgr** step from a task sequence.
 
 ## SYNTAX
 

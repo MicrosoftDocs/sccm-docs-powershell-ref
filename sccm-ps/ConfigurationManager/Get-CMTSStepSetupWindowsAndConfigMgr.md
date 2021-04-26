@@ -10,7 +10,7 @@ title: Get-CMTSStepSetupWindowsAndConfigMgr
 # Get-CMTSStepSetupWindowsAndConfigMgr
 
 ## SYNOPSIS
-Gets a TS step setup window and config mgr.
+Get the **Setup Windows and ConfigMgr** step from a specific task sequence.
 
 ## SYNTAX
 

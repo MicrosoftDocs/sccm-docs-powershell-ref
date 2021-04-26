@@ -11,7 +11,7 @@ title: New-CMTSStepRunPowerShellScript
 
 ## SYNOPSIS
 
-Creates a t s step run power shell script.
+Create the **Run PowerShell Script** step in a task sequence.
 
 ## SYNTAX
 
