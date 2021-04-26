@@ -10,7 +10,7 @@ title: Get-CMTSStepRunPowerShellScript
 # Get-CMTSStepRunPowerShellScript
 
 ## SYNOPSIS
-Gets a TS step run power shell script
+Get the **Run PowerShell Script** step from a specific task sequence.
 
 ## SYNTAX
 

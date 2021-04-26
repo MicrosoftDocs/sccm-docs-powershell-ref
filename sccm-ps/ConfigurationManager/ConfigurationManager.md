@@ -8,7 +8,7 @@ Locale: en-US
 
 # ConfigurationManager Module
 ## Description
-This section contains the help topics and about topics for the Configuration Manager cmdlets.
+This section contains the help articles for the Configuration Manager cmdlets.
 
 ## ConfigurationManager Cmdlets
 ### [Add-CMApplicationCatalogWebServicePoint](Add-CMApplicationCatalogWebServicePoint.md)
@@ -60,7 +60,7 @@ Adds a compliance setting directory
 Adds a compliance setting file
 
 ### [Add-CMComplianceSettingIisMetabase](Add-CMComplianceSettingIisMetabase.md)
-Adds a compliance setting iis metabase
+Add a compliance setting for the IIS metabase.
 
 ### [Add-CMComplianceSettingRegistryKey](Add-CMComplianceSettingRegistryKey.md)
 Adds a compliance setting registry key
@@ -285,7 +285,7 @@ Converts a **ManagementBaseObject** to an **IResultObject**.
 Make a copy of a BitLocker management policy settings object.
 
 ### [Copy-CMCollection](Copy-CMCollection.md)
-Copys a Configuration Manager collection.
+Clone a collection to a new one.
 
 ### [Copy-CMConfigurationPolicy](Copy-CMConfigurationPolicy.md)
 Copies a configuration policy.
@@ -333,7 +333,7 @@ Disables a Configuration Manager filter rule for status messages.
 This cmdlet is deprecated. Use the [Set-CMTaskSequence](Set-CMTaskSequence.md) cmdlet to disable a task sequence.
 
 ### [Disconnect-CMTrackedObject](Disconnect-CMTrackedObject.md)
-Cleanup unused PowerShell objects to avoid SMS Provider quota violation errors.
+Clean up unused PowerShell objects to avoid SMS Provider quota violation errors.
 
 ### [Enable-CMAlert](Enable-CMAlert.md)
 Enables Configuration Manager alerts.
@@ -348,7 +348,7 @@ Enables a device driver.
 Enables programs in Configuration Manager packages.
 
 ### [Enable-CMSiteFeature](Enable-CMSiteFeature.md)
-Enable a an optional feature.
+Enable an optional feature.
 
 ### [Enable-CMSoftwareMeteringRule](Enable-CMSoftwareMeteringRule.md)
 Enables Configuration Manager software metering rules.
@@ -1168,7 +1168,7 @@ Gets a TS step reboot.
 Gets a TS step run command line.
 
 ### [Get-CMTSStepRunPowerShellScript](Get-CMTSStepRunPowerShellScript.md)
-Gets a TS step run power shell script
+Get the **Run PowerShell Script** step from a specific task sequence.
 
 ### [Get-CMTSStepRunTaskSequence](Get-CMTSStepRunTaskSequence.md)
 Use this cmdlet to get the **Run Task Sequence** step from a specific task sequence.
@@ -1177,7 +1177,7 @@ Use this cmdlet to get the **Run Task Sequence** step from a specific task seque
 Gets task sequence Set Dynamic Variable steps in Configuration Manager.
 
 ### [Get-CMTSStepSetupWindowsAndConfigMgr](Get-CMTSStepSetupWindowsAndConfigMgr.md)
-Gets a TS step setup window and config mgr.
+Get the **Setup Windows and ConfigMgr** step from a specific task sequence.
 
 ### [Get-CMTSStepSetVariable](Get-CMTSStepSetVariable.md)
 Gets a TS step set variable.
@@ -1207,7 +1207,7 @@ Gets the include membership rules from one or more user collections in the Confi
 Gets the query membership rules from one or more user collections in the Configuration Manager hierarchy.
 
 ### [Get-CMUserDataAndProfileConfigurationItem](Get-CMUserDataAndProfileConfigurationItem.md)
-Gets an user data and profile configuration item.
+Gets a user data and profile configuration item.
 
 ### [Get-CMUserDeviceAffinity](Get-CMUserDeviceAffinity.md)
 Get the relationships between a device and its primary users.
@@ -1429,7 +1429,7 @@ Creates a Configuration Manager user account.
 Creates one or more Active Directory forest objects in Configuration Manager.
 
 ### [New-CMADGroupDiscoveryScope](New-CMADGroupDiscoveryScope.md)
-Creates an a d group discovery scope.
+Creates an Active Directory group discovery scope.
 
 ### [New-CMAdministrativeUser](New-CMAdministrativeUser.md)
 Creates an administrative user.
@@ -2077,7 +2077,7 @@ Creates a t s step reboot.
 Creates a t s step run command line.
 
 ### [New-CMTSStepRunPowerShellScript](New-CMTSStepRunPowerShellScript.md)
-Creates a t s step run power shell script.
+Create the **Run PowerShell Script** step in a task sequence.
 
 ### [New-CMTSStepRunTaskSequence](New-CMTSStepRunTaskSequence.md)
 Use this cmdlet to create the task sequence step **Run Task Sequence**.
@@ -2086,7 +2086,7 @@ Use this cmdlet to create the task sequence step **Run Task Sequence**.
 Create a task sequence Set Dynamic Variable step in Configuration Manager.
 
 ### [New-CMTSStepSetupWindowsAndConfigMgr](New-CMTSStepSetupWindowsAndConfigMgr.md)
-Creates a t s step setup windows and config mgr.
+Create the **Setup Windows and ConfigMgr** step in a task sequence.
 
 ### [New-CMTSStepSetVariable](New-CMTSStepSetVariable.md)
 Creates a t s step set variable.
@@ -2434,7 +2434,7 @@ Removes a reporting service point.
 Removes a Configuration Manager resource.
 
 ### [Remove-CMScript](Remove-CMScript.md)
-Removes Configuration Manager Powershell scripts.
+Remove a Configuration Manager PowerShell script.
 
 ### [Remove-CMSecondarySite](Remove-CMSecondarySite.md)
 Removes a secondary site from Configuration Manager.
@@ -2602,7 +2602,7 @@ Removes a TS step reboot
 Removes a TS step run command line
 
 ### [Remove-CMTSStepRunPowerShellScript](Remove-CMTSStepRunPowerShellScript.md)
-Removes a TS step run power shell script
+Remove the **Run PowerShell Script** step from a task sequence.
 
 ### [Remove-CMTSStepRunTaskSequence](Remove-CMTSStepRunTaskSequence.md)
 Use cmdlet to remove the task sequence step **Run Task Sequence** from a specific task sequence.
@@ -2611,7 +2611,7 @@ Use cmdlet to remove the task sequence step **Run Task Sequence** from a specifi
 Remove Set Dynamic Variable steps from a Configuration Manager task sequence.
 
 ### [Remove-CMTSStepSetupWindowsAndConfigMgr](Remove-CMTSStepSetupWindowsAndConfigMgr.md)
-Removes a TS step setup windows and config mgr
+Remove the **Setup Windows and ConfigMgr** step from a task sequence.
 
 ### [Remove-CMTSStepSetVariable](Remove-CMTSStepSetVariable.md)
 Removes a TS step set variable
@@ -2929,7 +2929,7 @@ Sets a compliance setting directory.
 Sets a compliance setting file.
 
 ### [Set-CMComplianceSettingIisMetabase](Set-CMComplianceSettingIisMetabase.md)
-Sets a compliance setting iis metabase.
+Configure a compliance setting for the IIS metabase.
 
 ### [Set-CMComplianceSettingRegistryKey](Set-CMComplianceSettingRegistryKey.md)
 Sets a compliance setting registry key.
@@ -3352,7 +3352,7 @@ Sets a TS step reboot.
 Sets a TS step run command line.
 
 ### [Set-CMTSStepRunPowerShellScript](Set-CMTSStepRunPowerShellScript.md)
-Sets a TS step run power shell script.
+Configure the **Run PowerShell Script** step in a task sequence.
 
 ### [Set-CMTSStepRunTaskSequence](Set-CMTSStepRunTaskSequence.md)
 Use this cmdlet to edit the task sequence step **Run Task Sequence**.
@@ -3361,7 +3361,7 @@ Use this cmdlet to edit the task sequence step **Run Task Sequence**.
 Configure the Set Dynamic Variable task sequence step.
 
 ### [Set-CMTSStepSetupWindowsAndConfigMgr](Set-CMTSStepSetupWindowsAndConfigMgr.md)
-Sets a TS step setup window and config mgr.
+Configure the **Setup Windows and ConfigMgr** step in a task sequence.
 
 ### [Set-CMTSStepSetVariable](Set-CMTSStepSetVariable.md)
 Sets a TS step set variable.

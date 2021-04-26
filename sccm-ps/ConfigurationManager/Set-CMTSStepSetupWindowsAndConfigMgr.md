@@ -10,7 +10,7 @@ title: Set-CMTSStepSetupWindowsAndConfigMgr
 # Set-CMTSStepSetupWindowsAndConfigMgr
 
 ## SYNOPSIS
-Sets a TS step setup window and config mgr.
+Configure the **Setup Windows and ConfigMgr** step in a task sequence.
 
 ## SYNTAX
 

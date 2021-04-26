@@ -10,7 +10,7 @@ title: Add-CMComplianceSettingIisMetabase
 # Add-CMComplianceSettingIisMetabase
 
 ## SYNOPSIS
-Adds a compliance setting iis metabase
+Add a compliance setting for the IIS metabase.
 
 ## SYNTAX
 

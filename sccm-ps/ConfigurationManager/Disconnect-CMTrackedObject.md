@@ -10,7 +10,7 @@ title: Disconnect-CMTrackedObject
 
 ## SYNOPSIS
 
-Cleanup unused PowerShell objects to avoid SMS Provider quota violation errors.
+Clean up unused PowerShell objects to avoid SMS Provider quota violation errors.
 
 ## SYNTAX
 

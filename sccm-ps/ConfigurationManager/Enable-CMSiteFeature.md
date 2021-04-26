@@ -1,5 +1,4 @@
 ---
-description: Enable an optional feature
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 03/26/2021
@@ -11,7 +10,7 @@ title: Enable-CMSiteFeature
 
 ## SYNOPSIS
 
-Enable a an optional feature.
+Enable an optional feature.
 
 ## SYNTAX
 
