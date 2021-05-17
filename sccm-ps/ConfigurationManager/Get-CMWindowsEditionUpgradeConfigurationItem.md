@@ -1,6 +1,6 @@
-﻿---
+---
 description: Get a Windows 10 edition upgrade policy.
-external help file: AdminUI.PS-help.xml
+external help file: AdminUI.PS.psm1-Help.xml
 Module Name: ConfigurationManager
 ms.date: 12/03/2020
 schema: 2.0.0

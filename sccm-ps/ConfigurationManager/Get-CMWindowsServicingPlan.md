@@ -1,6 +1,6 @@
-﻿---
+---
 description: Gets a Windows 10 servicing plan.
-external help file: AdminUI.PS-help.xml
+external help file: AdminUI.PS.psm1-Help.xml
 Module Name: ConfigurationManager
 ms.date: 05/02/2019
 schema: 2.0.0
