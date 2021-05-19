@@ -1,5 +1,5 @@
 ---
-external help file: AdminUI.PS-help.xml
+external help file: AdminUI.PS.psm1-Help.xml
 Module Name: ConfigurationManager
 online version:
 schema: 2.0.0

@@ -1,6 +1,6 @@
 ---
 description: Removes a TS step install software.
-external help file: AdminUI.PS-help.xml
+external help file: AdminUI.PS.psm1-Help.xml
 Module Name: ConfigurationManager
 ms.date: 05/07/2019
 schema: 2.0.0
