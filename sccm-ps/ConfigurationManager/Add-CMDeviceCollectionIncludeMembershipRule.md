@@ -1,6 +1,6 @@
 ---
 description: Adds an Include Collections membership rule to a device collection.
-external help file: AdminUI.PS-help.xml
+external help file: AdminUI.PS.psm1-Help.xml
 Module Name: ConfigurationManager
 ms.date: 04/29/2019
 schema: 2.0.0

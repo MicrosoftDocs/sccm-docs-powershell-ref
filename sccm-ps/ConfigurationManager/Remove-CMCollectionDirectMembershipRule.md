@@ -1,6 +1,6 @@
 ---
 description: Remove a direct membership rule from a collection.
-external help file: AdminUI.PS-help.xml
+external help file: AdminUI.PS.psm1-Help.xml
 Module Name: ConfigurationManager
 ms.date: 01/05/2021
 schema: 2.0.0

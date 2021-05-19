@@ -1,6 +1,6 @@
 ---
 description: Remove Set Dynamic Variable steps from a Configuration Manager task sequence.
-external help file: AdminUI.PS-help.xml
+external help file: AdminUI.PS.psm1-Help.xml
 Module Name: ConfigurationManager
 ms.date: 01/08/2019
 schema: 2.0.0
