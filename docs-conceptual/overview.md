@@ -1,7 +1,7 @@
 ---
 title: Configuration Manager PowerShell cmdlets
 description: Manage your Configuration Manager hierarchy using Windows PowerShell. 
-ms.date: 05/14/2021
+ms.date: 05/19/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: overview
@@ -110,9 +110,10 @@ Get-Help Get-CMDevice -Parameter *
 
 For more information, see the following PowerShell blog post: [You've got Help!](https://devblogs.microsoft.com/powershell/youve-got-help/).
 
+<!--
 ### Known issue with updateable help
 
-<!--9129926-->
+<!--9129926
 
 For a set of cmdlets, Get-Help can't find the help files on the computer and only displays partial help. This issue affects all cmdlets in "C:\Program Files (x86)\Microsoft Endpoint Manager\AdminConsole\bin\AdminUI.PS.psm1" like **Add-CMDeviceCollectionExcludeMembershipRule** and **Get-CMTSStepApplyDataImage**.
 
@@ -121,6 +122,7 @@ This issue is because the help file is incorrectly named. To work around this is
 ```powershell
 Rename-Item -Path "C:\Program Files (x86)\Microsoft Endpoint Manager\AdminConsole\bin\en-US\AdminUI.PS-help.xml" -NewName "AdminUI.PS.psm1-help.xml" -Force
 ```
+-->
 
 ## Common parameters
 
