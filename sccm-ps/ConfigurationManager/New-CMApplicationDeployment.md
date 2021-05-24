@@ -2,7 +2,7 @@
 description: Create an application deployment.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 12/23/2020
+ms.date: 05/24/2020
 schema: 2.0.0
 title: New-CMApplicationDeployment
 ---
@@ -626,8 +626,6 @@ Accept wildcard characters: False
 
 Add this parameter to create a deployment simulation. For more information, see [Simulate application deployments with Configuration Manager](/mem/configmgr/apps/deploy-use/simulate-application-deployments).
 
-To start the simulation, use the [Start-CMApplicationDeploymentSimulation](Start-CMApplicationDeploymentSimulation.md) cmdlet.
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -770,7 +768,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Set-CMApplicationDeployment](Set-CMApplicationDeployment.md)
 
 [Start-CMApplicationDeployment](Start-CMApplicationDeployment.md)
-
-[Start-CMApplicationDeploymentSimulation](Start-CMApplicationDeploymentSimulation.md)
 
 [Deploy applications with Configuration Manager](/mem/configmgr/apps/deploy-use/deploy-applications)
