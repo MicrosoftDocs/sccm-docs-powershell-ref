@@ -56,6 +56,8 @@ When programmatically adding steps to a task sequence, it's important to underst
 
 When you use the [task sequence editor](/mem/configmgr/osd/understand/task-sequence-editor#bkmk_edit) to add a step, the new step is added after the currently selected step. This cmdlet works similarly, it adds the step after the specified index. You use the **InsertStepStartIndex** parameter to specify the step index.
 
+This cmdlet can only add steps to the main level of the task sequence, not in groups. To add steps in groups, use [Set-CMTaskSequenceGroup](Set-CMTaskSequenceGroup.md). For example, with the sample task sequence, if you use **Add-CMTaskSequenceStep** with the **InsertStepStartIndex** parameter value `5`, the cmdlet adds the new step after **group5** and before **step6**.
+
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
@@ -229,7 +231,7 @@ Accept wildcard characters: False
 
 ### -StepName
 
-Specifies the name of a step.<!-- checking on this -->
+Don't use this parameter. It doesn't work with this cmdlet, and will be removed.
 
 ```yaml
 Type: String
@@ -303,11 +305,23 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### System.Object
 ## NOTES
 
+While not listed in the related links section, you can use the **Get-CMTSStep\***, **New-CMTSStep\***, **Remove-CMTSStep\***, and **Set-CMTSStep\*** cmdlets. For example:
+
+- [Get-CMTSStepApplyDataImage](Get-CMTSStepApplyDataImage.md)
+- [New-CMTSStepApplyDataImage](New-CMTSStepApplyDataImage.md)
+- [Remove-CMTSStepApplyDataImage](Remove-CMTSStepApplyDataImage.md)
+- [Set-CMTSStepApplyDataImage](Set-CMTSStepApplyDataImage.md)
+
+There's a set of these cmdlets for each task sequence step.
+
 ## RELATED LINKS
 
-[Get-CMTaskSequenceStep](./Get-CMTaskSequenceStep.md)
-[Get-CMTaskSequenceStepCondition](./Get-CMTaskSequenceStepCondition.md)
-[Remove-CMTaskSequenceStep](./Remove-CMTaskSequenceStep.md)
-[Get-CMTaskSequenceGroup](./Get-CMTaskSequenceGroup.md)
+[Get-CMTaskSequenceStep](Get-CMTaskSequenceStep.md)
+[Get-CMTaskSequenceStepCondition](Get-CMTaskSequenceStepCondition.md)
+[Remove-CMTaskSequenceStep](Remove-CMTaskSequenceStep.md)
+
+[Get-CMTaskSequenceGroup](Get-CMTaskSequenceGroup.md)
+[New-CMTaskSequenceGroup](New-CMTaskSequenceGroup.md)
+[Set-CMTaskSequenceGroup](Set-CMTaskSequenceGroup.md)
 
 [About task sequence steps](/mem/configmgr/osd/understand/task-sequence-steps)
