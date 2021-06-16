@@ -141,4 +141,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Get-CMBaselineDeployment](Get-CMBaselineDeployment.md)
 
-[Start-CMBaselineDeployment](Start-CMBaselineDeployment.md)
+[New-CMBaselineDeployment](New-CMBaselineDeployment.md)

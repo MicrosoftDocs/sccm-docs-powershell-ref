@@ -1,8 +1,8 @@
 ---
-description: Creates a package deployment to a Configuration Manager collection.
+description: Create a package deployment to a Configuration Manager collection.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/07/2019
+ms.date: 06/16/2021
 schema: 2.0.0
 title: New-CMPackageDeployment
 ---
@@ -124,7 +124,7 @@ New-CMPackageDeployment [-DeployPurpose <DeployPurposeType>] [-DeviceProgram] [-
 The **New-CMPackageDeployment** cmdlet creates a specified software package to computers that belong to a Configuration Manager collection.
 
 You can use CollecitonId or CollectionName or Collection to specify the target collection to deploy the package.
-To specify DeploymentStartDateTime and DeploymentStartDay and DeploymentStartTime, use [Start-CMPackageDeployment](Start-CMPackageDeployment.md).
+To specify DeploymentStartDateTime and DeploymentStartDay and DeploymentStartTime, use [Set-CMPackageDeployment](Set-CMPackageDeployment.md).
 The cmdlet always output the new created deployment.
 You can choose when the package becomes available and when the package deployment expires.
 You can specify whether Configuration Manager deploys the package only once or repeatedly and what happens when installation fails for a computer.
@@ -906,7 +906,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Start-CMPackageDeployment](Start-CMPackageDeployment.md)
 [Get-CMPackageDeployment](Get-CMPackageDeployment.md)
 [Get-CMPackageDeploymentStatus](Get-CMPackageDeploymentStatus.md)
 [Set-CMPackageDeployment](Set-CMPackageDeployment.md)

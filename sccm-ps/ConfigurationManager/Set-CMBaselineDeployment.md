@@ -50,7 +50,7 @@ Configuration Manager assigns baselines to computer in collections, together wit
 Use the baseline and the name of a collection to specify a deployment to modify.
 You can specify a baseline by its name or ID, or use the **Get-CMBaseline** cmdlet to get a baseline object.
 
-You can use the **Start-CMBaselineDeployment** cmdlet to begin a deployment.
+You can use the **New-CMBaselineDeployment** cmdlet to create a deployment.
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
@@ -362,6 +362,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Start-CMBaselineDeployment](Start-CMBaselineDeployment.md)
+[New-CMBaselineDeployment](New-CMBaselineDeployment.md)
 
 [Get-CMBaseline](Get-CMBaseline.md)

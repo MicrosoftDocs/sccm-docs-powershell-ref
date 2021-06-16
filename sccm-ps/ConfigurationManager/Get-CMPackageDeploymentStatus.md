@@ -188,7 +188,6 @@ Cmdlet aliases: **Get-CMDeploymentStatus**
 ## RELATED LINKS
 
 [New-CMPackageDeployment](New-CMPackageDeployment.md)
-[Start-CMPackageDeployment](Start-CMPackageDeployment.md)
 [Get-CMPackageDeployment](Get-CMPackageDeployment.md)
 [Set-CMPackageDeployment](Set-CMPackageDeployment.md)
 [Remove-CMPackageDeployment](Remove-CMPackageDeployment.md)

@@ -11,7 +11,7 @@ title: Start-CMTaskSequenceDeployment
 
 ## SYNOPSIS
 
-Start a task sequence deployment.
+(Deprecated) Start a task sequence deployment.
 
 ## SYNTAX
 
@@ -50,6 +50,9 @@ Start-CMTaskSequenceDeployment [-AlertDateTime <DateTime>] [-AlertDay <DateTime>
 ```
 
 ## DESCRIPTION
+
+> [!IMPORTANT]
+> This cmdlet is deprecated. Use [New-CMTaskSequenceDeployment](New-CMTaskSequenceDeployment.md) instead.
 
 Use this cmdlet to start a task sequence deployment. A task sequence deployment assigns a task sequence to a collection of computers. For more information, see [Deploy a task sequence in Configuration Manager](/mem/configmgr/osd/deploy-use/deploy-a-task-sequence).
 

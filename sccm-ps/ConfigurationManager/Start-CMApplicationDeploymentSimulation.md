@@ -10,7 +10,7 @@ title: Start-CMApplicationDeploymentSimulation
 # Start-CMApplicationDeploymentSimulation
 
 ## SYNOPSIS
-Starts an application deployment simulation in Configuration Manager.
+(Deprecated) Starts an application deployment simulation in Configuration Manager.
 
 ## SYNTAX
 
@@ -36,6 +36,10 @@ Start-CMApplicationDeploymentSimulation -CollectionName <String> [-DeploymentAct
 ```
 
 ## DESCRIPTION
+
+> [!IMPORTANT]
+> This cmdlet is deprecated. Use [New-CMApplicationDeploymentSimulation](New-CMApplicationDeploymentSimulation.md) instead.
+
 The **Start-CMApplicationDeploymentSimulation** cmdlet starts an application deployment.
 Use simulated deployment to test an application deployment without installing an application.
 
