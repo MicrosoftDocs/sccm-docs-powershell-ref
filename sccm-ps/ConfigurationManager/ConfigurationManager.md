@@ -3418,7 +3418,7 @@ Starts the deployment of an antimalware policy to the members of a Configuration
 (Deprecated) Starts an application deployment in Configuration Manager.
 
 ### [Start-CMApplicationDeploymentSimulation](Start-CMApplicationDeploymentSimulation.md)
-(Deprecated) Starts an application deployment simulation in Configuration Manager.
+Starts an application deployment simulation in Configuration Manager.
 
 ### [Start-CMBaselineDeployment](Start-CMBaselineDeployment.md)
 (Deprecated) Starts deployment of a Configuration Manager baseline configuration to a collection of computers.

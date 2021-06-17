@@ -271,7 +271,7 @@ Accept wildcard characters: False
 
 ### -MaintenanceWindow
 
-Specify an maintenance window object to configure. To get this object, use the [Get-CMCMaintenanceWindow](Get-CMCMaintenanceWindow.md) cmdlet.
+Specify an maintenance window object to configure. To get this object, use the [Get-CMMaintenanceWindow](Get-CMMaintenanceWindow.md) cmdlet.
 
 ```yaml
 Type: IResultObject
