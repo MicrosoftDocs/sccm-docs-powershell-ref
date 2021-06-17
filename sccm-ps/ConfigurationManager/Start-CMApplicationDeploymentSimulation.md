@@ -36,6 +36,7 @@ Start-CMApplicationDeploymentSimulation -CollectionName <String> [-DeploymentAct
 ```
 
 ## DESCRIPTION
+
 The **Start-CMApplicationDeploymentSimulation** cmdlet starts an application deployment.
 Use simulated deployment to test an application deployment without installing an application.
 

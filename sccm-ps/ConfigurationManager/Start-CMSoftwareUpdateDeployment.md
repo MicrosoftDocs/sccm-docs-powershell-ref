@@ -10,7 +10,7 @@ title: Start-CMSoftwareUpdateDeployment
 # Start-CMSoftwareUpdateDeployment
 
 ## SYNOPSIS
-Initiates a software update deployment in Configuration Manager.
+(Deprecated) Initiates a software update deployment in Configuration Manager.
 
 ## SYNTAX
 
@@ -95,6 +95,10 @@ Start-CMSoftwareUpdateDeployment [-AcceptEula] [-AllowRestart <Boolean>] [-Allow
 ```
 
 ## DESCRIPTION
+
+> [!IMPORTANT]
+> This cmdlet is deprecated. Use [New-CMSoftwareUpdateDeployment](New-CMSoftwareUpdateDeployment.md) instead.
+
 The **Start-CMSoftwareUpdateDeployment** cmdlet initiates a software update deployment.
 
 > [!NOTE]

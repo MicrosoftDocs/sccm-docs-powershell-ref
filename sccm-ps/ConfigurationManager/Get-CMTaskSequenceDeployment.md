@@ -276,7 +276,6 @@ For more information on these return objects and their properties, see the follo
 
 [New-CMTaskSequenceDeployment](./New-CMTaskSequenceDeployment.md)
 [Set-CMTaskSequenceDeployment](./Set-CMTaskSequenceDeployment.md)
-[Start-CMTaskSequenceDeployment](./Start-CMTaskSequenceDeployment.md)
 [Remove-CMTaskSequenceDeployment](./Remove-CMTaskSequenceDeployment.md)
 
 [Deploy a task sequence in Configuration Manager](/mem/configmgr/osd/deploy-use/deploy-a-task-sequence)
