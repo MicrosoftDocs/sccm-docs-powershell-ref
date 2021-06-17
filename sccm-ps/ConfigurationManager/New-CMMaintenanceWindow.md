@@ -1,8 +1,8 @@
 ---
-description: Creates a maintenance window for a collection.
+description: Create a maintenance window for a collection.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/07/2019
+ms.date: 06/16/2021
 schema: 2.0.0
 title: New-CMMaintenanceWindow
 ---
@@ -10,7 +10,8 @@ title: New-CMMaintenanceWindow
 # New-CMMaintenanceWindow
 
 ## SYNOPSIS
-Creates a maintenance window for a collection.
+
+Create a maintenance window for a collection.
 
 ## SYNTAX
 
@@ -39,8 +40,12 @@ New-CMMaintenanceWindow [-ApplyTo <MaintenanceWindowApplyTo>] [-ApplyToSoftwareU
 ```
 
 ## DESCRIPTION
-The **New-CMMaintenanceWindow** cmdlet creates a maintenance window for a collection.
-Maintenance windows are periods of time reserved for write operations such as applying software updates, installing software, or configuring computer settings.
+
+Use this cmdlet to create a maintenance window for a collection.
+Maintenance windows are recurring periods of time when the Configuration Manager client can run tasks. For example, apply software updates or install software.
+This window makes sure that significant system changes only happen at times that don't affect productivity and uptime.
+
+For more information on maintenance windows, see [How to use maintenance windows in Configuration Manager](/mem/configmgr/core/clients/manage/collections/use-maintenance-windows).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
@@ -48,19 +53,38 @@ Maintenance windows are periods of time reserved for write operations such as ap
 ## EXAMPLES
 
 ### Example 1: Create a maintenance window
-```
-PS XYZ:\> $MWSchedule = New-CMSchedule -DayOfWeek Friday -DurationCount 0 -DurationInterval Hours -RecurCount 1 -Start "10/12/2013 21:00:00"
-PS XYZ:\> New-CMMaintenanceWindow -CollectionID "AAA0005D" -Name "MonthlySchedule" -Schedule $MWSchedule
+
+The first command uses the **New-CMSchedule** cmdlet to create a schedule object, and then stores it in the `$MWSchedule` variable.
+
+The second command creates a maintenance window named **MonthlySchedule** for the specified collection.
+The maintenance window uses the schedule stored in the `$MWSchedule` variable.
+
+```powershell
+$MWSchedule = New-CMSchedule -DayOfWeek Friday -DurationCount 1 -DurationInterval Hours -RecurCount 1 -Start "10/12/2013 21:00:00"
+New-CMMaintenanceWindow -CollectionId "XYZ0005D" -Name "MonthlySchedule" -Schedule $MWSchedule
 ```
 
-The first command uses the **New-CMSchedule** cmdlet to create a schedule object, and then stores it in the $MWSchedule variable.
+### Example 2: Copy a maintenance window between collections
 
-The second command creates a maintenance window named MonthlySchedule for the specified collection.
-The maintenance window uses the schedule stored in the $MWSchedule variable.
+The first command gets a maintenance window from the collection with ID **XYZ0003F**. It then creates a maintenance window on the collection with ID **XYZ0005D** with the same name, same schedule, and only for software updates.
+
+```powershell
+$mw1 = Get-CMMaintenanceWindow -CollectionId "XYZ0003F" -MaintenanceWindowName "nightly SUM window"
+New-CMMaintenanceWindow -CollectionId "XYZ0005D" -Name $mw1.Name -Schedule (Convert-CMSchedule -ScheduleString $mw1.ServiceWindowSchedules) -ApplyTo SoftwareUpdatesOnly
+```
 
 ## PARAMETERS
 
 ### -ApplyTo
+
+Specify the type of maintenance window to create:
+
+- `Any`: The maintenance window applies to all deployments.
+- `SoftwareUpdatesOnly`: The maintenance window only applies to software update deployments.
+- `TaskSequencesOnly`: The maintenance window only applies to task sequence deployments.
+
+If you don't specify this parameter, `Any` is the default.
+
 ```yaml
 Type: MaintenanceWindowApplyTo
 Parameter Sets: (All)
@@ -75,7 +99,8 @@ Accept wildcard characters: False
 ```
 
 ### -ApplyToSoftwareUpdateOnly
-Indicates that the maintenance window is used to apply software updates only.
+
+This parameter is deprecated. Use the **ApplyTo** parameter with the **SoftwareUpdatesOnly** value.
 
 ```yaml
 Type: SwitchParameter
@@ -90,7 +115,8 @@ Accept wildcard characters: False
 ```
 
 ### -ApplyToTaskSequenceOnly
-Indicates that the maintenance window is used to apply task sequences only.
+
+This parameter is deprecated. Use the **ApplyTo** parameter with the **TaskSequencesOnly** value.
 
 ```yaml
 Type: SwitchParameter
@@ -105,7 +131,8 @@ Accept wildcard characters: False
 ```
 
 ### -CollectionId
-Specifies the ID of the collection that the maintenance window applies to.
+
+Specify the ID of a collection to add the maintenance window. This ID is a standard collection ID, for example `XYZ0003F`.
 
 ```yaml
 Type: String
@@ -120,6 +147,9 @@ Accept wildcard characters: False
 ```
 
 ### -CollectionName
+
+Specify the name of a collection to add the maintenance window.
+
 ```yaml
 Type: String
 Parameter Sets: ByCollectionName
@@ -133,7 +163,8 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-Prompts you for confirmation before running the cmdlet.
+
+Add this parameter to prompt for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -180,8 +211,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies the input to this cmdlet.
-You can use this parameter, or you can pipe the input to this cmdlet.
+
+Specify an object for a collection to add the maintenance window. To get this object, use the [Get-CMCollection](Get-CMCollection.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -196,6 +227,9 @@ Accept wildcard characters: False
 ```
 
 ### -IsEnabled
+
+To create a maintenance window on a collection, but not have it active, set this parameter to `$false`. If you don't include this parameter, this cmdlet enables the maintenance window.
+
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
@@ -209,6 +243,9 @@ Accept wildcard characters: False
 ```
 
 ### -IsUtc
+
+To configure the maintenance window schedule to use Coordinated Universal Time (UTC), set this parameter to `$true`. If you don't include this parameter, the schedule uses local time.
+
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
@@ -222,7 +259,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies the name of the maintenance window.
+
+Specify the name of the maintenance window.
 
 ```yaml
 Type: String
@@ -237,9 +275,10 @@ Accept wildcard characters: False
 ```
 
 ### -Schedule
-Specifies a **CMSchedule** object.
-The schedule specifies when the maintenance window occurs.
-To create a **CMSchedule** object, use the [New-CMSchedule](New-CMSchedule.md) cmdlet.
+
+Specify a schedule object for when the maintenance window occurs. To get this object, use the [New-CMSchedule](New-CMSchedule.md) cmdlet.
+
+The maintenance window object stores the schedule as a token string. To copy a schedule from another object, use the [Convert-CMSchedule](Convert-CMSchedule.md) cmdlet. For example, `Convert-CMSchedule -ScheduleString $mw1.ServiceWindowSchedules`.
 
 ```yaml
 Type: IResultObject
@@ -282,12 +321,17 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## NOTES
 
+For more information on this return object and its properties, see [SMS_ServiceWindow server WMI class](/mem/configmgr/develop/reference/core/servers/configure/sms_servicewindow-server-wmi-class).
+
 ## RELATED LINKS
 
 [Get-CMMaintenanceWindow](Get-CMMaintenanceWindow.md)
 
-[New-CMSchedule](New-CMSchedule.md)
-
 [Remove-CMMaintenanceWindow](Remove-CMMaintenanceWindow.md)
 
 [Set-CMMaintenanceWindow](Set-CMMaintenanceWindow.md)
+
+[Convert-CMSchedule](Convert-CMSchedule.md)
+[New-CMSchedule](New-CMSchedule.md)
+
+[How to use maintenance windows in Configuration Manager](/mem/configmgr/core/clients/manage/collections/use-maintenance-windows)

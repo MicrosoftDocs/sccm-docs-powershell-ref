@@ -2,7 +2,7 @@
 Module Name: ConfigurationManager
 Module Guid: 7f590131-5253-4425-8b32-eeab51a4c393
 Download Help Link: https://aka.ms/configmgrps-help
-Help Version: 5.2103.0.1
+Help Version: 5.2103.0.2
 Locale: en-US
 ---
 
@@ -3415,13 +3415,13 @@ Modifies a wireless profile.
 Starts the deployment of an antimalware policy to the members of a Configuration Manager collection.
 
 ### [Start-CMApplicationDeployment](Start-CMApplicationDeployment.md)
-Starts an application deployment in Configuration Manager.
+(Deprecated) Starts an application deployment in Configuration Manager.
 
 ### [Start-CMApplicationDeploymentSimulation](Start-CMApplicationDeploymentSimulation.md)
 Starts an application deployment simulation in Configuration Manager.
 
 ### [Start-CMBaselineDeployment](Start-CMBaselineDeployment.md)
-Starts deployment of a Configuration Manager baseline configuration to a collection of computers.
+(Deprecated) Starts deployment of a Configuration Manager baseline configuration to a collection of computers.
 
 ### [Start-CMClientSettingDeployment](Start-CMClientSettingDeployment.md)
 Deploys client settings to devices in a collection.
@@ -3433,7 +3433,7 @@ Starts the cloud distribution point service.
 Start a cloud management gateway service in Azure.
 
 ### [Start-CMConfigurationPolicyDeployment](Start-CMConfigurationPolicyDeployment.md)
-Deploys policies for a Configuration Manager collection.
+(Deprecated) Deploys policies for a Configuration Manager collection.
 
 ### [Start-CMContentDistribution](Start-CMContentDistribution.md)
 Distribute content to distribution points.
@@ -3445,13 +3445,13 @@ Upgrades a shared distribution point.
 Start tracking SMS Provider objects used by PowerShell to reclaim them.
 
 ### [Start-CMPackageDeployment](Start-CMPackageDeployment.md)
-Starts deployment of a software package to a Configuration Manager collection.
+(Deprecated) Starts deployment of a software package to a Configuration Manager collection.
 
 ### [Start-CMSoftwareUpdateDeployment](Start-CMSoftwareUpdateDeployment.md)
-Initiates a software update deployment in Configuration Manager.
+(Deprecated) Initiates a software update deployment in Configuration Manager.
 
 ### [Start-CMTaskSequenceDeployment](Start-CMTaskSequenceDeployment.md)
-Start a task sequence deployment.
+(Deprecated) Start a task sequence deployment.
 
 ### [Stop-CMCloudDistributionPoint](Stop-CMCloudDistributionPoint.md)
 Stops the cloud distribution point service.

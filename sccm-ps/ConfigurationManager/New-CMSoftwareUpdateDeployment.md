@@ -906,5 +906,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Set-CMSoftwareUpdateDeployment](Set-CMSoftwareUpdateDeployment.md)
-
-[Start-CMSoftwareUpdateDeployment](Start-CMSoftwareUpdateDeployment.md)

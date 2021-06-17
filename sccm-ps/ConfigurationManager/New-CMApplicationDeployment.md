@@ -767,6 +767,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Set-CMApplicationDeployment](Set-CMApplicationDeployment.md)
 
-[Start-CMApplicationDeployment](Start-CMApplicationDeployment.md)
-
 [Deploy applications with Configuration Manager](/mem/configmgr/apps/deploy-use/deploy-applications)

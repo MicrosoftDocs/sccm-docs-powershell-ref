@@ -275,4 +275,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-CMTaskSequenceDeployment](./New-CMTaskSequenceDeployment.md)
 [Get-CMTaskSequenceDeployment](./Get-CMTaskSequenceDeployment.md)
 [Set-CMTaskSequenceDeployment](./Set-CMTaskSequenceDeployment.md)
-[Start-CMTaskSequenceDeployment](./Start-CMTaskSequenceDeployment.md)

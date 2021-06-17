@@ -80,7 +80,7 @@ Set-CMConfigurationPolicyDeployment [-EnableEnforcement <Boolean>] [-GenerateAle
 ## DESCRIPTION
 The **Set-CMConfigurationPolicyDeployment** cmdlet creates a configuration policy deployment in Configuration Manager.
 You can deploy firewall policies or user session management policies.
-Use the [Start-CMConfigurationPolicyDeployment](Start-CMConfigurationPolicyDeployment.md) cmdlet to deploy specified policies for a Configuration Manager collection.
+Use the [New-CMConfigurationPolicyDeployment](New-CMConfigurationPolicyDeployment.md) cmdlet to deploy specified policies for a Configuration Manager collection.
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
@@ -444,4 +444,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [New-CMSchedule](New-CMSchedule.md)
 
-[Start-CMConfigurationPolicyDeployment](Start-CMConfigurationPolicyDeployment.md)
+[New-CMConfigurationPolicyDeployment](New-CMConfigurationPolicyDeployment.md)
