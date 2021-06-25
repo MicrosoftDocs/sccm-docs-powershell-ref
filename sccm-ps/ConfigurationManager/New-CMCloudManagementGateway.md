@@ -71,7 +71,7 @@ $Path = "c:\TestPath\RootCA.cer"
 $Type = [Microsoft.ConfigurationManagement.AdminConsole.AzureServices.CertificateStore]::RootCA
 $Cert =@{$Path = $Type}
 
-$Password = "0HNy*c@63kAe" | ConvertTo-SecureString -AsPlainText -Force
+$Password = '0HNy*c@63kAe' | ConvertTo-SecureString -AsPlainText -Force
 
 New-CMCloudManagementGateway -ServiceCertPath "c:\TestPath\ServiceCert.pfx" -EnvironmentSetting AzurePublicCloud -SubscriptionId "e517b8cb-a969-4d1e-b2ea-ae1e6c052020" -ServiceCertPassword $Password -ServiceName "GraniteFalls.CloudApp.Net" -Description "EastUS CMG for Contoso" -Region EastUS -VMInstanceCount 2 -CARootCert $Cert -CheckClientCertRevocation $False -EnforceProtocol $True -IsUsingExistingGroup $true -GroupName "Resource group 1"
 ```
