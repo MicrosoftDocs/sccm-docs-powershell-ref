@@ -49,9 +49,16 @@ Remove-CMSoftwareUpdateDeployment [-SmsObjectId <Int32>] [-Force] [-Collection <
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Remove a deployment by its UniqueID
+This example removes the specified software update deployment by its UniqueID, without prompting for confirmation. 
 ```
-PS XYZ:\>
+PS XYZ:\> Remove-CMSoftwareUpdateDeployment -DeploymentId "{7F4267D4-33AD-4Y56-A7FF-FA31B2BA8571}" -Force
+```
+
+### Example 2: Remove all software deployments associated to a collection
+This example removes all software update deployments associated to a collection by the CollectionId.
+```
+PS XYZ:\> Get-CMSoftwareUpdateDeployment -CollectionId "P01003AE" | Remove-CMSoftwareUpdateDeployment
 ```
 
 ## PARAMETERS
