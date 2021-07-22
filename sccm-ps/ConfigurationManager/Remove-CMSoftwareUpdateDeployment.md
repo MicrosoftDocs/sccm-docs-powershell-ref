@@ -56,7 +56,7 @@ PS XYZ:\> Remove-CMSoftwareUpdateDeployment -DeploymentId "{7F4267D4-33AD-4Y56-A
 ```
 
 ### Example 2: Remove all software deployments associated to a collection
-This example removes all software update deployments associated to a collection by the CollectionId.
+This example removes all software update deployments associated to a collection by its CollectionId.
 ```
 PS XYZ:\> Get-CMSoftwareUpdateDeployment -CollectionId "P01003AE" | Remove-CMSoftwareUpdateDeployment
 ```
