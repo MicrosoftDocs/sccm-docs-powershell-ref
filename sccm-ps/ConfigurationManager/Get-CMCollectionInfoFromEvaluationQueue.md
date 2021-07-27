@@ -152,25 +152,16 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
-
 ## OUTPUTS
 
 ### IResultObject[]#SMS_CollectionInfoInFullEvaluationQueue
-
 ### IResultObject#SMS_CollectionInfoInFullEvaluationQueue
-
 ### IResultObject[]#SMS_CollectionInfoInIncrementalEvaluationQueue
-
 ### IResultObject#SMS_CollectionInfoInIncrementalEvaluationQueue
-
 ### IResultObject[]#SMS_CollectionInfoInManualEvaluationQueue
-
 ### IResultObject#SMS_CollectionInfoInManualEvaluationQueue
-
 ### IResultObject[]#SMS_CollectionInfoInNewEvaluationQueue
-
 ### IResultObject#SMS_CollectionInfoInNewEvaluationQueue
-
 ## NOTES
 
 ## RELATED LINKS

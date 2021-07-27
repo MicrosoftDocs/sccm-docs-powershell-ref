@@ -84,13 +84,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
-
 ## OUTPUTS
 
 ### IResultObject[]#SMS_TaskSequence_SoftwareConditionExpression
-
 ### IResultObject#SMS_TaskSequence_SoftwareConditionExpression
-
 ## NOTES
 
 ## RELATED LINKS

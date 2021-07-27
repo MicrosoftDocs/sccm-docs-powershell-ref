@@ -1,4 +1,4 @@
----
+﻿---
 description: Sets a PFX certificate profile.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -67,21 +67,6 @@ PS XYZ:\> Get-CMCertificateprofilePfx -Name "Test3" | Set-CMCertificateprofilePf
 This command gets the PFX certificate profile object named Test3 and uses the pipeline operator to pass the object to **Set-CMCertificateProfilePfx**, which updates the description of the object.
 
 ## PARAMETERS
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -Description
 Specifies a description for the PFX certificate profile.
@@ -245,6 +230,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 
 Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
@@ -267,11 +267,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
-
 ## OUTPUTS
 
 ### IResultObject#SMS_ConfigurationPolicy
-
 ## NOTES
 
 ## RELATED LINKS

@@ -110,7 +110,7 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -Prerelease
@@ -151,11 +151,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
-
 ## OUTPUTS
 
 ### IResultObject#SMS_CM_UpdateFeatures
-
 ## NOTES
 
 For more information on this return object and its properties, see [SMS_CM_UpdateFeatures server WMI class](/mem/configmgr/develop/reference/sum/sms_cm_updatefeatures-server-wmi-class).

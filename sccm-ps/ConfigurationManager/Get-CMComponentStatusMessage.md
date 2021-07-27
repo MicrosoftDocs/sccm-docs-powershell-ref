@@ -207,13 +207,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
-
 ## OUTPUTS
 
 ### IResultObject[]#SMS_StatusMessage
-
 ### IResultObject#SMS_StatusMessage
-
 ## NOTES
 
 ## RELATED LINKS

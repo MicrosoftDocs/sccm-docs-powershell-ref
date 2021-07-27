@@ -1,4 +1,4 @@
----
+﻿---
 description: Create an application deployment.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -18,12 +18,12 @@ Create an application deployment.
 ### SearchByValueMandatory (Default)
 ```
 New-CMApplicationDeployment [-AllowRepairApp <Boolean>] [-ApprovalRequired <Boolean>]
- [-DeadlineDateTime <DateTime>] [-DeployAction <DeployActionType>] [-DeployPurpose <DeployPurposeType>]
- [-DisableContentDependencyDetection] [-EnableMomAlert <Boolean>] [-EnableSoftDeadline <Boolean>]
- [-FailParameterValue <Int32>] [-GenerateScomAlertOnFailure <Boolean>] [-InputObject] <IResultObject>
- [-OverrideServiceWindow <Boolean>] [-PostponeDateTime <DateTime>] [-PreDeploy <Boolean>]
- [-RebootOutsideServiceWindow <Boolean>] [-ReplaceToastNotificationWithDialog <Boolean>] [-Simulation]
- [-SuccessParameterValue <Int32>] [-TimeBaseOn <TimeType>] [-UpdateSupersedence <Boolean>]
+ [-AutoCloseExecutable <Boolean>] [-DeadlineDateTime <DateTime>] [-DeployAction <DeployActionType>]
+ [-DeployPurpose <DeployPurposeType>] [-DisableContentDependencyDetection] [-EnableMomAlert <Boolean>]
+ [-EnableSoftDeadline <Boolean>] [-FailParameterValue <Int32>] [-GenerateScomAlertOnFailure <Boolean>]
+ [-InputObject] <IResultObject> [-OverrideServiceWindow <Boolean>] [-PostponeDateTime <DateTime>]
+ [-PreDeploy <Boolean>] [-RebootOutsideServiceWindow <Boolean>] [-ReplaceToastNotificationWithDialog <Boolean>]
+ [-Simulation] [-SuccessParameterValue <Int32>] [-TimeBaseOn <TimeType>] [-UpdateSupersedence <Boolean>]
  [-UserNotification <UserNotificationType>] [-DistributeCollectionName <String>] [-DistributeContent]
  [-DistributionPointGroupName <String>] [-DistributionPointName <String>] [-AvailableDateTime <DateTime>]
  [-Comment <String>] [-PersistOnWriteFilterDevice <Boolean>] [-SendWakeupPacket <Boolean>]
@@ -35,10 +35,10 @@ New-CMApplicationDeployment [-AllowRepairApp <Boolean>] [-ApprovalRequired <Bool
 ### SearchByIdMandatory
 ```
 New-CMApplicationDeployment [-AllowRepairApp <Boolean>] [-ApprovalRequired <Boolean>]
- [-DeadlineDateTime <DateTime>] [-DeployAction <DeployActionType>] [-DeployPurpose <DeployPurposeType>]
- [-DisableContentDependencyDetection] [-EnableMomAlert <Boolean>] [-EnableSoftDeadline <Boolean>]
- [-FailParameterValue <Int32>] [-GenerateScomAlertOnFailure <Boolean>] [-Id] <Int32>
- [-OverrideServiceWindow <Boolean>] [-PostponeDateTime <DateTime>] [-PreDeploy <Boolean>]
+ [-AutoCloseExecutable <Boolean>] [-DeadlineDateTime <DateTime>] [-DeployAction <DeployActionType>]
+ [-DeployPurpose <DeployPurposeType>] [-DisableContentDependencyDetection] [-EnableMomAlert <Boolean>]
+ [-EnableSoftDeadline <Boolean>] [-FailParameterValue <Int32>] [-GenerateScomAlertOnFailure <Boolean>]
+ [-Id] <Int32> [-OverrideServiceWindow <Boolean>] [-PostponeDateTime <DateTime>] [-PreDeploy <Boolean>]
  [-RebootOutsideServiceWindow <Boolean>] [-ReplaceToastNotificationWithDialog <Boolean>] [-Simulation]
  [-SuccessParameterValue <Int32>] [-TimeBaseOn <TimeType>] [-UpdateSupersedence <Boolean>]
  [-UserNotification <UserNotificationType>] [-DistributeCollectionName <String>] [-DistributeContent]
@@ -52,10 +52,10 @@ New-CMApplicationDeployment [-AllowRepairApp <Boolean>] [-ApprovalRequired <Bool
 ### SearchByNameMandatory
 ```
 New-CMApplicationDeployment [-AllowRepairApp <Boolean>] [-ApprovalRequired <Boolean>]
- [-DeadlineDateTime <DateTime>] [-DeployAction <DeployActionType>] [-DeployPurpose <DeployPurposeType>]
- [-DisableContentDependencyDetection] [-EnableMomAlert <Boolean>] [-EnableSoftDeadline <Boolean>]
- [-FailParameterValue <Int32>] [-GenerateScomAlertOnFailure <Boolean>] [-Name] <String>
- [-OverrideServiceWindow <Boolean>] [-PostponeDateTime <DateTime>] [-PreDeploy <Boolean>]
+ [-AutoCloseExecutable <Boolean>] [-DeadlineDateTime <DateTime>] [-DeployAction <DeployActionType>]
+ [-DeployPurpose <DeployPurposeType>] [-DisableContentDependencyDetection] [-EnableMomAlert <Boolean>]
+ [-EnableSoftDeadline <Boolean>] [-FailParameterValue <Int32>] [-GenerateScomAlertOnFailure <Boolean>]
+ [-Name] <String> [-OverrideServiceWindow <Boolean>] [-PostponeDateTime <DateTime>] [-PreDeploy <Boolean>]
  [-RebootOutsideServiceWindow <Boolean>] [-ReplaceToastNotificationWithDialog <Boolean>] [-Simulation]
  [-SuccessParameterValue <Int32>] [-TimeBaseOn <TimeType>] [-UpdateSupersedence <Boolean>]
  [-UserNotification <UserNotificationType>] [-DistributeCollectionName <String>] [-DistributeContent]
@@ -109,6 +109,21 @@ If you set this parameter to `$true`, an administrator must approve a request fo
 Type: Boolean
 Parameter Sets: (All)
 Aliases: AppRequiresApproval
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AutoCloseExecutable
+{{ Fill AutoCloseExecutable Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: AutoCloseExeOnInstallBehavior
 
 Required: False
 Position: Named
@@ -180,7 +195,7 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -Comment
@@ -191,22 +206,6 @@ Specify an optional comment for this deployment.
 Type: String
 Parameter Sets: (All)
 Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
 
 Required: False
 Position: Named
@@ -729,6 +728,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 
 Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
@@ -751,7 +766,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
-
 ## OUTPUTS
 
 ### System.Object

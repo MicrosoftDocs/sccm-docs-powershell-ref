@@ -83,13 +83,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
-
 ## OUTPUTS
 
 ### IResultObject[]#SMS_SCI_ClientComp
-
 ### IResultObject#SMS_SCI_ClientComp
-
 ## NOTES
 
 ## RELATED LINKS

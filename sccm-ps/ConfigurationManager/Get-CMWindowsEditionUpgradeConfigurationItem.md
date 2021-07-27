@@ -1,6 +1,6 @@
----
+﻿---
 description: Get a Windows 10 edition upgrade policy.
-external help file: AdminUI.PS.psm1-Help.xml
+external help file: AdminUI.PS.psm1-help.xml
 Module Name: ConfigurationManager
 ms.date: 12/03/2020
 schema: 2.0.0
@@ -91,7 +91,7 @@ Required: True
 Position: 0
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### CommonParameters
@@ -100,7 +100,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
-
 ## OUTPUTS
 
 ### System.Object

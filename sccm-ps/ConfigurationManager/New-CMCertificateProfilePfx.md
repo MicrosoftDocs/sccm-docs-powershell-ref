@@ -1,4 +1,4 @@
----
+﻿---
 description: Creates a PFX certificate profile.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -43,21 +43,6 @@ PS XYZ:\> New-CMCertificateProfilePfx -Name "Test2" -SupportedPlatform (Get-CMSu
 This command creates a PFX certificate profile named Test2 for all Windows 10 Client platforms and sets the key storage provider to install to TPM, if present.
 
 ## PARAMETERS
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -Description
 Specifies a description for the PFX certificate profile.
@@ -159,6 +144,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 
 Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
@@ -181,11 +181,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
-
 ## OUTPUTS
 
 ### IResultObject#SMS_ConfigurationPolicy
-
 ## NOTES
 
 ## RELATED LINKS

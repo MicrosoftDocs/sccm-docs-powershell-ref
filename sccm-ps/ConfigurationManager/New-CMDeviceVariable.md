@@ -1,4 +1,4 @@
----
+﻿---
 description: Creates a device variable for a Configuration Manager device.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -53,21 +53,6 @@ The variable is named ServerIPAddress and the value is set to 192.168.1.1.
 Setting the *IsMask* parameter to 0 ensures that the variable is displayed in the Configuration Manager console.
 
 ## PARAMETERS
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -DeviceId
 Specifies a device ID.
@@ -193,6 +178,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 
 Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
@@ -215,11 +215,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
-
 ## OUTPUTS
 
 ### IResultObject#SMS_MachineSettings
-
 ## NOTES
 
 ## RELATED LINKS

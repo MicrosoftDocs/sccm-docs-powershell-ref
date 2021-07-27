@@ -1,6 +1,6 @@
----
+﻿---
 description: Gets task sequence Set Dynamic Variable steps in Configuration Manager.
-external help file: AdminUI.PS.psm1-Help.xml
+external help file: AdminUI.PS.psm1-help.xml
 Module Name: ConfigurationManager
 ms.date: 01/08/2019
 schema: 2.0.0
@@ -51,22 +51,6 @@ PS XYZ:\> $ReferencedTaskSequence | Get-CMTaskSequenceStepSetDynamicVariable -St
 This command gets task sequence "Set Dynamic Variable" steps in a task sequence.
 
 ## PARAMETERS
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -InputObject
 
@@ -132,6 +116,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 
 Shows what would happen if the cmdlet runs.
@@ -155,7 +155,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
-
 ## OUTPUTS
 
 ### System.Object

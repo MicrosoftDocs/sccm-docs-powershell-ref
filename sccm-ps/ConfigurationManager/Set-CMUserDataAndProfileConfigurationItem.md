@@ -1,4 +1,4 @@
----
+﻿---
 description: Modifies a user data and profile configuration item.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -264,21 +264,6 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -1057,19 +1042,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -SyncMins
-```yaml
-Type: Int32
-Parameter Sets: (All)
-Aliases: SynchronizationInterval
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -SynchronizationList
 Specifies an array of folders.
 The configuration item specifies these subfolders of Appdata\Roaming to synchronize only at logon and logoff.
@@ -1093,6 +1065,19 @@ Indicates whether to use a synchronization policy.
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SyncMins
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases: SynchronizationInterval
 
 Required: False
 Position: Named
@@ -1203,6 +1188,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 
 Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
@@ -1225,9 +1225,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
-
 ### Microsoft.ConfigurationManagement.DesiredConfigurationManagement.ConfigurationItem
-
 ## OUTPUTS
 
 ### System.Object

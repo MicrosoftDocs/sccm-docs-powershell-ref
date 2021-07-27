@@ -89,7 +89,7 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -Id
@@ -128,13 +128,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
-
 ## OUTPUTS
 
 ### IResultObject[]#SMS_BoundaryGroupSiteSystems
-
 ### IResultObject#SMS_BoundaryGroupSiteSystems
-
 ## NOTES
 
 ## RELATED LINKS

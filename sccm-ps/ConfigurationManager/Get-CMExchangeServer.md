@@ -118,13 +118,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
-
 ## OUTPUTS
 
 ### ExchangeConnector[]
-
 ### ExchangeConnector
-
 ## NOTES
 
 ## RELATED LINKS

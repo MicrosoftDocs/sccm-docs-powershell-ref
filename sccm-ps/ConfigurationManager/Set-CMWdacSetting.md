@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 08/20/2020
@@ -85,24 +85,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -EnforceRestart
-
-After the client processes the policy, a restart is scheduled on the client. It follows the client settings for **Computer Restart**. Applications currently running on the device won't have the new Application Control policy applied to them until after the device restarts.
-
-Set this parameter to `$true` to force the device to restart after the client applies the policy.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -EnforcementMode
 
 Choose one of the following enforcement methods for Microsoft Defender Application Control:
@@ -115,6 +97,24 @@ Type: CMWDACEnforcementMode
 Parameter Sets: (All)
 Aliases:
 Accepted values: AuditMode, EnforceMode
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnforceRestart
+
+After the client processes the policy, a restart is scheduled on the client. It follows the client settings for **Computer Restart**. Applications currently running on the device won't have the new Application Control policy applied to them until after the device restarts.
+
+Set this parameter to `$true` to force the device to restart after the client applies the policy.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named
@@ -225,11 +225,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.PowerShell.Cmdlets.EP.WDAC.CMWdacSettings
-
 ## OUTPUTS
 
 ### Microsoft.ConfigurationManagement.PowerShell.Cmdlets.EP.WDAC.CMWdacSettings
-
 ## NOTES
 
 ## RELATED LINKS

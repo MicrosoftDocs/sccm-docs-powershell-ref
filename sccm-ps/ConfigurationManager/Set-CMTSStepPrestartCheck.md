@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 07/31/2020
@@ -272,21 +272,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -CMClientMinVersion
-Use this parameter to configure the specific client version. Specify the client version in the following format: `5.00.8913.1005`. Use the parameter **CheckCMClientMinVersion** to enable or disable the check.
-
-```yaml
-Type: String
-Parameter Sets: ByValue, ById, ByName
-Aliases: ClientMinVersion
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -CheckCMClientMinVersion
 Use this parameter to enable or disable the following setting in the **Check Readiness** task sequence step: **Minimum client version**. Use the parameter **CMClientMinVersion** to set the specific client version number.
 
@@ -497,6 +482,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -CMClientMinVersion
+Use this parameter to configure the specific client version. Specify the client version in the following format: `5.00.8913.1005`. Use the parameter **CheckCMClientMinVersion** to enable or disable the check.
+
+```yaml
+Type: String
+Parameter Sets: ByValue, ById, ByName
+Aliases: ClientMinVersion
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Condition
 Specify a condition object to use with this step.
 
@@ -534,21 +534,6 @@ Specify the value of the task sequence variable to use in a condition.
 Type: String
 Parameter Sets: ByIdSetConditionVariable, ByNameSetConditionVariable, ByValueSetConditionVariable
 Aliases: Value
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
 
 Required: False
 Position: Named
@@ -889,6 +874,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -OperatorType
+Specify an operator to use with a task sequence variable condition.
+
+```yaml
+Type: VariableOperatorType
+Parameter Sets: ByIdSetConditionVariable, ByNameSetConditionVariable, ByValueSetConditionVariable
+Aliases:
+Accepted values: Exists, NotExists, Equals, NotEquals, Greater, GreaterEqual, Less, LessEqual, Like, NotLike
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -OS
 Use this parameter to configure the specific OS type: `Client` or `Server`. Use the parameter **CheckOS** to enable or disable the check.
 
@@ -928,22 +929,6 @@ Use this parameter to configure the specific OS language. This check compares th
 Type: Int32
 Parameter Sets: ByValue, ById, ByName
 Aliases: LanguageId
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -OperatorType
-Specify an operator to use with a task sequence variable condition.
-
-```yaml
-Type: VariableOperatorType
-Parameter Sets: ByIdSetConditionVariable, ByNameSetConditionVariable, ByValueSetConditionVariable
-Aliases:
-Accepted values: Exists, NotExists, Equals, NotEquals, Greater, GreaterEqual, Less, LessEqual, Like, NotLike
 
 Required: False
 Position: Named
@@ -1423,6 +1408,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 
 Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
@@ -1445,7 +1445,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
-
 ## OUTPUTS
 
 ### System.Object

@@ -77,11 +77,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
-
 ## OUTPUTS
 
 ### System.Int32
-
 ## NOTES
 
 ## RELATED LINKS

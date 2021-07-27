@@ -1,4 +1,4 @@
----
+﻿---
 description: Convert a Configuration Manager management iResultObject to a configuration item object.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -134,7 +134,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
-
 ## OUTPUTS
 
 ### System.Object

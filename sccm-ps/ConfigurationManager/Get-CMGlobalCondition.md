@@ -1,4 +1,4 @@
----
+﻿---
 description: Gets Configuration Manager global condition objects.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -138,7 +138,7 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### CommonParameters
@@ -147,15 +147,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
-
 ## OUTPUTS
 
 ### IResultObject[]#SMS_GlobalCondition
-
 ### IResultObject#SMS_GlobalCondition
-
 ### ConfigurationItem
-
 ## NOTES
 
 ## RELATED LINKS

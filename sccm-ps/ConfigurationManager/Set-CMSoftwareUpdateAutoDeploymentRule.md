@@ -1,4 +1,4 @@
----
+﻿---
 description: Modify an automatic deployment rule (ADR) for software updates.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -371,22 +371,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -ContentSize
 
 Use this parameter to set the **Content Size (KB)** property filter on the Software Updates page of the ADR properties.
@@ -486,25 +470,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -DeployWithoutLicense
-
-Indicates whether the rule deploys updates without licenses.
-
-- If you specify a value of `$True`, Configuration Manager deploys all updates for this rule and approves any license agreements.
-- If this value is `$False`, Configuration Manager deploys only updates that don't include a license or for which the license agreement has been approved.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -DeploymentPackage
 
 Use this parameter to set the deployment package for the existing software update auto deployment rule. To not require a package, set the value to `$null`.
@@ -543,6 +508,25 @@ Type: DeploymentRing
 Parameter Sets: (All)
 Aliases:
 Accepted values: CB, Release, BusinessMainstream, Cbb, Ltsb
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DeployWithoutLicense
+
+Indicates whether the rule deploys updates without licenses.
+
+- If you specify a value of `$True`, Configuration Manager deploys all updates for this rule and approves any license agreements.
+- If this value is `$False`, Configuration Manager deploys only updates that don't include a license or for which the license agreement has been approved.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named
@@ -1001,22 +985,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -RequirePostRebootFullScan
-
-Starting in version 1906, use this parameter to set the following option on the **User Experience** page of the ADR deployment settings: **If any update in this deployment requires a system restart, run updates deployment evaluation cycle after restart**.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases: RunEvaluationAfterRestart
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Required
 
 Specifies an array of criteria, as strings, for software updates. The rule adds software updates identified by required that meet specified criteria to the software update group.
@@ -1025,6 +993,22 @@ Specifies an array of criteria, as strings, for software updates. The rule adds 
 Type: String[]
 Parameter Sets: (All)
 Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RequirePostRebootFullScan
+
+Starting in version 1906, use this parameter to set the following option on the **User Experience** page of the ADR deployment settings: **If any update in this deployment requires a system restart, run updates deployment evaluation cycle after restart**.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: RunEvaluationAfterRestart
 
 Required: False
 Position: Named
@@ -1263,25 +1247,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -UseUtc
-
-Indicates whether to use Coordinated Universal Time (UTC).
-
-- If this value is `$True`, Configuration Manager uses UTC for this deployment.
-- If this value is `$False`, Configuration Manager uses local time.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -UserNotification
 
 Specifies the type of user notification.
@@ -1295,6 +1260,25 @@ Type: UserNotificationType
 Parameter Sets: (All)
 Aliases:
 Accepted values: DisplayAll, DisplaySoftwareCenterOnly, HideAll
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UseUtc
+
+Indicates whether to use Coordinated Universal Time (UTC).
+
+- If this value is `$True`, Configuration Manager uses UTC for this deployment.
+- If this value is `$False`, Configuration Manager uses local time.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named
@@ -1333,22 +1317,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhatIf
-
-Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -WriteFilterHandling
 
 Indicates whether to enable write filters for embedded devices.
@@ -1368,13 +1336,44 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+
+Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
-
 ## OUTPUTS
 
 ### System.Object

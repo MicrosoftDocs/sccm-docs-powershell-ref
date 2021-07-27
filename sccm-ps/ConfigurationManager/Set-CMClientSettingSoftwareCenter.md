@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 online version:
@@ -183,21 +183,6 @@ Starting in version 1906, use this parameter to configure the Software Center cl
 Type: String
 Parameter Sets: (All)
 Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
 
 Required: False
 Position: Named
@@ -552,21 +537,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -SelectTabIndex
-Use this parameter to select a tab by order in Software Center. Specify an integer for position, with `0` at the top. Use one of the following parameters in the same command to change the tab's configuration: **MoveSelectedTabToIndex**, **SelectedTabNewName**, **SelectedTabNewUrl**.
-
-```yaml
-Type: Int32
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -SelectedTabNewName
 In the same command when you select a tab, use this parameter to change the name of the tab.
 
@@ -589,6 +559,21 @@ In the same command when you select a tab, use this parameter to change the URL 
 Type: Uri
 Parameter Sets: (All)
 Aliases: SelectedCustomTabNewUrl
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SelectTabIndex
+Use this parameter to select a tab by order in Software Center. Specify an integer for position, with `0` at the top. Use one of the following parameters in the same command to change the tab's configuration: **MoveSelectedTabToIndex**, **SelectedTabNewName**, **SelectedTabNewUrl**.
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named
@@ -627,6 +612,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 
 Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
@@ -649,7 +649,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
-
 ## OUTPUTS
 
 ### System.Object

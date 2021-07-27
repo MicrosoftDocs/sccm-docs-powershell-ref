@@ -222,11 +222,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
-
 ## OUTPUTS
 
 ### Microsoft.ConfigurationManagement.PowerShell.Cmdlets.HS.ExchangeConnectorPasswordSetting
-
 ## NOTES
 
 Cmdlet aliases: **New-CMExchangeServerConnectorPasswordSetting**

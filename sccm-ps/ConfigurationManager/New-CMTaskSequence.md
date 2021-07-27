@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 03/30/2021
@@ -44,20 +44,6 @@ New-CMTaskSequence [-ApplicationName <String[]>] [-ApplyAll <Boolean>] -BootImag
  [-SaveLocally <Boolean>] [-SoftwareUpdateStyle <SoftwareUpdateStyleType>] [-TimeZone <TimeZoneInfo>]
  [-UserStateMigrationToolPackageId <String>] [-WorkgroupName <String>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### NewInstallOSImageVhd
-```
-New-CMTaskSequence [-ApplicationName <String[]>] [-ApplyAll <Boolean>] -BootImagePackageId <String>
- [-ClientPackagePackageId <String>] [-ConfigureBitLocker <Boolean>] [-Description <String>]
- [-DomainAccount <String>] [-DomainName <String>] [-DomainOrganizationUnit <String>]
- [-DomainPassword <SecureString>] [-GeneratePassword <Boolean>] [-HighPerformance <Boolean>]
- [-IgnoreInvalidApplication <Boolean>] [-InstallationLicensingMode <ServerLicensingMode>]
- [-InstallationProperty <String>] [-InstallOperatingSystemImageVhd] -JoinDomain <JoinType>
- [-LocalAdminPassword <SecureString>] -Name <String> -OperatingSystemImageIndex <UInt32>
- -OperatingSystemImagePackageId <String> [-PartitionAndFormatTarget <Boolean>] [-ProductKey <String>]
- [-TimeZone <TimeZoneInfo>] [-WorkgroupName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### UpgradeOSImage
@@ -139,7 +125,7 @@ Specify an array of application names to install during the task sequence. This 
 
 ```yaml
 Type: String[]
-Parameter Sets: NewBuildOSImage, NewInstallOSImage, NewInstallOSImageVhd, UpgradeOSImage
+Parameter Sets: NewBuildOSImage, NewInstallOSImage, UpgradeOSImage
 Aliases:
 
 Required: False
@@ -159,7 +145,7 @@ In the build and capture scenario, the state of this parameter determines the fo
 
 ```yaml
 Type: Boolean
-Parameter Sets: NewBuildOSImage, NewInstallOSImage, NewInstallOSImageVhd
+Parameter Sets: NewBuildOSImage, NewInstallOSImage
 Aliases: ApplyAllImages
 
 Required: False
@@ -177,7 +163,7 @@ This parameter configures the task sequence properties.
 
 ```yaml
 Type: String
-Parameter Sets: NewBuildOSImage, NewInstallOSImage, NewInstallOSImageVhd
+Parameter Sets: NewBuildOSImage, NewInstallOSImage
 Aliases:
 
 Required: True
@@ -293,7 +279,7 @@ This parameter configures the [Setup Windows and ConfigMgr](/mem/configmgr/osd/u
 
 ```yaml
 Type: String
-Parameter Sets: NewBuildOSImage, NewInstallOSImage, NewInstallOSImageVhd
+Parameter Sets: NewBuildOSImage, NewInstallOSImage
 Aliases:
 
 Required: False
@@ -313,28 +299,12 @@ Set this parameter to **$true** to configure the task sequence for use with BitL
 
 ```yaml
 Type: Boolean
-Parameter Sets: NewInstallOSImage, NewInstallOSImageVhd
+Parameter Sets: NewInstallOSImage
 Aliases:
 
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -381,7 +351,7 @@ Specify an optional description for the task sequence. The maximum length is 512
 
 ```yaml
 Type: String
-Parameter Sets: NewBuildOSImage, NewInstallOSImage, NewInstallOSImageVhd, NewCustom
+Parameter Sets: NewBuildOSImage, NewInstallOSImage, NewCustom
 Aliases: TaskSequenceDescription
 
 Required: False
@@ -417,7 +387,7 @@ This parameter configures the [Apply Network Settings](/mem/configmgr/osd/unders
 
 ```yaml
 Type: String
-Parameter Sets: NewBuildOSImage, NewInstallOSImage, NewInstallOSImageVhd
+Parameter Sets: NewBuildOSImage, NewInstallOSImage
 Aliases:
 
 Required: False
@@ -435,7 +405,7 @@ Use the **DomainAccount** parameter to specify an account that has permissions t
 
 ```yaml
 Type: String
-Parameter Sets: NewBuildOSImage, NewInstallOSImage, NewInstallOSImageVhd
+Parameter Sets: NewBuildOSImage, NewInstallOSImage
 Aliases:
 
 Required: False
@@ -455,7 +425,7 @@ This parameter configures the [Apply Network Settings](/mem/configmgr/osd/unders
 
 ```yaml
 Type: String
-Parameter Sets: NewBuildOSImage, NewInstallOSImage, NewInstallOSImageVhd
+Parameter Sets: NewBuildOSImage, NewInstallOSImage
 Aliases:
 
 Required: False
@@ -473,7 +443,7 @@ This parameter configures the [Apply Network Settings](/mem/configmgr/osd/unders
 
 ```yaml
 Type: SecureString
-Parameter Sets: NewBuildOSImage, NewInstallOSImage, NewInstallOSImageVhd
+Parameter Sets: NewBuildOSImage, NewInstallOSImage
 Aliases:
 
 Required: False
@@ -507,7 +477,7 @@ This parameter configures the [Apply Windows Settings](/mem/configmgr/osd/unders
 
 ```yaml
 Type: Boolean
-Parameter Sets: NewBuildOSImage, NewInstallOSImage, NewInstallOSImageVhd
+Parameter Sets: NewBuildOSImage, NewInstallOSImage
 Aliases:
 
 Required: False
@@ -541,7 +511,7 @@ This parameter configures the [Install Application](/mem/configmgr/osd/understan
 
 ```yaml
 Type: Boolean
-Parameter Sets: NewBuildOSImage, NewInstallOSImage, NewInstallOSImageVhd, UpgradeOSImage
+Parameter Sets: NewBuildOSImage, NewInstallOSImage, UpgradeOSImage
 Aliases:
 
 Required: False
@@ -587,45 +557,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -InstallOperatingSystemImage
-
-Add this parameter to create a task sequence for the install OS image scenario. For more information, see [Create a task sequence to install an OS](/mem/configmgr/osd/deploy-use/create-a-task-sequence-to-install-an-operating-system).
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: NewInstallOSImage
-Aliases: InstallOperatingSystemImageOption
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InstallOperatingSystemImageVhd
-
-Don't use this parameter. Support for VHD files was removed in Configuration Manager version 1710.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: NewInstallOSImageVhd
-Aliases: InstallOperatingSystemImageVhdOption
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -InstallationLicensingMode
 
 This setting only applies to legacy versions of Windows that are no longer supported. Starting in version 2010, the setting is no longer visible in the task sequence editor. Existing task sequences that still use this setting will continue to function the same.
 
 ```yaml
 Type: ServerLicensingMode
-Parameter Sets: NewBuildOSImage, NewInstallOSImage, NewInstallOSImageVhd
+Parameter Sets: NewBuildOSImage, NewInstallOSImage
 Aliases:
 Accepted values: NonSpecify, PerSeat, PerServer
 
@@ -646,10 +584,26 @@ This parameter configures the [Setup Windows and ConfigMgr](/mem/configmgr/osd/u
 
 ```yaml
 Type: String
-Parameter Sets: NewBuildOSImage, NewInstallOSImage, NewInstallOSImageVhd
+Parameter Sets: NewBuildOSImage, NewInstallOSImage
 Aliases:
 
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InstallOperatingSystemImage
+
+Add this parameter to create a task sequence for the install OS image scenario. For more information, see [Create a task sequence to install an OS](/mem/configmgr/osd/deploy-use/create-a-task-sequence-to-install-an-operating-system).
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: NewInstallOSImage
+Aliases: InstallOperatingSystemImageOption
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -666,7 +620,7 @@ Use this parameter to configure the [Apply Network Settings](/mem/configmgr/osd/
 
 ```yaml
 Type: JoinType
-Parameter Sets: NewBuildOSImage, NewInstallOSImage, NewInstallOSImageVhd
+Parameter Sets: NewBuildOSImage, NewInstallOSImage
 Aliases:
 Accepted values: DomainType, WorkgroupType
 
@@ -685,7 +639,7 @@ This parameter configures the [Apply Windows Settings](/mem/configmgr/osd/unders
 
 ```yaml
 Type: SecureString
-Parameter Sets: NewBuildOSImage, NewInstallOSImage, NewInstallOSImageVhd
+Parameter Sets: NewBuildOSImage, NewInstallOSImage
 Aliases:
 
 Required: False
@@ -787,7 +741,7 @@ Specify the index of the OS image to install for the [Apply OS Image](/mem/confi
 
 ```yaml
 Type: UInt32
-Parameter Sets: NewBuildOSImage, NewInstallOSImage, NewInstallOSImageVhd
+Parameter Sets: NewBuildOSImage, NewInstallOSImage
 Aliases:
 
 Required: True
@@ -805,7 +759,7 @@ This parameter configures the [Apply OS Image](/mem/configmgr/osd/understand/tas
 
 ```yaml
 Type: String
-Parameter Sets: NewBuildOSImage, NewInstallOSImage, NewInstallOSImageVhd
+Parameter Sets: NewBuildOSImage, NewInstallOSImage
 Aliases:
 
 Required: True
@@ -823,7 +777,7 @@ This parameter configures the [Format and Partition Disk](/mem/configmgr/osd/und
 
 ```yaml
 Type: Boolean
-Parameter Sets: NewInstallOSImage, NewInstallOSImageVhd
+Parameter Sets: NewInstallOSImage
 Aliases:
 
 Required: False
@@ -841,7 +795,7 @@ This parameter configures the [Apply Windows Settings](/mem/configmgr/osd/unders
 
 ```yaml
 Type: String
-Parameter Sets: NewBuildOSImage, NewInstallOSImage, NewInstallOSImageVhd, UpgradeOSImage
+Parameter Sets: NewBuildOSImage, NewInstallOSImage, UpgradeOSImage
 Aliases: InstallationProductKey
 
 Required: False
@@ -908,7 +862,7 @@ This parameter configures the [Apply Windows Settings](/mem/configmgr/osd/unders
 
 ```yaml
 Type: TimeZoneInfo
-Parameter Sets: NewBuildOSImage, NewInstallOSImage, NewInstallOSImageVhd
+Parameter Sets: NewBuildOSImage, NewInstallOSImage
 Aliases:
 
 Required: False
@@ -970,6 +924,38 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -WorkgroupName
+
+If you set the **JoinDomain** parameter to `WorkgroupType`, use this parameter to specify the workgroup name. This parameter configures the [Apply Network Settings](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_ApplyNetworkSettings) task sequence step.
+
+```yaml
+Type: String
+Parameter Sets: NewBuildOSImage, NewInstallOSImage
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 
 Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
@@ -986,33 +972,15 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WorkgroupName
-
-If you set the **JoinDomain** parameter to `WorkgroupType`, use this parameter to specify the workgroup name. This parameter configures the [Apply Network Settings](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_ApplyNetworkSettings) task sequence step.
-
-```yaml
-Type: String
-Parameter Sets: NewBuildOSImage, NewInstallOSImage, NewInstallOSImageVhd
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### None
-
 ## OUTPUTS
 
 ### IResultObject#SMS_TaskSequencePackage
-
 ## NOTES
 
 For more information on this return object and its properties, see [SMS_TaskSequencePackage server WMI class](/mem/configmgr/develop/reference/osd/sms_tasksequencepackage-server-wmi-class).

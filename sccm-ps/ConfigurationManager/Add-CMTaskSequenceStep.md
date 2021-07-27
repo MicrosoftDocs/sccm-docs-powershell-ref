@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 05/26/2021
@@ -17,22 +17,19 @@ Add a step or group to a task sequence.
 ### ByValue (Default)
 ```
 Add-CMTaskSequenceStep [-InsertStepStartIndex <UInt32>] -Step <IResultObject[]> -InputObject <IResultObject>
- [-StepName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ById
 ```
-Add-CMTaskSequenceStep [-InsertStepStartIndex <UInt32>] -Step <IResultObject[]> [-StepName <String>]
- -TaskSequenceId <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Add-CMTaskSequenceStep [-InsertStepStartIndex <UInt32>] -Step <IResultObject[]> -TaskSequenceId <String>
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByName
 ```
-Add-CMTaskSequenceStep [-InsertStepStartIndex <UInt32>] -Step <IResultObject[]> [-StepName <String>]
- -TaskSequenceName <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Add-CMTaskSequenceStep [-InsertStepStartIndex <UInt32>] -Step <IResultObject[]> -TaskSequenceName <String>
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -129,22 +126,6 @@ $ts | Add-CMTaskSequenceStep -Step $step -InsertStepStartIndex 11
 
 ## PARAMETERS
 
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -DisableWildcardHandling
 
 This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
@@ -229,22 +210,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -StepName
-
-Don't use this parameter. It doesn't work with this cmdlet, and will be removed.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -TaskSequenceId
 
 Specify the ID of a task sequence to which the cmdlet adds the step. This ID is the task sequence package ID, for example `XYZ00861`.
@@ -277,6 +242,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 
 Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
@@ -299,7 +280,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
-
 ## OUTPUTS
 
 ### System.Object

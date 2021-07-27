@@ -118,17 +118,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
-
 ## OUTPUTS
 
 ### IResultObject[]#SMS_SCI_Component
-
 ### IResultObject#SMS_SCI_Component
-
 ### IResultObject[]#SMS_SCI_ClientConfig
-
 ### IResultObject#SMS_SCI_ClientConfig
-
 ## NOTES
 
 ## RELATED LINKS

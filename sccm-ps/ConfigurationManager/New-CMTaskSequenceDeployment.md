@@ -1,4 +1,4 @@
----
+﻿---
 description: Create a task sequence deployment
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -208,7 +208,7 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -Comment
@@ -219,22 +219,6 @@ Specify an optional comment for the task sequence deployment.
 Type: String
 Parameter Sets: (All)
 Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
 
 Required: False
 Position: Named
@@ -261,23 +245,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -DeployPurpose
-
-Specify whether this deployment is available for users to install, or it's required to install at the deadline.
-
-```yaml
-Type: DeployPurposeType
-Parameter Sets: (All)
-Aliases:
-Accepted values: Available, Required
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -DeploymentOption
 
 Specify how clients interact with the distribution points to get content for the task sequence. Not all options are available in specific scenarios. For more information, see [Deploy a task sequence - Deployment options](/mem/configmgr/osd/deploy-use/deploy-a-task-sequence#bkmk_deploy-options).
@@ -287,6 +254,23 @@ Type: DeploymentOptionType
 Parameter Sets: (All)
 Aliases:
 Accepted values: DownloadContentLocallyWhenNeededByRunningTaskSequence, DownloadAllContentLocallyBeforeStartingTaskSequence, RunFromDistributionPoint
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DeployPurpose
+
+Specify whether this deployment is available for users to install, or it's required to install at the deadline.
+
+```yaml
+Type: DeployPurposeType
+Parameter Sets: (All)
+Aliases:
+Accepted values: Available, Required
 
 Required: False
 Position: Named
@@ -672,6 +656,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 
 Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
@@ -694,11 +694,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
-
 ## OUTPUTS
 
 ### IResultObject#SMS_Advertisement
-
 ## NOTES
 
 Make sure to use the schedule parameters appropriately:

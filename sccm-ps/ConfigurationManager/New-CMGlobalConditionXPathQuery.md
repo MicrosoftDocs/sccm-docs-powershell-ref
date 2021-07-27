@@ -1,4 +1,4 @@
----
+﻿---
 description: Creates a XPath Query type global condition in Configuration Manager.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -165,38 +165,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -XPathQuery
-
-Specifies a valid full XML path language (XPath) query to use to assess compliance on client computers.
-
-```yaml
-Type: String
-Parameter Sets: NewQueryFromText
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -XPathQueryFilePath
-
-Specifies an XPath query file path.
-
-```yaml
-Type: String
-Parameter Sets: NewQueryFromFile
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -XmlFilePath
 
 Specifies the path to the XML file on client computers that will be used to assess compliance. Configuration Manager supports the use of all Windows system environment variables and the %USERPROFILE% user variable in the path name.
@@ -229,13 +197,44 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -XPathQuery
+
+Specifies a valid full XML path language (XPath) query to use to assess compliance on client computers.
+
+```yaml
+Type: String
+Parameter Sets: NewQueryFromText
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -XPathQueryFilePath
+
+Specifies an XPath query file path.
+
+```yaml
+Type: String
+Parameter Sets: NewQueryFromFile
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### None
-
 ## OUTPUTS
 
 ### System.Object
