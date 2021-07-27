@@ -329,7 +329,7 @@ For more information, see [New-CMSoftwareUpdateAutoDeploymentRule](/powershell/m
 
 **Bugs that were fixed**
 
-Fixed an issue to avoid duplicate product. <!-- For more information, see [Improvements for managing automatic deployment rules](#bkmk_adr). -->
+Fixed an issue with the **Product** parameter. When there are multiple products with the same name, it now selects all of them.
 
 ### New-CMSoftwareUpdateDeployment
 
