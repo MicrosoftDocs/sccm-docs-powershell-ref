@@ -11,7 +11,7 @@ title: Start-CMPackageDeployment
 
 ## SYNOPSIS
 
-Starts deployment of a software package to a Configuration Manager collection.
+(Deprecated) Starts deployment of a software package to a Configuration Manager collection.
 
 ## SYNTAX
 
@@ -112,6 +112,9 @@ Start-CMPackageDeployment -CollectionName <String> [-Comment <String>] [-Deploym
 ```
 
 ## DESCRIPTION
+
+> [!IMPORTANT]
+> This cmdlet is deprecated. Use [New-CMPackageDeployment](New-CMPackageDeployment.md) instead.
 
 The **Start-CMPackageDeployment** cmdlet starts deployment of a specified software package to computers that belong to a Configuration Manager collection.
 You can choose when the package becomes available and when the package deployment expires.

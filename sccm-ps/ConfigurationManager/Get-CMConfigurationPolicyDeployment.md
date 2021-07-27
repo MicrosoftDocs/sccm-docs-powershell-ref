@@ -281,6 +281,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Set-CMConfigurationPolicyDeployment](Set-CMConfigurationPolicyDeployment.md)
 
-[Start-CMConfigurationPolicyDeployment](Start-CMConfigurationPolicyDeployment.md)
-
 [Get-CMConfigurationPolicy](Get-CMConfigurationPolicy.md)

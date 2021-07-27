@@ -272,8 +272,6 @@ For more information on these return objects and their properties, see the follo
 
 [Set-CMBaselineDeployment](Set-CMBaselineDeployment.md)
 
-[Start-CMBaselineDeployment](Start-CMBaselineDeployment.md)
-
 [Get-CMBaseline](Get-CMBaseline.md)
 
 [Get-CMBaselineDeploymentStatus](Get-CMBaselineDeploymentStatus.md)

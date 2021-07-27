@@ -713,7 +713,6 @@ Make sure to use the schedule parameters appropriately:
 
 [Get-CMTaskSequenceDeployment](Get-CMTaskSequenceDeployment.md)
 [Set-CMTaskSequenceDeployment](Set-CMTaskSequenceDeployment.md)
-[Start-CMTaskSequenceDeployment](Start-CMTaskSequenceDeployment.md)
 [Remove-CMTaskSequenceDeployment](Remove-CMTaskSequenceDeployment.md)
 
 [Get-CMTaskSequence](Get-CMTaskSequence.md)
