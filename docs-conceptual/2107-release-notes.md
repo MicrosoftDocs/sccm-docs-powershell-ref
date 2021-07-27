@@ -132,10 +132,6 @@ $clientSetting =  Get-CMClientSetting -Name "Software Center customizations"
 $clientSetting | Get-CMClientSettingDeployment
 ```
 
-```powershell
-Get-CMClientSettingDeployment -Name "Software Center customizations"
-```
-
 <!-- For more information, see [Get-CMClientSettingDeployment](/powershell/module/configurationmanager/Get-CMClientSettingDeployment). -->
 
 ### Get-CMDeploymentTypeDetectionClause
