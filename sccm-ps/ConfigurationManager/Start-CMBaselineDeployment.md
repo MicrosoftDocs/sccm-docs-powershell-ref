@@ -10,7 +10,7 @@ title: Start-CMBaselineDeployment
 # Start-CMBaselineDeployment
 
 ## SYNOPSIS
-Starts deployment of a Configuration Manager baseline configuration to a collection of computers.
+(Deprecated) Starts deployment of a Configuration Manager baseline configuration to a collection of computers.
 
 ## SYNTAX
 
@@ -39,6 +39,10 @@ Start-CMBaselineDeployment -CollectionName <String> [-EnableEnforcement <Boolean
 ```
 
 ## DESCRIPTION
+
+> [!IMPORTANT]
+> This cmdlet is deprecated. Use [New-CMBaselineDeployment](New-CMBaselineDeployment.md) instead.
+
 The **Start-CMBaselineDeployment** cmdlet starts the deployment of a Configuration Manager baseline configuration to a collection of computers.
 
 A baseline defines the configuration of a product or system established at a specific time.

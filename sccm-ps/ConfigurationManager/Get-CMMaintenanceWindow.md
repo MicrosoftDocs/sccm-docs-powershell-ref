@@ -1,8 +1,8 @@
 ﻿---
-description: Gets the maintenance windows for a collection.
+description: Get the maintenance windows for a collection.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/02/2019
+ms.date: 06/16/2021
 schema: 2.0.0
 title: Get-CMMaintenanceWindow
 ---
@@ -10,7 +10,8 @@ title: Get-CMMaintenanceWindow
 # Get-CMMaintenanceWindow
 
 ## SYNOPSIS
-Gets the maintenance windows for a collection.
+
+Get the maintenance windows for a collection.
 
 ## SYNTAX
 
@@ -33,24 +34,47 @@ Get-CMMaintenanceWindow [-CollectionName] <String> [-MaintenanceWindowName <Stri
 ```
 
 ## DESCRIPTION
-The **Get-CMMaintenanceWindow** cmdlet gets the maintenance windows for specified collections.
+
+Use this cmdlet to get the maintenance windows for the specified collection. You can also filter the results to a specific maintenance window.
+
+For more information on maintenance windows, see [How to use maintenance windows in Configuration Manager](/mem/configmgr/core/clients/manage/collections/use-maintenance-windows).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
-### Example 1: Get maintenance windows
-```
-PS XYZ:\> Get-CMMaintenanceWindow -CollectionID "AAA0004D"
+### Example 1: Get enabled maintenance windows for a collection by ID
+
+This command gets the maintenance windows that are enabled for the specified collection.
+
+```powershell
+Get-CMMaintenanceWindow -CollectionID "XYZ0004D" | Where-Object { $_.IsEnabled }
 ```
 
-This command gets the maintenance windows for the specified collection.
+### Example 2: Get all maintenance windows for a collection object
+
+This example first gets a collection object, and then passes that on the pipeline to get a maintenance window by its name.
+
+```powershell
+$coll = Get-CMCollection -CollectionID 'XYZ0003F'
+$coll | Get-CMMaintenanceWindow -MaintenanceWindowName 'nightly SUM window'
+```
+
+### Example 3: Get the schedule for a maintenance window
+
+This example first gets a maintenance window for a specific collection. It then converts the ServiceWindowSchedules property to display the maintenance window's schedule.
+
+```powershell
+$mw = Get-CMMaintenanceWindow -CollectionID "XYZ000AB"
+Convert-CMSchedule -ScheduleString $mw.ServiceWindowSchedules
+```
 
 ## PARAMETERS
 
 ### -CollectionId
-Specifies an array of collection IDs.
+
+Specify a collection ID to query for its maintenance windows. This ID is a standard collection ID, for example `XYZ0003F`.
 
 ```yaml
 Type: String
@@ -65,6 +89,9 @@ Accept wildcard characters: False
 ```
 
 ### -CollectionName
+
+Specify a collection name to query for its maintenance windows.
+
 ```yaml
 Type: String
 Parameter Sets: ByCollectionName
@@ -110,6 +137,9 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
+
+Specify a collection object to query for its maintenance windows. To get this object, use the [Get-CMCollection](Get-CMCollection.md) cmdlet.
+
 ```yaml
 Type: IResultObject
 Parameter Sets: ByValue
@@ -123,6 +153,14 @@ Accept wildcard characters: False
 ```
 
 ### -MaintenanceWindowName
+
+Specify the name of a maintenance window on the targeted collection. By default, **Get-CMMaintenanceWindow** returns all maintenance windows. Use this parameter to filter the results to the specified window name.
+
+You can use wildcard characters:
+
+- `*`: Multiple characters
+- `?`: Single character
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -148,6 +186,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## NOTES
 
+For more information on this return object and its properties, see [SMS_ServiceWindow server WMI class](/mem/configmgr/develop/reference/core/servers/configure/sms_servicewindow-server-wmi-class).
+
 ## RELATED LINKS
 
 [New-CMMaintenanceWindow](New-CMMaintenanceWindow.md)
@@ -156,4 +196,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Set-CMMaintenanceWindow](Set-CMMaintenanceWindow.md)
 
-
+[How to use maintenance windows in Configuration Manager](/mem/configmgr/core/clients/manage/collections/use-maintenance-windows)

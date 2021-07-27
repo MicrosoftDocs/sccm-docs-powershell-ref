@@ -265,7 +265,6 @@ For more information on these return objects and their properties, see the follo
 ## RELATED LINKS
 
 [New-CMPackageDeployment](New-CMPackageDeployment.md)
-[Start-CMPackageDeployment](Start-CMPackageDeployment.md)
 [Get-CMPackageDeploymentStatus](Get-CMPackageDeploymentStatus.md)
 [Set-CMPackageDeployment](Set-CMPackageDeployment.md)
 [Remove-CMPackageDeployment](Remove-CMPackageDeployment.md)

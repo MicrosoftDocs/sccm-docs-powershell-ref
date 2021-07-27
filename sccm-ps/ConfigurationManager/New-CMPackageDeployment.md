@@ -1,8 +1,8 @@
 ---
-description: Creates a package deployment to a Configuration Manager collection.
+description: Deploy a legacy package to a collection.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/07/2019
+ms.date: 06/16/2021
 schema: 2.0.0
 title: New-CMPackageDeployment
 ---
@@ -11,7 +11,7 @@ title: New-CMPackageDeployment
 
 ## SYNOPSIS
 
-Creates a package deployment to a Configuration Manager collection.
+Deploy a legacy package to a collection.
 
 ## SYNTAX
 
@@ -121,54 +121,51 @@ New-CMPackageDeployment [-DeployPurpose <DeployPurposeType>] [-DeviceProgram] [-
 
 ## DESCRIPTION
 
-The **New-CMPackageDeployment** cmdlet creates a specified software package to computers that belong to a Configuration Manager collection.
+Use this cmdlet to deploy a package to resources in a collection.
+You can specify the collection by ID, name, or pass an object.
 
-You can use CollecitonId or CollectionName or Collection to specify the target collection to deploy the package.
-To specify DeploymentStartDateTime and DeploymentStartDay and DeploymentStartTime, use [Start-CMPackageDeployment](Start-CMPackageDeployment.md).
-The cmdlet always output the new created deployment.
-You can choose when the package becomes available and when the package deployment expires.
-You can specify whether Configuration Manager deploys the package only once or repeatedly and what happens when installation fails for a computer.
+For other deployment settings that you can't configure with this cmdlet, use [Set-CMPackageDeployment](Set-CMPackageDeployment.md).
+
+For more information, see [Packages and programs in Configuration Manager](/mem/configmgr/apps/deploy-use/packages-and-programs#deploy-packages-and-programs).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
-### Example 1: By ID
+### Example 1: Deploy a package by ID
+
+This command creates a deployment of the package with ID **XYZ00001** to the collection with ID **XYZ0003F**.
 
 ```powershell
-PS XYZ:\> New-CMPackageDeployment -PackageId $ReferencePackage.PackageID -ProgramName $ReferenceProgram.ProgramName -CollectionID $Collection.CollectionID -StandardProgram -Comment $Comment -DeployPurpose Available
+$pkgId = "XYZ00001"
+$collId = "XYZ0003F"
+New-CMPackageDeployment -StandardProgram -PackageId $pkgId -ProgramName "ScanState" -CollectionID $collId -Comment "Use USMT to scan for data" -DeployPurpose Available
 ```
 
-### Example 2: By name
+### Example 2: Deploy a package as required with a deadline
+
+The first command sets a variable for a deadline to 10 days from now at 8:00 PM.
+The second command creates a schedule object based on that deadline that recurs daily.
+The third command creates the package deployment with that schedule.
 
 ```powershell
-PS XYZ:\> New-CMPackageDeployment -PackageName $ReferencePackage.Name -ProgramName $ReferenceProgram.ProgramName -CollectionName $Collection.Name -StandardProgram -Comment $Comment -DeployPurpose Available
-```
+[datetime]$DeadlineTime = (Get-Date -Hour 20 -Minute 0 -Second 0).AddDays(10)
 
-### Example 3: By pipeline
-
-```powershell
-PS XYZ:\> $ReferencePackage | New-CMPackageDeployment -ProgramName $ReferenceProgram.ProgramName -Collection $Collection -StandardProgram -Comment $Comment -DeployPurpose Available
-```
-
-### Example 4: With Required Schedule, Deadline in 10 days
-
-```powershell
-#Set Deadline to 10 days from now at 8PM
-[datetime]$DeadlineTime = (get-date -Hour 20 -Minute 0 -Second 0).AddDays(10)
-
-#Create CM Schedule based on that Time we just created - Recuring Daily
 $NewScheduleDeadline = New-CMSchedule -Start $DeadlineTime -Nonrecurring
 
-#Create the Deployment
-New-CMPackageDeployment -PackageId $ReferencePackage.PackageID -ProgramName $ReferenceProgram.ProgramName -DeployPurpose Required -CollectionName $Collection -StandardProgram  -FastNetworkOption DownloadContentFromDistributionPointAndRunLocally -SlowNetworkOption DownloadContentFromDistributionPointAndLocally -RerunBehavior RerunIfFailedPreviousAttempt -Schedule $NewScheduleDeadline
+$pkgId = "XYZ00001"
+$progName = "Run"
+$collId = "XYZ0003F"
+
+New-CMPackageDeployment -StandardProgram -PackageId $pkgId -ProgramName $progName -DeployPurpose Required -CollectionId $collId -FastNetworkOption DownloadContentFromDistributionPointAndRunLocally -SlowNetworkOption DownloadContentFromDistributionPointAndLocally -RerunBehavior RerunIfFailedPreviousAttempt -Schedule $NewScheduleDeadline
 ```
 
 ## PARAMETERS
 
 ### -AllowFallback
-{{ Fill AllowFallback Description }}
+
+Allow clients to use distribution points from the default site boundary group.
 
 ```yaml
 Type: Boolean
@@ -184,9 +181,7 @@ Accept wildcard characters: False
 
 ### -AllowSharedContent
 
-Indicates whether clients use shared content.
-If this value is $True, clients attempt to download content from other clients that downloaded that content.
-If this value is $False, clients do not attempt to download from other clients.
+Allow clients to use distribution points from a neighbor boundary group.
 
 ```yaml
 Type: Boolean
@@ -202,8 +197,11 @@ Accept wildcard characters: False
 
 ### -AvailableDateTime
 
-Specifies, as a **DateTime** object, the date and time that the deployment becomes available.
-To obtain a **DateTime** object, use the Get-Date cmdlet.
+Specify when this deployment is _available_.
+
+Use **-DeadlineDateTime** to specify when the deployment _expires_, and **-Schedule** to specify the deployment assignment, or _deadline_.
+
+To get a **DateTime** object, use the [Get-Date](/powershell/module/microsoft.powershell.utility/get-date) cmdlet.
 
 ```yaml
 Type: DateTime
@@ -219,7 +217,7 @@ Accept wildcard characters: False
 
 ### -Collection
 
-Specifies the user collection.
+Specify a collection object as the target for this package deployment. To get this object, use the [Get-CMCollection](Get-CMCollection.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -235,7 +233,7 @@ Accept wildcard characters: False
 
 ### -CollectionId
 
-Specifies the ID of a device or user collection.
+Specify a collection ID as the target for this package deployment.
 
 ```yaml
 Type: String
@@ -251,7 +249,7 @@ Accept wildcard characters: False
 
 ### -CollectionName
 
-Specifies the name of a user collection.
+Specify a collection name as the target for this package deployment.
 
 ```yaml
 Type: String
@@ -267,7 +265,7 @@ Accept wildcard characters: False
 
 ### -Comment
 
-Specifies a comment for the deployment.
+Specify an optional comment for this package deployment.
 
 ```yaml
 Type: String
@@ -283,7 +281,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 
-Prompts you for confirmation before running the cmdlet.
+Add this parameter to prompt for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -299,8 +297,11 @@ Accept wildcard characters: False
 
 ### -DeadlineDateTime
 
-Specifies, as a **DateTime** object, the date and time that the deployment expires.
-To obtain a **DateTime** object, use the Get-Date cmdlet.
+Use this parameter to specify when the deployment _expires_.
+
+Use **-AvailableDateTime** to specify when the deployment is _available_, and **-Schedule** to specify the deployment assignment, or _deadline_.
+
+To get a **DateTime** object, use the [Get-Date](/powershell/module/microsoft.powershell.utility/get-date) cmdlet.
 
 ```yaml
 Type: DateTime
@@ -316,11 +317,7 @@ Accept wildcard characters: False
 
 ### -DeployPurpose
 
-Specifies the purpose for the deployment.
-The acceptable values for this parameter are:
-
-- Available
-- Required
+Specify whether this deployment is available for users to install, or it's required to install at the deadline.
 
 ```yaml
 Type: DeployPurposeType
@@ -337,7 +334,9 @@ Accept wildcard characters: False
 
 ### -DeviceProgram
 
-Specifies a device program.
+If the program for the package that you're deploying is a device-type program, specify this parameter.
+
+Otherwise, use the **StandardProgram** parameter. The standard program type is for computers with the Configuration Manager client.
 
 ```yaml
 Type: SwitchParameter
@@ -385,7 +384,7 @@ Accept wildcard characters: False
 
 ### -DistributeContent
 
-Specifies the distribution content.
+Add this parameter to distribute the package content when you create this deployment. Clients can't install the package until you distribute content to distribution points that the clients can access.
 
 ```yaml
 Type: SwitchParameter
@@ -401,7 +400,7 @@ Accept wildcard characters: False
 
 ### -DistributionPointGroupName
 
-Specifies the distribution point group name.
+The site distributes content to this distribution point group.
 
 ```yaml
 Type: String
@@ -417,7 +416,7 @@ Accept wildcard characters: False
 
 ### -DistributionPointName
 
-Specifies the distribution point name.
+The site distributes content to this distribution point.
 
 ```yaml
 Type: String
@@ -433,11 +432,12 @@ Accept wildcard characters: False
 
 ### -FastNetworkOption
 
-Specifies client behavior on a fast network.
-The acceptable values for this parameter are:
+Specify the behavior when the client uses a distribution point from the current boundary group:
 
-- DownloadContentFromDistributionPointAndRunLocally
-- RunProgramFromDistributionPoint
+- Run program from distribution point
+- Download content from distribution point and run locally
+
+If you don't specify this parameter, it uses `DownloadContentFromDistributionPointAndRunLocally` by default. This option is more secure, because the client validates the content hash before it runs the program.
 
 ```yaml
 Type: FastNetworkOptionType
@@ -470,8 +470,7 @@ Accept wildcard characters: False
 
 ### -Package
 
-Specifies a package object.
-To obtain a package object, use the [Get-CMPackage](Get-CMPackage.md) cmdlet.
+Specify a package object with the program to deploy. To get this object, use the [Get-CMPackage](Get-CMPackage.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -487,7 +486,7 @@ Accept wildcard characters: False
 
 ### -PackageId
 
-Specifies the ID of a package.
+Specify the ID of the package with the program to deploy. This ID is a standard package ID, for example `XYZ007E3`.
 
 ```yaml
 Type: String
@@ -503,7 +502,7 @@ Accept wildcard characters: False
 
 ### -PackageName
 
-Specifies the name of a package.
+Specify the name of the package with the program to deploy.
 
 ```yaml
 Type: String
@@ -519,10 +518,10 @@ Accept wildcard characters: False
 
 ### -PersistOnWriteFilterDevice
 
-Indicates whether to enable write filters for embedded devices.
-For a value of $True, the device commits changes during a maintenance window.
-This action requires a restart.
-For a value of $False, the device saves changes in an overlay and commits them later.
+Configure how the client handles the write filter on Windows Embedded devices.
+
+- `$true`: Commit changes at the deadline or during a maintenance window. A restart is required.
+- `$false`: Apply content on the overlay and commit later.
 
 ```yaml
 Type: Boolean
@@ -538,7 +537,7 @@ Accept wildcard characters: False
 
 ### -Program
 
-Specifies a program.
+Specify a program object to deploy. To get this object, use the [Get-CMProgram](Get-CMProgram.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -554,7 +553,7 @@ Accept wildcard characters: False
 
 ### -ProgramName
 
-Specifies the name of a program.
+Specify the name of the program in the package to deploy.
 
 ```yaml
 Type: String
@@ -570,12 +569,7 @@ Accept wildcard characters: False
 
 ### -RecurUnit
 
-Specifies a unit for a recurring deployment.
-The acceptable values for this parameter are:
-
-- Days
-- Hours
-- Minutes
+Specify a unit for a recurring deployment. Use the **RecurValue** parameter to specify the value for this unit.
 
 ```yaml
 Type: RecurUnitType
@@ -592,9 +586,13 @@ Accept wildcard characters: False
 
 ### -RecurValue
 
-Specifies how often a deployment recurs.
-This parameter depends on the unit type specified in the *RecurUnit* parameter.
-This value can be between 1 and 23 if the unit is Hours, between 1 and 31 if the unit is Days, or between 1 and 59 if the unit is Minutes.
+Specify how often the deployment recurs.
+
+This parameter depends on the unit type specified in the **RecurUnit** parameter:
+
+- **Hours**: This value can be between `1` and `23`
+- **Days**: Between `1` and `31`
+- **Minutes**: Between `1` and `59`
 
 ```yaml
 Type: Int32
@@ -610,9 +608,10 @@ Accept wildcard characters: False
 
 ### -Rerun
 
-Indicates whether the deployment reruns.
-If this value is $True, the deployment runs again for clients as specified in the *RerunBehavior* parameter.
-If this value is $False, the deployment does not run again.
+Indicate whether the deployment reruns:
+
+- `$True`: The deployment runs again for clients as specified in the **RerunBehavior** parameter. This value is the default.
+- `$False`: The deployment doesn't run again.
 
 ```yaml
 Type: Boolean
@@ -628,19 +627,12 @@ Accept wildcard characters: False
 
 ### -RerunBehavior
 
-Specifies how a deployment reruns on a client.
-The acceptable values for this parameter are:
+Specify whether the program reruns on a computer.
 
-- AlwaysRerunProgram.
-Rerun as scheduled, even if the deployment succeeded.
-You can use this value for recurring deployments.
-- NeverRerunDeployedProgram.
-Does not rerun, even if the deployment failed or files changed.
-- RerunIfFailedPreviousAttempt.
-Rerun, as scheduled, if the deployment failed on the previous attempt.
-- RerunIfSucceededOnpreviousAttempt.
-Rerun only if the previous attempt succeeded.
-You can use this value for updates that depend on the previous update.
+- `NeverRerunDeployedProgram`: Doesn't rerun, even if the deployment failed or files changed.
+- `AlwaysRerunProgram`: Rerun as scheduled, even if the deployment succeeded. You can use this value for recurring deployments. This value is the default.
+- `RerunIfFailedPreviousAttempt`: Rerun as scheduled, if the deployment failed on the previous attempt.
+- `RerunIfSucceededOnPreviousAttempt`: Rerun only if the previous attempt succeeded.
 
 ```yaml
 Type: RerunBehaviorType
@@ -657,7 +649,7 @@ Accept wildcard characters: False
 
 ### -RunFromSoftwareCenter
 
-Indicates whether to run from Software Center.
+Allow users to run the program independently of assignments.
 
 ```yaml
 Type: Boolean
@@ -673,7 +665,11 @@ Accept wildcard characters: False
 
 ### -Schedule
 
-Specifies a schedule object for the deployment.
+Use this parameter to specify the deployment assignment, or _deadline_.
+
+Use **-AvailableDateTime** to specify when the deployment is _available_, and **-DeadlineDateTime** to specify when the deployment _expires_.
+
+Specify an array of schedule objects. A schedule object defines the mandatory assignment schedule for a deployment. To create a schedule object, use the [New-CMSchedule](New-CMSchedule.md) cmdlet.
 
 ```yaml
 Type: IResultObject[]
@@ -689,13 +685,7 @@ Accept wildcard characters: False
 
 ### -ScheduleEvent
 
-Specifies an array of schedule event types.
-The acceptable values for this parameter are:
-
-- AsSoonAsPossible
-- LogOff
-- LogOn
-- SendWakeUpPacket
+Specify the event type that determines when the package deployment runs.
 
 ```yaml
 Type: ScheduleEventType
@@ -712,10 +702,7 @@ Accept wildcard characters: False
 
 ### -SendWakeupPacket
 
-Indicates whether to send a wake up packet to computers before the deployment begins.
-If this value is $True, Configuration Manager wakes a computer from sleep.
-If this value is $False, it does not wake computers from sleep.
-For computers to wake, you must first configure Wake On LAN.
+Indicates whether to send a wake-up packet to computers before the deployment begins. If this value is `$True`, Configuration Manager wakes a computer from sleep. If this value is `$False`, it doesn't wake computers from sleep. For computers to wake, first configure Wake On LAN.
 
 ```yaml
 Type: Boolean
@@ -731,12 +718,13 @@ Accept wildcard characters: False
 
 ### -SlowNetworkOption
 
-Specifies how Configuration Manager deploys this package in a slow network.
-The acceptable values for this parameter are:
+Specify the behavior when the client uses a distribution point from a neighbor boundary group or the default site boundary group:
 
-- DoNotRunProgram
-- DownloadContentFromDistributionPointAndLocally
-- RunProgramFromDistributionPoint
+- Do not run program
+- Download content from distribution point and run locally
+- Run program from distribution point
+
+If you don't specify this parameter, it uses `DoNotRunProgram` by default.
 
 ```yaml
 Type: SlowNetworkOptionType
@@ -753,10 +741,7 @@ Accept wildcard characters: False
 
 ### -SoftwareInstallation
 
-Indicates whether to install the deployed software outside of maintenance windows.
-A maintenance window is a specified period of time used for computer maintenance and updates.
-If this value is $True, the Configuration Manager installs software according to schedule, even if the schedule falls outside a maintenance window.
-If this value is $False, Configuration Manager does not install deployed software outside any windows, but waits for a maintenance window.
+When the installation deadline is reached, set this parameter to `$true` to allow the package to install outside the maintenance window.
 
 ```yaml
 Type: Boolean
@@ -772,7 +757,9 @@ Accept wildcard characters: False
 
 ### -StandardProgram
 
-Indicates that the program type in the deployment package is standard program.
+Use this parameter for standard program types. This type is for computers with the Configuration Manager client.
+
+If the program for the package that you're deploying is a device-type program, use the **DeviceProgram** parameter.
 
 ```yaml
 Type: SwitchParameter
@@ -788,10 +775,7 @@ Accept wildcard characters: False
 
 ### -SystemRestart
 
-Indicates whether a system restarts outside a maintenance window.
-A maintenance window is a specified period of time used for computer maintenance and updates.
-If this value is $True, any required restart takes place without regard to maintenance windows.
-If this value is $False, the computer does not restart outside a maintenance window.
+When the installation deadline is reached, set this parameter to `$true` to allow system restart if necessary outside the maintenance window.
 
 ```yaml
 Type: Boolean
@@ -807,7 +791,7 @@ Accept wildcard characters: False
 
 ### -UseMeteredNetwork
 
-Indicates whether to allow clients to download content over a metered Internet connection after the deadline, which may incur additional expense.
+Indicates whether to allow clients on a metered internet connection to download content after the installation deadline, which might incur more cost.
 
 ```yaml
 Type: Boolean
@@ -823,9 +807,7 @@ Accept wildcard characters: False
 
 ### -UseUtc
 
-Indicates whether to use Coordinated Universal Time (UTC), also known as Greenwich Mean Time.
-If this value is $True, Configuration Manager uses UTC for this deployment.
-If this value is $False, Configuration Manager uses local time.
+Indicates whether clients use Coordinated Universal Time (UTC) to determine the availability of a program. UTC time makes the deployment available at the same time for all computers. If you don't specify this parameter, or set it to `$false`, the client uses its local time.
 
 ```yaml
 Type: Boolean
@@ -841,9 +823,7 @@ Accept wildcard characters: False
 
 ### -UseUtcForAvailableSchedule
 
-Indicates whether to use UTC for available schedule.
-If this value is $True, Configuration Manager uses UTC.
-If this value is $False, Configuration Manager uses local time.
+Indicates whether clients use Coordinated Universal Time (UTC) to determine the availability of a program. UTC time makes the deployment available at the same time for all computers. If you don't specify this parameter, or set it to `$false`, the client uses its local time.
 
 ```yaml
 Type: Boolean
@@ -859,9 +839,7 @@ Accept wildcard characters: False
 
 ### -UseUtcForExpireSchedule
 
-Indicates whether to use UTC for expire schedule.
-If this value is $True, Configuration Manager uses UTC.
-If this value is $False, Configuration Manager uses local time.
+Indicates whether clients use Coordinated Universal Time (UTC) to determine when a program is expired. UTC time expires the deployment at the same time for all computers. If you don't specify this parameter, or set it to `$false`, the client uses its local time.
 
 ```yaml
 Type: Boolean
@@ -878,7 +856,7 @@ Accept wildcard characters: False
 ### -WhatIf
 
 Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+The cmdlet isn't run.
 
 ```yaml
 Type: SwitchParameter
@@ -906,9 +884,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Start-CMPackageDeployment](Start-CMPackageDeployment.md)
 [Get-CMPackageDeployment](Get-CMPackageDeployment.md)
 [Get-CMPackageDeploymentStatus](Get-CMPackageDeploymentStatus.md)
 [Set-CMPackageDeployment](Set-CMPackageDeployment.md)
 [Remove-CMPackageDeployment](Remove-CMPackageDeployment.md)
 [Get-CMPackage](Get-CMPackage.md)
+
+[Packages and programs in Configuration Manager](/mem/configmgr/apps/deploy-use/packages-and-programs#deploy-packages-and-programs)

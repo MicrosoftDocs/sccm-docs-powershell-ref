@@ -10,7 +10,7 @@ title: Start-CMApplicationDeployment
 # Start-CMApplicationDeployment
 
 ## SYNOPSIS
-Starts an application deployment in Configuration Manager.
+(Deprecated) Starts an application deployment in Configuration Manager.
 
 ## SYNTAX
 
@@ -60,6 +60,10 @@ Start-CMApplicationDeployment [-ApprovalRequired <Boolean>] [-AvailableDate <Dat
 ```
 
 ## DESCRIPTION
+
+> [!IMPORTANT]
+> This cmdlet is deprecated. Use [New-CMApplicationDeployment](New-CMApplicationDeployment.md) instead.
+
 The **Start-CMApplicationDeployment** cmdlet starts an application deployment.
 
 > [!NOTE]

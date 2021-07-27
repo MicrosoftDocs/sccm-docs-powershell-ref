@@ -1,8 +1,8 @@
 ---
-description: Removes a maintenance window.
+description: Remove a maintenance window.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/07/2019
+ms.date: 06/16/2021
 schema: 2.0.0
 title: Remove-CMMaintenanceWindow
 ---
@@ -10,7 +10,8 @@ title: Remove-CMMaintenanceWindow
 # Remove-CMMaintenanceWindow
 
 ## SYNOPSIS
-Removes a maintenance window.
+
+Remove a maintenance window.
 
 ## SYNTAX
 
@@ -33,26 +34,38 @@ Remove-CMMaintenanceWindow [-CollectionName] <String> [-Force] -MaintenanceWindo
 ```
 
 ## DESCRIPTION
-The **Remove-CMMaintenanceWindow** cmdlet removes a maintenance window associated with a collection.
-If you remove a maintenance window during that window, the maintenance updates finish installation.
+
+Use this cmdlet to remove a maintenance window from a collection.
+
+For more information on maintenance windows, see [How to use maintenance windows in Configuration Manager](/mem/configmgr/core/clients/manage/collections/use-maintenance-windows).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
-### Example 1: Remove a maintenance window
-```
-PS XYZ:\> Remove-CMMaintenanceWindow -Name "Distribution Point Maintenance" -CollectionId "AAA0004D"
+### Example 1: Remove a maintenance window by name from a collection by ID
+
+This command removes the maintenance window named **Distribution Point Maintenance**. The window is on the collection with ID **XYZ0004D**.
+
+```powershell
+Remove-CMMaintenanceWindow -Name "Distribution Point Maintenance" -CollectionId "XYZ0004D"
 ```
 
-This command removes the maintenance window Distribution Point Maintenance.
-The window is part of the collection AAA0004D.
+### Example 2: Remove all maintenance windows on a collection
+
+This example first gets a collection object, and then uses the wildcard character to remove all windows without prompting for confirmation.
+
+```powershell
+$coll = Get-CMCollection -CollectionId "XYZ0003f"
+Remove-CMMaintenanceWindow -InputObject $coll -MaintenanceWindowName "*" -Force
+```
 
 ## PARAMETERS
 
 ### -CollectionId
-Specifies the ID of the collection that the maintenance window applies to.
+
+Specify the ID of a collection from which to remove the maintenance window. This ID is a standard collection ID, for example `XYZ0003F`.
 
 ```yaml
 Type: String
@@ -67,6 +80,9 @@ Accept wildcard characters: False
 ```
 
 ### -CollectionName
+
+Specify the name of a collection from which to remove the maintenance window.
+
 ```yaml
 Type: String
 Parameter Sets: ByCollectionName
@@ -80,7 +96,8 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-Prompts you for confirmation before running the cmdlet.
+
+Add this parameter to prompt for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -111,7 +128,8 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Forces the command to run without asking for user confirmation.
+
+Add this parameter to force the command to run without asking for user confirmation.
 
 ```yaml
 Type: SwitchParameter
@@ -142,6 +160,9 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
+
+Specify an object for a collection from which to remove the maintenance window. To get this object, use the [Get-CMCollection](Get-CMCollection.md) cmdlet.
+
 ```yaml
 Type: IResultObject
 Parameter Sets: ByValue
@@ -155,6 +176,14 @@ Accept wildcard characters: False
 ```
 
 ### -MaintenanceWindowName
+
+Specify the name of a maintenance window to remove from the targeted collection.
+
+You can use wildcard characters:
+
+- `*`: Multiple characters
+- `?`: Single character
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -203,4 +232,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Set-CMMaintenanceWindow](Set-CMMaintenanceWindow.md)
 
-
+[How to use maintenance windows in Configuration Manager](/mem/configmgr/core/clients/manage/collections/use-maintenance-windows)

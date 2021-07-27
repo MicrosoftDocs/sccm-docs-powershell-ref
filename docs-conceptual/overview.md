@@ -1,7 +1,7 @@
 ---
 title: Configuration Manager PowerShell cmdlets
 description: Manage your Configuration Manager hierarchy using Windows PowerShell. 
-ms.date: 05/19/2021
+ms.date: 06/09/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: overview
@@ -23,6 +23,8 @@ Run Configuration Manager cmdlets and scripts in PowerShell from the Configurati
 > All currently supported versions of Configuration Manager current branch support Windows PowerShell version 5.1. If you've already installed PowerShell version 7, you can still use PowerShell version 5.1. For more information, see [Using PowerShell 7 side-by-side with Windows PowerShell 5.1](/powershell/scripting/install/migrating-from-windows-powershell-51-to-powershell-7#using-powershell-7-side-by-side-with-windows-powershell-51).
 >
 > Starting in version 2010, the Configuration Manager PowerShell cmdlet library supports PowerShell 7. For more information, see [Support for PowerShell version 7](#support-for-powershell-version-7).<!--6023299-->
+
+Starting in version 2103, the ConfigurationManager PowerShell module requires Microsoft .NET version 4.7.2 or later.
 
 ## PowerShell from the Configuration Manager console
 

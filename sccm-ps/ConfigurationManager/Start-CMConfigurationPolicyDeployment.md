@@ -10,7 +10,7 @@ title: Start-CMConfigurationPolicyDeployment
 # Start-CMConfigurationPolicyDeployment
 
 ## SYNOPSIS
-Deploys policies for a Configuration Manager collection.
+(Deprecated) Deploys policies for a Configuration Manager collection.
 
 ## SYNTAX
 
@@ -90,6 +90,10 @@ Start-CMConfigurationPolicyDeployment -CollectionName <String> [-EnableEnforceme
 ```
 
 ## DESCRIPTION
+
+> [!IMPORTANT]
+> This cmdlet is deprecated. Use [New-CMConfigurationPolicyDeployment](New-CMConfigurationPolicyDeployment.md) instead.
+
 The **Start-CMConfigurationPolicyDeployment** cmdlet deploys specified policies for a Configuration Manager collection.
 You can deploy firewall policies or user session management policies.
 

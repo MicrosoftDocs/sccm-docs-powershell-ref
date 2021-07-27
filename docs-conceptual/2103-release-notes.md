@@ -41,6 +41,8 @@ Similarly, if you used **Update-Help** on a version 2010 site, after you update 
 
 If the Configuration Manager console on the device hasn't already connected to a site, if you manually import the ConfigurationManager module, it creates a PowerShell drive for the site based on the default SMS Provider.
 
+Starting in version 2103, the ConfigurationManager PowerShell module requires Microsoft .NET version 4.7.2 or later.
+
 ## Cmdlets that don't support PowerShell version 7
 
 <!-- 6337796 -->
