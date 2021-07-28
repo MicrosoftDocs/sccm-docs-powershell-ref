@@ -295,6 +295,14 @@ For more information, see [New-CMAdministrativeUser](/powershell/module/configur
 
 Fixed an issue when the user name is `me`.
 
+### New-CMApplicationDeployment
+
+For more information, see [New-CMApplicationDeployment](/powershell/module/configurationmanager/New-CMApplicationDeployment).
+
+**Non-breaking changes**
+
+Added the **AutoCloseExecutable** parameter to enable the application deployment setting for install behaviors.
+
 ### New-CMCloudManagementGateway
 
 For more information, see [New-CMCloudManagementGateway](/powershell/module/configurationmanager/New-CMCloudManagementGateway).
@@ -375,6 +383,18 @@ For more information, see [New-CMTSStepApplyOperatingSystem](/powershell/module/
 
 Fixed validation issues with the **DestinationVariable** parameter to allow values that start with an underscore (`_`).
 
+**Non-breaking changes**
+
+Added the **LayeredDriver** parameter to support layered keyboard driver during OS deployment.
+
+### New-CMTSStepUpgradeOperatingSystem
+
+For more information, see [New-CMTSStepUpgradeOperatingSystem](/powershell/module/configurationmanager/New-CMTSStepUpgradeOperatingSystem).
+
+**Non-breaking changes**
+
+Added new parameter **SoftwareUpdate** to specify a feature update for the [Upgrade OS](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_UpgradeOS) task sequence step.
+
 ### Publish-CMPrestageContent
 
 For more information, see [Publish-CMPrestageContent](/powershell/module/configurationmanager/Publish-CMPrestageContent).
@@ -398,6 +418,14 @@ For more information, see [Set-CMAntimalwarePolicy](/powershell/module/configura
 **Non-breaking changes**
 
 Added the parameter **PuaProtection** to support potentially unwanted applications.
+
+### Set-CMApplicationDeployment
+
+For more information, see [Set-CMApplicationDeployment](/powershell/module/configurationmanager/Set-CMApplicationDeployment).
+
+**Non-breaking changes**
+
+Added the **AutoCloseExecutable** parameter to enable the application deployment setting for install behaviors.
 
 ### Set-CMClientSetting
 
@@ -441,7 +469,7 @@ For more information, see [Set-CMTaskSequence](/powershell/module/configurationm
 
 **Non-breaking changes**
 
-Added new parameter -HighPerformance to support performance setting for task sequence.
+Added new parameter **HighPerformance** to support performance setting for task sequence.
 
 ### Set-CMTSStepApplyDriverPackage
 
@@ -458,6 +486,10 @@ For more information, see [Set-CMTSStepApplyOperatingSystem](/powershell/module/
 **Bugs that were fixed**
 
 Fixed an issue with the **Destination** parameter.
+
+**Non-breaking changes**
+
+Added the **LayeredDriver** parameter to support layered keyboard driver during OS deployment.
 
 ### Set-CMTSStepUpgradeOperatingSystem
 
