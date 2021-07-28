@@ -1,4 +1,4 @@
----
+﻿---
 description: Changes database settings for a Configuration Manager database.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -41,21 +41,6 @@ This command makes changes to the database for the site that has the site code C
 The command sets the data retention period to 10 days, disables data compression, and specifies a port for the SQL Server Service Broker.
 
 ## PARAMETERS
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -DataRetentionDays
 ```yaml
@@ -147,6 +132,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 
 Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
@@ -169,10 +169,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

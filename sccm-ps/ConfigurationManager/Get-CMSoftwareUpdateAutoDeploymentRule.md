@@ -152,7 +152,7 @@ Required: False
 Position: 0
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### CommonParameters
@@ -161,13 +161,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
-
 ## OUTPUTS
 
 ### IResultObject[]#SMS_AutoDeployment
-
 ### IResultObject#SMS_AutoDeployment
-
 ## NOTES
 
 The SMS_AutoDeployment output object displays many of the ADR settings as the stored XML. Parse this XML for specific settings.

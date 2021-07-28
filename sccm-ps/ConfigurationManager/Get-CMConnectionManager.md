@@ -74,11 +74,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
-
 ## OUTPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.ConnectionManagerBase
-
 ## NOTES
 
 ## RELATED LINKS

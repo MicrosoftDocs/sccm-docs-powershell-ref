@@ -110,7 +110,7 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -DeploymentId
@@ -190,7 +190,7 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -SmsObjectId
@@ -231,17 +231,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
-
 ## OUTPUTS
 
 ### IResultObject[]#SMS_DeploymentSummary
-
 ### IResultObject#SMS_DeploymentSummary
-
 ### IResultObject[]#SMS_ApplicationGroupAssignment
-
 ### IResultObject#SMS_ApplicationGroupAssignment
-
 ## NOTES
 
 This cmdlet returns the following WMI class objects:

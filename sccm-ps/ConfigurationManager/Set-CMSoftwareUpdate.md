@@ -1,4 +1,4 @@
----
+﻿---
 description: Sets a software update.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -58,21 +58,6 @@ PS XYZ:\> Set-CMSoftwareUpdate -Id 16777979 -MaximumExecutionMins 10 -CustomSeve
 This command gets the software update with the ID of 16777979 and sets the severity of the update to Critical and the maximum installation time to 10 minutes.
 
 ## PARAMETERS
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -CustomSeverity
 Specifies the severity for the software update.
@@ -190,6 +175,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 
 Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
@@ -212,7 +212,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
-
 ## OUTPUTS
 
 ### System.Object

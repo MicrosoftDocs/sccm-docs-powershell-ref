@@ -1,4 +1,4 @@
----
+﻿---
 description: Gets a Configuration Manager task sequence group.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -154,13 +154,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
-
 ## OUTPUTS
 
 ### IResultObject[]#SMS_TaskSequence_Group
-
 ### IResultObject#SMS_TaskSequence_Group
-
 ## NOTES
 
 ## RELATED LINKS

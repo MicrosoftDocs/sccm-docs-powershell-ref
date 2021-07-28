@@ -207,11 +207,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
-
 ## OUTPUTS
 
 ### Microsoft.ConfigurationManagement.PowerShell.Cmdlets.HS.ExchangeConnectorEmailManagementSetting
-
 ## NOTES
 
 Cmdlet aliases: **New-CMExchangeServerConnectorEmailManagementSetting**

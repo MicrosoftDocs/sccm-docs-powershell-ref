@@ -1,4 +1,4 @@
----
+﻿---
 description: Removes a configuration policy.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -57,21 +57,6 @@ PS XYZ:\> Get-CMcertificateProfilePfx -Name "CertProf1" | Remove-CMConfiguration
 This command gets the PFX certificate profile object named CertProf01 and uses the pipeline operator to pass the object to **Remove-CMConfigurationPolicy** which removes the certificate profile.
 
 ## PARAMETERS
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -DisableWildcardHandling
 
@@ -166,6 +151,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 
 Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
@@ -188,7 +188,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
-
 ## OUTPUTS
 
 ### System.Object

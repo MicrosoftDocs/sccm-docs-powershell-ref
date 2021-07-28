@@ -1,4 +1,4 @@
----
+﻿---
 description: Adds a deployment type for a Configuration Manager deployment application. This cmdlet is deprecated.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -292,22 +292,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AppV5xInstaller
-
-Indicates that the deployment type detects application information and deployment types from a Application Virtualization (App-V) 5.0  .appv package file.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: AddDeploymentTypeByAppV5xInstallerAuto
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -ApplicationName
 
 Specifies the name of the application that is associated with the deployment type.
@@ -331,6 +315,22 @@ Specifies the name of the application in the Windows Store.
 ```yaml
 Type: String
 Parameter Sets: AddDeploymentTypeByWindowsStoreInstallerAuto
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AppV5xInstaller
+
+Indicates that the deployment type detects application information and deployment types from a Application Virtualization (App-V) 5.0  .appv package file.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: AddDeploymentTypeByAppV5xInstallerAuto
 Aliases:
 
 Required: True
@@ -368,22 +368,6 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -1110,22 +1094,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WMInstaller
-
-Indicates that the deployment type detects application information and deployment types from a Windows Mobile cabinet (.cab) file.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: AddDeploymentTypeByWMInstaller
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -WebAppInstaller
 
 Indicates that this cmdlet uses a web application installer for the deployment.
@@ -1138,23 +1106,6 @@ Aliases:
 Required: True
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WhatIf
-
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -1217,17 +1168,64 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -WMInstaller
+
+Indicates that the deployment type detects application information and deployment types from a Windows Mobile cabinet (.cab) file.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: AddDeploymentTypeByWMInstaller
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
-
 ## OUTPUTS
 
 ### IResultObject#SMS_DeploymentType
-
 ## NOTES
 
 ## RELATED LINKS

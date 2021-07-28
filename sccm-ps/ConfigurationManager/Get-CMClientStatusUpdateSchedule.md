@@ -76,11 +76,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
-
 ## OUTPUTS
 
 ### ClientStatusUpdateSchedule
-
 ## NOTES
 
 ## RELATED LINKS

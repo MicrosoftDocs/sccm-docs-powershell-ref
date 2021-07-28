@@ -236,7 +236,7 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### CommonParameters
@@ -245,13 +245,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
-
 ## OUTPUTS
 
 ### IResultObject[]#SMS_Driver
-
 ### IResultObject#SMS_Driver
-
 ## NOTES
 
 For more information on this return object and its properties, see [SMS_Driver server WMI class](/mem/configmgr/develop/reference/osd/sms_driver-server-wmi-class).

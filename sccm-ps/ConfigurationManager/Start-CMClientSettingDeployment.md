@@ -1,4 +1,4 @@
----
+﻿---
 description: Deploys client settings to devices in a collection.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -10,7 +10,7 @@ title: Start-CMClientSettingDeployment
 # Start-CMClientSettingDeployment
 
 ## SYNOPSIS
-Deploys client settings to devices in a collection.
+(Deprecated) Deploys client settings to devices in a collection.
 
 ## SYNTAX
 
@@ -75,8 +75,8 @@ Specify the collection to apply the settings to by using its name or ID, or you 
 
 For more information about client settings, see [About Client Settings in Configuration Manager](/mem/configmgr/core/clients/deploy/about-client-settings).
 
-> [!NOTE]
-> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
+> [!IMPORTANT]
+> Starting in version 2107, this cmdlet is deprecated and may be removed in a future release. Instead use the [New-CMClientSettingDeployment](New-CMClientSettingDeployment.md) cmdlet.
 
 ## EXAMPLES
 
@@ -194,21 +194,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -DisableWildcardHandling
 
 This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
@@ -241,6 +226,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 
 Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
@@ -263,7 +263,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
-
 ## OUTPUTS
 
 ### System.Object

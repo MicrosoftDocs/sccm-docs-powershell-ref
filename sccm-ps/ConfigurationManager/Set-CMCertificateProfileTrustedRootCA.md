@@ -1,4 +1,4 @@
----
+﻿---
 description: Sets a trusted CA certificate profile.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -61,21 +61,6 @@ This command updates the name of the trusted CA certificate profile with the ID 
 By specifying the *Confirm* parameter, the user is prompted for confirmation before the command runs.
 
 ## PARAMETERS
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -Description
 Specifies a description for the trusted CA certificate profile.
@@ -253,6 +238,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 
 Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
@@ -275,11 +275,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
-
 ## OUTPUTS
 
 ### IResultObject#SMS_ConfigurationPolicy
-
 ## NOTES
 
 ## RELATED LINKS

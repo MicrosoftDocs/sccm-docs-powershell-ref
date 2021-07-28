@@ -73,11 +73,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
-
 ## OUTPUTS
 
 ### BaselineSummarizationSchedule
-
 ## NOTES
 
 ## RELATED LINKS

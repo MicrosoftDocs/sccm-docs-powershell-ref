@@ -1,4 +1,4 @@
----
+﻿---
 description: Starts deployment of a software package to a Configuration Manager collection.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -211,43 +211,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DeployPurpose
-
-Specifies the purpose for the deployment.
-The acceptable values for this parameter are:
-
-- Available
-- Required
-
-```yaml
-Type: DeployPurposeType
-Parameter Sets: (All)
-Aliases:
-Accepted values: Available, Required
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -DeploymentAvailableDateTime
 
 Specifies, as a **DateTime** object, the date and time that the deployment becomes available.
@@ -387,6 +350,27 @@ Obsolete. Use *DeploymentStartDateTime*.
 Type: DateTime
 Parameter Sets: DeployDeviceProgramByPackageName, DeployDeviceProgramByPackageId, DeployDeviceProgramByPackageValue, DeployDeviceProgramByProgramValue
 Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DeployPurpose
+
+Specifies the purpose for the deployment.
+The acceptable values for this parameter are:
+
+- Available
+- Required
+
+```yaml
+Type: DeployPurposeType
+Parameter Sets: (All)
+Aliases:
+Accepted values: Available, Required
 
 Required: False
 Position: Named
@@ -888,6 +872,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 
 Shows what would happen if the cmdlet runs.
@@ -911,7 +911,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
-
 ## OUTPUTS
 
 ### System.Object

@@ -1,4 +1,4 @@
----
+﻿---
 description: Change client settings for Configuration Manager devices and users.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -319,7 +319,7 @@ Accept wildcard characters: False
 ```
 
 ### -AddPortalToTrustedSiteList
-Indicates whether to add the default Application Catalog website to the Internet Explorer trusted sites zone.
+Don't use this parameter. The application catalog is no longer supported.
 
 ```yaml
 Type: Boolean
@@ -437,6 +437,9 @@ Accept wildcard characters: False
 ```
 
 ### -ApplicationCatalogWebsitePointServerName
+
+Don't use this parameter. The application catalog is no longer supported.
+
 ```yaml
 Type: String
 Parameter Sets: SetComputerAgentSettingsByName
@@ -594,21 +597,6 @@ Aliases: ComputerRestartSettings
 Required: True
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -1586,6 +1574,9 @@ Accept wildcard characters: False
 ```
 
 ### -SelectApplicationCatalogWebsitePoint
+
+Don't use this parameter. The application catalog is no longer supported.
+
 ```yaml
 Type: ApplicationCatalogWebsitePointType
 Parameter Sets: SetComputerAgentSettingsByName
@@ -1825,6 +1816,19 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -UserDeviceAffinity
+```yaml
+Type: SwitchParameter
+Parameter Sets: SetUserDeviceAffinitySettingsByName
+Aliases: UserDeviceAffinitySettings
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -UseUtcForEvaluationTime
 Indicates whether to use Coordinated Universal Time (UTC), also known as Greenwich Mean Time, to configure a recurring interval.
 If you specify $False, Configuration Manager uses local time.
@@ -1835,19 +1839,6 @@ Parameter Sets: SetNetworkAccessProtectionSettingsByName
 Aliases:
 
 Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -UserDeviceAffinity
-```yaml
-Type: SwitchParameter
-Parameter Sets: SetUserDeviceAffinitySettingsByName
-Aliases: UserDeviceAffinitySettings
-
-Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -1893,6 +1884,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 
 Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
@@ -1915,7 +1921,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
-
 ## OUTPUTS
 
 ### System.Object

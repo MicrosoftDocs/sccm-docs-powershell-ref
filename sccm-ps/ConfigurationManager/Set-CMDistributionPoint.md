@@ -1,4 +1,4 @@
----
+﻿---
 description: Configure a distribution point
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -322,22 +322,6 @@ Accepted values: None, ProfileCustom, Profile10Mbps, Profile100Mbps, Profile1Gbp
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -955,22 +939,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -SourceDPRank
-
-Specify an array that contains the priorities for the distribution point sources from which this distribution point can pull content. When source distribution points have the same priority, the pull distribution point randomly selects a source. Use this parameter with the **EnablePullDP** and **SourceDistributionPoint** parameters.
-
-```yaml
-Type: Int32[]
-Parameter Sets: (All)
-Aliases: SourceDPRanks
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -SourceDistributionPoint
 
 When you use the **EnablePullDP** parameter, use this parameter to specify an array of distribution point sources. This distribution point pulls content from the specified sources. Use the **SourceDPRank** parameter to prioritize these sources.
@@ -979,6 +947,22 @@ When you use the **EnablePullDP** parameter, use this parameter to specify an ar
 Type: String[]
 Parameter Sets: (All)
 Aliases: SourceDistributionPoints
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SourceDPRank
+
+Specify an array that contains the priorities for the distribution point sources from which this distribution point can pull content. When source distribution points have the same priority, the pull distribution point randomly selects a source. Use this parameter with the **EnablePullDP** and **SourceDistributionPoint** parameters.
+
+```yaml
+Type: Int32[]
+Parameter Sets: (All)
+Aliases: SourceDPRanks
 
 Required: False
 Position: Named
@@ -1084,6 +1068,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 
 Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
@@ -1106,12 +1106,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
-
 ## OUTPUTS
 
 ### IResultObject#SMS_SCI_SysResUse
-
-For more information on this return object and its properties, see [SMS_SCI_SysResUse server WMI class](/mem/configmgr/develop/reference/core/servers/configure/sms_sci_sysresuse-server-wmi-class).
+For more information on this return object and its properties, see SMS_SCI_SysResUse server WMI class (/mem/configmgr/develop/reference/core/servers/configure/sms_sci_sysresuse-server-wmi-class).
 
 ## NOTES
 

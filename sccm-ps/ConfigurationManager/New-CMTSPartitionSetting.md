@@ -1,4 +1,4 @@
----
+﻿---
 description: Create a task sequence partition setting.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -76,22 +76,6 @@ This cmdlet corresponds to the new **Partition Properties** window from the [For
 ```
 
 ## PARAMETERS
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -DisableWildcardHandling
 
@@ -371,6 +355,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 
 Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
@@ -393,11 +393,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
-
 ## OUTPUTS
 
 ### IResultObject#SMS_TaskSequence_PartitionSettings
-
 ## NOTES
 
 ## RELATED LINKS

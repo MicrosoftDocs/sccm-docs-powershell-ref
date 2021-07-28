@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 03/31/2021
@@ -177,7 +177,7 @@ Required: False
 Position: 0
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -ShowHidden
@@ -210,15 +210,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
-
 ## OUTPUTS
 
 ### IResultObject[]#SMS_ApplicationLatest
-
 ### IResultObject#SMS_ApplicationLatest
-
 ### IResultObject#SMS_Application
-
 ## NOTES
 
 For more information on these return object and their properties, see the following articles:

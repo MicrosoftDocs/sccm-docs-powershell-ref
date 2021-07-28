@@ -1,4 +1,4 @@
----
+﻿---
 description: Enables remote control on computers.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -60,21 +60,6 @@ PS XYZ:\>Invoke-CMRemoteControl -DeviceName "CMCEN-DIST02"
 This command enables remote control on the computer named CMCEN-DIST02.
 
 ## PARAMETERS
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -DeviceId
 Specifies an array of device IDs.
@@ -215,6 +200,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 
 Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
@@ -237,7 +237,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
-
 ## OUTPUTS
 
 ### System.Object

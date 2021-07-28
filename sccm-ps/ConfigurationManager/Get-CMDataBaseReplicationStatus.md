@@ -107,13 +107,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
-
 ## OUTPUTS
 
 ### IResultObject[]#SMS_ReplicationLinkSummary
-
 ### IResultObject#SMS_ReplicationLinkSummary
-
 ## NOTES
 
 ## RELATED LINKS

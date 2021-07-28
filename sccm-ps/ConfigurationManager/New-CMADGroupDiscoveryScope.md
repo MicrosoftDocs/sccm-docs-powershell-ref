@@ -170,15 +170,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
-
 ## OUTPUTS
 
 ### ADGroupDiscoveryScope
-
 ### ADGroupGroupDiscoveryScope
-
 ### ADGroupLocationDiscoveryScope
-
 ## NOTES
 
 ## RELATED LINKS

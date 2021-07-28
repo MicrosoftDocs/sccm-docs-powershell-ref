@@ -1,4 +1,4 @@
----
+﻿---
 description: Performs a Configuration Manager client operations summarization.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -37,21 +37,6 @@ This command performs a client operations summarization immediately.
 
 ## PARAMETERS
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -DisableWildcardHandling
 
 This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
@@ -84,6 +69,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 
 Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
@@ -106,7 +106,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
-
 ## OUTPUTS
 
 ### System.Object

@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 03/25/2021
@@ -104,23 +104,7 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -DeploymentId
@@ -216,7 +200,7 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -SmsObjectId
@@ -227,6 +211,22 @@ Specify the ID of the application group.
 Type: Int32
 Parameter Sets: SearchBySmsObjectId
 Aliases: CI_ID, ApplicationGroupID
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
 
 Required: False
 Position: Named
@@ -257,7 +257,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
-
 ## OUTPUTS
 
 ### System.Object

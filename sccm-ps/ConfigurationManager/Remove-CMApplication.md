@@ -1,4 +1,4 @@
----
+﻿---
 description: Removes an application from Configuration Manager.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -64,21 +64,6 @@ This command removes the application object with the specified model name.
 Specifying the *Force* parameter indicates that the user is not prompted before the application is removed.
 
 ## PARAMETERS
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -DisableWildcardHandling
 
@@ -185,6 +170,21 @@ Required: True
 Position: 0
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: True
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -210,7 +210,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
-
 ## OUTPUTS
 
 ### System.Object

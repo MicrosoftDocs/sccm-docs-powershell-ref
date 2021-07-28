@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 03/26/2021
@@ -69,22 +69,6 @@ New-CMBoundary -DisplayName "VPN-CONTOSO1-Name" -BoundaryType VPN -Value "Name:C
 ```
 
 ## PARAMETERS
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -DisableWildcardHandling
 
@@ -167,6 +151,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 
 Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
@@ -189,11 +189,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
-
 ## OUTPUTS
 
 ### IResultObject#SMS_Boundary
-
 ## NOTES
 
 For more information on this return object and its properties, see [SMS_Boundary server WMI class](/mem/configmgr/develop/reference/core/servers/configure/sms_boundary-server-wmi-class).

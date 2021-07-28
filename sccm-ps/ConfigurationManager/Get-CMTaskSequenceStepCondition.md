@@ -104,13 +104,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
-
 ## OUTPUTS
 
 ### IResultObject[]#SMS_TaskSequence_Condition
-
 ### IResultObject#SMS_TaskSequence_Condition
-
 ## NOTES
 
 For more information on this return object and its properties, see [SMS_TaskSequence_Condition server WMI class](/mem/configmgr/develop/reference/osd/sms_tasksequence_condition-server-wmi-class).

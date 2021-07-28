@@ -176,11 +176,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
-
 ## OUTPUTS
 
 ### IResultObject#SMS_AAD_Application_Ex
-
 ## NOTES
 
 ## RELATED LINKS

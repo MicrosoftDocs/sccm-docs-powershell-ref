@@ -1,4 +1,4 @@
----
+﻿---
 description: Create a cloud management gateway.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -21,7 +21,7 @@ New-CMCloudManagementGateway [-CARootCert <Hashtable>] [-CheckClientCertRevocati
  [-Description <String>] [-EnableCloudDPFunction <Boolean>] [-EnableStorageQuota <Boolean>]
  [-EnableTrafficOut <Boolean>] [-EnforceProtocol <Boolean>] [-EnvironmentSetting <AzureEnvironment>] [-Force]
  [-GroupName <String>] [-IsUsingExistingGroup <Boolean>] [-Region <AzureRegion>]
- [-ServiceCertPassword <SecureString>] -ServiceCertPath <String> [-ServiceName <String>]
+ -ServiceCertPassword <SecureString> -ServiceCertPath <String> [-ServiceName <String>]
  [-StorageCriticalPct <Int32>] [-StorageQuotaGB <Int32>] [-StorageWarningPct <Int32>]
  [-SubscriptionId <String>] [-TrafficCriticalPct <Int32>] [-TrafficOutGB <Int32>]
  [-TrafficOutStopService <Boolean>] [-TrafficWarningPct <Int32>] [-VMInstanceCount <Int32>]
@@ -33,7 +33,7 @@ New-CMCloudManagementGateway [-CARootCert <Hashtable>] [-CheckClientCertRevocati
 New-CMCloudManagementGateway [-CARootCert <Hashtable>] [-CheckClientCertRevocation <Boolean>]
  [-Description <String>] [-EnableCloudDPFunction <Boolean>] [-EnableStorageQuota <Boolean>]
  [-EnableTrafficOut <Boolean>] [-EnforceProtocol <Boolean>] [-EnvironmentSetting <AzureEnvironment>] [-Force]
- -GroupName <String> [-Region <AzureRegion>] -ServerAppClientId <String> [-ServiceCertPassword <SecureString>]
+ -GroupName <String> [-Region <AzureRegion>] -ServerAppClientId <String> -ServiceCertPassword <SecureString>
  -ServiceCertPath <String> [-ServiceName <String>] [-StorageCriticalPct <Int32>] [-StorageQuotaGB <Int32>]
  [-StorageWarningPct <Int32>] -SubscriptionId <String> [-TrafficCriticalPct <Int32>] [-TrafficOutGB <Int32>]
  [-TrafficOutStopService <Boolean>] [-TrafficWarningPct <Int32>] [-VMInstanceCount <Int32>]
@@ -108,22 +108,6 @@ Set this parameter to `true` to verify client certificate revocation. A certific
 Type: Boolean
 Parameter Sets: (All)
 Aliases: VerifyClientCertificateRevocation
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
 
 Required: False
 Position: Named
@@ -363,7 +347,7 @@ Type: SecureString
 Parameter Sets: (All)
 Aliases: ServiceCertificatePassword
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -558,6 +542,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 
 Shows what would happen if the cmdlet runs. The cmdlet isn't run.
@@ -580,11 +580,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
-
 ## OUTPUTS
 
 ### IResultObject#SMS_AzureService
-
 ## NOTES
 
 ## RELATED LINKS

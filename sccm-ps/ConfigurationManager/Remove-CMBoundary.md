@@ -1,4 +1,4 @@
----
+﻿---
 description: Removes a Configuration Manager boundary.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -64,21 +64,6 @@ The second command identifies the boundary by using the input object $BoundaryOb
 Because the *Force* parameter is not specified, you must confirm the action before it is performed.
 
 ## PARAMETERS
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -DisableWildcardHandling
 
@@ -170,6 +155,21 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: True
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -195,10 +195,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

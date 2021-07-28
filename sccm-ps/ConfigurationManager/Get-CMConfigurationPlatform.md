@@ -181,13 +181,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
-
 ## OUTPUTS
 
 ### IResultObject[]#SMS_ConfigurationPlatform
-
 ### IResultObject#SMS_ConfigurationPlatform
-
 ## NOTES
 
 For more information on this return object and its properties, see [SMS_ConfigurationPlatform server WMI class](/mem/configmgr/develop/reference/compliance/sms_configurationplatform-server-wmi-class).

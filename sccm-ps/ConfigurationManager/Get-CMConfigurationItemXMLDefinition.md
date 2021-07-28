@@ -1,4 +1,4 @@
----
+﻿---
 description: Gets an XML definition of a configuration item in Configuration Manager.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -152,7 +152,7 @@ Required: False
 Position: 0
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### CommonParameters
@@ -161,13 +161,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
-
 ## OUTPUTS
 
 ### System.String
-
 ### System.String[]
-
 ## NOTES
 
 ## RELATED LINKS

@@ -1,4 +1,4 @@
----
+﻿---
 description: Removes a user from Configuration Manager.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -60,21 +60,6 @@ This command gets the user object named user02 from the All Users collection and
 Specifying the *Force* parameter indicates that the user is not prompted before the user account is removed.
 
 ## PARAMETERS
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -DisableWildcardHandling
 
@@ -151,7 +136,7 @@ Required: True
 Position: 0
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -ResourceId
@@ -165,6 +150,21 @@ Aliases: Id, UserId
 Required: True
 Position: 0
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -191,7 +191,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
-
 ## OUTPUTS
 
 ### System.Object

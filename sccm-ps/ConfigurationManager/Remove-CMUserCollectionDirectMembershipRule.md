@@ -1,6 +1,6 @@
----
+﻿---
 description: Remove a direct membership rule from a user collection.
-external help file: AdminUI.PS.psm1-Help.xml
+external help file: AdminUI.PS.psm1-help.xml
 Module Name: ConfigurationManager
 ms.date: 01/05/2021
 schema: 2.0.0
@@ -120,22 +120,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Force
 
 Run the command without asking for confirmation.
@@ -213,6 +197,22 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: True
+```
+
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -238,7 +238,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
-
 ## OUTPUTS
 
 ### System.Object

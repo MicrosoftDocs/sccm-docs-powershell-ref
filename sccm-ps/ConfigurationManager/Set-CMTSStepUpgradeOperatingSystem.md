@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 online version:
@@ -17,13 +17,13 @@ schema: 2.0.0
 Set-CMTSStepUpgradeOperatingSystem [-DriverPackage <IResultObject>]
  [-DynamicUpdateSetting <DynamicUpdateOption>] [-EditionIndex <Int32>] [-IgnoreMessage <Boolean>]
  [-ProductKey <String>] [-ScanOnly <Boolean>] [-SetupTimeout <Int32>] [-SourcePath <String>]
- [-StagedContent <String>] [-UpgradePackage <IResultObject>] [-AddCondition <IResultObject[]>]
- [-ClearCondition] [-Description <String>] -InputObject <IResultObject> [-IsContinueOnError <Boolean>]
- [-IsEnabled <Boolean>] [-MoveToIndex <Int32>] [-NewStepName <String>] [-RemoveConditionFile]
- [-RemoveConditionFolder] [-RemoveConditionIfStatement] [-RemoveConditionOperatingSystem]
- [-RemoveConditionQueryWmi] [-RemoveConditionRegistry] [-RemoveConditionSoftware] [-RemoveConditionVariable]
- [-StepName <String>] [-StepOrder <ReorderType>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+ [-StagedContent <String>] [-UpgradePackage <IResultObject>] [-SoftwareUpdate <IResultObject[]>]
+ [-AddCondition <IResultObject[]>] [-ClearCondition] [-Description <String>] -InputObject <IResultObject>
+ [-IsContinueOnError <Boolean>] [-IsEnabled <Boolean>] [-MoveToIndex <Int32>] [-NewStepName <String>]
+ [-RemoveConditionFile] [-RemoveConditionFolder] [-RemoveConditionIfStatement]
+ [-RemoveConditionOperatingSystem] [-RemoveConditionQueryWmi] [-RemoveConditionRegistry]
+ [-RemoveConditionSoftware] [-RemoveConditionVariable] [-StepName <String>] [-StepOrder <ReorderType>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ById
@@ -31,13 +31,13 @@ Set-CMTSStepUpgradeOperatingSystem [-DriverPackage <IResultObject>]
 Set-CMTSStepUpgradeOperatingSystem [-DriverPackage <IResultObject>]
  [-DynamicUpdateSetting <DynamicUpdateOption>] [-EditionIndex <Int32>] [-IgnoreMessage <Boolean>]
  [-ProductKey <String>] [-ScanOnly <Boolean>] [-SetupTimeout <Int32>] [-SourcePath <String>]
- [-StagedContent <String>] [-UpgradePackage <IResultObject>] [-AddCondition <IResultObject[]>]
- [-ClearCondition] [-Description <String>] [-IsContinueOnError <Boolean>] [-IsEnabled <Boolean>]
- [-MoveToIndex <Int32>] [-NewStepName <String>] [-RemoveConditionFile] [-RemoveConditionFolder]
- [-RemoveConditionIfStatement] [-RemoveConditionOperatingSystem] [-RemoveConditionQueryWmi]
- [-RemoveConditionRegistry] [-RemoveConditionSoftware] [-RemoveConditionVariable] [-StepName <String>]
- [-StepOrder <ReorderType>] -TaskSequenceId <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-StagedContent <String>] [-UpgradePackage <IResultObject>] [-SoftwareUpdate <IResultObject[]>]
+ [-AddCondition <IResultObject[]>] [-ClearCondition] [-Description <String>] [-IsContinueOnError <Boolean>]
+ [-IsEnabled <Boolean>] [-MoveToIndex <Int32>] [-NewStepName <String>] [-RemoveConditionFile]
+ [-RemoveConditionFolder] [-RemoveConditionIfStatement] [-RemoveConditionOperatingSystem]
+ [-RemoveConditionQueryWmi] [-RemoveConditionRegistry] [-RemoveConditionSoftware] [-RemoveConditionVariable]
+ [-StepName <String>] [-StepOrder <ReorderType>] -TaskSequenceId <String> [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByName
@@ -45,13 +45,13 @@ Set-CMTSStepUpgradeOperatingSystem [-DriverPackage <IResultObject>]
 Set-CMTSStepUpgradeOperatingSystem [-DriverPackage <IResultObject>]
  [-DynamicUpdateSetting <DynamicUpdateOption>] [-EditionIndex <Int32>] [-IgnoreMessage <Boolean>]
  [-ProductKey <String>] [-ScanOnly <Boolean>] [-SetupTimeout <Int32>] [-SourcePath <String>]
- [-StagedContent <String>] [-UpgradePackage <IResultObject>] [-AddCondition <IResultObject[]>]
- [-ClearCondition] [-Description <String>] [-IsContinueOnError <Boolean>] [-IsEnabled <Boolean>]
- [-MoveToIndex <Int32>] [-NewStepName <String>] [-RemoveConditionFile] [-RemoveConditionFolder]
- [-RemoveConditionIfStatement] [-RemoveConditionOperatingSystem] [-RemoveConditionQueryWmi]
- [-RemoveConditionRegistry] [-RemoveConditionSoftware] [-RemoveConditionVariable] [-StepName <String>]
- [-StepOrder <ReorderType>] -TaskSequenceName <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-StagedContent <String>] [-UpgradePackage <IResultObject>] [-SoftwareUpdate <IResultObject[]>]
+ [-AddCondition <IResultObject[]>] [-ClearCondition] [-Description <String>] [-IsContinueOnError <Boolean>]
+ [-IsEnabled <Boolean>] [-MoveToIndex <Int32>] [-NewStepName <String>] [-RemoveConditionFile]
+ [-RemoveConditionFolder] [-RemoveConditionIfStatement] [-RemoveConditionOperatingSystem]
+ [-RemoveConditionQueryWmi] [-RemoveConditionRegistry] [-RemoveConditionSoftware] [-RemoveConditionVariable]
+ [-StepName <String>] [-StepOrder <ReorderType>] -TaskSequenceName <String> [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByIdSetConditionIfStatement
@@ -314,21 +314,6 @@ Specify the value of the task sequence variable to use in a condition.
 Type: String
 Parameter Sets: ByIdSetConditionVariable, ByNameSetConditionVariable, ByValueSetConditionVariable
 Aliases: Value
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
 
 Required: False
 Position: Named
@@ -1063,6 +1048,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -SoftwareUpdate
+{{ Fill SoftwareUpdate Description }}
+
+```yaml
+Type: IResultObject[]
+Parameter Sets: ByValue, ById, ByName
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -SourcePath
 {{ Fill SourcePath Description }}
 
@@ -1232,6 +1232,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 
 Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
@@ -1254,7 +1269,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
-
 ## OUTPUTS
 
 ### System.Object

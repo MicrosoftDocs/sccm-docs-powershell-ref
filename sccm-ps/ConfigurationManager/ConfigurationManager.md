@@ -1,4 +1,4 @@
----
+﻿---
 Module Name: ConfigurationManager
 Module Guid: 7f590131-5253-4425-8b32-eeab51a4c393
 Download Help Link: https://aka.ms/configmgrps-help
@@ -11,12 +11,6 @@ Locale: en-US
 This section contains the help articles for the Configuration Manager cmdlets.
 
 ## ConfigurationManager Cmdlets
-### [Add-CMApplicationCatalogWebServicePoint](Add-CMApplicationCatalogWebServicePoint.md)
-Adds an Application Catalog web service point to Configuration Manager.
-
-### [Add-CMApplicationCatalogWebsitePoint](Add-CMApplicationCatalogWebsitePoint.md)
-Adds an Application Catalog website point to a Configuration Manager site.
-
 ### [Add-CMAppv5XDeploymentType](Add-CMAppv5XDeploymentType.md)
 Adds an App-V 5X deployment type.
 
@@ -180,7 +174,7 @@ Adds a state migration point in Configuration Manager.
 Create a task sequence as an app model deployment type.
 
 ### [Add-CMTaskSequenceStep](Add-CMTaskSequenceStep.md)
-Adds a Configuration Manager task sequence step.
+Add a step or group to a task sequence.
 
 ### [Add-CMUserAffinityToDevice](Add-CMUserAffinityToDevice.md)
 Adds a primary user to one or more devices in the Configuration Manager hierarchy.
@@ -428,12 +422,6 @@ Gets antimalware policies for Endpoint Protection.
 
 ### [Get-CMApplication](Get-CMApplication.md)
 Get an application.
-
-### [Get-CMApplicationCatalogWebServicePoint](Get-CMApplicationCatalogWebServicePoint.md)
-Gets an Application Catalog web service point.
-
-### [Get-CMApplicationCatalogWebsitePoint](Get-CMApplicationCatalogWebsitePoint.md)
-Gets a Configuration Manager Application Catalog website point.
 
 ### [Get-CMApplicationDeployment](Get-CMApplicationDeployment.md)
 Get an application deployment.
@@ -799,7 +787,7 @@ Gets modifiable secured categories.
 Gets a Configuration Manager IP subnet.
 
 ### [Get-CMMaintenanceWindow](Get-CMMaintenanceWindow.md)
-Gets the maintenance windows for a collection.
+Get the maintenance windows for a collection.
 
 ### [Get-CMMalwareThreatCategory](Get-CMMalwareThreatCategory.md)
 Gets a malware threat category.
@@ -1214,9 +1202,6 @@ Get the relationships between a device and its primary users.
 
 ### [Get-CMUserDeviceAffinityRequest](Get-CMUserDeviceAffinityRequest.md)
 Gets a request for user device affinity in Configuration Manager.
-
-### [Get-CMVhd](Get-CMVhd.md)
-Gets VHD images.
 
 ### [Get-CMVpnProfileConfigurationItem](Get-CMVpnProfileConfigurationItem.md)
 Gets a vpn profile configuration item.
@@ -1744,7 +1729,7 @@ Creates an installation source file for Configuration Manager.
 {{ Fill in the Synopsis }}
 
 ### [New-CMMaintenanceWindow](New-CMMaintenanceWindow.md)
-Creates a maintenance window for a collection.
+Create a maintenance window for a collection.
 
 ### [New-CMMicrosoftEdgeBrowserProfiles](New-CMMicrosoftEdgeBrowserProfiles.md)
 Create a policy to manage Microsoft Edge Legacy browser settings.
@@ -1780,7 +1765,7 @@ Create a policy to specify the constraints for passwords used to unlock BitLocke
 Creates a Configuration Manager package.
 
 ### [New-CMPackageDeployment](New-CMPackageDeployment.md)
-Creates a package deployment to a Configuration Manager collection.
+Deploy a legacy package to a collection.
 
 ### [New-CMPowerManagementCustomPlan](New-CMPowerManagementCustomPlan.md)
 Creates a custom power management plan.
@@ -2109,9 +2094,6 @@ Creates a collection for users and adds the collection to the Configuration Mana
 ### [New-CMUserDataAndProfileConfigurationItem](New-CMUserDataAndProfileConfigurationItem.md)
 Creates a user data and profile configuration item.
 
-### [New-CMVhd](New-CMVhd.md)
-Creates a VHD image.
-
 ### [New-CMVirtualEnvironmentGroup](New-CMVirtualEnvironmentGroup.md)
 Creates a virtual environment group.
 
@@ -2171,12 +2153,6 @@ Removes an antimalware policy for Endpoint Protection.
 
 ### [Remove-CMApplication](Remove-CMApplication.md)
 Removes an application from Configuration Manager.
-
-### [Remove-CMApplicationCatalogWebServicePoint](Remove-CMApplicationCatalogWebServicePoint.md)
-Removes an Application Catalog web service point.
-
-### [Remove-CMApplicationCatalogWebsitePoint](Remove-CMApplicationCatalogWebsitePoint.md)
-Removes a Configuration Manager Application Catalog website point.
 
 ### [Remove-CMApplicationDeployment](Remove-CMApplicationDeployment.md)
 Remove an application deployment.
@@ -2398,7 +2374,7 @@ Removes a Configuration Manager global condition object.
 Removes Configuration Manager hardware requirement objects for products.
 
 ### [Remove-CMMaintenanceWindow](Remove-CMMaintenanceWindow.md)
-Removes a maintenance window.
+Remove a maintenance window.
 
 ### [Remove-CMManagementPoint](Remove-CMManagementPoint.md)
 Removes a management point.
@@ -2640,9 +2616,6 @@ Removes an include membership rule from one or more user collection in the Confi
 ### [Remove-CMUserCollectionQueryMembershipRule](Remove-CMUserCollectionQueryMembershipRule.md)
 Removes a query membership rule from one or more user collection in the Configuration Manager hierarchy.
 
-### [Remove-CMVhd](Remove-CMVhd.md)
-Removes VHD images.
-
 ### [Remove-CMWdacSetting](Remove-CMWdacSetting.md)
 Delete a Microsoft Defender Application Control policy from the site.
 
@@ -2699,9 +2672,6 @@ Changes configuration settings for an antimalware policy for Endpoint Protection
 
 ### [Set-CMApplication](Set-CMApplication.md)
 Configure the properties of an application.
-
-### [Set-CMApplicationCatalogWebsitePoint](Set-CMApplicationCatalogWebsitePoint.md)
-Changes the settings of an Application Catalog website point.
 
 ### [Set-CMApplicationDeployment](Set-CMApplicationDeployment.md)
 Configure an application deployment
@@ -3085,7 +3055,7 @@ Sets hierarchy settings in Configuration Manager.
 Sets a Mac deployment type.
 
 ### [Set-CMMaintenanceWindow](Set-CMMaintenanceWindow.md)
-Modifies a maintenance window.
+Modify a maintenance window.
 
 ### [Set-CMManagementPoint](Set-CMManagementPoint.md)
 Changes settings for a management point in Configuration Manager.
@@ -3374,9 +3344,6 @@ Sets an update group deployment.
 
 ### [Set-CMUserDataAndProfileConfigurationItem](Set-CMUserDataAndProfileConfigurationItem.md)
 Modifies a user data and profile configuration item.
-
-### [Set-CMVhd](Set-CMVhd.md)
-Modifies VHD images.
 
 ### [Set-CMVpnProfileConfigurationItem](Set-CMVpnProfileConfigurationItem.md)
 Modifies a VPN profile.

@@ -139,7 +139,7 @@ Required: False
 Position: 0
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -TypeId
@@ -155,7 +155,7 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -TypeInstanceId
@@ -171,7 +171,7 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### CommonParameters
@@ -180,15 +180,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
-
 ## OUTPUTS
 
 ### IResultObject#SMS_Alert
-
 ### IResultObject#SMS_CHAlert
-
 ### IResultObject#SMS_EPAlert
-
 ## NOTES
 
 For more information on these return objects and their properties, see the following articles:

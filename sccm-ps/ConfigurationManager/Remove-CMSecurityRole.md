@@ -1,4 +1,4 @@
----
+﻿---
 description: Removes custom security roles from Configuration Manager.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -71,21 +71,6 @@ It stores them in the $Roles variable.
 The second command removes each security role stored in the $Roles variable.
 
 ## PARAMETERS
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -DisableWildcardHandling
 
@@ -177,6 +162,21 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: True
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -202,7 +202,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
-
 ## OUTPUTS
 
 ### System.Object

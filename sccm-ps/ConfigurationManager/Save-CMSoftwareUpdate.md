@@ -1,4 +1,4 @@
----
+﻿---
 description: Saves software updates to update groups and packages.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -90,21 +90,6 @@ PS XYZ:\> Get-CMSoftwareUpdateGroup -Name "TestSUgroup10" Save-CMSoftwareUpdate 
 This command gets the software update group object named TestSUgroup10 and uses the pipeline operator to pass the object to **Save-CMSoftwareUpdate**, which saves the software update from the file share Updates on Server01 with the package name Package01.
 
 ## PARAMETERS
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -DeploymentPackageName
 Specifies a name of a deployment package.
@@ -305,6 +290,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 
 Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
@@ -327,7 +327,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
-
 ## OUTPUTS
 
 ### System.Object

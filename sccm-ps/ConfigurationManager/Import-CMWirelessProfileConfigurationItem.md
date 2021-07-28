@@ -1,4 +1,4 @@
----
+﻿---
 description: Imports a wireless profile configuration item.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -65,21 +65,6 @@ The command gets the supported platforms for Windows 10, and imports the wireles
 The Windows 10 platforms are provisioned with the wireless profile.
 
 ## PARAMETERS
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -Description
 Specifies a description for the wireless profile.
@@ -198,6 +183,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 
 Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
@@ -220,11 +220,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
-
 ## OUTPUTS
 
 ### IResultObject#SMS_ConfigurationPolicy
-
 ## NOTES
 
 ## RELATED LINKS

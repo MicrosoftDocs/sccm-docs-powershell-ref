@@ -98,11 +98,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
-
 ## OUTPUTS
 
 ### Dictionary<string, object>
-
 ## NOTES
 
 ## RELATED LINKS

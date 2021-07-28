@@ -146,7 +146,7 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### CommonParameters
@@ -155,13 +155,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
-
 ## OUTPUTS
 
 ### IResultObject[]#SMS_Subscription
-
 ### IResultObject#SMS_Subscription
-
 ## NOTES
 
 For more information on this return object and its properties, see [SMS_Subscription server WMI class](/mem/configmgr/develop/reference/core/servers/manage/sms_subscription-server-wmi-class).

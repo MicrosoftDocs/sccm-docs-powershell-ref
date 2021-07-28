@@ -1,4 +1,4 @@
----
+﻿---
 description: Creates task sequence media in Configuration Manager.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -221,6 +221,20 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -BootableMedia
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: NewBootableMedia, NewBootableMediaByValue
+Aliases: BootableMediaOption
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -BootImage
 
 Specifies a boot image object.
@@ -309,20 +323,6 @@ Specifies a boot image management point server name.
 Type: String[]
 Parameter Sets: NewBootableMedia, NewPrestagedMedia
 Aliases: ManagementPointServerName, BootImageManagementPointServerNames
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -BootableMedia
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: NewBootableMedia, NewBootableMediaByValue
-Aliases: BootableMediaOption
 
 Required: True
 Position: Named
@@ -442,18 +442,18 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
+### -CreatedBy
 
-Prompts you for confirmation before running the cmdlet.
+Specifies the name of an individual or organization responsible for the creation of the prestaged media.
 
 ```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
+Type: String
+Parameter Sets: NewPrestagedMedia, NewPrestagedMediaByValue
+Aliases:
 
 Required: False
 Position: Named
-Default value: False
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -466,22 +466,6 @@ Use this parameter only in mixed-mode environments.
 ```yaml
 Type: Boolean
 Parameter Sets: NewBootableMedia, NewBootableMediaByValue
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -CreatedBy
-
-Specifies the name of an individual or organization responsible for the creation of the prestaged media.
-
-```yaml
-Type: String
-Parameter Sets: NewPrestagedMedia, NewPrestagedMediaByValue
 Aliases:
 
 Required: False
@@ -681,7 +665,7 @@ The acceptable values for this parameter are:
 Type: MediaInputType
 Parameter Sets: NewBootableMedia, NewStandAloneMedia, NewCaptureMedia
 Aliases:
-Accepted values: Usb, CdDvd, Hd
+Accepted values: Usb, CdDvd, Hd, Usb, CdDvd, Hd
 
 Required: True
 Position: Named
@@ -694,7 +678,7 @@ Accept wildcard characters: False
 Type: MediaInputType
 Parameter Sets: NewStandAloneMediaByValue, NewBootableMediaByValue, NewCaptureMediaByValue
 Aliases:
-Accepted values: Usb, CdDvd, Hd
+Accepted values: Usb, CdDvd, Hd, Usb, CdDvd, Hd
 
 Required: False
 Position: Named
@@ -715,7 +699,7 @@ The acceptable values for this parameter are:
 Type: MediaMode
 Parameter Sets: NewBootableMedia, NewPrestagedMedia, NewPrestagedMediaByValue
 Aliases:
-Accepted values: Dynamic, SiteBased
+Accepted values: Dynamic, SiteBased, Dynamic, SiteBased
 
 Required: True
 Position: Named
@@ -728,7 +712,7 @@ Accept wildcard characters: False
 Type: MediaMode
 Parameter Sets: NewBootableMediaByValue
 Aliases:
-Accepted values: Dynamic, SiteBased
+Accepted values: Dynamic, SiteBased, Dynamic, SiteBased
 
 Required: False
 Position: Named
@@ -1109,6 +1093,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 
 Shows what would happen if the cmdlet runs.
@@ -1132,12 +1132,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject[]
-
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

@@ -172,11 +172,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
-
 ## OUTPUTS
 
 ### Microsoft.ConfigurationManagement.DesiredConfigurationManagement.ConfigurationItemSetting
-
 ## NOTES
 
 ## RELATED LINKS

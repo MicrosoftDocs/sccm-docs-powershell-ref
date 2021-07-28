@@ -126,13 +126,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
-
 ## OUTPUTS
 
 ### IResultObject[]#SMS_PendingRegistrationRecord
-
 ### IResultObject#SMS_PendingRegistrationRecord
-
 ## NOTES
 
 ## RELATED LINKS
