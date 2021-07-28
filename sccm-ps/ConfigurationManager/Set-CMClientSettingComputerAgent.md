@@ -345,6 +345,9 @@ Accept wildcard characters: False
 ```
 
 ### -SelectWebsitePoint
+
+Don't use this parameter. The application catalog is no longer supported.
+
 ```yaml
 Type: ApplicationCatalogWebsitePointType
 Parameter Sets: (All)

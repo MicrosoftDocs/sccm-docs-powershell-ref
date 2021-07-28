@@ -319,7 +319,7 @@ Accept wildcard characters: False
 ```
 
 ### -AddPortalToTrustedSiteList
-Indicates whether to add the default Application Catalog website to the Internet Explorer trusted sites zone.
+Don't use this parameter. The application catalog is no longer supported.
 
 ```yaml
 Type: Boolean
@@ -437,6 +437,9 @@ Accept wildcard characters: False
 ```
 
 ### -ApplicationCatalogWebsitePointServerName
+
+Don't use this parameter. The application catalog is no longer supported.
+
 ```yaml
 Type: String
 Parameter Sets: SetComputerAgentSettingsByName
@@ -1571,6 +1574,9 @@ Accept wildcard characters: False
 ```
 
 ### -SelectApplicationCatalogWebsitePoint
+
+Don't use this parameter. The application catalog is no longer supported.
+
 ```yaml
 Type: ApplicationCatalogWebsitePointType
 Parameter Sets: SetComputerAgentSettingsByName
