@@ -676,6 +676,4 @@ For more information on this return object and its properties, see [SMS_Applicat
 
 [Remove-CMApplicationDeployment](Remove-CMApplicationDeployment.md)
 
-[Start-CMApplicationDeploymentSimulation](Start-CMApplicationDeploymentSimulation.md)
-
 [Deploy applications with Configuration Manager](/mem/configmgr/apps/deploy-use/deploy-applications)

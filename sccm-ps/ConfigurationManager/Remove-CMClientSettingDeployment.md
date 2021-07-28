@@ -189,7 +189,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [New-CMClientSettingDeployment](New-CMClientSettingDeployment.md)
-[Start-CMClientSettingDeployment](Start-CMClientSettingDeployment.md)
 
 [Get-CMClientSetting](Get-CMClientSetting.md)
 
