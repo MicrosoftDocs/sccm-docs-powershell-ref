@@ -1,6 +1,7 @@
 ---
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
+ms.date: 07/28/2021
 online version:
 schema: 2.0.0
 ---
@@ -8,7 +9,8 @@ schema: 2.0.0
 # Remove-CMDeploymentTypeReturnCode
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Delete return codes from the specified application deployment type.
 
 ## SYNTAX
 
@@ -25,21 +27,31 @@ Remove-CMDeploymentTypeReturnCode -InputObject <IResultObject> [-Name <String>] 
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+Starting in version 2107, use this cmdlet to delete return codes from the specified application deployment type. For more general information, see [Deployment type Return Codes](/mem/configmgr/apps/deploy-use/create-applications#bkmk_dt-return).
+
+> [!NOTE]
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
-```
+### Example 1: Remove the 1602 return code from a deployment type
 
-{{ Add example description here }}
+This example removes the `1602` return code from a deployment type of the **CenterApp** application.
+
+```powershell
+$appName = "CenterApp"
+$dtName = "InterDept - Windows Installer (.msi file)"
+$msi_dt = Get-CMDeploymentType -ApplicationName $appName -DeploymentTypeName $dtName
+
+Remove-CMDeploymentTypeReturnCode -InputObject $msi_dt -ReturnCode 1602
+```
 
 ## PARAMETERS
 
 ### -DisableWildcardHandling
-{{ Fill DisableWildcardHandling Description }}
+
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -54,7 +66,8 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-{{ Fill Force Description }}
+
+Run the command without asking for confirmation.
 
 ```yaml
 Type: SwitchParameter
@@ -69,7 +82,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-{{ Fill ForceWildcardHandling Description }}
+
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -84,7 +98,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{ Fill InputObject Description }}
+
+Specify a deployment type object from which to remove a return code. To get this object, use the [Get-CMDeploymentType](Get-CMDeploymentType.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -99,7 +114,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{ Fill Name Description }}
+
+Specify the name of a return code to remove.
 
 ```yaml
 Type: String
@@ -114,7 +130,8 @@ Accept wildcard characters: False
 ```
 
 ### -ReturnCode
-{{ Fill ReturnCode Description }}
+
+Specify the integer value of the return code to remove.
 
 ```yaml
 Type: Int32
@@ -129,6 +146,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -144,8 +162,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+
+Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
 
 ```yaml
 Type: SwitchParameter
@@ -172,3 +190,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[Add-CMDeploymentTypeReturnCode](Add-CMDeploymentTypeReturnCode.md)
+[Get-CMDeploymentTypeReturnCode](Get-CMDeploymentTypeReturnCode.md)
+[Set-CMDeploymentTypeReturnCode](Set-CMDeploymentTypeReturnCode.md)
+
+[Get-CMDeploymentType](Get-CMDeploymentType.md)

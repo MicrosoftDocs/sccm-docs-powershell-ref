@@ -85,7 +85,7 @@ $msi_dt = Get-CMDeploymentType -ApplicationName "CenterApp" -DeploymentTypeName 
 Add-CMDeploymentTypeReturnCode -InputObject $msi_dt -ReturnCode 1602 -Name "User cancel" -CodeType Failure -Description "The user cancelled the installation"
 ```
 
-<!-- For more information, see [Add-CMDeploymentTypeReturnCode](/powershell/module/configurationmanager/Add-CMDeploymentTypeReturnCode). -->
+For more information, see [Add-CMDeploymentTypeReturnCode](/powershell/module/configurationmanager/Add-CMDeploymentTypeReturnCode).
 
 #### Get-CMDeploymentTypeReturnCode
 
@@ -95,7 +95,7 @@ Use this cmdlet to get the list of return codes from the specified deployment ty
 Get-CMDeploymentType -ApplicationName "CenterApp" -DeploymentTypeName "InterDept - Windows Installer (.msi file)" | Get-CMDeploymentTypeReturnCode
 ```
 
-<!-- For more information, see [Get-CMDeploymentTypeReturnCode](/powershell/module/configurationmanager/Get-CMDeploymentTypeReturnCode). -->
+For more information, see [Get-CMDeploymentTypeReturnCode](/powershell/module/configurationmanager/Get-CMDeploymentTypeReturnCode).
 
 #### Remove-CMDeploymentTypeReturnCode
 
@@ -106,7 +106,7 @@ $msi_dt = Get-CMDeploymentType -ApplicationName "CenterApp" -DeploymentTypeName 
 Remove-CMDeploymentTypeReturnCode -InputObject $msi_dt -ReturnCode 1602
 ```
 
-<!-- For more information, see [Remove-CMDeploymentTypeReturnCode](/powershell/module/configurationmanager/Remove-CMDeploymentTypeReturnCode). -->
+For more information, see [Remove-CMDeploymentTypeReturnCode](/powershell/module/configurationmanager/Remove-CMDeploymentTypeReturnCode).
 
 #### Set-CMDeploymentTypeReturnCode
 
@@ -117,7 +117,7 @@ $msi_dt = Get-CMDeploymentType -ApplicationName "CenterApp" -DeploymentTypeName 
 Add-CMDeploymentTypeReturnCode -InputObject $msi_dt -ReturnCode 3010 -Name "Always reboot" -CodeType HardReboot -Description "Change soft reboot to hard reboot"
 ```
 
-<!-- For more information, see [Set-CMDeploymentTypeReturnCode](/powershell/module/configurationmanager/Set-CMDeploymentTypeReturnCode). -->
+For more information, see [Set-CMDeploymentTypeReturnCode](/powershell/module/configurationmanager/Set-CMDeploymentTypeReturnCode).
 
 ## Other new cmdlets
 
