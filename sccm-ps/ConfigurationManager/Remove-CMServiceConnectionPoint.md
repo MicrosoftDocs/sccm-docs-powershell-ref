@@ -1,4 +1,4 @@
-﻿---
+---
 description: Removes a service connection point.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -62,6 +62,21 @@ This command gets the service connection point object for the site system server
 Specifying the *Force* parameter indicates that the user is not prompted before the service connection point is removed.
 
 ## PARAMETERS
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -DisableWildcardHandling
 
@@ -152,21 +167,6 @@ Aliases: Name, ServerName
 Required: True
 Position: 0
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

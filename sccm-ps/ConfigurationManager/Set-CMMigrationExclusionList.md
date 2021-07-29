@@ -1,4 +1,4 @@
-﻿---
+---
 description: Edits the global exclusion list for migration jobs.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -39,6 +39,21 @@ PS XYZ:\> Set-CMMigrationExclusionList -Name "ContosoUsersWest01"
 This command adds the objects in the array ContosoUsersWest01 to the migration exclusion list.
 
 ## PARAMETERS
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -DisableWildcardHandling
 
@@ -83,21 +98,6 @@ Aliases: EntityName
 Required: True
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

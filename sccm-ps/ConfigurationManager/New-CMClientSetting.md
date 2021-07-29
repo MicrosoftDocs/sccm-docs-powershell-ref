@@ -1,4 +1,4 @@
-﻿---
+---
 description: Creates customized client settings.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -57,6 +57,21 @@ To refresh and view a populated list of properties, use **Get-CMClientSetting**.
 The output for this example shows a populated list.
 
 ## PARAMETERS
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -Description
 Specifies a description of the content of the new settings.
@@ -133,21 +148,6 @@ Accepted values: Default, Device, User
 Required: True
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

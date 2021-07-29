@@ -1,4 +1,4 @@
-﻿---
+---
 description: Removes a specified Configuration Manager filter rule for status messages.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -51,6 +51,21 @@ This command removes a status filter rule that has the specified name in a site 
 The command includes the *Force* parameter, so the cmdlet does not prompt you for confirmation.
 
 ## PARAMETERS
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -DisableWildcardHandling
 
@@ -141,21 +156,6 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

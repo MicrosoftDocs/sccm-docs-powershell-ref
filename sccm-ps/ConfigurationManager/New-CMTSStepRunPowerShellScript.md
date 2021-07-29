@@ -1,4 +1,4 @@
-﻿---
+---
 description: Creates a t s step run power shell script.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -59,6 +59,21 @@ PS XYZ:\>
 Type: IResultObject[]
 Parameter Sets: (All)
 Aliases: Conditions
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
 
 Required: False
 Position: Named
@@ -294,36 +309,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WorkingDirectory
-{{ Fill WorkingDirectory Description }}
-
-```yaml
-Type: String
-Parameter Sets: RunScriptFromSource, RunScriptFromPackage
-Aliases: StartIn
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -WhatIf
 
 Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
@@ -332,6 +317,21 @@ Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WorkingDirectory
+{{ Fill WorkingDirectory Description }}
+
+```yaml
+Type: String
+Parameter Sets: RunScriptFromSource, RunScriptFromPackage
+Aliases: StartIn
 
 Required: False
 Position: Named

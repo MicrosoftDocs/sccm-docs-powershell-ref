@@ -1,4 +1,4 @@
-﻿---
+---
 description: Change client settings for Configuration Manager devices and users.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -597,6 +597,21 @@ Aliases: ComputerRestartSettings
 Required: True
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -1816,19 +1831,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -UserDeviceAffinity
-```yaml
-Type: SwitchParameter
-Parameter Sets: SetUserDeviceAffinitySettingsByName
-Aliases: UserDeviceAffinitySettings
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -UseUtcForEvaluationTime
 Indicates whether to use Coordinated Universal Time (UTC), also known as Greenwich Mean Time, to configure a recurring interval.
 If you specify $False, Configuration Manager uses local time.
@@ -1839,6 +1841,19 @@ Parameter Sets: SetNetworkAccessProtectionSettingsByName
 Aliases:
 
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UserDeviceAffinity
+```yaml
+Type: SwitchParameter
+Parameter Sets: SetUserDeviceAffinitySettingsByName
+Aliases: UserDeviceAffinitySettings
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -1880,21 +1895,6 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
