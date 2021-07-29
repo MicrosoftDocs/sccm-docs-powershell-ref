@@ -37,7 +37,7 @@ $msi_dt = Get-CMDeploymentType -ApplicationName "CenterApp" -DeploymentTypeName 
 Add-CMDeploymentTypeInstallBehavior -InputObject $msi_dt -ExeFileName "notepad.exe" -DisplayName "Notepad"
 ```
 
-<!-- For more information, see [Add-CMDeploymentTypeInstallBehavior](/powershell/module/configurationmanager/Add-CMDeploymentTypeInstallBehavior). -->
+For more information, see [Add-CMDeploymentTypeInstallBehavior](/powershell/module/configurationmanager/Add-CMDeploymentTypeInstallBehavior).
 
 #### Get-CMDeploymentTypeInstallBehavior
 
@@ -48,7 +48,7 @@ $msi_dt = Get-CMDeploymentType -ApplicationName "CenterApp" -DeploymentTypeName 
 Get-CMDeploymentTypeInstallBehavior -InputObject $msi_dt
 ```
 
-<!-- For more information, see [Get-CMDeploymentTypeInstallBehavior](/powershell/module/configurationmanager/Get-CMDeploymentTypeInstallBehavior). -->
+For more information, see [Get-CMDeploymentTypeInstallBehavior](/powershell/module/configurationmanager/Get-CMDeploymentTypeInstallBehavior).
 
 #### Remove-CMDeploymentTypeInstallBehavior
 
@@ -59,7 +59,7 @@ $msi_dt = Get-CMDeploymentType -ApplicationName "CenterApp" -DeploymentTypeName 
 Remove-CMDeploymentTypeInstallBehavior -InputObject $msi_dt -ExeFileName "notepad.exe"
 ```
 
-<!-- For more information, see [Remove-CMDeploymentTypeInstallBehavior](/powershell/module/configurationmanager/Remove-CMDeploymentTypeInstallBehavior). -->
+For more information, see [Remove-CMDeploymentTypeInstallBehavior](/powershell/module/configurationmanager/Remove-CMDeploymentTypeInstallBehavior).
 
 #### Set-CMDeploymentTypeInstallBehavior
 
@@ -70,7 +70,7 @@ $msi_dt = Get-CMDeploymentType -ApplicationName "CenterApp" -DeploymentTypeName 
 Set-CMDeploymentTypeInstallBehavior -InputObject $msi_dt -ExeFileName "notepad.exe" -NewExeFileName "calc.exe" -DisplayName "Calculator"
 ```
 
-<!-- For more information, see [Set-CMDeploymentTypeInstallBehavior](/powershell/module/configurationmanager/Set-CMDeploymentTypeInstallBehavior). -->
+For more information, see [Set-CMDeploymentTypeInstallBehavior](/powershell/module/configurationmanager/Set-CMDeploymentTypeInstallBehavior).
 
 ### Manage return codes for application deployment types
 

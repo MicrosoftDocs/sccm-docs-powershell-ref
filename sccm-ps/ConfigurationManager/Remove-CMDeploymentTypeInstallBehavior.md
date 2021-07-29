@@ -1,6 +1,7 @@
 ---
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
+ms.date: 07/28/2021
 online version:
 schema: 2.0.0
 ---
@@ -8,7 +9,8 @@ schema: 2.0.0
 # Remove-CMDeploymentTypeInstallBehavior
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Remove from the specified deployment type the executable files that need to close for the app install to succeed.
 
 ## SYNTAX
 
@@ -25,21 +27,32 @@ Remove-CMDeploymentTypeInstallBehavior -InputObject <IResultObject> [-DisplayNam
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+Starting in version 2107, use this cmdlet to remove from the specified application deployment type the executable files that need to close for the app install to succeed. For more general information on the install behavior feature, see [Check for running executable files](/mem/configmgr/apps/deploy-use/check-for-running-executable-files).
+
+If you use PowerShell to deploy the application, use the **AutoCloseExecutable** parameter on either [New-CMApplicationDeployment](New-CMApplicationDeployment.md) or [Set-CMApplicationDeployment](Set-CMApplicationDeployment.md). This parameter enables the application deployment setting for install behaviors.
+
+> [!NOTE]
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
-```
+### Example 1: Remove an executable file as an install behavior
 
-{{ Add example description here }}
+This example removes **notepad.exe** from the install behavior list on the **CenterApp** application.
+
+```powershell
+$appName = "CenterApp"
+$dtName = "InterDept - Windows Installer (.msi file)"
+$msi_dt = Get-CMDeploymentType -ApplicationName $appName -DeploymentTypeName $dtName
+Remove-CMDeploymentTypeInstallBehavior -InputObject $msi_dt -ExeFileName "notepad.exe"
+```
 
 ## PARAMETERS
 
 ### -DisableWildcardHandling
-{{ Fill DisableWildcardHandling Description }}
+
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -54,7 +67,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisplayName
-{{ Fill DisplayName Description }}
+
+Specify the friendly name of the install behavior to remove.
 
 ```yaml
 Type: String
@@ -69,7 +83,8 @@ Accept wildcard characters: False
 ```
 
 ### -ExeFileName
-{{ Fill ExeFileName Description }}
+
+Specify the name of the executable file to remove from the application deployment type.
 
 ```yaml
 Type: String
@@ -84,7 +99,8 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-{{ Fill Force Description }}
+
+Run the command without asking for confirmation.
 
 ```yaml
 Type: SwitchParameter
@@ -99,7 +115,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-{{ Fill ForceWildcardHandling Description }}
+
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -114,7 +131,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{ Fill InputObject Description }}
+
+Specify an application deployment type object. To get this object, use the [Get-CMDeploymentType](Get-CMDeploymentType.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -129,6 +147,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -144,8 +163,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+
+Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
 
 ```yaml
 Type: SwitchParameter
@@ -169,6 +188,15 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
+
+[Add-CMDeploymentTypeInstallBehavior](Add-CMDeploymentTypeInstallBehavior.md)
+[Get-CMDeploymentTypeInstallBehavior](Get-CMDeploymentTypeInstallBehavior.md)
+[Set-CMDeploymentTypeInstallBehavior](Set-CMDeploymentTypeInstallBehavior.md)
+
+[Get-CMDeploymentType](Get-CMDeploymentType.md)
+
+[Set-CMApplicationDeployment](Set-CMApplicationDeployment.md)

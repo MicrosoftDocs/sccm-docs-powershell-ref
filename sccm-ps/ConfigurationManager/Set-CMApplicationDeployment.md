@@ -2,7 +2,7 @@
 description: Configure an application deployment
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 12/23/2020
+ms.date: 07/28/2021
 schema: 2.0.0
 title: Set-CMApplicationDeployment
 ---
@@ -82,7 +82,8 @@ This command modifies an application deployment for an application named **Track
 ## PARAMETERS
 
 ### -AllowRepairApp
-Starting in version 2002, use this parameter to configure the repair application option when creating a deployment for an application.
+
+Use this parameter to configure the repair application option when creating a deployment for an application.
 
 ```yaml
 Type: Boolean
@@ -127,7 +128,13 @@ Accept wildcard characters: False
 ```
 
 ### -AutoCloseExecutable
-{{ Fill AutoCloseExecutable Description }}
+
+Starting in version 2107, set this parameter to `$true` to enable the application deployment setting for install behaviors. Then use the [Add-CMDeploymentTypeInstallBehavior](Add-CMDeploymentTypeInstallBehavior.md) cmdlet to add an executable file to check isn't running for the install to succeed.
+
+Set this parameter to `$false` to disable this option in the following situations:
+
+- When you use the [Remove-CMDeploymentTypeInstallBehavior](Remove-CMDeploymentTypeInstallBehavior.md) cmdlet to remove all executable files
+- You don't want the deployment to check for running executables.
 
 ```yaml
 Type: Boolean
