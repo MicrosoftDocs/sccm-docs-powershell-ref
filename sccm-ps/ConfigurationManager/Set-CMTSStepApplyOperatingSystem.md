@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 online version:
@@ -355,6 +355,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Description
 Specify an optional description for this task sequence step.
 
@@ -695,21 +710,6 @@ Use this parameter to enable this task sequence step.
 Type: Boolean
 Parameter Sets: ByValue, ById, ByName
 Aliases: IsThisStepEnabled
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -LayeredDriver
-{{ Fill LayeredDriver Description }}
-
-```yaml
-Type: OsdLayeredDriver
-Parameter Sets: ByValue, ById, ByName
-Aliases: KeyboardDriver
 
 Required: False
 Position: Named
@@ -1265,21 +1265,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -WhatIf
 
 Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
@@ -1288,6 +1273,21 @@ Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -LayeredDriver
+{{ Fill LayeredDriver Description }}
+
+```yaml
+Type: OsdLayeredDriver
+Parameter Sets: ByValue, ById, ByName
+Aliases: KeyboardDriver
 
 Required: False
 Position: Named

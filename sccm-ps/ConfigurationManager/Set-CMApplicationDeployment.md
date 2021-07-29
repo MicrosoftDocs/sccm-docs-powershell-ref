@@ -1,4 +1,4 @@
-﻿---
+---
 description: Configure an application deployment
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -126,21 +126,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AutoCloseExecutable
-{{ Fill AutoCloseExecutable Description }}
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases: AutoCloseExeOnInstallBehavior
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -AvailableDateTime
 
 Specify a **DateTime** object for when this deployment is _available_. To get this object, use the [Get-Date](/powershell/module/microsoft.powershell.utility/get-date) built-in cmdlet.
@@ -219,6 +204,22 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -621,22 +622,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -WhatIf
 
 Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
@@ -649,6 +634,21 @@ Aliases: wi
 Required: False
 Position: Named
 Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AutoCloseExecutable
+{{ Fill AutoCloseExecutable Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: AutoCloseExeOnInstallBehavior
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

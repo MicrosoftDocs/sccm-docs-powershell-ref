@@ -1,4 +1,4 @@
-﻿---
+---
 description: Create an OS upgrade package.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -39,6 +39,21 @@ New-CMOperatingSystemInstaller -Name "Windows 10 latest" -Path "\\Contoso01\CM\W
 ```
 
 ## PARAMETERS
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -Description
 
@@ -150,21 +165,6 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

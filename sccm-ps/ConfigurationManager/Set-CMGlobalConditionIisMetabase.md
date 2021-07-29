@@ -1,4 +1,4 @@
-﻿---
+---
 description: Sets a IIS Metabase type global condition in Configuration Manager.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -38,6 +38,22 @@ PS XYZ:\> $GlobalIIS = Set-CMGlobalConditionIisMetabase -DataType String -Proper
 This command sets a IIS Metabase type global condition in Configuration Manager.
 
 ## PARAMETERS
+
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -DisableWildcardHandling
 
@@ -128,22 +144,6 @@ Specifies the numeric property of the IIS Metabase setting.
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
 
 Required: False
 Position: Named

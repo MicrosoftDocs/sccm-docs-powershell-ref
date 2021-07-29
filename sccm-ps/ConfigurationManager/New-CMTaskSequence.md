@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 03/30/2021
@@ -309,6 +309,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -CreatedBy
 
 For the build and capture scenario, specify an optional string that's on the captured image file for who created it. The maximum length is 255 characters.
@@ -557,6 +573,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -InstallOperatingSystemImage
+
+Add this parameter to create a task sequence for the install OS image scenario. For more information, see [Create a task sequence to install an OS](/mem/configmgr/osd/deploy-use/create-a-task-sequence-to-install-an-operating-system).
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: NewInstallOSImage
+Aliases: InstallOperatingSystemImageOption
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -InstallationLicensingMode
 
 This setting only applies to legacy versions of Windows that are no longer supported. Starting in version 2010, the setting is no longer visible in the task sequence editor. Existing task sequences that still use this setting will continue to function the same.
@@ -588,22 +620,6 @@ Parameter Sets: NewBuildOSImage, NewInstallOSImage
 Aliases:
 
 Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InstallOperatingSystemImage
-
-Add this parameter to create a task sequence for the install OS image scenario. For more information, see [Create a task sequence to install an OS](/mem/configmgr/osd/deploy-use/create-a-task-sequence-to-install-an-operating-system).
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: NewInstallOSImage
-Aliases: InstallOperatingSystemImageOption
-
-Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -924,38 +940,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WorkgroupName
-
-If you set the **JoinDomain** parameter to `WorkgroupType`, use this parameter to specify the workgroup name. This parameter configures the [Apply Network Settings](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_ApplyNetworkSettings) task sequence step.
-
-```yaml
-Type: String
-Parameter Sets: NewBuildOSImage, NewInstallOSImage
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -WhatIf
 
 Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
@@ -968,6 +952,22 @@ Aliases: wi
 Required: False
 Position: Named
 Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WorkgroupName
+
+If you set the **JoinDomain** parameter to `WorkgroupType`, use this parameter to specify the workgroup name. This parameter configures the [Apply Network Settings](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_ApplyNetworkSettings) task sequence step.
+
+```yaml
+Type: String
+Parameter Sets: NewBuildOSImage, NewInstallOSImage
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

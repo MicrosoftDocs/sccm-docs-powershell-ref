@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 04/26/2021
@@ -83,6 +83,22 @@ Set-CMPackage -InputObject $pkg -Path "\\sources\cmpkg$\newpkg01"
 ```
 
 ## PARAMETERS
+
+### -Confirm
+
+Add this parameter to prompt for confirmation before the cmdlet runs.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -CopyToPackageShareOnDistributionPoint
 
@@ -576,22 +592,6 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-
-Add this parameter to prompt for confirmation before the cmdlet runs.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

@@ -1,4 +1,4 @@
-﻿---
+---
 description: Removes Configuration Manager hardware requirement objects for products.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -51,6 +51,21 @@ Are you sure you wish to remove HardwareRequirement: Product="Accounts Program"?
 This command removes the hardware requirement object for a product named Accounts Program.
 
 ## PARAMETERS
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -DisableWildcardHandling
 
@@ -126,21 +141,6 @@ Aliases:
 Required: True
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

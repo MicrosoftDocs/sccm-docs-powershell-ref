@@ -1,8 +1,8 @@
-﻿---
+---
 Module Name: ConfigurationManager
 Module Guid: 7f590131-5253-4425-8b32-eeab51a4c393
 Download Help Link: https://aka.ms/configmgrps-help
-Help Version: 5.2103.0.2
+Help Version: 5.2107.0.0
 Locale: en-US
 ---
 
@@ -85,6 +85,12 @@ Adds a deployment type for a Configuration Manager deployment application. This 
 
 ### [Add-CMDeploymentTypeDependency](Add-CMDeploymentTypeDependency.md)
 Adds a deployment type as a dependency to a dependency group in Configuration Manager.
+
+### [Add-CMDeploymentTypeInstallBehavior](Add-CMDeploymentTypeInstallBehavior.md)
+{{ Fill in the Synopsis }}
+
+### [Add-CMDeploymentTypeReturnCode](Add-CMDeploymentTypeReturnCode.md)
+{{ Fill in the Synopsis }}
 
 ### [Add-CMDeploymentTypeSupersedence](Add-CMDeploymentTypeSupersedence.md)
 Add a deployment type supersedence in Configuration Manager.
@@ -531,6 +537,9 @@ Gets an object that installs a Configuration Manager client by using client push
 ### [Get-CMClientSetting](Get-CMClientSetting.md)
 Gets client settings.
 
+### [Get-CMClientSettingDeployment](Get-CMClientSettingDeployment.md)
+{{ Fill in the Synopsis }}
+
 ### [Get-CMClientStatusSetting](Get-CMClientStatusSetting.md)
 Gets client status settings.
 
@@ -678,6 +687,15 @@ Gets a deployment type from a dependency group.
 ### [Get-CMDeploymentTypeDependencyGroup](Get-CMDeploymentTypeDependencyGroup.md)
 Gets a deployment type dependency group from Configuration Manager.
 
+### [Get-CMDeploymentTypeDetectionClause](Get-CMDeploymentTypeDetectionClause.md)
+{{ Fill in the Synopsis }}
+
+### [Get-CMDeploymentTypeInstallBehavior](Get-CMDeploymentTypeInstallBehavior.md)
+{{ Fill in the Synopsis }}
+
+### [Get-CMDeploymentTypeReturnCode](Get-CMDeploymentTypeReturnCode.md)
+{{ Fill in the Synopsis }}
+
 ### [Get-CMDeploymentTypeSupersedence](Get-CMDeploymentTypeSupersedence.md)
 Get the old deployment types that an application supersedes.
 
@@ -819,6 +837,9 @@ Gets a migration source.
 ### [Get-CMMulticastServicePoint](Get-CMMulticastServicePoint.md)
 Gets a multicast service point.
 
+### [Get-CMNotification](Get-CMNotification.md)
+{{ Fill in the Synopsis }}
+
 ### [Get-CMObjectLockDetails](Get-CMObjectLockDetails.md)
 Get the details of a SEDO lock for an object.
 
@@ -848,6 +869,9 @@ Gets a package deployment from Configuration Manager.
 
 ### [Get-CMPackageDeploymentStatus](Get-CMPackageDeploymentStatus.md)
 Get the status of classic software distribution deployments.
+
+### [Get-CMPersistentUserSettingsGroup](Get-CMPersistentUserSettingsGroup.md)
+{{ Fill in the Synopsis }}
 
 ### [Get-CMPhase](Get-CMPhase.md)
 Use this cmdlet to get a deployment phase for a specific instance or a phased deployment.
@@ -962,6 +986,9 @@ Gets a client installation on a Configuration Manager software update point.
 
 ### [Get-CMSoftwareUpdateCategory](Get-CMSoftwareUpdateCategory.md)
 Get a software update classification or product.
+
+### [Get-CMSoftwareUpdateContentInfo](Get-CMSoftwareUpdateContentInfo.md)
+{{ Fill in the Synopsis }}
 
 ### [Get-CMSoftwareUpdateDeployment](Get-CMSoftwareUpdateDeployment.md)
 Get a software update deployment.
@@ -2295,6 +2322,12 @@ Removes a deployment type dependency from Configuration Manager deployment type 
 ### [Remove-CMDeploymentTypeDependencyGroup](Remove-CMDeploymentTypeDependencyGroup.md)
 Removes a deployment type dependency group from Configuration Manager deployment type.
 
+### [Remove-CMDeploymentTypeInstallBehavior](Remove-CMDeploymentTypeInstallBehavior.md)
+{{ Fill in the Synopsis }}
+
+### [Remove-CMDeploymentTypeReturnCode](Remove-CMDeploymentTypeReturnCode.md)
+{{ Fill in the Synopsis }}
+
 ### [Remove-CMDeploymentTypeSupersedence](Remove-CMDeploymentTypeSupersedence.md)
 Remove a deployment type supersedence relationship.
 
@@ -2396,6 +2429,9 @@ Removes a Configuration Manager package.
 
 ### [Remove-CMPackageDeployment](Remove-CMPackageDeployment.md)
 Removes a package deployment from Configuration Manager.
+
+### [Remove-CMPersistentUserSettingsGroup](Remove-CMPersistentUserSettingsGroup.md)
+{{ Fill in the Synopsis }}
 
 ### [Remove-CMProgram](Remove-CMProgram.md)
 Removes programs from a Configuration Manager package.
@@ -2949,6 +2985,12 @@ Sets a deployment type dependency in Configuration Manager.
 ### [Set-CMDeploymentTypeDependencyGroup](Set-CMDeploymentTypeDependencyGroup.md)
 Sets a deployment type dependency group in Configuration Manager.
 
+### [Set-CMDeploymentTypeInstallBehavior](Set-CMDeploymentTypeInstallBehavior.md)
+{{ Fill in the Synopsis }}
+
+### [Set-CMDeploymentTypeReturnCode](Set-CMDeploymentTypeReturnCode.md)
+{{ Fill in the Synopsis }}
+
 ### [Set-CMDeploymentTypeSupersedence](Set-CMDeploymentTypeSupersedence.md)
 Configure a supersedence relationship on an application.
 
@@ -3083,6 +3125,9 @@ Configure a Windows Installer deployment type.
 
 ### [Set-CMMulticastServicePoint](Set-CMMulticastServicePoint.md)
 Sets a multicast service point.
+
+### [Set-CMNotification](Set-CMNotification.md)
+{{ Fill in the Synopsis }}
 
 ### [Set-CMObjectSecurityScope](Set-CMObjectSecurityScope.md)
 Sets the security scopes for Configuration Manager objects.
@@ -3379,19 +3424,19 @@ Sets a wireless profile.
 Modifies a wireless profile.
 
 ### [Start-CMAntimalwarePolicyDeployment](Start-CMAntimalwarePolicyDeployment.md)
-Starts the deployment of an antimalware policy to the members of a Configuration Manager collection.
+(Deprecated) Starts the deployment of an antimalware policy to the members of a Configuration Manager collection.
 
 ### [Start-CMApplicationDeployment](Start-CMApplicationDeployment.md)
 (Deprecated) Starts an application deployment in Configuration Manager.
 
 ### [Start-CMApplicationDeploymentSimulation](Start-CMApplicationDeploymentSimulation.md)
-Starts an application deployment simulation in Configuration Manager.
+(Deprecated) Starts an application deployment simulation in Configuration Manager.
 
 ### [Start-CMBaselineDeployment](Start-CMBaselineDeployment.md)
 (Deprecated) Starts deployment of a Configuration Manager baseline configuration to a collection of computers.
 
 ### [Start-CMClientSettingDeployment](Start-CMClientSettingDeployment.md)
-Deploys client settings to devices in a collection.
+(Deprecated) Deploys client settings to devices in a collection.
 
 ### [Start-CMCloudDistributionPoint](Start-CMCloudDistributionPoint.md)
 Starts the cloud distribution point service.

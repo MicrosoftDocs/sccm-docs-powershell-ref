@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 03/25/2021
@@ -107,6 +107,22 @@ Accept pipeline input: False
 Accept wildcard characters: True
 ```
 
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -DeploymentId
 
 Specify the ID for the app group deployment. The format of this ID is a standard GUID.
@@ -211,22 +227,6 @@ Specify the ID of the application group.
 Type: Int32
 Parameter Sets: SearchBySmsObjectId
 Aliases: CI_ID, ApplicationGroupID
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
 
 Required: False
 Position: Named

@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 online version:
@@ -311,6 +311,21 @@ Specify the value of the task sequence variable to use in a condition.
 Type: String
 Parameter Sets: ByIdSetConditionVariable, ByNameSetConditionVariable, ByValueSetConditionVariable
 Aliases: Value
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
 
 Required: False
 Position: Named
@@ -1169,36 +1184,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WipePartition
-{{ Fill WipePartition Description }}
-
-```yaml
-Type: Boolean
-Parameter Sets: ByValue, ById, ByName
-Aliases: WipePartitionBeforeApplyImage
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -WhatIf
 
 Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
@@ -1207,6 +1192,21 @@ Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WipePartition
+{{ Fill WipePartition Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: ByValue, ById, ByName
+Aliases: WipePartitionBeforeApplyImage
 
 Required: False
 Position: Named
