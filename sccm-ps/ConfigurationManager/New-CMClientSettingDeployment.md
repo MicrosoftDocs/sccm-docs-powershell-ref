@@ -2,7 +2,7 @@
 description: Deploy a custom client setting.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 03/25/2021
+ms.date: 08/02/2021
 schema: 2.0.0
 title: New-CMClientSettingDeployment
 ---
@@ -227,6 +227,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-CMClientSettingDeployment](Get-CMClientSettingDeployment.md)
 
 [Remove-CMClientSettingDeployment](Remove-CMClientSettingDeployment.md)
 

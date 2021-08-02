@@ -1,6 +1,7 @@
 ---
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
+ms.date: 08/02/2021
 online version:
 schema: 2.0.0
 ---
@@ -8,7 +9,8 @@ schema: 2.0.0
 # Get-CMClientSettingDeployment
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Get a deployment of a custom client settings object.
 
 ## SYNTAX
 
@@ -32,21 +34,30 @@ Get-CMClientSettingDeployment -InputObject <IResultObject> [-Collection <IResult
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+Starting in version 2107, use this cmdlet to get a deployment of a custom client settings object. You can use this object with [Remove-CMClientSettingDeployment](remove-cmclientsettingdeployment.md).
+
+For more information on client settings, see [How to configure client settings](/mem/configmgr/core/clients/deploy/configure-client-settings).
+
+> [!NOTE]
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
-```
+### Example 1: Get the deployment of a client setting by name
 
-{{ Add example description here }}
+This example first gets a client settings object by name, and then passes that object to Get-CMClientSettingDeployment to show details about the deployment.
+
+```powershell
+$clientSetting =  Get-CMClientSetting -Name "Software Center customizations"
+$clientSetting | Get-CMClientSettingDeployment
+```
 
 ## PARAMETERS
 
 ### -Collection
-{{ Fill Collection Description }}
+
+Specify a collection object to which the client settings object is deployed. To get this object, use the [Get-CMCollection](Get-CMCollection.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -61,7 +72,8 @@ Accept wildcard characters: False
 ```
 
 ### -CollectionId
-{{ Fill CollectionId Description }}
+
+Specify the ID of a collection to which the client settings object is deployed. For example, `XYZ00012`.
 
 ```yaml
 Type: String
@@ -76,7 +88,8 @@ Accept wildcard characters: False
 ```
 
 ### -CollectionName
-{{ Fill CollectionName Description }}
+
+Specify the name of a collection to which the client settings object is deployed.
 
 ```yaml
 Type: String
@@ -91,7 +104,8 @@ Accept wildcard characters: True
 ```
 
 ### -DisableWildcardHandling
-{{ Fill DisableWildcardHandling Description }}
+
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -106,7 +120,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-{{ Fill ForceWildcardHandling Description }}
+
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -121,7 +136,8 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-{{ Fill Id Description }}
+
+Specify the ID of the client settings object that's deployed. The **settings ID** is an integer value, for example `47` or `16777225`.
 
 ```yaml
 Type: String
@@ -136,7 +152,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{ Fill InputObject Description }}
+
+Specify a client settings object to get its deployments. To get this object, use the [Get-CMClientSetting](Get-CMClientSetting.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -151,7 +168,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{ Fill Name Description }}
+
+Specify the name of the client settings object that's deployed.
 
 ```yaml
 Type: String
@@ -180,4 +198,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## NOTES
 
+For more information on this return object and its properties, see [SMS_ClientSettingsAssignment server WMI class](/mem/configmgr/develop/reference/core/clients/config/sms_clientsettingsassignment-server-wmi-class).
+
 ## RELATED LINKS
+
+[New-CMClientSettingDeployment](New-CMClientSettingDeployment.md)
+
+[Remove-CMClientSettingDeployment](remove-cmclientsettingdeployment.md)
+
+[Get-CMClientSetting](Get-CMClientSetting.md)
+
+[Create and deploy custom client settings](/mem/configmgr/core/clients/deploy/configure-client-settings#create-and-deploy-custom-client-settings)

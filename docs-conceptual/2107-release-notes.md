@@ -123,7 +123,7 @@ For more information, see [Set-CMDeploymentTypeReturnCode](/powershell/module/co
 
 ### Get-CMClientSettingDeployment
 
-Use this cmdlet to get a deployment of a custom client settings object. You can use this object with [Remove-CMClientSetting](/powershell/module/configurationmanager/remove-cmclientsetting).
+Use this cmdlet to get a deployment of a custom client settings object. You can use this object with [Remove-CMClientSettingDeployment](/powershell/module/configurationmanager/remove-cmclientsettingdeployment).
 
 For more information on client settings, see [How to configure client settings](/mem/configmgr/core/clients/deploy/configure-client-settings).
 
@@ -132,7 +132,7 @@ $clientSetting =  Get-CMClientSetting -Name "Software Center customizations"
 $clientSetting | Get-CMClientSettingDeployment
 ```
 
-<!-- For more information, see [Get-CMClientSettingDeployment](/powershell/module/configurationmanager/Get-CMClientSettingDeployment). -->
+For more information, see [Get-CMClientSettingDeployment](/powershell/module/configurationmanager/Get-CMClientSettingDeployment).
 
 ### Get-CMDeploymentTypeDetectionClause
 
