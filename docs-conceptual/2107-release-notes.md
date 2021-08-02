@@ -148,7 +148,7 @@ $clause1 = Get-CMDeploymentTypeDetectionClause -InputObject $appMsi
 Set-CMScriptDeploymentType -ApplicationName "Configuration Manager console" -DeploymentTypeName "Install" -AddDetectionClause $clause1
 ```
 
-<!-- For more information, see [Get-CMDeploymentTypeDetectionClause](/powershell/module/configurationmanager/Get-CMDeploymentTypeDetectionClause). -->
+For more information, see [Get-CMDeploymentTypeDetectionClause](/powershell/module/configurationmanager/Get-CMDeploymentTypeDetectionClause).
 
 ### Get-CMPersistentUserSettingsGroup
 
