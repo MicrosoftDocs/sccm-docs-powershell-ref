@@ -388,17 +388,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
-
 ## OUTPUTS
 
 ### IResultObject#SMS_AzureService
-
 ### IResultObject[]#SMS_SCI_SysResUse
-
 ### IResultObject[]#SMS_Alert
-
 ### IResultObject#SMS_Alert
-
 ## NOTES
 
 ## RELATED LINKS

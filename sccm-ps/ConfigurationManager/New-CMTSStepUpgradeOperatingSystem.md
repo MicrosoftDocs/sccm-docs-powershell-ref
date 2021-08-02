@@ -16,9 +16,9 @@ schema: 2.0.0
 New-CMTSStepUpgradeOperatingSystem [-DriverPackage <IResultObject>]
  [-DynamicUpdateSetting <DynamicUpdateOption>] [-EditionIndex <Int32>] [-IgnoreMessage <Boolean>]
  [-ProductKey <String>] [-ScanOnly <Boolean>] [-SetupTimeout <Int32>] [-SourcePath <String>]
- [-StagedContent <String>] [-UpgradePackage <IResultObject>] [-Condition <IResultObject[]>] [-ContinueOnError]
- [-Description <String>] [-Disable] -Name <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-StagedContent <String>] [-UpgradePackage <IResultObject>] [-SoftwareUpdate <IResultObject[]>]
+ [-Condition <IResultObject[]>] [-ContinueOnError] [-Description <String>] [-Disable] -Name <String>
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -325,17 +325,30 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -SoftwareUpdate
+{{ Fill SoftwareUpdate Description }}
+
+```yaml
+Type: IResultObject[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### None
-
 ## OUTPUTS
 
 ### IResultObject#SMS_TaskSequence_UpgradeOperatingSystemAction
-
 ## NOTES
 
 ## RELATED LINKS

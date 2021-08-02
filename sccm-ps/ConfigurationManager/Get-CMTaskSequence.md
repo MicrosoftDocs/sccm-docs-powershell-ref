@@ -109,7 +109,7 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -TaskSequencePackageId
@@ -134,13 +134,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
-
 ## OUTPUTS
 
 ### IResultObject[]#SMS_TaskSequence_Step
-
 ### IResultObject#SMS_TaskSequence_Step
-
 ## NOTES
 
 For more information on this return object and its properties, see [SMS_TaskSequence_Step server WMI class](/mem/configmgr/develop/reference/osd/sms_tasksequence_step-server-wmi-class).

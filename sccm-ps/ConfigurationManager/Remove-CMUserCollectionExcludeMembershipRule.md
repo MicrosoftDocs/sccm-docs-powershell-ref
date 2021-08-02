@@ -1,6 +1,6 @@
 ---
 description: Removes an exclude membership rule from one or more user collection in the Configuration Manager hierarchy.
-external help file: AdminUI.PS.psm1-Help.xml
+external help file: AdminUI.PS.psm1-help.xml
 Module Name: ConfigurationManager
 schema: 2.0.0
 title: Remove-CMUserCollectionExcludeMembershipRule
@@ -218,7 +218,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
-
 ## OUTPUTS
 
 ### System.Object

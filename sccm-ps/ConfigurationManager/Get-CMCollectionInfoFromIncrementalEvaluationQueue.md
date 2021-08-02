@@ -1,5 +1,5 @@
----
-external help file: AdminUI.PS.psm1-Help.xml
+﻿---
+external help file: AdminUI.PS.psm1-help.xml
 Module Name: ConfigurationManager
 ms.date: 12/21/2020
 online version:
@@ -100,7 +100,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
-
 ## OUTPUTS
 
 ### System.Object

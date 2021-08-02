@@ -155,7 +155,7 @@ Required: False
 Position: 0
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -ParentBaseline
@@ -217,21 +217,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
-
 ## OUTPUTS
 
 ### IResultObject[]#SMS_ConfigurationBaselineInfo
-
 ### IResultObject#SMS_ConfigurationBaselineInfo
-
 ### IResultObject[]#SMS_ConfigurationItem
-
 ### IResultObject#SMS_ConfigurationItem
-
 ### IResultObject[]#SMS_SoftwareUpdate
-
 ### IResultObject#SMS_SoftwareUpdate
-
 ## NOTES
 
 For more information on these return objects and their properties, see the following articles:

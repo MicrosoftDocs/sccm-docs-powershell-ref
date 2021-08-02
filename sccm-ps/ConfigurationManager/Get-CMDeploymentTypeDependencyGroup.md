@@ -1,4 +1,4 @@
----
+﻿---
 description: Gets a deployment type dependency group from Configuration Manager.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -124,13 +124,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
-
 ## OUTPUTS
 
 ### DeploymentTypeDependencyGroup[]
-
 ### DeploymentTypeDependency
-
 ## NOTES
 
 ## RELATED LINKS

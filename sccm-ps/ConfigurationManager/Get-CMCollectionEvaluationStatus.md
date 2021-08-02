@@ -178,17 +178,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
-
 ## OUTPUTS
 
 ### IResultObject[]#SMS_CollectionEvaluationFull
-
 ### IResultObject#SMS_CollectionEvaluationFull
-
 ### IResultObject[]#SMS_CollectionEvaluationIncremental
-
 ### IResultObject#SMS_CollectionEvaluationIncremental
-
 ## NOTES
 
 ## RELATED LINKS

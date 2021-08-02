@@ -1,4 +1,4 @@
----
+﻿---
 description: Gets the previous versions of a configuration item in Configuration Manager.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -170,13 +170,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
-
 ## OUTPUTS
 
 ### IResultObject[]#SMS_ConfigurationItem
-
 ### IResultObject#SMS_ConfigurationItem
-
 ## NOTES
 
 ## RELATED LINKS

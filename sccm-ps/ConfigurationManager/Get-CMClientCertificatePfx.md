@@ -143,11 +143,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
-
 ## OUTPUTS
 
 ### IResultObject#SMS_ClientPfxCertificate
-
 ## NOTES
 
 For more information on this return object and its properties, see [SMS_ClientPfxCertificate server WMI class](/mem/configmgr/develop/reference/core/clients/deploy/sms_clientpfxcertificate-server-wmi-class).

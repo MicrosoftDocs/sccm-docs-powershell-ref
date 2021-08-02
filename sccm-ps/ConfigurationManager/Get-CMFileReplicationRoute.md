@@ -146,13 +146,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
-
 ## OUTPUTS
 
 ### IResultObject[]#SMS_SCI_Address
-
 ### IResultObject#SMS_SCI_Address
-
 ## NOTES
 
 ## RELATED LINKS

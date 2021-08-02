@@ -10,7 +10,7 @@ title: Start-CMApplicationDeploymentSimulation
 # Start-CMApplicationDeploymentSimulation
 
 ## SYNOPSIS
-Starts an application deployment simulation in Configuration Manager.
+(Deprecated) Starts an application deployment simulation in Configuration Manager.
 
 ## SYNTAX
 
@@ -40,8 +40,8 @@ Start-CMApplicationDeploymentSimulation -CollectionName <String> [-DeploymentAct
 The **Start-CMApplicationDeploymentSimulation** cmdlet starts an application deployment.
 Use simulated deployment to test an application deployment without installing an application.
 
-> [!NOTE]
-> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
+> [!IMPORTANT]
+> Starting in version 2107, this cmdlet is deprecated and may be removed in a future release. Instead use the [New-CMApplicationDeployment](New-CMApplicationDeployment.md) cmdlet with the **Simulation** parameter.
 
 ## EXAMPLES
 
@@ -212,7 +212,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
-
 ## OUTPUTS
 
 ### System.Object

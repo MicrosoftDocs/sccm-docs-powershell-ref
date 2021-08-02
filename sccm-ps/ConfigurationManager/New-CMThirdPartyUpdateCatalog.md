@@ -171,11 +171,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
-
 ## OUTPUTS
 
 ### IResultObject#SMS_ISVCatalogs
-
 ## NOTES
 
 This cmdlet returns the **SMS_ISVCatalogs** WMI class object.

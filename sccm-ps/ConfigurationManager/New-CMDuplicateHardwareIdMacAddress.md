@@ -124,11 +124,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
-
 ## OUTPUTS
 
 ### IResultObject#SMS_CommonMacAddresses
-
 ## NOTES
 
 This cmdlet returns the **SMS_CommonMacAddresses** WMI class object.

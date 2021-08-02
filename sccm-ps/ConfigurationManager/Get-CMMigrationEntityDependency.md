@@ -119,13 +119,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
-
 ## OUTPUTS
 
 ### IResultObject[]#SMS_MigrationEntityDependency
-
 ### IResultObject#SMS_MigrationEntityDependency
-
 ## NOTES
 
 ## RELATED LINKS

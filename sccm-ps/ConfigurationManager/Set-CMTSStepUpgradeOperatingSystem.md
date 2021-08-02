@@ -17,13 +17,13 @@ schema: 2.0.0
 Set-CMTSStepUpgradeOperatingSystem [-DriverPackage <IResultObject>]
  [-DynamicUpdateSetting <DynamicUpdateOption>] [-EditionIndex <Int32>] [-IgnoreMessage <Boolean>]
  [-ProductKey <String>] [-ScanOnly <Boolean>] [-SetupTimeout <Int32>] [-SourcePath <String>]
- [-StagedContent <String>] [-UpgradePackage <IResultObject>] [-AddCondition <IResultObject[]>]
- [-ClearCondition] [-Description <String>] -InputObject <IResultObject> [-IsContinueOnError <Boolean>]
- [-IsEnabled <Boolean>] [-MoveToIndex <Int32>] [-NewStepName <String>] [-RemoveConditionFile]
- [-RemoveConditionFolder] [-RemoveConditionIfStatement] [-RemoveConditionOperatingSystem]
- [-RemoveConditionQueryWmi] [-RemoveConditionRegistry] [-RemoveConditionSoftware] [-RemoveConditionVariable]
- [-StepName <String>] [-StepOrder <ReorderType>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+ [-StagedContent <String>] [-UpgradePackage <IResultObject>] [-SoftwareUpdate <IResultObject[]>]
+ [-AddCondition <IResultObject[]>] [-ClearCondition] [-Description <String>] -InputObject <IResultObject>
+ [-IsContinueOnError <Boolean>] [-IsEnabled <Boolean>] [-MoveToIndex <Int32>] [-NewStepName <String>]
+ [-RemoveConditionFile] [-RemoveConditionFolder] [-RemoveConditionIfStatement]
+ [-RemoveConditionOperatingSystem] [-RemoveConditionQueryWmi] [-RemoveConditionRegistry]
+ [-RemoveConditionSoftware] [-RemoveConditionVariable] [-StepName <String>] [-StepOrder <ReorderType>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ById
@@ -31,13 +31,13 @@ Set-CMTSStepUpgradeOperatingSystem [-DriverPackage <IResultObject>]
 Set-CMTSStepUpgradeOperatingSystem [-DriverPackage <IResultObject>]
  [-DynamicUpdateSetting <DynamicUpdateOption>] [-EditionIndex <Int32>] [-IgnoreMessage <Boolean>]
  [-ProductKey <String>] [-ScanOnly <Boolean>] [-SetupTimeout <Int32>] [-SourcePath <String>]
- [-StagedContent <String>] [-UpgradePackage <IResultObject>] [-AddCondition <IResultObject[]>]
- [-ClearCondition] [-Description <String>] [-IsContinueOnError <Boolean>] [-IsEnabled <Boolean>]
- [-MoveToIndex <Int32>] [-NewStepName <String>] [-RemoveConditionFile] [-RemoveConditionFolder]
- [-RemoveConditionIfStatement] [-RemoveConditionOperatingSystem] [-RemoveConditionQueryWmi]
- [-RemoveConditionRegistry] [-RemoveConditionSoftware] [-RemoveConditionVariable] [-StepName <String>]
- [-StepOrder <ReorderType>] -TaskSequenceId <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-StagedContent <String>] [-UpgradePackage <IResultObject>] [-SoftwareUpdate <IResultObject[]>]
+ [-AddCondition <IResultObject[]>] [-ClearCondition] [-Description <String>] [-IsContinueOnError <Boolean>]
+ [-IsEnabled <Boolean>] [-MoveToIndex <Int32>] [-NewStepName <String>] [-RemoveConditionFile]
+ [-RemoveConditionFolder] [-RemoveConditionIfStatement] [-RemoveConditionOperatingSystem]
+ [-RemoveConditionQueryWmi] [-RemoveConditionRegistry] [-RemoveConditionSoftware] [-RemoveConditionVariable]
+ [-StepName <String>] [-StepOrder <ReorderType>] -TaskSequenceId <String> [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByName
@@ -45,13 +45,13 @@ Set-CMTSStepUpgradeOperatingSystem [-DriverPackage <IResultObject>]
 Set-CMTSStepUpgradeOperatingSystem [-DriverPackage <IResultObject>]
  [-DynamicUpdateSetting <DynamicUpdateOption>] [-EditionIndex <Int32>] [-IgnoreMessage <Boolean>]
  [-ProductKey <String>] [-ScanOnly <Boolean>] [-SetupTimeout <Int32>] [-SourcePath <String>]
- [-StagedContent <String>] [-UpgradePackage <IResultObject>] [-AddCondition <IResultObject[]>]
- [-ClearCondition] [-Description <String>] [-IsContinueOnError <Boolean>] [-IsEnabled <Boolean>]
- [-MoveToIndex <Int32>] [-NewStepName <String>] [-RemoveConditionFile] [-RemoveConditionFolder]
- [-RemoveConditionIfStatement] [-RemoveConditionOperatingSystem] [-RemoveConditionQueryWmi]
- [-RemoveConditionRegistry] [-RemoveConditionSoftware] [-RemoveConditionVariable] [-StepName <String>]
- [-StepOrder <ReorderType>] -TaskSequenceName <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-StagedContent <String>] [-UpgradePackage <IResultObject>] [-SoftwareUpdate <IResultObject[]>]
+ [-AddCondition <IResultObject[]>] [-ClearCondition] [-Description <String>] [-IsContinueOnError <Boolean>]
+ [-IsEnabled <Boolean>] [-MoveToIndex <Int32>] [-NewStepName <String>] [-RemoveConditionFile]
+ [-RemoveConditionFolder] [-RemoveConditionIfStatement] [-RemoveConditionOperatingSystem]
+ [-RemoveConditionQueryWmi] [-RemoveConditionRegistry] [-RemoveConditionSoftware] [-RemoveConditionVariable]
+ [-StepName <String>] [-StepOrder <ReorderType>] -TaskSequenceName <String> [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByIdSetConditionIfStatement
@@ -1248,13 +1248,27 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -SoftwareUpdate
+{{ Fill SoftwareUpdate Description }}
+
+```yaml
+Type: IResultObject[]
+Parameter Sets: ByValue, ById, ByName
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
-
 ## OUTPUTS
 
 ### System.Object

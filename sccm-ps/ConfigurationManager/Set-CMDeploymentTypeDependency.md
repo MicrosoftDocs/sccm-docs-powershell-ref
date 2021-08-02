@@ -214,11 +214,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.PowerShell.Cmdlets.AppMan.DeploymentTypeDependencyGroup
-
 ## OUTPUTS
 
 ### IResultObject#SMS_Application
-
 ## NOTES
 
 ## RELATED LINKS

@@ -190,9 +190,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
-
 ### System.Security.Cryptography.X509Certificates.X509Certificate
-
 ## OUTPUTS
 
 ### System.Object

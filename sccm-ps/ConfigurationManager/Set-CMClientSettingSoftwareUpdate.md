@@ -20,9 +20,10 @@ Configure client settings for software updates.
 Set-CMClientSettingSoftwareUpdate [-BatchingTimeout <Int32>] [-DeltaDownloadPort <Int32>]
  [-DeploymentEvaluationSchedule <IResultObject>] [-Enable <Boolean>] [-EnableDeltaDownload <Boolean>]
  [-EnableDynamicUpdate <Boolean>] [-EnableInstallation <Boolean>] [-EnableThirdPartyUpdates <Boolean>]
- [-EnforceMandatory <Boolean>] [-Office365ManagementType <Boolean>] [-ScanSchedule <IResultObject>]
- [-ThreadPriority <ThreadPriorityType>] [-TimeUnit <BatchingTimeoutType>] -Name <String> [-PassThru]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-EnableWsusCertPinning <Boolean>] [-EnforceMandatory <Boolean>] [-Office365ManagementType <Boolean>]
+ [-ScanSchedule <IResultObject>] [-ThreadPriority <ThreadPriorityType>] [-TimeUnit <BatchingTimeoutType>]
+ -Name <String> [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### SetDefaultSetting
@@ -30,9 +31,10 @@ Set-CMClientSettingSoftwareUpdate [-BatchingTimeout <Int32>] [-DeltaDownloadPort
 Set-CMClientSettingSoftwareUpdate [-BatchingTimeout <Int32>] [-DeltaDownloadPort <Int32>]
  [-DeploymentEvaluationSchedule <IResultObject>] [-Enable <Boolean>] [-EnableDeltaDownload <Boolean>]
  [-EnableDynamicUpdate <Boolean>] [-EnableInstallation <Boolean>] [-EnableThirdPartyUpdates <Boolean>]
- [-EnforceMandatory <Boolean>] [-Office365ManagementType <Boolean>] [-ScanSchedule <IResultObject>]
- [-ThreadPriority <ThreadPriorityType>] [-TimeUnit <BatchingTimeoutType>] [-DefaultSetting] [-PassThru]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-EnableWsusCertPinning <Boolean>] [-EnforceMandatory <Boolean>] [-Office365ManagementType <Boolean>]
+ [-ScanSchedule <IResultObject>] [-ThreadPriority <ThreadPriorityType>] [-TimeUnit <BatchingTimeoutType>]
+ [-DefaultSetting] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### SetCustomSettingByValue
@@ -40,9 +42,10 @@ Set-CMClientSettingSoftwareUpdate [-BatchingTimeout <Int32>] [-DeltaDownloadPort
 Set-CMClientSettingSoftwareUpdate [-BatchingTimeout <Int32>] [-DeltaDownloadPort <Int32>]
  [-DeploymentEvaluationSchedule <IResultObject>] [-Enable <Boolean>] [-EnableDeltaDownload <Boolean>]
  [-EnableDynamicUpdate <Boolean>] [-EnableInstallation <Boolean>] [-EnableThirdPartyUpdates <Boolean>]
- [-EnforceMandatory <Boolean>] [-Office365ManagementType <Boolean>] [-ScanSchedule <IResultObject>]
- [-ThreadPriority <ThreadPriorityType>] [-TimeUnit <BatchingTimeoutType>] -InputObject <IResultObject>
- [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-EnableWsusCertPinning <Boolean>] [-EnforceMandatory <Boolean>] [-Office365ManagementType <Boolean>]
+ [-ScanSchedule <IResultObject>] [-ThreadPriority <ThreadPriorityType>] [-TimeUnit <BatchingTimeoutType>]
+ -InputObject <IResultObject> [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -417,13 +420,27 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -EnableWsusCertPinning
+{{ Fill EnableWsusCertPinning Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
-
 ## OUTPUTS
 
 ### System.Object

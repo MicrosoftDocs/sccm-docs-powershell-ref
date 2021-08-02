@@ -1,4 +1,4 @@
----
+﻿---
 description: Converts the deployment type of a Configuration Manager deployment application.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -99,7 +99,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### System.Management.Automation.PSObject
-
 ## OUTPUTS
 
 ### System.Object

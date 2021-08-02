@@ -174,10 +174,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.PowerShell.Cmdlets.HS.Types.ExchangeConnector
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

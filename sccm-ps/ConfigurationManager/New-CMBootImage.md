@@ -188,11 +188,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
-
 ## OUTPUTS
 
 ### IResultObject#SMS_BootImagePackage
-
 ## NOTES
 
 For more information on this return object and its properties, see [SMS_BootImagePackage server WMI class](/mem/configmgr/develop/reference/osd/sms_bootimagepackage-server-wmi-class).

@@ -431,11 +431,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
-
 ## OUTPUTS
 
 ### IResultObject#SMS_ApplicationGroup
-
 ## NOTES
 
 This cmdlet returns the **SMS_ApplicationGroup** WMI class object.

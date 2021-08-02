@@ -194,11 +194,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
-
 ## OUTPUTS
 
 ### IResultObject#SMS_BoundaryGroup
-
 ## NOTES
 
 ## RELATED LINKS

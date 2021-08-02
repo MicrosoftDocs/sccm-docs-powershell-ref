@@ -1,4 +1,4 @@
----
+﻿---
 description: Gets Configuration Manager configuration items.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -144,7 +144,7 @@ Required: False
 Position: 0
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### CommonParameters
@@ -153,13 +153,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
-
 ## OUTPUTS
 
 ### IResultObject[]#SMS_ConfigurationItemLatest
-
 ### IResultObject#SMS_ConfigurationItemLatest
-
 ## NOTES
 
 ## RELATED LINKS
