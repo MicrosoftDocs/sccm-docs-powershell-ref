@@ -636,17 +636,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
-
 ## OUTPUTS
 
 ### IResultObject#SMS_Site
-
 ### IResultObject#SMS_SCI_SiteDefinition
-
 ### IResultObject#SMS_SCI_SysResUse
-
 ### IResultObject[]#SMS_SCI_Address
-
 ## NOTES
 
 ## RELATED LINKS

@@ -361,11 +361,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
-
 ## OUTPUTS
 
 ### IResultObject#SMS_TaskSequence_ApplyWindowsSettingsAction
-
 ## NOTES
 
 ## RELATED LINKS

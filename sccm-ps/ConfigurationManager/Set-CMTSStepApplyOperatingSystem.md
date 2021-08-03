@@ -15,26 +15,27 @@ schema: 2.0.0
 ### ByValue (Default)
 ```
 Set-CMTSStepApplyOperatingSystem [-ConfigFileName <String>] [-ConfigFilePackage <IResultObject>]
- [-Destination <DestinationType>] [-DestinationDisk <Int32>] [-DestinationDriveLetter <String>]
- [-DestinationPartition <Int32>] [-DestinationVariable <String>] [-ImagePackage <IResultObject>]
- [-ImagePackageIndex <Int32>] [-InstallPackage <IResultObject>] [-InstallPackageIndex <Int32>]
- [-RunFromNet <Boolean>] [-AddCondition <IResultObject[]>] [-ClearCondition] [-Description <String>]
- -InputObject <IResultObject> [-IsContinueOnError <Boolean>] [-IsEnabled <Boolean>] [-MoveToIndex <Int32>]
- [-NewStepName <String>] [-RemoveConditionFile] [-RemoveConditionFolder] [-RemoveConditionIfStatement]
- [-RemoveConditionOperatingSystem] [-RemoveConditionQueryWmi] [-RemoveConditionRegistry]
- [-RemoveConditionSoftware] [-RemoveConditionVariable] [-StepName <String>] [-StepOrder <ReorderType>]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-LayeredDriver <OsdLayeredDriver>] [-Destination <DestinationType>] [-DestinationDisk <Int32>]
+ [-DestinationDriveLetter <String>] [-DestinationPartition <Int32>] [-DestinationVariable <String>]
+ [-ImagePackage <IResultObject>] [-ImagePackageIndex <Int32>] [-InstallPackage <IResultObject>]
+ [-InstallPackageIndex <Int32>] [-RunFromNet <Boolean>] [-AddCondition <IResultObject[]>] [-ClearCondition]
+ [-Description <String>] -InputObject <IResultObject> [-IsContinueOnError <Boolean>] [-IsEnabled <Boolean>]
+ [-MoveToIndex <Int32>] [-NewStepName <String>] [-RemoveConditionFile] [-RemoveConditionFolder]
+ [-RemoveConditionIfStatement] [-RemoveConditionOperatingSystem] [-RemoveConditionQueryWmi]
+ [-RemoveConditionRegistry] [-RemoveConditionSoftware] [-RemoveConditionVariable] [-StepName <String>]
+ [-StepOrder <ReorderType>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### ById
 ```
 Set-CMTSStepApplyOperatingSystem [-ConfigFileName <String>] [-ConfigFilePackage <IResultObject>]
- [-Destination <DestinationType>] [-DestinationDisk <Int32>] [-DestinationDriveLetter <String>]
- [-DestinationPartition <Int32>] [-DestinationVariable <String>] [-ImagePackage <IResultObject>]
- [-ImagePackageIndex <Int32>] [-InstallPackage <IResultObject>] [-InstallPackageIndex <Int32>]
- [-RunFromNet <Boolean>] [-AddCondition <IResultObject[]>] [-ClearCondition] [-Description <String>]
- [-IsContinueOnError <Boolean>] [-IsEnabled <Boolean>] [-MoveToIndex <Int32>] [-NewStepName <String>]
- [-RemoveConditionFile] [-RemoveConditionFolder] [-RemoveConditionIfStatement]
+ [-LayeredDriver <OsdLayeredDriver>] [-Destination <DestinationType>] [-DestinationDisk <Int32>]
+ [-DestinationDriveLetter <String>] [-DestinationPartition <Int32>] [-DestinationVariable <String>]
+ [-ImagePackage <IResultObject>] [-ImagePackageIndex <Int32>] [-InstallPackage <IResultObject>]
+ [-InstallPackageIndex <Int32>] [-RunFromNet <Boolean>] [-AddCondition <IResultObject[]>] [-ClearCondition]
+ [-Description <String>] [-IsContinueOnError <Boolean>] [-IsEnabled <Boolean>] [-MoveToIndex <Int32>]
+ [-NewStepName <String>] [-RemoveConditionFile] [-RemoveConditionFolder] [-RemoveConditionIfStatement]
  [-RemoveConditionOperatingSystem] [-RemoveConditionQueryWmi] [-RemoveConditionRegistry]
  [-RemoveConditionSoftware] [-RemoveConditionVariable] [-StepName <String>] [-StepOrder <ReorderType>]
  -TaskSequenceId <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
@@ -44,12 +45,12 @@ Set-CMTSStepApplyOperatingSystem [-ConfigFileName <String>] [-ConfigFilePackage 
 ### ByName
 ```
 Set-CMTSStepApplyOperatingSystem [-ConfigFileName <String>] [-ConfigFilePackage <IResultObject>]
- [-Destination <DestinationType>] [-DestinationDisk <Int32>] [-DestinationDriveLetter <String>]
- [-DestinationPartition <Int32>] [-DestinationVariable <String>] [-ImagePackage <IResultObject>]
- [-ImagePackageIndex <Int32>] [-InstallPackage <IResultObject>] [-InstallPackageIndex <Int32>]
- [-RunFromNet <Boolean>] [-AddCondition <IResultObject[]>] [-ClearCondition] [-Description <String>]
- [-IsContinueOnError <Boolean>] [-IsEnabled <Boolean>] [-MoveToIndex <Int32>] [-NewStepName <String>]
- [-RemoveConditionFile] [-RemoveConditionFolder] [-RemoveConditionIfStatement]
+ [-LayeredDriver <OsdLayeredDriver>] [-Destination <DestinationType>] [-DestinationDisk <Int32>]
+ [-DestinationDriveLetter <String>] [-DestinationPartition <Int32>] [-DestinationVariable <String>]
+ [-ImagePackage <IResultObject>] [-ImagePackageIndex <Int32>] [-InstallPackage <IResultObject>]
+ [-InstallPackageIndex <Int32>] [-RunFromNet <Boolean>] [-AddCondition <IResultObject[]>] [-ClearCondition]
+ [-Description <String>] [-IsContinueOnError <Boolean>] [-IsEnabled <Boolean>] [-MoveToIndex <Int32>]
+ [-NewStepName <String>] [-RemoveConditionFile] [-RemoveConditionFolder] [-RemoveConditionIfStatement]
  [-RemoveConditionOperatingSystem] [-RemoveConditionQueryWmi] [-RemoveConditionRegistry]
  [-RemoveConditionSoftware] [-RemoveConditionVariable] [-StepName <String>] [-StepOrder <ReorderType>]
  -TaskSequenceName <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
@@ -1280,13 +1281,27 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -LayeredDriver
+{{ Fill LayeredDriver Description }}
+
+```yaml
+Type: OsdLayeredDriver
+Parameter Sets: ByValue, ById, ByName
+Aliases: KeyboardDriver
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
-
 ## OUTPUTS
 
 ### System.Object

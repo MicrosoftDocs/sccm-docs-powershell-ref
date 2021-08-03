@@ -111,13 +111,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
-
 ## OUTPUTS
 
 ### IResultObject[]#SMS_SecondarySiteStatus
-
 ### IResultObject#SMS_SecondarySiteStatus
-
 ## NOTES
 
 ## RELATED LINKS

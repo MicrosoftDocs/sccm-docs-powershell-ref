@@ -360,6 +360,9 @@ Accept wildcard characters: False
 ```
 
 ### -SelectWebsitePoint
+
+Don't use this parameter. The application catalog is no longer supported.
+
 ```yaml
 Type: ApplicationCatalogWebsitePointType
 Parameter Sets: (All)
@@ -448,7 +451,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
-
 ## OUTPUTS
 
 ### System.Object

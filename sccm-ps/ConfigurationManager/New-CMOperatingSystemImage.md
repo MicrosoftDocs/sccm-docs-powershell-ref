@@ -190,11 +190,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
-
 ## OUTPUTS
 
 ### IResultObject#SMS_ImagePackage
-
 ## NOTES
 
 For more information on this return object and its properties, see [SMS_ImagePackage server WMI class](/mem/configmgr/develop/reference/osd/sms_imagepackage-server-wmi-class).

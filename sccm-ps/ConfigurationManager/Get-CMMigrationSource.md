@@ -70,13 +70,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
-
 ## OUTPUTS
 
 ### IResultObject[]#SMS_MigrationSiteMapping
-
 ### IResultObject#SMS_MigrationSiteMapping
-
 ## NOTES
 
 ## RELATED LINKS

@@ -149,11 +149,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
-
 ## OUTPUTS
 
 ### IResultObject[]#SMS_ObjectContentExtraInfo, IResultObject#SMS_ObjectContentExtraInfo
-
 ## NOTES
 
 For more information on this return object and its properties, see [SMS_ObjectContentExtraInfo server WMI class](/mem/configmgr/develop/reference/core/servers/console/sms_objectcontentextrainfo-server-wmi-class).

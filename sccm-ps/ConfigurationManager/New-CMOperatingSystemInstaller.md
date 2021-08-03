@@ -190,11 +190,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
-
 ## OUTPUTS
 
 ### IResultObject#SMS_OperatingSystemInstallPackage
-
 ## NOTES
 
 For more information on this return object and its properties, see [SMS_OperatingSystemInstallPackage server WMI class](/mem/configmgr/develop/reference/osd/sms_operatingsysteminstallpackage-server-wmi-class).

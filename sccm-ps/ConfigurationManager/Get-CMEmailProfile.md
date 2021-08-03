@@ -1,6 +1,6 @@
----
+﻿---
 description: Gets an email profile.
-external help file: AdminUI.PS.psm1-Help.xml
+external help file: AdminUI.PS.psm1-help.xml
 Module Name: ConfigurationManager
 ms.date: 05/02/2019
 schema: 2.0.0
@@ -106,7 +106,7 @@ Required: True
 Position: 0
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### CommonParameters
@@ -115,7 +115,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
-
 ## OUTPUTS
 
 ### System.Object

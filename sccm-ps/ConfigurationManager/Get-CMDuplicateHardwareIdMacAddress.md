@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 03/25/2021
@@ -112,13 +112,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
-
 ## OUTPUTS
 
 ### IResultObject[]#SMS_CommonMacAddresses
-
 ### IResultObject#SMS_CommonMacAddresses
-
 ## NOTES
 
 This cmdlet returns the **SMS_CommonMacAddresses** WMI class object.

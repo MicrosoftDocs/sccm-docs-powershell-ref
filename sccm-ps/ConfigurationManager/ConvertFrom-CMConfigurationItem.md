@@ -1,4 +1,4 @@
----
+﻿---
 description:
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -85,11 +85,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.DesiredConfigurationManagement.ConfigurationItem
-
 ## OUTPUTS
 
 ### System.String
-
 ## NOTES
 
 ## RELATED LINKS

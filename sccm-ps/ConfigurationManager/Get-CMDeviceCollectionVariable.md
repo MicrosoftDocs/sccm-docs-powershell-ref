@@ -148,13 +148,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
-
 ## OUTPUTS
 
 ### IResultObject[]#SMS_CollectionVariable
-
 ### IResultObject#SMS_CollectionVariable
-
 ## NOTES
 
 ## RELATED LINKS

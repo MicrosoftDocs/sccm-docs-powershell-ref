@@ -96,7 +96,7 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### CommonParameters
@@ -105,13 +105,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
-
 ## OUTPUTS
 
 ### IResultObject[]#SMS_MDMDeviceCategory
-
 ### IResultObject#SMS_MDMDeviceCategory
-
 ## NOTES
 
 ## RELATED LINKS

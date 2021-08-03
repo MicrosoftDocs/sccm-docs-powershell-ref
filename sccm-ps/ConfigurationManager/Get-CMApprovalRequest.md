@@ -1,4 +1,4 @@
----
+﻿---
 description: Gets an approval request to allow the installation of a Configuration Manager application.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -229,13 +229,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
-
 ## OUTPUTS
 
 ### IResultObject[]#SMS_UserApplicationRequest
-
 ### IResultObject#SMS_UserApplicationRequest
-
 ## NOTES
 
 ## RELATED LINKS

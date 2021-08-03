@@ -15,10 +15,11 @@ schema: 2.0.0
 ```
 New-CMTSStepApplyOperatingSystem [-ConfigFileName <String>] [-ConfigFilePackage <IResultObject>]
  [-Destination <DestinationType>] [-DestinationDisk <Int32>] [-DestinationDriveLetter <String>]
- [-DestinationPartition <Int32>] [-DestinationVariable <String>] [-ImagePackage <IResultObject>]
- [-ImagePackageIndex <Int32>] [-InstallPackage <IResultObject>] [-InstallPackageIndex <Int32>]
- [-RunFromNet <Boolean>] [-Condition <IResultObject[]>] [-ContinueOnError] [-Description <String>] [-Disable]
- -Name <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-LayeredDriver <OsdLayeredDriver>] [-DestinationPartition <Int32>] [-DestinationVariable <String>]
+ [-ImagePackage <IResultObject>] [-ImagePackageIndex <Int32>] [-InstallPackage <IResultObject>]
+ [-InstallPackageIndex <Int32>] [-RunFromNet <Boolean>] [-Condition <IResultObject[]>] [-ContinueOnError]
+ [-Description <String>] [-Disable] -Name <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -355,17 +356,30 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -LayeredDriver
+{{ Fill LayeredDriver Description }}
+
+```yaml
+Type: OsdLayeredDriver
+Parameter Sets: (All)
+Aliases: KeyboardDriver
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### None
-
 ## OUTPUTS
 
 ### IResultObject#SMS_TaskSequence_ApplyOperatingSystemAction
-
 ## NOTES
 
 ## RELATED LINKS

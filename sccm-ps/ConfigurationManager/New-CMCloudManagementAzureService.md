@@ -355,11 +355,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
-
 ## OUTPUTS
 
 ### IResultObject#SMS_Azure_CloudService
-
 ## NOTES
 
 You can't enable Azure AD group sync when you create the service. To enable group sync, use the [Set-CMCloudManagementAzureService](Set-CMCloudManagementAzureService.md) cmdlet with the **EnableAADGroupSync** parameter.

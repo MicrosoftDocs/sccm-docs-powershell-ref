@@ -314,11 +314,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
-
 ## OUTPUTS
 
 ### IResultObject#SMS_ServiceWindow
-
 ## NOTES
 
 For more information on this return object and its properties, see [SMS_ServiceWindow server WMI class](/mem/configmgr/develop/reference/core/servers/configure/sms_servicewindow-server-wmi-class).

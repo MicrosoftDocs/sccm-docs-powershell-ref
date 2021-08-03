@@ -125,13 +125,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
-
 ## OUTPUTS
 
 ### IResultObject[]#SMS_SCI_Component
-
 ### IResultObject#SMS_SCI_Component
-
 ## NOTES
 
 ## RELATED LINKS

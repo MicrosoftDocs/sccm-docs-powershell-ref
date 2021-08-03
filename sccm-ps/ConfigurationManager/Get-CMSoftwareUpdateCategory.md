@@ -186,7 +186,7 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -TypeName
@@ -207,7 +207,7 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -UniqueId
@@ -232,13 +232,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
-
 ## OUTPUTS
 
 ### IResultObject[]#SMS_UpdateCategoryInstance
-
 ### IResultObject#SMS_UpdateCategoryInstance
-
 ## NOTES
 
 For more information on this return object and its properties, see [SMS_UpdateCategoryInstance server WMI class](/mem/configmgr/develop/reference/sum/sms_updatecategoryinstance-server-wmi-class).

@@ -247,13 +247,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
-
 ## OUTPUTS
 
 ### IResultObject#SMS_PhasedDeployment
-
 ### IResultObject[]#SMS_PhasedDeployment
-
 ## NOTES
 
 ## RELATED LINKS

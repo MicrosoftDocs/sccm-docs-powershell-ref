@@ -85,7 +85,7 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -SiteCode
@@ -109,13 +109,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
-
 ## OUTPUTS
 
 ### IResultObject[]#SMS_SCI_SCPropertyList
-
 ### IResultObject#SMS_SCI_SCPropertyList
-
 ## NOTES
 
 ## RELATED LINKS

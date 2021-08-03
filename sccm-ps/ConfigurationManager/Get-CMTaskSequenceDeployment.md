@@ -115,7 +115,7 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -DeploymentId
@@ -213,7 +213,7 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -Summary
@@ -254,17 +254,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
-
 ## OUTPUTS
 
 ### IResultObject[]#SMS_DeploymentSummary
-
 ### IResultObject#SMS_DeploymentSummary
-
 ### IResultObject[]#SMS_Advertisement
-
 ### IResultObject#SMS_Advertisement
-
 ## NOTES
 
 For more information on these return objects and their properties, see the following articles:

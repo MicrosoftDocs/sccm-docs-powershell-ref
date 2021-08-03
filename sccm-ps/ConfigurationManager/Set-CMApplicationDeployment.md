@@ -17,12 +17,12 @@ Configure an application deployment
 
 ### SetApplicationDeploymentByValueMandatory (Default)
 ```
-Set-CMApplicationDeployment [-AllowRepairApp <Boolean>] [-AvailableDateTime <DateTime>] [-Comment <String>]
- [-CreateAlertBaseOnPercentFailure <Boolean>] [-CreateAlertBaseOnPercentSuccess <Boolean>]
- [-DeadlineDateTime <DateTime>] [-EnableMomAlert <Boolean>] [-EnableSoftDeadline <Boolean>]
- [-FailParameterValue <Int32>] -InputObject <IResultObject> [-OverrideServiceWindow <Boolean>]
- [-PersistOnWriteFilterDevice <Boolean>] [-PostponeDateTime <DateTime>] [-PreDeploy <Boolean>]
- [-RaiseMomAlertsOnFailure <Boolean>] [-RebootOutsideServiceWindow <Boolean>]
+Set-CMApplicationDeployment [-AllowRepairApp <Boolean>] [-AutoCloseExecutable <Boolean>]
+ [-AvailableDateTime <DateTime>] [-Comment <String>] [-CreateAlertBaseOnPercentFailure <Boolean>]
+ [-CreateAlertBaseOnPercentSuccess <Boolean>] [-DeadlineDateTime <DateTime>] [-EnableMomAlert <Boolean>]
+ [-EnableSoftDeadline <Boolean>] [-FailParameterValue <Int32>] -InputObject <IResultObject>
+ [-OverrideServiceWindow <Boolean>] [-PersistOnWriteFilterDevice <Boolean>] [-PostponeDateTime <DateTime>]
+ [-PreDeploy <Boolean>] [-RaiseMomAlertsOnFailure <Boolean>] [-RebootOutsideServiceWindow <Boolean>]
  [-ReplaceToastNotificationWithDialog <Boolean>] [-RequireApproval <Boolean>] [-SendWakeUpPacket <Boolean>]
  [-SuccessParameterValue <Int32>] [-TimeBaseOn <TimeType>] [-UseMeteredNetwork <Boolean>]
  [-UserNotification <UserNotificationType>] [-PassThru] [-Collection <IResultObject>] [-CollectionId <String>]
@@ -32,8 +32,9 @@ Set-CMApplicationDeployment [-AllowRepairApp <Boolean>] [-AvailableDateTime <Dat
 
 ### SetApplicationDeploymentByIdMandatory
 ```
-Set-CMApplicationDeployment [-AllowRepairApp <Boolean>] -ApplicationId <String> [-AvailableDateTime <DateTime>]
- [-Comment <String>] [-CreateAlertBaseOnPercentFailure <Boolean>] [-CreateAlertBaseOnPercentSuccess <Boolean>]
+Set-CMApplicationDeployment [-AllowRepairApp <Boolean>] -ApplicationId <String>
+ [-AutoCloseExecutable <Boolean>] [-AvailableDateTime <DateTime>] [-Comment <String>]
+ [-CreateAlertBaseOnPercentFailure <Boolean>] [-CreateAlertBaseOnPercentSuccess <Boolean>]
  [-DeadlineDateTime <DateTime>] [-EnableMomAlert <Boolean>] [-EnableSoftDeadline <Boolean>]
  [-FailParameterValue <Int32>] [-OverrideServiceWindow <Boolean>] [-PersistOnWriteFilterDevice <Boolean>]
  [-PostponeDateTime <DateTime>] [-PreDeploy <Boolean>] [-RaiseMomAlertsOnFailure <Boolean>]
@@ -47,16 +48,16 @@ Set-CMApplicationDeployment [-AllowRepairApp <Boolean>] -ApplicationId <String> 
 ### SetApplicationDeploymentByNameMandatory
 ```
 Set-CMApplicationDeployment [-AllowRepairApp <Boolean>] -ApplicationName <String>
- [-AvailableDateTime <DateTime>] [-Comment <String>] [-CreateAlertBaseOnPercentFailure <Boolean>]
- [-CreateAlertBaseOnPercentSuccess <Boolean>] [-DeadlineDateTime <DateTime>] [-EnableMomAlert <Boolean>]
- [-EnableSoftDeadline <Boolean>] [-FailParameterValue <Int32>] [-OverrideServiceWindow <Boolean>]
- [-PersistOnWriteFilterDevice <Boolean>] [-PostponeDateTime <DateTime>] [-PreDeploy <Boolean>]
- [-RaiseMomAlertsOnFailure <Boolean>] [-RebootOutsideServiceWindow <Boolean>]
- [-ReplaceToastNotificationWithDialog <Boolean>] [-RequireApproval <Boolean>] [-SendWakeUpPacket <Boolean>]
- [-SuccessParameterValue <Int32>] [-TimeBaseOn <TimeType>] [-UseMeteredNetwork <Boolean>]
- [-UserNotification <UserNotificationType>] [-PassThru] [-Collection <IResultObject>] [-CollectionId <String>]
- [-CollectionName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-AutoCloseExecutable <Boolean>] [-AvailableDateTime <DateTime>] [-Comment <String>]
+ [-CreateAlertBaseOnPercentFailure <Boolean>] [-CreateAlertBaseOnPercentSuccess <Boolean>]
+ [-DeadlineDateTime <DateTime>] [-EnableMomAlert <Boolean>] [-EnableSoftDeadline <Boolean>]
+ [-FailParameterValue <Int32>] [-OverrideServiceWindow <Boolean>] [-PersistOnWriteFilterDevice <Boolean>]
+ [-PostponeDateTime <DateTime>] [-PreDeploy <Boolean>] [-RaiseMomAlertsOnFailure <Boolean>]
+ [-RebootOutsideServiceWindow <Boolean>] [-ReplaceToastNotificationWithDialog <Boolean>]
+ [-RequireApproval <Boolean>] [-SendWakeUpPacket <Boolean>] [-SuccessParameterValue <Int32>]
+ [-TimeBaseOn <TimeType>] [-UseMeteredNetwork <Boolean>] [-UserNotification <UserNotificationType>] [-PassThru]
+ [-Collection <IResultObject>] [-CollectionId <String>] [-CollectionName <String>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -188,7 +189,7 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -Comment
@@ -637,17 +638,30 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -AutoCloseExecutable
+{{ Fill AutoCloseExecutable Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: AutoCloseExeOnInstallBehavior
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
-
 ## OUTPUTS
 
 ### IResultObject#SMS_ApplicationAssignment
-
 ## NOTES
 
 For more information on this return object and its properties, see [SMS_ApplicationAssignment server WMI class](/mem/configmgr/develop/reference/apps/sms_applicationassignment-server-wmi-class).
@@ -661,7 +675,5 @@ For more information on this return object and its properties, see [SMS_Applicat
 [New-CMApplicationDeployment](New-CMApplicationDeployment.md)
 
 [Remove-CMApplicationDeployment](Remove-CMApplicationDeployment.md)
-
-[Start-CMApplicationDeploymentSimulation](Start-CMApplicationDeploymentSimulation.md)
 
 [Deploy applications with Configuration Manager](/mem/configmgr/apps/deploy-use/deploy-applications)

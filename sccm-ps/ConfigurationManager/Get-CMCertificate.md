@@ -170,13 +170,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
-
 ## OUTPUTS
 
 ### IResultObject[]#SMS_Certificate
-
 ### IResultObject#SMS_Certificate
-
 ## NOTES
 
 ## RELATED LINKS

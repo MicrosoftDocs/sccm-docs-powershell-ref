@@ -1,11 +1,10 @@
 ---
 title: Configuration Manager PowerShell cmdlets
 description: Manage your Configuration Manager hierarchy using Windows PowerShell. 
-ms.date: 06/09/2021
+ms.date: 07/16/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: overview
-ms.assetid: 63712bbf-0f8a-4cdb-8998-e7d41257981e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
@@ -99,7 +98,7 @@ Starting in version 2010, to get the latest information for the Configuration Ma
 The computer on which you run this cmdlet needs internet access, specifically `pshelpprod.blob.core.windows.net`. Then run the following command from an elevated PowerShell session:
 
 ```powershell
-Update-Help –Module ConfigurationManager
+Update-Help -Module ConfigurationManager
 ```
 
 After you update the Configuration Manager cmdlet help, you can get help about the cmdlets by using the [Get-Help](/powershell/module/microsoft.powershell.core/get-help) cmdlet. For example:
@@ -111,20 +110,6 @@ Get-Help Get-CMDevice -Parameter *
 ```
 
 For more information, see the following PowerShell blog post: [You've got Help!](https://devblogs.microsoft.com/powershell/youve-got-help/).
-
-<!--
-### Known issue with updateable help
-
-<!--9129926
-
-For a set of cmdlets, Get-Help can't find the help files on the computer and only displays partial help. This issue affects all cmdlets in "C:\Program Files (x86)\Microsoft Endpoint Manager\AdminConsole\bin\AdminUI.PS.psm1" like **Add-CMDeviceCollectionExcludeMembershipRule** and **Get-CMTSStepApplyDataImage**.
-
-This issue is because the help file is incorrectly named. To work around this issue, run PowerShell as an administrator, and run the following command:
-
-```powershell
-Rename-Item -Path "C:\Program Files (x86)\Microsoft Endpoint Manager\AdminConsole\bin\en-US\AdminUI.PS-help.xml" -NewName "AdminUI.PS.psm1-help.xml" -Force
-```
--->
 
 ## Common parameters
 
@@ -202,9 +187,7 @@ When you send a frown, include the following additional information specific to 
 
 ## Preview release notes
 
-Starting with technical preview branch version 2012, the technical preview features article in the core documentation library includes release notes for PowerShell.
-
-- [Technical preview version 2012](/mem/configmgr/core/get-started/2020/technical-preview-2012#bkmk_powershell)
+The technical preview features article in the core documentation library includes release notes for PowerShell. For example, see [Technical preview version 2106](/mem/configmgr/core/get-started/2021/technical-preview-2106#bkmk_powershell).
 
 ## Next steps
 

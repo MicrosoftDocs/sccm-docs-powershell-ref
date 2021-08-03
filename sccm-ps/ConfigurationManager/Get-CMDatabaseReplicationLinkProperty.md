@@ -110,13 +110,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
-
 ## OUTPUTS
 
 ### Dictionary<string, object>
-
 ### IResultObject#SMS_Alert
-
 ## NOTES
 
 ## RELATED LINKS

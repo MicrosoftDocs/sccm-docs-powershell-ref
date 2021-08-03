@@ -10,7 +10,7 @@ title: Start-CMClientSettingDeployment
 # Start-CMClientSettingDeployment
 
 ## SYNOPSIS
-Deploys client settings to devices in a collection.
+(Deprecated) Deploys client settings to devices in a collection.
 
 ## SYNTAX
 
@@ -75,8 +75,8 @@ Specify the collection to apply the settings to by using its name or ID, or you 
 
 For more information about client settings, see [About Client Settings in Configuration Manager](/mem/configmgr/core/clients/deploy/about-client-settings).
 
-> [!NOTE]
-> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
+> [!IMPORTANT]
+> Starting in version 2107, this cmdlet is deprecated and may be removed in a future release. Instead use the [New-CMClientSettingDeployment](New-CMClientSettingDeployment.md) cmdlet.
 
 ## EXAMPLES
 
@@ -263,7 +263,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
-
 ## OUTPUTS
 
 ### System.Object

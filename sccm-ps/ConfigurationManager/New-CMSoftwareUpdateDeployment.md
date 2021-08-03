@@ -18,7 +18,7 @@ Create a software update deployment.
 ### DeploySoftwareUpdateByValue (Default)
 ```
 New-CMSoftwareUpdateDeployment [-AcceptEula] [-AllowRestart <Boolean>] [-DeploymentName <String>]
- [-DeploymentType <DeploymentType>] [-Description <String>] [-DisableOperationsManagerAlert <Boolean>]
+ [-DeploymentType <DeploymentType>] [-Comment <String>] [-DisableOperationsManagerAlert <Boolean>]
  [-DownloadFromMicrosoftUpdate <Boolean>] [-GenerateOperationsManagerAlert <Boolean>]
  [-GenerateSuccessAlert <Boolean>] -InputObject <IResultObject> [-PercentSuccess <Int32>]
  [-ProtectedType <ProtectedType>] [-DeployWithNoPackage <Boolean>] [-RequirePostRebootFullScan <Boolean>]
@@ -27,17 +27,16 @@ New-CMSoftwareUpdateDeployment [-AcceptEula] [-AllowRestart <Boolean>] [-Deploym
  [-TimeUnit <TimeUnitType>] [-TimeValue <Int32>] [-UnprotectedType <UnprotectedType>]
  [-UseBranchCache <Boolean>] [-UserNotification <UserNotificationType>] [-VerbosityLevel <VerbosityLevelType>]
  [-DistributeCollectionName <String>] [-DistributeContent] [-DistributionPointGroupName <String>]
- [-DistributionPointName <String>] [-AvailableDateTime <DateTime>] [-Comment <String>]
- [-DeadlineDateTime <DateTime>] [-PersistOnWriteFilterDevice <Boolean>] [-SendWakeupPacket <Boolean>]
- [-UseMeteredNetwork <Boolean>] [-Collection <IResultObject>] [-CollectionId <String>]
- [-CollectionName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-DistributionPointName <String>] [-AvailableDateTime <DateTime>] [-DeadlineDateTime <DateTime>]
+ [-PersistOnWriteFilterDevice <Boolean>] [-SendWakeupPacket <Boolean>] [-UseMeteredNetwork <Boolean>]
+ [-Collection <IResultObject>] [-CollectionId <String>] [-CollectionName <String>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### DeploySoftwareUpdateGroupById
 ```
 New-CMSoftwareUpdateDeployment [-AcceptEula] [-AllowRestart <Boolean>] [-DeploymentName <String>]
- [-DeploymentType <DeploymentType>] [-Description <String>] [-DisableOperationsManagerAlert <Boolean>]
+ [-DeploymentType <DeploymentType>] [-Comment <String>] [-DisableOperationsManagerAlert <Boolean>]
  [-DownloadFromMicrosoftUpdate <Boolean>] [-GenerateOperationsManagerAlert <Boolean>]
  [-GenerateSuccessAlert <Boolean>] [-PercentSuccess <Int32>] [-ProtectedType <ProtectedType>]
  [-DeployWithNoPackage <Boolean>] [-RequirePostRebootFullScan <Boolean>] [-RestartServer <Boolean>]
@@ -46,17 +45,16 @@ New-CMSoftwareUpdateDeployment [-AcceptEula] [-AllowRestart <Boolean>] [-Deploym
  [-TimeUnit <TimeUnitType>] [-TimeValue <Int32>] [-UnprotectedType <UnprotectedType>]
  [-UseBranchCache <Boolean>] [-UserNotification <UserNotificationType>] [-VerbosityLevel <VerbosityLevelType>]
  [-DistributeCollectionName <String>] [-DistributeContent] [-DistributionPointGroupName <String>]
- [-DistributionPointName <String>] [-AvailableDateTime <DateTime>] [-Comment <String>]
- [-DeadlineDateTime <DateTime>] [-PersistOnWriteFilterDevice <Boolean>] [-SendWakeupPacket <Boolean>]
- [-UseMeteredNetwork <Boolean>] [-Collection <IResultObject>] [-CollectionId <String>]
- [-CollectionName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-DistributionPointName <String>] [-AvailableDateTime <DateTime>] [-DeadlineDateTime <DateTime>]
+ [-PersistOnWriteFilterDevice <Boolean>] [-SendWakeupPacket <Boolean>] [-UseMeteredNetwork <Boolean>]
+ [-Collection <IResultObject>] [-CollectionId <String>] [-CollectionName <String>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### DeploySoftwareUpdateGroupByName
 ```
 New-CMSoftwareUpdateDeployment [-AcceptEula] [-AllowRestart <Boolean>] [-DeploymentName <String>]
- [-DeploymentType <DeploymentType>] [-Description <String>] [-DisableOperationsManagerAlert <Boolean>]
+ [-DeploymentType <DeploymentType>] [-Comment <String>] [-DisableOperationsManagerAlert <Boolean>]
  [-DownloadFromMicrosoftUpdate <Boolean>] [-GenerateOperationsManagerAlert <Boolean>]
  [-GenerateSuccessAlert <Boolean>] [-PercentSuccess <Int32>] [-ProtectedType <ProtectedType>]
  [-DeployWithNoPackage <Boolean>] [-RequirePostRebootFullScan <Boolean>] [-RestartServer <Boolean>]
@@ -65,17 +63,16 @@ New-CMSoftwareUpdateDeployment [-AcceptEula] [-AllowRestart <Boolean>] [-Deploym
  [-TimeUnit <TimeUnitType>] [-TimeValue <Int32>] [-UnprotectedType <UnprotectedType>]
  [-UseBranchCache <Boolean>] [-UserNotification <UserNotificationType>] [-VerbosityLevel <VerbosityLevelType>]
  [-DistributeCollectionName <String>] [-DistributeContent] [-DistributionPointGroupName <String>]
- [-DistributionPointName <String>] [-AvailableDateTime <DateTime>] [-Comment <String>]
- [-DeadlineDateTime <DateTime>] [-PersistOnWriteFilterDevice <Boolean>] [-SendWakeupPacket <Boolean>]
- [-UseMeteredNetwork <Boolean>] [-Collection <IResultObject>] [-CollectionId <String>]
- [-CollectionName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-DistributionPointName <String>] [-AvailableDateTime <DateTime>] [-DeadlineDateTime <DateTime>]
+ [-PersistOnWriteFilterDevice <Boolean>] [-SendWakeupPacket <Boolean>] [-UseMeteredNetwork <Boolean>]
+ [-Collection <IResultObject>] [-CollectionId <String>] [-CollectionName <String>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### DeploySoftwareUpdateById
 ```
 New-CMSoftwareUpdateDeployment [-AcceptEula] [-AllowRestart <Boolean>] [-DeploymentName <String>]
- [-DeploymentType <DeploymentType>] [-Description <String>] [-DisableOperationsManagerAlert <Boolean>]
+ [-DeploymentType <DeploymentType>] [-Comment <String>] [-DisableOperationsManagerAlert <Boolean>]
  [-DownloadFromMicrosoftUpdate <Boolean>] [-GenerateOperationsManagerAlert <Boolean>]
  [-GenerateSuccessAlert <Boolean>] [-PercentSuccess <Int32>] [-ProtectedType <ProtectedType>]
  [-DeployWithNoPackage <Boolean>] [-RequirePostRebootFullScan <Boolean>] [-RestartServer <Boolean>]
@@ -84,17 +81,16 @@ New-CMSoftwareUpdateDeployment [-AcceptEula] [-AllowRestart <Boolean>] [-Deploym
  [-TimeUnit <TimeUnitType>] [-TimeValue <Int32>] [-UnprotectedType <UnprotectedType>]
  [-UseBranchCache <Boolean>] [-UserNotification <UserNotificationType>] [-VerbosityLevel <VerbosityLevelType>]
  [-DistributeCollectionName <String>] [-DistributeContent] [-DistributionPointGroupName <String>]
- [-DistributionPointName <String>] [-AvailableDateTime <DateTime>] [-Comment <String>]
- [-DeadlineDateTime <DateTime>] [-PersistOnWriteFilterDevice <Boolean>] [-SendWakeupPacket <Boolean>]
- [-UseMeteredNetwork <Boolean>] [-Collection <IResultObject>] [-CollectionId <String>]
- [-CollectionName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-DistributionPointName <String>] [-AvailableDateTime <DateTime>] [-DeadlineDateTime <DateTime>]
+ [-PersistOnWriteFilterDevice <Boolean>] [-SendWakeupPacket <Boolean>] [-UseMeteredNetwork <Boolean>]
+ [-Collection <IResultObject>] [-CollectionId <String>] [-CollectionName <String>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### DeploySoftwareUpdateByName
 ```
 New-CMSoftwareUpdateDeployment [-AcceptEula] [-AllowRestart <Boolean>] [-DeploymentName <String>]
- [-DeploymentType <DeploymentType>] [-Description <String>] [-DisableOperationsManagerAlert <Boolean>]
+ [-DeploymentType <DeploymentType>] [-Comment <String>] [-DisableOperationsManagerAlert <Boolean>]
  [-DownloadFromMicrosoftUpdate <Boolean>] [-GenerateOperationsManagerAlert <Boolean>]
  [-GenerateSuccessAlert <Boolean>] [-PercentSuccess <Int32>] [-ProtectedType <ProtectedType>]
  [-DeployWithNoPackage <Boolean>] [-RequirePostRebootFullScan <Boolean>] [-RestartServer <Boolean>]
@@ -103,11 +99,10 @@ New-CMSoftwareUpdateDeployment [-AcceptEula] [-AllowRestart <Boolean>] [-Deploym
  [-TimeUnit <TimeUnitType>] [-TimeValue <Int32>] [-UnprotectedType <UnprotectedType>]
  [-UseBranchCache <Boolean>] [-UserNotification <UserNotificationType>] [-VerbosityLevel <VerbosityLevelType>]
  [-DistributeCollectionName <String>] [-DistributeContent] [-DistributionPointGroupName <String>]
- [-DistributionPointName <String>] [-AvailableDateTime <DateTime>] [-Comment <String>]
- [-DeadlineDateTime <DateTime>] [-PersistOnWriteFilterDevice <Boolean>] [-SendWakeupPacket <Boolean>]
- [-UseMeteredNetwork <Boolean>] [-Collection <IResultObject>] [-CollectionId <String>]
- [-CollectionName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-DistributionPointName <String>] [-AvailableDateTime <DateTime>] [-DeadlineDateTime <DateTime>]
+ [-PersistOnWriteFilterDevice <Boolean>] [-SendWakeupPacket <Boolean>] [-UseMeteredNetwork <Boolean>]
+ [-Collection <IResultObject>] [-CollectionId <String>] [-CollectionName <String>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -220,7 +215,7 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -Comment
@@ -230,7 +225,7 @@ Specify an optional description for the software update deployment.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: Description
 
 Required: False
 Position: Named
@@ -312,22 +307,6 @@ Type: DeploymentType
 Parameter Sets: (All)
 Aliases:
 Accepted values: Required, Available
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Description
-
-Specify an optional description for the software update deployment.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
 
 Required: False
 Position: Named
@@ -897,7 +876,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
-
 ## OUTPUTS
 
 ### System.Object

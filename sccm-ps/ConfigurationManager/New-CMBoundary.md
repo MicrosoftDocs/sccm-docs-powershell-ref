@@ -189,11 +189,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
-
 ## OUTPUTS
 
 ### IResultObject#SMS_Boundary
-
 ## NOTES
 
 For more information on this return object and its properties, see [SMS_Boundary server WMI class](/mem/configmgr/develop/reference/core/servers/configure/sms_boundary-server-wmi-class).

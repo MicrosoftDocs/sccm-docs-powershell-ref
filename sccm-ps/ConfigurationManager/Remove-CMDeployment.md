@@ -37,7 +37,7 @@ The **Remove-CMDeployment** cmdlet removes an application deployment from Config
 
 When you remove an application deployment, Configuration Manager does not remove instances of the application that it has already installed.
 To remove these applications, you must deploy the application to computers with the action Uninstall.
-If you delete an application deployment, or remove a resource from the collection you are deploying to, the application will no longer be visible in Software Center or the Application Catalog.
+If you delete an application deployment, or remove a resource from the collection you are deploying to, the application will no longer be visible in Software Center.
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
@@ -96,7 +96,7 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -Confirm
@@ -214,7 +214,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
-
 ## OUTPUTS
 
 ### System.Object

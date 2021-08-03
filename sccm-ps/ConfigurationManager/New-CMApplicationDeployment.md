@@ -18,12 +18,12 @@ Create an application deployment.
 ### SearchByValueMandatory (Default)
 ```
 New-CMApplicationDeployment [-AllowRepairApp <Boolean>] [-ApprovalRequired <Boolean>]
- [-DeadlineDateTime <DateTime>] [-DeployAction <DeployActionType>] [-DeployPurpose <DeployPurposeType>]
- [-DisableContentDependencyDetection] [-EnableMomAlert <Boolean>] [-EnableSoftDeadline <Boolean>]
- [-FailParameterValue <Int32>] [-GenerateScomAlertOnFailure <Boolean>] [-InputObject] <IResultObject>
- [-OverrideServiceWindow <Boolean>] [-PostponeDateTime <DateTime>] [-PreDeploy <Boolean>]
- [-RebootOutsideServiceWindow <Boolean>] [-ReplaceToastNotificationWithDialog <Boolean>] [-Simulation]
- [-SuccessParameterValue <Int32>] [-TimeBaseOn <TimeType>] [-UpdateSupersedence <Boolean>]
+ [-AutoCloseExecutable <Boolean>] [-DeadlineDateTime <DateTime>] [-DeployAction <DeployActionType>]
+ [-DeployPurpose <DeployPurposeType>] [-DisableContentDependencyDetection] [-EnableMomAlert <Boolean>]
+ [-EnableSoftDeadline <Boolean>] [-FailParameterValue <Int32>] [-GenerateScomAlertOnFailure <Boolean>]
+ [-InputObject] <IResultObject> [-OverrideServiceWindow <Boolean>] [-PostponeDateTime <DateTime>]
+ [-PreDeploy <Boolean>] [-RebootOutsideServiceWindow <Boolean>] [-ReplaceToastNotificationWithDialog <Boolean>]
+ [-Simulation] [-SuccessParameterValue <Int32>] [-TimeBaseOn <TimeType>] [-UpdateSupersedence <Boolean>]
  [-UserNotification <UserNotificationType>] [-DistributeCollectionName <String>] [-DistributeContent]
  [-DistributionPointGroupName <String>] [-DistributionPointName <String>] [-AvailableDateTime <DateTime>]
  [-Comment <String>] [-PersistOnWriteFilterDevice <Boolean>] [-SendWakeupPacket <Boolean>]
@@ -35,10 +35,10 @@ New-CMApplicationDeployment [-AllowRepairApp <Boolean>] [-ApprovalRequired <Bool
 ### SearchByIdMandatory
 ```
 New-CMApplicationDeployment [-AllowRepairApp <Boolean>] [-ApprovalRequired <Boolean>]
- [-DeadlineDateTime <DateTime>] [-DeployAction <DeployActionType>] [-DeployPurpose <DeployPurposeType>]
- [-DisableContentDependencyDetection] [-EnableMomAlert <Boolean>] [-EnableSoftDeadline <Boolean>]
- [-FailParameterValue <Int32>] [-GenerateScomAlertOnFailure <Boolean>] [-Id] <Int32>
- [-OverrideServiceWindow <Boolean>] [-PostponeDateTime <DateTime>] [-PreDeploy <Boolean>]
+ [-AutoCloseExecutable <Boolean>] [-DeadlineDateTime <DateTime>] [-DeployAction <DeployActionType>]
+ [-DeployPurpose <DeployPurposeType>] [-DisableContentDependencyDetection] [-EnableMomAlert <Boolean>]
+ [-EnableSoftDeadline <Boolean>] [-FailParameterValue <Int32>] [-GenerateScomAlertOnFailure <Boolean>]
+ [-Id] <Int32> [-OverrideServiceWindow <Boolean>] [-PostponeDateTime <DateTime>] [-PreDeploy <Boolean>]
  [-RebootOutsideServiceWindow <Boolean>] [-ReplaceToastNotificationWithDialog <Boolean>] [-Simulation]
  [-SuccessParameterValue <Int32>] [-TimeBaseOn <TimeType>] [-UpdateSupersedence <Boolean>]
  [-UserNotification <UserNotificationType>] [-DistributeCollectionName <String>] [-DistributeContent]
@@ -52,10 +52,10 @@ New-CMApplicationDeployment [-AllowRepairApp <Boolean>] [-ApprovalRequired <Bool
 ### SearchByNameMandatory
 ```
 New-CMApplicationDeployment [-AllowRepairApp <Boolean>] [-ApprovalRequired <Boolean>]
- [-DeadlineDateTime <DateTime>] [-DeployAction <DeployActionType>] [-DeployPurpose <DeployPurposeType>]
- [-DisableContentDependencyDetection] [-EnableMomAlert <Boolean>] [-EnableSoftDeadline <Boolean>]
- [-FailParameterValue <Int32>] [-GenerateScomAlertOnFailure <Boolean>] [-Name] <String>
- [-OverrideServiceWindow <Boolean>] [-PostponeDateTime <DateTime>] [-PreDeploy <Boolean>]
+ [-AutoCloseExecutable <Boolean>] [-DeadlineDateTime <DateTime>] [-DeployAction <DeployActionType>]
+ [-DeployPurpose <DeployPurposeType>] [-DisableContentDependencyDetection] [-EnableMomAlert <Boolean>]
+ [-EnableSoftDeadline <Boolean>] [-FailParameterValue <Int32>] [-GenerateScomAlertOnFailure <Boolean>]
+ [-Name] <String> [-OverrideServiceWindow <Boolean>] [-PostponeDateTime <DateTime>] [-PreDeploy <Boolean>]
  [-RebootOutsideServiceWindow <Boolean>] [-ReplaceToastNotificationWithDialog <Boolean>] [-Simulation]
  [-SuccessParameterValue <Int32>] [-TimeBaseOn <TimeType>] [-UpdateSupersedence <Boolean>]
  [-UserNotification <UserNotificationType>] [-DistributeCollectionName <String>] [-DistributeContent]
@@ -180,7 +180,7 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -Comment
@@ -745,13 +745,27 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -AutoCloseExecutable
+{{ Fill AutoCloseExecutable Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: AutoCloseExeOnInstallBehavior
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
-
 ## OUTPUTS
 
 ### System.Object

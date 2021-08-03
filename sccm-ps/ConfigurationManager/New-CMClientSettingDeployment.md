@@ -98,7 +98,7 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -Confirm
@@ -221,7 +221,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
-
 ## OUTPUTS
 
 ### System.Object
@@ -230,7 +229,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Remove-CMClientSettingDeployment](Remove-CMClientSettingDeployment.md)
-[Start-CMClientSettingDeployment](Start-CMClientSettingDeployment.md)
 
 [Get-CMClientSetting](Get-CMClientSetting.md)
 

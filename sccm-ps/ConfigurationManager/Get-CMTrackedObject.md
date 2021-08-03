@@ -84,11 +84,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### System.IDisposable
-
 ## OUTPUTS
 
 ### Microsoft.ConfigurationManagement.PowerShell.Provider.ResourceTracker
-
 ## NOTES
 
 ## RELATED LINKS

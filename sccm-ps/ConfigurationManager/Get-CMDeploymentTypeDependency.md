@@ -1,4 +1,4 @@
----
+﻿---
 description: Gets a deployment type dependency.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -93,13 +93,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.PowerShell.Cmdlets.AppMan.DeploymentTypeDependencyGroup
-
 ## OUTPUTS
 
 ### IResultObject[]#SMS_DeploymentType
-
 ### IResultObject#SMS_DeploymentType
-
 ## NOTES
 
 ## RELATED LINKS
