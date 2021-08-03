@@ -163,10 +163,11 @@ For more information, see [Get-CMPersistentUserSettingsGroup](/powershell/module
 Use this cmdlet to get software update content information.
 
 ```powershell
-Get-CMSoftwareUpdateContentInfo -Id $updateId
+$update = Get-CMSoftwareUpdate -ArticleId "5004237" -Fast
+Get-CMSoftwareUpdateContentInfo -InputObject $update[1]
 ```
 
-<!-- For more information, see [Get-CMSoftwareUpdateContentInfo](/powershell/module/configurationmanager/Get-CMSoftwareUpdateContentInfo). -->
+For more information, see [Get-CMSoftwareUpdateContentInfo](/powershell/module/configurationmanager/Get-CMSoftwareUpdateContentInfo).
 
 ### Remove-CMPersistentUserSettingsGroup
 
