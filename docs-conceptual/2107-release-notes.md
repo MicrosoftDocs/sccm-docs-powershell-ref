@@ -156,7 +156,7 @@ Use this cmdlet to get the list of site-wide settings that you've stored. These 
 
 For example, [Configuration Manager console notifications](/mem/configmgr/core/servers/manage/admin-console-notifications) that are active or you've dismissed.
 
-<!-- For more information, see [Get-CMPersistentUserSettingsGroup](/powershell/module/configurationmanager/Get-CMPersistentUserSettingsGroup). -->
+For more information, see [Get-CMPersistentUserSettingsGroup](/powershell/module/configurationmanager/Get-CMPersistentUserSettingsGroup).
 
 ### Get-CMSoftwareUpdateContentInfo
 
@@ -174,7 +174,7 @@ Use this cmdlet to reset your site-wide settings.
 
 For example, you can restore [Configuration Manager console notifications](/mem/configmgr/core/servers/manage/admin-console-notifications) that you've dismissed. After you run this cmdlet, and you restart the Configuration Manager console, you'll see all available notifications again.
 
-<!-- For more information, see [Remove-CMPersistentUserSettingsGroup](/powershell/module/configurationmanager/Remove-CMPersistentUserSettingsGroup). -->
+For more information, see [Remove-CMPersistentUserSettingsGroup](/powershell/module/configurationmanager/Remove-CMPersistentUserSettingsGroup).
 
 ## Deprecated and removed cmdlets
 
