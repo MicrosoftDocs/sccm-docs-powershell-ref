@@ -1,8 +1,7 @@
 ﻿---
-description: Add a distribution point role
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 08/24/2020
+ms.date: 08/04/2021
 schema: 2.0.0
 title: Add-CMDistributionPoint
 ---
@@ -92,6 +91,7 @@ Add-CMDistributionPoint [-AllowFallbackForContent] [-AllowPreStaging] [-AllowPro
 ```
 
 ## DESCRIPTION
+
 The **Add-CMDistributionPoint** cmdlet creates a distribution point on a site system server.
 A distribution point is a site system role that Configuration Manager uses to store files for clients to download, such as application content, software packages, software updates, operating system images, and boot images.
 
@@ -525,7 +525,7 @@ Accept wildcard characters: False
 
 ### -Force
 
-Starting in version 1910, use this parameter to add a duplicate certificate without asking for confirmation.
+Use this parameter to add a duplicate certificate without asking for confirmation.
 
 ```yaml
 Type: SwitchParameter
@@ -556,8 +556,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies a site system server object.
-To obtain a site system server object, use the [Get-CMSiteSystemServer](Get-CMSiteSystemServer.md) cmdlet.
+
+Specify a site system server object to add the distribution point role. To get this object, use the [Get-CMSiteSystemServer](Get-CMSiteSystemServer.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -605,6 +605,8 @@ Accept wildcard characters: False
 Specifies the amount of free space to reserve on each drive used by this distribution point.
 When this limit is reached, Configuration Manager chooses a different drive and continues the copy process to that drive.
 Content files can span multiple drives.
+
+Starting in version 2107, the default minimum free space changed from 50 MB to **500 MB**.
 
 ```yaml
 Type: Int32
@@ -926,6 +928,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### IResultObject#SMS_SCI_SysResUse
 ## NOTES
+
+For more information on this return object and its properties, see [SMS_SCI_SysResUse server WMI class](/mem/configmgr/develop/reference/core/servers/configure/sms_sci_sysresuse-server-wmi-class).
 
 ## RELATED LINKS
 
