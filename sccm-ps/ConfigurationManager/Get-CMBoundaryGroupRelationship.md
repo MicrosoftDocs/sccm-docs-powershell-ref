@@ -1,8 +1,7 @@
 ﻿---
-description: Get a boundary group relationship.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 12/28/2020
+ms.date: 08/04/2021
 schema: 2.0.0
 title: Get-CMBoundaryGroupRelationship
 ---
@@ -154,7 +153,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### IResultObject[]#SMS_BoundaryGroupRelationships
 ### IResultObject#SMS_BoundaryGroupRelationships
+
 ## NOTES
+
+For more information on this return object and its properties, see [SMS_BoundaryGroupRelationships server WMI class](/mem/configmgr/develop/reference/core/servers/configure/sms-boundarygrouprelationships-server-wmi-class).
 
 ## RELATED LINKS
 
@@ -163,5 +165,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-CMBoundaryGroupRelationship](Remove-CMBoundaryGroupRelationship.md)
 
 [Set-CMBoundaryGroupRelationship](Set-CMBoundaryGroupRelationship.md)
+
+[Get-CMBoundaryGroupSiteSystem](Get-CMBoundaryGroupSiteSystem.md)
 
 [Configure boundary groups for Configuration Manager](/mem/configmgr/core/servers/deploy/configure/boundary-groups)
