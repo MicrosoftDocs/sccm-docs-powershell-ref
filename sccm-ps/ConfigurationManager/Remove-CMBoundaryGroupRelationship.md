@@ -1,4 +1,4 @@
-﻿---
+---
 description: Remove a boundary group relationship.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -49,6 +49,22 @@ Remove-CMBoundaryGroupRelationship -DestinationGroupName "Swindon" -SourceGroupN
 ```
 
 ## PARAMETERS
+
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -DestinationGroupId
 
@@ -180,22 +196,6 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: True
-```
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
 ```
 
 ### -WhatIf

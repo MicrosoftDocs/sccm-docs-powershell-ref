@@ -1,4 +1,4 @@
-﻿---
+---
 description: Modifies an Endpoint Protection summarization schedule.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -36,6 +36,21 @@ PS XYZ:\> Set-CMEndpointProtectionSummarizationSchedule -Interval 10 -UnitType "
 This command modifies the interval and unit values to specify that 10 days pass before the Endpoint Protection Summarization Schedule runs again.
 
 ## PARAMETERS
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -DisableWildcardHandling
 
@@ -107,21 +122,6 @@ Accepted values: Minutes, Hours, Days
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

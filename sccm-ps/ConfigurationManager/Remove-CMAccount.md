@@ -1,4 +1,4 @@
-﻿---
+---
 description: Removes a specified user.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -44,6 +44,21 @@ PS XYZ:\> Remove-CMAccount -Name "CONTOSO\EDaugherty"
 This command removes the user account that is specified by its name.
 
 ## PARAMETERS
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -DisableWildcardHandling
 
@@ -119,21 +134,6 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: True
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
 ```
 
 ### -WhatIf

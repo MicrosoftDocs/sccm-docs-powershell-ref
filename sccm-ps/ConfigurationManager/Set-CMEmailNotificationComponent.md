@@ -1,4 +1,4 @@
-﻿---
+---
 description: Changes configuration settings of an email notification component.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -61,6 +61,21 @@ PS XYZ:\> Set-CMEmailNotificationComponent -SiteSystemServerName "cmcen-dist02.t
 This command sets the outgoing SMTP port that Configuration Manager uses for sending email alerts on the site server named cmcen-dist02.tsqa.corp.contoso.com to port 27.
 
 ## PARAMETERS
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -DisableEmailNotification
 Indicates that email notification is disabled.
@@ -190,22 +205,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -UserName
-Specifies the user name to authenticate with the SMTP server from which Configuration Manager sends email alerts.
-This parameter also specifies the SMTP Server Connection account.
-
-```yaml
-Type: String
-Parameter Sets: Enable
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -UseSsl
 ```yaml
 Type: Boolean
@@ -219,17 +218,18 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
+### -UserName
+Specifies the user name to authenticate with the SMTP server from which Configuration Manager sends email alerts.
+This parameter also specifies the SMTP Server Connection account.
 
 ```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
+Type: String
+Parameter Sets: Enable
+Aliases:
 
 Required: False
 Position: Named
-Default value: False
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

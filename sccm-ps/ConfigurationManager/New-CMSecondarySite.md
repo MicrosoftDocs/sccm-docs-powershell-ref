@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 08/04/2021
@@ -209,6 +209,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ContentMonitoringPriority
 
 Specifies the content monitoring priority.
@@ -373,9 +388,26 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -InstallInternetServer
+
+Specifies whether to install and configure IIS if Configuration Manager requires it.
+This parameter must be `$True` before the cmdlet installs the site system role for the distribution point on the secondary site.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -InstallationFolder
 
-Specifies the installation folder on the secondary site server.
+Specifies the installation folder on the secondary site server where the cmdlet installs the site files.
 
 ```yaml
 Type: String
@@ -399,23 +431,6 @@ Parameter Sets: (All)
 Aliases:
 
 Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InstallInternetServer
-
-Specifies whether to install and configure IIS if Configuration Manager requires it.
-This parameter must be `$True` before the cmdlet installs the site system role for the distribution point on the secondary site.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-
-Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -601,22 +616,6 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
