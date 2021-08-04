@@ -2,7 +2,7 @@
 description: Configure a Windows Installer deployment type.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 08/02/2021
+ms.date: 08/04/2021
 schema: 2.0.0
 title: Set-CMMsiDeploymentType
 ---
@@ -288,6 +288,8 @@ Accept wildcard characters: False
 ### -ContentLocation
 
 Specifies the network source path of the MSI file. The site system server requires permission to read the content files.
+
+Starting in version 2107, you can specify the path of the MSI file or the path to the folder that contains the MSI.
 
 ```yaml
 Type: String
