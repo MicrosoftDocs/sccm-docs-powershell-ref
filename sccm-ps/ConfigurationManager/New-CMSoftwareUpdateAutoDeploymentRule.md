@@ -1,8 +1,7 @@
 ﻿---
-description: Create an automatic deployment rule (ADR) for software updates.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 03/24/2021
+ms.date: 08/04/2021
 schema: 2.0.0
 title: New-CMSoftwareUpdateAutoDeploymentRule
 ---
@@ -935,6 +934,8 @@ Accept wildcard characters: False
 ### -Product
 
 Specifies an array of criteria, as strings, for software updates. The rule adds software updates for products that meet specified criteria to the software update group.
+
+Starting in version 2107, when there are multiple products with the same name, it selects all of them.
 
 ```yaml
 Type: String[]
