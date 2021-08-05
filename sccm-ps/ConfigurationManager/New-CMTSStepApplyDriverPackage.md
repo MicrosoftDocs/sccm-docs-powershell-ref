@@ -1,6 +1,7 @@
 ---
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
+ms.date: 08/04/2021
 online version:
 schema: 2.0.0
 ---
@@ -8,7 +9,8 @@ schema: 2.0.0
 # New-CMTSStepApplyDriverPackage
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Create an **Apply Driver Package** step, which you can add to a task sequence.
 
 ## SYNTAX
 
@@ -21,7 +23,8 @@ New-CMTSStepApplyDriverPackage [-BootCriticalContentUniqueId <String>] [-BootCri
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+This cmdlet creates a new **Apply Driver Package** step object. Then use the [Add-CMTaskSequenceStep](Add-CMTaskSequenceStep.md) cmdlet to add the step to a task sequence. For more information on this step, see [About task sequence steps: Apply Driver Package](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_ApplyDriverPackage).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
@@ -29,16 +32,26 @@ New-CMTSStepApplyDriverPackage [-BootCriticalContentUniqueId <String>] [-BootCri
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS XYZ:\> {{ Add example code here }}
-```
 
-{{ Add example description here }}
+This example first uses the **Get-CMDriverPackage** cmdlet to get an object for the package of **Surface 4 drivers**. It saves this object in the **$pkgDriver** variable. The next step creates an object for the **Apply Driver Package** step, getting the ID from the **$pkgDriver** object.
+
+It then gets a task sequence object, and adds this new step to the task sequence at index 11.
+
+```powershell
+$pkgDriver = Get-CMDriverPackage -Name "Surface 4 drivers" -Fast
+$step = New-CMTSStepApplyDriverPackage -Name "Apply driver package" -PackageId $pkgDriver.PackageID
+
+$tsName = "Default OS deployment"
+$tsOsd = Get-CMTaskSequence -Name $tsName -Fast
+
+$tsOsd | Add-CMTaskSequenceStep -Step $step -InsertStepStartIndex 11
+```
 
 ## PARAMETERS
 
 ### -BootCriticalContentUniqueId
-{{ Fill BootCriticalContentUniqueId Description }}
+
+This parameter is deprecated, it only applies to pre-Windows Vista OS versions.
 
 ```yaml
 Type: String
@@ -53,7 +66,8 @@ Accept wildcard characters: False
 ```
 
 ### -BootCriticalDriverId
-{{ Fill BootCriticalDriverId Description }}
+
+This parameter is deprecated, it only applies to pre-Windows Vista OS versions.
 
 ```yaml
 Type: String
@@ -68,7 +82,8 @@ Accept wildcard characters: False
 ```
 
 ### -BootCriticalHardwareComponent
-{{ Fill BootCriticalHardwareComponent Description }}
+
+This parameter is deprecated, it only applies to pre-Windows Vista OS versions.
 
 ```yaml
 Type: String
@@ -83,7 +98,8 @@ Accept wildcard characters: False
 ```
 
 ### -BootCriticalId
-{{ Fill BootCriticalId Description }}
+
+This parameter is deprecated, it only applies to pre-Windows Vista OS versions.
 
 ```yaml
 Type: String
@@ -98,7 +114,8 @@ Accept wildcard characters: False
 ```
 
 ### -BootCriticalInfFile
-{{ Fill BootCriticalInfFile Description }}
+
+This parameter is deprecated, it only applies to pre-Windows Vista OS versions.
 
 ```yaml
 Type: String
@@ -113,6 +130,7 @@ Accept wildcard characters: False
 ```
 
 ### -Condition
+
 Specify a condition object to use with this step.
 
 ```yaml
@@ -128,6 +146,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -143,6 +162,7 @@ Accept wildcard characters: False
 ```
 
 ### -ContinueOnError
+
 Add this parameter to enable the step option **Continue on error**. When you enable this option, if the step fails, the task sequence continues.
 
 ```yaml
@@ -158,6 +178,7 @@ Accept wildcard characters: False
 ```
 
 ### -Description
+
 Specify an optional description for this task sequence step.
 
 ```yaml
@@ -173,6 +194,7 @@ Accept wildcard characters: False
 ```
 
 ### -Disable
+
 Add this parameter to disable this task sequence step.
 
 ```yaml
@@ -188,6 +210,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
+
 This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
@@ -203,7 +226,8 @@ Accept wildcard characters: False
 ```
 
 ### -EnableRecurse
-{{ Fill EnableRecurse Description }}
+
+Add this parameter to install the driver package by running DISM with the recurse option.
 
 ```yaml
 Type: SwitchParameter
@@ -218,7 +242,8 @@ Accept wildcard characters: False
 ```
 
 ### -EnableUnsignedDriver
-{{ Fill EnableUnsignedDriver Description }}
+
+Add this parameter to do an unattended installation of unsigned drivers on a version of Windows where this action is allowed.
 
 ```yaml
 Type: SwitchParameter
@@ -233,6 +258,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
+
 This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
@@ -248,6 +274,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
+
 Specify a name for this step to identify it in the task sequence.
 
 ```yaml
@@ -263,7 +290,8 @@ Accept wildcard characters: False
 ```
 
 ### -PackageId
-{{ Fill PackageId Description }}
+
+Specify the **package ID** of the driver package for this step to apply. This value is a standard package ID, for example, `XYZ0030D`.
 
 ```yaml
 Type: String
@@ -299,9 +327,19 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
+
 ## OUTPUTS
 
 ### IResultObject#SMS_TaskSequence_ApplyDriverPackageAction
+
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-CMTSStepApplyDriverPackage](Get-CMTSStepApplyDriverPackage.md)
+[Remove-CMTSStepApplyDriverPackage](Remove-CMTSStepApplyDriverPackage.md)
+[Set-CMTSStepApplyDriverPackage](Set-CMTSStepApplyDriverPackage.md)
+
+[Get-CMDriverPackage](Get-CMDriverPackage.md)
+
+[About task sequence steps: Apply Driver Package](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_ApplyDriverPackage)

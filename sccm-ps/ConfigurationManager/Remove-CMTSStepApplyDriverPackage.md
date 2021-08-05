@@ -1,6 +1,7 @@
 ---
 external help file: AdminUI.PS.psm1-help.xml
 Module Name: ConfigurationManager
+ms.date: 08/04/2021
 online version:
 schema: 2.0.0
 ---
@@ -8,7 +9,8 @@ schema: 2.0.0
 # Remove-CMTSStepApplyDriverPackage
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Remove the **Apply Driver Package** step from a task sequence.
 
 ## SYNTAX
 
@@ -31,7 +33,8 @@ Remove-CMTSStepApplyDriverPackage [-TaskSequenceName] <String> [-StepName <Strin
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+Use this cmdlet to remove an instance of the **Apply Driver Package** step from a task sequence.
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
@@ -39,11 +42,16 @@ Remove-CMTSStepApplyDriverPackage [-TaskSequenceName] <String> [-StepName <Strin
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS XYZ:\> {{ Add example code here }}
-```
 
-{{ Add example description here }}
+This example first gets a task sequence object in the **$tsOsd** variable. It then passes that variable as the input object to remove the **Apply Driver Package** step.
+
+```powershell
+$tsName = "Default OS deployment"
+$tsOsd = Get-CMTaskSequence -Name $tsName -Fast
+
+$tsStepNameApplyDvrPkg = "Apply driver package"
+Remove-CMTSStepApplyDriverPackage -InputObject $tsOsd -StepName $tsStepNameApplyDvrPkg -Force
+```
 
 ## PARAMETERS
 
@@ -63,6 +71,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
+
 Run the command without asking for confirmation.
 
 ```yaml
@@ -78,7 +87,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{ Fill InputObject Description }}
+
+Specify a task sequence object from which to remove the **Apply Driver Package** step. To get this object, use the [Get-CMTaskSequence](Get-CMTaskSequence.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -93,7 +103,8 @@ Accept wildcard characters: False
 ```
 
 ### -StepName
-{{ Fill StepName Description }}
+
+Specify the name of the **Apply Driver Package** step to remove from the task sequence.
 
 ```yaml
 Type: String
@@ -108,7 +119,8 @@ Accept wildcard characters: False
 ```
 
 ### -TaskSequenceId
-{{ Fill TaskSequenceId Description }}
+
+Specify the **package ID** of the task sequence from which to remove the **Apply Driver Package** step. This value is a standard package ID, for example `XYZ00858`.
 
 ```yaml
 Type: String
@@ -123,7 +135,8 @@ Accept wildcard characters: False
 ```
 
 ### -TaskSequenceName
-{{ Fill TaskSequenceName Description }}
+
+Specify the name of the task sequence from which to remove the **Apply Driver Package** step.
 
 ```yaml
 Type: String
@@ -159,9 +172,17 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-CMTSStepApplyDriverPackage](Get-CMTSStepApplyDriverPackage.md)
+[New-CMTSStepApplyDriverPackage](New-CMTSStepApplyDriverPackage.md)
+[Set-CMTSStepApplyDriverPackage](Set-CMTSStepApplyDriverPackage.md)
+
+[Get-CMTaskSequence](Get-CMTaskSequence.md)

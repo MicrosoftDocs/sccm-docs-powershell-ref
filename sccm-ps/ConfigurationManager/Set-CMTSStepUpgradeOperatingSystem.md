@@ -244,7 +244,7 @@ For more information on this step, see [About task sequence steps: Upgrade OS](/
 
 ### Example 1
 
-This example changes the **Upgrade OS image** step in the **Default OS upgrade** task sequence to use a feature update.
+This example changes the **Upgrade OS** step in the **Default OS upgrade** task sequence to use a feature update.
 
 ```powershell
 $tsNameUpg = "Default OS upgrade"
