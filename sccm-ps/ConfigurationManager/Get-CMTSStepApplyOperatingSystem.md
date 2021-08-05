@@ -175,3 +175,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Add-CMTaskSequenceStep](Add-CMTaskSequenceStep.md)
 [Get-CMTaskSequence](Get-CMTaskSequence.md)
+
+[About task sequence steps: Apply OS Image](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_ApplyOperatingSystemImage)

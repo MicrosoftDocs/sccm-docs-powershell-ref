@@ -1,6 +1,7 @@
 ---
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
+ms.date: 08/04/2021
 online version:
 schema: 2.0.0
 ---
@@ -8,7 +9,8 @@ schema: 2.0.0
 # Set-CMTSStepUpgradeOperatingSystem
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Configure an instance of the **Upgrade OS** task sequence step.
 
 ## SYNTAX
 
@@ -230,7 +232,10 @@ Set-CMTSStepUpgradeOperatingSystem [-SetConditionOperatingSystem] [-StepName <St
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+Use this cmdlet to configure an instance of the **Upgrade OS** task sequence step.
+
+For more information on this step, see [About task sequence steps: Upgrade OS](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_UpgradeOS).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
@@ -238,17 +243,23 @@ Set-CMTSStepUpgradeOperatingSystem [-SetConditionOperatingSystem] [-StepName <St
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS XYZ:\> {{ Add example code here }}
-```
 
-{{ Add example description here }}
+This example changes the **Upgrade OS image** step in the **Default OS upgrade** task sequence to use a feature update.
+
+```powershell
+$tsNameUpg = "Default OS upgrade"
+$tsStepNameUpgradeOs = "Upgrade Operating System"
+
+$update = Get-CMSoftwareUpdate -Name "Feature update to Windows 10 (business editions), version 20H2, en-us x64"
+
+Set-CMTSStepUpgradeOperatingSystem -TaskSequenceName $tsNameUpg -StepName $tsStepNameUpgradeOs -SoftwareUpdate $update
+```
 
 ## PARAMETERS
 
 ### -AddCondition
-Specify a condition object to add to this step.
 
+Specify a condition object to add to this step. To get this object, use one of the task sequence condition cmdlets. For example, [Get-CMTSStepConditionVariable](Get-CMTSStepConditionVariable.md).
 
 ```yaml
 Type: IResultObject[]
@@ -263,6 +274,7 @@ Accept wildcard characters: False
 ```
 
 ### -ClearCondition
+
 Remove a condition from this step. Use the **-Condition** parameter to specify the condition to remove.
 
 ```yaml
@@ -278,7 +290,8 @@ Accept wildcard characters: False
 ```
 
 ### -Condition
-Specify a condition object to use with this step.
+
+Specify a condition object to use with this step. To get this object, use one of the task sequence condition cmdlets. For example, [Get-CMTSStepConditionVariable](Get-CMTSStepConditionVariable.md).
 
 ```yaml
 Type: IResultObject[]
@@ -293,6 +306,7 @@ Accept wildcard characters: False
 ```
 
 ### -ConditionVariableName
+
 Specify the name of the task sequence variable to use as a condition.
 
 ```yaml
@@ -308,6 +322,7 @@ Accept wildcard characters: False
 ```
 
 ### -ConditionVariableValue
+
 Specify the value of the task sequence variable to use in a condition.
 
 ```yaml
@@ -338,6 +353,7 @@ Accept wildcard characters: False
 ```
 
 ### -Description
+
 Specify an optional description for this task sequence step.
 
 ```yaml
@@ -353,6 +369,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
+
 This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
@@ -368,7 +385,10 @@ Accept wildcard characters: False
 ```
 
 ### -DriverPackage
-{{ Fill DriverPackage Description }}
+
+Specify a driver package object to provide its driver content to Windows Setup during upgrade. To get this package, use the [Get-CMDriverPackage](Get-CMDriverPackage.md) cmdlet.
+
+Use the **StagedContent** parameter to specify the location for the driver content.
 
 ```yaml
 Type: IResultObject
@@ -383,7 +403,12 @@ Accept wildcard characters: False
 ```
 
 ### -DynamicUpdateSetting
-{{ Fill DynamicUpdateSetting Description }}
+
+Use this parameter to dynamically update Windows Setup with Windows Update.
+
+- `DisablePolicy`: Don't use Dynamic Update
+- `UsingPolicy`: Enable setup to use Dynamic Update, such as search, download, and install updates.
+- `OverridePolicy`: Temporarily override the local policy in real time to run Dynamic Update operations. The computer gets updates from Windows Update.
 
 ```yaml
 Type: DynamicUpdateOption
@@ -399,7 +424,8 @@ Accept wildcard characters: False
 ```
 
 ### -EditionIndex
-{{ Fill EditionIndex Description }}
+
+Specify an integer value of the OS upgrade package edition. Use this parameter with the **UpgradePackage** parameter.
 
 ```yaml
 Type: Int32
@@ -414,6 +440,7 @@ Accept wildcard characters: False
 ```
 
 ### -FileDateTimeOperator
+
 Specify a variable operator type for a file date/time condition.
 
 ```yaml
@@ -430,6 +457,7 @@ Accept wildcard characters: False
 ```
 
 ### -FilePath
+
 Specify the path for a file condition.
 
 ```yaml
@@ -445,6 +473,7 @@ Accept wildcard characters: False
 ```
 
 ### -FileTimestamp
+
 Specify a date/time value to use for a file condition.
 
 ```yaml
@@ -460,6 +489,7 @@ Accept wildcard characters: False
 ```
 
 ### -FileVersion
+
 Specify a version string for a file condition.
 
 ```yaml
@@ -475,6 +505,7 @@ Accept wildcard characters: False
 ```
 
 ### -FolderDateTimeOperator
+
 Specify a variable operator for a folder date/time condition.
 
 ```yaml
@@ -491,6 +522,7 @@ Accept wildcard characters: False
 ```
 
 ### -FolderPath
+
 Specify the path for a folder condition.
 
 ```yaml
@@ -506,6 +538,7 @@ Accept wildcard characters: False
 ```
 
 ### -FolderTimestamp
+
 Specify a date/time value to use for a folder condition.
 
 ```yaml
@@ -521,6 +554,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
+
 This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
@@ -536,7 +570,8 @@ Accept wildcard characters: False
 ```
 
 ### -IgnoreMessage
-{{ Fill IgnoreMessage Description }}
+
+Set this parameter to `$true` to specify that Windows Setup completes the installation, ignoring any dismissible compatibility messages.
 
 ```yaml
 Type: Boolean
@@ -551,7 +586,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{ Fill InputObject Description }}
+
+Specify a task sequence object that has the **Upgrade OS** step to configure. To get this object, use the [Get-CMTaskSequence](Get-CMTaskSequence.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -566,6 +602,7 @@ Accept wildcard characters: False
 ```
 
 ### -IsAnyVersion
+
 Use this parameter with the **SetConditionSoftware** parameter to match any version of the product.
 
 ```yaml
@@ -581,6 +618,7 @@ Accept wildcard characters: False
 ```
 
 ### -IsContinueOnError
+
 Use this parameter to enable the step option **Continue on error**. When you enable this option, if the step fails, the task sequence continues.
 
 ```yaml
@@ -596,6 +634,7 @@ Accept wildcard characters: False
 ```
 
 ### -IsEnabled
+
 Use this parameter to enable this task sequence step.
 
 ```yaml
@@ -611,6 +650,7 @@ Accept wildcard characters: False
 ```
 
 ### -MoveToIndex
+
 Move this step to the specified index position in the task sequence.
 
 ```yaml
@@ -626,7 +666,8 @@ Accept wildcard characters: False
 ```
 
 ### -MsiFilePath
-Specify the path to a Windows Installer file for an software condition.
+
+Specify the path to a Windows Installer file for a software condition.
 
 ```yaml
 Type: String
@@ -641,6 +682,7 @@ Accept wildcard characters: False
 ```
 
 ### -Namespace
+
 Specify the namespace for a WMI query condition.
 
 ```yaml
@@ -656,6 +698,7 @@ Accept wildcard characters: False
 ```
 
 ### -NewStepName
+
 Use this parameter to rename this task sequence step.
 
 ```yaml
@@ -671,6 +714,7 @@ Accept wildcard characters: False
 ```
 
 ### -OperatorType
+
 Specify an operator to use with a task sequence variable condition.
 
 ```yaml
@@ -687,7 +731,8 @@ Accept wildcard characters: False
 ```
 
 ### -ProductKey
-{{ Fill ProductKey Description }}
+
+Specify the product key to apply to the upgrade process.
 
 ```yaml
 Type: String
@@ -702,6 +747,7 @@ Accept wildcard characters: False
 ```
 
 ### -Query
+
 Specify a WMI query string to use for a condition.
 
 ```yaml
@@ -717,6 +763,7 @@ Accept wildcard characters: False
 ```
 
 ### -RegistryKey
+
 Specify the key to use with a registry condition.
 
 ```yaml
@@ -732,6 +779,7 @@ Accept wildcard characters: False
 ```
 
 ### -RegistryOperator
+
 Specify an operator to use with a registry condition.
 
 ```yaml
@@ -748,6 +796,7 @@ Accept wildcard characters: False
 ```
 
 ### -RegistryValueData
+
 Specify the value data to use with a registry condition.
 
 ```yaml
@@ -763,6 +812,7 @@ Accept wildcard characters: False
 ```
 
 ### -RegistryValueName
+
 Specify the value name to use with a registry condition.
 
 ```yaml
@@ -778,6 +828,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveConditionFile
+
 Use this parameter to remove a file condition.
 
 ```yaml
@@ -793,6 +844,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveConditionFolder
+
 Use this parameter to remove a folder condition.
 
 ```yaml
@@ -808,6 +860,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveConditionIfStatement
+
 Use this parameter to remove an `if` statement condition.
 
 ```yaml
@@ -823,6 +876,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveConditionOperatingSystem
+
 Use this parameter to remove an OS condition.
 
 ```yaml
@@ -838,6 +892,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveConditionQueryWmi
+
 Use this parameter to remove a WMI query condition.
 
 ```yaml
@@ -853,6 +908,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveConditionRegistry
+
 Use this parameter to remove a registry condition.
 
 ```yaml
@@ -868,6 +924,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveConditionSoftware
+
 Use this parameter to remove a software condition.
 
 ```yaml
@@ -883,6 +940,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveConditionVariable
+
 Use this parameter to remove a task sequence variable condition.
 
 ```yaml
@@ -898,6 +956,7 @@ Accept wildcard characters: False
 ```
 
 ### -RootKey
+
 Specify the root key to use with a registry condition.
 
 ```yaml
@@ -914,7 +973,8 @@ Accept wildcard characters: False
 ```
 
 ### -ScanOnly
-{{ Fill ScanOnly Description }}
+
+Set this parameter to `$true` to run the Windows Setup compatibility scan without starting upgrade.
 
 ```yaml
 Type: Boolean
@@ -929,6 +989,7 @@ Accept wildcard characters: False
 ```
 
 ### -SetConditionFile
+
 Add a new file condition.
 
 ```yaml
@@ -944,6 +1005,7 @@ Accept wildcard characters: False
 ```
 
 ### -SetConditionFolder
+
 Add a new folder condition.
 
 ```yaml
@@ -959,6 +1021,7 @@ Accept wildcard characters: False
 ```
 
 ### -SetConditionIfStatement
+
 Add a new `if` statement condition.
 
 ```yaml
@@ -974,6 +1037,7 @@ Accept wildcard characters: False
 ```
 
 ### -SetConditionOperatingSystem
+
 Add a new OS condition.
 
 ```yaml
@@ -989,6 +1053,7 @@ Accept wildcard characters: False
 ```
 
 ### -SetConditionQueryWmi
+
 Add a new WMI query condition.
 
 ```yaml
@@ -1004,6 +1069,7 @@ Accept wildcard characters: False
 ```
 
 ### -SetConditionRegistry
+
 Add a new registry condition.
 
 ```yaml
@@ -1019,6 +1085,7 @@ Accept wildcard characters: False
 ```
 
 ### -SetConditionSoftware
+
 Add a new software condition.
 
 ```yaml
@@ -1034,6 +1101,7 @@ Accept wildcard characters: False
 ```
 
 ### -SetConditionVariable
+
 Add a new task sequence variable condition.
 
 ```yaml
@@ -1049,7 +1117,8 @@ Accept wildcard characters: False
 ```
 
 ### -SetupTimeout
-{{ Fill SetupTimeout Description }}
+
+Specify the number of minutes before Configuration Manager fails this step. This option is useful if Windows Setup stops processing but doesn't terminate.
 
 ```yaml
 Type: Int32
@@ -1064,7 +1133,8 @@ Accept wildcard characters: False
 ```
 
 ### -SourcePath
-{{ Fill SourcePath Description }}
+
+Specify a local or network path to the Windows media that Windows Setup uses.
 
 ```yaml
 Type: String
@@ -1079,7 +1149,8 @@ Accept wildcard characters: False
 ```
 
 ### -StagedContent
-{{ Fill StagedContent Description }}
+
+Use this parameter with **DriverPackage** to specify the location for the driver content. You can specify a local folder, network path, or a task sequence variable.
 
 ```yaml
 Type: String
@@ -1094,6 +1165,7 @@ Accept wildcard characters: False
 ```
 
 ### -StatementType
+
 Set the type for an `if` statement condition.
 
 ```yaml
@@ -1110,6 +1182,7 @@ Accept wildcard characters: False
 ```
 
 ### -StepName
+
 Specify the name of the step to select for changes.
 
 ```yaml
@@ -1125,6 +1198,7 @@ Accept wildcard characters: False
 ```
 
 ### -StepOrder
+
 Use this parameter to reorder the step in the task sequence.
 
 ```yaml
@@ -1141,6 +1215,7 @@ Accept wildcard characters: False
 ```
 
 ### -SupportedPlatform
+
 Use this parameter to specify the platforms for an OS condition.
 
 ```yaml
@@ -1156,7 +1231,8 @@ Accept wildcard characters: False
 ```
 
 ### -TaskSequenceId
-Specify the ID of the task sequence to target for changes.
+
+Specify the **package ID** of the task sequence with the **Upgrade OS** step to configure. This value is a standard package ID, for example `XYZ00858`.
 
 ```yaml
 Type: String
@@ -1171,6 +1247,7 @@ Accept wildcard characters: False
 ```
 
 ### -TaskSequenceName
+
 Specify the name of the task sequence to target for changes.
 
 ```yaml
@@ -1186,7 +1263,10 @@ Accept wildcard characters: False
 ```
 
 ### -UpgradePackage
-{{ Fill UpgradePackage Description }}
+
+Specify an OS upgrade package object. Use the **EditionIndex** parameter to set the edition.
+
+To get this object, use the [Get-CMOperatingSystemInstaller](Get-CMOperatingSystemInstaller.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -1201,6 +1281,7 @@ Accept wildcard characters: False
 ```
 
 ### -ValueType
+
 Specify the type of value for a registry condition.
 
 ```yaml
@@ -1217,6 +1298,7 @@ Accept wildcard characters: False
 ```
 
 ### -VersionOperator
+
 Specify an operator to use with a file condition.
 
 ```yaml
@@ -1249,7 +1331,8 @@ Accept wildcard characters: False
 ```
 
 ### -SoftwareUpdate
-{{ Fill SoftwareUpdate Description }}
+
+Starting in version 2107, specify a software update object to upgrade a client's Windows OS by using a feature update. To get this object, use the [Get-CMSoftwareUpdate](Get-CMSoftwareUpdate.md) cmdlet.
 
 ```yaml
 Type: IResultObject[]
@@ -1275,3 +1358,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-CMTSStepUpgradeOperatingSystem](Get-CMTSStepUpgradeOperatingSystem.md)
+[New-CMTSStepUpgradeOperatingSystem](New-CMTSStepUpgradeOperatingSystem.md)
+[Remove-CMTSStepUpgradeOperatingSystem](Remove-CMTSStepUpgradeOperatingSystem.md)
+
+[About task sequence steps: Upgrade OS](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_UpgradeOS)

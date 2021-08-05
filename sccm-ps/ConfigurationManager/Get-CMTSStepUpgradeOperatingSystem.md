@@ -1,6 +1,7 @@
 ---
 external help file: AdminUI.PS.psm1-help.xml
 Module Name: ConfigurationManager
+ms.date: 08/04/2021
 online version:
 schema: 2.0.0
 ---
@@ -8,7 +9,8 @@ schema: 2.0.0
 # Get-CMTSStepUpgradeOperatingSystem
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Get the **Upgrade OS** step from a specific task sequence.
 
 ## SYNTAX
 
@@ -31,7 +33,13 @@ Get-CMTSStepUpgradeOperatingSystem [-TaskSequenceName] <String> [-StepName <Stri
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+Use this cmdlet to get a task sequence step object for one or more instances of the **Upgrade OS** step. You can use this object to:
+
+- Remove the step from a task sequence with [Remove-CMTSStepUpgradeOperatingSystem](Remove-CMTSStepUpgradeOperatingSystem.md)
+- Copy the step to another task sequence with [Add-CMTaskSequenceStep](Add-CMTaskSequenceStep.md)
+
+For more information on this step, see [About task sequence steps: Upgrade OS](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_UpgradeOS).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
@@ -39,11 +47,16 @@ Get-CMTSStepUpgradeOperatingSystem [-TaskSequenceName] <String> [-StepName <Stri
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS XYZ:\> {{ Add example code here }}
-```
 
-{{ Add example description here }}
+This example first gets a task sequence object in the **$tsUpg** variable. It then passes that variable as the input object to get the **Upgrade OS** step.
+
+```powershell
+$tsName = "Default OS upgrade"
+$tsUpg = Get-CMTaskSequence -Name $tsName -Fast
+
+$tsStepNameUpgradeOs = "Upgrade Operating System"
+$tsStepUpgradeOs = Get-CMTSStepUpgradeOperatingSystem -InputObject $tsUpg -StepName $tsStepNameUpgradeOs
+```
 
 ## PARAMETERS
 
@@ -63,7 +76,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{ Fill InputObject Description }}
+
+Specify a task sequence object from which to get the **Upgrade OS** step. To get this object, use the [Get-CMTaskSequence](Get-CMTaskSequence.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -78,7 +92,8 @@ Accept wildcard characters: False
 ```
 
 ### -StepName
-{{ Fill StepName Description }}
+
+Specify the name of the **Upgrade OS** step to get from the task sequence.
 
 ```yaml
 Type: String
@@ -93,7 +108,8 @@ Accept wildcard characters: False
 ```
 
 ### -TaskSequenceId
-{{ Fill TaskSequenceId Description }}
+
+Specify the **package ID** of the task sequence from which to get the **Upgrade OS** step. This value is a standard package ID, for example `XYZ00858`.
 
 ```yaml
 Type: String
@@ -108,7 +124,8 @@ Accept wildcard characters: False
 ```
 
 ### -TaskSequenceName
-{{ Fill TaskSequenceName Description }}
+
+Specify the name of the task sequence from which to get the **Upgrade OS** step.
 
 ```yaml
 Type: String
@@ -150,3 +167,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[New-CMTSStepUpgradeOperatingSystem](New-CMTSStepUpgradeOperatingSystem.md)
+[Remove-CMTSStepUpgradeOperatingSystem](Remove-CMTSStepUpgradeOperatingSystem.md)
+[Set-CMTSStepUpgradeOperatingSystem](Set-CMTSStepUpgradeOperatingSystem.md)
+
+[Add-CMTaskSequenceStep](Add-CMTaskSequenceStep.md)
+[Get-CMTaskSequence](Get-CMTaskSequence.md)
+
+[About task sequence steps: Apply OS Image](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_ApplyOperatingSystemImage)
