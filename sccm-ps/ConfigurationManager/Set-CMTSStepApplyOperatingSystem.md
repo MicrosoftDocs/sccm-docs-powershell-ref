@@ -246,11 +246,15 @@ For more information on this step, see [About task sequence steps: Apply OS Imag
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS XYZ:\> {{ Add example code here }}
-```
 
-{{ Add example description here }}
+This example changes the **Apply OS image** step in the **Default OS deployment** task sequence to use a specific disk and partition.
+
+```powershell
+$tsNameOsd = "Default OS deployment"
+$tsStepNameApplyOsImage = "Apply OS image"
+
+Set-CMTSStepApplyOperatingSystem -TaskSequenceName $tsNameOsd -StepName $tsStepNameApplyOsImage -Destination SpecificDiskAndPartition -DestinationDisk 5 -DestinationPartition 50 
+```
 
 ## PARAMETERS
 
