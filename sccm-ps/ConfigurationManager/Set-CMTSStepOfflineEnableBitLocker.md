@@ -580,7 +580,7 @@ Accept wildcard characters: False
 ```
 
 ### -IsAnyVersion
-{{ Fill IsAnyVersion Description }}
+Use this parameter with the **SetConditionSoftware** parameter to match any version of the product.
 
 ```yaml
 Type: Boolean
