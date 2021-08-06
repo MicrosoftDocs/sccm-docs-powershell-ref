@@ -1,6 +1,7 @@
 ---
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
+ms.date: 08/04/2021
 online version:
 schema: 2.0.0
 ---
@@ -8,7 +9,8 @@ schema: 2.0.0
 # New-CMTSNetworkAdapterSetting
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Create a settings object for a network adapter on the **Apply Network Settings** task sequence step.
 
 ## SYNTAX
 
@@ -22,23 +24,45 @@ New-CMTSNetworkAdapterSetting [-Dns <String[]>] [-EnableDnsRegistration] [-Enabl
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+This cmdlet creates a network adapter settings object. Use this object with the **AddAdapterSetting** parameter on the [New-CMTSStepApplyNetworkSetting](New-CMTSStepApplyNetworkSetting.md) or [Set-CMTSStepApplyNetworkSetting](Set-CMTSStepApplyNetworkSetting.md) cmdlets.
+
+For more information, see [About task sequence steps: Apply Network Settings](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_ApplyNetworkSettings).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS XYZ:\> {{ Add example code here }}
-```
+### Example 1: Add network adapter settings for a connection with multiple addresses
 
-{{ Add example description here }}
+This example first defines three array variables that define the multiple addresses. The **$dns** variable is an array with two DNS server addresses. The **$gw** variable is an array with two gateway addresses. The **$ip** variable is an array with two hashtables. Each hashtable defines an IP address and subnet mask pair.
+
+The next line of the example uses the **New-CMTSNetworkAdapterSetting** cmdlet to create the network adapter settings object. It uses the defined variables, and sets several other options.
+
+The final part of this example configures an existing **Apply Network Settings** step of a task sequence named **Default OS deployment**. It adds the network adapter settings to the step, and configures the DNS suffix.
+
+```powershell
+$dns = @("192.168.1.100","10.0.1.100")
+$gw = @("192.168.1.1","10.0.1.1")
+
+$ip = @(
+    @{ IP = "192.168.1.42"; Mask = "255.255.255.0"; },
+    @{ IP = "10.0.1.42"; Mask = "255.255.242.0"; }
+)
+
+$conn1 = New-CMTSNetworkAdapterSetting -Name "local connection" -Dns $dns -EnableDnsRegistration -EnableFullDnsRegistration -Gateway $gw -IpAddress $ip -TcpIpNetbiosOption DisableNetbiosOverTcpip
+
+$tsNameOsd = "Default OS deployment"
+$tsStepNameApplyNetSet = "Apply Network Settings"
+
+Set-CMTSStepApplyNetworkSetting -TaskSequenceName $tsNameOsd -StepName $tsStepNameApplyNetSet -AddAdapterSetting $conn1 -DnsSuffix "corp.contoso.com"
+```
 
 ## PARAMETERS
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -54,6 +78,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
+
 This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
@@ -69,7 +94,8 @@ Accept wildcard characters: False
 ```
 
 ### -Dns
-{{ Fill Dns Description }}
+
+Specify one or more DNS server addresses in order of use.
 
 ```yaml
 Type: String[]
@@ -84,7 +110,8 @@ Accept wildcard characters: False
 ```
 
 ### -EnableDnsRegistration
-{{ Fill EnableDnsRegistration Description }}
+
+Add this parameter to register this connection's addresses in DNS. This setting applies to all connections with TCP/IP enabled. To specify the DNS suffix, use the **DnsSuffix** parameter on the [New-CMTSStepApplyNetworkSetting](New-CMTSStepApplyNetworkSetting.md) or [Set-CMTSStepApplyNetworkSetting](Set-CMTSStepApplyNetworkSetting.md) cmdlets.
 
 ```yaml
 Type: SwitchParameter
@@ -99,7 +126,8 @@ Accept wildcard characters: False
 ```
 
 ### -EnableFullDnsRegistration
-{{ Fill EnableFullDnsRegistration Description }}
+
+Add this parameter to use the connection's DNS suffix in DNS registration. This setting applies to all connections with TCP/IP enabled. To specify the DNS suffix, use the **DnsSuffix** parameter on the [New-CMTSStepApplyNetworkSetting](New-CMTSStepApplyNetworkSetting.md) or [Set-CMTSStepApplyNetworkSetting](Set-CMTSStepApplyNetworkSetting.md) cmdlets.
 
 ```yaml
 Type: SwitchParameter
@@ -114,7 +142,8 @@ Accept wildcard characters: False
 ```
 
 ### -EnableIpProtocolFiltering
-{{ Fill EnableIpProtocolFiltering Description }}
+
+Add this parameter to filter some IP protocols. To enable TCP/IP filtering, use the **EnableTcpIpFiltering** parameter on the [New-CMTSStepApplyNetworkSetting](New-CMTSStepApplyNetworkSetting.md) or [Set-CMTSStepApplyNetworkSetting](Set-CMTSStepApplyNetworkSetting.md) cmdlets.
 
 ```yaml
 Type: SwitchParameter
@@ -129,7 +158,8 @@ Accept wildcard characters: False
 ```
 
 ### -EnableLmHosts
-{{ Fill EnableLmHosts Description }}
+
+Add this parameter to enable LMHOSTS lookup.
 
 ```yaml
 Type: SwitchParameter
@@ -144,7 +174,8 @@ Accept wildcard characters: False
 ```
 
 ### -EnableTcpFiltering
-{{ Fill EnableTcpFiltering Description }}
+
+Add this parameter to filter some TCP ports. To enable TCP/IP filtering, use the **EnableTcpIpFiltering** parameter on the [New-CMTSStepApplyNetworkSetting](New-CMTSStepApplyNetworkSetting.md) or [Set-CMTSStepApplyNetworkSetting](Set-CMTSStepApplyNetworkSetting.md) cmdlets.
 
 ```yaml
 Type: SwitchParameter
@@ -159,7 +190,8 @@ Accept wildcard characters: False
 ```
 
 ### -EnableUdpFiltering
-{{ Fill EnableUdpFiltering Description }}
+
+Add this parameter to filter some UDP ports. To enable TCP/IP filtering, use the **EnableTcpIpFiltering** parameter on the [New-CMTSStepApplyNetworkSetting](New-CMTSStepApplyNetworkSetting.md) or [Set-CMTSStepApplyNetworkSetting](Set-CMTSStepApplyNetworkSetting.md) cmdlets.
 
 ```yaml
 Type: SwitchParameter
@@ -174,6 +206,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
+
 This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
@@ -189,7 +222,10 @@ Accept wildcard characters: False
 ```
 
 ### -Gateway
-{{ Fill Gateway Description }}
+
+If this connection doesn't use DHCP, use this parameter to specify one or more gateway addresses.
+
+If needed, use the **Metric** parameter. By default, the gateway uses an automatic metric.
 
 ```yaml
 Type: String[]
@@ -204,7 +240,14 @@ Accept wildcard characters: False
 ```
 
 ### -IpAddress
-{{ Fill IpAddress Description }}
+
+If this connection doesn't use DHCP, use this parameter to specify one or more IP addresses and corresponding subnet masks. The value is a hashtable. The first value is the `IP` and the second value is the `Mask`.
+
+For example: `@{ IP = "192.168.1.42"; Mask = "255.255.255.0"; }`
+
+If you need to specify more than one IP address and subnet mask combination, use an array of hashtables.
+
+For example: `@( @{ IP = "192.168.1.42"; Mask = "255.255.255.0"; }, @{ IP = "10.0.1.42"; Mask = "255.255.242.0"; } )`
 
 ```yaml
 Type: Hashtable[]
@@ -219,7 +262,8 @@ Accept wildcard characters: False
 ```
 
 ### -IpProtocolFilterList
-{{ Fill IpProtocolFilterList Description }}
+
+When you use the **EnableIpProtocolFiltering** parameter, use this parameter to specify one or more IP protocols.
 
 ```yaml
 Type: String[]
@@ -234,7 +278,8 @@ Accept wildcard characters: False
 ```
 
 ### -Metric
-{{ Fill Metric Description }}
+
+Specify the metric that indicates the cost of using the **Gateway**. If you don't specify this parameter, the gateway uses an automatic metric.
 
 ```yaml
 Type: Int32
@@ -249,7 +294,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{ Fill Name Description }}
+
+Specify a unique name for this connection.
 
 ```yaml
 Type: String
@@ -264,7 +310,8 @@ Accept wildcard characters: False
 ```
 
 ### -TcpFilterPortList
-{{ Fill TcpFilterPortList Description }}
+
+When you use the **EnableTcpFiltering** parameter, use this parameter to specify one or more TCP ports.
 
 ```yaml
 Type: Int32[]
@@ -279,7 +326,8 @@ Accept wildcard characters: False
 ```
 
 ### -TcpIpNetbiosOption
-{{ Fill TcpIpNetbiosOption Description }}
+
+Specify whether to enable or disable NetBIOS over TCP/IP.
 
 ```yaml
 Type: NetbiosOption
@@ -295,7 +343,8 @@ Accept wildcard characters: False
 ```
 
 ### -UdpFilterPortList
-{{ Fill UdpFilterPortList Description }}
+
+When you use the **EnableUdpFiltering** parameter, use this parameter to specify one or more UDP ports.
 
 ```yaml
 Type: Int32[]
@@ -326,7 +375,8 @@ Accept wildcard characters: False
 ```
 
 ### -Wins
-{{ Fill Wins Description }}
+
+Specify one or more WINS server addresses.
 
 ```yaml
 Type: String[]
@@ -346,9 +396,18 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
+
 ## OUTPUTS
 
 ### IResultObject#SMS_TaskSequence_NetworkAdapterSettings
+
 ## NOTES
 
+For more information on this return object and its properties, see [SMS_TaskSequence_NetworkAdapterSettings server WMI class](/mem/configmgr/develop/reference/osd/sms_tasksequence_networkadaptersettings-server-wmi-class).
+
 ## RELATED LINKS
+
+[New-CMTSStepApplyNetworkSetting](New-CMTSStepApplyNetworkSetting.md)
+[Set-CMTSStepApplyNetworkSetting](Set-CMTSStepApplyNetworkSetting.md)
+
+[About task sequence steps: Apply Network Settings](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_ApplyNetworkSettings)
