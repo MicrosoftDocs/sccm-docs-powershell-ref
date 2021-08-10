@@ -2,7 +2,7 @@
 Module Name: ConfigurationManager
 Module Guid: 7f590131-5253-4425-8b32-eeab51a4c393
 Download Help Link: https://aka.ms/configmgrps-help
-Help Version: 5.2107.0.0
+Help Version: 5.2107.0.1
 Locale: en-US
 ---
 
@@ -87,10 +87,10 @@ Adds a deployment type for a Configuration Manager deployment application. This 
 Adds a deployment type as a dependency to a dependency group in Configuration Manager.
 
 ### [Add-CMDeploymentTypeInstallBehavior](Add-CMDeploymentTypeInstallBehavior.md)
-{{ Fill in the Synopsis }}
+Add to the specified deployment type the executable files that need to close for the app install to succeed.
 
 ### [Add-CMDeploymentTypeReturnCode](Add-CMDeploymentTypeReturnCode.md)
-{{ Fill in the Synopsis }}
+Add return codes to a supported application deployment type.
 
 ### [Add-CMDeploymentTypeSupersedence](Add-CMDeploymentTypeSupersedence.md)
 Add a deployment type supersedence in Configuration Manager.
@@ -424,7 +424,7 @@ Get Configuration Manager alerts.
 Get one or more alert subscription objects.
 
 ### [Get-CMAntimalwarePolicy](Get-CMAntimalwarePolicy.md)
-Gets antimalware policies for Endpoint Protection.
+Get an antimalware policy for endpoint protection.
 
 ### [Get-CMApplication](Get-CMApplication.md)
 Get an application.
@@ -493,13 +493,13 @@ Get an OS boot image.
 Get a site boundary.
 
 ### [Get-CMBoundaryGroup](Get-CMBoundaryGroup.md)
-Gets a boundary group.
+Get a boundary group.
 
 ### [Get-CMBoundaryGroupRelationship](Get-CMBoundaryGroupRelationship.md)
 Get a boundary group relationship.
 
 ### [Get-CMBoundaryGroupSiteSystem](Get-CMBoundaryGroupSiteSystem.md)
-{{ Fill in the Synopsis }}
+Get site systems in the specified boundary group
 
 ### [Get-CMCategory](Get-CMCategory.md)
 Gets configuration categories in Configuration Manager.
@@ -538,7 +538,7 @@ Gets an object that installs a Configuration Manager client by using client push
 Gets client settings.
 
 ### [Get-CMClientSettingDeployment](Get-CMClientSettingDeployment.md)
-{{ Fill in the Synopsis }}
+Get a deployment of a custom client settings object.
 
 ### [Get-CMClientStatusSetting](Get-CMClientStatusSetting.md)
 Gets client status settings.
@@ -688,13 +688,13 @@ Gets a deployment type from a dependency group.
 Gets a deployment type dependency group from Configuration Manager.
 
 ### [Get-CMDeploymentTypeDetectionClause](Get-CMDeploymentTypeDetectionClause.md)
-{{ Fill in the Synopsis }}
+Get the detection clauses from the specified deployment type.
 
 ### [Get-CMDeploymentTypeInstallBehavior](Get-CMDeploymentTypeInstallBehavior.md)
-{{ Fill in the Synopsis }}
+Get from the specified deployment type the list of executable files that need to close for the app install to succeed.
 
 ### [Get-CMDeploymentTypeReturnCode](Get-CMDeploymentTypeReturnCode.md)
-{{ Fill in the Synopsis }}
+Get the list of return codes from the specified application deployment type.
 
 ### [Get-CMDeploymentTypeSupersedence](Get-CMDeploymentTypeSupersedence.md)
 Get the old deployment types that an application supersedes.
@@ -871,7 +871,7 @@ Gets a package deployment from Configuration Manager.
 Get the status of classic software distribution deployments.
 
 ### [Get-CMPersistentUserSettingsGroup](Get-CMPersistentUserSettingsGroup.md)
-{{ Fill in the Synopsis }}
+Get the list of site-wide settings that you've stored.
 
 ### [Get-CMPhase](Get-CMPhase.md)
 Use this cmdlet to get a deployment phase for a specific instance or a phased deployment.
@@ -988,7 +988,7 @@ Gets a client installation on a Configuration Manager software update point.
 Get a software update classification or product.
 
 ### [Get-CMSoftwareUpdateContentInfo](Get-CMSoftwareUpdateContentInfo.md)
-{{ Fill in the Synopsis }}
+Get software update content information.
 
 ### [Get-CMSoftwareUpdateDeployment](Get-CMSoftwareUpdateDeployment.md)
 Get a software update deployment.
@@ -1072,16 +1072,16 @@ Gets a tracked object.
 Gets a trusted root certificate for Configuration Manager.
 
 ### [Get-CMTSStepApplyDataImage](Get-CMTSStepApplyDataImage.md)
-{{ Fill in the Synopsis }}
+Get the **Apply Data Image** step from a specific task sequence.
 
 ### [Get-CMTSStepApplyDriverPackage](Get-CMTSStepApplyDriverPackage.md)
-{{ Fill in the Synopsis }}
+Get the **Apply Driver Package** step from a specific task sequence.
 
 ### [Get-CMTSStepApplyNetworkSetting](Get-CMTSStepApplyNetworkSetting.md)
-{{ Fill in the Synopsis }}
+Get the **Apply Network Settings** step from a specific task sequence.
 
 ### [Get-CMTSStepApplyOperatingSystem](Get-CMTSStepApplyOperatingSystem.md)
-{{ Fill in the Synopsis }}
+Get the **Apply OS Image** step from a specific task sequence.
 
 ### [Get-CMTSStepApplyWindowsSetting](Get-CMTSStepApplyWindowsSetting.md)
 {{ Fill in the Synopsis }}
@@ -1198,7 +1198,7 @@ Get the **Setup Windows and ConfigMgr** step from a specific task sequence.
 Gets a TS step set variable.
 
 ### [Get-CMTSStepUpgradeOperatingSystem](Get-CMTSStepUpgradeOperatingSystem.md)
-{{ Fill in the Synopsis }}
+Get the **Upgrade OS** step from a specific task sequence.
 
 ### [Get-CMUpdateGroupDeployment](Get-CMUpdateGroupDeployment.md)
 Gets an update group deployment.
@@ -1456,7 +1456,7 @@ Creates an advanced threat protection policy.
 Creates an alert subscription object.
 
 ### [New-CMAntimalwarePolicy](New-CMAntimalwarePolicy.md)
-Creates an object that specifies antimalware policies.
+Create a policy object for antimalware settings.
 
 ### [New-CMAntimalwarePolicyDeployment](New-CMAntimalwarePolicyDeployment.md)
 {{ Fill in the Synopsis }}
@@ -1885,7 +1885,7 @@ Create a Configuration Manager schedule token.
 {{ Fill in the Synopsis }}
 
 ### [New-CMSecondarySite](New-CMSecondarySite.md)
-Creates a secondary site in Configuration Manager.
+Create a secondary site.
 
 ### [New-CMSecurityScope](New-CMSecurityScope.md)
 Creates a security scope.
@@ -1966,7 +1966,7 @@ Create a new third-party software updates catalog.
 Create a policy to control whether Windows refreshes platform validation data when it starts after BitLocker recovery.
 
 ### [New-CMTSNetworkAdapterSetting](New-CMTSNetworkAdapterSetting.md)
-{{ Fill in the Synopsis }}
+Create a settings object for a network adapter on the **Apply Network Settings** task sequence step.
 
 ### [New-CMTSPartitionSetting](New-CMTSPartitionSetting.md)
 Create a task sequence partition object to use with the **Format and Partition Disk** step.
@@ -1975,16 +1975,16 @@ Create a task sequence partition object to use with the **Format and Partition D
 Create a rule to add to a Set Dynamic Variables task sequence step.
 
 ### [New-CMTSStepApplyDataImage](New-CMTSStepApplyDataImage.md)
-{{ Fill in the Synopsis }}
+Create an **Apply Data Image** step, which you can add to a task sequence.
 
 ### [New-CMTSStepApplyDriverPackage](New-CMTSStepApplyDriverPackage.md)
-{{ Fill in the Synopsis }}
+Create an **Apply Driver Package** step, which you can add to a task sequence.
 
 ### [New-CMTSStepApplyNetworkSetting](New-CMTSStepApplyNetworkSetting.md)
-{{ Fill in the Synopsis }}
+Create an **Apply Network Settings** step, which you can add to a task sequence.
 
 ### [New-CMTSStepApplyOperatingSystem](New-CMTSStepApplyOperatingSystem.md)
-{{ Fill in the Synopsis }}
+Create an **Apply OS Image** step, which you can add to a task sequence.
 
 ### [New-CMTSStepApplyWindowsSetting](New-CMTSStepApplyWindowsSetting.md)
 {{ Fill in the Synopsis }}
@@ -2104,7 +2104,7 @@ Create the **Setup Windows and ConfigMgr** step in a task sequence.
 Creates a t s step set variable.
 
 ### [New-CMTSStepUpgradeOperatingSystem](New-CMTSStepUpgradeOperatingSystem.md)
-{{ Fill in the Synopsis }}
+Create an **Upgrade OS** step, which you can add to a task sequence.
 
 ### [New-CMUidPolicy](New-CMUidPolicy.md)
 Create a policy to associate unique organizational identifiers to a new drive that is enabled with BitLocker.
@@ -2176,7 +2176,7 @@ Removes Configuration Manager alerts.
 Removes an alert subscription object.
 
 ### [Remove-CMAntimalwarePolicy](Remove-CMAntimalwarePolicy.md)
-Removes an antimalware policy for Endpoint Protection.
+Remove an antimalware policy for endpoint protection.
 
 ### [Remove-CMApplication](Remove-CMApplication.md)
 Removes an application from Configuration Manager.
@@ -2323,10 +2323,10 @@ Removes a deployment type dependency from Configuration Manager deployment type 
 Removes a deployment type dependency group from Configuration Manager deployment type.
 
 ### [Remove-CMDeploymentTypeInstallBehavior](Remove-CMDeploymentTypeInstallBehavior.md)
-{{ Fill in the Synopsis }}
+Remove from the specified deployment type the executable files that need to close for the app install to succeed.
 
 ### [Remove-CMDeploymentTypeReturnCode](Remove-CMDeploymentTypeReturnCode.md)
-{{ Fill in the Synopsis }}
+Delete return codes from the specified application deployment type.
 
 ### [Remove-CMDeploymentTypeSupersedence](Remove-CMDeploymentTypeSupersedence.md)
 Remove a deployment type supersedence relationship.
@@ -2431,7 +2431,7 @@ Removes a Configuration Manager package.
 Removes a package deployment from Configuration Manager.
 
 ### [Remove-CMPersistentUserSettingsGroup](Remove-CMPersistentUserSettingsGroup.md)
-{{ Fill in the Synopsis }}
+Reset your site-wide settings.
 
 ### [Remove-CMProgram](Remove-CMProgram.md)
 Removes programs from a Configuration Manager package.
@@ -2527,16 +2527,16 @@ Removes a Configuration Manager task sequence step.
 Remove a third-party software updates catalog.
 
 ### [Remove-CMTSStepApplyDataImage](Remove-CMTSStepApplyDataImage.md)
-{{ Fill in the Synopsis }}
+Remove the **Apply Data Image** step from a task sequence.
 
 ### [Remove-CMTSStepApplyDriverPackage](Remove-CMTSStepApplyDriverPackage.md)
-{{ Fill in the Synopsis }}
+Remove the **Apply Driver Package** step from a task sequence.
 
 ### [Remove-CMTSStepApplyNetworkSetting](Remove-CMTSStepApplyNetworkSetting.md)
-{{ Fill in the Synopsis }}
+Remove the **Apply Network Settings** step from a task sequence.
 
 ### [Remove-CMTSStepApplyOperatingSystem](Remove-CMTSStepApplyOperatingSystem.md)
-{{ Fill in the Synopsis }}
+Remove the **Apply OS Image** step from a task sequence.
 
 ### [Remove-CMTSStepApplyWindowsSetting](Remove-CMTSStepApplyWindowsSetting.md)
 {{ Fill in the Synopsis }}
@@ -2629,7 +2629,7 @@ Remove the **Setup Windows and ConfigMgr** step from a task sequence.
 Removes a TS step set variable
 
 ### [Remove-CMTSStepUpgradeOperatingSystem](Remove-CMTSStepUpgradeOperatingSystem.md)
-{{ Fill in the Synopsis }}
+Remove the **Upgrade OS** step from a task sequence.
 
 ### [Remove-CMUpdateGroupDeployment](Remove-CMUpdateGroupDeployment.md)
 Removes an update group deployment.
@@ -2704,7 +2704,7 @@ Changes properties of Configuration Manager alerts.
 Changes the properties of an alert subscription.
 
 ### [Set-CMAntimalwarePolicy](Set-CMAntimalwarePolicy.md)
-Changes configuration settings for an antimalware policy for Endpoint Protection.
+Configure settings for an endpoint protection antimalware policy.
 
 ### [Set-CMApplication](Set-CMApplication.md)
 Configure the properties of an application.
@@ -2986,10 +2986,10 @@ Sets a deployment type dependency in Configuration Manager.
 Sets a deployment type dependency group in Configuration Manager.
 
 ### [Set-CMDeploymentTypeInstallBehavior](Set-CMDeploymentTypeInstallBehavior.md)
-{{ Fill in the Synopsis }}
+Modify the executable files that need to close for the app install to succeed.
 
 ### [Set-CMDeploymentTypeReturnCode](Set-CMDeploymentTypeReturnCode.md)
-{{ Fill in the Synopsis }}
+Modify return codes for the specified application deployment type.
 
 ### [Set-CMDeploymentTypeSupersedence](Set-CMDeploymentTypeSupersedence.md)
 Configure a supersedence relationship on an application.
@@ -3280,16 +3280,16 @@ Modify a third-party updates catalog.
 Modify third-party software update categories.
 
 ### [Set-CMTSStepApplyDataImage](Set-CMTSStepApplyDataImage.md)
-{{ Fill in the Synopsis }}
+Configure an instance of the **Apply Data Image** task sequence step.
 
 ### [Set-CMTSStepApplyDriverPackage](Set-CMTSStepApplyDriverPackage.md)
-{{ Fill in the Synopsis }}
+Configure an instance of the **Apply Driver Package** task sequence step.
 
 ### [Set-CMTSStepApplyNetworkSetting](Set-CMTSStepApplyNetworkSetting.md)
-{{ Fill in the Synopsis }}
+Configure an instance of the **Apply Network Settings** task sequence step.
 
 ### [Set-CMTSStepApplyOperatingSystem](Set-CMTSStepApplyOperatingSystem.md)
-{{ Fill in the Synopsis }}
+Configure an instance of the **Apply OS Image** task sequence step.
 
 ### [Set-CMTSStepApplyWindowsSetting](Set-CMTSStepApplyWindowsSetting.md)
 {{ Fill in the Synopsis }}
@@ -3382,7 +3382,7 @@ Configure the **Setup Windows and ConfigMgr** step in a task sequence.
 Sets a TS step set variable.
 
 ### [Set-CMTSStepUpgradeOperatingSystem](Set-CMTSStepUpgradeOperatingSystem.md)
-{{ Fill in the Synopsis }}
+Configure an instance of the **Upgrade OS** task sequence step.
 
 ### [Set-CMUpdateGroupDeployment](Set-CMUpdateGroupDeployment.md)
 Sets an update group deployment.

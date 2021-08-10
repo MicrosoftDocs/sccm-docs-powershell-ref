@@ -1,6 +1,7 @@
 ---
 external help file: AdminUI.PS.psm1-help.xml
 Module Name: ConfigurationManager
+ms.date: 08/04/2021
 online version:
 schema: 2.0.0
 ---
@@ -8,7 +9,8 @@ schema: 2.0.0
 # Remove-CMTSStepUpgradeOperatingSystem
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Remove the **Upgrade OS** step from a task sequence.
 
 ## SYNTAX
 
@@ -31,7 +33,8 @@ Remove-CMTSStepUpgradeOperatingSystem [-TaskSequenceName] <String> [-StepName <S
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+Use this cmdlet to remove an instance of the **Upgrade OS** step from a task sequence.
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
@@ -39,11 +42,16 @@ Remove-CMTSStepUpgradeOperatingSystem [-TaskSequenceName] <String> [-StepName <S
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS XYZ:\> {{ Add example code here }}
-```
 
-{{ Add example description here }}
+This example first gets a task sequence object in the **$tsUpg** variable. It then passes that variable as the input object to remove the **Upgrade OS** step.
+
+```powershell
+$tsNameUpg = "Default OS upgrade"
+$tsUpg = Get-CMTaskSequence -Name $tsNameUpg -Fast
+
+$tsStepNameUpgradeOs = "Apply Operating System"
+Remove-CMTSStepUpgradeOperatingSystem -InputObject $tsUpg -StepName $tsStepNameUpgradeOs -Force
+```
 
 ## PARAMETERS
 
@@ -63,6 +71,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
+
 Run the command without asking for confirmation.
 
 ```yaml
@@ -78,7 +87,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{ Fill InputObject Description }}
+
+Specify a task sequence object from which to remove the **Upgrade OS** step. To get this object, use the [Get-CMTaskSequence](Get-CMTaskSequence.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -93,7 +103,8 @@ Accept wildcard characters: False
 ```
 
 ### -StepName
-{{ Fill StepName Description }}
+
+Specify the name of the **Upgrade OS** step to remove from the task sequence.
 
 ```yaml
 Type: String
@@ -108,7 +119,8 @@ Accept wildcard characters: False
 ```
 
 ### -TaskSequenceId
-{{ Fill TaskSequenceId Description }}
+
+Specify the **package ID** of the task sequence from which to remove the **Upgrade OS** step. This value is a standard package ID, for example `XYZ00858`.
 
 ```yaml
 Type: String
@@ -123,7 +135,8 @@ Accept wildcard characters: False
 ```
 
 ### -TaskSequenceName
-{{ Fill TaskSequenceName Description }}
+
+Specify the name of the task sequence from which to remove the **Upgrade OS** step.
 
 ```yaml
 Type: String
@@ -165,3 +178,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-CMTSStepUpgradeOperatingSystem](Get-CMTSStepUpgradeOperatingSystem.md)
+[New-CMTSStepUpgradeOperatingSystem](New-CMTSStepUpgradeOperatingSystem.md)
+[Set-CMTSStepUpgradeOperatingSystem](Set-CMTSStepUpgradeOperatingSystem.md)
+
+[Get-CMTaskSequence](Get-CMTaskSequence.md)

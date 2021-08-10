@@ -1,6 +1,7 @@
 ---
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
+ms.date: 08/04/2021
 online version:
 schema: 2.0.0
 ---
@@ -8,7 +9,8 @@ schema: 2.0.0
 # Set-CMTSStepApplyOperatingSystem
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Configure an instance of the **Apply OS Image** task sequence step.
 
 ## SYNTAX
 
@@ -233,7 +235,10 @@ Set-CMTSStepApplyOperatingSystem [-SetConditionOperatingSystem] [-StepName <Stri
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+Use this cmdlet to configure an instance of the **Apply OS Image** task sequence step.
+
+For more information on this step, see [About task sequence steps: Apply OS Image](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_ApplyOperatingSystemImage).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
@@ -241,17 +246,21 @@ Set-CMTSStepApplyOperatingSystem [-SetConditionOperatingSystem] [-StepName <Stri
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS XYZ:\> {{ Add example code here }}
-```
 
-{{ Add example description here }}
+This example changes the **Apply OS image** step in the **Default OS deployment** task sequence to use a specific disk and partition.
+
+```powershell
+$tsNameOsd = "Default OS deployment"
+$tsStepNameApplyOsImage = "Apply OS image"
+
+Set-CMTSStepApplyOperatingSystem -TaskSequenceName $tsNameOsd -StepName $tsStepNameApplyOsImage -Destination SpecificDiskAndPartition -DestinationDisk 5 -DestinationPartition 50
+```
 
 ## PARAMETERS
 
 ### -AddCondition
-Specify a condition object to add to this step.
 
+Specify a condition object to add to this step. To get this object, use one of the task sequence condition cmdlets. For example, [Get-CMTSStepConditionVariable](Get-CMTSStepConditionVariable.md).
 
 ```yaml
 Type: IResultObject[]
@@ -266,6 +275,7 @@ Accept wildcard characters: False
 ```
 
 ### -ClearCondition
+
 Remove a condition from this step. Use the **-Condition** parameter to specify the condition to remove.
 
 ```yaml
@@ -281,7 +291,8 @@ Accept wildcard characters: False
 ```
 
 ### -Condition
-Specify a condition object to use with this step.
+
+Specify a condition object to use with this step. To get this object, use one of the task sequence condition cmdlets. For example, [Get-CMTSStepConditionVariable](Get-CMTSStepConditionVariable.md).
 
 ```yaml
 Type: IResultObject[]
@@ -296,6 +307,7 @@ Accept wildcard characters: False
 ```
 
 ### -ConditionVariableName
+
 Specify the name of the task sequence variable to use as a condition.
 
 ```yaml
@@ -311,6 +323,7 @@ Accept wildcard characters: False
 ```
 
 ### -ConditionVariableValue
+
 Specify the value of the task sequence variable to use in a condition.
 
 ```yaml
@@ -326,7 +339,8 @@ Accept wildcard characters: False
 ```
 
 ### -ConfigFileName
-{{ Fill ConfigFileName Description }}
+
+Specify the file name of an unattended or Sysprep answer file to use for a custom installation. Use this parameter with the **ConfigFilePackage** parameter.
 
 ```yaml
 Type: String
@@ -341,7 +355,8 @@ Accept wildcard characters: False
 ```
 
 ### -ConfigFilePackage
-{{ Fill ConfigFilePackage Description }}
+
+Specify a package object that includes the unattended or Sysprep answer file to use for a custom installation. To get this object, use the [Get-CMPackage](Get-CMPackage.md) cmdlet. Use this parameter with the **ConfigFileName** parameter.
 
 ```yaml
 Type: IResultObject
@@ -371,6 +386,7 @@ Accept wildcard characters: False
 ```
 
 ### -Description
+
 Specify an optional description for this task sequence step.
 
 ```yaml
@@ -386,7 +402,16 @@ Accept wildcard characters: False
 ```
 
 ### -Destination
-{{ Fill Destination Description }}
+
+Specify the location where you want to apply this OS. If you don't specify this parameter, the default is `NextAvailableFormattedPartition`.
+
+- `NextAvailableFormattedPartition`: Use the next sequential partition not already targeted by an **Apply Operating System** or **Apply Data Image** step in this task sequence.
+
+- `SpecificDiskAndPartition`: Specify the disk number with the **DestinationDisk** parameter and the partition number with the **DestinationPartition** parameter.
+
+- `SpecificLogicalDriverLetter`: Use the **DestinationDriveLetter** parameter to specify the logical drive letter assigned to the partition by Windows PE. This drive letter can be different from the drive letter assigned by the newly deployed OS.
+
+- `LogicalDriverLetterInVariable`: Use the **DestinationVariable** parameter to specify the task sequence variable containing the drive letter assigned to the partition by Windows PE. This variable is typically set with the **DiskNumberVariable** parameter of the [Set-CMTSStepPartitionDisk](Set-CMTSStepPartitionDisk.md) or [New-CMTSStepPartitionDisk](New-CMTSStepPartitionDisk.md) cmdlets for the **Format and Partition Disk** task sequence step.
 
 ```yaml
 Type: DestinationType
@@ -402,7 +427,8 @@ Accept wildcard characters: False
 ```
 
 ### -DestinationDisk
-{{ Fill DestinationDisk Description }}
+
+When you use `-Destination SpecificDiskAndPartition`, use this parameter to specify the disk number. Specify an integer from `0` to `99`. Also use the **DestinationPartition** parameter.
 
 ```yaml
 Type: Int32
@@ -417,7 +443,8 @@ Accept wildcard characters: False
 ```
 
 ### -DestinationDriveLetter
-{{ Fill DestinationDriveLetter Description }}
+
+When you use `-Destination SpecificLogicalDriverLetter`, use this parameter to specify the logical drive letter. Specify a drive letter from `C` to `Z`.
 
 ```yaml
 Type: String
@@ -432,7 +459,8 @@ Accept wildcard characters: False
 ```
 
 ### -DestinationPartition
-{{ Fill DestinationPartition Description }}
+
+When you use `-Destination SpecificDiskAndPartition`, use this parameter to specify the partition number. Specify an integer from `1` to `99`. Also use the **DestinationDisk** parameter.
 
 ```yaml
 Type: Int32
@@ -447,7 +475,8 @@ Accept wildcard characters: False
 ```
 
 ### -DestinationVariable
-{{ Fill DestinationVariable Description }}
+
+When you use `-Destination LogicalDriverLetterInVariable`, use this parameter to specify the task sequence variable with the logical drive letter. The variable name needs to alphanumeric without spaces and fewer than 256 characters.
 
 ```yaml
 Type: String
@@ -462,6 +491,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
+
 This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
@@ -477,6 +507,7 @@ Accept wildcard characters: False
 ```
 
 ### -FileDateTimeOperator
+
 Specify a variable operator type for a file date/time condition.
 
 ```yaml
@@ -493,6 +524,7 @@ Accept wildcard characters: False
 ```
 
 ### -FilePath
+
 Specify the path for a file condition.
 
 ```yaml
@@ -508,6 +540,7 @@ Accept wildcard characters: False
 ```
 
 ### -FileTimestamp
+
 Specify a date/time value to use for a file condition.
 
 ```yaml
@@ -523,6 +556,7 @@ Accept wildcard characters: False
 ```
 
 ### -FileVersion
+
 Specify a version string for a file condition.
 
 ```yaml
@@ -538,6 +572,7 @@ Accept wildcard characters: False
 ```
 
 ### -FolderDateTimeOperator
+
 Specify a variable operator for a folder date/time condition.
 
 ```yaml
@@ -554,6 +589,7 @@ Accept wildcard characters: False
 ```
 
 ### -FolderPath
+
 Specify the path for a folder condition.
 
 ```yaml
@@ -569,6 +605,7 @@ Accept wildcard characters: False
 ```
 
 ### -FolderTimestamp
+
 Specify a date/time value to use for a folder condition.
 
 ```yaml
@@ -584,6 +621,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
+
 This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
@@ -599,7 +637,10 @@ Accept wildcard characters: False
 ```
 
 ### -ImagePackage
-{{ Fill ImagePackage Description }}
+
+Specify an OS image package object. The step applies the OS from this image. Use the **ImagePackageIndex** parameter to set the image index.
+
+To get this object, use the [Get-CMOperatingSystemImage](Get-CMOperatingSystemImage.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -614,7 +655,8 @@ Accept wildcard characters: False
 ```
 
 ### -ImagePackageIndex
-{{ Fill ImagePackageIndex Description }}
+
+Specify an integer value of the image index. Use this parameter with the **ImagePackage** parameter.
 
 ```yaml
 Type: Int32
@@ -629,7 +671,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{ Fill InputObject Description }}
+
+Specify a task sequence object that has the **Apply OS Image** step to configure. To get this object, use the [Get-CMTaskSequence](Get-CMTaskSequence.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -644,7 +687,10 @@ Accept wildcard characters: False
 ```
 
 ### -InstallPackage
-{{ Fill InstallPackage Description }}
+
+Specify an OS upgrade package object. The step applies the OS from this original installation source. Use the **InstallPackageIndex** parameter to set the edition.
+
+To get this object, use the [Get-CMOperatingSystemInstaller](Get-CMOperatingSystemInstaller.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -659,7 +705,8 @@ Accept wildcard characters: False
 ```
 
 ### -InstallPackageIndex
-{{ Fill InstallPackageIndex Description }}
+
+Specify an integer value of the OS upgrade package edition. Use this parameter with the **InstallPackage** parameter.
 
 ```yaml
 Type: Int32
@@ -674,7 +721,8 @@ Accept wildcard characters: False
 ```
 
 ### -IsAnyVersion
-{{ Fill IsAnyVersion Description }}
+
+Use this parameter with the **SetConditionSoftware** parameter to match any version of the product.
 
 ```yaml
 Type: Boolean
@@ -689,6 +737,7 @@ Accept wildcard characters: False
 ```
 
 ### -IsContinueOnError
+
 Use this parameter to enable the step option **Continue on error**. When you enable this option, if the step fails, the task sequence continues.
 
 ```yaml
@@ -704,6 +753,7 @@ Accept wildcard characters: False
 ```
 
 ### -IsEnabled
+
 Use this parameter to enable this task sequence step.
 
 ```yaml
@@ -719,6 +769,7 @@ Accept wildcard characters: False
 ```
 
 ### -MoveToIndex
+
 Move this step to the specified index position in the task sequence.
 
 ```yaml
@@ -734,7 +785,8 @@ Accept wildcard characters: False
 ```
 
 ### -MsiFilePath
-Specify the path to a Windows Installer file for an software condition.
+
+Use this parameter with the **SetConditionSoftware** parameter to specify the path to a Windows Installer file.
 
 ```yaml
 Type: String
@@ -749,6 +801,7 @@ Accept wildcard characters: False
 ```
 
 ### -Namespace
+
 Specify the namespace for a WMI query condition.
 
 ```yaml
@@ -764,6 +817,7 @@ Accept wildcard characters: False
 ```
 
 ### -NewStepName
+
 Use this parameter to rename this task sequence step.
 
 ```yaml
@@ -779,6 +833,7 @@ Accept wildcard characters: False
 ```
 
 ### -OperatorType
+
 Specify an operator to use with a task sequence variable condition.
 
 ```yaml
@@ -795,6 +850,7 @@ Accept wildcard characters: False
 ```
 
 ### -Query
+
 Specify a WMI query string to use for a condition.
 
 ```yaml
@@ -810,6 +866,7 @@ Accept wildcard characters: False
 ```
 
 ### -RegistryKey
+
 Specify the key to use with a registry condition.
 
 ```yaml
@@ -825,6 +882,7 @@ Accept wildcard characters: False
 ```
 
 ### -RegistryOperator
+
 Specify an operator to use with a registry condition.
 
 ```yaml
@@ -841,6 +899,7 @@ Accept wildcard characters: False
 ```
 
 ### -RegistryValueData
+
 Specify the value data to use with a registry condition.
 
 ```yaml
@@ -856,6 +915,7 @@ Accept wildcard characters: False
 ```
 
 ### -RegistryValueName
+
 Specify the value name to use with a registry condition.
 
 ```yaml
@@ -871,6 +931,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveConditionFile
+
 Use this parameter to remove a file condition.
 
 ```yaml
@@ -886,6 +947,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveConditionFolder
+
 Use this parameter to remove a folder condition.
 
 ```yaml
@@ -901,6 +963,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveConditionIfStatement
+
 Use this parameter to remove an `if` statement condition.
 
 ```yaml
@@ -916,6 +979,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveConditionOperatingSystem
+
 Use this parameter to remove an OS condition.
 
 ```yaml
@@ -931,6 +995,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveConditionQueryWmi
+
 Use this parameter to remove a WMI query condition.
 
 ```yaml
@@ -946,6 +1011,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveConditionRegistry
+
 Use this parameter to remove a registry condition.
 
 ```yaml
@@ -961,6 +1027,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveConditionSoftware
+
 Use this parameter to remove a software condition.
 
 ```yaml
@@ -976,6 +1043,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveConditionVariable
+
 Use this parameter to remove a task sequence variable condition.
 
 ```yaml
@@ -991,6 +1059,7 @@ Accept wildcard characters: False
 ```
 
 ### -RootKey
+
 Specify the root key to use with a registry condition.
 
 ```yaml
@@ -1007,7 +1076,10 @@ Accept wildcard characters: False
 ```
 
 ### -RunFromNet
-{{ Fill RunFromNet Description }}
+
+Set this parameter to `$true` to allow the task sequence to apply the OS image directly from the distribution point.
+
+For greatest security, it's recommended to not enable this setting. This option is designed for use on devices with limited storage capacity. For more information, see [Access content directly from the distribution point](/mem/configmgr/osd/understand/task-sequence-steps#access-content-directly-from-the-distribution-point).
 
 ```yaml
 Type: Boolean
@@ -1022,6 +1094,7 @@ Accept wildcard characters: False
 ```
 
 ### -SetConditionFile
+
 Add a new file condition.
 
 ```yaml
@@ -1037,6 +1110,7 @@ Accept wildcard characters: False
 ```
 
 ### -SetConditionFolder
+
 Add a new folder condition.
 
 ```yaml
@@ -1052,6 +1126,7 @@ Accept wildcard characters: False
 ```
 
 ### -SetConditionIfStatement
+
 Add a new `if` statement condition.
 
 ```yaml
@@ -1067,6 +1142,7 @@ Accept wildcard characters: False
 ```
 
 ### -SetConditionOperatingSystem
+
 Add a new OS condition.
 
 ```yaml
@@ -1082,6 +1158,7 @@ Accept wildcard characters: False
 ```
 
 ### -SetConditionQueryWmi
+
 Add a new WMI query condition.
 
 ```yaml
@@ -1097,6 +1174,7 @@ Accept wildcard characters: False
 ```
 
 ### -SetConditionRegistry
+
 Add a new registry condition.
 
 ```yaml
@@ -1112,6 +1190,7 @@ Accept wildcard characters: False
 ```
 
 ### -SetConditionSoftware
+
 Add a new software condition.
 
 ```yaml
@@ -1127,6 +1206,7 @@ Accept wildcard characters: False
 ```
 
 ### -SetConditionVariable
+
 Add a new task sequence variable condition.
 
 ```yaml
@@ -1142,6 +1222,7 @@ Accept wildcard characters: False
 ```
 
 ### -StatementType
+
 Set the type for an `if` statement condition.
 
 ```yaml
@@ -1158,6 +1239,7 @@ Accept wildcard characters: False
 ```
 
 ### -StepName
+
 Specify the name of the step to select for changes.
 
 ```yaml
@@ -1173,6 +1255,7 @@ Accept wildcard characters: False
 ```
 
 ### -StepOrder
+
 Use this parameter to reorder the step in the task sequence.
 
 ```yaml
@@ -1189,6 +1272,7 @@ Accept wildcard characters: False
 ```
 
 ### -SupportedPlatform
+
 Use this parameter to specify the platforms for an OS condition.
 
 ```yaml
@@ -1204,7 +1288,8 @@ Accept wildcard characters: False
 ```
 
 ### -TaskSequenceId
-Specify the ID of the task sequence to target for changes.
+
+Specify the **package ID** of the task sequence with the **Apply OS Image** step to configure. This value is a standard package ID, for example `XYZ00858`.
 
 ```yaml
 Type: String
@@ -1219,7 +1304,8 @@ Accept wildcard characters: False
 ```
 
 ### -TaskSequenceName
-Specify the name of the task sequence to target for changes.
+
+Specify the name of the task sequence with the **Apply OS Image** step to configure.
 
 ```yaml
 Type: String
@@ -1234,6 +1320,7 @@ Accept wildcard characters: False
 ```
 
 ### -ValueType
+
 Specify the type of value for a registry condition.
 
 ```yaml
@@ -1250,6 +1337,7 @@ Accept wildcard characters: False
 ```
 
 ### -VersionOperator
+
 Specify an operator to use with a file condition.
 
 ```yaml
@@ -1282,7 +1370,8 @@ Accept wildcard characters: False
 ```
 
 ### -LayeredDriver
-{{ Fill LayeredDriver Description }}
+
+Starting in version 2107, use this parameter to select other types of keyboards that are common with Japanese and Korean languages. Specify an integer value for the layered driver to install with Windows. Use the same values as the [OsdLayeredDriver](/mem/configmgr/osd/understand/task-sequence-variables#OsdLayeredDriver) task sequence variable.
 
 ```yaml
 Type: OsdLayeredDriver
@@ -1308,3 +1397,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-CMTSStepApplyOperatingSystem](Get-CMTSStepApplyOperatingSystem.md)
+[New-CMTSStepApplyOperatingSystem](New-CMTSStepApplyOperatingSystem.md)
+[Remove-CMTSStepApplyOperatingSystem](Remove-CMTSStepApplyOperatingSystem.md)
+
+[About task sequence steps: Apply OS Image](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_ApplyOperatingSystemImage)

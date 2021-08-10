@@ -37,7 +37,7 @@ $msi_dt = Get-CMDeploymentType -ApplicationName "CenterApp" -DeploymentTypeName 
 Add-CMDeploymentTypeInstallBehavior -InputObject $msi_dt -ExeFileName "notepad.exe" -DisplayName "Notepad"
 ```
 
-<!-- For more information, see [Add-CMDeploymentTypeInstallBehavior](/powershell/module/configurationmanager/Add-CMDeploymentTypeInstallBehavior). -->
+For more information, see [Add-CMDeploymentTypeInstallBehavior](/powershell/module/configurationmanager/Add-CMDeploymentTypeInstallBehavior).
 
 #### Get-CMDeploymentTypeInstallBehavior
 
@@ -48,7 +48,7 @@ $msi_dt = Get-CMDeploymentType -ApplicationName "CenterApp" -DeploymentTypeName 
 Get-CMDeploymentTypeInstallBehavior -InputObject $msi_dt
 ```
 
-<!-- For more information, see [Get-CMDeploymentTypeInstallBehavior](/powershell/module/configurationmanager/Get-CMDeploymentTypeInstallBehavior). -->
+For more information, see [Get-CMDeploymentTypeInstallBehavior](/powershell/module/configurationmanager/Get-CMDeploymentTypeInstallBehavior).
 
 #### Remove-CMDeploymentTypeInstallBehavior
 
@@ -59,7 +59,7 @@ $msi_dt = Get-CMDeploymentType -ApplicationName "CenterApp" -DeploymentTypeName 
 Remove-CMDeploymentTypeInstallBehavior -InputObject $msi_dt -ExeFileName "notepad.exe"
 ```
 
-<!-- For more information, see [Remove-CMDeploymentTypeInstallBehavior](/powershell/module/configurationmanager/Remove-CMDeploymentTypeInstallBehavior). -->
+For more information, see [Remove-CMDeploymentTypeInstallBehavior](/powershell/module/configurationmanager/Remove-CMDeploymentTypeInstallBehavior).
 
 #### Set-CMDeploymentTypeInstallBehavior
 
@@ -70,7 +70,7 @@ $msi_dt = Get-CMDeploymentType -ApplicationName "CenterApp" -DeploymentTypeName 
 Set-CMDeploymentTypeInstallBehavior -InputObject $msi_dt -ExeFileName "notepad.exe" -NewExeFileName "calc.exe" -DisplayName "Calculator"
 ```
 
-<!-- For more information, see [Set-CMDeploymentTypeInstallBehavior](/powershell/module/configurationmanager/Set-CMDeploymentTypeInstallBehavior). -->
+For more information, see [Set-CMDeploymentTypeInstallBehavior](/powershell/module/configurationmanager/Set-CMDeploymentTypeInstallBehavior).
 
 ### Manage return codes for application deployment types
 
@@ -85,7 +85,7 @@ $msi_dt = Get-CMDeploymentType -ApplicationName "CenterApp" -DeploymentTypeName 
 Add-CMDeploymentTypeReturnCode -InputObject $msi_dt -ReturnCode 1602 -Name "User cancel" -CodeType Failure -Description "The user cancelled the installation"
 ```
 
-<!-- For more information, see [Add-CMDeploymentTypeReturnCode](/powershell/module/configurationmanager/Add-CMDeploymentTypeReturnCode). -->
+For more information, see [Add-CMDeploymentTypeReturnCode](/powershell/module/configurationmanager/Add-CMDeploymentTypeReturnCode).
 
 #### Get-CMDeploymentTypeReturnCode
 
@@ -95,7 +95,7 @@ Use this cmdlet to get the list of return codes from the specified deployment ty
 Get-CMDeploymentType -ApplicationName "CenterApp" -DeploymentTypeName "InterDept - Windows Installer (.msi file)" | Get-CMDeploymentTypeReturnCode
 ```
 
-<!-- For more information, see [Get-CMDeploymentTypeReturnCode](/powershell/module/configurationmanager/Get-CMDeploymentTypeReturnCode). -->
+For more information, see [Get-CMDeploymentTypeReturnCode](/powershell/module/configurationmanager/Get-CMDeploymentTypeReturnCode).
 
 #### Remove-CMDeploymentTypeReturnCode
 
@@ -106,7 +106,7 @@ $msi_dt = Get-CMDeploymentType -ApplicationName "CenterApp" -DeploymentTypeName 
 Remove-CMDeploymentTypeReturnCode -InputObject $msi_dt -ReturnCode 1602
 ```
 
-<!-- For more information, see [Remove-CMDeploymentTypeReturnCode](/powershell/module/configurationmanager/Remove-CMDeploymentTypeReturnCode). -->
+For more information, see [Remove-CMDeploymentTypeReturnCode](/powershell/module/configurationmanager/Remove-CMDeploymentTypeReturnCode).
 
 #### Set-CMDeploymentTypeReturnCode
 
@@ -117,13 +117,13 @@ $msi_dt = Get-CMDeploymentType -ApplicationName "CenterApp" -DeploymentTypeName 
 Add-CMDeploymentTypeReturnCode -InputObject $msi_dt -ReturnCode 3010 -Name "Always reboot" -CodeType HardReboot -Description "Change soft reboot to hard reboot"
 ```
 
-<!-- For more information, see [Set-CMDeploymentTypeReturnCode](/powershell/module/configurationmanager/Set-CMDeploymentTypeReturnCode). -->
+For more information, see [Set-CMDeploymentTypeReturnCode](/powershell/module/configurationmanager/Set-CMDeploymentTypeReturnCode).
 
 ## Other new cmdlets
 
 ### Get-CMClientSettingDeployment
 
-Use this cmdlet to get a deployment of a custom client settings object. You can use this object with [Remove-CMClientSetting](/powershell/module/configurationmanager/remove-cmclientsetting).
+Use this cmdlet to get a deployment of a custom client settings object. You can use this object with [Remove-CMClientSettingDeployment](/powershell/module/configurationmanager/remove-cmclientsettingdeployment).
 
 For more information on client settings, see [How to configure client settings](/mem/configmgr/core/clients/deploy/configure-client-settings).
 
@@ -132,7 +132,7 @@ $clientSetting =  Get-CMClientSetting -Name "Software Center customizations"
 $clientSetting | Get-CMClientSettingDeployment
 ```
 
-<!-- For more information, see [Get-CMClientSettingDeployment](/powershell/module/configurationmanager/Get-CMClientSettingDeployment). -->
+For more information, see [Get-CMClientSettingDeployment](/powershell/module/configurationmanager/Get-CMClientSettingDeployment).
 
 ### Get-CMDeploymentTypeDetectionClause
 
@@ -148,7 +148,7 @@ $clause1 = Get-CMDeploymentTypeDetectionClause -InputObject $appMsi
 Set-CMScriptDeploymentType -ApplicationName "Configuration Manager console" -DeploymentTypeName "Install" -AddDetectionClause $clause1
 ```
 
-<!-- For more information, see [Get-CMDeploymentTypeDetectionClause](/powershell/module/configurationmanager/Get-CMDeploymentTypeDetectionClause). -->
+For more information, see [Get-CMDeploymentTypeDetectionClause](/powershell/module/configurationmanager/Get-CMDeploymentTypeDetectionClause).
 
 ### Get-CMPersistentUserSettingsGroup
 
@@ -156,17 +156,18 @@ Use this cmdlet to get the list of site-wide settings that you've stored. These 
 
 For example, [Configuration Manager console notifications](/mem/configmgr/core/servers/manage/admin-console-notifications) that are active or you've dismissed.
 
-<!-- For more information, see [Get-CMPersistentUserSettingsGroup](/powershell/module/configurationmanager/Get-CMPersistentUserSettingsGroup). -->
+For more information, see [Get-CMPersistentUserSettingsGroup](/powershell/module/configurationmanager/Get-CMPersistentUserSettingsGroup).
 
 ### Get-CMSoftwareUpdateContentInfo
 
 Use this cmdlet to get software update content information.
 
 ```powershell
-Get-CMSoftwareUpdateContentInfo -Id $updateId
+$update = Get-CMSoftwareUpdate -ArticleId "5004237" -Fast
+Get-CMSoftwareUpdateContentInfo -InputObject $update[1]
 ```
 
-<!-- For more information, see [Get-CMSoftwareUpdateContentInfo](/powershell/module/configurationmanager/Get-CMSoftwareUpdateContentInfo). -->
+For more information, see [Get-CMSoftwareUpdateContentInfo](/powershell/module/configurationmanager/Get-CMSoftwareUpdateContentInfo).
 
 ### Remove-CMPersistentUserSettingsGroup
 
@@ -174,7 +175,7 @@ Use this cmdlet to reset your site-wide settings.
 
 For example, you can restore [Configuration Manager console notifications](/mem/configmgr/core/servers/manage/admin-console-notifications) that you've dismissed. After you run this cmdlet, and you restart the Configuration Manager console, you'll see all available notifications again.
 
-<!-- For more information, see [Remove-CMPersistentUserSettingsGroup](/powershell/module/configurationmanager/Remove-CMPersistentUserSettingsGroup). -->
+For more information, see [Remove-CMPersistentUserSettingsGroup](/powershell/module/configurationmanager/Remove-CMPersistentUserSettingsGroup).
 
 ## Deprecated and removed cmdlets
 

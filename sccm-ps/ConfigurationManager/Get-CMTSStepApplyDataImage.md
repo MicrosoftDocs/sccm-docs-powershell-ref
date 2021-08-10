@@ -1,6 +1,7 @@
 ---
 external help file: AdminUI.PS.psm1-help.xml
 Module Name: ConfigurationManager
+ms.date: 08/04/2021
 online version:
 schema: 2.0.0
 ---
@@ -8,7 +9,8 @@ schema: 2.0.0
 # Get-CMTSStepApplyDataImage
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Get the **Apply Data Image** step from a specific task sequence.
 
 ## SYNTAX
 
@@ -31,7 +33,13 @@ Get-CMTSStepApplyDataImage [-TaskSequenceName] <String> [-StepName <String>] [-W
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+Use this cmdlet to get a task sequence step object for one or more instances of the **Apply Data Image** step. You can use this object to:
+
+- Remove the step from a task sequence with [Remove-CMTSStepApplyDataImage](Remove-CMTSStepApplyDataImage.md)
+- Copy the step to another task sequence with [Add-CMTaskSequenceStep](Add-CMTaskSequenceStep.md)
+
+For more information on this step, see [About task sequence steps: Apply Data Image](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_ApplyDataImage).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
@@ -39,11 +47,16 @@ Get-CMTSStepApplyDataImage [-TaskSequenceName] <String> [-StepName <String>] [-W
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS XYZ:\> {{ Add example code here }}
-```
 
-{{ Add example description here }}
+This example first gets a task sequence object in the **$ts** variable. It then passes that variable as the input object to get the **Apply Data Image** step.
+
+```powershell
+$tsName = "Custom task sequence"
+$ts = Get-CMTaskSequence -Name $tsName -Fast
+
+$tsStepNameApplyDataImg = "Apply data image"
+$tsStepApplyDataImg = Get-CMTSStepApplyDataImage -InputObject $ts -StepName $tsStepNameApplyDataImg
+```
 
 ## PARAMETERS
 
@@ -63,7 +76,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{ Fill InputObject Description }}
+
+Specify a task sequence object from which to get the **Apply Data Image** step. To get this object, use the [Get-CMTaskSequence](Get-CMTaskSequence.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -78,7 +92,8 @@ Accept wildcard characters: False
 ```
 
 ### -StepName
-{{ Fill StepName Description }}
+
+Specify the name of the **Apply Data Image** step to get from the task sequence.
 
 ```yaml
 Type: String
@@ -93,7 +108,8 @@ Accept wildcard characters: False
 ```
 
 ### -TaskSequenceId
-{{ Fill TaskSequenceId Description }}
+
+Specify the **package ID** of the task sequence from which to get the **Apply Data Image** step. This value is a standard package ID, for example `XYZ00858`.
 
 ```yaml
 Type: String
@@ -108,7 +124,8 @@ Accept wildcard characters: False
 ```
 
 ### -TaskSequenceName
-{{ Fill TaskSequenceName Description }}
+
+Specify the name of the task sequence from which to get the **Apply Data Image** step.
 
 ```yaml
 Type: String
@@ -144,9 +161,20 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
+
+[New-CMTSStepApplyDataImage](New-CMTSStepApplyDataImage.md)
+[Remove-CMTSStepApplyDataImage](Remove-CMTSStepApplyDataImage.md)
+[Set-CMTSStepApplyDataImage](Set-CMTSStepApplyDataImage.md)
+
+[Add-CMTaskSequenceStep](Add-CMTaskSequenceStep.md)
+[Get-CMTaskSequence](Get-CMTaskSequence.md)
+
+[About task sequence steps: Apply Data Image](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_ApplyDataImage)

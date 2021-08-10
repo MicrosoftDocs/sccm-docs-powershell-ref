@@ -681,7 +681,7 @@ The acceptable values for this parameter are:
 Type: MediaInputType
 Parameter Sets: NewBootableMedia, NewStandAloneMedia, NewCaptureMedia
 Aliases:
-Accepted values: Usb, CdDvd, Hd, Usb, CdDvd, Hd
+Accepted values: Usb, CdDvd, Hd, Usb, CdDvd, Hd, Usb, CdDvd, Hd, Usb, CdDvd, Hd
 
 Required: True
 Position: Named
@@ -694,7 +694,7 @@ Accept wildcard characters: False
 Type: MediaInputType
 Parameter Sets: NewStandAloneMediaByValue, NewBootableMediaByValue, NewCaptureMediaByValue
 Aliases:
-Accepted values: Usb, CdDvd, Hd, Usb, CdDvd, Hd
+Accepted values: Usb, CdDvd, Hd, Usb, CdDvd, Hd, Usb, CdDvd, Hd, Usb, CdDvd, Hd
 
 Required: False
 Position: Named
@@ -715,7 +715,7 @@ The acceptable values for this parameter are:
 Type: MediaMode
 Parameter Sets: NewBootableMedia, NewPrestagedMedia, NewPrestagedMediaByValue
 Aliases:
-Accepted values: Dynamic, SiteBased, Dynamic, SiteBased
+Accepted values: Dynamic, SiteBased, Dynamic, SiteBased, Dynamic, SiteBased, Dynamic, SiteBased
 
 Required: True
 Position: Named
@@ -728,7 +728,7 @@ Accept wildcard characters: False
 Type: MediaMode
 Parameter Sets: NewBootableMediaByValue
 Aliases:
-Accepted values: Dynamic, SiteBased, Dynamic, SiteBased
+Accepted values: Dynamic, SiteBased, Dynamic, SiteBased, Dynamic, SiteBased, Dynamic, SiteBased
 
 Required: False
 Position: Named
