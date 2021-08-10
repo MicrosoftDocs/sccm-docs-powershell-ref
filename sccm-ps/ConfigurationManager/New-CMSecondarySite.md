@@ -343,6 +343,8 @@ Accept wildcard characters: False
 Indicates that client computers communicate with the distribution point by using HTTP.
 This parameter applies when the secondary site has installed and configured IIS to create a distribution point.
 \
+
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: NewDistributionPointByHTTPAndCreateCertificate, NewDistributionPointByHTTPAndImportCertificate

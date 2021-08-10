@@ -70,7 +70,7 @@ Valid values are:
 Type: CategoryType
 Parameter Sets: ByCategory
 Aliases:
-Accepted values: UserCategories, BaselineCategories, DriverCategories, AppCategories, GlobalCondition, CatalogCategories, UserCategories, BaselineCategories, DriverCategories, AppCategories, GlobalCondition, CatalogCategories
+Accepted values: UserCategories, BaselineCategories, DriverCategories, AppCategories, GlobalCondition, CatalogCategories, UserCategories, BaselineCategories, DriverCategories, AppCategories, GlobalCondition, CatalogCategories, UserCategories, BaselineCategories, DriverCategories, AppCategories, GlobalCondition, CatalogCategories, UserCategories, BaselineCategories, DriverCategories, AppCategories, GlobalCondition, CatalogCategories
 
 Required: True
 Position: Named
@@ -83,7 +83,7 @@ Accept wildcard characters: False
 Type: CategoryType
 Parameter Sets: ByName
 Aliases:
-Accepted values: UserCategories, BaselineCategories, DriverCategories, AppCategories, GlobalCondition, CatalogCategories, UserCategories, BaselineCategories, DriverCategories, AppCategories, GlobalCondition, CatalogCategories
+Accepted values: UserCategories, BaselineCategories, DriverCategories, AppCategories, GlobalCondition, CatalogCategories, UserCategories, BaselineCategories, DriverCategories, AppCategories, GlobalCondition, CatalogCategories, UserCategories, BaselineCategories, DriverCategories, AppCategories, GlobalCondition, CatalogCategories, UserCategories, BaselineCategories, DriverCategories, AppCategories, GlobalCondition, CatalogCategories
 
 Required: False
 Position: Named

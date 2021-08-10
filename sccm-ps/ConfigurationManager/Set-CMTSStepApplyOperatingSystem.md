@@ -253,7 +253,7 @@ This example changes the **Apply OS image** step in the **Default OS deployment*
 $tsNameOsd = "Default OS deployment"
 $tsStepNameApplyOsImage = "Apply OS image"
 
-Set-CMTSStepApplyOperatingSystem -TaskSequenceName $tsNameOsd -StepName $tsStepNameApplyOsImage -Destination SpecificDiskAndPartition -DestinationDisk 5 -DestinationPartition 50 
+Set-CMTSStepApplyOperatingSystem -TaskSequenceName $tsNameOsd -StepName $tsStepNameApplyOsImage -Destination SpecificDiskAndPartition -DestinationDisk 5 -DestinationPartition 50
 ```
 
 ## PARAMETERS

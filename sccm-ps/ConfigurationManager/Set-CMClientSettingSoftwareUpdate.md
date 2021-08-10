@@ -254,22 +254,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -EnableWsusCertPinning
-
-Applies to version 2107 and later. Set this parameter to `$true` to enforce TLS certificate pinning for Windows Update client for detecting updates.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -EnforceMandatory
 
 When any software update deployment deadline is reached, install all other software update deployments with deadline coming within a specified period of time. Use the **BatchingTimeout** parameter to specify the period of time.
@@ -428,6 +412,22 @@ Shows what would happen if the cmdlet runs. The cmdlet isn't run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableWsusCertPinning
+
+Applies to version 2107 and later. Set this parameter to `$true` to enforce TLS certificate pinning for Windows Update client for detecting updates.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named
