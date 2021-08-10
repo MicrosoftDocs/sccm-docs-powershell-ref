@@ -1,7 +1,7 @@
 ---
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 12/30/2020
+ms.date: 08/02/2021
 online version:
 schema: 2.0.0
 ---
@@ -115,6 +115,8 @@ Specify an array of detection method clauses for this deployment type. To create
 - [New-CMDetectionClauseWindowsInstaller](New-CMDetectionClauseWindowsInstaller.md)
 
 Save the output of these cmdlets into a variable. Then specify those variables as an array for this parameter. For example, `-AddDetectionClause $clauseFile1,$clauseFile2,$clauseFile3`.
+
+You can also use [Get-CMDeploymentTypeDetectionClause](Get-CMDeploymentTypeDetectionClause.md) to get an existing detection clause from another application.
 
 ```yaml
 Type: DetectionClause[]

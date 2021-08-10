@@ -2,7 +2,7 @@
 description: Configure client settings for software updates.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 11/20/2020
+ms.date: 08/04/2021
 schema: 2.0.0
 title: Set-CMClientSettingSoftwareUpdate
 ---
@@ -240,7 +240,7 @@ Accept wildcard characters: False
 
 ### -EnableThirdPartyUpdates
 
-Applies to version 1910 and later. Set this parameter to `$true` to enable third-party software updates.
+Set this parameter to `$true` to enable third-party software updates.
 
 ```yaml
 Type: Boolean
@@ -421,7 +421,8 @@ Accept wildcard characters: False
 ```
 
 ### -EnableWsusCertPinning
-{{ Fill EnableWsusCertPinning Description }}
+
+Applies to version 2107 and later. Set this parameter to `$true` to enforce TLS certificate pinning for Windows Update client for detecting updates.
 
 ```yaml
 Type: Boolean

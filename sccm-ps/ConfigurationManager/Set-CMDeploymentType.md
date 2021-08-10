@@ -1231,6 +1231,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### IResultObject#SMS_DeploymentType
 ## NOTES
 
+To configure return codes on a deployment type, use the [Add-CMDeploymentTypeReturnCode](Add-CMDeploymentTypeReturnCode.md) cmdlet.
+
 ## RELATED LINKS
 
 [Get-CMDeploymentType](Get-CMDeploymentType.md)

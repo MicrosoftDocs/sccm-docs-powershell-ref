@@ -1,6 +1,7 @@
 ﻿---
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
+ms.date: 08/04/2021
 online version:
 schema: 2.0.0
 ---
@@ -8,7 +9,8 @@ schema: 2.0.0
 # Get-CMBoundaryGroupSiteSystem
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Get site systems in the specified boundary group
 
 ## SYNTAX
 
@@ -31,23 +33,35 @@ Get-CMBoundaryGroupSiteSystem [-InputObject <IResultObject>] [-DisableWildcardHa
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+Use this cmdlet to get site systems in the specified boundary group. For more information, see [About boundary groups in Configuration Manager](/mem/configmgr/core/servers/deploy/configure/boundary-groups).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS XYZ:\> {{ Add example code here }}
-```
+### Example 1: Display FQDNs of site systems in a boundary group
 
-{{ Add example description here }}
+This example first gets a boundary group by name and saves that object in a variable **$boundaryGroup**. It then queries for the site systems in that boundary group by passing the boundary group object, and saves the results in a variable **$bgSiteSystems**.
+
+The **foreach** loop then goes through each site system object and extracts the FQDN from the NAL path.
+
+```powershell
+$bgName = "Contoso HQ BG"
+$boundaryGroup = Get-CMBoundaryGroup -Name $bgName
+
+$bgSiteSystems = Get-CMBoundaryGroupSiteSystem -InputObject $boundaryGroup
+
+foreach ($system in $bgSiteSystems) {
+  Write-Host $system.ServerNalPath.TrimEnd('\').Split('\')[-1]
+}
+```
 
 ## PARAMETERS
 
 ### -DisableWildcardHandling
+
 This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
@@ -63,6 +77,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
+
 This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
@@ -78,7 +93,8 @@ Accept wildcard characters: False
 ```
 
 ### -GroupName
-{{ Fill GroupName Description }}
+
+Specify a boundary group name to get the associated site systems.
 
 ```yaml
 Type: String
@@ -93,7 +109,8 @@ Accept wildcard characters: True
 ```
 
 ### -Id
-{{ Fill Id Description }}
+
+Specify an array of boundary group IDs to get the associated site systems. This value is an integer, for example `5`.
 
 ```yaml
 Type: String[]
@@ -108,7 +125,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{ Fill InputObject Description }}
+
+Specify a boundary group object to get the associated site systems. To get this object, use the [Get-CMBoundaryGroup](Get-CMBoundaryGroup.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -134,4 +152,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### IResultObject#SMS_BoundaryGroupSiteSystems
 ## NOTES
 
+For more information on this return object and its properties, see [SMS_BoundaryGroupSiteSystems server WMI class](/mem/configmgr/develop/reference/core/servers/configure/sms_boundarygroupsitesystems-server-wmi-class).
+
 ## RELATED LINKS
+
+[Get-CMBoundaryGroup](Get-CMBoundaryGroup.md)
+
+[Get-CMBoundaryGroupRelationship](Get-CMBoundaryGroupRelationship.md)

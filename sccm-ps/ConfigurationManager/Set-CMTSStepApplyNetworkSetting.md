@@ -1,6 +1,7 @@
 ---
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
+ms.date: 08/04/2021
 online version:
 schema: 2.0.0
 ---
@@ -8,7 +9,8 @@ schema: 2.0.0
 # Set-CMTSStepApplyNetworkSetting
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Configure an instance of the **Apply Network Settings** task sequence step.
 
 ## SYNTAX
 
@@ -229,7 +231,10 @@ Set-CMTSStepApplyNetworkSetting [-SetConditionOperatingSystem] [-StepName <Strin
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+Use this cmdlet to configure an instance of the **Apply Network Settings** task sequence step.
+
+For more information on this step, see [About task sequence steps: Apply Network Settings](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_ApplyNetworkSettings).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
@@ -237,16 +242,21 @@ Set-CMTSStepApplyNetworkSetting [-SetConditionOperatingSystem] [-StepName <Strin
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS XYZ:\> {{ Add example code here }}
-```
 
-{{ Add example description here }}
+This example changes the **Apply Network Settings** step in the **Default OS deployment** task sequence to a different name and join a workgroup.
+
+```powershell
+$tsNameOsd = "Default OS deployment"
+$tsStepNameApplyNetSet = "Apply Network Settings"
+
+Set-CMTSStepApplyOperatingSystem -TaskSequenceName $tsNameOsd -StepName $tsStepNameApplyNetSet -NewStepName "Join workgroup" -WorkgroupName "workgroup"
+```
 
 ## PARAMETERS
 
 ### -AddAdapterSetting
-{{ Fill AddAdapterSetting Description }}
+
+Specify a network adapter settings object to add to this step. To get this object, use the [New-CMTSNetworkAdapterSetting](New-CMTSNetworkAdapterSetting.md) cmdlet.
 
 ```yaml
 Type: IResultObject[]
@@ -261,8 +271,8 @@ Accept wildcard characters: False
 ```
 
 ### -AddCondition
-Specify a condition object to add to this step.
 
+Specify a condition object to add to this step. To get this object, use one of the task sequence condition cmdlets. For example, [Get-CMTSStepConditionVariable](Get-CMTSStepConditionVariable.md).
 
 ```yaml
 Type: IResultObject[]
@@ -277,7 +287,8 @@ Accept wildcard characters: False
 ```
 
 ### -CleanAdapterSetting
-{{ Fill CleanAdapterSetting Description }}
+
+Add this parameter to remove all adapter settings. To remove specific adapter settings, use the **RemoveAdapterSettingName** parameter.
 
 ```yaml
 Type: SwitchParameter
@@ -292,6 +303,7 @@ Accept wildcard characters: False
 ```
 
 ### -ClearCondition
+
 Remove a condition from this step. Use the **-Condition** parameter to specify the condition to remove.
 
 ```yaml
@@ -307,7 +319,8 @@ Accept wildcard characters: False
 ```
 
 ### -Condition
-Specify a condition object to use with this step.
+
+Specify a condition object to use with this step. To get this object, use one of the task sequence condition cmdlets. For example, [Get-CMTSStepConditionVariable](Get-CMTSStepConditionVariable.md).
 
 ```yaml
 Type: IResultObject[]
@@ -322,6 +335,7 @@ Accept wildcard characters: False
 ```
 
 ### -ConditionVariableName
+
 Specify the name of the task sequence variable to use as a condition.
 
 ```yaml
@@ -337,6 +351,7 @@ Accept wildcard characters: False
 ```
 
 ### -ConditionVariableValue
+
 Specify the value of the task sequence variable to use in a condition.
 
 ```yaml
@@ -352,6 +367,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -367,6 +383,7 @@ Accept wildcard characters: False
 ```
 
 ### -Description
+
 Specify an optional description for this task sequence step.
 
 ```yaml
@@ -382,6 +399,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
+
 This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
@@ -397,7 +415,8 @@ Accept wildcard characters: False
 ```
 
 ### -DnsSuffix
-{{ Fill DnsSuffix Description }}
+
+Specify the DNS suffix. For example, `corp.contoso.com`. This setting is applied to all connections with TCP/IP enabled.
 
 ```yaml
 Type: String
@@ -412,7 +431,12 @@ Accept wildcard characters: False
 ```
 
 ### -DomainName
-{{ Fill DomainName Description }}
+
+To configure this step to have the computer join a domain, use this parameter to specify the name of a domain to join. Then use the following other parameters:
+
+- **DomainOU**: Optionally specify an organizational unit in which to create the new computer account
+- **UserName**: Specify the user account with permissions to join a computer to the domain
+- **UserPassword**: Specify the password for the user account.
 
 ```yaml
 Type: String
@@ -427,7 +451,10 @@ Accept wildcard characters: False
 ```
 
 ### -DomainOU
-{{ Fill DomainOU Description }}
+
+When you use the **DomainName** parameter, you can also specify the path to an organizational unit (OU). When the computer joins the domain, if it creates a new computer account, that account will be in this OU.
+
+For example, `LDAP://OU=MyOu,DC=MyDom,DC=MyCompany,DC=com`
 
 ```yaml
 Type: String
@@ -442,7 +469,8 @@ Accept wildcard characters: False
 ```
 
 ### -EnableTcpIpFiltering
-{{ Fill EnableTcpIpFiltering Description }}
+
+Add this parameter to enable TCP/IP filtering for the connection.
 
 ```yaml
 Type: Boolean
@@ -457,6 +485,7 @@ Accept wildcard characters: False
 ```
 
 ### -FileDateTimeOperator
+
 Specify a variable operator type for a file date/time condition.
 
 ```yaml
@@ -473,6 +502,7 @@ Accept wildcard characters: False
 ```
 
 ### -FilePath
+
 Specify the path for a file condition.
 
 ```yaml
@@ -488,6 +518,7 @@ Accept wildcard characters: False
 ```
 
 ### -FileTimestamp
+
 Specify a date/time value to use for a file condition.
 
 ```yaml
@@ -503,6 +534,7 @@ Accept wildcard characters: False
 ```
 
 ### -FileVersion
+
 Specify a version string for a file condition.
 
 ```yaml
@@ -518,6 +550,7 @@ Accept wildcard characters: False
 ```
 
 ### -FolderDateTimeOperator
+
 Specify a variable operator for a folder date/time condition.
 
 ```yaml
@@ -534,6 +567,7 @@ Accept wildcard characters: False
 ```
 
 ### -FolderPath
+
 Specify the path for a folder condition.
 
 ```yaml
@@ -549,6 +583,7 @@ Accept wildcard characters: False
 ```
 
 ### -FolderTimestamp
+
 Specify a date/time value to use for a folder condition.
 
 ```yaml
@@ -564,6 +599,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
+
 This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
@@ -579,7 +615,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{ Fill InputObject Description }}
+
+Specify a task sequence object from which to get the **Apply Network Settings** step. To get this object, use the [Get-CMTaskSequence](Get-CMTaskSequence.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -594,7 +631,8 @@ Accept wildcard characters: False
 ```
 
 ### -IsAnyVersion
-{{ Fill IsAnyVersion Description }}
+
+Use this parameter with the **SetConditionSoftware** parameter to match any version of the product.
 
 ```yaml
 Type: Boolean
@@ -609,6 +647,7 @@ Accept wildcard characters: False
 ```
 
 ### -IsContinueOnError
+
 Use this parameter to enable the step option **Continue on error**. When you enable this option, if the step fails, the task sequence continues.
 
 ```yaml
@@ -624,6 +663,7 @@ Accept wildcard characters: False
 ```
 
 ### -IsEnabled
+
 Use this parameter to enable this task sequence step.
 
 ```yaml
@@ -639,6 +679,7 @@ Accept wildcard characters: False
 ```
 
 ### -MoveToIndex
+
 Move this step to the specified index position in the task sequence.
 
 ```yaml
@@ -654,6 +695,7 @@ Accept wildcard characters: False
 ```
 
 ### -MsiFilePath
+
 Specify the path to a Windows Installer file for an software condition.
 
 ```yaml
@@ -669,6 +711,7 @@ Accept wildcard characters: False
 ```
 
 ### -Namespace
+
 Specify the namespace for a WMI query condition.
 
 ```yaml
@@ -684,6 +727,7 @@ Accept wildcard characters: False
 ```
 
 ### -NewStepName
+
 Use this parameter to rename this task sequence step.
 
 ```yaml
@@ -699,6 +743,7 @@ Accept wildcard characters: False
 ```
 
 ### -OperatorType
+
 Specify an operator to use with a task sequence variable condition.
 
 ```yaml
@@ -715,6 +760,7 @@ Accept wildcard characters: False
 ```
 
 ### -Query
+
 Specify a WMI query string to use for a condition.
 
 ```yaml
@@ -730,6 +776,7 @@ Accept wildcard characters: False
 ```
 
 ### -RegistryKey
+
 Specify the key to use with a registry condition.
 
 ```yaml
@@ -745,6 +792,7 @@ Accept wildcard characters: False
 ```
 
 ### -RegistryOperator
+
 Specify an operator to use with a registry condition.
 
 ```yaml
@@ -761,6 +809,7 @@ Accept wildcard characters: False
 ```
 
 ### -RegistryValueData
+
 Specify the value data to use with a registry condition.
 
 ```yaml
@@ -776,6 +825,7 @@ Accept wildcard characters: False
 ```
 
 ### -RegistryValueName
+
 Specify the value name to use with a registry condition.
 
 ```yaml
@@ -791,7 +841,8 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveAdapterSettingName
-{{ Fill RemoveAdapterSettingName Description }}
+
+Specify one or more names of adapter settings to remove. To remove all adapter settings, use the **CleanAdapterSetting** parameter.
 
 ```yaml
 Type: String[]
@@ -806,6 +857,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveConditionFile
+
 Use this parameter to remove a file condition.
 
 ```yaml
@@ -821,6 +873,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveConditionFolder
+
 Use this parameter to remove a folder condition.
 
 ```yaml
@@ -836,6 +889,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveConditionIfStatement
+
 Use this parameter to remove an `if` statement condition.
 
 ```yaml
@@ -851,6 +905,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveConditionOperatingSystem
+
 Use this parameter to remove an OS condition.
 
 ```yaml
@@ -866,6 +921,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveConditionQueryWmi
+
 Use this parameter to remove a WMI query condition.
 
 ```yaml
@@ -881,6 +937,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveConditionRegistry
+
 Use this parameter to remove a registry condition.
 
 ```yaml
@@ -896,6 +953,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveConditionSoftware
+
 Use this parameter to remove a software condition.
 
 ```yaml
@@ -911,6 +969,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveConditionVariable
+
 Use this parameter to remove a task sequence variable condition.
 
 ```yaml
@@ -926,6 +985,7 @@ Accept wildcard characters: False
 ```
 
 ### -RootKey
+
 Specify the root key to use with a registry condition.
 
 ```yaml
@@ -942,6 +1002,7 @@ Accept wildcard characters: False
 ```
 
 ### -SetConditionFile
+
 Add a new file condition.
 
 ```yaml
@@ -957,6 +1018,7 @@ Accept wildcard characters: False
 ```
 
 ### -SetConditionFolder
+
 Add a new folder condition.
 
 ```yaml
@@ -972,6 +1034,7 @@ Accept wildcard characters: False
 ```
 
 ### -SetConditionIfStatement
+
 Add a new `if` statement condition.
 
 ```yaml
@@ -987,6 +1050,7 @@ Accept wildcard characters: False
 ```
 
 ### -SetConditionOperatingSystem
+
 Add a new OS condition.
 
 ```yaml
@@ -1002,6 +1066,7 @@ Accept wildcard characters: False
 ```
 
 ### -SetConditionQueryWmi
+
 Add a new WMI query condition.
 
 ```yaml
@@ -1017,6 +1082,7 @@ Accept wildcard characters: False
 ```
 
 ### -SetConditionRegistry
+
 Add a new registry condition.
 
 ```yaml
@@ -1032,6 +1098,7 @@ Accept wildcard characters: False
 ```
 
 ### -SetConditionSoftware
+
 Add a new software condition.
 
 ```yaml
@@ -1047,6 +1114,7 @@ Accept wildcard characters: False
 ```
 
 ### -SetConditionVariable
+
 Add a new task sequence variable condition.
 
 ```yaml
@@ -1062,6 +1130,7 @@ Accept wildcard characters: False
 ```
 
 ### -StatementType
+
 Set the type for an `if` statement condition.
 
 ```yaml
@@ -1078,6 +1147,7 @@ Accept wildcard characters: False
 ```
 
 ### -StepName
+
 Specify the name of the step to select for changes.
 
 ```yaml
@@ -1093,6 +1163,7 @@ Accept wildcard characters: False
 ```
 
 ### -StepOrder
+
 Use this parameter to reorder the step in the task sequence.
 
 ```yaml
@@ -1109,6 +1180,7 @@ Accept wildcard characters: False
 ```
 
 ### -SupportedPlatform
+
 Use this parameter to specify the platforms for an OS condition.
 
 ```yaml
@@ -1124,7 +1196,8 @@ Accept wildcard characters: False
 ```
 
 ### -TaskSequenceId
-Specify the ID of the task sequence to target for changes.
+
+Specify the **package ID** of the task sequence from which to get the **Apply Network Settings** step. This value is a standard package ID, for example `XYZ00858`.
 
 ```yaml
 Type: String
@@ -1139,6 +1212,7 @@ Accept wildcard characters: False
 ```
 
 ### -TaskSequenceName
+
 Specify the name of the task sequence to target for changes.
 
 ```yaml
@@ -1154,7 +1228,10 @@ Accept wildcard characters: False
 ```
 
 ### -UserName
-{{ Fill UserName Description }}
+
+When you use the **DomainName** parameter, use this parameter to specify the domain user account that's used to add the destination computer to the domain. Use the **UserPassword** parameter to specify the account password.
+
+For more information, see the [task sequence domain joining account](/mem/configmgr/core/plan-design/hierarchy/accounts#task-sequence-domain-join-account).
 
 ```yaml
 Type: String
@@ -1169,7 +1246,8 @@ Accept wildcard characters: False
 ```
 
 ### -UserPassword
-{{ Fill UserPassword Description }}
+
+Specify the password as a secure string for the **UserName** parameter.
 
 ```yaml
 Type: SecureString
@@ -1184,6 +1262,7 @@ Accept wildcard characters: False
 ```
 
 ### -ValueType
+
 Specify the type of value for a registry condition.
 
 ```yaml
@@ -1200,6 +1279,7 @@ Accept wildcard characters: False
 ```
 
 ### -VersionOperator
+
 Specify an operator to use with a file condition.
 
 ```yaml
@@ -1232,7 +1312,8 @@ Accept wildcard characters: False
 ```
 
 ### -WorkgroupName
-{{ Fill WorkgroupName Description }}
+
+To configure this step to have the computer join a workgroup, use this parameter to specify the workgroup name.
 
 ```yaml
 Type: String
@@ -1252,9 +1333,19 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-CMTSStepApplyNetworkSetting](Get-CMTSStepApplyNetworkSetting.md)
+[New-CMTSStepApplyNetworkSetting](New-CMTSStepApplyNetworkSetting.md)
+[Remove-CMTSStepApplyNetworkSetting](Remove-CMTSStepApplyNetworkSetting.md)
+
+[New-CMTSNetworkAdapterSetting](New-CMTSNetworkAdapterSetting.md)
+
+[About task sequence steps: Apply Network Settings](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_ApplyNetworkSettings)

@@ -1,8 +1,7 @@
 ﻿---
-description: Gets a boundary group.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/02/2019
+ms.date: 08/04/2021
 schema: 2.0.0
 title: Get-CMBoundaryGroup
 ---
@@ -10,7 +9,8 @@ title: Get-CMBoundaryGroup
 # Get-CMBoundaryGroup
 
 ## SYNOPSIS
-Gets a boundary group.
+
+Get a boundary group.
 
 ## SYNTAX
 
@@ -25,72 +25,33 @@ Get-CMBoundaryGroup -Id <String[]> [-DisableWildcardHandling] [-ForceWildcardHan
 ```
 
 ## DESCRIPTION
-The **Get-CMBoundaryGroup** cmdlet gets a boundary group.
-A boundary group is a collection of boundaries.
 
-You can use boundary groups to manage network locations.
-You must assign boundaries to boundary groups before you can use the boundary group.
-Boundary groups enable client computers to find a primary site for client assignment, which is referred to as automatic site assignment, and a list of available site systems that have content.
-For more information about boundaries, see [Planning for Boundaries and Boundary Groups in Configuration Manager](/mem/configmgr/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups).
+Use the **Get-CMBoundaryGroup** cmdlet to get a boundary group. A boundary group is a collection of boundaries.
+
+You can use boundary groups to manage network locations. Before you can use the boundary group, assign boundaries to boundary groups .
+Boundary groups enable client computers to find a primary site for client assignment, and a list of available site systems that have content.
+For more information about boundaries, see [Overview of boundaries and boundary groups in Configuration Manager](/mem/configmgr/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
-### Example 1: Get a boundary group that is specified by its identifier
-```
-PS XYZ:\> Get-CMBoundaryGroup -Id "1600231"
-CreatedBy:          Contoso\ENarvaez
-CreatedOn           5/17/2012 06:01:29 AM
-DefaultSiteCode:
-Description:
-GroupID:            1600231
-MemberCount:        80
-ModifiedBy:
-ModifiedOn:
-Name:               BGroup01
-SiteSystemCount:    0
+### Example 1: Get a boundary group that is specified by its name
+
+This command gets a boundary group that is specified by the name **BGroup01**.
+
+```powershell
+Get-CMBoundaryGroup -Name "BGroup01"
 ```
 
-This command gets a boundary group that is specified by the identifier 1600231.
+### Example 2: Get multiple boundary groups that are specified by ID
 
-### Example 2: Get multiple boundary groups that are specified by name
-```
-PS XYZ:\> Get-CMBoundaryGroup -Name "BGroup01", "BGroup02", "BGroup03"
-CreatedBy:          Contoso\ENarvaez
-CreatedOn           5/17/2012 07:13:02 AM
-DefaultSiteCode:
-Description:
-GroupID:            1600231
-MemberCount:        80
-ModifiedBy:
-ModifiedOn:
-Name:               BGroup01
-SiteSystemCount:    0
-CreatedBy:          Contoso\ENarvaez
-CreatedOn           7/13/2012 12:24:21 PM
-DefaultSiteCode:
-Description:
-GroupID:            1600246
-MemberCount:        11
-ModifiedBy:         Contoso\DChew
-ModifiedOn:         9/10/2012 04:32:16 PM
-Name:               BGroup02
-SiteSystemCount:    0
-CreatedBy:          Contoso\DChew
-CreatedOn           8/06/2012 09:32:05 AM
-DefaultSiteCode:
-Description:
-GroupID:            1600249
-MemberCount:        96
-ModifiedBy:         Contoso\EDaugherty
-ModifiedOn:         9/14/2012 10:11:36 AM
-Name:               BGroup03
-SiteSystemCount:    0
-```
+This command gets multiple boundary groups that are specified by the identifiers `5` and `6`.
 
-This command gets multiple boundary groups that are specified by the names BGroup01, BGroup02, and BGroup03.
+```powershell
+Get-CMBoundaryGroup -Id 5,6
+```
 
 ## PARAMETERS
 
@@ -127,7 +88,8 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-Specifies an array of identifiers (IDs) for one or more boundary groups.
+
+Specify an array of **group IDs** for one or more boundary groups. This value is an integer, for example `5`.
 
 ```yaml
 Type: String[]
@@ -142,7 +104,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies the name for a boundary group.
+
+Specify the name for a boundary group.
 
 ```yaml
 Type: String
@@ -166,11 +129,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### IResultObject[]#SMS_BoundaryGroup
 ### IResultObject#SMS_BoundaryGroup
+
 ## NOTES
 
-## RELATED LINKS
+For more information on this return object and its properties, see [SMS_BoundaryGroup server WMI class](/mem/configmgr/develop/reference/core/servers/configure/sms_boundarygroup-server-wmi-class).
 
-[Planning for Boundaries and Boundary Groups in Configuration Manager](/mem/configmgr/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups)
+## RELATED LINKS
 
 [New-CMBoundaryGroup](New-CMBoundaryGroup.md)
 
@@ -178,4 +142,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Set-CMBoundaryGroup](Set-CMBoundaryGroup.md)
 
+[Get-CMBoundaryGroupSiteSystem](Get-CMBoundaryGroupSiteSystem.md)
 
+[Overview of boundaries and boundary groups in Configuration Manager](/mem/configmgr/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups)

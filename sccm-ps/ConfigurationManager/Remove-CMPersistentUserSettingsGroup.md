@@ -1,6 +1,7 @@
 ---
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
+ms.date: 08/03/2021
 online version:
 schema: 2.0.0
 ---
@@ -8,7 +9,8 @@ schema: 2.0.0
 # Remove-CMPersistentUserSettingsGroup
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Reset your site-wide settings.
 
 ## SYNTAX
 
@@ -25,16 +27,22 @@ Remove-CMPersistentUserSettingsGroup [-Force] [-Name <String>] -InputObject <IRe
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+Starting in version 2107, use this cmdlet to get the list of site-wide settings that you've stored. These settings follow you on different devices.
+
+For example, [Configuration Manager console notifications](/mem/configmgr/core/servers/manage/admin-console-notifications) that are active or you've dismissed.
+
+> [!NOTE]
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
-```
 
-{{ Add example description here }}
+```powershell
+$mySettings = Get-CMPersistentUserSettingsGroup
+Remove-CMPersistentUserSettingsGroup -InputObject $mySettings -Force
+```
 
 ## PARAMETERS
 
@@ -54,7 +62,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-{{ Fill DisableWildcardHandling Description }}
+
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -69,7 +78,8 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-{{ Fill Force Description }}
+
+Run the command without asking for confirmation.
 
 ```yaml
 Type: SwitchParameter
@@ -84,7 +94,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-{{ Fill ForceWildcardHandling Description }}
+
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -99,7 +110,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{ Fill InputObject Description }}
+
+Specify an object of settings to remove. To get this object, use the [Get-CMPersistentUserSettingsGroup](Get-CMPersistentUserSettingsGroup.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -115,6 +127,8 @@ Accept wildcard characters: False
 
 ### -Name
 {{ Fill Name Description }}
+<!-- 10519922 -->
+
 
 ```yaml
 Type: String
@@ -129,8 +143,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
 
 ```yaml
 Type: SwitchParameter
@@ -157,3 +170,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-CMPersistentUserSettingsGroup](Get-CMPersistentUserSettingsGroup.md)

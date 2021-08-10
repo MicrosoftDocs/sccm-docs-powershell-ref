@@ -1,7 +1,7 @@
 ---
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 03/25/2021
+ms.date: 08/02/2021
 online version:
 schema: 2.0.0
 ---
@@ -146,7 +146,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 
-Specify a client settings deployment object to remove.
+Specify a client settings deployment object to remove. To get this object, use the [Get-CMClientSettingDeployment](Get-CMClientSettingDeployment.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -187,6 +187,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-CMClientSettingDeployment](Get-CMClientSettingDeployment.md)
 
 [New-CMClientSettingDeployment](New-CMClientSettingDeployment.md)
 

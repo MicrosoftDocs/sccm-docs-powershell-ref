@@ -1,6 +1,7 @@
 ---
 external help file: AdminUI.PS.psm1-help.xml
 Module Name: ConfigurationManager
+ms.date: 08/04/2021
 online version:
 schema: 2.0.0
 ---
@@ -8,7 +9,8 @@ schema: 2.0.0
 # Get-CMTSStepApplyNetworkSetting
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Get the **Apply Network Settings** step from a specific task sequence.
 
 ## SYNTAX
 
@@ -31,23 +33,45 @@ Get-CMTSStepApplyNetworkSetting [-TaskSequenceName] <String> [-StepName <String>
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+Use this cmdlet to get a task sequence step object for one or more instances of the **Apply Network Settings** step. You can use this object to:
+
+- Remove the step from a task sequence with [Remove-CMTSStepApplyNetworkSetting](Remove-CMTSStepApplyNetworkSetting.md)
+- Copy the step to another task sequence with [Add-CMTaskSequenceStep](Add-CMTaskSequenceStep.md)
+
+For more information on this step, see [About task sequence steps: Apply Network Settings](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_ApplyNetworkSettings).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Get the Apply Network Settings step from a task sequence
+
+This example first gets a task sequence object in the **$tsOsd** variable. It then passes that variable as the input object to get the **Apply Network Settings** step.
+
 ```powershell
-PS XYZ:\> {{ Add example code here }}
+$tsNameOsd = "Default OS deployment"
+$tsOsd = Get-CMTaskSequence -Name $tsNameOsd -Fast
+
+$tsStepNameApplyNetSet = "Apply Network Settings"
+$tsStepApplyNetSet = Get-CMTSStepApplyNetworkSetting -InputObject $tsOsd -StepName $tsStepNameApplyNetSet
 ```
 
-{{ Add example description here }}
+### Example 2: Get the network adapter details for an Apply Network Settings step
+
+This example builds on the previous example. To view the first network adapter settings, reference the **Adapters** property, which is an array of [SMS_TaskSequence_NetworkAdapterSettings](/mem/configmgr/develop/reference/osd/sms_tasksequence_networkadaptersettings-server-wmi-class) objects.
+
+```powershell
+$tsStepApplyNetSet = Get-CMTSStepApplyNetworkSetting -InputObject $tsOsd -StepName $tsStepNameApplyNetSet
+
+$tsStepApplyNetSet.Adapters[0]
+```
 
 ## PARAMETERS
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -63,7 +87,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{ Fill InputObject Description }}
+
+Specify a task sequence object from which to get the **Apply Network Settings** step. To get this object, use the [Get-CMTaskSequence](Get-CMTaskSequence.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -78,7 +103,8 @@ Accept wildcard characters: False
 ```
 
 ### -StepName
-{{ Fill StepName Description }}
+
+Specify the name of the **Apply Network Settings** step to get from the task sequence.
 
 ```yaml
 Type: String
@@ -93,7 +119,8 @@ Accept wildcard characters: False
 ```
 
 ### -TaskSequenceId
-{{ Fill TaskSequenceId Description }}
+
+Specify the **package ID** of the task sequence from which to get the **Apply Network Settings** step. This value is a standard package ID, for example `XYZ00858`.
 
 ```yaml
 Type: String
@@ -108,7 +135,8 @@ Accept wildcard characters: False
 ```
 
 ### -TaskSequenceName
-{{ Fill TaskSequenceName Description }}
+
+Specify the name of the task sequence from which to get the **Apply Network Settings** step.
 
 ```yaml
 Type: String
@@ -144,9 +172,20 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
+
+[New-CMTSStepApplyNetworkSetting](New-CMTSStepApplyNetworkSetting.md)
+[Remove-CMTSStepApplyNetworkSetting](Remove-CMTSStepApplyNetworkSetting.md)
+[Set-CMTSStepApplyNetworkSetting](Set-CMTSStepApplyNetworkSetting.md)
+
+[Add-CMTaskSequenceStep](Add-CMTaskSequenceStep.md)
+[Get-CMTaskSequence](Get-CMTaskSequence.md)
+
+[About task sequence steps: Apply Network Settings](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_ApplyNetworkSettings)

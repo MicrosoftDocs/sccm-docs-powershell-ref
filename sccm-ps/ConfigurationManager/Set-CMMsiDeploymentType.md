@@ -2,7 +2,7 @@
 description: Configure a Windows Installer deployment type.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 12/29/2020
+ms.date: 08/04/2021
 schema: 2.0.0
 title: Set-CMMsiDeploymentType
 ---
@@ -123,6 +123,8 @@ Specify an array of detection method clauses for this deployment type. To create
 - [New-CMDetectionClauseWindowsInstaller](New-CMDetectionClauseWindowsInstaller.md)
 
 Save the output of these cmdlets into a variable. Then specify those variables as an array for this parameter. For example, `-AddDetectionClause $clauseFile1,$clauseFile2,$clauseFile3`.
+
+You can also use [Get-CMDeploymentTypeDetectionClause](Get-CMDeploymentTypeDetectionClause.md) to get an existing detection clause from another application.
 
 ```yaml
 Type: DetectionClause[]
@@ -302,6 +304,8 @@ Accept wildcard characters: False
 ### -ContentLocation
 
 Specifies the network source path of the MSI file. The site system server requires permission to read the content files.
+
+Starting in version 2107, you can specify the path of the MSI file or the path to the folder that contains the MSI.
 
 ```yaml
 Type: String
