@@ -247,7 +247,7 @@ This example changes the **Apply Data image** step in the **Custom task sequence
 $tsName = "Custom task sequence"
 $tsStepNameApplyDataImg = "Apply data image"
 
-Set-CMTSStepApplyOperatingSystem -TaskSequenceName $tsName -StepName $tsStepNameApplyDataImg -Destination SpecificDiskAndPartition -DestinationDisk 5 -DestinationPartition 50
+Set-CMTSStepApplyDataImage -TaskSequenceName $tsName -StepName $tsStepNameApplyDataImg -Destination SpecificDiskAndPartition -DestinationDisk 5 -DestinationPartition 50
 ```
 
 ## PARAMETERS

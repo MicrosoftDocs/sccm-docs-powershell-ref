@@ -249,7 +249,7 @@ This example changes the **Apply Network Settings** step in the **Default OS dep
 $tsNameOsd = "Default OS deployment"
 $tsStepNameApplyNetSet = "Apply Network Settings"
 
-Set-CMTSStepApplyOperatingSystem -TaskSequenceName $tsNameOsd -StepName $tsStepNameApplyNetSet -NewStepName "Join workgroup" -WorkgroupName "workgroup"
+Set-CMTSStepApplyNetworkSetting -TaskSequenceName $tsNameOsd -StepName $tsStepNameApplyNetSet -NewStepName "Join workgroup" -WorkgroupName "workgroup"
 ```
 
 ## PARAMETERS
