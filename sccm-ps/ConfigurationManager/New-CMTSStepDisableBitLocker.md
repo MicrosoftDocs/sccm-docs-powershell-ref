@@ -1,6 +1,7 @@
 ---
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
+ms.date: 08/12/2021
 online version:
 schema: 2.0.0
 ---
@@ -8,7 +9,8 @@ schema: 2.0.0
 # New-CMTSStepDisableBitLocker
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Create an **Disable BitLocker** step, which you can add to a task sequence.
 
 ## SYNTAX
 
@@ -19,7 +21,8 @@ New-CMTSStepDisableBitLocker [-Drive <String>] [-RebootCount <Int32>] [-Conditio
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+This cmdlet creates a new **Disable BitLocker** step object. Then use the [Add-CMTaskSequenceStep](Add-CMTaskSequenceStep.md) cmdlet to add the step to a task sequence. For more information on this step, see [About task sequence steps: Disable BitLocker](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_DisableBitLocker).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
@@ -27,16 +30,25 @@ New-CMTSStepDisableBitLocker [-Drive <String>] [-RebootCount <Int32>] [-Conditio
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS XYZ:\> {{ Add example code here }}
-```
 
-{{ Add example description here }}
+This example creates an object for the **Disable BitLocker** step, which keeps BitLocker disabled until the computer has restarted 12 times. Since a drive letter isn't specified, it disables BitLocker on the current OS drive.
+
+It then gets a task sequence object, and adds this new step to the task sequence at index 11.
+
+```powershell
+$step = New-CMTSStepDisableBitLocker -Name "Disable BitLocker" -RebootCount 12
+
+$tsNameOsd = "Default OS deployment"
+$tsOsd = Get-CMTaskSequence -Name $tsNameOsd -Fast
+
+$tsOsd | Add-CMTaskSequenceStep -Step $step -InsertStepStartIndex 11
+```
 
 ## PARAMETERS
 
 ### -Condition
-Specify a condition object to use with this step.
+
+Specify a condition object to use with this step. To get this object, use one of the task sequence condition cmdlets. For example, [Get-CMTSStepConditionVariable](Get-CMTSStepConditionVariable.md).
 
 ```yaml
 Type: IResultObject[]
@@ -51,6 +63,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -66,6 +79,7 @@ Accept wildcard characters: False
 ```
 
 ### -ContinueOnError
+
 Add this parameter to enable the step option **Continue on error**. When you enable this option, if the step fails, the task sequence continues.
 
 ```yaml
@@ -81,6 +95,7 @@ Accept wildcard characters: False
 ```
 
 ### -Description
+
 Specify an optional description for this task sequence step.
 
 ```yaml
@@ -96,6 +111,7 @@ Accept wildcard characters: False
 ```
 
 ### -Disable
+
 Add this parameter to disable this task sequence step.
 
 ```yaml
@@ -111,6 +127,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
+
 This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
@@ -126,7 +143,8 @@ Accept wildcard characters: False
 ```
 
 ### -Drive
-{{ Fill Drive Description }}
+
+Specify the drive letter to disable BitLocker on a specific drive. If you don't specify this parameter, the step disables BitLocker on the current OS drive.
 
 ```yaml
 Type: String
@@ -141,6 +159,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
+
 This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
@@ -156,6 +175,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
+
 Specify a name for this step to identify it in the task sequence.
 
 ```yaml
@@ -171,8 +191,8 @@ Accept wildcard characters: False
 ```
 
 ### -RebootCount
-Starting in version 1906, use this parameter to set the following option on the **Disable BitLocker** task sequence step: **Resume protection after Windows has been restarted the specified number of times**.
 
+Use this parameter to resume protection after Windows has been restarted the specified number of times. Instead of adding multiple instances of this step, set a value between `1` (default) and `15`.
 
 ```yaml
 Type: Int32
@@ -208,9 +228,19 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
+
 ## OUTPUTS
 
 ### IResultObject#SMS_TaskSequence_DisableBitLockerAction
+
 ## NOTES
 
+For more information on this return object and its properties, see [SMS_TaskSequence_DisableBitLockerAction server WMI class](/mem/configmgr/develop/reference/osd/sms_tasksequence_disablebitlockeraction-server-wmi-class).
+
 ## RELATED LINKS
+
+[Get-CMTSStepDisableBitLocker](Get-CMTSStepDisableBitLocker.md)
+[Remove-CMTSStepDisableBitLocker](Remove-CMTSStepDisableBitLocker.md)
+[Set-CMTSStepDisableBitLocker](Set-CMTSStepDisableBitLocker.md)
+
+[About task sequence steps: Disable BitLocker](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_DisableBitLocker)

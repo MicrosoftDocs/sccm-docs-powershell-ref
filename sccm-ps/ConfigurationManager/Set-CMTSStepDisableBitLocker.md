@@ -1,6 +1,7 @@
 ---
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
+ms.date: 08/12/2021
 online version:
 schema: 2.0.0
 ---
@@ -8,7 +9,8 @@ schema: 2.0.0
 # Set-CMTSStepDisableBitLocker
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Configure an instance of the **Disable BitLocker** task sequence step.
 
 ## SYNTAX
 
@@ -221,7 +223,10 @@ Set-CMTSStepDisableBitLocker [-SetConditionOperatingSystem] [-StepName <String>]
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+Use this cmdlet to configure an instance of the **Disable BitLocker** task sequence step.
+
+For more information on this step, see [About task sequence steps: Disable BitLocker](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_DisableBitLocker).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
@@ -229,17 +234,21 @@ Set-CMTSStepDisableBitLocker [-SetConditionOperatingSystem] [-StepName <String>]
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS XYZ:\> {{ Add example code here }}
-```
 
-{{ Add example description here }}
+This example changes the **Disable BitLocker** step in the **Default OS deployment** task sequence with a new step name and a specific drive letter.
+
+```powershell
+$tsNameOsd = "Default OS deployment"
+$tsStepNameDisableBitLocker = "Disable BitLocker"
+
+Set-CMTSStepDisableBitLocker -TaskSequenceName $tsNameOsd -StepName $tsStepNameDisableBitLocker -NewStepName "Disable BitLocker on data drive" -Drive "D:"
+```
 
 ## PARAMETERS
 
 ### -AddCondition
-Specify a condition object to add to this step.
 
+Specify a condition object to add to this step. To get this object, use one of the task sequence condition cmdlets. For example, [Get-CMTSStepConditionVariable](Get-CMTSStepConditionVariable.md).
 
 ```yaml
 Type: IResultObject[]
@@ -269,7 +278,8 @@ Accept wildcard characters: False
 ```
 
 ### -Condition
-Specify a condition object to use with this step.
+
+Specify a condition object to use with this step. To get this object, use one of the task sequence condition cmdlets. For example, [Get-CMTSStepConditionVariable](Get-CMTSStepConditionVariable.md).
 
 ```yaml
 Type: IResultObject[]
@@ -329,7 +339,8 @@ Accept wildcard characters: False
 ```
 
 ### -CurrentDrive
-{{ Fill CurrentDrive Description }}
+
+Add this parameter to change the target drive to the current OS drive.
 
 ```yaml
 Type: SwitchParameter
@@ -374,7 +385,8 @@ Accept wildcard characters: False
 ```
 
 ### -Drive
-{{ Fill Drive Description }}
+
+Specify the drive letter to disable BitLocker on a specific drive. To disable BitLocker on the current OS drive, use the **CurrentDrive** parameter.
 
 ```yaml
 Type: String
@@ -511,7 +523,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{ Fill InputObject Description }}
+
+Specify a task sequence object from which to get the **Disable BitLocker** step. To get this object, use the [Get-CMTaskSequence](Get-CMTaskSequence.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -586,7 +599,7 @@ Accept wildcard characters: False
 ```
 
 ### -MsiFilePath
-Specify the path to a Windows Installer file for an software condition.
+Specify the path to a Windows Installer file for a software condition.
 
 ```yaml
 Type: String
@@ -662,8 +675,8 @@ Accept wildcard characters: False
 ```
 
 ### -RebootCount
-Starting in version 1906, use this parameter to set the following option on the **Disable BitLocker** task sequence step: **Resume protection after Windows has been restarted the specified number of times**.
 
+Use this parameter to resume protection after Windows has been restarted the specified number of times. Instead of adding multiple instances of this step, set a value between `1` (default) and `15`.
 
 ```yaml
 Type: Int32
@@ -1057,7 +1070,8 @@ Accept wildcard characters: False
 ```
 
 ### -TaskSequenceId
-Specify the ID of the task sequence to target for changes.
+
+Specify the **package ID** of the task sequence from which to get the **Disable BitLocker** step. This value is a standard package ID, for example `XYZ00858`.
 
 ```yaml
 Type: String
@@ -1140,9 +1154,17 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-CMTSStepDisableBitLocker](Get-CMTSStepDisableBitLocker.md)
+[New-CMTSStepDisableBitLocker](New-CMTSStepDisableBitLocker.md)
+[Remove-CMTSStepDisableBitLocker](Remove-CMTSStepDisableBitLocker.md)
+
+[About task sequence steps: Disable BitLocker](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_DisableBitLocker)
