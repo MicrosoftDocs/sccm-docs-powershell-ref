@@ -1,6 +1,7 @@
 ---
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
+ms.date: 08/11/2021
 online version:
 schema: 2.0.0
 ---
@@ -8,7 +9,8 @@ schema: 2.0.0
 # Set-CMTSStepAutoApplyDriver
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Configure an instance of the **Auto Apply Drivers** task sequence step.
 
 ## SYNTAX
 
@@ -224,7 +226,10 @@ Set-CMTSStepAutoApplyDriver [-SetConditionOperatingSystem] [-StepName <String>]
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+Use this cmdlet to configure an instance of the **Auto Apply Drivers** task sequence step.
+
+For more information on this step, see [About task sequence steps: Auto Apply Drivers](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_AutoApplyDrivers).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
@@ -232,17 +237,21 @@ Set-CMTSStepAutoApplyDriver [-SetConditionOperatingSystem] [-StepName <String>]
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS XYZ:\> {{ Add example code here }}
-```
 
-{{ Add example description here }}
+This example changes the **Auto Apply Drivers** step in the **Default OS deployment** task sequence to consider drives from all categories.
+
+```powershell
+$tsNameOsd = "Default OS deployment"
+$tsStepNameAutoApplyDvr = "Auto Apply Drivers"
+
+Set-CMTSStepAutoApplyDriver -TaskSequenceName $tsNameOsd -StepName $tsStepNameAutoApplyDvr -ConsiderAllCategories
+```
 
 ## PARAMETERS
 
 ### -AddCondition
-Specify a condition object to add to this step.
 
+Specify a condition object to add to this step. To get this object, use one of the task sequence condition cmdlets. For example, [Get-CMTSStepConditionVariable](Get-CMTSStepConditionVariable.md).
 
 ```yaml
 Type: IResultObject[]
@@ -257,6 +266,7 @@ Accept wildcard characters: False
 ```
 
 ### -ClearCondition
+
 Remove a condition from this step. Use the **-Condition** parameter to specify the condition to remove.
 
 ```yaml
@@ -272,7 +282,8 @@ Accept wildcard characters: False
 ```
 
 ### -Condition
-Specify a condition object to use with this step.
+
+Specify a condition object to use with this step. To get this object, use one of the task sequence condition cmdlets. For example, [Get-CMTSStepConditionVariable](Get-CMTSStepConditionVariable.md).
 
 ```yaml
 Type: IResultObject[]
@@ -287,6 +298,7 @@ Accept wildcard characters: False
 ```
 
 ### -ConditionVariableName
+
 Specify the name of the task sequence variable to use as a condition.
 
 ```yaml
@@ -302,6 +314,7 @@ Accept wildcard characters: False
 ```
 
 ### -ConditionVariableValue
+
 Specify the value of the task sequence variable to use in a condition.
 
 ```yaml
@@ -317,6 +330,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -332,7 +346,8 @@ Accept wildcard characters: False
 ```
 
 ### -ConsiderAllCategories
-{{ Fill ConsiderAllCategories Description }}
+
+Add this parameter to search all available driver categories for the appropriate device drivers.
 
 ```yaml
 Type: SwitchParameter
@@ -347,6 +362,7 @@ Accept wildcard characters: False
 ```
 
 ### -Description
+
 Specify an optional description for this task sequence step.
 
 ```yaml
@@ -362,6 +378,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
+
 This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
@@ -377,7 +394,8 @@ Accept wildcard characters: False
 ```
 
 ### -DriverCategory
-{{ Fill DriverCategory Description }}
+
+Specify one or more driver category objects, to limit driver matching to only consider drivers in the selected categories. To get this object, use the [Get-CMCategory](Get-CMCategory.md) cmdlet with `-CategoryType DriverCategories`.
 
 ```yaml
 Type: IResultObject[]
@@ -392,6 +410,7 @@ Accept wildcard characters: False
 ```
 
 ### -FileDateTimeOperator
+
 Specify a variable operator type for a file date/time condition.
 
 ```yaml
@@ -408,6 +427,7 @@ Accept wildcard characters: False
 ```
 
 ### -FilePath
+
 Specify the path for a file condition.
 
 ```yaml
@@ -423,6 +443,7 @@ Accept wildcard characters: False
 ```
 
 ### -FileTimestamp
+
 Specify a date/time value to use for a file condition.
 
 ```yaml
@@ -438,6 +459,7 @@ Accept wildcard characters: False
 ```
 
 ### -FileVersion
+
 Specify a version string for a file condition.
 
 ```yaml
@@ -453,6 +475,7 @@ Accept wildcard characters: False
 ```
 
 ### -FolderDateTimeOperator
+
 Specify a variable operator for a folder date/time condition.
 
 ```yaml
@@ -469,6 +492,7 @@ Accept wildcard characters: False
 ```
 
 ### -FolderPath
+
 Specify the path for a folder condition.
 
 ```yaml
@@ -484,6 +508,7 @@ Accept wildcard characters: False
 ```
 
 ### -FolderTimestamp
+
 Specify a date/time value to use for a folder condition.
 
 ```yaml
@@ -499,6 +524,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
+
 This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
@@ -514,7 +540,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{ Fill InputObject Description }}
+
+Specify a task sequence object from which to get the **Auto Apply Drivers** step. To get this object, use the [Get-CMTaskSequence](Get-CMTaskSequence.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -529,7 +556,11 @@ Accept wildcard characters: False
 ```
 
 ### -InstallDriverOption
-{{ Fill InstallDriverOption Description }}
+
+Specify how this step behaves:
+
+- `BestMatch`: Install only the best matched compatible drivers.
+- `InstallAllCompatible`: Installs all drivers compatible for each detected hardware device.
 
 ```yaml
 Type: InstallDriverType
@@ -545,7 +576,8 @@ Accept wildcard characters: False
 ```
 
 ### -IsAllowedUnsignedDriver
-{{ Fill IsAllowedUnsignedDriver Description }}
+
+Set this parameter to `$true` to allow Windows to install drivers without a digital signature.
 
 ```yaml
 Type: Boolean
@@ -560,6 +592,7 @@ Accept wildcard characters: False
 ```
 
 ### -IsAnyVersion
+
 Use this parameter with the **SetConditionSoftware** parameter to match any version of the product.
 
 ```yaml
@@ -575,6 +608,7 @@ Accept wildcard characters: False
 ```
 
 ### -IsContinueOnError
+
 Use this parameter to enable the step option **Continue on error**. When you enable this option, if the step fails, the task sequence continues.
 
 ```yaml
@@ -590,6 +624,7 @@ Accept wildcard characters: False
 ```
 
 ### -IsEnabled
+
 Use this parameter to enable this task sequence step.
 
 ```yaml
@@ -605,6 +640,7 @@ Accept wildcard characters: False
 ```
 
 ### -MoveToIndex
+
 Move this step to the specified index position in the task sequence.
 
 ```yaml
@@ -620,7 +656,8 @@ Accept wildcard characters: False
 ```
 
 ### -MsiFilePath
-Specify the path to a Windows Installer file for an software condition.
+
+Specify the path to a Windows Installer file for a software condition.
 
 ```yaml
 Type: String
@@ -635,6 +672,7 @@ Accept wildcard characters: False
 ```
 
 ### -Namespace
+
 Specify the namespace for a WMI query condition.
 
 ```yaml
@@ -650,6 +688,7 @@ Accept wildcard characters: False
 ```
 
 ### -NewStepName
+
 Use this parameter to rename this task sequence step.
 
 ```yaml
@@ -665,6 +704,7 @@ Accept wildcard characters: False
 ```
 
 ### -OperatorType
+
 Specify an operator to use with a task sequence variable condition.
 
 ```yaml
@@ -681,6 +721,7 @@ Accept wildcard characters: False
 ```
 
 ### -Query
+
 Specify a WMI query string to use for a condition.
 
 ```yaml
@@ -696,6 +737,7 @@ Accept wildcard characters: False
 ```
 
 ### -RegistryKey
+
 Specify the key to use with a registry condition.
 
 ```yaml
@@ -711,6 +753,7 @@ Accept wildcard characters: False
 ```
 
 ### -RegistryOperator
+
 Specify an operator to use with a registry condition.
 
 ```yaml
@@ -727,6 +770,7 @@ Accept wildcard characters: False
 ```
 
 ### -RegistryValueData
+
 Specify the value data to use with a registry condition.
 
 ```yaml
@@ -742,6 +786,7 @@ Accept wildcard characters: False
 ```
 
 ### -RegistryValueName
+
 Specify the value name to use with a registry condition.
 
 ```yaml
@@ -757,6 +802,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveConditionFile
+
 Use this parameter to remove a file condition.
 
 ```yaml
@@ -772,6 +818,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveConditionFolder
+
 Use this parameter to remove a folder condition.
 
 ```yaml
@@ -787,6 +834,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveConditionIfStatement
+
 Use this parameter to remove an `if` statement condition.
 
 ```yaml
@@ -802,6 +850,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveConditionOperatingSystem
+
 Use this parameter to remove an OS condition.
 
 ```yaml
@@ -817,6 +866,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveConditionQueryWmi
+
 Use this parameter to remove a WMI query condition.
 
 ```yaml
@@ -832,6 +882,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveConditionRegistry
+
 Use this parameter to remove a registry condition.
 
 ```yaml
@@ -847,6 +898,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveConditionSoftware
+
 Use this parameter to remove a software condition.
 
 ```yaml
@@ -862,6 +914,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveConditionVariable
+
 Use this parameter to remove a task sequence variable condition.
 
 ```yaml
@@ -877,6 +930,7 @@ Accept wildcard characters: False
 ```
 
 ### -RootKey
+
 Specify the root key to use with a registry condition.
 
 ```yaml
@@ -893,6 +947,7 @@ Accept wildcard characters: False
 ```
 
 ### -SetConditionFile
+
 Add a new file condition.
 
 ```yaml
@@ -908,6 +963,7 @@ Accept wildcard characters: False
 ```
 
 ### -SetConditionFolder
+
 Add a new folder condition.
 
 ```yaml
@@ -923,6 +979,7 @@ Accept wildcard characters: False
 ```
 
 ### -SetConditionIfStatement
+
 Add a new `if` statement condition.
 
 ```yaml
@@ -938,6 +995,7 @@ Accept wildcard characters: False
 ```
 
 ### -SetConditionOperatingSystem
+
 Add a new OS condition.
 
 ```yaml
@@ -953,6 +1011,7 @@ Accept wildcard characters: False
 ```
 
 ### -SetConditionQueryWmi
+
 Add a new WMI query condition.
 
 ```yaml
@@ -968,6 +1027,7 @@ Accept wildcard characters: False
 ```
 
 ### -SetConditionRegistry
+
 Add a new registry condition.
 
 ```yaml
@@ -983,6 +1043,7 @@ Accept wildcard characters: False
 ```
 
 ### -SetConditionSoftware
+
 Add a new software condition.
 
 ```yaml
@@ -998,6 +1059,7 @@ Accept wildcard characters: False
 ```
 
 ### -SetConditionVariable
+
 Add a new task sequence variable condition.
 
 ```yaml
@@ -1013,6 +1075,7 @@ Accept wildcard characters: False
 ```
 
 ### -StatementType
+
 Set the type for an `if` statement condition.
 
 ```yaml
@@ -1029,6 +1092,7 @@ Accept wildcard characters: False
 ```
 
 ### -StepName
+
 Specify the name of the step to select for changes.
 
 ```yaml
@@ -1044,6 +1108,7 @@ Accept wildcard characters: False
 ```
 
 ### -StepOrder
+
 Use this parameter to reorder the step in the task sequence.
 
 ```yaml
@@ -1060,6 +1125,7 @@ Accept wildcard characters: False
 ```
 
 ### -SupportedPlatform
+
 Use this parameter to specify the platforms for an OS condition.
 
 ```yaml
@@ -1075,7 +1141,8 @@ Accept wildcard characters: False
 ```
 
 ### -TaskSequenceId
-Specify the ID of the task sequence to target for changes.
+
+Specify the **package ID** of the task sequence from which to get the **Auto Apply Drivers** step. This value is a standard package ID, for example `XYZ00858`.
 
 ```yaml
 Type: String
@@ -1090,6 +1157,7 @@ Accept wildcard characters: False
 ```
 
 ### -TaskSequenceName
+
 Specify the name of the task sequence to target for changes.
 
 ```yaml
@@ -1105,6 +1173,7 @@ Accept wildcard characters: False
 ```
 
 ### -ValueType
+
 Specify the type of value for a registry condition.
 
 ```yaml
@@ -1121,6 +1190,7 @@ Accept wildcard characters: False
 ```
 
 ### -VersionOperator
+
 Specify an operator to use with a file condition.
 
 ```yaml
@@ -1158,9 +1228,17 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-CMTSStepAutoApplyDriver](Get-CMTSStepAutoApplyDriver.md)
+[New-CMTSStepAutoApplyDriver](New-CMTSStepAutoApplyDriver.md)
+[Remove-CMTSStepAutoApplyDriver](Remove-CMTSStepAutoApplyDriver.md)
+
+[About task sequence steps: Auto Apply Drivers](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_AutoApplyDrivers)

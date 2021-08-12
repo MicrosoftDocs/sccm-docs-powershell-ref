@@ -1,6 +1,7 @@
 ---
 external help file: AdminUI.PS.psm1-help.xml
 Module Name: ConfigurationManager
+ms.date: 08/11/2021
 online version:
 schema: 2.0.0
 ---
@@ -8,7 +9,8 @@ schema: 2.0.0
 # Get-CMTSStepAutoApplyDriver
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Get the **Auto Apply Drivers** step from a specific task sequence.
 
 ## SYNTAX
 
@@ -31,7 +33,13 @@ Get-CMTSStepAutoApplyDriver [-TaskSequenceName] <String> [-StepName <String>] [-
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+Use this cmdlet to get a task sequence step object for one or more instances of the **Auto Apply Drivers** step. You can use this object to:
+
+- Remove the step from a task sequence with [Remove-CMTSStepAutoApplyDriver](Remove-CMTSStepAutoApplyDriver.md)
+- Copy the step to another task sequence with [Add-CMTaskSequenceStep](Add-CMTaskSequenceStep.md)
+
+For more information on this step, see [About task sequence steps: Auto Apply Drivers](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_AutoApplyDrivers).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
@@ -39,15 +47,21 @@ Get-CMTSStepAutoApplyDriver [-TaskSequenceName] <String> [-StepName <String>] [-
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS XYZ:\> {{ Add example code here }}
-```
 
-{{ Add example description here }}
+This example first gets a task sequence object in the **$tsOsd** variable. It then passes that variable as the input object to get the **Auto Apply Drivers** step.
+
+```powershell
+$tsNameOsd = "Default OS deployment"
+$tsOsd = Get-CMTaskSequence -Name $tsNameOsd -Fast
+
+$tsStepNameAutoApplyDvr = "Auto Apply Drivers"
+$tsStepAutoApplyDvr = Get-CMTSStepAutoApplyDriver -InputObject $tsOsd -StepName $tsStepNameAutoApplyDvr
+```
 
 ## PARAMETERS
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -63,7 +77,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{ Fill InputObject Description }}
+
+Specify a task sequence object from which to get the **Auto Apply Drivers** step. To get this object, use the [Get-CMTaskSequence](Get-CMTaskSequence.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -78,7 +93,8 @@ Accept wildcard characters: False
 ```
 
 ### -StepName
-{{ Fill StepName Description }}
+
+Specify the name of the **Auto Apply Drivers** step to get from the task sequence.
 
 ```yaml
 Type: String
@@ -93,7 +109,8 @@ Accept wildcard characters: False
 ```
 
 ### -TaskSequenceId
-{{ Fill TaskSequenceId Description }}
+
+Specify the **package ID** of the task sequence from which to get the **Auto Apply Drivers** step. This value is a standard package ID, for example `XYZ00858`.
 
 ```yaml
 Type: String
@@ -108,7 +125,8 @@ Accept wildcard characters: False
 ```
 
 ### -TaskSequenceName
-{{ Fill TaskSequenceName Description }}
+
+Specify the name of the task sequence from which to get the **Auto Apply Drivers** step.
 
 ```yaml
 Type: String
@@ -144,9 +162,17 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
+
+[New-CMTSStepAutoApplyDriver](New-CMTSStepAutoApplyDriver.md)
+[Remove-CMTSStepAutoApplyDriver](Remove-CMTSStepAutoApplyDriver.md)
+[Set-CMTSStepAutoApplyDriver](Set-CMTSStepAutoApplyDriver.md)
+
+[About task sequence steps: Auto Apply Drivers](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_AutoApplyDrivers)
