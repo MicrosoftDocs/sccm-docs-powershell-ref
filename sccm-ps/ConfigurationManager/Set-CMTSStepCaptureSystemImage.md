@@ -1,6 +1,7 @@
 ---
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
+ms.date: 08/11/2021
 online version:
 schema: 2.0.0
 ---
@@ -8,7 +9,8 @@ schema: 2.0.0
 # Set-CMTSStepCaptureSystemImage
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Configure an instance of the **Capture OS Image** task sequence step.
 
 ## SYNTAX
 
@@ -224,7 +226,10 @@ Set-CMTSStepCaptureSystemImage [-SetConditionOperatingSystem] [-StepName <String
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+Use this cmdlet to configure an instance of the **Capture OS Image** task sequence step.
+
+For more information on this step, see [About task sequence steps: Capture OS Image](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_CaptureOperatingSystemImage).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
@@ -232,17 +237,21 @@ Set-CMTSStepCaptureSystemImage [-SetConditionOperatingSystem] [-StepName <String
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS XYZ:\> {{ Add example code here }}
-```
 
-{{ Add example description here }}
+This example changes the **Capture OS Image** step in the **Default OS deployment** task sequence to change the optional metadata on the captured image.
+
+```powershell
+$tsNameOsd = "Default OS deployment"
+$tsStepNameCapOSImg = "Capture OS Image"
+
+Set-CMTSStepCaptureSystemImage -TaskSequenceName $tsNameOsd -StepName $tsStepNameCapOSImg -ImageCreator "Ben C" -ImageDescription "The Aurora image" -ImageVersion "1.4f"
+```
 
 ## PARAMETERS
 
 ### -AddCondition
-Specify a condition object to add to this step.
 
+Specify a condition object to add to this step. To get this object, use one of the task sequence condition cmdlets. For example, [Get-CMTSStepConditionVariable](Get-CMTSStepConditionVariable.md).
 
 ```yaml
 Type: IResultObject[]
@@ -257,6 +266,7 @@ Accept wildcard characters: False
 ```
 
 ### -ClearCondition
+
 Remove a condition from this step. Use the **-Condition** parameter to specify the condition to remove.
 
 ```yaml
@@ -272,7 +282,8 @@ Accept wildcard characters: False
 ```
 
 ### -Condition
-Specify a condition object to use with this step.
+
+Specify a condition object to use with this step. To get this object, use one of the task sequence condition cmdlets. For example, [Get-CMTSStepConditionVariable](Get-CMTSStepConditionVariable.md).
 
 ```yaml
 Type: IResultObject[]
@@ -484,7 +495,8 @@ Accept wildcard characters: False
 ```
 
 ### -ImageCreator
-{{ Fill ImageCreator Description }}
+
+Specify the name of the user that created the OS image. This string is stored in the image file.
 
 ```yaml
 Type: String
@@ -499,7 +511,8 @@ Accept wildcard characters: False
 ```
 
 ### -ImageDescription
-{{ Fill ImageDescription Description }}
+
+Specify a description of the captured OS image. This string is stored in the image file.
 
 ```yaml
 Type: String
@@ -514,7 +527,8 @@ Accept wildcard characters: False
 ```
 
 ### -ImageVersion
-{{ Fill ImageVersion Description }}
+
+Specify a version number to assign to the captured OS image. This value can be any combination of letters and numbers. It's stored in the image file.
 
 ```yaml
 Type: String
@@ -529,7 +543,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{ Fill InputObject Description }}
+
+Specify a task sequence object from which to get the **Capture OS Image** step. To get this object, use the [Get-CMTaskSequence](Get-CMTaskSequence.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -604,7 +619,7 @@ Accept wildcard characters: False
 ```
 
 ### -MsiFilePath
-Specify the path to a Windows Installer file for an software condition.
+Specify the path to a Windows Installer file for a software condition.
 
 ```yaml
 Type: String
@@ -665,7 +680,8 @@ Accept wildcard characters: False
 ```
 
 ### -Password
-{{ Fill Password Description }}
+
+Specify the password for the **UserName** that has permissions to the network share.
 
 ```yaml
 Type: SecureString
@@ -680,7 +696,8 @@ Accept wildcard characters: False
 ```
 
 ### -Path
-{{ Fill Path Description }}
+
+Specify the network path to the location that Configuration Manager uses when storing the captured OS image.
 
 ```yaml
 Type: String
@@ -1089,7 +1106,8 @@ Accept wildcard characters: False
 ```
 
 ### -TaskSequenceId
-Specify the ID of the task sequence to target for changes.
+
+Specify the **package ID** of the task sequence from which to get the **Capture OS Image** step. This value is a standard package ID, for example `XYZ00858`.
 
 ```yaml
 Type: String
@@ -1119,7 +1137,10 @@ Accept wildcard characters: False
 ```
 
 ### -UserName
-{{ Fill UserName Description }}
+
+Specify the username of the account that has permissions to write to the **Path** location. Also use the **Password** parameter.
+
+For more information on this account, see [Capture OS image account](/mem/configmgr/core/plan-design/hierarchy/accounts#capture-os-image-account).
 
 ```yaml
 Type: String
@@ -1187,9 +1208,17 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-CMTSStepCaptureSystemImage](Get-CMTSStepCaptureSystemImage.md)
+[New-CMTSStepCaptureSystemImage](New-CMTSStepCaptureSystemImage.md)
+[Remove-CMTSStepCaptureSystemImage](Remove-CMTSStepCaptureSystemImage.md)
+
+[About task sequence steps: Capture OS Image](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_CaptureOperatingSystemImage)
