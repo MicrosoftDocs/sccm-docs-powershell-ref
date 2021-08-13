@@ -37,6 +37,9 @@ PS XYZ:\>
 ## PARAMETERS
 
 ### -Condition
+
+Specify a condition object to use with this step. To get this object, use one of the task sequence condition cmdlets. For example, [Get-CMTSStepConditionVariable](Get-CMTSStepConditionVariable.md).
+
 ```yaml
 Type: IResultObject[]
 Parameter Sets: (All)
@@ -65,6 +68,9 @@ Accept wildcard characters: False
 ```
 
 ### -ContinueOnError
+
+Add this parameter to enable the step option **Continue on error**. When you enable this option, if the step fails, the task sequence continues.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -78,6 +84,9 @@ Accept wildcard characters: False
 ```
 
 ### -Description
+
+Specify an optional description for this task sequence step.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -91,6 +100,9 @@ Accept wildcard characters: False
 ```
 
 ### -Disable
+
+Add this parameter to disable this task sequence step.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -151,6 +163,9 @@ Accept wildcard characters: False
 ```
 
 ### -Name
+
+Specify a name for this step to identify it in the task sequence.
+
 ```yaml
 Type: String
 Parameter Sets: (All)

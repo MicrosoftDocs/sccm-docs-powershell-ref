@@ -240,6 +240,9 @@ PS XYZ:\>
 ## PARAMETERS
 
 ### -AddCondition
+
+Specify a condition object to add to this step. To get this object, use one of the task sequence condition cmdlets. For example, [Get-CMTSStepConditionVariable](Get-CMTSStepConditionVariable.md).
+
 ```yaml
 Type: IResultObject[]
 Parameter Sets: ByValue, ById, ByName
@@ -253,6 +256,9 @@ Accept wildcard characters: False
 ```
 
 ### -ClearCondition
+
+Remove a condition from this step. Use the **-Condition** parameter to specify the condition to remove.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ByValue, ById, ByName
@@ -266,6 +272,9 @@ Accept wildcard characters: False
 ```
 
 ### -Condition
+
+Specify a condition object to use with this step. To get this object, use one of the task sequence condition cmdlets. For example, [Get-CMTSStepConditionVariable](Get-CMTSStepConditionVariable.md).
+
 ```yaml
 Type: IResultObject[]
 Parameter Sets: ByIdSetConditionIfStatement, ByNameSetConditionIfStatement, ByValueSetConditionIfStatement
@@ -279,6 +288,9 @@ Accept wildcard characters: False
 ```
 
 ### -ConditionVariableName
+
+Specify the name of the task sequence variable to use as a condition.
+
 ```yaml
 Type: String
 Parameter Sets: ByIdSetConditionVariable, ByNameSetConditionVariable, ByValueSetConditionVariable
@@ -292,6 +304,9 @@ Accept wildcard characters: False
 ```
 
 ### -ConditionVariableValue
+
+Specify the value of the task sequence variable to use in a condition.
+
 ```yaml
 Type: String
 Parameter Sets: ByIdSetConditionVariable, ByNameSetConditionVariable, ByValueSetConditionVariable
@@ -320,6 +335,9 @@ Accept wildcard characters: False
 ```
 
 ### -Description
+
+Specify an optional description for this task sequence step.
+
 ```yaml
 Type: String
 Parameter Sets: ByValue, ById, ByName
@@ -349,6 +367,9 @@ Accept wildcard characters: False
 ```
 
 ### -FileDateTimeOperator
+
+Specify a variable operator type for a file date/time condition.
+
 ```yaml
 Type: VariableOperatorType
 Parameter Sets: ByIdSetConditionFile, ByNameSetConditionFile, ByValueSetConditionFile
@@ -363,6 +384,9 @@ Accept wildcard characters: False
 ```
 
 ### -FilePath
+
+Specify the path for a file condition.
+
 ```yaml
 Type: String
 Parameter Sets: ByIdSetConditionFile, ByNameSetConditionFile, ByValueSetConditionFile
@@ -376,6 +400,9 @@ Accept wildcard characters: False
 ```
 
 ### -FileTimestamp
+
+Specify a date/time value to use for a file condition.
+
 ```yaml
 Type: DateTime
 Parameter Sets: ByIdSetConditionFile, ByNameSetConditionFile, ByValueSetConditionFile
@@ -389,6 +416,9 @@ Accept wildcard characters: False
 ```
 
 ### -FileVersion
+
+Specify a version string for a file condition.
+
 ```yaml
 Type: String
 Parameter Sets: ByIdSetConditionFile, ByNameSetConditionFile, ByValueSetConditionFile
@@ -402,6 +432,9 @@ Accept wildcard characters: False
 ```
 
 ### -FolderDateTimeOperator
+
+Specify a variable operator for a folder date/time condition.
+
 ```yaml
 Type: VariableOperatorType
 Parameter Sets: ByIdSetConditionFolder, ByNameSetConditionFolder, ByValueSetConditionFolder
@@ -416,6 +449,9 @@ Accept wildcard characters: False
 ```
 
 ### -FolderPath
+
+Specify the path for a folder condition.
+
 ```yaml
 Type: String
 Parameter Sets: ByIdSetConditionFolder, ByNameSetConditionFolder, ByValueSetConditionFolder
@@ -429,6 +465,9 @@ Accept wildcard characters: False
 ```
 
 ### -FolderTimestamp
+
+Specify a date/time value to use for a folder condition.
+
 ```yaml
 Type: DateTime
 Parameter Sets: ByIdSetConditionFolder, ByNameSetConditionFolder, ByValueSetConditionFolder
@@ -458,6 +497,9 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
+
+Specify a task sequence object from which to get the **Apply Network Settings** step. To get this object, use the [Get-CMTaskSequence](Get-CMTaskSequence.md) cmdlet.
+
 ```yaml
 Type: IResultObject
 Parameter Sets: ByValue, ByValueSetConditionIfStatement, ByValueSetConditionVariable, ByValueSetConditionFile, ByValueSetConditionFolder, ByValueSetConditionQueryWmi, ByValueSetConditionOperatingSystem, ByValueSetConditionRegistry, ByValueSetConditionSoftware
@@ -471,6 +513,9 @@ Accept wildcard characters: False
 ```
 
 ### -IsAnyVersion
+
+Use this parameter with the **SetConditionSoftware** parameter to match any version of the product.
+
 ```yaml
 Type: Boolean
 Parameter Sets: ByValueSetConditionSoftware, ByIdSetConditionSoftware, ByNameSetConditionSoftware
@@ -484,6 +529,9 @@ Accept wildcard characters: False
 ```
 
 ### -IsContinueOnError
+
+Use this parameter to enable the step option **Continue on error**. When you enable this option, if the step fails, the task sequence continues.
+
 ```yaml
 Type: Boolean
 Parameter Sets: ByValue, ById, ByName
@@ -497,6 +545,9 @@ Accept wildcard characters: False
 ```
 
 ### -IsEnabled
+
+Use this parameter to enable this task sequence step.
+
 ```yaml
 Type: Boolean
 Parameter Sets: ByValue, ById, ByName
@@ -538,6 +589,9 @@ Accept wildcard characters: False
 ```
 
 ### -MsiFilePath
+
+Specify the path to a Windows Installer file for a software condition.
+
 ```yaml
 Type: String
 Parameter Sets: ByValueSetConditionSoftware, ByIdSetConditionSoftware, ByNameSetConditionSoftware
@@ -551,6 +605,9 @@ Accept wildcard characters: False
 ```
 
 ### -Namespace
+
+Specify the namespace for a WMI query condition.
+
 ```yaml
 Type: String[]
 Parameter Sets: ByValueSetConditionQueryWmi, ByIdSetConditionQueryWmi, ByNameSetConditionQueryWmi
@@ -564,6 +621,9 @@ Accept wildcard characters: False
 ```
 
 ### -NewStepName
+
+Use this parameter to rename this task sequence step.
+
 ```yaml
 Type: String
 Parameter Sets: ByValue, ById, ByName
@@ -590,6 +650,9 @@ Accept wildcard characters: False
 ```
 
 ### -OperatorType
+
+Specify an operator to use with a task sequence variable condition.
+
 ```yaml
 Type: VariableOperatorType
 Parameter Sets: ByIdSetConditionVariable, ByNameSetConditionVariable, ByValueSetConditionVariable
@@ -604,6 +667,9 @@ Accept wildcard characters: False
 ```
 
 ### -Query
+
+Specify a WMI query string to use for a condition.
+
 ```yaml
 Type: String
 Parameter Sets: ByValueSetConditionQueryWmi, ByIdSetConditionQueryWmi, ByNameSetConditionQueryWmi
@@ -617,6 +683,9 @@ Accept wildcard characters: False
 ```
 
 ### -RegistryKey
+
+Specify the key to use with a registry condition.
+
 ```yaml
 Type: String
 Parameter Sets: ByValueSetConditionRegistry, ByIdSetConditionRegistry, ByNameSetConditionRegistry
@@ -630,6 +699,9 @@ Accept wildcard characters: False
 ```
 
 ### -RegistryOperator
+
+Specify an operator to use with a registry condition.
+
 ```yaml
 Type: VariableOperatorType
 Parameter Sets: ByValueSetConditionRegistry, ByIdSetConditionRegistry, ByNameSetConditionRegistry
@@ -644,6 +716,9 @@ Accept wildcard characters: False
 ```
 
 ### -RegistryValueData
+
+Specify the value data to use with a registry condition.
+
 ```yaml
 Type: String
 Parameter Sets: ByValueSetConditionRegistry, ByIdSetConditionRegistry, ByNameSetConditionRegistry
@@ -657,6 +732,9 @@ Accept wildcard characters: False
 ```
 
 ### -RegistryValueName
+
+Specify the value name to use with a registry condition.
+
 ```yaml
 Type: String
 Parameter Sets: ByValueSetConditionRegistry, ByIdSetConditionRegistry, ByNameSetConditionRegistry
@@ -670,6 +748,9 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveConditionFile
+
+Use this parameter to remove a file condition.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ByValue, ById, ByName
@@ -683,6 +764,9 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveConditionFolder
+
+Use this parameter to remove a folder condition.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ByValue, ById, ByName
@@ -696,6 +780,9 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveConditionIfStatement
+
+Use this parameter to remove an `if` statement condition.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ByValue, ById, ByName
@@ -709,6 +796,9 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveConditionOperatingSystem
+
+Use this parameter to remove an OS condition.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ByValue, ById, ByName
@@ -722,6 +812,9 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveConditionQueryWmi
+
+Use this parameter to remove a WMI query condition.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ByValue, ById, ByName
@@ -735,6 +828,9 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveConditionRegistry
+
+Use this parameter to remove a registry condition.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ByValue, ById, ByName
@@ -748,6 +844,9 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveConditionSoftware
+
+Use this parameter to remove a software condition.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ByValue, ById, ByName
@@ -761,6 +860,9 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveConditionVariable
+
+Use this parameter to remove a task sequence variable condition.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ByValue, ById, ByName
@@ -774,6 +876,9 @@ Accept wildcard characters: False
 ```
 
 ### -RootKey
+
+Specify the root key to use with a registry condition.
+
 ```yaml
 Type: RegistryRootKeyType
 Parameter Sets: ByValueSetConditionRegistry, ByIdSetConditionRegistry, ByNameSetConditionRegistry
@@ -802,6 +907,9 @@ Accept wildcard characters: False
 ```
 
 ### -SetConditionFile
+
+Add a new file condition.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ByIdSetConditionFile, ByNameSetConditionFile, ByValueSetConditionFile
@@ -815,6 +923,9 @@ Accept wildcard characters: False
 ```
 
 ### -SetConditionFolder
+
+Add a new folder condition.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ByIdSetConditionFolder, ByNameSetConditionFolder, ByValueSetConditionFolder
@@ -828,6 +939,9 @@ Accept wildcard characters: False
 ```
 
 ### -SetConditionIfStatement
+
+Add a new `if` statement condition.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ByIdSetConditionIfStatement, ByNameSetConditionIfStatement, ByValueSetConditionIfStatement
@@ -841,6 +955,9 @@ Accept wildcard characters: False
 ```
 
 ### -SetConditionOperatingSystem
+
+Add a new OS condition.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ByValueSetConditionOperatingSystem, ByIdSetConditionOperatingSystem, ByNameSetConditionOperatingSystem
@@ -854,6 +971,9 @@ Accept wildcard characters: False
 ```
 
 ### -SetConditionQueryWmi
+
+Add a new WMI query condition.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ByValueSetConditionQueryWmi, ByIdSetConditionQueryWmi, ByNameSetConditionQueryWmi
@@ -867,6 +987,9 @@ Accept wildcard characters: False
 ```
 
 ### -SetConditionRegistry
+
+Add a new registry condition.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ByValueSetConditionRegistry, ByIdSetConditionRegistry, ByNameSetConditionRegistry
@@ -880,6 +1003,9 @@ Accept wildcard characters: False
 ```
 
 ### -SetConditionSoftware
+
+Add a new software condition.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ByValueSetConditionSoftware, ByIdSetConditionSoftware, ByNameSetConditionSoftware
@@ -893,6 +1019,9 @@ Accept wildcard characters: False
 ```
 
 ### -SetConditionVariable
+
+Add a new task sequence variable condition.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ByIdSetConditionVariable, ByNameSetConditionVariable, ByValueSetConditionVariable
@@ -906,6 +1035,9 @@ Accept wildcard characters: False
 ```
 
 ### -StatementType
+
+Set the type for an `if` statement condition.
+
 ```yaml
 Type: ConditionStatementType
 Parameter Sets: ByIdSetConditionIfStatement, ByNameSetConditionIfStatement, ByValueSetConditionIfStatement
@@ -920,6 +1052,9 @@ Accept wildcard characters: False
 ```
 
 ### -StepName
+
+Specify the name of the step to select for changes.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -949,6 +1084,9 @@ Accept wildcard characters: False
 ```
 
 ### -SupportedPlatform
+
+Use this parameter to specify the platforms for an OS condition.
+
 ```yaml
 Type: IResultObject[]
 Parameter Sets: ByValueSetConditionOperatingSystem, ByIdSetConditionOperatingSystem, ByNameSetConditionOperatingSystem
@@ -962,6 +1100,9 @@ Accept wildcard characters: False
 ```
 
 ### -TaskSequenceId
+
+Specify the **package ID** of the task sequence from which to get the **Apply Network Settings** step. This value is a standard package ID, for example `XYZ00858`.
+
 ```yaml
 Type: String
 Parameter Sets: ById, ByIdSetConditionIfStatement, ByIdSetConditionVariable, ByIdSetConditionFile, ByIdSetConditionFolder, ByIdSetConditionSoftware, ByIdSetConditionQueryWmi, ByIdSetConditionRegistry, ByIdSetConditionOperatingSystem
@@ -975,6 +1116,9 @@ Accept wildcard characters: False
 ```
 
 ### -TaskSequenceName
+
+Specify the name of the task sequence to target for changes.
+
 ```yaml
 Type: String
 Parameter Sets: ByName, ByNameSetConditionIfStatement, ByNameSetConditionVariable, ByNameSetConditionFile, ByNameSetConditionFolder, ByNameSetConditionSoftware, ByNameSetConditionQueryWmi, ByNameSetConditionRegistry, ByNameSetConditionOperatingSystem
@@ -988,6 +1132,9 @@ Accept wildcard characters: False
 ```
 
 ### -ValueType
+
+Specify the type of value for a registry condition.
+
 ```yaml
 Type: RegistryValueType
 Parameter Sets: ByValueSetConditionRegistry, ByIdSetConditionRegistry, ByNameSetConditionRegistry
@@ -1002,6 +1149,9 @@ Accept wildcard characters: False
 ```
 
 ### -VersionOperator
+
+Specify an operator to use with a file condition.
+
 ```yaml
 Type: VariableOperatorType
 Parameter Sets: ByIdSetConditionFile, ByNameSetConditionFile, ByValueSetConditionFile
