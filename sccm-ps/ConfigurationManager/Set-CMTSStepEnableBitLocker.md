@@ -1,7 +1,7 @@
 ---
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 07/31/2020
+ms.date: 08/12/2021
 online version:
 schema: 2.0.0
 ---
@@ -9,7 +9,8 @@ schema: 2.0.0
 # Set-CMTSStepEnableBitLocker
 
 ## SYNOPSIS
-Configure the **Enable BitLocker** step in a task sequence, to enable BitLocker encryption on the hard drive.
+
+Configure an instance of the **Enable BitLocker** task sequence step.
 
 ## SYNTAX
 
@@ -230,7 +231,10 @@ Set-CMTSStepEnableBitLocker [-SetConditionOperatingSystem] [-StepName <String>]
 ```
 
 ## DESCRIPTION
-Configure the **Enable BitLocker** step in a task sequence, to enable BitLocker encryption on the hard drive. For more information on this task sequence step, see [About task sequence steps](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_EnableBitLocker).
+
+Use this cmdlet to configure an instance of the **Enable BitLocker** task sequence step.
+
+For more information on this step, see [About task sequence steps: Enable BitLocker](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_EnableBitLocker).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
@@ -238,17 +242,21 @@ Configure the **Enable BitLocker** step in a task sequence, to enable BitLocker 
 ## EXAMPLES
 
 ### Example 1
-{{ Add example description here }}
+
+This example changes the **Enable BitLocker** step in the **Default OS deployment** task sequence to require a startup key on USB, use full disk encryption, and wait for BitLocker to complete.
 
 ```powershell
-{{ Add example code here }}
+$tsNameOsd = "Default OS deployment"
+$tsStepNameEnableBitLocker = "Enable BitLocker"
+
+Set-CMTSStepEnableBitLocker -TaskSequenceName $tsNameOsd -StepName $tsStepNameEnableBitLocker -UsbOnly -EncryptionMethod AES_25 -EncryptFullDisk $true -WaitForBitLockerComplete $true
 ```
 
 ## PARAMETERS
 
 ### -AddCondition
 
-Specify a condition object to add to this step.
+Specify a condition object to add to this step. To get this object, use one of the task sequence condition cmdlets. For example, [Get-CMTSStepConditionVariable](Get-CMTSStepConditionVariable.md).
 
 ```yaml
 Type: IResultObject[]
@@ -280,7 +288,7 @@ Accept wildcard characters: False
 
 ### -Condition
 
-Specify a condition object to use with this step.
+Specify a condition object to use with this step. To get this object, use one of the task sequence condition cmdlets. For example, [Get-CMTSStepConditionVariable](Get-CMTSStepConditionVariable.md).
 
 ```yaml
 Type: IResultObject[]
@@ -574,7 +582,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{ Fill InputObject Description }}
+
+Specify a task sequence object from which to get the **Enable BitLocker** step. To get this object, use the [Get-CMTaskSequence](Get-CMTaskSequence.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -589,6 +598,7 @@ Accept wildcard characters: False
 ```
 
 ### -IsAnyVersion
+
 Use this parameter with the **SetConditionSoftware** parameter to match any version of the product.
 
 ```yaml
@@ -637,7 +647,7 @@ Accept wildcard characters: False
 
 ### -IsEncryptFullDisk
 
-Starting in version 1906, use this parameter to set the following option on the **Enable BitLocker** task sequence step: **Use full disk encryption**.
+Set this parameter to `$true` to use full disk encryption. By default, the **Enable BitLocker** step only encrypts used space on the drive.
 
 ```yaml
 Type: Boolean
@@ -653,7 +663,7 @@ Accept wildcard characters: False
 
 ### -IsWaitingForBitLockerComplete
 
-Use this parameter to configure the step to wait for BitLocker to complete the drive encryption process on all drives before continuing task sequence execution.
+Set this parameter to `$true` to configure the step to wait for BitLocker to complete the drive encryption process on all drives before continuing task sequence execution.
 
 ```yaml
 Type: Boolean
@@ -685,7 +695,7 @@ Accept wildcard characters: False
 
 ### -MsiFilePath
 
-Specify the path to a Windows Installer file for an software condition.
+Specify the path to a Windows Installer file for a software condition.
 
 ```yaml
 Type: String
@@ -750,7 +760,7 @@ Accept wildcard characters: False
 
 ### -Pin
 
-If you use the parameter **-TpmAndPin**, use this parameter to specify the PIN value. Specify 4-20 integers.
+If you use the parameter **TpmAndPin**, use this parameter to specify the PIN value. Specify 4-20 integers as a secure string.
 
 ```yaml
 Type: SecureString
@@ -1186,7 +1196,7 @@ Accept wildcard characters: False
 
 ### -TaskSequenceId
 
-Specify the ID of the task sequence to target for changes.
+Specify the **package ID** of the task sequence from which to get the **Enable BitLocker** step. This value is a standard package ID, for example `XYZ00858`.
 
 ```yaml
 Type: String
@@ -1218,7 +1228,7 @@ Accept wildcard characters: False
 
 ### -TpmAndPin
 
-Use this parameter to configure key management for the OS drive to use a TPM and a personal identification number (PIN). When you specify this option, BitLocker locks the normal boot process until the user provides the PIN. If you use this parameter, use **-Pin** to specify the PIN value. You can't combine this parameter with **-TpmAndUsb**, **-TpmOnly**, or **-UsbOnly**.
+Add this parameter to configure key management for the OS drive to use a TPM and a personal identification number (PIN). When you specify this option, BitLocker locks the normal boot process until the user provides the PIN. If you use this parameter, use **Pin** to specify the PIN value. You can't combine this parameter with **TpmAndUsb**, **TpmOnly**, or **UsbOnly**.
 
 ```yaml
 Type: SwitchParameter
@@ -1234,7 +1244,7 @@ Accept wildcard characters: False
 
 ### -TpmAndUsb
 
-Use this parameter to configure key management for the OS drive to use a TPM and a startup key stored on a USB flash drive. When you select this option, BitLocker locks the normal boot process until a USB device that contains a BitLocker startup key is attached to the computer. You can't combine this parameter with **-TpmAndPin**, **-TpmOnly**, or **-UsbOnly**.
+Add this parameter to configure key management for the OS drive to use a TPM and a startup key stored on a USB flash drive. When you select this option, BitLocker locks the normal boot process until a USB device that contains a BitLocker startup key is attached to the computer. You can't combine this parameter with **TpmAndPin**, **TpmOnly**, or **UsbOnly**.
 
 ```yaml
 Type: SwitchParameter
@@ -1250,7 +1260,7 @@ Accept wildcard characters: False
 
 ### -TpmOnly
 
-Use this parameter to configure key management for the OS drive to only use a TPM. You can't combine this parameter with **-TpmAndPin**, **-TpmAndUsb**, or **-UsbOnly**.
+Add this parameter to configure key management for the OS drive to only use a TPM. You can't combine this parameter with **TpmAndPin**, **TpmAndUsb**, or **UsbOnly**.
 
 ```yaml
 Type: SwitchParameter
@@ -1266,7 +1276,7 @@ Accept wildcard characters: False
 
 ### -UsbOnly
 
-Use this parameter to configure key management for the OS drive to only use a startup key stored on a USB flash drive. When you select this option, BitLocker locks the normal boot process until a USB device that contains a BitLocker startup key is attached to the computer. You can't combine this parameter with **-TpmAndPin**, **-TpmAndUsb**, or **-TpmOnly**.
+Add this parameter to configure key management for the OS drive to only use a startup key stored on a USB flash drive. When you select this option, BitLocker locks the normal boot process until a USB device that contains a BitLocker startup key is attached to the computer. You can't combine this parameter with **TpmAndPin**, **TpmAndUsb**, or **TpmOnly**.
 
 ```yaml
 Type: SwitchParameter
@@ -1336,11 +1346,17 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
 
-[About task sequence steps - Enable BitLocker](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_EnableBitLocker)
+[Get-CMTSStepEnableBitLocker](Get-CMTSStepEnableBitLocker.md)
+[New-CMTSStepEnableBitLocker](New-CMTSStepEnableBitLocker.md)
+[Remove-CMTSStepEnableBitLocker](Remove-CMTSStepEnableBitLocker.md)
+
+[About task sequence steps: Enable BitLocker](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_EnableBitLocker)
