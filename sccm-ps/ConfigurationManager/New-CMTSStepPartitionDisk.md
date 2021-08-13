@@ -1,8 +1,7 @@
 ---
-description: Creates a t s step partition disk.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 07/29/2020
+ms.date: 08/13/2021
 schema: 2.0.0
 title: New-CMTSStepPartitionDisk
 ---
@@ -10,7 +9,8 @@ title: New-CMTSStepPartitionDisk
 # New-CMTSStepPartitionDisk
 
 ## SYNOPSIS
-Add the **Format and Partition Disk** step in a task sequence.
+
+Create the **Format and Partition Disk** step, which you can add to a task sequence.
 
 ## SYNTAX
 
@@ -22,7 +22,8 @@ New-CMTSStepPartitionDisk [-DiskNumber <Int32>] [-DiskNumberVariable <String>] [
 ```
 
 ## DESCRIPTION
-Add the **Format and Partition Disk** step in a task sequence. For more information on this task sequence step, see [About task sequence steps](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_FormatandPartitionDisk).
+
+This cmdlet creates a new **Format and Partition Disk** step object. Then use the [Add-CMTaskSequenceStep](Add-CMTaskSequenceStep.md) cmdlet to add the step to a task sequence. For more information on this step, see [About task sequence steps: Format and Partition Disk](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_FormatandPartitionDisk).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
@@ -31,17 +32,31 @@ Add the **Format and Partition Disk** step in a task sequence. For more informat
 
 ### Example 1
 
-{{ Add example description here }}
+This example first creates four partition setting objects, which are the default partitions for a UEFI disk.
+
+It then creates an object for the **Format and Partition Disk** step, using the partition settings and other typical configurations for a UEFI disk.
+
+It then gets a task sequence object, and adds this new step to the task sequence at index 11.
 
 ```powershell
-{{ Add example code here }}
+$partEfi = New-CMTSPartitionSetting -Name "EFI" -PartitionEfi -Size 500 -SizeUnit MB
+$partMsr = New-CMTSPartitionSetting -Name "MSR" -PartitionMsr -Size 128 -SizeUnit MB
+$partWin = New-CMTSPartitionSetting -Name "Windows" -PartitionPrimary -Size 99 -SizeUnit Percent -EnableDriveLetterAssignment $true -EnableQuickFormat $true -PartitionFileSystem NTFS -IsBootPartition $true
+$partRec = New-CMTSPartitionSetting -Name "Recovery" -PartitionRecovery -Size 100 -SizeUnit Percent 
+
+$step = New-CMTSStepPartitionDisk -Name "Partition Disk 0 - UEFI" -PartitionSetting @($partEfi,$partMsr,$partWin,$partRec) -DiskNumber 0 -DiskType Gpt -IsBootDisk $true
+
+$tsNameOsd = "Default OS deployment"
+$tsOsd = Get-CMTaskSequence -Name $tsNameOsd -Fast
+
+$tsOsd | Add-CMTaskSequenceStep -Step $step -InsertStepStartIndex 11
 ```
 
 ## PARAMETERS
 
 ### -Condition
 
-Specify a condition object to add to this step.
+Specify a condition object to use with this step. To get this object, use one of the task sequence condition cmdlets. For example, [Get-CMTSStepConditionVariable](Get-CMTSStepConditionVariable.md).
 
 ```yaml
 Type: IResultObject[]
@@ -237,7 +252,7 @@ Accept wildcard characters: False
 
 ### -PartitionSetting
 
-Specify an array of partition setting objects.
+Specify an array of partition setting objects. To get this object, use the [New-CMTSPartitionSetting](New-CMTSPartitionSetting.md) cmdlet.
 
 ```yaml
 Type: IResultObject[]
@@ -273,11 +288,21 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
+
 ## OUTPUTS
 
 ### IResultObject#SMS_TaskSequence_PartitionDiskAction
+
 ## NOTES
+
+For more information on this return object and its properties, see [SMS_TaskSequence_PartitionDiskAction server WMI class](/mem/configmgr/develop/reference/osd/sms_tasksequence_partitiondiskaction-server-wmi-class).
 
 ## RELATED LINKS
 
-[About task sequence steps - Format and Partition Disk](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_FormatandPartitionDisk)
+[Get-CMTSStepPartitionDisk](Get-CMTSStepPartitionDisk.md)
+[Remove-CMTSStepPartitionDisk](Remove-CMTSStepPartitionDisk.md)
+[Set-CMTSStepPartitionDisk](Set-CMTSStepPartitionDisk.md)
+
+[New-CMTSPartitionSetting](New-CMTSPartitionSetting.md)
+
+[About task sequence steps: Format and Partition Disk](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_FormatandPartitionDisk)

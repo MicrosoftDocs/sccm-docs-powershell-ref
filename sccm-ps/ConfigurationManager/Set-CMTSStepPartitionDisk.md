@@ -1,8 +1,7 @@
 ---
-description: Configure the Format and Partition Disk step in a task sequence.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 07/29/2020
+ms.date: 08/13/2021
 schema: 2.0.0
 title: Set-CMTSStepPartitionDisk
 ---
@@ -11,7 +10,7 @@ title: Set-CMTSStepPartitionDisk
 
 ## SYNOPSIS
 
-Configure the **Format and Partition Disk** step in a task sequence.
+Configure an instance of the **Format and Partition Disk** task sequence step.
 
 ## SYNTAX
 
@@ -228,7 +227,9 @@ Set-CMTSStepPartitionDisk [-SetConditionOperatingSystem] [-StepName <String>]
 
 ## DESCRIPTION
 
-Configure the **Format and Partition Disk** step in a task sequence. For more information on this task sequence step, see [About task sequence steps](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_FormatandPartitionDisk).
+Use this cmdlet to configure an instance of the **Format and Partition Disk** task sequence step.
+
+For more information on this step, see [About task sequence steps: Format and Partition Disk](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_FormatandPartitionDisk).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
@@ -237,17 +238,20 @@ Configure the **Format and Partition Disk** step in a task sequence. For more in
 
 ### Example 1
 
-{{ Add example description here }}
+This example changes the **Format and Partition Disk** step in the **Default OS deployment** task sequence to use a variable for the target disk to format.
 
 ```powershell
-{{ Add example code here }}
+$tsNameOsd = "Default OS deployment"
+$tsStepNameFormatDisk = "Partition Disk 0 - UEFI"
+
+Set-CMTSStepPartitionDisk -TaskSequenceName $tsNameOsd -StepName $tsStepNameFormatDisk -DiskNumberVariable "myOSDisk"
 ```
 
 ## PARAMETERS
 
 ### -AddCondition
 
-Specify a condition object to add to this step.
+Specify a condition object to add to this step. To get this object, use one of the task sequence condition cmdlets. For example, [Get-CMTSStepConditionVariable](Get-CMTSStepConditionVariable.md).
 
 ```yaml
 Type: IResultObject[]
@@ -279,7 +283,7 @@ Accept wildcard characters: False
 
 ### -Condition
 
-Specify a condition object to use with this step.
+Specify a condition object to use with this step. To get this object, use one of the task sequence condition cmdlets. For example, [Get-CMTSStepConditionVariable](Get-CMTSStepConditionVariable.md).
 
 ```yaml
 Type: IResultObject[]
@@ -557,6 +561,8 @@ Accept wildcard characters: False
 
 ### -InputObject
 
+Specify a task sequence object from which to get the **Format and Partition Disk** step. To get this object, use the [Get-CMTaskSequence](Get-CMTaskSequence.md) cmdlet.
+
 ```yaml
 Type: IResultObject
 Parameter Sets: ByValue, ByValueSetConditionIfStatement, ByValueSetConditionVariable, ByValueSetConditionFile, ByValueSetConditionFolder, ByValueSetConditionQueryWmi, ByValueSetConditionOperatingSystem, ByValueSetConditionRegistry, ByValueSetConditionSoftware
@@ -650,7 +656,7 @@ Accept wildcard characters: False
 
 ### -MsiFilePath
 
-Specify the path to a Windows Installer file for an software condition.
+Specify the path to a Windows Installer file for a software condition.
 
 ```yaml
 Type: String
@@ -715,7 +721,7 @@ Accept wildcard characters: False
 
 ### -PartitionSetting
 
-Specify an array of partition setting objects.
+Specify an array of partition setting objects. To get this object, use the [New-CMTSPartitionSetting](New-CMTSPartitionSetting.md) cmdlet.
 
 ```yaml
 Type: IResultObject[]
@@ -1127,7 +1133,8 @@ Accept wildcard characters: False
 ```
 
 ### -TaskSequenceId
-Specify the ID of the task sequence to target for changes.
+
+Specify the **package ID** of the task sequence from which to get the **Format and Partition Disk** step. This value is a standard package ID, for example `XYZ00858`.
 
 ```yaml
 Type: String
@@ -1210,11 +1217,19 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
 
-[About task sequence steps - Format and Partition Disk](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_FormatandPartitionDisk)
+[Get-CMTSStepPartitionDisk](Get-CMTSStepPartitionDisk.md)
+[New-CMTSStepPartitionDisk](New-CMTSStepPartitionDisk.md)
+[Remove-CMTSStepPartitionDisk](Remove-CMTSStepPartitionDisk.md)
+
+[New-CMTSPartitionSetting](New-CMTSPartitionSetting.md)
+
+[About task sequence steps: Format and Partition Disk](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_FormatandPartitionDisk)
