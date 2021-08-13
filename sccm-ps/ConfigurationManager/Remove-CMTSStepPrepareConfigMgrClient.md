@@ -1,6 +1,7 @@
 ---
 external help file: AdminUI.PS.psm1-help.xml
 Module Name: ConfigurationManager
+ms.date: 08/13/2021
 online version:
 schema: 2.0.0
 ---
@@ -9,7 +10,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-Remove the **Apply Network Settings** step from a task sequence.
+Remove the **Prepare ConfigMgr Client for Capture** step from a task sequence.
 
 ## SYNTAX
 
@@ -33,7 +34,7 @@ Remove-CMTSStepPrepareConfigMgrClient [-TaskSequenceName] <String> [-StepName <S
 
 ## DESCRIPTION
 
-Use this cmdlet to remove an instance of the **Apply Network Settings** step from a task sequence.
+Use this cmdlet to remove an instance of the **Prepare ConfigMgr Client for Capture** step from a task sequence.
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
@@ -41,15 +42,21 @@ Use this cmdlet to remove an instance of the **Apply Network Settings** step fro
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS XYZ:\> {{ Add example code here }}
-```
 
-{{ Add example description here }}
+This example first gets a task sequence object in the **$tsOsd** variable. It then passes that variable as the input object to remove the **Prepare ConfigMgr Client for Capture** step.
+
+```powershell
+$tsNameOsd = "Default OS deployment"
+$tsOsd = Get-CMTaskSequence -Name $tsNameOsd -Fast
+
+$tsStepNamePrepClient = "Prepare ConfigMgr Client for Capture"
+Remove-CMTSStepPrepareConfigMgrClient -InputObject $tsOsd -StepName $tsStepNamePrepClient -Force
+```
 
 ## PARAMETERS
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -65,6 +72,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
+
 Run the command without asking for confirmation.
 
 ```yaml
@@ -81,7 +89,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 
-Specify a task sequence object from which to remove the **Apply Network Settings** step. To get this object, use the [Get-CMTaskSequence](Get-CMTaskSequence.md) cmdlet.
+Specify a task sequence object from which to remove the **Prepare ConfigMgr Client for Capture** step. To get this object, use the [Get-CMTaskSequence](Get-CMTaskSequence.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -97,7 +105,7 @@ Accept wildcard characters: False
 
 ### -StepName
 
-Specify the name of the **Apply Network Settings** step to remove from the task sequence.
+Specify the name of the **Prepare ConfigMgr Client for Capture** step to remove from the task sequence.
 
 ```yaml
 Type: String
@@ -113,7 +121,7 @@ Accept wildcard characters: False
 
 ### -TaskSequenceId
 
-Specify the **package ID** of the task sequence from which to remove the **Apply Network Settings** step. This value is a standard package ID, for example `XYZ00858`.
+Specify the **package ID** of the task sequence from which to remove the **Prepare ConfigMgr Client for Capture** step. This value is a standard package ID, for example `XYZ00858`.
 
 ```yaml
 Type: String
@@ -129,7 +137,7 @@ Accept wildcard characters: False
 
 ### -TaskSequenceName
 
-Specify the name of the task sequence from which to remove the **Apply Network Settings** step.
+Specify the name of the task sequence from which to remove the **Prepare ConfigMgr Client for Capture** step.
 
 ```yaml
 Type: String
@@ -165,9 +173,17 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-CMTSStepPrepareConfigMgrClient](Get-CMTSStepPrepareConfigMgrClient.md)
+[New-CMTSStepPrepareConfigMgrClient](New-CMTSStepPrepareConfigMgrClient.md)
+[Set-CMTSStepPrepareConfigMgrClient](Set-CMTSStepPrepareConfigMgrClient.md)
+
+[About task sequence steps: Prepare ConfigMgr Client for Capture](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_PrepareConfigMgrClientforCapture)
