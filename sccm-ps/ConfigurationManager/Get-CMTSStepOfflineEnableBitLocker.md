@@ -1,6 +1,7 @@
 ---
 external help file: AdminUI.PS.psm1-help.xml
 Module Name: ConfigurationManager
+ms.date: 08/13/2021
 online version:
 schema: 2.0.0
 ---
@@ -9,7 +10,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-Get the **Apply Network Settings** step from a specific task sequence.
+Get the **Pre-provision BitLocker** step from a specific task sequence.
 
 ## SYNTAX
 
@@ -33,12 +34,12 @@ Get-CMTSStepOfflineEnableBitLocker [-TaskSequenceName] <String> [-StepName <Stri
 
 ## DESCRIPTION
 
-Use this cmdlet to get a task sequence step object for one or more instances of the **Apply Network Settings** step. You can use this object to:
+Use this cmdlet to get a task sequence step object for one or more instances of the **Pre-provision BitLocker** step. You can use this object to:
 
-- Remove the step from a task sequence with [Remove-CMTSStepApplyNetworkSetting](Remove-CMTSStepApplyNetworkSetting.md)
+- Remove the step from a task sequence with [Remove-CMTSStepOfflineEnableBitLocker](Remove-CMTSStepOfflineEnableBitLocker.md)
 - Copy the step to another task sequence with [Add-CMTaskSequenceStep](Add-CMTaskSequenceStep.md)
 
-For more information on this step, see [About task sequence steps: Apply Network Settings](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_ApplyNetworkSettings).
+For more information on this step, see [About task sequence steps: Pre-provision BitLocker](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_PreProvisionBitLocker).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
@@ -46,15 +47,21 @@ For more information on this step, see [About task sequence steps: Apply Network
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS XYZ:\> {{ Add example code here }}
-```
 
-{{ Add example description here }}
+This example first gets a task sequence object in the **$tsOsd** variable. It then passes that variable as the input object to get the **Pre-provision BitLocker** step.
+
+```powershell
+$tsNameOsd = "Default OS deployment"
+$tsOsd = Get-CMTaskSequence -Name $tsNameOsd -Fast
+
+$tsStepNamePreProvBitLocker = "Pre-provision BitLocker"
+$tsStepPreProvBitLocker = Get-CMTSStepOfflineEnableBitLocker -InputObject $tsOsd -StepName $tsStepNamePreProvBitLocker
+```
 
 ## PARAMETERS
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -71,7 +78,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 
-Specify a task sequence object from which to get the **Apply Network Settings** step. To get this object, use the [Get-CMTaskSequence](Get-CMTaskSequence.md) cmdlet.
+Specify a task sequence object from which to get the **Pre-provision BitLocker** step. To get this object, use the [Get-CMTaskSequence](Get-CMTaskSequence.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -87,7 +94,7 @@ Accept wildcard characters: False
 
 ### -StepName
 
-Specify the name of the **Apply Network Settings** step to get from the task sequence.
+Specify the name of the **Pre-provision BitLocker** step to get from the task sequence.
 
 ```yaml
 Type: String
@@ -103,7 +110,7 @@ Accept wildcard characters: False
 
 ### -TaskSequenceId
 
-Specify the **package ID** of the task sequence from which to get the **Apply Network Settings** step. This value is a standard package ID, for example `XYZ00858`.
+Specify the **package ID** of the task sequence from which to get the **Pre-provision BitLocker** step. This value is a standard package ID, for example `XYZ00858`.
 
 ```yaml
 Type: String
@@ -119,7 +126,7 @@ Accept wildcard characters: False
 
 ### -TaskSequenceName
 
-Specify the name of the task sequence from which to get the **Apply Network Settings** step.
+Specify the name of the task sequence from which to get the **Pre-provision BitLocker** step.
 
 ```yaml
 Type: String
@@ -155,9 +162,17 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
+
+[New-CMTSStepOfflineEnableBitLocker](New-CMTSStepOfflineEnableBitLocker.md)
+[Remove-CMTSStepOfflineEnableBitLocker](Remove-CMTSStepOfflineEnableBitLocker.md)
+[Set-CMTSStepOfflineEnableBitLocker](Set-CMTSStepOfflineEnableBitLocker.md)
+
+[About task sequence steps: Pre-provision BitLocker](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_PreProvisionBitLocker)

@@ -1,7 +1,7 @@
 ---
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 07/31/2020
+ms.date: 08/13/2021
 online version:
 schema: 2.0.0
 ---
@@ -9,7 +9,8 @@ schema: 2.0.0
 # New-CMTSStepOfflineEnableBitLocker
 
 ## SYNOPSIS
-Add the **Pre-provision BitLocker** step in a task sequence, to enable BitLocker encryption on a drive while in Windows PE.
+
+Create a **Pre-provision BitLocker** step, which you can add to a task sequence.
 
 ## SYNTAX
 
@@ -21,7 +22,8 @@ New-CMTSStepOfflineEnableBitLocker [-Disk <Int32>] [-Drive <String>] [-EnableSki
 ```
 
 ## DESCRIPTION
-Add the **Pre-provision BitLocker** step in a task sequence, to enable BitLocker encryption on a drive while in Windows PE. For more information on this task sequence step, see [About task sequence steps](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_PreProvisionBitLocker).
+
+This cmdlet creates a new **Pre-provision BitLocker** step object. Then use the [Add-CMTaskSequenceStep](Add-CMTaskSequenceStep.md) cmdlet to add the step to a task sequence. For more information on this task sequence step, see [About task sequence steps](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_PreProvisionBitLocker).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
@@ -30,17 +32,24 @@ Add the **Pre-provision BitLocker** step in a task sequence, to enable BitLocker
 
 ### Example 1
 
-{{ Add example description here }}
+This example creates an object for the **Pre-provision BitLocker** step to encrypt the **C:** drive.
+
+It then gets a task sequence object, and adds this new step to the task sequence at index 11.
 
 ```powershell
-{{ Add example code here }}
+$step = New-CMTSStepOfflineEnableBitLocker -Name "Pre-provision BitLocker" -Drive "C:" -EncryptionMethod AES_256 -EnableSkipWhenTpmInvalid $false
+
+$tsNameOsd = "Default OS deployment"
+$tsOsd = Get-CMTaskSequence -Name $tsNameOsd -Fast
+
+$tsOsd | Add-CMTaskSequenceStep -Step $step -InsertStepStartIndex 11
 ```
 
 ## PARAMETERS
 
 ### -Condition
 
-Specify a condition object to add to this step.
+Specify a condition object to use with this step. To get this object, use one of the task sequence condition cmdlets. For example, [Get-CMTSStepConditionVariable](Get-CMTSStepConditionVariable.md).
 
 ```yaml
 Type: IResultObject[]
@@ -285,11 +294,19 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
+
 ## OUTPUTS
 
 ### IResultObject#SMS_TaskSequence_OfflineEnableBitLockerAction
+
 ## NOTES
+
+For more information on this return object and its properties, see [SMS_TaskSequence_OfflineEnableBitLockerAction server WMI class](/mem/configmgr/develop/reference/osd/sms_tasksequence_offlineenablebitlockeraction-server-wmi-class).
 
 ## RELATED LINKS
 
-[About task sequence steps - Pre-provision BitLocker](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_PreProvisionBitLocker)
+[Get-CMTSStepOfflineEnableBitLocker](Get-CMTSStepOfflineEnableBitLocker.md)
+[Remove-CMTSStepOfflineEnableBitLocker](Remove-CMTSStepOfflineEnableBitLocker.md)
+[Set-CMTSStepOfflineEnableBitLocker](Set-CMTSStepOfflineEnableBitLocker.md)
+
+[About task sequence steps: Pre-provision BitLocker](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_PreProvisionBitLocker)

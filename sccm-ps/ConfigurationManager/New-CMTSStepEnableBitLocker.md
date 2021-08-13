@@ -38,7 +38,7 @@ This example creates an object for the **Enable BitLocker** step for **TPM only*
 It then gets a task sequence object, and adds this new step to the task sequence at index 11.
 
 ```powershell
-$step = New-CMTSStepEnableBitLocker -Name "Enable BitLocker" -TpmOnly -CreateKeyOption ActiveDirectoryDomainServices -EncryptionMethod AES_25 -EnableSkipWhenNoValidTpm $false -EncryptFullDisk $false -WaitForBitLockerComplete $false
+$step = New-CMTSStepEnableBitLocker -Name "Enable BitLocker" -TpmOnly -CreateKeyOption ActiveDirectoryDomainServices -EncryptionMethod AES_256 -EnableSkipWhenNoValidTpm $false -EncryptFullDisk $false -WaitForBitLockerComplete $false
 
 $tsNameOsd = "Default OS deployment"
 $tsOsd = Get-CMTaskSequence -Name $tsNameOsd -Fast

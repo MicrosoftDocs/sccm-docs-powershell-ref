@@ -1,7 +1,7 @@
 ---
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 07/31/2020
+ms.date: 08/13/2021
 online version:
 schema: 2.0.0
 ---
@@ -9,7 +9,8 @@ schema: 2.0.0
 # Set-CMTSStepOfflineEnableBitLocker
 
 ## SYNOPSIS
-Configure the **Pre-provision BitLocker** step in a task sequence, to enable BitLocker encryption on a drive while in Windows PE.
+
+Configure an instance of the **Pre-provision BitLocker** task sequence step.
 
 ## SYNTAX
 
@@ -225,7 +226,10 @@ Set-CMTSStepOfflineEnableBitLocker [-SetConditionOperatingSystem] [-StepName <St
 ```
 
 ## DESCRIPTION
-Configure the **Pre-provision BitLocker** step in a task sequence, to enable BitLocker encryption on a drive while in Windows PE. For more information on this task sequence step, see [About task sequence steps](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_PreProvisionBitLocker).
+
+Use this cmdlet to configure an instance of the **Pre-provision BitLocker** task sequence step.
+
+For more information on this step, see [About task sequence steps: Pre-provision BitLocker](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_PreProvisionBitLocker).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
@@ -233,17 +237,21 @@ Configure the **Pre-provision BitLocker** step in a task sequence, to enable Bit
 ## EXAMPLES
 
 ### Example 1
-{{ Add example description here }}
+
+This example changes the **Pre-provision BitLocker** step in the **Default OS deployment** task sequence to use specific disk and partition numbers, and save the logical drive letter as a variable.
 
 ```powershell
-{{ Add example code here }}
+$tsNameOsd = "Default OS deployment"
+$tsStepNamePreProvBitLocker = "Pre-provision BitLocker"
+
+Set-CMTSStepOfflineEnableBitLocker -TaskSequenceName $tsNameOsd -StepName $tsStepNamePreProvBitLocker -Disk 1 -Partition 2 -VariableName "BitLockerDrive"
 ```
 
 ## PARAMETERS
 
 ### -AddCondition
 
-Specify a condition object to add to this step.
+Specify a condition object to add to this step. To get this object, use one of the task sequence condition cmdlets. For example, [Get-CMTSStepConditionVariable](Get-CMTSStepConditionVariable.md).
 
 ```yaml
 Type: IResultObject[]
@@ -275,7 +283,7 @@ Accept wildcard characters: False
 
 ### -Condition
 
-Specify a condition object to use with this step.
+Specify a condition object to use with this step. To get this object, use one of the task sequence condition cmdlets. For example, [Get-CMTSStepConditionVariable](Get-CMTSStepConditionVariable.md).
 
 ```yaml
 Type: IResultObject[]
@@ -566,7 +574,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 
-Specify a task sequence object from which to get the **Apply Network Settings** step. To get this object, use the [Get-CMTaskSequence](Get-CMTaskSequence.md) cmdlet.
+Specify a task sequence object from which to get the **Pre-provision BitLocker** step. To get this object, use the [Get-CMTaskSequence](Get-CMTaskSequence.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -1237,11 +1245,17 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
 
-[About task sequence steps - Pre-provision BitLocker](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_PreProvisionBitLocker)
+[Get-CMTSStepOfflineEnableBitLocker](Get-CMTSStepOfflineEnableBitLocker.md)
+[New-CMTSStepOfflineEnableBitLocker](New-CMTSStepOfflineEnableBitLocker.md)
+[Remove-CMTSStepOfflineEnableBitLocker](Remove-CMTSStepOfflineEnableBitLocker.md)
+
+[About task sequence steps: Pre-provision BitLocker](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_PreProvisionBitLocker)

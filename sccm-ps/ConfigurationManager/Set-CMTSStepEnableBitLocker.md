@@ -249,7 +249,7 @@ This example changes the **Enable BitLocker** step in the **Default OS deploymen
 $tsNameOsd = "Default OS deployment"
 $tsStepNameEnableBitLocker = "Enable BitLocker"
 
-Set-CMTSStepEnableBitLocker -TaskSequenceName $tsNameOsd -StepName $tsStepNameEnableBitLocker -UsbOnly -EncryptionMethod AES_25 -EncryptFullDisk $true -WaitForBitLockerComplete $true
+Set-CMTSStepEnableBitLocker -TaskSequenceName $tsNameOsd -StepName $tsStepNameEnableBitLocker -UsbOnly -EncryptionMethod AES_256 -EncryptFullDisk $true -WaitForBitLockerComplete $true
 ```
 
 ## PARAMETERS
