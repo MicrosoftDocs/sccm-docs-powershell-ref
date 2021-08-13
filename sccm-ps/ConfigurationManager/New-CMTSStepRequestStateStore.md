@@ -8,7 +8,8 @@ schema: 2.0.0
 # New-CMTSStepRequestStateStore
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Create an **Apply Network Settings** step, which you can add to a task sequence.
 
 ## SYNTAX
 
@@ -20,7 +21,8 @@ New-CMTSStepRequestStateStore [-FallbackToAccount <Boolean>] [-RequestOption <Re
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+This cmdlet creates a new **Apply Network Settings** step object. Then use the [Add-CMTaskSequenceStep](Add-CMTaskSequenceStep.md) cmdlet to add the step to a task sequence. For more information on this step, see [About task sequence steps: Apply Network Settings](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_ApplyNetworkSettings).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).

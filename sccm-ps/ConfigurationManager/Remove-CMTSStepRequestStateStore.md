@@ -8,7 +8,8 @@ schema: 2.0.0
 # Remove-CMTSStepRequestStateStore
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Remove the **Apply Network Settings** step from a task sequence.
 
 ## SYNTAX
 
@@ -31,7 +32,8 @@ Remove-CMTSStepRequestStateStore [-TaskSequenceName] <String> [-StepName <String
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+Use this cmdlet to remove an instance of the **Apply Network Settings** step from a task sequence.
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
@@ -78,7 +80,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{ Fill InputObject Description }}
+
+Specify a task sequence object from which to remove the **Apply Network Settings** step. To get this object, use the [Get-CMTaskSequence](Get-CMTaskSequence.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -93,7 +96,8 @@ Accept wildcard characters: False
 ```
 
 ### -StepName
-{{ Fill StepName Description }}
+
+Specify the name of the **Apply Network Settings** step to remove from the task sequence.
 
 ```yaml
 Type: String
@@ -108,7 +112,8 @@ Accept wildcard characters: False
 ```
 
 ### -TaskSequenceId
-{{ Fill TaskSequenceId Description }}
+
+Specify the **package ID** of the task sequence from which to remove the **Apply Network Settings** step. This value is a standard package ID, for example `XYZ00858`.
 
 ```yaml
 Type: String
@@ -123,7 +128,8 @@ Accept wildcard characters: False
 ```
 
 ### -TaskSequenceName
-{{ Fill TaskSequenceName Description }}
+
+Specify the name of the task sequence from which to remove the **Apply Network Settings** step.
 
 ```yaml
 Type: String
