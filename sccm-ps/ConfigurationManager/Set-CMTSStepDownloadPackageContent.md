@@ -1,6 +1,7 @@
 ---
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
+ms.date: 08/12/2021
 online version:
 schema: 2.0.0
 ---
@@ -8,7 +9,8 @@ schema: 2.0.0
 # Set-CMTSStepDownloadPackageContent
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Configure an instance of the **Download Package Content** task sequence step.
 
 ## SYNTAX
 
@@ -227,7 +229,10 @@ Set-CMTSStepDownloadPackageContent [-SetConditionOperatingSystem] [-StepName <St
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+Use this cmdlet to configure an instance of the **Download Package Content** task sequence step.
+
+For more information on this step, see [About task sequence steps: Download Package Content](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_DownloadPackageContent).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
@@ -235,17 +240,21 @@ Set-CMTSStepDownloadPackageContent [-SetConditionOperatingSystem] [-StepName <St
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS XYZ:\> {{ Add example code here }}
-```
 
-{{ Add example description here }}
+This example changes the **Download Package Content** step in the **Default OS deployment** task sequence to
+
+```powershell
+$tsNameOsd = "Default OS deployment"
+$tsStepNameDloadPkg = "Download Package Content"
+
+Set-CMTSStepDownloadPackageContent -TaskSequenceName $tsNameOsd -StepName $tsStepNameDloadPkg
+```
 
 ## PARAMETERS
 
 ### -AddCondition
-Specify a condition object to add to this step.
 
+Specify a condition object to add to this step. To get this object, use one of the task sequence condition cmdlets. For example, [Get-CMTSStepConditionVariable](Get-CMTSStepConditionVariable.md).
 
 ```yaml
 Type: IResultObject[]
@@ -260,7 +269,8 @@ Accept wildcard characters: False
 ```
 
 ### -AddPackage
-{{ Fill AddPackage Description }}
+
+Specify one or more package objects to use with the step. To get this object, use the [Get-CMPackage](Get-CMPackage.md) cmdlet.
 
 ```yaml
 Type: IResultObject[]
@@ -275,7 +285,8 @@ Accept wildcard characters: False
 ```
 
 ### -CleanPackage
-{{ Fill CleanPackage Description }}
+
+Add this parameter to remove all packages from this step. To remove a specific package, use the **RemovePackageId** parameter.
 
 ```yaml
 Type: SwitchParameter
@@ -365,7 +376,8 @@ Accept wildcard characters: False
 ```
 
 ### -ContinueDownload
-{{ Fill ContinueDownload Description }}
+
+Set this parameter to `true` to continue downloading other packages in the list if a package download fails.
 
 ```yaml
 Type: Boolean
@@ -395,7 +407,8 @@ Accept wildcard characters: False
 ```
 
 ### -DestinationVariable
-{{ Fill DestinationVariable Description }}
+
+Use this parameter to save the package's path into a custom task sequence variable.
 
 ```yaml
 Type: String
@@ -547,7 +560,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{ Fill InputObject Description }}
+
+Specify a task sequence object from which to get the **Download Package Content** step. To get this object, use the [Get-CMTaskSequence](Get-CMTaskSequence.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -607,7 +621,14 @@ Accept wildcard characters: False
 ```
 
 ### -LocationOption
-{{ Fill LocationOption Description }}
+
+Specify one of the following values for where the task sequence saves the package:
+
+- `TaskSequenceWorkingFolder`: Use the task sequence working directory, which is also referred to as the task sequence cache.
+
+- `ClientCache`: Use the Configuration Manager client cache. By default, this path is `%WinDir%\ccmcache`.
+
+- `CustomPath`: The task sequence engine first downloads the package to the task sequence working directory. It then moves the content to this path you specify. The task sequence engine appends the path with the package ID. When you use this option, set the path with the **Path** parameter.
 
 ```yaml
 Type: LocationType
@@ -638,7 +659,7 @@ Accept wildcard characters: False
 ```
 
 ### -MsiFilePath
-Specify the path to a Windows Installer file for an software condition.
+Specify the path to a Windows Installer file for a software condition.
 
 ```yaml
 Type: String
@@ -699,7 +720,8 @@ Accept wildcard characters: False
 ```
 
 ### -Path
-{{ Fill Path Description }}
+
+When you specify `-LocationOption CustomPath`, use this parameter to specify the local path to save the package content. The task sequence engine appends the path with the package ID.
 
 ```yaml
 Type: String
@@ -910,7 +932,8 @@ Accept wildcard characters: False
 ```
 
 ### -RemovePackageId
-{{ Fill RemovePackageId Description }}
+
+Specify one or more package IDs to remove from this step. To remove all packages, use the **CleanPackage** parameter.
 
 ```yaml
 Type: String[]
@@ -1123,7 +1146,8 @@ Accept wildcard characters: False
 ```
 
 ### -TaskSequenceId
-Specify the ID of the task sequence to target for changes.
+
+Specify the **package ID** of the task sequence from which to get the **Download Package Content** step. This value is a standard package ID, for example `XYZ00858`.
 
 ```yaml
 Type: String
@@ -1206,9 +1230,17 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-CMTSStepDownloadPackageContent](Get-CMTSStepDownloadPackageContent.md)
+[New-CMTSStepDownloadPackageContent](New-CMTSStepDownloadPackageContent.md)
+[Remove-CMTSStepDownloadPackageContent](Remove-CMTSStepDownloadPackageContent.md)
+
+[About task sequence steps: Download Package Content](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_DownloadPackageContent)
