@@ -1,8 +1,7 @@
 ---
-description: Gets a TS step install software.
 external help file: AdminUI.PS.psm1-help.xml
 Module Name: ConfigurationManager
-ms.date: 05/02/2019
+ms.date: 08/13/2021
 schema: 2.0.0
 title: Get-CMTSStepInstallSoftware
 ---
@@ -10,7 +9,8 @@ title: Get-CMTSStepInstallSoftware
 # Get-CMTSStepInstallSoftware
 
 ## SYNOPSIS
-Gets a TS step install software.
+
+Get the **Install Package** step from a specific task sequence.
 
 ## SYNTAX
 
@@ -34,19 +34,34 @@ Get-CMTSStepInstallSoftware [-TaskSequenceName] <String> [-StepName <String>] [-
 
 ## DESCRIPTION
 
+Use this cmdlet to get a task sequence step object for one or more instances of the **Install Package** step. You can use this object to:
+
+- Remove the step from a task sequence with [Remove-CMTSStepInstallSoftware](Remove-CMTSStepInstallSoftware.md)
+- Copy the step to another task sequence with [Add-CMTaskSequenceStep](Add-CMTaskSequenceStep.md)
+
+For more information on this step, see [About task sequence steps: Install Package](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_InstallPackage).
+
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
 ### Example 1
-```
-PS XYZ:\>
+
+This example first gets a task sequence object in the **$tsOsd** variable. It then passes that variable as the input object to get the **Install Package** step.
+
+```powershell
+$tsNameOsd = "Default OS deployment"
+$tsOsd = Get-CMTaskSequence -Name $tsNameOsd -Fast
+
+$tsStepNameInstallPkg = "Install Package"
+$tsStepInstallPkg = Get-CMTSStepInstallSoftware -InputObject $tsOsd -StepName $tsStepNameInstallPkg
 ```
 
 ## PARAMETERS
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -62,6 +77,9 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
+
+Specify a task sequence object from which to get the **Install Package** step. To get this object, use the [Get-CMTaskSequence](Get-CMTaskSequence.md) cmdlet.
+
 ```yaml
 Type: IResultObject
 Parameter Sets: ByValue
@@ -75,6 +93,9 @@ Accept wildcard characters: False
 ```
 
 ### -StepName
+
+Specify the name of the **Install Package** step to get from the task sequence.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -88,6 +109,9 @@ Accept wildcard characters: False
 ```
 
 ### -TaskSequenceId
+
+Specify the **package ID** of the task sequence from which to get the **Install Package** step. This value is a standard package ID, for example `XYZ00858`.
+
 ```yaml
 Type: String
 Parameter Sets: ById
@@ -101,6 +125,9 @@ Accept wildcard characters: False
 ```
 
 ### -TaskSequenceName
+
+Specify the name of the task sequence from which to get the **Install Package** step.
+
 ```yaml
 Type: String
 Parameter Sets: ByName
@@ -135,9 +162,17 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
+
+[New-CMTSStepInstallSoftware](New-CMTSStepInstallSoftware.md)
+[Remove-CMTSStepInstallSoftware](Remove-CMTSStepInstallSoftware.md)
+[Set-CMTSStepInstallSoftware](Set-CMTSStepInstallSoftware.md)
+
+[About task sequence steps: Install Package](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_InstallPackage)
