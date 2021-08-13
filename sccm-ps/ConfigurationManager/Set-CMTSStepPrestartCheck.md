@@ -1,7 +1,7 @@
 ---
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 07/31/2020
+ms.date: 08/13/2021
 online version:
 schema: 2.0.0
 ---
@@ -9,7 +9,8 @@ schema: 2.0.0
 # Set-CMTSStepPrestartCheck
 
 ## SYNOPSIS
-Configure the **Check Readiness** step in a task sequence, to verify that the target computer meets the specified deployment prerequisite conditions.
+
+Configure an instance of the **Check Readiness** task sequence step.
 
 ## SYNTAX
 
@@ -239,7 +240,10 @@ Set-CMTSStepPrestartCheck [-SetConditionOperatingSystem] [-StepName <String>]
 ```
 
 ## DESCRIPTION
-Configure the **Check Readiness** step in a task sequence, to verify that the target computer meets the specified deployment prerequisite conditions. For more information on this task sequence step, see [About task sequence steps](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_CheckReadiness).
+
+Use this cmdlet to configure an instance of the **Check Readiness** task sequence step.
+
+For more information on this step, see [About task sequence steps: Check Readiness](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_CheckReadiness).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
@@ -248,17 +252,20 @@ Configure the **Check Readiness** step in a task sequence, to verify that the ta
 
 ### Example 1
 
-{{ Add example description here }}
+This example changes the **Check Readiness** step in the **Default OS deployment** task sequence to disable the checks for AC power and wired network.
 
 ```powershell
-{{ Add example code here }}
+$tsNameOsd = "Default OS deployment"
+$tsStepNameCheckReady = "Check Readiness"
+
+Set-CMTSStepPrestartCheck -TaskSequenceName $tsNameOsd -StepName $tsStepNameCheckReady -CheckPowerState $false -CheckNetworkWired $false
 ```
 
 ## PARAMETERS
 
 ### -AddCondition
-Specify a condition object to add to this step.
 
+Specify a condition object to add to this step. To get this object, use one of the task sequence condition cmdlets. For example, [Get-CMTSStepConditionVariable](Get-CMTSStepConditionVariable.md).
 
 ```yaml
 Type: IResultObject[]
@@ -273,6 +280,7 @@ Accept wildcard characters: False
 ```
 
 ### -CMClientMinVersion
+
 Use this parameter to configure the specific client version. Specify the client version in the following format: `5.00.8913.1005`. Use the parameter **CheckCMClientMinVersion** to enable or disable the check.
 
 ```yaml
@@ -288,7 +296,8 @@ Accept wildcard characters: False
 ```
 
 ### -CheckCMClientMinVersion
-Use this parameter to enable or disable the following setting in the **Check Readiness** task sequence step: **Minimum client version**. Use the parameter **CMClientMinVersion** to set the specific client version number.
+
+Set this parameter to `$true` to enable the **Minimum client version** check. Use the parameter **CMClientMinVersion** to set the specific client version number.
 
 ```yaml
 Type: Boolean
@@ -303,7 +312,8 @@ Accept wildcard characters: False
 ```
 
 ### -CheckMaxOSVersion
-Use this parameter to enable or disable the following setting in the **Check Readiness** task sequence step: **Maximum OS version**. Use the parameter **MaxOSVersion** to set the specific OS version number.
+
+Set this parameter to `$true` to enable the **Maximum OS version** check. Use the parameter **MaxOSVersion** to set the specific OS version number.
 
 ```yaml
 Type: Boolean
@@ -318,7 +328,8 @@ Accept wildcard characters: False
 ```
 
 ### -CheckMemory
-Use this parameter to enable or disable the following setting in the **Check Readiness** task sequence step: **Minimum memory (MB)**. Use the parameter **Memory** to set the specific memory size.
+
+Set this parameter to `$true` to enable the **Minimum memory (MB)** check. Use the parameter **Memory** to set the specific memory size.
 
 ```yaml
 Type: Boolean
@@ -333,7 +344,8 @@ Accept wildcard characters: False
 ```
 
 ### -CheckMinOSVersion
-Use this parameter to enable or disable the following setting in the **Check Readiness** task sequence step: **Minimum OS version**. Use the parameter **MinOSVersion** to set the specific OS version number.
+
+Set this parameter to `$true` to enable the **Minimum OS version** check. Use the parameter **MinOSVersion** to set the specific OS version number.
 
 ```yaml
 Type: Boolean
@@ -348,7 +360,8 @@ Accept wildcard characters: False
 ```
 
 ### -CheckNetworkConnected
-Use this parameter to enable or disable the following setting in the **Check Readiness** task sequence step: **Network adapter connected**
+
+Set this parameter to `$true` to enable the **Network adapter connected** check.
 
 ```yaml
 Type: Boolean
@@ -363,7 +376,8 @@ Accept wildcard characters: False
 ```
 
 ### -CheckNetworkWired
-Use this parameter to enable or disable the following setting in the **Check Readiness** task sequence step: **Network adapter is not wireless**
+
+Set this parameter to `$true` to enable the **Network adapter is not wireless** check.
 
 ```yaml
 Type: Boolean
@@ -378,7 +392,8 @@ Accept wildcard characters: False
 ```
 
 ### -CheckOS
-Use this parameter to enable or disable the following setting in the **Check Readiness** task sequence step: **Current OS to be refreshed is**. Use the parameter **OS** to set the specific OS type.
+
+Set this parameter to `$true` to enable the check for the type of OS, either client or server. Use the parameter **OS** to set the specific OS type.
 
 ```yaml
 Type: Boolean
@@ -393,7 +408,8 @@ Accept wildcard characters: False
 ```
 
 ### -CheckOSArchitecture
-Use this parameter to enable or disable the following setting in the **Check Readiness** task sequence step: **Architecture of current OS**. Use the parameter **OSArchitecture** to set the specific architecture type.
+
+Set this parameter to `$true` to enable the **Architecture of current OS** check. Use the parameter **OSArchitecture** to set the specific architecture type.
 
 ```yaml
 Type: Boolean
@@ -408,7 +424,8 @@ Accept wildcard characters: False
 ```
 
 ### -CheckOSLanguageId
-Use this parameter to enable or disable the following setting in the **Check Readiness** task sequence step: **Language of current OS**. Use the parameter **OSLanguageID** to set the specific language.
+
+Set this parameter to `$true` to enable the check of the **Language of current OS**. Use the parameter **OSLanguageID** to set the specific language.
 
 ```yaml
 Type: Boolean
@@ -423,7 +440,8 @@ Accept wildcard characters: False
 ```
 
 ### -CheckPowerState
-Use this parameter to enable or disable the following setting in the **Check Readiness** task sequence step: **AC power plugged in**.
+
+Set this parameter to `$true` to enable the **AC power plugged in** check.
 
 ```yaml
 Type: Boolean
@@ -438,7 +456,8 @@ Accept wildcard characters: False
 ```
 
 ### -CheckSpace
-Use this parameter to enable or disable the following setting in the **Check Readiness** task sequence step: **Minimum free disk space (MB)**. Use the parameter **DiskSpace** to set the specific size.
+
+Set this parameter to `$true` to enable the **Minimum free disk space (MB)** check. Use the parameter **DiskSpace** to set the specific size.
 
 ```yaml
 Type: Boolean
@@ -453,7 +472,8 @@ Accept wildcard characters: False
 ```
 
 ### -CheckSpeed
-Use this parameter to enable or disable the following setting in the **Check Readiness** task sequence step: **Minimum processor speed (MHz)**. Use the parameter **Speed** to set the specific speed.
+
+Set this parameter to `$true` to enable the **Minimum processor speed (MHz)** check. Use the parameter **Speed** to set the specific speed.
 
 ```yaml
 Type: Boolean
@@ -468,7 +488,8 @@ Accept wildcard characters: False
 ```
 
 ### -CheckUefi
-Applies to version 2006 and later. Use this parameter to enable or disable the following setting in the **Check Readiness** task sequence step: **Computer is in UEFI mode**.
+
+Applies to version 2006 and later. Set this parameter to `$true` to enable the **Computer is in UEFI mode** check.
 
 ```yaml
 Type: Boolean
@@ -498,7 +519,8 @@ Accept wildcard characters: False
 ```
 
 ### -Condition
-Specify a condition object to use with this step.
+
+Specify a condition object to use with this step. To get this object, use one of the task sequence condition cmdlets. For example, [Get-CMTSStepConditionVariable](Get-CMTSStepConditionVariable.md).
 
 ```yaml
 Type: IResultObject[]
@@ -726,7 +748,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 
-Specify a task sequence object from which to get the **Apply Network Settings** step. To get this object, use the [Get-CMTaskSequence](Get-CMTaskSequence.md) cmdlet.
+Specify a task sequence object from which to get the **Check Readiness** step. To get this object, use the [Get-CMTaskSequence](Get-CMTaskSequence.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -846,7 +868,7 @@ Accept wildcard characters: False
 ```
 
 ### -MsiFilePath
-Specify the path to a Windows Installer file for an software condition.
+Specify the path to a Windows Installer file for a software condition.
 
 ```yaml
 Type: String
@@ -1075,6 +1097,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveConditionOperatingSystem
+
 Use this parameter to remove an OS condition.
 
 ```yaml
@@ -1363,7 +1386,8 @@ Accept wildcard characters: False
 ```
 
 ### -TaskSequenceId
-Specify the ID of the task sequence to target for changes.
+
+Specify the **package ID** of the task sequence from which to get the **Check Readiness** step. This value is a standard package ID, for example `XYZ00858`.
 
 ```yaml
 Type: String
@@ -1446,11 +1470,17 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
 
-[About task sequence steps - Check Readiness](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_CheckReadiness)
+[Get-CMTSStepPrestartCheck](Get-CMTSStepPrestartCheck.md)
+[New-CMTSStepPrestartCheck](New-CMTSStepPrestartCheck.md)
+[Remove-CMTSStepPrestartCheck](Remove-CMTSStepPrestartCheck.md)
+
+[About task sequence steps: Check Readiness](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_CheckReadiness)

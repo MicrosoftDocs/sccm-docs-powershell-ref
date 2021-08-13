@@ -1,7 +1,7 @@
 ---
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 07/31/2020
+ms.date: 08/13/2021
 online version:
 schema: 2.0.0
 ---
@@ -10,7 +10,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-Add the **Check Readiness** step to a task sequence. Use this step to verify that the target computer meets the specified deployment prerequisite conditions.
+Create an **Check Readiness** step, which you can add to a task sequence.
 
 ## SYNTAX
 
@@ -27,7 +27,7 @@ New-CMTSStepPrestartCheck [-CheckCMClientMinVersion <Boolean>] [-CheckMaxOSVersi
 
 ## DESCRIPTION
 
-Add the **Check Readiness** step to a task sequence. Use this step to verify that the target computer meets the specified deployment prerequisite conditions. For more information on this task sequence step, see [About task sequence steps](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_CheckReadiness).
+This cmdlet creates a new **Check Readiness** step object. Then use the [Add-CMTaskSequenceStep](Add-CMTaskSequenceStep.md) cmdlet to add the step to a task sequence. For more information on this step, see [About task sequence steps: Check Readiness](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_CheckReadiness).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
@@ -36,15 +36,51 @@ Add the **Check Readiness** step to a task sequence. Use this step to verify tha
 
 ### Example 1
 
-{{ Add example description here }}
+This example first [splats](/powershell/module/microsoft.powershell.core/about/about_splatting) the cmdlet parameters into the **parameters** variable.
+
+Next it creates an object for the **Check Readiness** step, passing the collection of values in **parameters**.
+
+It then gets a task sequence object, and adds this new step to the task sequence at index 11.
 
 ```powershell
-{{ Add example code here }}
+$parameters = @{
+  Name = "Check Readiness"
+  CheckMemory = $true
+  Memory = 4096
+  CheckSpeed = $true
+  Speed = 1024
+  CheckSpace = $true
+  DiskSpace = 512000
+  CheckOS = $true
+  OS = "Client"
+  CheckOSArchitecture = $true
+  OSArchitecture = "Arch64"
+  CheckMinOSVersion = $true
+  MinOSVersion = "10.0.16299"
+  CheckMaxOSVersion = $true
+  MaxOSVersion = "10.0.99999"
+  CheckCMClientMinVersion = $true
+  CMClientMinVersion = "5.00.8913.1005"
+  CheckOSLanguageId = $true
+  OSLanguageID = 1033
+  CheckPowerState = $true
+  CheckNetworkConnected = $true
+  CheckNetworkWired = $false
+  CheckUefi = $true
+}
+
+$step = New-CMTSStepPrestartCheck @parameters
+
+$tsNameOsd = "Default OS deployment"
+$tsOsd = Get-CMTaskSequence -Name $tsNameOsd -Fast
+
+$tsOsd | Add-CMTaskSequenceStep -Step $step -InsertStepStartIndex 11
 ```
 
 ## PARAMETERS
 
 ### -CMClientMinVersion
+
 Use this parameter to configure the specific client version. Specify the client version in the following format: `5.00.8913.1005`. Use the parameter **CheckCMClientMinVersion** to enable or disable the check.
 
 ```yaml
@@ -60,7 +96,8 @@ Accept wildcard characters: False
 ```
 
 ### -CheckCMClientMinVersion
-Use this parameter to enable or disable the following setting in the **Check Readiness** task sequence step: **Minimum client version**. Use the parameter **CMClientMinVersion** to set the specific client version number.
+
+Set this parameter to `$true` to enable the **Minimum client version** check. Use the parameter **CMClientMinVersion** to set the specific client version number.
 
 ```yaml
 Type: Boolean
@@ -75,7 +112,8 @@ Accept wildcard characters: False
 ```
 
 ### -CheckMaxOSVersion
-Use this parameter to enable or disable the following setting in the **Check Readiness** task sequence step: **Maximum OS version**. Use the parameter **MaxOSVersion** to set the specific OS version number.
+
+Set this parameter to `$true` to enable the **Maximum OS version** check. Use the parameter **MaxOSVersion** to set the specific OS version number.
 
 ```yaml
 Type: Boolean
@@ -90,7 +128,8 @@ Accept wildcard characters: False
 ```
 
 ### -CheckMemory
-Use this parameter to enable or disable the following setting in the **Check Readiness** task sequence step: **Minimum memory (MB)**. Use the parameter **Memory** to set the specific memory size.
+
+Set this parameter to `$true` to enable the **Minimum memory (MB)** check. Use the parameter **Memory** to set the specific memory size.
 
 ```yaml
 Type: Boolean
@@ -105,7 +144,8 @@ Accept wildcard characters: False
 ```
 
 ### -CheckMinOSVersion
-Use this parameter to enable or disable the following setting in the **Check Readiness** task sequence step: **Minimum OS version**. Use the parameter **MinOSVersion** to set the specific OS version number.
+
+Set this parameter to `$true` to enable the **Minimum OS version** check. Use the parameter **MinOSVersion** to set the specific OS version number.
 
 ```yaml
 Type: Boolean
@@ -120,7 +160,8 @@ Accept wildcard characters: False
 ```
 
 ### -CheckNetworkConnected
-Use this parameter to enable or disable the following setting in the **Check Readiness** task sequence step: **Network adapter connected**
+
+Set this parameter to `$true` to enable the **Network adapter connected** check.
 
 ```yaml
 Type: Boolean
@@ -135,7 +176,8 @@ Accept wildcard characters: False
 ```
 
 ### -CheckNetworkWired
-Use this parameter to enable or disable the following setting in the **Check Readiness** task sequence step: **Network adapter is not wireless**
+
+Set this parameter to `$true` to enable the **Network adapter is not wireless** check.
 
 ```yaml
 Type: Boolean
@@ -150,7 +192,8 @@ Accept wildcard characters: False
 ```
 
 ### -CheckOS
-Use this parameter to enable or disable the following setting in the **Check Readiness** task sequence step: **Current OS to be refreshed is**. Use the parameter **OS** to set the specific OS type.
+
+Set this parameter to `$true` to enable the check for the type of OS, either client or server. Use the parameter **OS** to set the specific OS type.
 
 ```yaml
 Type: Boolean
@@ -165,7 +208,8 @@ Accept wildcard characters: False
 ```
 
 ### -CheckOSArchitecture
-Use this parameter to enable or disable the following setting in the **Check Readiness** task sequence step: **Architecture of current OS**. Use the parameter **OSArchitecture** to set the specific architecture type.
+
+Set this parameter to `$true` to enable the **Architecture of current OS** check. Use the parameter **OSArchitecture** to set the specific architecture type.
 
 ```yaml
 Type: Boolean
@@ -180,7 +224,8 @@ Accept wildcard characters: False
 ```
 
 ### -CheckOSLanguageId
-Use this parameter to enable or disable the following setting in the **Check Readiness** task sequence step: **Language of current OS**. Use the parameter **OSLanguageID** to set the specific language.
+
+Set this parameter to `$true` to enable the check of the **Language of current OS**. Use the parameter **OSLanguageID** to set the specific language.
 
 ```yaml
 Type: Boolean
@@ -195,7 +240,8 @@ Accept wildcard characters: False
 ```
 
 ### -CheckPowerState
-Use this parameter to enable or disable the following setting in the **Check Readiness** task sequence step: **AC power plugged in**.
+
+Set this parameter to `$true` to enable the **AC power plugged in** check.
 
 ```yaml
 Type: Boolean
@@ -210,7 +256,8 @@ Accept wildcard characters: False
 ```
 
 ### -CheckSpace
-Use this parameter to enable or disable the following setting in the **Check Readiness** task sequence step: **Minimum free disk space (MB)**. Use the parameter **DiskSpace** to set the specific size.
+
+Set this parameter to `$true` to enable the **Minimum free disk space (MB)** check. Use the parameter **DiskSpace** to set the specific size.
 
 ```yaml
 Type: Boolean
@@ -225,7 +272,8 @@ Accept wildcard characters: False
 ```
 
 ### -CheckSpeed
-Use this parameter to enable or disable the following setting in the **Check Readiness** task sequence step: **Minimum processor speed (MHz)**. Use the parameter **Speed** to set the specific speed.
+
+Set this parameter to `$true` to enable the **Minimum processor speed (MHz)** check. Use the parameter **Speed** to set the specific speed.
 
 ```yaml
 Type: Boolean
@@ -240,7 +288,8 @@ Accept wildcard characters: False
 ```
 
 ### -CheckUefi
-Applies to version 2006 and later. Use this parameter to enable or disable the following setting in the **Check Readiness** task sequence step: **Computer is in UEFI mode**.
+
+Applies to version 2006 and later. Set this parameter to `$true` to enable the **Computer is in UEFI mode** check.
 
 ```yaml
 Type: Boolean
@@ -255,7 +304,8 @@ Accept wildcard characters: False
 ```
 
 ### -Condition
-Specify a condition object to use with this step.
+
+Specify a condition object to use with this step. To get this object, use one of the task sequence condition cmdlets. For example, [Get-CMTSStepConditionVariable](Get-CMTSStepConditionVariable.md).
 
 ```yaml
 Type: IResultObject[]
@@ -270,6 +320,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -285,6 +336,7 @@ Accept wildcard characters: False
 ```
 
 ### -ContinueOnError
+
 Add this parameter to enable the step option **Continue on error**. When you enable this option, if the step fails, the task sequence continues.
 
 ```yaml
@@ -300,6 +352,7 @@ Accept wildcard characters: False
 ```
 
 ### -Description
+
 Specify an optional description for this task sequence step.
 
 ```yaml
@@ -315,6 +368,7 @@ Accept wildcard characters: False
 ```
 
 ### -Disable
+
 Add this parameter to disable this task sequence step.
 
 ```yaml
@@ -330,6 +384,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
+
 This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
@@ -345,6 +400,7 @@ Accept wildcard characters: False
 ```
 
 ### -DiskSpace
+
 Use this parameter to configure the specific size for the minimum free disk space check. Specify an integer value for the size in MB. Use the parameter **CheckSpace** to enable or disable the check.
 
 ```yaml
@@ -360,6 +416,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
+
 This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
@@ -375,6 +432,7 @@ Accept wildcard characters: False
 ```
 
 ### -MaxOSVersion
+
 Use this parameter to configure the specific OS version. Specify the maximum OS version with major version, minor version, and build number. For example, `10.0.18356`. Use the parameter **CheckMaxOSVersion** to enable or disable the check.
 
 ```yaml
@@ -390,6 +448,7 @@ Accept wildcard characters: False
 ```
 
 ### -Memory
+
 Use this parameter to configure the specific size for the minimum memory check. Specify an integer value for the size in MB. Use the parameter **CheckMemory** to enable or disable the check.
 
 ```yaml
@@ -405,6 +464,7 @@ Accept wildcard characters: False
 ```
 
 ### -MinOSVersion
+
 Use this parameter to configure the specific OS version. Specify the minimum OS version with major version, minor version, and build number. For example, `10.0.16299`. Use the parameter **CheckMinOSVersion** to enable or disable the check.
 
 ```yaml
@@ -420,6 +480,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
+
 Specify a name for this step to identify it in the task sequence.
 
 ```yaml
@@ -435,6 +496,7 @@ Accept wildcard characters: False
 ```
 
 ### -OS
+
 Use this parameter to configure the specific OS type: `Client` or `Server`. Use the parameter **CheckOS** to enable or disable the check.
 
 ```yaml
@@ -451,6 +513,7 @@ Accept wildcard characters: False
 ```
 
 ### -OSArchitecture
+
 Use this parameter to configure the specific OS architecture: `Arch32` for 32-bit or `Arch64` for 64-bit. Use the parameter **CheckOSArchitecture** to enable or disable the check.
 
 ```yaml
@@ -467,6 +530,7 @@ Accept wildcard characters: False
 ```
 
 ### -OSLanguageId
+
 Use this parameter to configure the specific OS language. This check compares the language ID to the **OSLanguage** property of the **Win32_OperatingSystem** WMI class on the client. For example, `1033` for **English (United States)**. Use the parameter **CheckOSLanguageId** to enable or disable the check.
 
 ```yaml
@@ -482,6 +546,7 @@ Accept wildcard characters: False
 ```
 
 ### -Speed
+
 Use this parameter to configure the specific speed for the minimum processor speed check. Specify an integer value for the speed in MHz. Use the parameter **CheckSpeed** to enable or disable the check.
 
 ```yaml
@@ -518,11 +583,19 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
+
 ## OUTPUTS
 
 ### IResultObject#SMS_TaskSequence_PrestartCheckAction
+
 ## NOTES
+
+For more information on this return object and its properties, see [SMS_TaskSequence_PrestartCheckAction server WMI class](/mem/configmgr/develop/reference/osd/sms_tasksequence_prestartcheckaction-server-wmi-class).
 
 ## RELATED LINKS
 
-[About task sequence steps - Check Readiness](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_CheckReadiness)
+[Get-CMTSStepPrestartCheck](Get-CMTSStepPrestartCheck.md)
+[Remove-CMTSStepPrestartCheck](Remove-CMTSStepPrestartCheck.md)
+[Set-CMTSStepPrestartCheck](Set-CMTSStepPrestartCheck.md)
+
+[About task sequence steps: Check Readiness](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_CheckReadiness)
