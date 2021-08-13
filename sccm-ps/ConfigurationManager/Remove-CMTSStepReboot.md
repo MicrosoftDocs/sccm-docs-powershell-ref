@@ -76,6 +76,9 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
+
+Specify a task sequence object from which to remove the **Apply Network Settings** step. To get this object, use the [Get-CMTaskSequence](Get-CMTaskSequence.md) cmdlet.
+
 ```yaml
 Type: IResultObject
 Parameter Sets: ByValue
@@ -89,6 +92,9 @@ Accept wildcard characters: False
 ```
 
 ### -StepName
+
+Specify the name of the **Apply Network Settings** step to remove from the task sequence.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -102,6 +108,9 @@ Accept wildcard characters: False
 ```
 
 ### -TaskSequenceId
+
+Specify the **package ID** of the task sequence from which to remove the **Apply Network Settings** step. This value is a standard package ID, for example `XYZ00858`.
+
 ```yaml
 Type: String
 Parameter Sets: ById
@@ -115,6 +124,9 @@ Accept wildcard characters: False
 ```
 
 ### -TaskSequenceName
+
+Specify the name of the task sequence from which to remove the **Apply Network Settings** step.
+
 ```yaml
 Type: String
 Parameter Sets: ByName
