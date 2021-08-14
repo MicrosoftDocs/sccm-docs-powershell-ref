@@ -1,8 +1,7 @@
 ---
-description: Sets a TS step reboot.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/07/2019
+ms.date: 08/13/2021
 schema: 2.0.0
 title: Set-CMTSStepReboot
 ---
@@ -10,7 +9,8 @@ title: Set-CMTSStepReboot
 # Set-CMTSStepReboot
 
 ## SYNOPSIS
-Sets a TS step reboot.
+
+Configure an instance of the **Restart Computer** task sequence step.
 
 ## SYNTAX
 
@@ -227,14 +227,24 @@ Set-CMTSStepReboot [-SetConditionOperatingSystem] [-StepName <String>] [-Support
 
 ## DESCRIPTION
 
+Use this cmdlet to configure an instance of the **Restart Computer** task sequence step.
+
+For more information on this step, see [About task sequence steps: Restart Computer](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_RestartComputer).
+
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
 ### Example 1
-```
-PS XYZ:\>
+
+This example changes the **Restart Computer** step in the **Default OS deployment** task sequence to display a more detailed message for two minutes.
+
+```powershell
+$tsNameOsd = "Default OS deployment"
+$tsStepNameRestart = "Restart Computer"
+
+Set-CMTSStepReboot -TaskSequenceName $tsNameOsd -StepName $tsStepNameRestart -MessageTimeout 120 -NotificationMessage "Contoso IT is installing a new version of Windows on this computer. To continue, it needs to restart."
 ```
 
 ## PARAMETERS
@@ -498,7 +508,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 
-Specify a task sequence object from which to get the **Apply Network Settings** step. To get this object, use the [Get-CMTaskSequence](Get-CMTaskSequence.md) cmdlet.
+Specify a task sequence object from which to get the **Restart Computer** step. To get this object, use the [Get-CMTaskSequence](Get-CMTaskSequence.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -561,6 +571,9 @@ Accept wildcard characters: False
 ```
 
 ### -MessageTimeout
+
+Specify the number of seconds before the destination computer restarts. The default is `60` seconds.
+
 ```yaml
 Type: Int32
 Parameter Sets: ByValue, ById, ByName
@@ -637,6 +650,9 @@ Accept wildcard characters: False
 ```
 
 ### -NotificationMessage
+
+Specify a notification message to display to the user before the destination computer restarts.
+
 ```yaml
 Type: String
 Parameter Sets: ByValue, ById, ByName
@@ -893,6 +909,13 @@ Accept wildcard characters: False
 ```
 
 ### -RunAfterRestart
+
+Specify what to run after the computer restarts:
+
+- `WinPE`: The boot image assigned to this task sequence
+
+- `HardDisk`: The currently installed default OS
+
 ```yaml
 Type: RunAfterRestartType
 Parameter Sets: ByValue, ById, ByName
@@ -1101,7 +1124,7 @@ Accept wildcard characters: False
 
 ### -TaskSequenceId
 
-Specify the **package ID** of the task sequence from which to get the **Apply Network Settings** step. This value is a standard package ID, for example `XYZ00858`.
+Specify the **package ID** of the task sequence from which to get the **Restart Computer** step. This value is a standard package ID, for example `XYZ00858`.
 
 ```yaml
 Type: String
@@ -1187,9 +1210,17 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-CMTSStepReboot](Get-CMTSStepReboot.md)
+[New-CMTSStepReboot](New-CMTSStepReboot.md)
+[Remove-CMTSStepReboot](Remove-CMTSStepReboot.md)
+
+[About task sequence steps: Restart Computer](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_RestartComputer)

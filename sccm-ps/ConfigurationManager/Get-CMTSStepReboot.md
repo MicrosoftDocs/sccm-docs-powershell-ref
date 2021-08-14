@@ -1,8 +1,7 @@
 ---
-description: Gets a TS step reboot.
 external help file: AdminUI.PS.psm1-help.xml
 Module Name: ConfigurationManager
-ms.date: 05/02/2019
+ms.date: 08/13/2021
 schema: 2.0.0
 title: Get-CMTSStepReboot
 ---
@@ -10,7 +9,8 @@ title: Get-CMTSStepReboot
 # Get-CMTSStepReboot
 
 ## SYNOPSIS
-Gets a TS step reboot.
+
+Get the **Restart Computer** step from a specific task sequence.
 
 ## SYNTAX
 
@@ -32,19 +32,34 @@ Get-CMTSStepReboot [-TaskSequenceName] <String> [-StepName <String>] [-WhatIf] [
 
 ## DESCRIPTION
 
+Use this cmdlet to get a task sequence step object for one or more instances of the **Restart Computer** step. You can use this object to:
+
+- Remove the step from a task sequence with [Remove-CMTSStepReboot](Remove-CMTSStepReboot.md)
+- Copy the step to another task sequence with [Add-CMTaskSequenceStep](Add-CMTaskSequenceStep.md)
+
+For more information on this step, see [About task sequence steps: Restart Computer](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_RestartComputer).
+
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
 ### Example 1
-```
-PS XYZ:\>
+
+This example first gets a task sequence object in the **$tsOsd** variable. It then passes that variable as the input object to get the **Restart Computer** step.
+
+```powershell
+$tsNameOsd = "Default OS deployment"
+$tsOsd = Get-CMTaskSequence -Name $tsNameOsd -Fast
+
+$tsStepNameRestart = "Restart Computer"
+$tsStepRestart = Get-CMTSStepReboot -InputObject $tsOsd -StepName $tsStepNameRestart
 ```
 
 ## PARAMETERS
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -61,7 +76,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 
-Specify a task sequence object from which to get the **Apply Network Settings** step. To get this object, use the [Get-CMTaskSequence](Get-CMTaskSequence.md) cmdlet.
+Specify a task sequence object from which to get the **Restart Computer** step. To get this object, use the [Get-CMTaskSequence](Get-CMTaskSequence.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -77,7 +92,7 @@ Accept wildcard characters: False
 
 ### -StepName
 
-Specify the name of the **Apply Network Settings** step to get from the task sequence.
+Specify the name of the **Restart Computer** step to get from the task sequence.
 
 ```yaml
 Type: String
@@ -93,7 +108,7 @@ Accept wildcard characters: False
 
 ### -TaskSequenceId
 
-Specify the **package ID** of the task sequence from which to get the **Apply Network Settings** step. This value is a standard package ID, for example `XYZ00858`.
+Specify the **package ID** of the task sequence from which to get the **Restart Computer** step. This value is a standard package ID, for example `XYZ00858`.
 
 ```yaml
 Type: String
@@ -109,7 +124,7 @@ Accept wildcard characters: False
 
 ### -TaskSequenceName
 
-Specify the name of the task sequence from which to get the **Apply Network Settings** step.
+Specify the name of the task sequence from which to get the **Restart Computer** step.
 
 ```yaml
 Type: String
@@ -145,9 +160,17 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
+
+[New-CMTSStepReboot](New-CMTSStepReboot.md)
+[Remove-CMTSStepReboot](Remove-CMTSStepReboot.md)
+[Set-CMTSStepReboot](Set-CMTSStepReboot.md)
+
+[About task sequence steps: Restart Computer](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_RestartComputer)
