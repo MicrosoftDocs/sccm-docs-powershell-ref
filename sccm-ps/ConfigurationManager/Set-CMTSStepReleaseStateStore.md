@@ -1,6 +1,7 @@
 ---
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
+ms.date: 08/13/2021
 online version:
 schema: 2.0.0
 ---
@@ -9,7 +10,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-Configure an instance of the **Apply Network Settings** task sequence step.
+Configure an instance of the **Release State Store** task sequence step.
 
 ## SYNTAX
 
@@ -222,9 +223,9 @@ Set-CMTSStepReleaseStateStore [-SetConditionOperatingSystem] [-StepName <String>
 
 ## DESCRIPTION
 
-Use this cmdlet to configure an instance of the **Apply Network Settings** task sequence step.
+Use this cmdlet to configure an instance of the **Release State Store** task sequence step.
 
-For more information on this step, see [About task sequence steps: Apply Network Settings](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_ApplyNetworkSettings).
+For more information on this step, see [About task sequence steps: Release State Store](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_ReleaseStateStore).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
@@ -232,17 +233,21 @@ For more information on this step, see [About task sequence steps: Apply Network
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS XYZ:\> {{ Add example code here }}
-```
 
-{{ Add example description here }}
+This example changes the **Release State Store** step in the **Default OS deployment** task sequence to a different name.
+
+```powershell
+$tsNameOsd = "Default OS deployment"
+$tsStepNameReleaseSMP = "Release State Store"
+
+Set-CMTSStepReleaseStateStore -TaskSequenceName $tsNameOsd -StepName $tsStepNameReleaseSMP -NewStepName "Release SMP"
+```
 
 ## PARAMETERS
 
 ### -AddCondition
-Specify a condition object to add to this step.
 
+Specify a condition object to add to this step. To get this object, use one of the task sequence condition cmdlets. For example, [Get-CMTSStepConditionVariable](Get-CMTSStepConditionVariable.md).
 
 ```yaml
 Type: IResultObject[]
@@ -272,7 +277,8 @@ Accept wildcard characters: False
 ```
 
 ### -Condition
-Specify a condition object to use with this step.
+
+Specify a condition object to use with this step. To get this object, use one of the task sequence condition cmdlets. For example, [Get-CMTSStepConditionVariable](Get-CMTSStepConditionVariable.md).
 
 ```yaml
 Type: IResultObject[]
@@ -485,7 +491,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 
-Specify a task sequence object from which to get the **Apply Network Settings** step. To get this object, use the [Get-CMTaskSequence](Get-CMTaskSequence.md) cmdlet.
+Specify a task sequence object from which to get the **Release State Store** step. To get this object, use the [Get-CMTaskSequence](Get-CMTaskSequence.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -560,7 +566,7 @@ Accept wildcard characters: False
 ```
 
 ### -MsiFilePath
-Specify the path to a Windows Installer file for an software condition.
+Specify the path to a Windows Installer file for a software condition.
 
 ```yaml
 Type: String
@@ -1015,7 +1021,8 @@ Accept wildcard characters: False
 ```
 
 ### -TaskSequenceId
-Specify the ID of the task sequence to target for changes.
+
+Specify the **package ID** of the task sequence from which to get the **Release State Store** step. This value is a standard package ID, for example `XYZ00858`.
 
 ```yaml
 Type: String
@@ -1098,9 +1105,17 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-CMTSStepReleaseStateStore](Get-CMTSStepReleaseStateStore.md)
+[New-CMTSStepReleaseStateStore](New-CMTSStepReleaseStateStore.md)
+[Remove-CMTSStepReleaseStateStore](Remove-CMTSStepReleaseStateStore.md)
+
+[About task sequence steps: Release State Store](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_ReleaseStateStore)
