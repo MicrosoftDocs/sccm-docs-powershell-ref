@@ -1,6 +1,7 @@
 ---
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
+ms.date: 08/13/2021
 online version:
 schema: 2.0.0
 ---
@@ -9,7 +10,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-Configure an instance of the **Apply Network Settings** task sequence step.
+Configure an instance of the **Restore User State** task sequence step.
 
 ## SYNTAX
 
@@ -229,9 +230,9 @@ Set-CMTSStepRestoreUserState [-SetConditionOperatingSystem] [-StepName <String>]
 
 ## DESCRIPTION
 
-Use this cmdlet to configure an instance of the **Apply Network Settings** task sequence step.
+Use this cmdlet to configure an instance of the **Restore User State** task sequence step.
 
-For more information on this step, see [About task sequence steps: Apply Network Settings](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_ApplyNetworkSettings).
+For more information on this step, see [About task sequence steps: Restore User State](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_RestoreUserState).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
@@ -239,17 +240,21 @@ For more information on this step, see [About task sequence steps: Apply Network
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS XYZ:\> {{ Add example code here }}
-```
 
-{{ Add example description here }}
+This example changes the **Restore User State** step in the **Default OS deployment** task sequence to use custom restore with a configuration file.
+
+```powershell
+$tsNameOsd = "Default OS deployment"
+$tsStepNameRestoreState = "Restore User State"
+
+Set-CMTSStepRestoreUserState -TaskSequenceName $tsNameOsd -StepName $tsStepNameRestoreState -ModeOption Customize -ConfigFiles "contoso.xml"
+```
 
 ## PARAMETERS
 
 ### -AddCondition
-Specify a condition object to add to this step.
 
+Specify a condition object to add to this step. To get this object, use one of the task sequence condition cmdlets. For example, [Get-CMTSStepConditionVariable](Get-CMTSStepConditionVariable.md).
 
 ```yaml
 Type: IResultObject[]
@@ -264,7 +269,8 @@ Accept wildcard characters: False
 ```
 
 ### -AddConfigFile
-{{ Fill AddConfigFile Description }}
+
+When you specify `-ModeOption Customize` to customize how user profiles are restored, use this parameter to add file names of custom XML configuration files. These files need to be in the USMT package. Use this parameter to append to an existing list. To create a new list, use the **ConfigFile** parameter.
 
 ```yaml
 Type: String[]
@@ -279,7 +285,8 @@ Accept wildcard characters: False
 ```
 
 ### -CleanConfigFile
-{{ Fill CleanConfigFile Description }}
+
+Add this parameter to remove all of the file names for custom XML configuration files. To remove individual file names, use the **RemoveConfigFile** parameter.
 
 ```yaml
 Type: SwitchParameter
@@ -309,7 +316,8 @@ Accept wildcard characters: False
 ```
 
 ### -Condition
-Specify a condition object to use with this step.
+
+Specify a condition object to use with this step. To get this object, use one of the task sequence condition cmdlets. For example, [Get-CMTSStepConditionVariable](Get-CMTSStepConditionVariable.md).
 
 ```yaml
 Type: IResultObject[]
@@ -369,7 +377,8 @@ Accept wildcard characters: False
 ```
 
 ### -ContinueOnRestore
-{{ Fill ContinueOnRestore Description }}
+
+Set this parameter to `$true` to continue restoring user state and settings even if USMT is unable to restore some files.
 
 ```yaml
 Type: Boolean
@@ -537,7 +546,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 
-Specify a task sequence object from which to get the **Apply Network Settings** step. To get this object, use the [Get-CMTaskSequence](Get-CMTaskSequence.md) cmdlet.
+Specify a task sequence object from which to get the **Restore User State** step. To get this object, use the [Get-CMTaskSequence](Get-CMTaskSequence.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -597,7 +606,12 @@ Accept wildcard characters: False
 ```
 
 ### -ModeOption
-{{ Fill ModeOption Description }}
+
+There are two modes in which USMT can operate:
+
+- `Standard`: Restore all captured user profiles with standard options. This option is the default.
+
+- `Customize`: Customize how user profiles are restored. If you specify this option, use the **ConfigFile** parameter to specify the custom XML configuration files.
 
 ```yaml
 Type: ModeType
@@ -628,7 +642,7 @@ Accept wildcard characters: False
 ```
 
 ### -MsiFilePath
-Specify the path to a Windows Installer file for an software condition.
+Specify the path to a Windows Installer file for a software condition.
 
 ```yaml
 Type: String
@@ -689,7 +703,8 @@ Accept wildcard characters: False
 ```
 
 ### -Package
-{{ Fill Package Description }}
+
+Specify an object for the USMT package. To get this object, use the [Get-CMPackage](Get-CMPackage.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -704,7 +719,8 @@ Accept wildcard characters: False
 ```
 
 ### -Password
-{{ Fill Password Description }}
+
+If you enable the **RestoreLocalAccount** parameter, use this parameter to assign a new password to the restored local user accounts. USMT can't migrate the original passwords. Specify a secure string for the local account password.
 
 ```yaml
 Type: SecureString
@@ -915,7 +931,8 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveConfigFile
-{{ Fill RemoveConfigFile Description }}
+
+Specify the file names of custom XML configuration files to remove from the list. To remove all configuration files, use the **CleanConfigFile** parameter.
 
 ```yaml
 Type: String[]
@@ -930,7 +947,8 @@ Accept wildcard characters: False
 ```
 
 ### -RestoreLocalAccount
-{{ Fill RestoreLocalAccount Description }}
+
+Set this parameter to `$true` to restore local computer user profiles. These profiles aren't for domain users. USMT can't migrate the original passwords. To assign new passwords to the restored local user accounts, use the **Password** parameter.
 
 ```yaml
 Type: Boolean
@@ -1143,7 +1161,8 @@ Accept wildcard characters: False
 ```
 
 ### -TaskSequenceId
-Specify the ID of the task sequence to target for changes.
+
+Specify the **package ID** of the task sequence from which to get the **Restore User State** step. This value is a standard package ID, for example `XYZ00858`.
 
 ```yaml
 Type: String
@@ -1189,7 +1208,8 @@ Accept wildcard characters: False
 ```
 
 ### -VerboseLogging
-{{ Fill VerboseLogging Description }}
+
+Set this parameter to `$true` to enable USMT verbose logging.
 
 ```yaml
 Type: Boolean
@@ -1241,9 +1261,17 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-CMTSStepRestoreUserState](Get-CMTSStepRestoreUserState.md)
+[New-CMTSStepRestoreUserState](New-CMTSStepRestoreUserState.md)
+[Remove-CMTSStepRestoreUserState](Remove-CMTSStepRestoreUserState.md)
+
+[About task sequence steps: Restore User State](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_RestoreUserState)
