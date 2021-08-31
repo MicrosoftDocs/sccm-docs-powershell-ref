@@ -233,6 +233,9 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveThirdParty
+
+The parameter 'RemoveThirdParty' has been deprecated and may be removed in a future release.
+
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
