@@ -1,16 +1,16 @@
 ---
-description: Sets a TS step set variable.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/07/2019
+ms.date: 09/01/2021
+online version:
 schema: 2.0.0
-title: Set-CMTSStepSetVariable
 ---
 
 # Set-CMTSStepSetVariable
 
 ## SYNOPSIS
-Sets a TS step set variable.
+
+Configure an instance of the **Set Task Sequence Variable** task sequence step.
 
 ## SYNTAX
 
@@ -234,14 +234,28 @@ Set-CMTSStepSetVariable [-IsMasked <Boolean>] [-SetConditionOperatingSystem] [-S
 
 ## DESCRIPTION
 
+Use this cmdlet to configure an instance of the **Set Task Sequence Variable** task sequence step.
+
+For more information on this step, see [About task sequence steps: Set Task Sequence Variable](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_SetTaskSequenceVariable).
+
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
 ### Example 1
-```
-PS XYZ:\>
+
+This example first uses the **ConvertTo-SecureString** built-in cmdlet to create a secure string for the user password. This method is used here as a simple example, but not the most secure since the plain text password is in the script. For more information on this cmdlet and other options, see [ConvertTo-SecureString](/powershell/module/microsoft.powershell.security/convertto-securestring).
+
+It then changes the **Set Task Sequence Variable** step in the **Default OS deployment** task sequence to use this new password, and mask the variable value.
+
+```powershell
+$Secure_String_Pwd = ConvertTo-SecureString "P@ssW0rD!" -AsPlainText -Force
+
+$tsNameOsd = "Default OS deployment"
+$tsStepNameSetTSVar = "Set Task Sequence Variable"
+
+Set-CMTSStepSetVariable -TaskSequenceName $tsNameOsd -StepName $tsStepNameSetTSVar -TaskSequenceVariable "OSDJoinPassword" -TaskSequenceVariableValue $Secure_String_Pwd -IsMasked $true -Description "Password updated $(Get-Date)"
 ```
 
 ## PARAMETERS
@@ -327,6 +341,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -505,7 +520,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 
-Specify a task sequence object from which to get the **Apply Network Settings** step. To get this object, use the [Get-CMTaskSequence](Get-CMTaskSequence.md) cmdlet.
+Specify a task sequence object from which to get the **Set Task Sequence Variable** step. To get this object, use the [Get-CMTaskSequence](Get-CMTaskSequence.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -568,7 +583,8 @@ Accept wildcard characters: False
 ```
 
 ### -IsMasked
-{{ Fill IsMasked Description }}
+
+Set this parameter to `$true` to mask sensitive data stored in task sequence variables. For example, when specifying a password.
 
 ```yaml
 Type: Boolean
@@ -583,6 +599,7 @@ Accept wildcard characters: False
 ```
 
 ### -MoveToIndex
+
 Move this step to the specified index position in the task sequence.
 
 ```yaml
@@ -1050,6 +1067,7 @@ Accept wildcard characters: False
 ```
 
 ### -StepOrder
+
 Use this parameter to reorder the step in the task sequence.
 
 ```yaml
@@ -1083,7 +1101,7 @@ Accept wildcard characters: False
 
 ### -TaskSequenceId
 
-Specify the **package ID** of the task sequence from which to get the **Apply Network Settings** step. This value is a standard package ID, for example `XYZ00858`.
+Specify the **package ID** of the task sequence from which to get the **Set Task Sequence Variable** step. This value is a standard package ID, for example `XYZ00858`.
 
 ```yaml
 Type: String
@@ -1114,6 +1132,11 @@ Accept wildcard characters: False
 ```
 
 ### -TaskSequenceVariable
+
+Specify the name of a task sequence built-in or action variable, or specify your own user-defined variable name. For more information, see [How to use task sequence variables in Configuration Manager](/mem/configmgr/osd/understand/using-task-sequence-variables) and the reference of [Task sequence variables](/mem/configmgr/osd/understand/task-sequence-variables).
+
+Use the **TaskSequenceVariableValue** parameter to set the value.
+
 ```yaml
 Type: String
 Parameter Sets: ByValue, ById, ByName
@@ -1127,6 +1150,9 @@ Accept wildcard characters: False
 ```
 
 ### -TaskSequenceVariableValue
+
+The task sequence sets the **TaskSequenceVariable** to this value. Set this task sequence variable to the value of another task sequence variable with the syntax `%varname%`.
+
 ```yaml
 Type: String
 Parameter Sets: ByValue, ById, ByName
@@ -1195,9 +1221,17 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-CMTSStepSetVariable](Get-CMTSStepSetVariable.md)
+[New-CMTSStepSetVariable](New-CMTSStepSetVariable.md)
+[Remove-CMTSStepSetVariable](Remove-CMTSStepSetVariable.md)
+
+[About task sequence steps: Set Task Sequence Variable](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_SetTaskSequenceVariable)

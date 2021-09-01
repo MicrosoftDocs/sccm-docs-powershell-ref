@@ -1,16 +1,16 @@
 ---
-description: Gets a TS step set variable.
 external help file: AdminUI.PS.psm1-help.xml
 Module Name: ConfigurationManager
-ms.date: 05/02/2019
+ms.date: 09/01/2021
+online version:
 schema: 2.0.0
-title: Get-CMTSStepSetVariable
 ---
 
 # Get-CMTSStepSetVariable
 
 ## SYNOPSIS
-Gets a TS step set variable.
+
+Get the **Set Task Sequence Variable** step from a specific task sequence.
 
 ## SYNTAX
 
@@ -34,19 +34,34 @@ Get-CMTSStepSetVariable [-TaskSequenceName] <String> [-StepName <String>] [-What
 
 ## DESCRIPTION
 
+Use this cmdlet to get a task sequence step object for one or more instances of the **Set Task Sequence Variable** step. You can use this object to:
+
+- Remove the step from a task sequence with [Remove-CMTSStepSetVariable](Remove-CMTSStepSetVariable.md)
+- Copy the step to another task sequence with [Add-CMTaskSequenceStep](Add-CMTaskSequenceStep.md)
+
+For more information on this step, see [About task sequence steps: Set Task Sequence Variable](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_SetTaskSequenceVariable).
+
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
 ### Example 1
-```
-PS XYZ:\>
+
+This example first gets a task sequence object in the **$tsOsd** variable. It then passes that variable as the input object to get the **Set Task Sequence Variable** step.
+
+```powershell
+$tsNameOsd = "Default OS deployment"
+$tsOsd = Get-CMTaskSequence -Name $tsNameOsd -Fast
+
+$tsStepNameSetTSVar = "Set Task Sequence Variable"
+$tsStepSetTSVar = Get-CMTSStepSetVariable -InputObject $tsOsd -StepName $tsStepNameSetTSVar
 ```
 
 ## PARAMETERS
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -63,7 +78,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 
-Specify a task sequence object from which to get the **Apply Network Settings** step. To get this object, use the [Get-CMTaskSequence](Get-CMTaskSequence.md) cmdlet.
+Specify a task sequence object from which to get the **Set Task Sequence Variable** step. To get this object, use the [Get-CMTaskSequence](Get-CMTaskSequence.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -79,7 +94,7 @@ Accept wildcard characters: False
 
 ### -StepName
 
-Specify the name of the **Apply Network Settings** step to get from the task sequence.
+Specify the name of the **Set Task Sequence Variable** step to get from the task sequence.
 
 ```yaml
 Type: String
@@ -95,7 +110,7 @@ Accept wildcard characters: False
 
 ### -TaskSequenceId
 
-Specify the **package ID** of the task sequence from which to get the **Apply Network Settings** step. This value is a standard package ID, for example `XYZ00858`.
+Specify the **package ID** of the task sequence from which to get the **Set Task Sequence Variable** step. This value is a standard package ID, for example `XYZ00858`.
 
 ```yaml
 Type: String
@@ -111,7 +126,7 @@ Accept wildcard characters: False
 
 ### -TaskSequenceName
 
-Specify the name of the task sequence from which to get the **Apply Network Settings** step.
+Specify the name of the task sequence from which to get the **Set Task Sequence Variable** step.
 
 ```yaml
 Type: String
@@ -147,9 +162,17 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
+
+[New-CMTSStepSetVariable](New-CMTSStepSetVariable.md)
+[Remove-CMTSStepSetVariable](Remove-CMTSStepSetVariable.md)
+[Set-CMTSStepSetVariable](Set-CMTSStepSetVariable.md)
+
+[About task sequence steps: Set Task Sequence Variable](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_SetTaskSequenceVariable)
