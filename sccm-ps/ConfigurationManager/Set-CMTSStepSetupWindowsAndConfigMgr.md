@@ -1,16 +1,16 @@
 ---
-description: Sets a TS step setup window and config mgr.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/07/2019
+ms.date: 09/01/2021
+online version:
 schema: 2.0.0
-title: Set-CMTSStepSetupWindowsAndConfigMgr
 ---
 
 # Set-CMTSStepSetupWindowsAndConfigMgr
 
 ## SYNOPSIS
-Configure the **Setup Windows and ConfigMgr** step in a task sequence.
+
+Configure an instance of the **Setup Windows and ConfigMgr** task sequence step.
 
 ## SYNTAX
 
@@ -226,14 +226,24 @@ Set-CMTSStepSetupWindowsAndConfigMgr [-SetConditionOperatingSystem] [-StepName <
 
 ## DESCRIPTION
 
+Use this cmdlet to configure an instance of the **Setup Windows and ConfigMgr** task sequence step.
+
+For more information on this step, see [About task sequence steps: Setup Windows and ConfigMgr](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_SetupWindowsandConfigMgr).
+
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
 ### Example 1
-```
-PS XYZ:\>
+
+This example changes the **Setup Windows and ConfigMgr** step in the **Default OS deployment** task sequence to also use a pre-production client package.
+
+```powershell
+$tsNameOsd = "Default OS deployment"
+$tsStepNameSetupWinCM = "Setup Windows and ConfigMgr"
+
+Set-CMTSStepSetupWindowsAndConfigMgr -TaskSequenceName $tsNameOsd -StepName $tsStepNameSetupWinCM -PreproductionPackageId "XYZ00045"
 ```
 
 ## PARAMETERS
@@ -350,6 +360,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
+
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -478,7 +490,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Can't be combined with **DisableWildcardHandling**.
+
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -494,7 +507,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 
-Specify a task sequence object from which to get the **Apply Network Settings** step. To get this object, use the [Get-CMTaskSequence](Get-CMTaskSequence.md) cmdlet.
+Specify a task sequence object from which to get the **Setup Windows and ConfigMgr** step. To get this object, use the [Get-CMTaskSequence](Get-CMTaskSequence.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -509,6 +522,9 @@ Accept wildcard characters: False
 ```
 
 ### -InstallationProperty
+
+The task sequence step automatically specifies site assignment and the default configuration. Use this parameter to specify any additional installation properties to use when you install the client. To enter multiple installation properties, separate them with a space.
+
 ```yaml
 Type: String
 Parameter Sets: ByValue, ById, ByName
@@ -539,7 +555,9 @@ Accept wildcard characters: False
 
 ### -IsContinueOnError
 
-Use this parameter to enable the step option **Continue on error**. When you enable this option, if the step fails, the task sequence continues.
+Use this parameter to enable the step option **Continue on error**.
+
+Specifically with this step, if there's an error, the task sequence fails whether or not this setting is enabled.
 
 ```yaml
 Type: Boolean
@@ -650,6 +668,9 @@ Accept wildcard characters: False
 ```
 
 ### -PackageId
+
+Specify the **package ID** of the the Configuration Manager client installation package to use with this step. This value is a standard package ID, for example `XYZ0002`.
+
 ```yaml
 Type: String
 Parameter Sets: ByValue, ById, ByName
@@ -663,6 +684,11 @@ Accept wildcard characters: False
 ```
 
 ### -PreproductionPackageId
+
+Specify the **package ID** of the pre-production client installation package to use with this step.
+
+If there's a pre-production client package available, and the computer is a member of the piloting collection, the task sequence uses this package instead of the production client package. The pre-production client is a newer version for testing in the production environment.
+
 ```yaml
 Type: String
 Parameter Sets: ByValue, ById, ByName
@@ -1096,7 +1122,7 @@ Accept wildcard characters: False
 
 ### -TaskSequenceId
 
-Specify the **package ID** of the task sequence from which to get the **Apply Network Settings** step. This value is a standard package ID, for example `XYZ00858`.
+Specify the **package ID** of the task sequence from which to get the **Setup Windows and ConfigMgr** step. This value is a standard package ID, for example `XYZ00858`.
 
 ```yaml
 Type: String
@@ -1161,8 +1187,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet isn't run.
+
+Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
 
 ```yaml
 Type: SwitchParameter
@@ -1182,9 +1208,17 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-CMTSStepSetupWindowsAndConfigMgr](Get-CMTSStepSetupWindowsAndConfigMgr.md)
+[New-CMTSStepSetupWindowsAndConfigMgr](New-CMTSStepSetupWindowsAndConfigMgr.md)
+[Remove-CMTSStepSetupWindowsAndConfigMgr](Remove-CMTSStepSetupWindowsAndConfigMgr.md)
+
+[About task sequence steps: Setup Windows and ConfigMgr](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_SetupWindowsandConfigMgr)
