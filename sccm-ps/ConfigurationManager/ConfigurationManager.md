@@ -2,7 +2,7 @@
 Module Name: ConfigurationManager
 Module Guid: 7f590131-5253-4425-8b32-eeab51a4c393
 Download Help Link: https://aka.ms/configmgrps-help
-Help Version: 5.2107.0.1
+Help Version: 5.2107.0.2
 Locale: en-US
 ---
 
