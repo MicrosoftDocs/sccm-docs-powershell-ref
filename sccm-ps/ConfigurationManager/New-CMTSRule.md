@@ -1,7 +1,7 @@
 ---
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 03/24/2021
+ms.date: 09/01/2021
 online version:
 schema: 2.0.0
 ---
@@ -10,7 +10,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-Create a rule to add to a Set Dynamic Variables task sequence step.
+Create a rule to add to a **Set Dynamic Variables** task sequence step.
 
 ## SYNTAX
 
@@ -48,7 +48,7 @@ New-CMTSRule [-ReferencedVariableName <String>] [-ReferencedVariableOperator <Va
 
 ## DESCRIPTION
 
-Use this cmdlet to create a rule that you can add to a [Set Dynamic Variables](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_SetDynamicVariables) task sequence step. When the task sequence runs this step, it evaluates the dynamic rules and variables in order. When it evaluates the rules on the specific device, it can then set task sequence variables based on those rules.
+Use this cmdlet to create a rule object that you add to a **Set Dynamic Variables** task sequence step. To add rules, use the [New-CMTSStepSetDynamicVariable](New-CMTSStepSetDynamicVariable.md) or [Set-CMTSStepSetDynamicVariable](Set-CMTSStepSetDynamicVariable.md) cmdlets. When the task sequence runs this step, it evaluates the dynamic rules and variables in order. When it evaluates the rules on the specific device, it can then set task sequence variables based on those rules.
 
 There are four types of rules:
 
@@ -382,9 +382,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
+
 ## OUTPUTS
 
 ### IResultObject#SMS_TaskSequence_Rule
+
 ## NOTES
 
 ## RELATED LINKS

@@ -1,17 +1,16 @@
 ---
-description: Configure the Set Dynamic Variable task sequence step.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 03/25/2021
+ms.date: 09/01/2021
+online version:
 schema: 2.0.0
-title: Set-CMTSStepSetDynamicVariable
 ---
 
 # Set-CMTSStepSetDynamicVariable
 
 ## SYNOPSIS
 
-Configure the Set Dynamic Variable task sequence step.
+Configure an instance of the **Set Dynamic Variables** task sequence step.
 
 ## SYNTAX
 
@@ -225,7 +224,9 @@ Set-CMTSStepSetDynamicVariable [-SetConditionOperatingSystem] [-StepName <String
 
 ## DESCRIPTION
 
-Use this cmdlet to set the properties, options, and specific conditions for the **Set Dynamic Variable** step in a task sequence. For more information, see [About task sequence steps - Set Dynamic Variables](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_SetDynamicVariables).
+Use this cmdlet to configure an instance of the **Set Dynamic Variables** task sequence step.
+
+For more information on this step, see [About task sequence steps: Set Dynamic Variables](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_SetDynamicVariables).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
@@ -325,7 +326,7 @@ Accept wildcard characters: False
 
 ### -Condition
 
-Specifies the conditions. This parameter is used with one of the following parameters: SetConditionIfStatement, SetConditionQueryWmi, SetConditionVariable, SetConditionOperatingSystem, SetConditionFile, SetConditionFolder, SetConditionRegistry, and SetConditionSoftware.
+Specify a condition object to use with this step. To get this object, use one of the task sequence condition cmdlets. For example, [Get-CMTSStepConditionVariable](Get-CMTSStepConditionVariable.md).
 
 ```yaml
 Type: IResultObject[]
@@ -341,7 +342,7 @@ Accept wildcard characters: False
 
 ### -ConditionVariableName
 
-Specifies a condition variable name.
+Specify the name of the task sequence variable to use as a condition.
 
 ```yaml
 Type: String
@@ -357,7 +358,7 @@ Accept wildcard characters: False
 
 ### -ConditionVariableValue
 
-Specifies condition variable value.
+Specify the value of the task sequence variable to use in a condition.
 
 ```yaml
 Type: String
@@ -421,7 +422,7 @@ Accept wildcard characters: False
 
 ### -FileDateTimeOperator
 
-Specifies a file date time operator.
+Specify a variable operator type for a file date/time condition.
 
 ```yaml
 Type: VariableOperatorType
@@ -438,7 +439,7 @@ Accept wildcard characters: False
 
 ### -FilePath
 
-Specifies a file path.
+Specify the path for a file condition.
 
 ```yaml
 Type: String
@@ -454,7 +455,7 @@ Accept wildcard characters: False
 
 ### -FileTimestamp
 
-Specifies a file time stamp.
+Specify a date/time value to use for a file condition.
 
 ```yaml
 Type: DateTime
@@ -470,7 +471,7 @@ Accept wildcard characters: False
 
 ### -FileVersion
 
-Specifies a file version.
+Specify a version string for a file condition.
 
 ```yaml
 Type: String
@@ -486,7 +487,7 @@ Accept wildcard characters: False
 
 ### -FolderDateTimeOperator
 
-Specifies a folder date time operator.
+Specify a variable operator for a folder date/time condition.
 
 ```yaml
 Type: VariableOperatorType
@@ -503,7 +504,7 @@ Accept wildcard characters: False
 
 ### -FolderPath
 
-Specifies a folder path.
+Specify the path for a folder condition.
 
 ```yaml
 Type: String
@@ -519,7 +520,7 @@ Accept wildcard characters: False
 
 ### -FolderTimestamp
 
-Specifies a folder time stamp.
+Specify a date/time value to use for a folder condition.
 
 ```yaml
 Type: DateTime
@@ -551,7 +552,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 
-Specify a task sequence object in which to add this step. To get this object, use the [Get-CMTaskSequence](Get-CMTaskSequence.md) cmdlet.
+Specify a task sequence object from which to get the **Set Dynamic Variables** step. To get this object, use the [Get-CMTaskSequence](Get-CMTaskSequence.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -567,7 +568,7 @@ Accept wildcard characters: False
 
 ### -IsAnyVersion
 
-Indicates whether you want to match any version of the product (upgrade code only). This is parameter is used for the Software condition.
+Use this parameter with the **SetConditionSoftware** parameter to match any version of the product.
 
 ```yaml
 Type: Boolean
@@ -583,7 +584,7 @@ Accept wildcard characters: False
 
 ### -IsContinueOnError
 
-Set this parameter to **$true** to enable the step option for **Continue on error**. When you enable this option, if an error occurs when this step runs, the task sequence continues.
+Set this parameter to `$true` to enable the step option for **Continue on error**. When you enable this option, if an error occurs when this step runs, the task sequence continues.
 
 ```yaml
 Type: Boolean
@@ -599,7 +600,7 @@ Accept wildcard characters: False
 
 ### -IsEnabled
 
-Set this parameter to **$false** to disable the step in the task sequence. The task sequence doesn't run disabled steps.
+Set this parameter to `$false` to disable the step in the task sequence. The task sequence doesn't run disabled steps.
 
 ```yaml
 Type: Boolean
@@ -631,7 +632,7 @@ Accept wildcard characters: False
 
 ### -MsiFilePath
 
-Specifies an MSI file path.
+Specify the path to a Windows Installer file for a software condition.
 
 ```yaml
 Type: String
@@ -647,7 +648,7 @@ Accept wildcard characters: False
 
 ### -Namespace
 
-Specifies a WMI namespace. This parameter is used for the Query WMI condition.
+Specify the namespace for a WMI query condition.
 
 ```yaml
 Type: String[]
@@ -663,7 +664,7 @@ Accept wildcard characters: False
 
 ### -NewStepName
 
-Specify a new step name to rename it.
+Use this parameter to rename this task sequence step.
 
 ```yaml
 Type: String
@@ -679,7 +680,7 @@ Accept wildcard characters: False
 
 ### -OperatorType
 
-Specifies an operator type.
+Specify an operator to use with a task sequence variable condition.
 
 ```yaml
 Type: VariableOperatorType
@@ -696,7 +697,7 @@ Accept wildcard characters: False
 
 ### -Query
 
-Specifies a query.
+Specify a WMI query string to use for a condition.
 
 ```yaml
 Type: String
@@ -712,7 +713,7 @@ Accept wildcard characters: False
 
 ### -RegistryKey
 
-Specifies a registry key.
+Specify the key to use with a registry condition.
 
 ```yaml
 Type: String
@@ -728,7 +729,7 @@ Accept wildcard characters: False
 
 ### -RegistryOperator
 
-Specifies a registry operator.
+Specify an operator to use with a registry condition.
 
 ```yaml
 Type: VariableOperatorType
@@ -745,7 +746,7 @@ Accept wildcard characters: False
 
 ### -RegistryValueData
 
-Specifies registry value data.
+Specify the value data to use with a registry condition.
 
 ```yaml
 Type: String
@@ -761,7 +762,7 @@ Accept wildcard characters: False
 
 ### -RegistryValueName
 
-Specifies registry value name.
+Specify the value name to use with a registry condition.
 
 ```yaml
 Type: String
@@ -777,7 +778,7 @@ Accept wildcard characters: False
 
 ### -RemoveConditionFile
 
-Indicates removing the conditions of the File Properties type.
+Use this parameter to remove a file condition.
 
 ```yaml
 Type: SwitchParameter
@@ -793,7 +794,7 @@ Accept wildcard characters: False
 
 ### -RemoveConditionFolder
 
-Indicates removing the conditions of the Folder Properties type.
+Use this parameter to remove a folder condition.
 
 ```yaml
 Type: SwitchParameter
@@ -809,7 +810,7 @@ Accept wildcard characters: False
 
 ### -RemoveConditionIfStatement
 
-Indicates removing the conditions of the If Statement type.
+Use this parameter to remove an `if` statement condition.
 
 ```yaml
 Type: SwitchParameter
@@ -825,7 +826,7 @@ Accept wildcard characters: False
 
 ### -RemoveConditionOperatingSystem
 
-Indicates removing the conditions of the Operating System type.
+Use this parameter to remove an OS condition.
 
 ```yaml
 Type: SwitchParameter
@@ -841,7 +842,7 @@ Accept wildcard characters: False
 
 ### -RemoveConditionQueryWmi
 
-Indicates removing the conditions of the Query WMI type.
+Use this parameter to remove a WMI query condition.
 
 ```yaml
 Type: SwitchParameter
@@ -857,7 +858,7 @@ Accept wildcard characters: False
 
 ### -RemoveConditionRegistry
 
-Indicates removing the conditions of the Registry Setting type.
+Use this parameter to remove a registry condition.
 
 ```yaml
 Type: SwitchParameter
@@ -873,7 +874,7 @@ Accept wildcard characters: False
 
 ### -RemoveConditionSoftware
 
-Indicates removing the conditions of the Installed Software type.
+Use this parameter to remove a software condition.
 
 ```yaml
 Type: SwitchParameter
@@ -889,7 +890,7 @@ Accept wildcard characters: False
 
 ### -RemoveConditionVariable
 
-Indicates removing the conditions of the Task Sequence Variable type.
+Use this parameter to remove a task sequence variable condition.
 
 ```yaml
 Type: SwitchParameter
@@ -905,7 +906,7 @@ Accept wildcard characters: False
 
 ### -RootKey
 
-Specifies a root key of a Registry Setting type condition.
+Specify the root key to use with a registry condition.
 
 ```yaml
 Type: RegistryRootKeyType
@@ -922,7 +923,7 @@ Accept wildcard characters: False
 
 ### -SetConditionFile
 
-Indicate setting all the conditions of the File Properties type.
+Add a new file condition.
 
 ```yaml
 Type: SwitchParameter
@@ -938,7 +939,7 @@ Accept wildcard characters: False
 
 ### -SetConditionFolder
 
-Indicate setting all the conditions of the Folder Properties type.
+Add a new folder condition.
 
 ```yaml
 Type: SwitchParameter
@@ -954,7 +955,7 @@ Accept wildcard characters: False
 
 ### -SetConditionIfStatement
 
-Indicate setting all the conditions of the If Statement type.
+Add a new `if` statement condition.
 
 ```yaml
 Type: SwitchParameter
@@ -970,7 +971,7 @@ Accept wildcard characters: False
 
 ### -SetConditionOperatingSystem
 
-Indicate setting all the conditions of the Operating System type.
+Add a new OS condition.
 
 ```yaml
 Type: SwitchParameter
@@ -986,7 +987,7 @@ Accept wildcard characters: False
 
 ### -SetConditionQueryWmi
 
-Indicate setting all the conditions of the Query WMI type.
+Add a new WMI query condition.
 
 ```yaml
 Type: SwitchParameter
@@ -1002,7 +1003,7 @@ Accept wildcard characters: False
 
 ### -SetConditionRegistry
 
-Indicate setting all the conditions of the Registry Setting type.
+Add a new registry condition.
 
 ```yaml
 Type: SwitchParameter
@@ -1018,7 +1019,7 @@ Accept wildcard characters: False
 
 ### -SetConditionSoftware
 
-Indicate setting all the conditions of the Installed Software type.
+Add a new software condition.
 
 ```yaml
 Type: SwitchParameter
@@ -1034,7 +1035,7 @@ Accept wildcard characters: False
 
 ### -SetConditionVariable
 
-Indicate setting all the conditions of the Task Sequence Variable type.
+Add a new task sequence variable condition.
 
 ```yaml
 Type: SwitchParameter
@@ -1050,7 +1051,7 @@ Accept wildcard characters: False
 
 ### -StatementType
 
-Specifies a statement type.
+Set the type for an `if` statement condition.
 
 ```yaml
 Type: ConditionStatementType
@@ -1083,7 +1084,7 @@ Accept wildcard characters: False
 
 ### -StepOrder
 
-Specifies the order of a step. If MoveToIndex is specified, you must also specify the MoveToIndex parameter.
+Use this parameter to reorder the step in the task sequence.
 
 ```yaml
 Type: ReorderType
@@ -1100,7 +1101,7 @@ Accept wildcard characters: False
 
 ### -SupportedPlatform
 
-Specifies supported platforms.
+Use this parameter to specify the platforms for an OS condition.
 
 ```yaml
 Type: IResultObject[]
@@ -1116,7 +1117,7 @@ Accept wildcard characters: False
 
 ### -TaskSequenceId
 
-Specify a task sequence ID in which the step exists. This value is a standard package ID, for example, `XYZ00042`.
+Specify the **package ID** of the task sequence from which to get the **Set Dynamic Variables** step. This value is a standard package ID, for example `XYZ00858`.
 
 ```yaml
 Type: String
@@ -1132,7 +1133,7 @@ Accept wildcard characters: False
 
 ### -TaskSequenceName
 
-Specify a task sequence name in which the step exists.
+Specify the name of the task sequence to target for changes.
 
 ```yaml
 Type: String
@@ -1148,7 +1149,7 @@ Accept wildcard characters: False
 
 ### -ValueType
 
-Specifies a value type.
+Specify the type of value for a registry condition.
 
 ```yaml
 Type: RegistryValueType
@@ -1165,7 +1166,7 @@ Accept wildcard characters: False
 
 ### -VersionOperator
 
-Specifies a version operator.
+Specify an operator to use with a file condition.
 
 ```yaml
 Type: VariableOperatorType
@@ -1202,7 +1203,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
+
 
 ### System.Object
 ## NOTES
