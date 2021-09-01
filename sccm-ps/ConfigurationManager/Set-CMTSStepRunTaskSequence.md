@@ -1,6 +1,7 @@
 ---
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
+ms.date: 09/01/2021
 online version:
 schema: 2.0.0
 ---
@@ -9,7 +10,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-Use this cmdlet to edit the task sequence step **Run Task Sequence**.
+Configure an instance of the **Run Task Sequence** task sequence step.
 
 ## SYNTAX
 
@@ -234,7 +235,12 @@ Set-CMTSStepRunTaskSequence -RunTaskSequence <IResultObject> [-SetConditionOpera
 
 ## DESCRIPTION
 
-Starting in version 1906, use this cmdlet to edit the task sequence step **Run Task Sequence**.
+Use this cmdlet to configure an instance of the **Run Task Sequence** task sequence step.
+
+For more information on this step, see [About task sequence steps: Run Task Sequence](/mem/configmgr/osd/understand/task-sequence-steps#child-task-sequence).
+
+> [!NOTE]
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
@@ -348,7 +354,7 @@ Accept wildcard characters: False
 
 ### -Description
 
-Specify a description for the task sequence step.
+Specify an optional description for the task sequence step.
 
 ```yaml
 Type: String
@@ -503,7 +509,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 
-Specify an object for the task sequence to modify.
+Specify a task sequence object from which to get the **Run Task Sequence** step. To get this object, use the [Get-CMTaskSequence](Get-CMTaskSequence.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -581,7 +587,7 @@ Accept wildcard characters: False
 ```
 
 ### -MsiFilePath
-Specify the path to a Windows Installer file for an software condition.
+Specify the path to a Windows Installer file for a software condition.
 
 ```yaml
 Type: String
@@ -856,7 +862,7 @@ Accept wildcard characters: False
 
 ### -RunTaskSequence
 
-Specify an object for the child task sequence to run with this step.
+Specify an object for the task sequence that you want this step to run. To get this object, use the [Get-CMTaskSequence](Get-CMTaskSequence.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -1067,7 +1073,7 @@ Accept wildcard characters: False
 
 ### -TaskSequenceId
 
-Specify the ID of the task sequence to target.
+Specify the **package ID** of the task sequence from which to get the **Run Task Sequence** step. This value is a standard package ID, for example `XYZ00858`.
 
 ```yaml
 Type: String
@@ -1083,7 +1089,7 @@ Accept wildcard characters: False
 
 ### -TaskSequenceName
 
-Specify the name of the task sequence to target.
+Specify the name of the task sequence to target for changes.
 
 ```yaml
 Type: String
@@ -1151,9 +1157,17 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-CMTSStepRunTaskSequence](Get-CMTSStepRunTaskSequence.md)
+[New-CMTSStepRunTaskSequence](New-CMTSStepRunTaskSequence.md)
+[Remove-CMTSStepRunTaskSequence](Remove-CMTSStepRunTaskSequence.md)
+
+[About task sequence steps: Run Task Sequence](/mem/configmgr/osd/understand/task-sequence-steps#child-task-sequence)

@@ -1,6 +1,7 @@
 ---
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
+ms.date: 09/01/2021
 online version:
 schema: 2.0.0
 ---
@@ -9,7 +10,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-Use this cmdlet to create the task sequence step **Run Task Sequence**.
+Create a **Run Task Sequence** step, which you can add to a task sequence.
 
 ## SYNTAX
 
@@ -21,22 +22,37 @@ New-CMTSStepRunTaskSequence -RunTaskSequence <IResultObject> [-Condition <IResul
 
 ## DESCRIPTION
 
-Starting in version 1906, se this cmdlet to create the task sequence step **Run Task Sequence**.
+This cmdlet creates a new **Run Task Sequence** step object. Then use the [Add-CMTaskSequenceStep](Add-CMTaskSequenceStep.md) cmdlet to add the step to a task sequence. For more information on this step, see [About task sequence steps: Run Task Sequence](/mem/configmgr/osd/understand/task-sequence-steps#child-task-sequence).
+
+> [!NOTE]
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
-### Example 1: Create the task sequence step
+### Example 1
+
+This example first gets an object for the task sequence named **SubTS: Partition disks**.
+
+The next line creates an object for the **Run Task Sequence** step, using the variable with the child task sequence object.
+
+It then gets the main task sequence object, and adds this new step to the task sequence at index 11.
 
 ```powershell
-$refSubTaskSequence = Get-CMTaskSequence -Name "Child task sequence"
-$myStep = New-CMTSStepRunTaskSequence -Name "Run child task sequence" -RunTaskSequence $refSubTaskSequence
+$tsNameChild = "SubTS: Partition disks"
+$tsChild = Get-CMTaskSequence -Name $tsNameChild -Fast
+$step = New-CMTSStepRunTaskSequence -Name "Run Task Sequence" -RunTaskSequence $tsChild
+
+$tsNameOsd = "Default OS deployment"
+$tsOsd = Get-CMTaskSequence -Name $tsNameOsd -Fast
+
+$tsOsd | Add-CMTaskSequenceStep -Step $step -InsertStepStartIndex 11
 ```
 
 ## PARAMETERS
 
 ### -Condition
 
-Specify a task sequence step condition object. For example, use the [Get-CMTSStepConditionVariable](Get-CMTSStepConditionVariable.md) cmdlet.
+Specify a condition object to use with this step. To get this object, use one of the task sequence condition cmdlets. For example, [Get-CMTSStepConditionVariable](Get-CMTSStepConditionVariable.md).
 
 ```yaml
 Type: IResultObject[]
@@ -68,7 +84,7 @@ Accept wildcard characters: False
 
 ### -ContinueOnError
 
-This parameter is the same as the following setting on the **Options** tab of the **Run Task Sequence** step in the **Task Sequence Editor** in the console: **Continue on error**.
+Add this parameter to enable the step option **Continue on error**. When you enable this option, if the step fails, the task sequence continues.
 
 ```yaml
 Type: SwitchParameter
@@ -84,7 +100,7 @@ Accept wildcard characters: False
 
 ### -Description
 
-Specify a description for the task sequence step.
+Specify an optional description for this task sequence step.
 
 ```yaml
 Type: String
@@ -100,7 +116,7 @@ Accept wildcard characters: False
 
 ### -Disable
 
-This parameter is the same as the following setting on the **Options** tab of the **Run Task Sequence** step in the **Task Sequence Editor** in the console: **Disable this step**.
+Add this parameter to disable this task sequence step.
 
 ```yaml
 Type: SwitchParameter
@@ -148,7 +164,7 @@ Accept wildcard characters: False
 
 ### -Name
 
-Specify a name for the task sequence step.
+Specify a name for this step to identify it in the task sequence.
 
 ```yaml
 Type: String
@@ -164,7 +180,7 @@ Accept wildcard characters: False
 
 ### -RunTaskSequence
 
-Specify an object for the task sequence that you want this step to run. This parameter is the same as the following setting on the **Properties** tab of the **Run Task Sequence** step in the **Task Sequence Editor** in the console: **Select task sequence to run**.
+Specify an object for the task sequence that you want this step to run. To get this object, use the [Get-CMTaskSequence](Get-CMTaskSequence.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -200,9 +216,19 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
+
 ## OUTPUTS
 
 ### IResultObject#SMS_TaskSequence_SubTasksequence
+
 ## NOTES
 
+For more information on this return object and its properties, see [SMS_TaskSequence_SubTasksequence server WMI class](/mem/configmgr/develop/reference/osd/sms_tasksequence_subtasksequence-server-wmi-class).
+
 ## RELATED LINKS
+
+[Get-CMTSStepRunTaskSequence](Get-CMTSStepRunTaskSequence.md)
+[Remove-CMTSStepRunTaskSequence](Remove-CMTSStepRunTaskSequence.md)
+[Set-CMTSStepRunTaskSequence](Set-CMTSStepRunTaskSequence.md)
+
+[About task sequence steps: Run Task Sequence](/mem/configmgr/osd/understand/task-sequence-steps#child-task-sequence)
