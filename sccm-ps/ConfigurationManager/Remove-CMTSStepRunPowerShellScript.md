@@ -1,6 +1,7 @@
 ---
 external help file: AdminUI.PS.psm1-help.xml
 Module Name: ConfigurationManager
+ms.date: 08/31/2021
 online version:
 schema: 2.0.0
 ---
@@ -8,6 +9,7 @@ schema: 2.0.0
 # Remove-CMTSStepRunPowerShellScript
 
 ## SYNOPSIS
+
 Remove the **Run PowerShell Script** step from a task sequence.
 
 ## SYNTAX
@@ -32,19 +34,29 @@ Remove-CMTSStepRunPowerShellScript [-TaskSequenceName] <String> [-StepName <Stri
 
 ## DESCRIPTION
 
+Use this cmdlet to remove an instance of the **Run PowerShell Script** step from a task sequence.
+
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
 ### Example 1
-```
-PS XYZ:\>
+
+This example first gets a task sequence object in the **$tsOsd** variable. It then passes that variable as the input object to remove the **Run PowerShell Script** step.
+
+```powershell
+$tsNameOsd = "Default OS deployment"
+$tsOsd = Get-CMTaskSequence -Name $tsNameOsd -Fast
+
+$tsStepNameRunPwsh = "Run PowerShell Script"
+Remove-CMTSStepRunPowerShellScript -InputObject $tsOsd -StepName $tsStepNameRunPwsh -Force
 ```
 
 ## PARAMETERS
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -77,7 +89,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 
-Specify a task sequence object from which to remove the **Apply Network Settings** step. To get this object, use the [Get-CMTaskSequence](Get-CMTaskSequence.md) cmdlet.
+Specify a task sequence object from which to remove the **Run PowerShell Script** step. To get this object, use the [Get-CMTaskSequence](Get-CMTaskSequence.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -93,7 +105,7 @@ Accept wildcard characters: False
 
 ### -StepName
 
-Specify the name of the **Apply Network Settings** step to remove from the task sequence.
+Specify the name of the **Run PowerShell Script** step to remove from the task sequence.
 
 ```yaml
 Type: String
@@ -109,7 +121,7 @@ Accept wildcard characters: False
 
 ### -TaskSequenceId
 
-Specify the **package ID** of the task sequence from which to remove the **Apply Network Settings** step. This value is a standard package ID, for example `XYZ00858`.
+Specify the **package ID** of the task sequence from which to remove the **Run PowerShell Script** step. This value is a standard package ID, for example `XYZ00858`.
 
 ```yaml
 Type: String
@@ -125,7 +137,7 @@ Accept wildcard characters: False
 
 ### -TaskSequenceName
 
-Specify the name of the task sequence from which to remove the **Apply Network Settings** step.
+Specify the name of the task sequence from which to remove the **Run PowerShell Script** step.
 
 ```yaml
 Type: String
@@ -161,9 +173,17 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-CMTSStepRunPowerShellScript](Get-CMTSStepRunPowerShellScript.md)
+[New-CMTSStepRunPowerShellScript](New-CMTSStepRunPowerShellScript.md)
+[Set-CMTSStepRunPowerShellScript](Set-CMTSStepRunPowerShellScript.md)
+
+[About task sequence steps: Run PowerShell Script](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_RunPowerShellScript)
