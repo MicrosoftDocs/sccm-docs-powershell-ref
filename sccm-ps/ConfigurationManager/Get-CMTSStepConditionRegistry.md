@@ -1,16 +1,16 @@
 ﻿---
-description: Gets a TS step condition registry.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/02/2019
+ms.date: 09/02/2021
+online version:
 schema: 2.0.0
-title: Get-CMTSStepConditionRegistry
 ---
 
 # Get-CMTSStepConditionRegistry
 
 ## SYNOPSIS
-Gets a TS step condition registry.
+
+Get a _registry setting_ condition from a task sequence step.
 
 ## SYNTAX
 
@@ -21,14 +21,61 @@ Get-CMTSStepConditionRegistry -InputObject <IResultObject> [-DisableWildcardHand
 
 ## DESCRIPTION
 
+Use this cmdlet to get a _registry setting_ condition object from a task sequence step. You can use this object to:
+
+- View the details of the condition on the step.
+- Copy the condition to another task sequence step.
+
+When you use the **New-CMTSStep\*** or **Set-CMTSStep\*** cmdlets, provide this condition object with the **Condition** or **AddCondition** parameters. For example, [Set-CMTSStepApplyDataImage](Set-CMTSStepApplyDataImage.md).
+
+For more information, see [Use the task sequence editor: Conditions](/mem/configmgr/osd/understand/task-sequence-editor#bkmk_conditions).
+
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: View the details of a registry condition
+
+This example first gets the **Default OS deployment** task sequence, then gets the **Set Dynamic Variables** step. It passes the task sequence step object to this cmdlet to view the condition details.
+
+```powershell
+$tsNameOsd = "Default OS deployment"
+$tsOsd = Get-CMTaskSequence -Name $tsNameOsd -Fast
+
+$tsStepNameDynVar = "Set Dynamic Variables"
+$tsStepDynVar = Get-CMTSStepSetDynamicVariable -InputObject $tsOsd -StepName $tsStepNameDynVar
+
+Get-CMTSStepConditionRegistry -InputObject $tsStepDynVar
 ```
-PS XYZ:\>
+
+```output
+SmsProviderObjectPath : SMS_TaskSequence_RegistryConditionExpression
+Data                  : 1
+KeyPath               : HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\CCM\Logging\@Global
+Operator              : equals
+Type                  : REG_DWORD
+Value                 : LogLevel
+```
+
+### Example 2: Copy a condition to another step
+
+This example first gets the **Default OS deployment** task sequence, then gets the **Set Dynamic Variables** step. It passes the task sequence step object to this cmdlet and saves the object in the **$condition** variable.
+
+It then uses the **Set-CMTSStepSetVariable** cmdlet with the **AddCondition** parameter to add this same condition to the **Set Task Sequence Variable** step.
+
+```powershell
+$tsNameOsd = "Default OS deployment"
+$tsOsd = Get-CMTaskSequence -Name $tsNameOsd -Fast
+
+$tsStepNameDynVar = "Set Dynamic Variables"
+$tsStepDynVar = Get-CMTSStepSetDynamicVariable -InputObject $tsOsd -StepName $tsStepNameDynVar
+
+$condition = Get-CMTSStepConditionRegistry -InputObject $tsStepDynVar
+
+$tsStepNameSetTSVar = "Set Task Sequence Variable"
+
+Set-CMTSStepSetVariable -TaskSequenceName $tsNameOsd -StepName $tsStepNameSetTSVar -AddCondition $condition
 ```
 
 ## PARAMETERS
@@ -66,6 +113,9 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
+
+Specify a task sequence step object with a registry condition. To get this object, use one of the **Get-CMTSStep** cmdlets. For example, [Get-CMTSStepApplyDataImage](Get-CMTSStepApplyDataImage.md).
+
 ```yaml
 Type: IResultObject
 Parameter Sets: (All)
@@ -84,10 +134,19 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ### IResultObject[]#SMS_TaskSequence_RegistryConditionExpression
+
 ### IResultObject#SMS_TaskSequence_RegistryConditionExpression
+
 ## NOTES
 
+For more information on this return object and its properties, see [SMS_TaskSequence_RegistryConditionExpression server WMI class](/mem/configmgr/develop/reference/osd/sms_tasksequence_registryconditionexpression-server-wmi-class).
+
 ## RELATED LINKS
+
+[New-CMTSStepConditionRegistry](New-CMTSStepConditionRegistry.md)
+
+[Use the task sequence editor: Conditions](/mem/configmgr/osd/understand/task-sequence-editor#bkmk_conditions)

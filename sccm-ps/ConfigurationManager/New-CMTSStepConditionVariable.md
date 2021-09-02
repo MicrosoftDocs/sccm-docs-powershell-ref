@@ -1,17 +1,16 @@
 ---
-description: Create a condition variable on a task sequence step.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 03/24/2021
+ms.date: 09/02/2021
+online version:
 schema: 2.0.0
-title: New-CMTSStepConditionVariable
 ---
 
 # New-CMTSStepConditionVariable
 
 ## SYNOPSIS
 
-Create a condition variable on a task sequence step.
+Create a _task sequence variable_ condition for a task sequence step.
 
 ## SYNTAX
 
@@ -23,7 +22,9 @@ New-CMTSStepConditionVariable -ConditionVariableName <String> [-ConditionVariabl
 
 ## DESCRIPTION
 
-Use this cmdlet to create a condition variable on a task sequence step. The task sequence evaluates the variable value before it runs the step or group. For more information, see [How to use task sequence variables](/mem/configmgr/osd/understand/using-task-sequence-variables#bkmk_access-condition).
+Use this cmdlet to create a _task sequence variable_ condition object for a task sequence step. Then use one of the **New-CMTSStep\*** or **Set-CMTSStep\*** cmdlets with the **Condition** or **AddCondition** parameters. For example, [Set-CMTSStepApplyDataImage](Set-CMTSStepApplyDataImage.md).
+
+For more information, see [Use the task sequence editor: Conditions](/mem/configmgr/osd/understand/task-sequence-editor#bkmk_conditions).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
@@ -49,7 +50,7 @@ Set-CMTSStepSetDynamicVariable -TaskSequenceName $tsname -StepName $tsstep -AddC
 
 ### -ConditionVariableName
 
-Specify the **Variable** name to evaluate. This variable name can be a built-in task sequence variable or a custom one that you created. For more information, see [How to use task sequence variables in Configuration Manager](/mem/configmgr/osd/understand/using-task-sequence-variables).
+Specify the name of the task sequence variable to evaluate. This variable name can be a built-in task sequence variable or a custom one that you created. For more information, see the reference of [Task sequence variables in Configuration Manager](/mem/configmgr/osd/understand/task-sequence-variables).
 
 ```yaml
 Type: String
@@ -65,7 +66,7 @@ Accept wildcard characters: False
 
 ### -ConditionVariableValue
 
-Specify the **Value** of the variable to evaluate in the condition.
+If you use a comparative **OperatorType** like `Equals`, then specify the value of the variable to evaluate in the condition.
 
 ```yaml
 Type: String
@@ -113,7 +114,7 @@ Accept wildcard characters: False
 
 ### -OperatorType
 
-Specify the **Condition** to evaluate the value of the variable in the condition.
+Specify the operator type to evaluate the value of the variable in the condition. If you use `Exists` or `NotExists`, then the **ConditionVariableValue** parameter isn't required. For the other comparative operator types, use the **ConditionVariableValue** parameter to specify the value to compare.
 
 ```yaml
 Type: VariableOperatorType
@@ -129,6 +130,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -144,6 +146,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
 Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
 
 ```yaml
@@ -164,23 +167,19 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
+
 ## OUTPUTS
 
 ### IResultObject#SMS_TaskSequence_VariableConditionExpression
+
 ## NOTES
+
+For more information on this return object and its properties, see [SMS_TaskSequence_VariableConditionExpression server WMI class](/mem/configmgr/develop/reference/osd/sms_tasksequence_variableconditionexpression-server-wmi-class).
 
 ## RELATED LINKS
 
 [Get-CMTaskSequenceStepCondition](Get-CMTaskSequenceStepCondition.md)
 
-[New-CMTSStepConditionFile](New-CMTSStepConditionFile.md)
-[New-CMTSStepConditionFolder](New-CMTSStepConditionFolder.md)
-[New-CMTSStepConditionIfStatement](New-CMTSStepConditionIfStatement.md)
-[New-CMTSStepConditionOperatingSystem](New-CMTSStepConditionOperatingSystem.md)
-[New-CMTSStepConditionOperatingSystemLanguage](New-CMTSStepConditionOperatingSystemLanguage.md)
-[New-CMTSStepConditionQueryWmi](New-CMTSStepConditionQueryWmi.md)
-[New-CMTSStepConditionRegistry](New-CMTSStepConditionRegistry.md)
-[New-CMTSStepConditionSoftware](New-CMTSStepConditionSoftware.md)
-[New-CMTSStepConditionVariable](New-CMTSStepConditionVariable.md)
+[Use the task sequence editor: Conditions](/mem/configmgr/osd/understand/task-sequence-editor#bkmk_conditions)
 
-[How to use task sequence variables](/mem/configmgr/osd/understand/using-task-sequence-variables#bkmk_access-condition)
+[How to access variables in a step condition](/mem/configmgr/osd/understand/using-task-sequence-variables#bkmk_access-condition)
