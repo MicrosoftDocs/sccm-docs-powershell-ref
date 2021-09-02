@@ -1102,28 +1102,28 @@ Get the **Capture User State** step from a specific task sequence.
 Get the **Capture Windows Settings** step from a specific task sequence.
 
 ### [Get-CMTSStepConditionFile](Get-CMTSStepConditionFile.md)
-Gets a TS step condition file.
+Get a _file properties_ condition from a task sequence step.
 
 ### [Get-CMTSStepConditionFolder](Get-CMTSStepConditionFolder.md)
-Gets a TS step condition folder.
+Get a _folder properties_ condition from a task sequence step.
 
 ### [Get-CMTSStepConditionIfStatement](Get-CMTSStepConditionIfStatement.md)
-Gets a TS step condition if statement.
+Get an _if statement_ condition from a task sequence step.
 
 ### [Get-CMTSStepConditionOperatingSystem](Get-CMTSStepConditionOperatingSystem.md)
-Gets a TS step condition operating system.
+Get an _OS version_ condition from a task sequence step.
 
 ### [Get-CMTSStepConditionQueryWmi](Get-CMTSStepConditionQueryWmi.md)
-Gets a TS step condition query wmi.
+Get a _WMI query_ condition from a task sequence step.
 
 ### [Get-CMTSStepConditionRegistry](Get-CMTSStepConditionRegistry.md)
-Gets a TS step condition registry.
+Get a _registry setting_ condition from a task sequence step.
 
 ### [Get-CMTSStepConditionSoftware](Get-CMTSStepConditionSoftware.md)
-Gets a TS step condition software.
+Get an _installed software_ condition from a task sequence step.
 
 ### [Get-CMTSStepConditionVariable](Get-CMTSStepConditionVariable.md)
-Gets a TS step condition variable.
+Get a _task sequence variable_ condition from a task sequence step.
 
 ### [Get-CMTSStepConnectNetworkFolder](Get-CMTSStepConnectNetworkFolder.md)
 Get the **Connect To Network Folder** step from a specific task sequence.
@@ -1993,55 +1993,55 @@ Create an **Apply Windows Settings** step, which you can add to a task sequence.
 Create an **Auto Apply Drivers** step, which you can add to a task sequence.
 
 ### [New-CMTSStepCaptureNetworkSettings](New-CMTSStepCaptureNetworkSettings.md)
-Create an **Capture Network Settings** step, which you can add to a task sequence.
+Create a **Capture Network Settings** step, which you can add to a task sequence.
 
 ### [New-CMTSStepCaptureSystemImage](New-CMTSStepCaptureSystemImage.md)
-Create an **Capture OS Image** step, which you can add to a task sequence.
+Create a **Capture OS Image** step, which you can add to a task sequence.
 
 ### [New-CMTSStepCaptureUserState](New-CMTSStepCaptureUserState.md)
-Create an **Capture User State** step, which you can add to a task sequence.
+Create a **Capture User State** step, which you can add to a task sequence.
 
 ### [New-CMTSStepCaptureWindowsSettings](New-CMTSStepCaptureWindowsSettings.md)
-Create an **Capture Windows Settings** step, which you can add to a task sequence.
+Create a **Capture Windows Settings** step, which you can add to a task sequence.
 
 ### [New-CMTSStepConditionFile](New-CMTSStepConditionFile.md)
-Creates a t s step condition file.
+Create a _file properties_ condition for a task sequence step.
 
 ### [New-CMTSStepConditionFolder](New-CMTSStepConditionFolder.md)
-Creates a t s step condition folder.
+Create a _folder properties_ condition for a task sequence step.
 
 ### [New-CMTSStepConditionIfStatement](New-CMTSStepConditionIfStatement.md)
-Creates a t s step condition if statement.
+Create an _if statement_ condition for a task sequence step.
 
 ### [New-CMTSStepConditionOperatingSystem](New-CMTSStepConditionOperatingSystem.md)
-Creates a t s step condition operating system.
+Create an _OS version_ condition for a task sequence step.
 
 ### [New-CMTSStepConditionOperatingSystemLanguage](New-CMTSStepConditionOperatingSystemLanguage.md)
-{{ Fill in the Synopsis }}
+Create an _OS language_ condition for a task sequence step.
 
 ### [New-CMTSStepConditionQueryWmi](New-CMTSStepConditionQueryWmi.md)
-Create a WMI query condition for a task sequence step.
+Create a _WMI query_ condition for a task sequence step.
 
 ### [New-CMTSStepConditionRegistry](New-CMTSStepConditionRegistry.md)
-Creates a t s step condition registry.
+Create a _registry setting_ condition for a task sequence step.
 
 ### [New-CMTSStepConditionSoftware](New-CMTSStepConditionSoftware.md)
-Creates a t s step condition software.
+Create an _installed software_ condition for a task sequence step.
 
 ### [New-CMTSStepConditionVariable](New-CMTSStepConditionVariable.md)
-Create a condition variable on a task sequence step.
+Create a _task sequence variable_ condition for a task sequence step.
 
 ### [New-CMTSStepConnectNetworkFolder](New-CMTSStepConnectNetworkFolder.md)
-Create an **Connect To Network Folder** step, which you can add to a task sequence.
+Create a **Connect To Network Folder** step, which you can add to a task sequence.
 
 ### [New-CMTSStepConvertDisk](New-CMTSStepConvertDisk.md)
 {{ Fill in the Synopsis }}
 
 ### [New-CMTSStepDisableBitLocker](New-CMTSStepDisableBitLocker.md)
-Create an **Disable BitLocker** step, which you can add to a task sequence.
+Create a **Disable BitLocker** step, which you can add to a task sequence.
 
 ### [New-CMTSStepDownloadPackageContent](New-CMTSStepDownloadPackageContent.md)
-Create an **Download Package Content** step, which you can add to a task sequence.
+Create a **Download Package Content** step, which you can add to a task sequence.
 
 ### [New-CMTSStepEnableBitLocker](New-CMTSStepEnableBitLocker.md)
 Create an **Enable BitLocker** step, which you can add to a task sequence.
@@ -2056,7 +2056,7 @@ Create an **Install Package** step, which you can add to a task sequence.
 Create an **Install Software Updates** step, which you can add to a task sequence.
 
 ### [New-CMTSStepJoinDomainWorkgroup](New-CMTSStepJoinDomainWorkgroup.md)
-Create an **Join Domain or Workgroup** step, which you can add to a task sequence.
+Create a **Join Domain or Workgroup** step, which you can add to a task sequence.
 
 ### [New-CMTSStepOfflineEnableBitLocker](New-CMTSStepOfflineEnableBitLocker.md)
 Create a **Pre-provision BitLocker** step, which you can add to a task sequence.
@@ -2071,10 +2071,10 @@ Create the **Prepare ConfigMgr Client for Capture** step, which you can add to a
 Create the **Prepare Windows for Capture** step, which you can add to a task sequence.
 
 ### [New-CMTSStepPrestartCheck](New-CMTSStepPrestartCheck.md)
-Create an **Check Readiness** step, which you can add to a task sequence.
+Create a **Check Readiness** step, which you can add to a task sequence.
 
 ### [New-CMTSStepReboot](New-CMTSStepReboot.md)
-Create an **Restart Computer** step, which you can add to a task sequence.
+Create a **Restart Computer** step, which you can add to a task sequence.
 
 ### [New-CMTSStepReleaseStateStore](New-CMTSStepReleaseStateStore.md)
 Create the **Release State Store** step, which you can add to a task sequence.
@@ -2083,10 +2083,10 @@ Create the **Release State Store** step, which you can add to a task sequence.
 Create the **Request State Store** step, which you can add to a task sequence.
 
 ### [New-CMTSStepRestoreUserState](New-CMTSStepRestoreUserState.md)
-Create an **Restore User State** step, which you can add to a task sequence.
+Create a **Restore User State** step, which you can add to a task sequence.
 
 ### [New-CMTSStepRunCommandLine](New-CMTSStepRunCommandLine.md)
-Create an **Run Command Line** step, which you can add to a task sequence.
+Create a **Run Command Line** step, which you can add to a task sequence.
 
 ### [New-CMTSStepRunPowerShellScript](New-CMTSStepRunPowerShellScript.md)
 Create the **Run PowerShell Script** step in a task sequence.
