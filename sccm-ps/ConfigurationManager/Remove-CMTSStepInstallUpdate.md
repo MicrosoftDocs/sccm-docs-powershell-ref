@@ -1,8 +1,7 @@
 ---
-description: Removes a TS step install update.
 external help file: AdminUI.PS.psm1-help.xml
 Module Name: ConfigurationManager
-ms.date: 05/07/2019
+ms.date: 08/13/2021
 schema: 2.0.0
 title: Remove-CMTSStepInstallUpdate
 ---
@@ -10,7 +9,8 @@ title: Remove-CMTSStepInstallUpdate
 # Remove-CMTSStepInstallUpdate
 
 ## SYNOPSIS
-Removes a TS step install update.
+
+Remove the **Install Software Updates** step from a task sequence.
 
 ## SYNTAX
 
@@ -34,32 +34,26 @@ Remove-CMTSStepInstallUpdate [-TaskSequenceName] <String> [-StepName <String>] [
 
 ## DESCRIPTION
 
+Use this cmdlet to remove an instance of the **Install Software Updates** step from a task sequence.
+
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
 ### Example 1
-```
-PS XYZ:\>
+
+This example first gets a task sequence object in the **$tsOsd** variable. It then passes that variable as the input object to remove the **Install Software Updates** step.
+
+```powershell
+$tsNameOsd = "Default OS deployment"
+$tsOsd = Get-CMTaskSequence -Name $tsNameOsd -Fast
+
+$tsStepNameInstallUpd = "Install Software Updates"
+Remove-CMTSStepInstallUpdate -InputObject $tsOsd -StepName $tsStepNameInstallUpd -Force
 ```
 
 ## PARAMETERS
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -Force
 
@@ -78,6 +72,9 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
+
+Specify a task sequence object from which to remove the **Install Software Updates** step. To get this object, use the [Get-CMTaskSequence](Get-CMTaskSequence.md) cmdlet.
+
 ```yaml
 Type: IResultObject
 Parameter Sets: ByValue
@@ -91,6 +88,9 @@ Accept wildcard characters: False
 ```
 
 ### -StepName
+
+Specify the name of the **Install Software Updates** step to remove from the task sequence.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -104,6 +104,9 @@ Accept wildcard characters: False
 ```
 
 ### -TaskSequenceId
+
+Specify the **package ID** of the task sequence from which to remove the **Install Software Updates** step. This value is a standard package ID, for example `XYZ00858`.
+
 ```yaml
 Type: String
 Parameter Sets: ById
@@ -117,6 +120,9 @@ Accept wildcard characters: False
 ```
 
 ### -TaskSequenceName
+
+Specify the name of the task sequence from which to remove the **Install Software Updates** step.
+
 ```yaml
 Type: String
 Parameter Sets: ByName
@@ -124,6 +130,22 @@ Aliases:
 
 Required: True
 Position: 0
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -151,9 +173,17 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-CMTSStepInstallUpdate](Get-CMTSStepInstallUpdate.md)
+[New-CMTSStepInstallUpdate](New-CMTSStepInstallUpdate.md)
+[Set-CMTSStepInstallUpdate](Set-CMTSStepInstallUpdate.md)
+
+[About task sequence steps: Install Software Updates](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_InstallSoftwareUpdates)

@@ -1,6 +1,7 @@
 ---
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
+ms.date: 08/11/2021
 online version:
 schema: 2.0.0
 ---
@@ -8,7 +9,8 @@ schema: 2.0.0
 # Set-CMTSStepApplyWindowsSetting
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Configure an instance of the **Apply Windows Settings** task sequence step.
 
 ## SYNTAX
 
@@ -230,7 +232,10 @@ Set-CMTSStepApplyWindowsSetting [-SetConditionOperatingSystem] [-StepName <Strin
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+Use this cmdlet to configure an instance of the **Apply Windows Settings** task sequence step.
+
+For more information on this step, see [About task sequence steps: Apply Windows Settings](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_ApplyWindowsSettings).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
@@ -238,16 +243,23 @@ Set-CMTSStepApplyWindowsSetting [-SetConditionOperatingSystem] [-StepName <Strin
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS XYZ:\> {{ Add example code here }}
-```
 
-{{ Add example description here }}
+This example changes the **Apply Windows Settings** step in the **Default OS deployment** task sequence to use a different time zone.
+
+```powershell
+$tsNameOsd = "Default OS deployment"
+$tsStepNameApplyWinSet = "Apply Windows Settings for Moscow office"
+
+$tz = Get-TimeZone -Id "Vladivostok Standard Time"
+
+Set-CMTSStepApplyWindowsSetting -TaskSequenceName $tsNameOsd -StepName $tsStepNameApplyWinSet -TimeZone $tz -NewStepName "Apply Windows Settings for Artyom office"
+```
 
 ## PARAMETERS
 
 ### -AddCondition
-Specify a condition object to add to this step.
+
+Specify a condition object to add to this step. To get this object, use one of the task sequence condition cmdlets. For example, [Get-CMTSStepConditionVariable](Get-CMTSStepConditionVariable.md).
 
 
 ```yaml
@@ -263,6 +275,7 @@ Accept wildcard characters: False
 ```
 
 ### -ClearCondition
+
 Remove a condition from this step. Use the **-Condition** parameter to specify the condition to remove.
 
 ```yaml
@@ -278,7 +291,8 @@ Accept wildcard characters: False
 ```
 
 ### -Condition
-Specify a condition object to use with this step.
+
+Specify a condition object to use with this step. To get this object, use one of the task sequence condition cmdlets. For example, [Get-CMTSStepConditionVariable](Get-CMTSStepConditionVariable.md).
 
 ```yaml
 Type: IResultObject[]
@@ -293,6 +307,7 @@ Accept wildcard characters: False
 ```
 
 ### -ConditionVariableName
+
 Specify the name of the task sequence variable to use as a condition.
 
 ```yaml
@@ -308,6 +323,7 @@ Accept wildcard characters: False
 ```
 
 ### -ConditionVariableValue
+
 Specify the value of the task sequence variable to use in a condition.
 
 ```yaml
@@ -322,22 +338,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Description
+
 Specify an optional description for this task sequence step.
 
 ```yaml
@@ -353,6 +355,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
+
 This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
@@ -368,6 +371,7 @@ Accept wildcard characters: False
 ```
 
 ### -FileDateTimeOperator
+
 Specify a variable operator type for a file date/time condition.
 
 ```yaml
@@ -384,6 +388,7 @@ Accept wildcard characters: False
 ```
 
 ### -FilePath
+
 Specify the path for a file condition.
 
 ```yaml
@@ -399,6 +404,7 @@ Accept wildcard characters: False
 ```
 
 ### -FileTimestamp
+
 Specify a date/time value to use for a file condition.
 
 ```yaml
@@ -414,6 +420,7 @@ Accept wildcard characters: False
 ```
 
 ### -FileVersion
+
 Specify a version string for a file condition.
 
 ```yaml
@@ -429,6 +436,7 @@ Accept wildcard characters: False
 ```
 
 ### -FolderDateTimeOperator
+
 Specify a variable operator for a folder date/time condition.
 
 ```yaml
@@ -445,6 +453,7 @@ Accept wildcard characters: False
 ```
 
 ### -FolderPath
+
 Specify the path for a folder condition.
 
 ```yaml
@@ -460,6 +469,7 @@ Accept wildcard characters: False
 ```
 
 ### -FolderTimestamp
+
 Specify a date/time value to use for a folder condition.
 
 ```yaml
@@ -475,6 +485,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
+
 This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
@@ -490,7 +501,10 @@ Accept wildcard characters: False
 ```
 
 ### -InputLocale
-Starting in version 1910, use this parameter to set the locale setting. For example, to set input locale to Russian (Russia), specify string `ru-ru`: `-InputLocale "ru-ru"`
+
+Use this parameter to set the locale setting for the default keyboard layout. For example, to set it to Russian (Russia), specify the string **ru-ru**: `-InputLocale "ru-ru"`
+
+For more information on these Windows setup answer file values, see [Microsoft-Windows-International-Core](/windows-hardware/customize/desktop/unattend/microsoft-windows-international-core).
 
 ```yaml
 Type: String
@@ -505,7 +519,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{ Fill InputObject Description }}
+
+Specify a task sequence object from which to get the **Apply Windows Settings** step. To get this object, use the [Get-CMTaskSequence](Get-CMTaskSequence.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -520,6 +535,7 @@ Accept wildcard characters: False
 ```
 
 ### -IsAnyVersion
+
 Use this parameter with the **SetConditionSoftware** parameter to match any version of the product.
 
 ```yaml
@@ -535,6 +551,7 @@ Accept wildcard characters: False
 ```
 
 ### -IsContinueOnError
+
 Use this parameter to enable the step option **Continue on error**. When you enable this option, if the step fails, the task sequence continues.
 
 ```yaml
@@ -550,6 +567,7 @@ Accept wildcard characters: False
 ```
 
 ### -IsEnabled
+
 Use this parameter to enable this task sequence step.
 
 ```yaml
@@ -565,7 +583,8 @@ Accept wildcard characters: False
 ```
 
 ### -MaximumConnection
-{{ Fill MaximumConnection Description }}
+
+Don't use this parameter. This setting only applies to legacy versions of Windows that are no longer supported.
 
 ```yaml
 Type: Int32
@@ -580,6 +599,7 @@ Accept wildcard characters: False
 ```
 
 ### -MoveToIndex
+
 Move this step to the specified index position in the task sequence.
 
 ```yaml
@@ -595,7 +615,8 @@ Accept wildcard characters: False
 ```
 
 ### -MsiFilePath
-Specify the path to a Windows Installer file for an software condition.
+
+Specify the path to a Windows Installer file for a software condition.
 
 ```yaml
 Type: String
@@ -610,6 +631,7 @@ Accept wildcard characters: False
 ```
 
 ### -Namespace
+
 Specify the namespace for a WMI query condition.
 
 ```yaml
@@ -625,6 +647,7 @@ Accept wildcard characters: False
 ```
 
 ### -NewStepName
+
 Use this parameter to rename this task sequence step.
 
 ```yaml
@@ -640,6 +663,7 @@ Accept wildcard characters: False
 ```
 
 ### -OperatorType
+
 Specify an operator to use with a task sequence variable condition.
 
 ```yaml
@@ -656,7 +680,8 @@ Accept wildcard characters: False
 ```
 
 ### -OrganizationName
-{{ Fill OrganizationName Description }}
+
+Specify the registered organization name to associate with the destination computer.
 
 ```yaml
 Type: String
@@ -671,7 +696,8 @@ Accept wildcard characters: False
 ```
 
 ### -Password
-{{ Fill Password Description }}
+
+To enable the local **Administrator** account, use this parameter to specify its password. If you don't include this parameter, the local account is disabled by default with a randomly generated password.
 
 ```yaml
 Type: SecureString
@@ -686,7 +712,8 @@ Accept wildcard characters: False
 ```
 
 ### -ProductKey
-{{ Fill ProductKey Description }}
+
+Specify the product key to use for the Windows installation on the destination computer.
 
 ```yaml
 Type: String
@@ -701,6 +728,7 @@ Accept wildcard characters: False
 ```
 
 ### -Query
+
 Specify a WMI query string to use for a condition.
 
 ```yaml
@@ -716,6 +744,7 @@ Accept wildcard characters: False
 ```
 
 ### -RegistryKey
+
 Specify the key to use with a registry condition.
 
 ```yaml
@@ -731,6 +760,7 @@ Accept wildcard characters: False
 ```
 
 ### -RegistryOperator
+
 Specify an operator to use with a registry condition.
 
 ```yaml
@@ -747,6 +777,7 @@ Accept wildcard characters: False
 ```
 
 ### -RegistryValueData
+
 Specify the value data to use with a registry condition.
 
 ```yaml
@@ -762,6 +793,7 @@ Accept wildcard characters: False
 ```
 
 ### -RegistryValueName
+
 Specify the value name to use with a registry condition.
 
 ```yaml
@@ -777,6 +809,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveConditionFile
+
 Use this parameter to remove a file condition.
 
 ```yaml
@@ -792,6 +825,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveConditionFolder
+
 Use this parameter to remove a folder condition.
 
 ```yaml
@@ -807,6 +841,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveConditionIfStatement
+
 Use this parameter to remove an `if` statement condition.
 
 ```yaml
@@ -822,6 +857,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveConditionOperatingSystem
+
 Use this parameter to remove an OS condition.
 
 ```yaml
@@ -837,6 +873,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveConditionQueryWmi
+
 Use this parameter to remove a WMI query condition.
 
 ```yaml
@@ -852,6 +889,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveConditionRegistry
+
 Use this parameter to remove a registry condition.
 
 ```yaml
@@ -867,6 +905,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveConditionSoftware
+
 Use this parameter to remove a software condition.
 
 ```yaml
@@ -882,6 +921,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveConditionVariable
+
 Use this parameter to remove a task sequence variable condition.
 
 ```yaml
@@ -897,6 +937,7 @@ Accept wildcard characters: False
 ```
 
 ### -RootKey
+
 Specify the root key to use with a registry condition.
 
 ```yaml
@@ -913,7 +954,8 @@ Accept wildcard characters: False
 ```
 
 ### -ServerLicensing
-{{ Fill ServerLicensing Description }}
+
+Don't use this parameter. This setting only applies to legacy versions of Windows that are no longer supported.
 
 ```yaml
 Type: ServerLicenseMode
@@ -929,6 +971,7 @@ Accept wildcard characters: False
 ```
 
 ### -SetConditionFile
+
 Add a new file condition.
 
 ```yaml
@@ -944,6 +987,7 @@ Accept wildcard characters: False
 ```
 
 ### -SetConditionFolder
+
 Add a new folder condition.
 
 ```yaml
@@ -959,6 +1003,7 @@ Accept wildcard characters: False
 ```
 
 ### -SetConditionIfStatement
+
 Add a new `if` statement condition.
 
 ```yaml
@@ -974,6 +1019,7 @@ Accept wildcard characters: False
 ```
 
 ### -SetConditionOperatingSystem
+
 Add a new OS condition.
 
 ```yaml
@@ -989,6 +1035,7 @@ Accept wildcard characters: False
 ```
 
 ### -SetConditionQueryWmi
+
 Add a new WMI query condition.
 
 ```yaml
@@ -1004,6 +1051,7 @@ Accept wildcard characters: False
 ```
 
 ### -SetConditionRegistry
+
 Add a new registry condition.
 
 ```yaml
@@ -1019,6 +1067,7 @@ Accept wildcard characters: False
 ```
 
 ### -SetConditionSoftware
+
 Add a new software condition.
 
 ```yaml
@@ -1034,6 +1083,7 @@ Accept wildcard characters: False
 ```
 
 ### -SetConditionVariable
+
 Add a new task sequence variable condition.
 
 ```yaml
@@ -1049,6 +1099,7 @@ Accept wildcard characters: False
 ```
 
 ### -StatementType
+
 Set the type for an `if` statement condition.
 
 ```yaml
@@ -1065,6 +1116,7 @@ Accept wildcard characters: False
 ```
 
 ### -StepName
+
 Specify the name of the step to select for changes.
 
 ```yaml
@@ -1080,6 +1132,7 @@ Accept wildcard characters: False
 ```
 
 ### -StepOrder
+
 Use this parameter to reorder the step in the task sequence.
 
 ```yaml
@@ -1096,6 +1149,7 @@ Accept wildcard characters: False
 ```
 
 ### -SupportedPlatform
+
 Use this parameter to specify the platforms for an OS condition.
 
 ```yaml
@@ -1111,7 +1165,10 @@ Accept wildcard characters: False
 ```
 
 ### -SystemLocale
-Starting in version 1910, use this parameter to set the locale setting. For example, to set input locale to Russian (Russia), specify string `ru-ru`: `-InputLocale "ru-ru"`
+
+Use this parameter to set the language for non-Unicode programs. For example, to set it to Russian (Russia), specify the string **ru-ru**: `-SystemLocale "ru-ru"`
+
+For more information on these Windows setup answer file values, see [Microsoft-Windows-International-Core](/windows-hardware/customize/desktop/unattend/microsoft-windows-international-core).
 
 ```yaml
 Type: String
@@ -1126,7 +1183,8 @@ Accept wildcard characters: False
 ```
 
 ### -TaskSequenceId
-Specify the ID of the task sequence to target for changes.
+
+Specify the **package ID** of the task sequence from which to get the **Apply Windows Settings** step. This value is a standard package ID, for example `XYZ00858`.
 
 ```yaml
 Type: String
@@ -1141,6 +1199,7 @@ Accept wildcard characters: False
 ```
 
 ### -TaskSequenceName
+
 Specify the name of the task sequence to target for changes.
 
 ```yaml
@@ -1156,7 +1215,8 @@ Accept wildcard characters: False
 ```
 
 ### -TimeZone
-{{ Fill TimeZone Description }}
+
+Specify the time zone to configure on the destination computer. To get this object, use the [Get-TimeZone](/powershell/module/microsoft.powershell.management/get-timezone) built-in cmdlet.
 
 ```yaml
 Type: TimeZoneInfo
@@ -1171,7 +1231,10 @@ Accept wildcard characters: False
 ```
 
 ### -UILanguage
-Starting in version 1910, use this parameter to set the locale setting. For example, to set input locale to Russian (Russia), specify string `ru-ru`: `-InputLocale "ru-ru"`
+
+Use this parameter to set the system default user interface (UI) language. For example, to set it to Russian (Russia), specify the string **ru-ru**: `-UILanguage "ru-ru"`
+
+For more information on these Windows setup answer file values, see [Microsoft-Windows-International-Core](/windows-hardware/customize/desktop/unattend/microsoft-windows-international-core).
 
 ```yaml
 Type: String
@@ -1186,7 +1249,10 @@ Accept wildcard characters: False
 ```
 
 ### -UILanguageFallback
-Starting in version 1910, use this parameter to set the locale setting. For example, to set input locale to Russian (Russia), specify string `ru-ru`: `-InputLocale "ru-ru"`
+
+Use this parameter to set the fallback language if the system default UI language is only partially localized. For example, to set it to Russian (Russia), specify the string **ru-ru**: `-UILanguageFallback "ru-ru"`
+
+For more information on these Windows setup answer file values, see [Microsoft-Windows-International-Core](/windows-hardware/customize/desktop/unattend/microsoft-windows-international-core).
 
 ```yaml
 Type: String
@@ -1201,7 +1267,10 @@ Accept wildcard characters: False
 ```
 
 ### -UserLocale
-Starting in version 1910, use this parameter to set the locale setting. For example, to set input locale to Russian (Russia), specify string `ru-ru`: `-InputLocale "ru-ru"`
+
+Use this parameter to set the per-user settings used for formatting dates, times, currency, and numbers. For example, to set it to Russian (Russia), specify the string **ru-ru**: `-UserLocale "ru-ru"`
+
+For more information on these Windows setup answer file values, see [Microsoft-Windows-International-Core](/windows-hardware/customize/desktop/unattend/microsoft-windows-international-core).
 
 ```yaml
 Type: String
@@ -1216,7 +1285,8 @@ Accept wildcard characters: False
 ```
 
 ### -UserName
-{{ Fill UserName Description }}
+
+Specify the registered user name to associate with the destination computer.
 
 ```yaml
 Type: String
@@ -1231,6 +1301,7 @@ Accept wildcard characters: False
 ```
 
 ### -ValueType
+
 Specify the type of value for a registry condition.
 
 ```yaml
@@ -1247,6 +1318,7 @@ Accept wildcard characters: False
 ```
 
 ### -VersionOperator
+
 Specify an operator to use with a file condition.
 
 ```yaml
@@ -1254,6 +1326,22 @@ Type: VariableOperatorType
 Parameter Sets: ByIdSetConditionFile, ByNameSetConditionFile, ByValueSetConditionFile
 Aliases:
 Accepted values: Equals, NotEquals, Greater, GreaterEqual, Less, LessEqual
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
 
 Required: False
 Position: Named
@@ -1284,9 +1372,17 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-CMTSStepApplyWindowsSetting](Get-CMTSStepApplyWindowsSetting.md)
+[New-CMTSStepApplyWindowsSetting](New-CMTSStepApplyWindowsSetting.md)
+[Remove-CMTSStepApplyWindowsSetting](Remove-CMTSStepApplyWindowsSetting.md)
+
+[About task sequence steps: Apply Windows Settings](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_ApplyWindowsSettings)

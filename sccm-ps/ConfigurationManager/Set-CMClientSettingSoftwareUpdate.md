@@ -94,22 +94,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -DefaultSetting
 
 Add this parameter to configure software update settings in the default client settings.
@@ -241,6 +225,22 @@ Accept wildcard characters: False
 ### -EnableThirdPartyUpdates
 
 Set this parameter to `$true` to enable third-party software updates.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableWsusCertPinning
+
+Applies to version 2107 and later. Set this parameter to `$true` to enforce TLS certificate pinning for Windows Update client for detecting updates.
 
 ```yaml
 Type: Boolean
@@ -404,14 +404,14 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhatIf
+### -Confirm
 
-Shows what would happen if the cmdlet runs. The cmdlet isn't run.
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: wi
+Aliases: cf
 
 Required: False
 Position: Named
@@ -420,14 +420,14 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -EnableWsusCertPinning
+### -WhatIf
 
-Applies to version 2107 and later. Set this parameter to `$true` to enforce TLS certificate pinning for Windows Update client for detecting updates.
+Shows what would happen if the cmdlet runs. The cmdlet isn't run.
 
 ```yaml
-Type: Boolean
+Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: wi
 
 Required: False
 Position: Named

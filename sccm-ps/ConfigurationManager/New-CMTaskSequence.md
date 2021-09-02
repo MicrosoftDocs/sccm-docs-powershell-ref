@@ -1,7 +1,7 @@
 ---
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 03/30/2021
+ms.date: 09/02/2021
 schema: 2.0.0
 title: New-CMTaskSequence
 ---
@@ -72,41 +72,103 @@ Use this cmdlet to create a task sequence. You typically use a task sequence to 
 
 ### Example 1: Create a custom task sequence
 
+This example first [splats](/powershell/module/microsoft.powershell.core/about/about_splatting) the cmdlet parameters into the **parameters** variable. It's not required to splat the parameters, it just makes it easier to read the parameters for such a long command line.
+
 This command creates a blank task sequence with the name **Custom**.
 
 ```powershell
-New-CMTaskSequence -CustomTaskSequence -Name "Custom" -Description "NewCustom parameter set" -HighPerformance $false -BootImagePackageId "XYZ00002"
+$parameters = @{
+  CustomTaskSequence = $true
+  Name = "Custom"
+  Description = "NewCustom parameter set"
+  HighPerformance = $false
+  BootImagePackageId = "XYZ00002"
+}
+
+New-CMTaskSequence @parameters
 ```
 
 ### Example 2: Create a task sequence to install an OS image
 
+This example first [splats](/powershell/module/microsoft.powershell.core/about/about_splatting) the cmdlet parameters into the **parameters** variable. It's not required to splat the parameters, it just makes it easier to read the parameters for such a long command line.
+
 This command creates a task sequence named **Install OS image** that installs an OS image. It also includes the other parameters that apply to this scenario.
 
 ```powershell
-$acct = "contoso\jqpublic"
-$pwd = ConvertTo-SecureString -String "w%1H6EoxjQ&70^W" -AsPlainText -Force
-$domainOU = "LDAP://OU=Workstations,OU=Devices,DC=na,DC=contoso,DC=com"
-
 $clientProps = '/mp:mp01.contoso.com CCMDEBUGLOGGING="1" CCMLOGGINGENABLED="TRUE" CCMLOGLEVEL="0" CCMLOGMAXHISTORY="5" CCMLOGMAXSIZE="10000000" SMSCACHESIZE="15000" SMSMP=mp01.contoso.com'
 
-$tz = Get-TimeZone -Name "Eastern Standard Time"
+$parameters = @{
+  InstallOperatingSystemImage = $true
+  Name = "Install OS image"
+  Description = "NewInstallOSImage parameter set"
+  BootImagePackageId = "XYZ00002"
+  HighPerformance = $true
+  CaptureNetworkSetting = $true
+  CaptureUserSetting = $true
+  SaveLocally = $true
+  CaptureLocallyUsingLink = $true
+  UserStateMigrationToolPackageId = "XYZ00001"
+  CaptureWindowsSetting = $true
+  ConfigureBitLocker = $true
+  PartitionAndFormatTarget = $true
+  ApplyAll = $false
+  OperatingSystemImagePackageId = "XYZ001A0"
+  OperatingSystemImageIndex = 1
+  ProductKey = "6NMRW-2C8FM-D24W7-TQWMY-CWH2D"
+  GeneratePassword = $true
+  TimeZone = Get-TimeZone -Name "Eastern Standard Time"
+  JoinDomain = "DomainType"
+  DomainAccount = "contoso\jqpublic"
+  DomainName = "contoso"
+  DomainOrganizationUnit = "LDAP://OU=Workstations,OU=Devices,DC=na,DC=contoso,DC=com"
+  DomainPassword = ConvertTo-SecureString -String "w%1H6EoxjQ&70^W" -AsPlainText -Force
+  ClientPackagePackageId = "XYZ00003"
+  InstallationProperty = $clientProps
+  ApplicationName = "Admin Console"
+  IgnoreInvalidApplication = $false
+  SoftwareUpdateStyle = "All"
+}
 
-New-CMTaskSequence -InstallOperatingSystemImage -Name "Install OS image" -Description "NewInstallOSImage parameter set" -BootImagePackageId "XYZ00002" -HighPerformance $true -CaptureNetworkSetting $true -CaptureUserSetting $true -SaveLocally $true -CaptureLocallyUsingLink $true -UserStateMigrationToolPackageId "XYZ00001" -CaptureWindowsSetting $true -ConfigureBitLocker $true -PartitionAndFormatTarget $true -ApplyAll $false -OperatingSystemImagePackageId "XYZ001A0" -OperatingSystemImageIndex 1 -ProductKey "6NMRW-2C8FM-D24W7-TQWMY-CWH2D" -GeneratePassword $true -TimeZone $tz -JoinDomain DomainType -DomainAccount $acct -DomainName "contoso" -DomainOrganizationUnit $domainOU -DomainPassword $pwd -ClientPackagePackageId "XYZ00003" -InstallationProperty $clientProps -ApplicationName "Admin Console" -IgnoreInvalidApplication $false -SoftwareUpdateStyle All
+New-CMTaskSequence @parameters
 ```
 
 ### Example 3: Create a task sequence to build and capture an OS
 
+This example first [splats](/powershell/module/microsoft.powershell.core/about/about_splatting) the cmdlet parameters into the **parameters** variable. It's not required to splat the parameters, it just makes it easier to read the parameters for such a long command line.
+
 This example creates a task sequence named **Build and capture** that builds and captures an OS image using the supplied location and account. It also includes the other parameters that apply to this scenario.
 
 ```powershell
-$acct = "contoso\jqpublic"
-$pwd = ConvertTo-SecureString -String "w%1H6EoxjQ&70^W" -AsPlainText -Force
-
 $clientProps = '/mp:mp01.contoso.com CCMDEBUGLOGGING="1" CCMLOGGINGENABLED="TRUE" CCMLOGLEVEL="0" CCMLOGMAXHISTORY="5" CCMLOGMAXSIZE="10000000" SMSCACHESIZE="15000" SMSMP=mp01.contoso.com'
 
-$tz = Get-TimeZone -Name "Eastern Standard Time"
+$parameters = @{
+  BuildOperatingSystemImage = $true
+  Name = "Build and capture"
+  Description = "NewBuildOSImage parameter set"
+  BootImagePackageId = "XYZ00002"
+  HighPerformance = $true
+  ApplyAll = $false
+  OperatingSystemImagePackageId = "XYZ001A0"
+  OperatingSystemImageIndex = 1
+  ProductKey = "6NMRW-2C8FM-D24W7-TQWMY-CWH2D"
+  GeneratePassword = $true
+  TimeZone = Get-TimeZone -Name "Eastern Standard Time"
+  JoinDomain = "WorkgroupType"
+  WorkgroupName = "groupwork"
+  ClientPackagePackageId = "XYZ00003"
+  InstallationProperty = $clientProps
+  ApplicationName = "Admin Console"
+  IgnoreInvalidApplication = $true
+  SoftwareUpdateStyle = "All"
+  OperatingSystemFilePath = "\\server1\images\capture.wim"
+  ImageDescription = "image description"
+  ImageVersion = "image version 1"
+  CreatedBy = "jqpublic"
+  OperatingSystemFileAccount = "contoso\jqpublic" 
+  OperatingSystemFileAccountPassword = ConvertTo-SecureString -String "w%1H6EoxjQ&70^W" -AsPlainText -Force
+}
 
-New-CMTaskSequence -BuildOperatingSystemImage -Name "Build and capture" -Description "NewBuildOSImage parameter set" -BootImagePackageId "XYZ00002" -HighPerformance $true -ApplyAll $false -OperatingSystemImagePackageId "XYZ001A0" -OperatingSystemImageIndex 1 -ProductKey "6NMRW-2C8FM-D24W7-TQWMY-CWH2D" -GeneratePassword $true -TimeZone $tz -JoinDomain WorkgroupType -WorkgroupName "groupwork" -ClientPackagePackageId "XYZ00003" -InstallationProperty $clientProps -ApplicationName "Admin Console" -IgnoreInvalidApplication $true -SoftwareUpdateStyle All -OperatingSystemFilePath "\\server1\images\capture.wim" -ImageDescription "image description" -ImageVersion "image version 1" -CreatedBy "jqpublic" -OperatingSystemFileAccount $acct -OperatingSystemFileAccountPassword $pwd
+New-CMTaskSequence @parameters
 ```
 
 ### Example 4: Create a task sequence to upgrade an OS
@@ -305,22 +367,6 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -573,22 +619,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -InstallOperatingSystemImage
-
-Add this parameter to create a task sequence for the install OS image scenario. For more information, see [Create a task sequence to install an OS](/mem/configmgr/osd/deploy-use/create-a-task-sequence-to-install-an-operating-system).
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: NewInstallOSImage
-Aliases: InstallOperatingSystemImageOption
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -InstallationLicensingMode
 
 This setting only applies to legacy versions of Windows that are no longer supported. Starting in version 2010, the setting is no longer visible in the task sequence editor. Existing task sequences that still use this setting will continue to function the same.
@@ -620,6 +650,22 @@ Parameter Sets: NewBuildOSImage, NewInstallOSImage
 Aliases:
 
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InstallOperatingSystemImage
+
+Add this parameter to create a task sequence for the install OS image scenario. For more information, see [Create a task sequence to install an OS](/mem/configmgr/osd/deploy-use/create-a-task-sequence-to-install-an-operating-system).
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: NewInstallOSImage
+Aliases: InstallOperatingSystemImageOption
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -940,22 +986,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhatIf
-
-Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -WorkgroupName
 
 If you set the **JoinDomain** parameter to `WorkgroupType`, use this parameter to specify the workgroup name. This parameter configures the [Apply Network Settings](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_ApplyNetworkSettings) task sequence step.
@@ -968,6 +998,38 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+
+Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

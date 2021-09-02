@@ -1,16 +1,16 @@
 ﻿---
-description: Gets a TS step condition file.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/02/2019
+ms.date: 09/01/2021
+online version:
 schema: 2.0.0
-title: Get-CMTSStepConditionFile
 ---
 
 # Get-CMTSStepConditionFile
 
 ## SYNOPSIS
-Gets a TS step condition file.
+
+Get a _file properties_ condition from a task sequence step.
 
 ## SYNTAX
 
@@ -21,14 +21,61 @@ Get-CMTSStepConditionFile -InputObject <IResultObject> [-DisableWildcardHandling
 
 ## DESCRIPTION
 
+Use this cmdlet to get a _file properties_ condition object from a task sequence step. You can use this object to:
+
+- View the details of the condition on the step.
+- Copy the condition to another task sequence step.
+
+When you use the **New-CMTSStep\*** or **Set-CMTSStep\*** cmdlets, provide this condition object with the **Condition** or **AddCondition** parameters. For example, [Set-CMTSStepApplyDataImage](Set-CMTSStepApplyDataImage.md).
+
+For more information, see [Use the task sequence editor: Conditions](/mem/configmgr/osd/understand/task-sequence-editor#bkmk_conditions).
+
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: View the details of a file condition
+
+This example first gets the **Default OS deployment** task sequence, then gets the **Set Dynamic Variables** step. It passes the task sequence step object to this cmdlet to view the condition details.
+
+```powershell
+$tsNameOsd = "Default OS deployment"
+$tsOsd = Get-CMTaskSequence -Name $tsNameOsd -Fast
+
+$tsStepNameDynVar = "Set Dynamic Variables"
+$tsStepDynVar = Get-CMTSStepSetDynamicVariable -InputObject $tsOsd -StepName $tsStepNameDynVar
+
+Get-CMTSStepConditionFile -InputObject $tsStepDynVar
 ```
-PS XYZ:\>
+
+```output
+SmsProviderObjectPath : SMS_TaskSequence_FileConditionExpression
+DateTime              : 9/2/2021 01:41:48
+DateTimeOperator      : greater
+Path                  : C:\test.txt
+Version               : 1.0
+VersionOperator       : notEquals
+```
+
+### Example 2: Copy a condition to another step
+
+This example first gets the **Default OS deployment** task sequence, then gets the **Set Dynamic Variables** step. It passes the task sequence step object to this cmdlet and saves the object in the **$condition** variable.
+
+It then uses the **Set-CMTSStepSetVariable** cmdlet with the **AddCondition** parameter to add this same condition to the **Set Task Sequence Variable** step.
+
+```powershell
+$tsNameOsd = "Default OS deployment"
+$tsOsd = Get-CMTaskSequence -Name $tsNameOsd -Fast
+
+$tsStepNameDynVar = "Set Dynamic Variables"
+$tsStepDynVar = Get-CMTSStepSetDynamicVariable -InputObject $tsOsd -StepName $tsStepNameDynVar
+
+$condition = Get-CMTSStepConditionFile -InputObject $tsStepDynVar
+
+$tsStepNameSetTSVar = "Set Task Sequence Variable"
+
+Set-CMTSStepSetVariable -TaskSequenceName $tsNameOsd -StepName $tsStepNameSetTSVar -AddCondition $condition
 ```
 
 ## PARAMETERS
@@ -66,6 +113,9 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
+
+Specify a task sequence step object with a file condition. To get this object, use one of the **Get-CMTSStep** cmdlets. For example, [Get-CMTSStepApplyDataImage](Get-CMTSStepApplyDataImage.md).
+
 ```yaml
 Type: IResultObject
 Parameter Sets: (All)
@@ -84,10 +134,19 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ### IResultObject[]#SMS_TaskSequence_FileConditionExpression
+
 ### IResultObject#SMS_TaskSequence_FileConditionExpression
+
 ## NOTES
 
+For more information on this return object and its properties, see [SMS_TaskSequence_FileConditionExpression server WMI class](/mem/configmgr/develop/reference/osd/sms_tasksequence_fileconditionexpression-server-wmi-class).
+
 ## RELATED LINKS
+
+[New-CMTSStepConditionFile](New-CMTSStepConditionFile.md)
+
+[Use the task sequence editor: Conditions](/mem/configmgr/osd/understand/task-sequence-editor#bkmk_conditions)

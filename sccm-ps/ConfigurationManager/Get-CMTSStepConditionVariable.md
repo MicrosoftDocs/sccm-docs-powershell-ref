@@ -1,16 +1,16 @@
 ﻿---
-description: Gets a TS step condition variable.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/02/2019
+ms.date: 09/02/2021
+online version:
 schema: 2.0.0
-title: Get-CMTSStepConditionVariable
 ---
 
 # Get-CMTSStepConditionVariable
 
 ## SYNOPSIS
-Gets a TS step condition variable.
+
+Get a _task sequence variable_ condition from a task sequence step.
 
 ## SYNTAX
 
@@ -21,14 +21,59 @@ Get-CMTSStepConditionVariable -InputObject <IResultObject> [-DisableWildcardHand
 
 ## DESCRIPTION
 
+Use this cmdlet to get a _task sequence variable_ condition object from a task sequence step. You can use this object to:
+
+- View the details of the condition on the step.
+- Copy the condition to another task sequence step.
+
+When you use the **New-CMTSStep\*** or **Set-CMTSStep\*** cmdlets, provide this condition object with the **Condition** or **AddCondition** parameters. For example, [Set-CMTSStepApplyDataImage](Set-CMTSStepApplyDataImage.md).
+
+For more information, see [Use the task sequence editor: Conditions](/mem/configmgr/osd/understand/task-sequence-editor#bkmk_conditions).
+
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: View the details of a variable condition
+
+This example first gets the **Default OS deployment** task sequence, then gets the **Restart in Windows PE** step. It passes the task sequence step object to this cmdlet to view the condition details.
+
+```powershell
+$tsNameOsd = "Default OS deployment"
+$tsOsd = Get-CMTaskSequence -Name $tsNameOsd -Fast
+
+$tsStepNameRestart = "Restart in Windows PE"
+$tsStepRestart = Get-CMTSStepReboot -InputObject $tsOsd -StepName $tsStepNameRestart
+
+Get-CMTSStepConditionVariable -InputObject $tsStepRestart
 ```
-PS XYZ:\>
+
+```output
+SmsProviderObjectPath : SMS_TaskSequence_VariableConditionExpression
+Operator              : equals
+Value                 : false
+Variable              : _SMSTSInWinPE
+```
+
+### Example 2: Copy a condition to another step
+
+This example first gets the **Default OS deployment** task sequence, then gets the **Restart in Windows PE** step. It passes the task sequence step object to this cmdlet and saves the object in the **$condition** variable.
+
+It then uses the **Set-CMTSStepSetVariable** cmdlet with the **AddCondition** parameter to add this same condition to the **Set Task Sequence Variable** step.
+
+```powershell
+$tsNameOsd = "Default OS deployment"
+$tsOsd = Get-CMTaskSequence -Name $tsNameOsd -Fast
+
+$tsStepNameRestart = "Restart in Windows PE"
+$tsStepRestart = Get-CMTSStepReboot -InputObject $tsOsd -StepName $tsStepNameRestart
+
+$condition = Get-CMTSStepConditionVariable -InputObject $tsStepRestart
+
+$tsStepNameSetTSVar = "Set Task Sequence Variable"
+
+Set-CMTSStepSetVariable -TaskSequenceName $tsNameOsd -StepName $tsStepNameSetTSVar -AddCondition $condition
 ```
 
 ## PARAMETERS
@@ -66,6 +111,9 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
+
+Specify a task sequence step object with a variable condition. To get this object, use one of the **Get-CMTSStep** cmdlets. For example, [Get-CMTSStepApplyDataImage](Get-CMTSStepApplyDataImage.md).
+
 ```yaml
 Type: IResultObject
 Parameter Sets: (All)
@@ -84,10 +132,19 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ### IResultObject[]#SMS_TaskSequence_VariableConditionExpression
+
 ### IResultObject#SMS_TaskSequence_VariableConditionExpression
+
 ## NOTES
 
+For more information on this return object and its properties, see [SMS_TaskSequence_VariableConditionExpression server WMI class](/mem/configmgr/develop/reference/osd/sms_tasksequence_variableconditionexpression-server-wmi-class).
+
 ## RELATED LINKS
+
+[New-CMTSStepConditionVariable](New-CMTSStepConditionVariable.md)
+
+[Use the task sequence editor: Conditions](/mem/configmgr/osd/understand/task-sequence-editor#bkmk_conditions)

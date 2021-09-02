@@ -1,6 +1,7 @@
 ---
 external help file: AdminUI.PS.psm1-help.xml
 Module Name: ConfigurationManager
+ms.date: 08/12/2021
 online version:
 schema: 2.0.0
 ---
@@ -8,7 +9,8 @@ schema: 2.0.0
 # Remove-CMTSStepCaptureUserState
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Remove the **Capture User State** step from a task sequence.
 
 ## SYNTAX
 
@@ -31,7 +33,8 @@ Remove-CMTSStepCaptureUserState [-TaskSequenceName] <String> [-StepName <String>
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+Use this cmdlet to remove an instance of the **Capture User State** step from a task sequence.
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
@@ -39,30 +42,21 @@ Remove-CMTSStepCaptureUserState [-TaskSequenceName] <String> [-StepName <String>
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS XYZ:\> {{ Add example code here }}
-```
 
-{{ Add example description here }}
+This example first gets a task sequence object in the **$tsOsd** variable. It then passes that variable as the input object to remove the **Capture User State** step.
+
+```powershell
+$tsNameOsd = "Default OS deployment"
+$tsOsd = Get-CMTaskSequence -Name $tsNameOsd -Fast
+
+$tsStepNameCapState = "Capture User State"
+Remove-CMTSStepCaptureUserState -InputObject $tsOsd -StepName $tsStepNameCapState -Force
+```
 
 ## PARAMETERS
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Force
+
 Run the command without asking for confirmation.
 
 ```yaml
@@ -78,7 +72,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{ Fill InputObject Description }}
+
+Specify a task sequence object from which to remove the **Capture User State** step. To get this object, use the [Get-CMTaskSequence](Get-CMTaskSequence.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -93,7 +88,8 @@ Accept wildcard characters: False
 ```
 
 ### -StepName
-{{ Fill StepName Description }}
+
+Specify the name of the **Capture User State** step to remove from the task sequence.
 
 ```yaml
 Type: String
@@ -108,7 +104,8 @@ Accept wildcard characters: False
 ```
 
 ### -TaskSequenceId
-{{ Fill TaskSequenceId Description }}
+
+Specify the **package ID** of the task sequence from which to remove the **Capture User State** step. This value is a standard package ID, for example `XYZ00858`.
 
 ```yaml
 Type: String
@@ -123,7 +120,8 @@ Accept wildcard characters: False
 ```
 
 ### -TaskSequenceName
-{{ Fill TaskSequenceName Description }}
+
+Specify the name of the task sequence from which to remove the **Capture User State** step.
 
 ```yaml
 Type: String
@@ -132,6 +130,22 @@ Aliases:
 
 Required: True
 Position: 0
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -159,9 +173,17 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-CMTSStepCaptureUserState](Get-CMTSStepCaptureUserState.md)
+[New-CMTSStepCaptureUserState](New-CMTSStepCaptureUserState.md)
+[Set-CMTSStepCaptureUserState](Set-CMTSStepCaptureUserState.md)
+
+[About task sequence steps: Capture User State](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_CaptureUserState)

@@ -326,22 +326,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -ContentMonitoringPriority
 
 Specify the content monitoring priority.
@@ -955,22 +939,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -SourceDPRank
-
-Specify an array that contains the priorities for the distribution point sources from which this distribution point can pull content. When source distribution points have the same priority, the pull distribution point randomly selects a source. Use this parameter with the **EnablePullDP** and **SourceDistributionPoint** parameters.
-
-```yaml
-Type: Int32[]
-Parameter Sets: (All)
-Aliases: SourceDPRanks
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -SourceDistributionPoint
 
 When you use the **EnablePullDP** parameter, use this parameter to specify an array of distribution point sources. This distribution point pulls content from the specified sources. Use the **SourceDPRank** parameter to prioritize these sources.
@@ -979,6 +947,22 @@ When you use the **EnablePullDP** parameter, use this parameter to specify an ar
 Type: String[]
 Parameter Sets: (All)
 Aliases: SourceDistributionPoints
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SourceDPRank
+
+Specify an array that contains the priorities for the distribution point sources from which this distribution point can pull content. When source distribution points have the same priority, the pull distribution point randomly selects a source. Use this parameter with the **EnablePullDP** and **SourceDistributionPoint** parameters.
+
+```yaml
+Type: Int32[]
+Parameter Sets: (All)
+Aliases: SourceDPRanks
 
 Required: False
 Position: Named
@@ -1080,6 +1064,22 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

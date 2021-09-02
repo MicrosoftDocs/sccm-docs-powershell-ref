@@ -1,16 +1,16 @@
 ---
-description: Gets a TS step run command line.
 external help file: AdminUI.PS.psm1-help.xml
 Module Name: ConfigurationManager
-ms.date: 05/02/2019
+ms.date: 08/31/2021
+online version:
 schema: 2.0.0
-title: Get-CMTSStepRunCommandLine
 ---
 
 # Get-CMTSStepRunCommandLine
 
 ## SYNOPSIS
-Gets a TS step run command line.
+
+Get the **Run Command Line** step from a specific task sequence.
 
 ## SYNTAX
 
@@ -34,34 +34,36 @@ Get-CMTSStepRunCommandLine [-TaskSequenceName] <String> [-StepName <String>] [-W
 
 ## DESCRIPTION
 
+Use this cmdlet to get a task sequence step object for one or more instances of the **Run Command Line** step. You can use this object to:
+
+- Remove the step from a task sequence with [Remove-CMTSStepRunCommandLine](Remove-CMTSStepRunCommandLine.md)
+- Copy the step to another task sequence with [Add-CMTaskSequenceStep](Add-CMTaskSequenceStep.md)
+
+For more information on this step, see [About task sequence steps: Run Command Line](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_RunCommandLine).
+
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
 ### Example 1
-```
-PS XYZ:\>
+
+This example first gets a task sequence object in the **$ts** variable. It then passes that variable as the input object to get the **Run Command Line** step.
+
+```powershell
+$tsName = "Custom task sequence"
+$ts = Get-CMTaskSequence -Name $tsName -Fast
+
+$tsStepNameRunCmd = "Run Command Line"
+$tsStepRunCmd = Get-CMTSStepRunCommandLine -InputObject $ts -StepName $tsStepNameRunCmd
 ```
 
 ## PARAMETERS
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -InputObject
+
+Specify a task sequence object from which to get the **Run Command Line** step. To get this object, use the [Get-CMTaskSequence](Get-CMTaskSequence.md) cmdlet.
+
 ```yaml
 Type: IResultObject
 Parameter Sets: ByValue
@@ -75,6 +77,9 @@ Accept wildcard characters: False
 ```
 
 ### -StepName
+
+Specify the name of the **Run Command Line** step to get from the task sequence.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -88,6 +93,9 @@ Accept wildcard characters: False
 ```
 
 ### -TaskSequenceId
+
+Specify the **package ID** of the task sequence from which to get the **Run Command Line** step. This value is a standard package ID, for example `XYZ00858`.
+
 ```yaml
 Type: String
 Parameter Sets: ById
@@ -101,6 +109,9 @@ Accept wildcard characters: False
 ```
 
 ### -TaskSequenceName
+
+Specify the name of the task sequence from which to get the **Run Command Line** step.
+
 ```yaml
 Type: String
 Parameter Sets: ByName
@@ -108,6 +119,22 @@ Aliases:
 
 Required: True
 Position: 0
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -135,9 +162,20 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
+
+[New-CMTSStepRunCommandLine](New-CMTSStepRunCommandLine.md)
+[Remove-CMTSStepRunCommandLine](Remove-CMTSStepRunCommandLine.md)
+[Set-CMTSStepRunCommandLine](Set-CMTSStepRunCommandLine.md)
+
+[Add-CMTaskSequenceStep](Add-CMTaskSequenceStep.md)
+[Get-CMTaskSequence](Get-CMTaskSequence.md)
+
+[About task sequence steps: Run Command Line](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_RunCommandLine)

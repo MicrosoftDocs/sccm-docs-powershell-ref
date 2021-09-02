@@ -591,6 +591,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -NonPeak
+Indicates that this is a non-peak plan.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: NonPeak
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -NoPowerButton
 Indicates that the "Power button action" property is not included in this power management plan.
 
@@ -690,21 +705,6 @@ Parameter Sets: (All)
 Aliases:
 
 Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -NonPeak
-Indicates that this is a non-peak plan.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: NonPeak
-Aliases:
-
-Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False

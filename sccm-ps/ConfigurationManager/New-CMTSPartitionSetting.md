@@ -1,8 +1,7 @@
 ---
-description: Create a task sequence partition setting.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 07/30/2020
+ms.date: 08/13/2021
 online version:
 schema: 2.0.0
 ---
@@ -11,7 +10,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-Create a task sequence partition object to use with the **Format and Partition Disk** step.
+Create a disk partition object to use with the **Format and Partition Disk** task sequence step.
 
 ## SYNTAX
 
@@ -61,37 +60,75 @@ New-CMTSPartitionSetting [-Name <String>] [-PartitionRecovery] [-Size <Int32>] [
 
 ## DESCRIPTION
 
-This cmdlet creates a task sequence partition object to use with the **Format and Partition Disk** step. Use this cmdlet to define the partition settings, and then use that object with the **-PartitionSetting** parameter of the [New-CMTSStepPartitionDisk](new-cmtssteppartitiondisk.md) or [Set-CMTSStepPartitionDisk](set-cmtssteppartitiondisk.md) cmdlets.
+This cmdlet creates a disk partition object to use with the **Format and Partition Disk** task sequence step. Use this cmdlet to define the partition settings, and then use that object with the **-PartitionSetting** parameter of the [New-CMTSStepPartitionDisk](new-cmtssteppartitiondisk.md) or [Set-CMTSStepPartitionDisk](set-cmtssteppartitiondisk.md) cmdlets.
 
-This cmdlet corresponds to the new **Partition Properties** window from the [Format and Partition Disk](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_FormatandPartitionDisk) step in the task sequence editor.
+You can create the following types of partition settings objects, based on the switch parameter that you use with this cmdlet:
+
+- **PartitionPrimary**: Primary partition
+- **PartitionEfi** EFI partition
+- **PartitionExtended**: Extended partition
+- **PartitionHidden**: Hidden partition
+- **PartitionLogical**: Logical partition
+- **PartitionMsr**: MSR partition
+- **PartitionRecovery**: Recovery partition
+
+If you don't specify a partition switch parameter, the cmdlet creates a primary partition settings object.
+
+For more information, see [Format and Partition Disk: Volume](/mem/configmgr/osd/understand/task-sequence-steps#volume).
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Create settings for an EFI partition
 
-{{ Add example description here }}
+This example creates settings for an **EFI** partition that's **500 MB** and saves it as the **partEfi** variable.
 
 ```powershell
-{{ Add example code here }}
+$partEfi = New-CMTSPartitionSetting -Name "EFI" -PartitionEfi -Size 500 -SizeUnit MB
 ```
+
+### Example 2: Create settings for an MSR partition
+
+This example creates settings for an **MSR** partition that's **128 MB** and saves it as the **partMsr** variable.
+
+```powershell
+$partMsr = New-CMTSPartitionSetting -Name "MSR" -PartitionMsr -Size 128 -SizeUnit MB
+```
+
+### Example 3: Create settings for a Windows primary partition
+
+This example creates settings for a **Windows** primary partition and saves it as the **partWin** variable.
+
+```powershell
+$partWin = New-CMTSPartitionSetting -Name "Windows" -PartitionPrimary -Size 99 -SizeUnit Percent -EnableDriveLetterAssignment $true -EnableQuickFormat $true -PartitionFileSystem NTFS -IsBootPartition $true
+```
+
+### Example 4: Create settings for a recovery partition
+
+This example creates settings for a **Recovery** partition that's **100%** of the remaining disk space and saves it as the **partMsr** variable.
+
+```powershell
+$partRec = New-CMTSPartitionSetting -Name "Recovery" -PartitionRecovery -Size 100 -SizeUnit Percent
+```
+
+### Example 5: View the partition setting details for a step
+
+This example first gets a task sequence object in the **$tsOsd** variable. It then passes that variable as the input object to get the **Format and Partition Disk** step.
+
+Then to view the first partition settings, reference the **Partitions** property, which is an array of [SMS_TaskSequence_PartitionSettings](/mem/configmgr/develop/reference/osd/sms_tasksequence_partitionsettings-server-wmi-class) objects.
+
+```powershell
+$tsNameOsd = "Default OS deployment"
+$tsOsd = Get-CMTaskSequence -Name $tsNameOsd -Fast
+
+$tsStepNameFormatDisk = "Partition Disk 0 - UEFI"
+$tsStepFormatDisk = Get-CMTSStepPartitionDisk -InputObject $tsOsd -StepName $tsStepNameFormatDisk
+
+$tsStepFormatDisk.Partitions[0]
+```
+
+You can use this process to copy partition settings between steps or task sequences. Save this partition settings object as a variable and then add it to another step.
 
 ## PARAMETERS
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -DisableWildcardHandling
 
@@ -371,6 +408,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 
 Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
@@ -393,12 +446,18 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
+
 ## OUTPUTS
 
 ### IResultObject#SMS_TaskSequence_PartitionSettings
+
 ## NOTES
 
+For more information on this return object and its properties, see [SMS_TaskSequence_PartitionSettings server WMI class](/mem/configmgr/develop/reference/osd/sms_tasksequence_partitionsettings-server-wmi-class).
+
 ## RELATED LINKS
+
+[Get-CMTSStepPartitionDisk](Get-CMTSStepPartitionDisk.md)
 
 [New-CMTSStepPartitionDisk](new-cmtssteppartitiondisk.md)
 

@@ -99,21 +99,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -ContinueOnError
 
 Add this parameter to enable the step option **Continue on error**. When you enable this option, if the step fails, the task sequence continues.
@@ -351,6 +336,23 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -LayeredDriver
+
+Starting in version 2107, use this parameter to select other types of keyboards that are common with Japanese and Korean languages. Specify an integer value for the layered driver to install with Windows. Use the same values as the [OsdLayeredDriver](/mem/configmgr/osd/understand/task-sequence-variables#OsdLayeredDriver) task sequence variable.
+
+```yaml
+Type: OsdLayeredDriver
+Parameter Sets: (All)
+Aliases: KeyboardDriver
+Accepted values: DoNotSpecify, Driver1, Driver2, Driver3, Driver4, Driver5, Driver6
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Name
 
 Specify a name for this step to identify it in the task sequence.
@@ -385,14 +387,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhatIf
-
-Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: wi
+Aliases: cf
 
 Required: False
 Position: Named
@@ -401,14 +402,14 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -LayeredDriver
+### -WhatIf
 
-Starting in version 2107, use this parameter to select other types of keyboards that are common with Japanese and Korean languages. Specify an integer value for the layered driver to install with Windows. Use the same values as the [OsdLayeredDriver](/mem/configmgr/osd/understand/task-sequence-variables#OsdLayeredDriver) task sequence variable.
+Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
 
 ```yaml
-Type: OsdLayeredDriver
+Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: KeyboardDriver
+Aliases: wi
 
 Required: False
 Position: Named

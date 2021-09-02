@@ -1,6 +1,7 @@
 ---
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
+ms.date: 08/13/2021
 online version:
 schema: 2.0.0
 ---
@@ -8,7 +9,8 @@ schema: 2.0.0
 # Set-CMTSStepJoinDomainWorkgroup
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Configure an instance of the **Join Domain or Workgroup** task sequence step.
 
 ## SYNTAX
 
@@ -224,7 +226,10 @@ Set-CMTSStepJoinDomainWorkgroup [-SetConditionOperatingSystem] [-StepName <Strin
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+Use this cmdlet to configure an instance of the **Join Domain or Workgroup** task sequence step.
+
+For more information on this step, see [About task sequence steps: Join Domain or Workgroup](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_JoinDomainorWorkgroup).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
@@ -232,17 +237,21 @@ Set-CMTSStepJoinDomainWorkgroup [-SetConditionOperatingSystem] [-StepName <Strin
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS XYZ:\> {{ Add example code here }}
-```
 
-{{ Add example description here }}
+This example changes the **Join Domain or Workgroup** step in the **Default OS deployment** task sequence to a different name and join a workgroup.
+
+```powershell
+$tsNameOsd = "Default OS deployment"
+$tsStepNameJoinDomain = "Join Domain or Workgroup"
+
+Set-CMTSStepJoinDomainWorkgroup -TaskSequenceName $tsNameOsd -StepName $tsStepNameJoinDomain -NewStepName "Join workgroup" -WorkgroupName "workgroup"
+```
 
 ## PARAMETERS
 
 ### -AddCondition
-Specify a condition object to add to this step.
 
+Specify a condition object to add to this step. To get this object, use one of the task sequence condition cmdlets. For example, [Get-CMTSStepConditionVariable](Get-CMTSStepConditionVariable.md).
 
 ```yaml
 Type: IResultObject[]
@@ -272,7 +281,8 @@ Accept wildcard characters: False
 ```
 
 ### -Condition
-Specify a condition object to use with this step.
+
+Specify a condition object to use with this step. To get this object, use one of the task sequence condition cmdlets. For example, [Get-CMTSStepConditionVariable](Get-CMTSStepConditionVariable.md).
 
 ```yaml
 Type: IResultObject[]
@@ -316,21 +326,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Description
 Specify an optional description for this task sequence step.
 
@@ -362,7 +357,12 @@ Accept wildcard characters: False
 ```
 
 ### -DomainName
-{{ Fill DomainName Description }}
+
+To configure this step to have the computer join a domain, use this parameter to specify the name of a domain to join. Then use the following other parameters:
+
+- **DomainOU**: Optionally specify an organizational unit in which to create the new computer account.
+- **UserName**: Specify the user account with permissions to join a computer to the domain.
+- **UserPassword**: Specify the password for the user account.
 
 ```yaml
 Type: String
@@ -499,7 +499,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{ Fill InputObject Description }}
+
+Specify a task sequence object from which to get the **Join Domain or Workgroup** step. To get this object, use the [Get-CMTaskSequence](Get-CMTaskSequence.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -574,7 +575,7 @@ Accept wildcard characters: False
 ```
 
 ### -MsiFilePath
-Specify the path to a Windows Installer file for an software condition.
+Specify the path to a Windows Installer file for a software condition.
 
 ```yaml
 Type: String
@@ -618,21 +619,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -OU
-{{ Fill OU Description }}
-
-```yaml
-Type: String
-Parameter Sets: ByValue, ById, ByName
-Aliases: OrganizationalUnit
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -OperatorType
 Specify an operator to use with a task sequence variable condition.
 
@@ -641,6 +627,24 @@ Type: VariableOperatorType
 Parameter Sets: ByIdSetConditionVariable, ByNameSetConditionVariable, ByValueSetConditionVariable
 Aliases:
 Accepted values: Exists, NotExists, Equals, NotEquals, Greater, GreaterEqual, Less, LessEqual, Like, NotLike
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OU
+
+When you use the **DomainName** parameter, you can also specify the path to an organizational unit (OU). When the computer joins the domain, if it creates a new computer account, that account will be in this OU.
+
+For example, `LDAP://OU=MyOu,DC=MyDom,DC=MyCompany,DC=com`
+
+```yaml
+Type: String
+Parameter Sets: ByValue, ById, ByName
+Aliases: OrganizationalUnit
 
 Required: False
 Position: Named
@@ -1044,7 +1048,8 @@ Accept wildcard characters: False
 ```
 
 ### -TaskSequenceId
-Specify the ID of the task sequence to target for changes.
+
+Specify the **package ID** of the task sequence from which to get the **Join Domain or Workgroup** step. This value is a standard package ID, for example `XYZ00858`.
 
 ```yaml
 Type: String
@@ -1074,7 +1079,10 @@ Accept wildcard characters: False
 ```
 
 ### -UserName
-{{ Fill UserName Description }}
+
+When you use the **DomainName** parameter, use this parameter to specify the domain user account that's used to add the destination computer to the domain. Use the **UserPassword** parameter to specify the account password.
+
+For more information, see the [task sequence domain joining account](/mem/configmgr/core/plan-design/hierarchy/accounts#task-sequence-domain-join-account).
 
 ```yaml
 Type: String
@@ -1089,7 +1097,8 @@ Accept wildcard characters: False
 ```
 
 ### -UserPassword
-{{ Fill UserPassword Description }}
+
+Specify the password as a secure string for the **UserName** parameter.
 
 ```yaml
 Type: SecureString
@@ -1135,6 +1144,37 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -WorkgroupName
+
+To configure this step to have the computer join a workgroup, use this parameter to specify the workgroup name.
+
+```yaml
+Type: String
+Parameter Sets: ByValue, ById, ByName
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 
 Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
@@ -1151,30 +1191,23 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WorkgroupName
-{{ Fill WorkgroupName Description }}
-
-```yaml
-Type: String
-Parameter Sets: ByValue, ById, ByName
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-CMTSStepJoinDomainWorkgroup](Get-CMTSStepJoinDomainWorkgroup.md)
+[New-CMTSStepJoinDomainWorkgroup](New-CMTSStepJoinDomainWorkgroup.md)
+[Remove-CMTSStepJoinDomainWorkgroup](Remove-CMTSStepJoinDomainWorkgroup.md)
+
+[About task sequence steps: Join Domain or Workgroup](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_JoinDomainorWorkgroup)

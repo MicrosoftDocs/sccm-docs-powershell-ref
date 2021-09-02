@@ -84,22 +84,6 @@ Set-CMPackage -InputObject $pkg -Path "\\sources\cmpkg$\newpkg01"
 
 ## PARAMETERS
 
-### -Confirm
-
-Add this parameter to prompt for confirmation before the cmdlet runs.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -CopyToPackageShareOnDistributionPoint
 
 Clients can always download a package from a distribution point. If you set this parameter to **$true**, the site makes it available via a named network share on distribution points. Use **CustomPackageShareName** to specify a custom share name.
@@ -592,6 +576,22 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+
+Add this parameter to prompt for confirmation before the cmdlet runs.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
