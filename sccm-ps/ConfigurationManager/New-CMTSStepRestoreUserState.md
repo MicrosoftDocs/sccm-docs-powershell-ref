@@ -10,7 +10,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-Create an **Restore User State** step, which you can add to a task sequence.
+Create a **Restore User State** step, which you can add to a task sequence.
 
 ## SYNTAX
 

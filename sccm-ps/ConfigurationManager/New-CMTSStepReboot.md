@@ -10,7 +10,7 @@ title: New-CMTSStepReboot
 
 ## SYNOPSIS
 
-Create an **Restart Computer** step, which you can add to a task sequence.
+Create a **Restart Computer** step, which you can add to a task sequence.
 
 ## SYNTAX
 

@@ -10,7 +10,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-Create an **Capture Network Settings** step, which you can add to a task sequence.
+Create a **Capture Network Settings** step, which you can add to a task sequence.
 
 ## SYNTAX
 

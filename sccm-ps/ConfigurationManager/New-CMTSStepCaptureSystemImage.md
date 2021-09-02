@@ -10,7 +10,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-Create an **Capture OS Image** step, which you can add to a task sequence.
+Create a **Capture OS Image** step, which you can add to a task sequence.
 
 ## SYNTAX
 

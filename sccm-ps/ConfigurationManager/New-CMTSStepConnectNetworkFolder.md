@@ -10,7 +10,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-Create an **Connect To Network Folder** step, which you can add to a task sequence.
+Create a **Connect To Network Folder** step, which you can add to a task sequence.
 
 ## SYNTAX
 

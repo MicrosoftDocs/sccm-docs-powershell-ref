@@ -10,7 +10,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-Create an **Run Command Line** step, which you can add to a task sequence.
+Create a **Run Command Line** step, which you can add to a task sequence.
 
 ## SYNTAX
 

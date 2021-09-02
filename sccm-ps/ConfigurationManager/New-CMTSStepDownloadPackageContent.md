@@ -10,7 +10,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-Create an **Download Package Content** step, which you can add to a task sequence.
+Create a **Download Package Content** step, which you can add to a task sequence.
 
 ## SYNTAX
 
