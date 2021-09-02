@@ -259,21 +259,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -DeltaDiscoveryMins
 ```yaml
 Type: Int32
@@ -322,6 +307,22 @@ Indicates whether Configuration Manager creates Active Directory boundaries from
 ```yaml
 Type: Boolean
 Parameter Sets: SearchByActiveDirectoryForestDiscovery
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Enabled
+Indicates whether to enable the Configuration Manager discovery.
+If you specify a value of $False, Configuration Manager does not discover resources by using this discovery.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
 Aliases:
 
 Required: False
@@ -415,22 +416,6 @@ Indicates whether Configuration Manager creates IP address range boundaries from
 ```yaml
 Type: Boolean
 Parameter Sets: SearchByActiveDirectoryForestDiscovery
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Enabled
-Indicates whether to enable the Configuration Manager discovery.
-If you specify a value of $False, Configuration Manager does not discover resources by using this discovery.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
 Aliases:
 
 Required: False
@@ -683,6 +668,21 @@ Aliases: DiscoveryAccountUserName
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

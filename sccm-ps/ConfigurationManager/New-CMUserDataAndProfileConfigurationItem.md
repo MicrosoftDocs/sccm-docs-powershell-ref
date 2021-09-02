@@ -208,21 +208,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -ConnectionTransferRate
 Specifies a connection transfer rate.
 
@@ -902,11 +887,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -SyncMins
+### -SynchronizationPolicy
+Indicates whether to use a synchronization policy.
+
 ```yaml
-Type: Int32
+Type: Boolean
 Parameter Sets: (All)
-Aliases: SynchronizationInterval
+Aliases:
 
 Required: False
 Position: Named
@@ -915,13 +902,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -SynchronizationPolicy
-Indicates whether to use a synchronization policy.
-
+### -SyncMins
 ```yaml
-Type: Boolean
+Type: Int32
 Parameter Sets: (All)
-Aliases:
+Aliases: SynchronizationInterval
 
 Required: False
 Position: Named
@@ -1028,6 +1013,21 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

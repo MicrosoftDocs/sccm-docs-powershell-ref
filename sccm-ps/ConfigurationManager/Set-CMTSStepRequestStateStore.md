@@ -1,6 +1,7 @@
 ---
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
+ms.date: 08/13/2021
 online version:
 schema: 2.0.0
 ---
@@ -8,7 +9,8 @@ schema: 2.0.0
 # Set-CMTSStepRequestStateStore
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Configure an instance of the **Request State Store** task sequence step.
 
 ## SYNTAX
 
@@ -224,7 +226,10 @@ Set-CMTSStepRequestStateStore [-SetConditionOperatingSystem] [-StepName <String>
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+Use this cmdlet to configure an instance of the **Request State Store** task sequence step.
+
+For more information on this step, see [About task sequence steps: Request State Store](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_RequestStateStore).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
@@ -232,17 +237,21 @@ Set-CMTSStepRequestStateStore [-SetConditionOperatingSystem] [-StepName <String>
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS XYZ:\> {{ Add example code here }}
-```
 
-{{ Add example description here }}
+This example changes the **Request State Store** step in the **Default OS deployment** task sequence to not use the network access account and increase the retries.
+
+```powershell
+$tsNameOsd = "Default OS deployment"
+$tsStepNameRequestSMP = "Request State Store"
+
+Set-CMTSStepRequestStateStore -TaskSequenceName $tsNameOsd -StepName $tsStepNameRequestSMP -FallbackToAccount $false -RetryCount 4 -RetryTime 90
+```
 
 ## PARAMETERS
 
 ### -AddCondition
-Specify a condition object to add to this step.
 
+Specify a condition object to add to this step. To get this object, use one of the task sequence condition cmdlets. For example, [Get-CMTSStepConditionVariable](Get-CMTSStepConditionVariable.md).
 
 ```yaml
 Type: IResultObject[]
@@ -272,7 +281,8 @@ Accept wildcard characters: False
 ```
 
 ### -Condition
-Specify a condition object to use with this step.
+
+Specify a condition object to use with this step. To get this object, use one of the task sequence condition cmdlets. For example, [Get-CMTSStepConditionVariable](Get-CMTSStepConditionVariable.md).
 
 ```yaml
 Type: IResultObject[]
@@ -316,21 +326,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Description
 Specify an optional description for this task sequence step.
 
@@ -362,7 +357,10 @@ Accept wildcard characters: False
 ```
 
 ### -FallbackToAccount
-{{ Fill FallbackToAccount Description }}
+
+When you set this value to `$true`, if the task sequence can't access the state migration point using the computer account, it uses the network access account credentials to connect. This option is less secure because other computers could use the network access account to access the stored state. This option might be necessary if the destination computer isn't domain joined.
+
+For more information, see [Network access account](/mem/configmgr/core/plan-design/hierarchy/accounts#network-access-account).
 
 ```yaml
 Type: Boolean
@@ -499,7 +497,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{ Fill InputObject Description }}
+
+Specify a task sequence object from which to get the **Request State Store** step. To get this object, use the [Get-CMTaskSequence](Get-CMTaskSequence.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -574,7 +573,7 @@ Accept wildcard characters: False
 ```
 
 ### -MsiFilePath
-Specify the path to a Windows Installer file for an software condition.
+Specify the path to a Windows Installer file for a software condition.
 
 ```yaml
 Type: String
@@ -831,7 +830,12 @@ Accept wildcard characters: False
 ```
 
 ### -RequestOption
-{{ Fill RequestOption Description }}
+
+Specify the reason to request access to the state migration point:
+
+- `Capture`: Capture state from the computer. If the Configuration Manager site has multiple active state migration points, this step finds a state migration point with available disk space. The task sequence queries the management point for a list of state migration points, and then evaluates each until it finds one that meets the minimum requirements.
+
+- `Restore`: Restore state from another computer. If there are multiple state migration points, this step finds the state migration point that has the state for the destination computer.
 
 ```yaml
 Type: RequestType
@@ -847,7 +851,8 @@ Accept wildcard characters: False
 ```
 
 ### -RetryCount
-{{ Fill RetryCount Description }}
+
+Specify the number of times that this step tries to find an appropriate state migration point before failing.
 
 ```yaml
 Type: Int32
@@ -862,7 +867,8 @@ Accept wildcard characters: False
 ```
 
 ### -RetryTime
-{{ Fill RetryTime Description }}
+
+Specify the amount of time in seconds that the task sequence step waits between retry attempts.
 
 ```yaml
 Type: Int32
@@ -1075,7 +1081,8 @@ Accept wildcard characters: False
 ```
 
 ### -TaskSequenceId
-Specify the ID of the task sequence to target for changes.
+
+Specify the **package ID** of the task sequence from which to get the **Request State Store** step. This value is a standard package ID, for example `XYZ00858`.
 
 ```yaml
 Type: String
@@ -1136,6 +1143,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 
 Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
@@ -1158,9 +1180,17 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-CMTSStepRequestStateStore](Get-CMTSStepRequestStateStore.md)
+[New-CMTSStepRequestStateStore](New-CMTSStepRequestStateStore.md)
+[Remove-CMTSStepRequestStateStore](Remove-CMTSStepRequestStateStore.md)
+
+[About task sequence steps: Request State Store](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_RequestStateStore)

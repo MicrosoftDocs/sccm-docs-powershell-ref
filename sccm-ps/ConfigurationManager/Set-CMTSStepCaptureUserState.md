@@ -1,6 +1,7 @@
 ---
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
+ms.date: 08/12/2021
 online version:
 schema: 2.0.0
 ---
@@ -8,7 +9,8 @@ schema: 2.0.0
 # Set-CMTSStepCaptureUserState
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Configure an instance of the **Capture User State** task sequence step.
 
 ## SYNTAX
 
@@ -230,7 +232,10 @@ Set-CMTSStepCaptureUserState [-SetConditionOperatingSystem] [-StepName <String>]
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+Use this cmdlet to configure an instance of the **Capture User State** task sequence step.
+
+For more information on this step, see [About task sequence steps: Capture User State](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_CaptureUserState).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
@@ -238,17 +243,21 @@ Set-CMTSStepCaptureUserState [-SetConditionOperatingSystem] [-StepName <String>]
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS XYZ:\> {{ Add example code here }}
-```
 
-{{ Add example description here }}
+This example changes the **Capture User State** step in the **Default OS deployment** task sequence to use custom capture with a configuration file.
+
+```powershell
+$tsNameOsd = "Default OS deployment"
+$tsStepNameCapState = "Capture User State"
+
+Set-CMTSStepCaptureUserState -TaskSequenceName $tsNameOsd -StepName $tsStepNameCapState -ModeOption Customize -ConfigFiles "contoso.xml"
+```
 
 ## PARAMETERS
 
 ### -AddCondition
-Specify a condition object to add to this step.
 
+Specify a condition object to add to this step. To get this object, use one of the task sequence condition cmdlets. For example, [Get-CMTSStepConditionVariable](Get-CMTSStepConditionVariable.md).
 
 ```yaml
 Type: IResultObject[]
@@ -263,7 +272,8 @@ Accept wildcard characters: False
 ```
 
 ### -AddConfigFile
-{{ Fill AddConfigFile Description }}
+
+When you specify `-ModeOption Customize` to customize how user profiles are captured, use this parameter to add file names of custom XML configuration files. These files need to be in the USMT package. Use this parameter to append to an existing list. To create a new list, use the **ConfigFile** parameter.
 
 ```yaml
 Type: String[]
@@ -278,7 +288,8 @@ Accept wildcard characters: False
 ```
 
 ### -CleanConfigFile
-{{ Fill CleanConfigFile Description }}
+
+Add this parameter to remove all of the file names for custom XML configuration files. To remove individual file names, use the **RemoveConfigFile** parameter.
 
 ```yaml
 Type: SwitchParameter
@@ -308,7 +319,8 @@ Accept wildcard characters: False
 ```
 
 ### -Condition
-Specify a condition object to use with this step.
+
+Specify a condition object to use with this step. To get this object, use one of the task sequence condition cmdlets. For example, [Get-CMTSStepConditionVariable](Get-CMTSStepConditionVariable.md).
 
 ```yaml
 Type: IResultObject[]
@@ -353,7 +365,8 @@ Accept wildcard characters: False
 ```
 
 ### -ConfigFile
-{{ Fill ConfigFile Description }}
+
+When you specify `-ModeOption Customize` to customize how user profiles are captured, use this parameter to specify the file names of custom XML configuration files. These files need to be in the USMT package. Use this parameter to create a new list. To append to an existing list, use the **AddConfigFile** parameter.
 
 ```yaml
 Type: String[]
@@ -367,23 +380,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -ContinueOnLockedFile
-{{ Fill ContinueOnLockedFile Description }}
+
+When you specify `-FileAccessOption Normal`, set this parameter to `$true` to allow USMT to continue if some files can't be captured.
 
 ```yaml
 Type: Boolean
@@ -428,7 +427,12 @@ Accept wildcard characters: False
 ```
 
 ### -FileAccessOption
-{{ Fill FileAccessOption Description }}
+
+There are two options for how USMT accesses the file system:
+
+- `Normal`: USMT uses standard file system access. When you specify this option, you can also enable **ContinueOnLockedFile**, **OfflineUserState**, and **-**.
+
+- `VolumeCopyShadowService`: USMT uses the Volume Copy Shadow Services (VSS).
 
 ```yaml
 Type: FileAccessType
@@ -566,7 +570,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{ Fill InputObject Description }}
+
+Specify a task sequence object from which to get the **Capture User State** step. To get this object, use the [Get-CMTaskSequence](Get-CMTaskSequence.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -626,7 +631,12 @@ Accept wildcard characters: False
 ```
 
 ### -ModeOption
-{{ Fill ModeOption Description }}
+
+There are two modes in which USMT can operate:
+
+- `Standard`: Capture all user profiles by using standard options. This option is the default.
+
+- `Customize`: Customize how user profiles are captured. If you specify this option, use the **ConfigFile** parameter to specify the custom XML configuration files.
 
 ```yaml
 Type: ModeType
@@ -657,7 +667,7 @@ Accept wildcard characters: False
 ```
 
 ### -MsiFilePath
-Specify the path to a Windows Installer file for an software condition.
+Specify the path to a Windows Installer file for a software condition.
 
 ```yaml
 Type: String
@@ -702,7 +712,8 @@ Accept wildcard characters: False
 ```
 
 ### -OfflineUserState
-{{ Fill OfflineUserState Description }}
+
+When you specify `-FileAccessOption Normal`, set this parameter to `$true` to capture in offline mode in Windows PE.
 
 ```yaml
 Type: Boolean
@@ -733,7 +744,8 @@ Accept wildcard characters: False
 ```
 
 ### -Package
-{{ Fill Package Description }}
+
+Specify an object for the USMT package. To get this object, use the [Get-CMPackage](Get-CMPackage.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -944,7 +956,8 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveConfigFile
-{{ Fill RemoveConfigFile Description }}
+
+Specify the file names of custom XML configuration files to remove from the list. To remove all configuration files, use the **CleanConfigFile** parameter.
 
 ```yaml
 Type: String[]
@@ -1095,7 +1108,8 @@ Accept wildcard characters: False
 ```
 
 ### -SkipEncryptedFile
-{{ Fill SkipEncryptedFile Description }}
+
+Set this parameter to `$true` to skip files that use the encrypting file system (EFS).
 
 ```yaml
 Type: Boolean
@@ -1172,7 +1186,8 @@ Accept wildcard characters: False
 ```
 
 ### -TaskSequenceId
-Specify the ID of the task sequence to target for changes.
+
+Specify the **package ID** of the task sequence from which to get the **Capture User State** step. This value is a standard package ID, for example `XYZ00858`.
 
 ```yaml
 Type: String
@@ -1202,7 +1217,8 @@ Accept wildcard characters: False
 ```
 
 ### -UseHardLinks
-{{ Fill UseHardLinks Description }}
+
+When you specify `-FileAccessOption Normal`, set this parameter to `$true` to capture locally by using NTFS hard-links.
 
 ```yaml
 Type: Boolean
@@ -1233,7 +1249,8 @@ Accept wildcard characters: False
 ```
 
 ### -VerboseLogging
-{{ Fill VerboseLogging Description }}
+
+Set this parameter to `$true` to enable USMT verbose logging.
 
 ```yaml
 Type: Boolean
@@ -1255,6 +1272,21 @@ Type: VariableOperatorType
 Parameter Sets: ByIdSetConditionFile, ByNameSetConditionFile, ByValueSetConditionFile
 Aliases:
 Accepted values: Equals, NotEquals, Greater, GreaterEqual, Less, LessEqual
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
 
 Required: False
 Position: Named
@@ -1285,9 +1317,17 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-CMTSStepCaptureUserState](Get-CMTSStepCaptureUserState.md)
+[New-CMTSStepCaptureUserState](New-CMTSStepCaptureUserState.md)
+[Remove-CMTSStepCaptureUserState](Remove-CMTSStepCaptureUserState.md)
+
+[About task sequence steps: Capture User State](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_CaptureUserState)

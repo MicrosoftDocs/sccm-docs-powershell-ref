@@ -1,16 +1,16 @@
 ---
-description: Create a WMI query condition for a task sequence step
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 10/28/2020
+ms.date: 09/02/2021
+online version:
 schema: 2.0.0
-title: New-CMTSStepConditionQueryWmi
 ---
 
 # New-CMTSStepConditionQueryWmi
 
 ## SYNOPSIS
-Create a WMI query condition for a task sequence step.
+
+Create a _WMI query_ condition for a task sequence step.
 
 ## SYNTAX
 
@@ -20,7 +20,10 @@ New-CMTSStepConditionQueryWmi [-Namespace <String[]>] -Query <String> [-DisableW
 ```
 
 ## DESCRIPTION
-Use this cmdlet to create a WMI query condition for a task sequence step.
+
+Use this cmdlet to create a _WMI query_ condition object for a task sequence step. Then use one of the **New-CMTSStep\*** or **Set-CMTSStep\*** cmdlets with the **Condition** or **AddCondition** parameters. For example, [Set-CMTSStepApplyDataImage](Set-CMTSStepApplyDataImage.md).
+
+For more information, see [Use the task sequence editor: Conditions](/mem/configmgr/osd/understand/task-sequence-editor#bkmk_conditions).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
@@ -29,30 +32,30 @@ Use this cmdlet to create a WMI query condition for a task sequence step.
 
 ### Example 1: Create a query condition based on hardware model
 
+This example first creates a condition object to query WMI for the computer model.
+
+It then uses the **Set-CMTSStepRunPowerShellScript** cmdlet to add this condition object to the **Run PowerShell Script** step of the **Default OS deployment** task sequence.
+
 ```powershell
-$Model = "Latitude E7470"
-$ConditionQuery = "Select * From Win32_ComputerSystem Where Model = `"$Model`""
-$StepCondition = New-CMTSStepConditionQueryWMI -Namespace "root\cimv2" -Query $ConditionQuery
+$model = "Latitude E7470"
+$query = "Select * From Win32_ComputerSystem Where Model = `"$model`""
+
+$condition = New-CMTSStepConditionQueryWMI -Namespace "root\cimv2" -Query $query
+
+$tsNameOsd = "Default OS deployment"
+$tsStepNameRunPwsh = "Run PowerShell Script"
+
+Set-CMTSStepRunPowerShellScript -TaskSequenceName $tsNameOsd -StepName $tsStepNameRunPwsh -AddCondition $condition
 ```
+
+This sample script creates the following condition on the step:
+
+`WMI Query  Select * From Win32_ComputerSystem Where Model = "Latitude E7470"`
 
 ## PARAMETERS
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -DisableWildcardHandling
+
 This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
@@ -68,6 +71,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
+
 This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
@@ -83,7 +87,8 @@ Accept wildcard characters: False
 ```
 
 ### -Namespace
-Specify the WMI namespace for the query.
+
+Specify the WMI namespace for the query. For example, `root\cimv2`
 
 ```yaml
 Type: String[]
@@ -98,7 +103,8 @@ Accept wildcard characters: False
 ```
 
 ### -Query
-Specify the WMI query.
+
+Specify the WMI query. The cmdlet doesn't test the validity of the query.
 
 ```yaml
 Type: String
@@ -112,7 +118,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
+
 Shows what would happen if the cmdlet runs. The cmdlet isn't run.
 
 ```yaml
@@ -133,19 +156,17 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
+
 ## OUTPUTS
 
 ### IResultObject#SMS_TaskSequence_WMIConditionExpression
+
 ## NOTES
+
+For more information on this return object and its properties, see [SMS_TaskSequence_WMIConditionExpression server WMI class](/mem/configmgr/develop/reference/osd/sms_tasksequence_wmiconditionexpression-server-wmi-class).
 
 ## RELATED LINKS
 
 [Get-CMTSStepConditionQueryWmi](Get-CMTSStepConditionQueryWmi.md)
-[New-CMTSStepConditionFile](New-CMTSStepConditionFile.md)
-[New-CMTSStepConditionFolder](New-CMTSStepConditionFolder.md)
-[New-CMTSStepConditionIfStatement](New-CMTSStepConditionIfStatement.md)
-[New-CMTSStepConditionOperatingSystem](New-CMTSStepConditionOperatingSystem.md)
-[New-CMTSStepConditionOperatingSystemLanguage](New-CMTSStepConditionOperatingSystemLanguage.md)
-[New-CMTSStepConditionRegistry](New-CMTSStepConditionRegistry.md)
-[New-CMTSStepConditionSoftware](New-CMTSStepConditionSoftware.md)
-[New-CMTSStepConditionVariable](New-CMTSStepConditionVariable.md)
+
+[Use the task sequence editor: Conditions](/mem/configmgr/osd/understand/task-sequence-editor#bkmk_conditions)

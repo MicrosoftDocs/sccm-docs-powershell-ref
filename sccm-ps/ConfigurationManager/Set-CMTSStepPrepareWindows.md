@@ -1,6 +1,7 @@
 ---
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
+ms.date: 08/13/2021
 online version:
 schema: 2.0.0
 ---
@@ -8,7 +9,8 @@ schema: 2.0.0
 # Set-CMTSStepPrepareWindows
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Configure an instance of the **Prepare Windows for Capture** task sequence step.
 
 ## SYNTAX
 
@@ -221,7 +223,10 @@ Set-CMTSStepPrepareWindows [-SetConditionOperatingSystem] [-StepName <String>]
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+Use this cmdlet to configure an instance of the **Prepare Windows for Capture** task sequence step.
+
+For more information on this step, see [About task sequence steps: Prepare Windows for Capture](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_PrepareWindowsforCapture).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
@@ -229,17 +234,21 @@ Set-CMTSStepPrepareWindows [-SetConditionOperatingSystem] [-StepName <String>]
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS XYZ:\> {{ Add example code here }}
-```
 
-{{ Add example description here }}
+This example changes the **Prepare Windows for Capture** step in the **Default OS deployment and capture** task sequence to a different name and disables it.
+
+```powershell
+$tsNameOsd = "Default OS deployment and capture"
+$tsStepNameSysprep = "Prepare Windows for Capture"
+
+Set-CMTSStepPrepareWindows -TaskSequenceName $tsNameOsd -StepName $tsStepNameSysprep -NewStepName "Run Sysprep" -IsEnabled $false
+```
 
 ## PARAMETERS
 
 ### -AddCondition
-Specify a condition object to add to this step.
 
+Specify a condition object to add to this step. To get this object, use one of the task sequence condition cmdlets. For example, [Get-CMTSStepConditionVariable](Get-CMTSStepConditionVariable.md).
 
 ```yaml
 Type: IResultObject[]
@@ -254,7 +263,8 @@ Accept wildcard characters: False
 ```
 
 ### -BuildDriverList
-{{ Fill BuildDriverList Description }}
+
+Set this parameter to `$true` to have Sysprep automatically build a list of mass storage drivers from the reference computer. This option enables the Build Mass Storage Drivers option in the sysprep.inf file on the reference computer.
 
 ```yaml
 Type: Boolean
@@ -284,7 +294,8 @@ Accept wildcard characters: False
 ```
 
 ### -Condition
-Specify a condition object to use with this step.
+
+Specify a condition object to use with this step. To get this object, use one of the task sequence condition cmdlets. For example, [Get-CMTSStepConditionVariable](Get-CMTSStepConditionVariable.md).
 
 ```yaml
 Type: IResultObject[]
@@ -320,21 +331,6 @@ Specify the value of the task sequence variable to use in a condition.
 Type: String
 Parameter Sets: ByIdSetConditionVariable, ByNameSetConditionVariable, ByValueSetConditionVariable
 Aliases: Value
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
 
 Required: False
 Position: Named
@@ -496,7 +492,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{ Fill InputObject Description }}
+
+Specify a task sequence object from which to get the **Prepare Windows for Capture** step. To get this object, use the [Get-CMTaskSequence](Get-CMTaskSequence.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -556,7 +553,8 @@ Accept wildcard characters: False
 ```
 
 ### -KeepActivation
-{{ Fill KeepActivation Description }}
+
+Set this parameter to `$true` to prevent Sysprep from resetting the product activation flag.
 
 ```yaml
 Type: Boolean
@@ -586,7 +584,7 @@ Accept wildcard characters: False
 ```
 
 ### -MsiFilePath
-Specify the path to a Windows Installer file for an software condition.
+Specify the path to a Windows Installer file for a software condition.
 
 ```yaml
 Type: String
@@ -1041,7 +1039,8 @@ Accept wildcard characters: False
 ```
 
 ### -TaskSequenceId
-Specify the ID of the task sequence to target for changes.
+
+Specify the **package ID** of the task sequence from which to get the **Prepare Windows for Capture** step. This value is a standard package ID, for example `XYZ00858`.
 
 ```yaml
 Type: String
@@ -1102,6 +1101,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 
 Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
@@ -1124,9 +1138,17 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-CMTSStepPrepareWindows](Get-CMTSStepPrepareWindows.md)
+[New-CMTSStepPrepareWindows](New-CMTSStepPrepareWindows.md)
+[Remove-CMTSStepPrepareWindows](Remove-CMTSStepPrepareWindows.md)
+
+[About task sequence steps: Prepare Windows for Capture](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_PrepareWindowsforCapture)

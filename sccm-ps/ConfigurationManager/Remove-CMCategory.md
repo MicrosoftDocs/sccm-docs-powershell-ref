@@ -70,7 +70,7 @@ Valid values are:
 Type: CategoryType
 Parameter Sets: ByCategory
 Aliases:
-Accepted values: UserCategories, BaselineCategories, DriverCategories, AppCategories, GlobalCondition, CatalogCategories, UserCategories, BaselineCategories, DriverCategories, AppCategories, GlobalCondition, CatalogCategories, UserCategories, BaselineCategories, DriverCategories, AppCategories, GlobalCondition, CatalogCategories, UserCategories, BaselineCategories, DriverCategories, AppCategories, GlobalCondition, CatalogCategories
+Accepted values: UserCategories, BaselineCategories, DriverCategories, AppCategories, GlobalCondition, CatalogCategories
 
 Required: True
 Position: Named
@@ -83,26 +83,11 @@ Accept wildcard characters: False
 Type: CategoryType
 Parameter Sets: ByName
 Aliases:
-Accepted values: UserCategories, BaselineCategories, DriverCategories, AppCategories, GlobalCondition, CatalogCategories, UserCategories, BaselineCategories, DriverCategories, AppCategories, GlobalCondition, CatalogCategories, UserCategories, BaselineCategories, DriverCategories, AppCategories, GlobalCondition, CatalogCategories, UserCategories, BaselineCategories, DriverCategories, AppCategories, GlobalCondition, CatalogCategories
+Accepted values: UserCategories, BaselineCategories, DriverCategories, AppCategories, GlobalCondition, CatalogCategories
 
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -196,6 +181,21 @@ Aliases: LocalizedCategoryInstanceName, CategoryName
 Required: True
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

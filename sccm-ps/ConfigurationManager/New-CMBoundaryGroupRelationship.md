@@ -62,22 +62,6 @@ New-CMBoundaryGroupRelationship -SourceGroupName "Swindon" -DestinationGroupName
 
 ## PARAMETERS
 
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -DestinationGroup
 
 Specify a boundary group object for the neighbor. To get this object, use the [Get-CMBoundaryGroup](Get-CMBoundaryGroup.md) cmdlet.
@@ -270,6 +254,22 @@ Parameter Sets: NameMandatory
 Aliases:
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False

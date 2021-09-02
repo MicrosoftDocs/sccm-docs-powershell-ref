@@ -1,16 +1,16 @@
 ---
-description: Sets a TS step run command line.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/07/2019
+ms.date: 08/31/2021
+online version:
 schema: 2.0.0
-title: Set-CMTSStepRunCommandLine
 ---
 
 # Set-CMTSStepRunCommandLine
 
 ## SYNOPSIS
-Sets a TS step run command line.
+
+Configure an instance of the **Run Command Line** task sequence step.
 
 ## SYNTAX
 
@@ -232,19 +232,32 @@ Set-CMTSStepRunCommandLine [-SetConditionOperatingSystem] [-StepName <String>]
 
 ## DESCRIPTION
 
+Use this cmdlet to configure an instance of the **Run Command Line** task sequence step.
+
+For more information on this step, see [About task sequence steps: Run Command Line](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_RunCommandLine).
+
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
 ### Example 1
-```
-PS XYZ:\>
+
+This example changes the **Run Command Line** step in the **Default OS deployment** task sequence to timeout after 30 minutes and start in the `C:\Contoso` working directory.
+
+```powershell
+$tsNameOsd = "Default OS deployment"
+$tsStepNameRunCmd = "Run Command Line"
+
+Set-CMTSStepRunCommandLine -TaskSequenceName $tsNameOsd -StepName $tsStepNameRunCmd -Timeout 30 -WorkingDirectory "C:\Contoso"
 ```
 
 ## PARAMETERS
 
 ### -AddCondition
+
+Specify a condition object to add to this step. To get this object, use one of the task sequence condition cmdlets. For example, [Get-CMTSStepConditionVariable](Get-CMTSStepConditionVariable.md).
+
 ```yaml
 Type: IResultObject[]
 Parameter Sets: ByValue, ById, ByName
@@ -258,6 +271,9 @@ Accept wildcard characters: False
 ```
 
 ### -ClearCondition
+
+Remove a condition from this step. Use the **-Condition** parameter to specify the condition to remove.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ByValue, ById, ByName
@@ -271,6 +287,11 @@ Accept wildcard characters: False
 ```
 
 ### -CommandLine
+
+Specify the command line that the task sequence runs. Include file name extensions, for example, `.exe`. Include all required settings files and command-line options.
+
+For example: `cmd.exe /c copy Jan98.dat c:\sales\Jan98.dat`
+
 ```yaml
 Type: String
 Parameter Sets: ByValue, ById, ByName
@@ -284,6 +305,9 @@ Accept wildcard characters: False
 ```
 
 ### -Condition
+
+Specify a condition object to use with this step. To get this object, use one of the task sequence condition cmdlets. For example, [Get-CMTSStepConditionVariable](Get-CMTSStepConditionVariable.md).
+
 ```yaml
 Type: IResultObject[]
 Parameter Sets: ByIdSetConditionIfStatement, ByNameSetConditionIfStatement, ByValueSetConditionIfStatement
@@ -297,6 +321,9 @@ Accept wildcard characters: False
 ```
 
 ### -ConditionVariableName
+
+Specify the name of the task sequence variable to use as a condition.
+
 ```yaml
 Type: String
 Parameter Sets: ByIdSetConditionVariable, ByNameSetConditionVariable, ByValueSetConditionVariable
@@ -310,6 +337,9 @@ Accept wildcard characters: False
 ```
 
 ### -ConditionVariableValue
+
+Specify the value of the task sequence variable to use in a condition.
+
 ```yaml
 Type: String
 Parameter Sets: ByIdSetConditionVariable, ByNameSetConditionVariable, ByValueSetConditionVariable
@@ -322,22 +352,10 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Description
+
+Specify an optional description for this task sequence step.
+
 ```yaml
 Type: String
 Parameter Sets: ByValue, ById, ByName
@@ -367,6 +385,9 @@ Accept wildcard characters: False
 ```
 
 ### -FileDateTimeOperator
+
+Specify a variable operator type for a file date/time condition.
+
 ```yaml
 Type: VariableOperatorType
 Parameter Sets: ByIdSetConditionFile, ByNameSetConditionFile, ByValueSetConditionFile
@@ -381,6 +402,9 @@ Accept wildcard characters: False
 ```
 
 ### -FilePath
+
+Specify the path for a file condition.
+
 ```yaml
 Type: String
 Parameter Sets: ByIdSetConditionFile, ByNameSetConditionFile, ByValueSetConditionFile
@@ -394,6 +418,9 @@ Accept wildcard characters: False
 ```
 
 ### -FileTimestamp
+
+Specify a date/time value to use for a file condition.
+
 ```yaml
 Type: DateTime
 Parameter Sets: ByIdSetConditionFile, ByNameSetConditionFile, ByValueSetConditionFile
@@ -407,6 +434,9 @@ Accept wildcard characters: False
 ```
 
 ### -FileVersion
+
+Specify a version string for a file condition.
+
 ```yaml
 Type: String
 Parameter Sets: ByIdSetConditionFile, ByNameSetConditionFile, ByValueSetConditionFile
@@ -420,6 +450,9 @@ Accept wildcard characters: False
 ```
 
 ### -FolderDateTimeOperator
+
+Specify a variable operator for a folder date/time condition.
+
 ```yaml
 Type: VariableOperatorType
 Parameter Sets: ByIdSetConditionFolder, ByNameSetConditionFolder, ByValueSetConditionFolder
@@ -434,6 +467,9 @@ Accept wildcard characters: False
 ```
 
 ### -FolderPath
+
+Specify the path for a folder condition.
+
 ```yaml
 Type: String
 Parameter Sets: ByIdSetConditionFolder, ByNameSetConditionFolder, ByValueSetConditionFolder
@@ -447,6 +483,9 @@ Accept wildcard characters: False
 ```
 
 ### -FolderTimestamp
+
+Specify a date/time value to use for a folder condition.
+
 ```yaml
 Type: DateTime
 Parameter Sets: ByIdSetConditionFolder, ByNameSetConditionFolder, ByValueSetConditionFolder
@@ -476,6 +515,9 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
+
+Specify a task sequence object from which to get the **Run Command Line** step. To get this object, use the [Get-CMTaskSequence](Get-CMTaskSequence.md) cmdlet.
+
 ```yaml
 Type: IResultObject
 Parameter Sets: ByValue, ByValueSetConditionIfStatement, ByValueSetConditionVariable, ByValueSetConditionFile, ByValueSetConditionFolder, ByValueSetConditionQueryWmi, ByValueSetConditionOperatingSystem, ByValueSetConditionRegistry, ByValueSetConditionSoftware
@@ -489,6 +531,9 @@ Accept wildcard characters: False
 ```
 
 ### -IsAnyVersion
+
+Use this parameter with the **SetConditionSoftware** parameter to match any version of the product.
+
 ```yaml
 Type: Boolean
 Parameter Sets: ByValueSetConditionSoftware, ByIdSetConditionSoftware, ByNameSetConditionSoftware
@@ -502,6 +547,9 @@ Accept wildcard characters: False
 ```
 
 ### -IsContinueOnError
+
+Use this parameter to enable the step option **Continue on error**. When you enable this option, if the step fails, the task sequence continues.
+
 ```yaml
 Type: Boolean
 Parameter Sets: ByValue, ById, ByName
@@ -515,6 +563,9 @@ Accept wildcard characters: False
 ```
 
 ### -IsEnabled
+
+Use this parameter to enable this task sequence step.
+
 ```yaml
 Type: Boolean
 Parameter Sets: ByValue, ById, ByName
@@ -528,6 +579,9 @@ Accept wildcard characters: False
 ```
 
 ### -IsRunAsUser
+
+Set this parameter to `$true` to run the command line as a Windows user account and not the local system account. Then use the **UserName** and **UserPassword** parameters.
+
 ```yaml
 Type: Boolean
 Parameter Sets: ByValue, ById, ByName
@@ -541,6 +595,9 @@ Accept wildcard characters: False
 ```
 
 ### -IsWow64RedirectionEnabled
+
+By default, 64-bit operating systems use the WOW64 file system redirector to run command lines. This behavior is to properly find 32-bit versions of OS executables and libraries. Set this parameter to `$false` to disable the use of the WOW64 file system redirector. Windows runs the command using native 64-bit versions of OS executables and libraries. This option has no effect when running on a 32-bit OS.
+
 ```yaml
 Type: Boolean
 Parameter Sets: ByValue, ById, ByName
@@ -554,6 +611,7 @@ Accept wildcard characters: False
 ```
 
 ### -MoveToIndex
+
 Move this step to the specified index position in the task sequence.
 
 ```yaml
@@ -569,6 +627,9 @@ Accept wildcard characters: False
 ```
 
 ### -MsiFilePath
+
+Specify the path to a Windows Installer file for a software condition.
+
 ```yaml
 Type: String
 Parameter Sets: ByValueSetConditionSoftware, ByIdSetConditionSoftware, ByNameSetConditionSoftware
@@ -582,6 +643,9 @@ Accept wildcard characters: False
 ```
 
 ### -Namespace
+
+Specify the namespace for a WMI query condition.
+
 ```yaml
 Type: String[]
 Parameter Sets: ByValueSetConditionQueryWmi, ByIdSetConditionQueryWmi, ByNameSetConditionQueryWmi
@@ -595,6 +659,9 @@ Accept wildcard characters: False
 ```
 
 ### -NewStepName
+
+Use this parameter to rename this task sequence step.
+
 ```yaml
 Type: String
 Parameter Sets: ByValue, ById, ByName
@@ -608,6 +675,9 @@ Accept wildcard characters: False
 ```
 
 ### -OperatorType
+
+Specify an operator to use with a task sequence variable condition.
+
 ```yaml
 Type: VariableOperatorType
 Parameter Sets: ByIdSetConditionVariable, ByNameSetConditionVariable, ByValueSetConditionVariable
@@ -622,7 +692,8 @@ Accept wildcard characters: False
 ```
 
 ### -OutputVariableName
-Use this parameter to configure the following setting in the **Run Command Line** task sequence step: **Output to task sequence variable**. Save the command output to a custom task sequence variable.
+
+Specify the name of a custom task sequence variable. When you use this parameter, the step saves the last 1000 characters of the command output to the variable.
 
 ```yaml
 Type: String
@@ -637,6 +708,11 @@ Accept wildcard characters: False
 ```
 
 ### -PackageId
+
+When you specify files or programs on the command line that don't already exist on the destination computer, use this parameter to specify the **package ID** for a package that has the necessary files. The package doesn't require a program. If the specified files exist on the destination computer, this option isn't required.
+
+This value is a standard package ID, for example `XYZ00821`.
+
 ```yaml
 Type: String
 Parameter Sets: ByValue, ById, ByName
@@ -650,6 +726,9 @@ Accept wildcard characters: False
 ```
 
 ### -Query
+
+Specify a WMI query string to use for a condition.
+
 ```yaml
 Type: String
 Parameter Sets: ByValueSetConditionQueryWmi, ByIdSetConditionQueryWmi, ByNameSetConditionQueryWmi
@@ -663,6 +742,9 @@ Accept wildcard characters: False
 ```
 
 ### -RegistryKey
+
+Specify the key to use with a registry condition.
+
 ```yaml
 Type: String
 Parameter Sets: ByValueSetConditionRegistry, ByIdSetConditionRegistry, ByNameSetConditionRegistry
@@ -676,6 +758,9 @@ Accept wildcard characters: False
 ```
 
 ### -RegistryOperator
+
+Specify an operator to use with a registry condition.
+
 ```yaml
 Type: VariableOperatorType
 Parameter Sets: ByValueSetConditionRegistry, ByIdSetConditionRegistry, ByNameSetConditionRegistry
@@ -690,6 +775,9 @@ Accept wildcard characters: False
 ```
 
 ### -RegistryValueData
+
+Specify the value data to use with a registry condition.
+
 ```yaml
 Type: String
 Parameter Sets: ByValueSetConditionRegistry, ByIdSetConditionRegistry, ByNameSetConditionRegistry
@@ -703,6 +791,9 @@ Accept wildcard characters: False
 ```
 
 ### -RegistryValueName
+
+Specify the value name to use with a registry condition.
+
 ```yaml
 Type: String
 Parameter Sets: ByValueSetConditionRegistry, ByIdSetConditionRegistry, ByNameSetConditionRegistry
@@ -716,6 +807,9 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveConditionFile
+
+Use this parameter to remove a file condition.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ByValue, ById, ByName
@@ -729,6 +823,9 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveConditionFolder
+
+Use this parameter to remove a folder condition.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ByValue, ById, ByName
@@ -742,6 +839,9 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveConditionIfStatement
+
+Use this parameter to remove an `if` statement condition.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ByValue, ById, ByName
@@ -755,6 +855,9 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveConditionOperatingSystem
+
+Use this parameter to remove an OS condition.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ByValue, ById, ByName
@@ -768,6 +871,9 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveConditionQueryWmi
+
+Use this parameter to remove a WMI query condition.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ByValue, ById, ByName
@@ -781,6 +887,9 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveConditionRegistry
+
+Use this parameter to remove a registry condition.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ByValue, ById, ByName
@@ -794,6 +903,9 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveConditionSoftware
+
+Use this parameter to remove a software condition.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ByValue, ById, ByName
@@ -807,6 +919,9 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveConditionVariable
+
+Use this parameter to remove a task sequence variable condition.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ByValue, ById, ByName
@@ -820,6 +935,9 @@ Accept wildcard characters: False
 ```
 
 ### -RootKey
+
+Specify the root key to use with a registry condition.
+
 ```yaml
 Type: RegistryRootKeyType
 Parameter Sets: ByValueSetConditionRegistry, ByIdSetConditionRegistry, ByNameSetConditionRegistry
@@ -834,6 +952,9 @@ Accept wildcard characters: False
 ```
 
 ### -SetConditionFile
+
+Add a new file condition.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ByIdSetConditionFile, ByNameSetConditionFile, ByValueSetConditionFile
@@ -847,6 +968,9 @@ Accept wildcard characters: False
 ```
 
 ### -SetConditionFolder
+
+Add a new folder condition.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ByIdSetConditionFolder, ByNameSetConditionFolder, ByValueSetConditionFolder
@@ -860,6 +984,9 @@ Accept wildcard characters: False
 ```
 
 ### -SetConditionIfStatement
+
+Add a new `if` statement condition.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ByIdSetConditionIfStatement, ByNameSetConditionIfStatement, ByValueSetConditionIfStatement
@@ -873,6 +1000,9 @@ Accept wildcard characters: False
 ```
 
 ### -SetConditionOperatingSystem
+
+Add a new OS condition.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ByValueSetConditionOperatingSystem, ByIdSetConditionOperatingSystem, ByNameSetConditionOperatingSystem
@@ -886,6 +1016,9 @@ Accept wildcard characters: False
 ```
 
 ### -SetConditionQueryWmi
+
+Add a new WMI query condition.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ByValueSetConditionQueryWmi, ByIdSetConditionQueryWmi, ByNameSetConditionQueryWmi
@@ -899,6 +1032,9 @@ Accept wildcard characters: False
 ```
 
 ### -SetConditionRegistry
+
+Add a new registry condition.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ByValueSetConditionRegistry, ByIdSetConditionRegistry, ByNameSetConditionRegistry
@@ -912,6 +1048,9 @@ Accept wildcard characters: False
 ```
 
 ### -SetConditionSoftware
+
+Add a new software condition.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ByValueSetConditionSoftware, ByIdSetConditionSoftware, ByNameSetConditionSoftware
@@ -925,6 +1064,9 @@ Accept wildcard characters: False
 ```
 
 ### -SetConditionVariable
+
+Add a new task sequence variable condition.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ByIdSetConditionVariable, ByNameSetConditionVariable, ByValueSetConditionVariable
@@ -938,6 +1080,9 @@ Accept wildcard characters: False
 ```
 
 ### -StatementType
+
+Set the type for an `if` statement condition.
+
 ```yaml
 Type: ConditionStatementType
 Parameter Sets: ByIdSetConditionIfStatement, ByNameSetConditionIfStatement, ByValueSetConditionIfStatement
@@ -952,6 +1097,9 @@ Accept wildcard characters: False
 ```
 
 ### -StepName
+
+Specify the name of the step to select for changes.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -965,6 +1113,7 @@ Accept wildcard characters: False
 ```
 
 ### -StepOrder
+
 Use this parameter to reorder the step in the task sequence.
 
 ```yaml
@@ -981,6 +1130,9 @@ Accept wildcard characters: False
 ```
 
 ### -SuccessCode
+
+Specify an array of integer values as exit codes from the command that the step should evaluate as success.
+
 ```yaml
 Type: Int32[]
 Parameter Sets: ByValue, ById, ByName
@@ -994,6 +1146,9 @@ Accept wildcard characters: False
 ```
 
 ### -SupportedPlatform
+
+Use this parameter to specify the platforms for an OS condition.
+
 ```yaml
 Type: IResultObject[]
 Parameter Sets: ByValueSetConditionOperatingSystem, ByIdSetConditionOperatingSystem, ByNameSetConditionOperatingSystem
@@ -1007,6 +1162,9 @@ Accept wildcard characters: False
 ```
 
 ### -TaskSequenceId
+
+Specify the **package ID** of the task sequence from which to get the **Run Command Line** step. This value is a standard package ID, for example `XYZ00858`.
+
 ```yaml
 Type: String
 Parameter Sets: ById, ByIdSetConditionIfStatement, ByIdSetConditionVariable, ByIdSetConditionFile, ByIdSetConditionFolder, ByIdSetConditionSoftware, ByIdSetConditionQueryWmi, ByIdSetConditionRegistry, ByIdSetConditionOperatingSystem
@@ -1020,6 +1178,9 @@ Accept wildcard characters: False
 ```
 
 ### -TaskSequenceName
+
+Specify the name of the task sequence to target for changes.
+
 ```yaml
 Type: String
 Parameter Sets: ByName, ByNameSetConditionIfStatement, ByNameSetConditionVariable, ByNameSetConditionFile, ByNameSetConditionFolder, ByNameSetConditionSoftware, ByNameSetConditionQueryWmi, ByNameSetConditionRegistry, ByNameSetConditionOperatingSystem
@@ -1033,6 +1194,11 @@ Accept wildcard characters: False
 ```
 
 ### -Timeout
+
+Specify an integer value that represents how long Configuration Manager allows the command line to run. This value can be from `1` minute to `999` minutes. The default value is `15` minutes.
+
+If you enter a value that doesn't allow enough time for the specified command to complete successfully, this step fails. The entire task sequence could fail depending on step or group conditions. If the timeout expires, Configuration Manager terminates the command-line process.
+
 ```yaml
 Type: Int32
 Parameter Sets: ByValue, ById, ByName
@@ -1046,6 +1212,9 @@ Accept wildcard characters: False
 ```
 
 ### -UserName
+
+When you use the **IsRunAsUser** parameter, use this parameter to specify the name of the Windows user account. To specify the account password, use the **UserPassword** parameter.
+
 ```yaml
 Type: String
 Parameter Sets: ByValue, ById, ByName
@@ -1059,6 +1228,9 @@ Accept wildcard characters: False
 ```
 
 ### -UserPassword
+
+When you use the **IsRunAsUser** parameter, use this parameter to specify the password of the account that you specify with **UserName**.
+
 ```yaml
 Type: SecureString
 Parameter Sets: ByValue, ById, ByName
@@ -1072,6 +1244,9 @@ Accept wildcard characters: False
 ```
 
 ### -ValueType
+
+Specify the type of value for a registry condition.
+
 ```yaml
 Type: RegistryValueType
 Parameter Sets: ByValueSetConditionRegistry, ByIdSetConditionRegistry, ByNameSetConditionRegistry
@@ -1086,11 +1261,46 @@ Accept wildcard characters: False
 ```
 
 ### -VersionOperator
+
+Specify an operator to use with a file condition.
+
 ```yaml
 Type: VariableOperatorType
 Parameter Sets: ByIdSetConditionFile, ByNameSetConditionFile, ByValueSetConditionFile
 Aliases:
 Accepted values: Equals, NotEquals, Greater, GreaterEqual, Less, LessEqual
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WorkingDirectory
+
+Specify the folder in which the command starts. This path can be up to 127 characters.
+
+```yaml
+Type: String
+Parameter Sets: ByValue, ById, ByName
+Aliases: StartIn
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
 
 Required: False
 Position: Named
@@ -1115,28 +1325,23 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WorkingDirectory
-```yaml
-Type: String
-Parameter Sets: ByValue, ById, ByName
-Aliases: StartIn
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-CMTSStepRunCommandLine](Get-CMTSStepRunCommandLine.md)
+[New-CMTSStepRunCommandLine](New-CMTSStepRunCommandLine.md)
+[Remove-CMTSStepRunCommandLine](Remove-CMTSStepRunCommandLine.md)
+
+[About task sequence steps: Run Command Line](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_RunCommandLine)

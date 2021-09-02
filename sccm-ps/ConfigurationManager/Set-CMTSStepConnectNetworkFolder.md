@@ -1,6 +1,7 @@
 ---
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
+ms.date: 08/12/2021
 online version:
 schema: 2.0.0
 ---
@@ -8,7 +9,8 @@ schema: 2.0.0
 # Set-CMTSStepConnectNetworkFolder
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Configure an instance of the **Connect To Network Folder** task sequence step.
 
 ## SYNTAX
 
@@ -223,7 +225,10 @@ Set-CMTSStepConnectNetworkFolder [-SetConditionOperatingSystem] [-StepName <Stri
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+Use this cmdlet to configure an instance of the **Connect To Network Folder** task sequence step.
+
+For more information on this step, see [About task sequence steps: Connect To Network Folder](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_ConnectToNetworkFolder).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
@@ -231,16 +236,21 @@ Set-CMTSStepConnectNetworkFolder [-SetConditionOperatingSystem] [-StepName <Stri
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS XYZ:\> {{ Add example code here }}
-```
 
-{{ Add example description here }}
+This example changes the **Connect To Network Folder** step in the **Default OS deployment** task sequence to use a different drive and network path.
+
+```powershell
+$tsNameOsd = "Default OS deployment"
+$tsStepNameConnNet = "Connect To Network Folder"
+
+Set-CMTSStepConnectNetworkFolder -TaskSequenceName $tsNameOsd -StepName $tsStepNameConnNet -Drive "Y:" -Path "\\server1\share$"
+```
 
 ## PARAMETERS
 
 ### -AddCondition
-Specify a condition object to add to this step.
+
+Specify a condition object to add to this step. To get this object, use one of the task sequence condition cmdlets. For example, [Get-CMTSStepConditionVariable](Get-CMTSStepConditionVariable.md).
 
 
 ```yaml
@@ -271,7 +281,8 @@ Accept wildcard characters: False
 ```
 
 ### -Condition
-Specify a condition object to use with this step.
+
+Specify a condition object to use with this step. To get this object, use one of the task sequence condition cmdlets. For example, [Get-CMTSStepConditionVariable](Get-CMTSStepConditionVariable.md).
 
 ```yaml
 Type: IResultObject[]
@@ -315,21 +326,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Description
 Specify an optional description for this task sequence step.
 
@@ -361,7 +357,8 @@ Accept wildcard characters: False
 ```
 
 ### -Drive
-{{ Fill Drive Description }}
+
+Specify the local drive letter to assign for this connection.
 
 ```yaml
 Type: String
@@ -498,7 +495,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{ Fill InputObject Description }}
+
+Specify a task sequence object from which to get the **Connect To Network Folder** step. To get this object, use the [Get-CMTaskSequence](Get-CMTaskSequence.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -573,7 +571,7 @@ Accept wildcard characters: False
 ```
 
 ### -MsiFilePath
-Specify the path to a Windows Installer file for an software condition.
+Specify the path to a Windows Installer file for a software condition.
 
 ```yaml
 Type: String
@@ -634,7 +632,8 @@ Accept wildcard characters: False
 ```
 
 ### -Path
-{{ Fill Path Description }}
+
+Specify the network folder path. Use the format `\\server\share`.
 
 ```yaml
 Type: String
@@ -1043,7 +1042,8 @@ Accept wildcard characters: False
 ```
 
 ### -TaskSequenceId
-Specify the ID of the task sequence to target for changes.
+
+Specify the **package ID** of the task sequence from which to get the **Connect To Network Folder** step. This value is a standard package ID, for example `XYZ00858`.
 
 ```yaml
 Type: String
@@ -1073,7 +1073,10 @@ Accept wildcard characters: False
 ```
 
 ### -UserName
-{{ Fill UserName Description }}
+
+Specify the user account with permissions to connect to this network folder. Also use the **UserPassword** parameter.
+
+For more information on this account, see the [task sequence network folder connection account](/mem/configmgr/core/plan-design/hierarchy/accounts#task-sequence-network-folder-connection-account).
 
 ```yaml
 Type: String
@@ -1088,7 +1091,8 @@ Accept wildcard characters: False
 ```
 
 ### -UserPassword
-{{ Fill UserPassword Description }}
+
+Specify the password for the **UserName**.
 
 ```yaml
 Type: SecureString
@@ -1134,6 +1138,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 
 Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
@@ -1156,9 +1175,17 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-CMTSStepConnectNetworkFolder](Get-CMTSStepConnectNetworkFolder.md)
+[New-CMTSStepConnectNetworkFolder](New-CMTSStepConnectNetworkFolder.md)
+[Remove-CMTSStepConnectNetworkFolder](Remove-CMTSStepConnectNetworkFolder.md)
+
+[About task sequence steps: Connect To Network Folder](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_ConnectToNetworkFolder)

@@ -249,7 +249,7 @@ This example changes the **Apply Network Settings** step in the **Default OS dep
 $tsNameOsd = "Default OS deployment"
 $tsStepNameApplyNetSet = "Apply Network Settings"
 
-Set-CMTSStepApplyOperatingSystem -TaskSequenceName $tsNameOsd -StepName $tsStepNameApplyNetSet -NewStepName "Join workgroup" -WorkgroupName "workgroup"
+Set-CMTSStepApplyNetworkSetting -TaskSequenceName $tsNameOsd -StepName $tsStepNameApplyNetSet -NewStepName "Join workgroup" -WorkgroupName "workgroup"
 ```
 
 ## PARAMETERS
@@ -358,22 +358,6 @@ Specify the value of the task sequence variable to use in a condition.
 Type: String
 Parameter Sets: ByIdSetConditionVariable, ByNameSetConditionVariable, ByValueSetConditionVariable
 Aliases: Value
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
 
 Required: False
 Position: Named
@@ -696,7 +680,7 @@ Accept wildcard characters: False
 
 ### -MsiFilePath
 
-Specify the path to a Windows Installer file for an software condition.
+Specify the path to a Windows Installer file for a software condition.
 
 ```yaml
 Type: String
@@ -1295,22 +1279,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhatIf
-
-Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -WorkgroupName
 
 To configure this step to have the computer join a workgroup, use this parameter to specify the workgroup name.
@@ -1319,6 +1287,38 @@ To configure this step to have the computer join a workgroup, use this parameter
 Type: String
 Parameter Sets: ByValue, ById, ByName
 Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+
+Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
 
 Required: False
 Position: Named

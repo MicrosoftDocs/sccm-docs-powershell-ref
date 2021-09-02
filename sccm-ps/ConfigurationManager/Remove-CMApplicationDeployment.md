@@ -109,22 +109,6 @@ Accept pipeline input: False
 Accept wildcard characters: True
 ```
 
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -DeploymentId
 
 Specify the deployment ID to remove. This value is a GUID. It's the **Deployment ID** value in the console and the **AssignmentUniqueID** property of the **SMS_ApplicationAssignment** WMI class.
@@ -229,6 +213,22 @@ Specify the **CI_ID** of the application that's deployed. This value is the **CI
 Type: Int32
 Parameter Sets: SearchBySmsObjectId
 Aliases: CI_ID, ApplicationID
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
 
 Required: False
 Position: Named

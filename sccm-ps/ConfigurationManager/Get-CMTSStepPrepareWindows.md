@@ -1,6 +1,7 @@
 ---
 external help file: AdminUI.PS.psm1-help.xml
 Module Name: ConfigurationManager
+ms.date: 08/13/2021
 online version:
 schema: 2.0.0
 ---
@@ -8,7 +9,8 @@ schema: 2.0.0
 # Get-CMTSStepPrepareWindows
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Get the **Prepare Windows for Capture** step from a specific task sequence.
 
 ## SYNTAX
 
@@ -31,7 +33,13 @@ Get-CMTSStepPrepareWindows [-TaskSequenceName] <String> [-StepName <String>] [-W
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+Use this cmdlet to get a task sequence step object for one or more instances of the **Prepare Windows for Capture** step. You can use this object to:
+
+- Remove the step from a task sequence with [Remove-CMTSStepPrepareWindows](Remove-CMTSStepPrepareWindows.md)
+- Copy the step to another task sequence with [Add-CMTaskSequenceStep](Add-CMTaskSequenceStep.md)
+
+For more information on this step, see [About task sequence steps: Prepare Windows for Capture](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_PrepareWindowsforCapture).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
@@ -39,31 +47,22 @@ Get-CMTSStepPrepareWindows [-TaskSequenceName] <String> [-StepName <String>] [-W
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS XYZ:\> {{ Add example code here }}
-```
 
-{{ Add example description here }}
+This example first gets a task sequence object in the **$tsOsd** variable. It then passes that variable as the input object to get the **Prepare Windows for Capture** step.
+
+```powershell
+$tsNameOsd = "Default OS deployment and capture"
+$tsOsd = Get-CMTaskSequence -Name $tsNameOsd -Fast
+
+$tsStepNameSysprep = "Prepare Windows for Capture"
+$tsStepSysprep = Get-CMTSStepPrepareWindows -InputObject $tsOsd -StepName $tsStepNameSysprep
+```
 
 ## PARAMETERS
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -InputObject
-{{ Fill InputObject Description }}
+
+Specify a task sequence object from which to get the **Prepare Windows for Capture** step. To get this object, use the [Get-CMTaskSequence](Get-CMTaskSequence.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -78,7 +77,8 @@ Accept wildcard characters: False
 ```
 
 ### -StepName
-{{ Fill StepName Description }}
+
+Specify the name of the **Prepare Windows for Capture** step to get from the task sequence.
 
 ```yaml
 Type: String
@@ -93,7 +93,8 @@ Accept wildcard characters: False
 ```
 
 ### -TaskSequenceId
-{{ Fill TaskSequenceId Description }}
+
+Specify the **package ID** of the task sequence from which to get the **Prepare Windows for Capture** step. This value is a standard package ID, for example `XYZ00858`.
 
 ```yaml
 Type: String
@@ -108,7 +109,8 @@ Accept wildcard characters: False
 ```
 
 ### -TaskSequenceName
-{{ Fill TaskSequenceName Description }}
+
+Specify the name of the task sequence from which to get the **Prepare Windows for Capture** step.
 
 ```yaml
 Type: String
@@ -117,6 +119,22 @@ Aliases:
 
 Required: True
 Position: 0
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -144,9 +162,17 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
+
+[New-CMTSStepPrepareWindows](New-CMTSStepPrepareWindows.md)
+[Remove-CMTSStepPrepareWindows](Remove-CMTSStepPrepareWindows.md)
+[Set-CMTSStepPrepareWindows](Set-CMTSStepPrepareWindows.md)
+
+[About task sequence steps: Prepare Windows for Capture](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_PrepareWindowsforCapture)
