@@ -117,6 +117,27 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -AutoCloseExecutable
+
+Starting in version 2107, set this parameter to `$true` to enable the application deployment setting for install behaviors. Then use the [Add-CMDeploymentTypeInstallBehavior](Add-CMDeploymentTypeInstallBehavior.md) cmdlet to add an executable file to check isn't running for the install to succeed.
+
+Set this parameter to `$false` to disable this option in the following situations:
+
+- When you use the [Remove-CMDeploymentTypeInstallBehavior](Remove-CMDeploymentTypeInstallBehavior.md) cmdlet to remove all executable files
+- You don't want the deployment to check for running executables.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: AutoCloseExeOnInstallBehavior
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -AvailableDateTime
 
 Specify a **DateTime** object for when this deployment is _available_. To get this object, use the [Get-Date](/powershell/module/microsoft.powershell.utility/get-date) built-in cmdlet.
@@ -191,22 +212,6 @@ Specify an optional comment for this deployment.
 Type: String
 Parameter Sets: (All)
 Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
 
 Required: False
 Position: Named
@@ -729,14 +734,14 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhatIf
+### -Confirm
 
-Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: wi
+Aliases: cf
 
 Required: False
 Position: Named
@@ -745,19 +750,14 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AutoCloseExecutable
+### -WhatIf
 
-Starting in version 2107, set this parameter to `$true` to enable the application deployment setting for install behaviors. Then use the [Add-CMDeploymentTypeInstallBehavior](Add-CMDeploymentTypeInstallBehavior.md) cmdlet to add an executable file to check isn't running for the install to succeed.
-
-Set this parameter to `$false` to disable this option in the following situations:
-
-- When you use the [Remove-CMDeploymentTypeInstallBehavior](Remove-CMDeploymentTypeInstallBehavior.md) cmdlet to remove all executable files
-- You don't want the deployment to check for running executables.
+Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
 
 ```yaml
-Type: Boolean
+Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: AutoCloseExeOnInstallBehavior
+Aliases: wi
 
 Required: False
 Position: Named

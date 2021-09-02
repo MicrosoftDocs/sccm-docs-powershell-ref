@@ -380,21 +380,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -ContinueOnLockedFile
 
 When you specify `-FileAccessOption Normal`, set this parameter to `$true` to allow USMT to continue if some files can't be captured.
@@ -1287,6 +1272,21 @@ Type: VariableOperatorType
 Parameter Sets: ByIdSetConditionFile, ByNameSetConditionFile, ByValueSetConditionFile
 Aliases:
 Accepted values: Equals, NotEquals, Greater, GreaterEqual, Less, LessEqual
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
 
 Required: False
 Position: Named

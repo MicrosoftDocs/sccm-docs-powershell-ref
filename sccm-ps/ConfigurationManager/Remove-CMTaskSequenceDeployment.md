@@ -112,22 +112,6 @@ Accept pipeline input: False
 Accept wildcard characters: True
 ```
 
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -DeploymentId
 
 Specifies a deployment ID.
@@ -233,6 +217,22 @@ Specifies the ID of a task sequence.
 Type: String
 Parameter Sets: SearchById
 Aliases: Id, TaskSequencePackageId
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
 
 Required: False
 Position: Named

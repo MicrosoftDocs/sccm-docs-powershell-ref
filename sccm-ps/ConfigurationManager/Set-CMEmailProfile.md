@@ -193,21 +193,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Description
 Specifies a description for the Exchange ActiveSync email profile.
 
@@ -464,6 +449,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -SynchronizeRecentlyUsed
+Indicates whether the list of email addresses that have been recently used on the device is synchronized.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -SyncSchedule
 Specifies the schedule by which devices will synchronize data from the Exchange Server.
 
@@ -486,8 +486,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -SynchronizeRecentlyUsed
-Indicates whether the list of email addresses that have been recently used on the device is synchronized.
+### -UseSsl
+Indicates whether Secure Sockets Layer (SSL) communication is used when sending emails, receiving emails, and communicating with the Exchange Server.
 
 ```yaml
 Type: Boolean
@@ -501,17 +501,17 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -UseSsl
-Indicates whether Secure Sockets Layer (SSL) communication is used when sending emails, receiving emails, and communicating with the Exchange Server.
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: Boolean
+Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

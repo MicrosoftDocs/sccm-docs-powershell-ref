@@ -62,22 +62,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -ContinueOnError
 
 Add this parameter to enable the step option **Continue on error**. When you enable this option, if the step fails, the task sequence continues.
@@ -198,6 +182,22 @@ Use this parameter to resume protection after Windows has been restarted the spe
 Type: Int32
 Parameter Sets: (All)
 Aliases: RebootNumber
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
 
 Required: False
 Position: Named

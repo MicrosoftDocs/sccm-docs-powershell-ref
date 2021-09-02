@@ -62,21 +62,6 @@ This command sets the outgoing SMTP port that Configuration Manager uses for sen
 
 ## PARAMETERS
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -DisableEmailNotification
 Indicates that email notification is disabled.
 
@@ -205,6 +190,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -UserName
+Specifies the user name to authenticate with the SMTP server from which Configuration Manager sends email alerts.
+This parameter also specifies the SMTP Server Connection account.
+
+```yaml
+Type: String
+Parameter Sets: Enable
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -UseSsl
 ```yaml
 Type: Boolean
@@ -218,18 +219,17 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -UserName
-Specifies the user name to authenticate with the SMTP server from which Configuration Manager sends email alerts.
-This parameter also specifies the SMTP Server Connection account.
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: String
-Parameter Sets: Enable
-Aliases:
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

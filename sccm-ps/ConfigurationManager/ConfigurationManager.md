@@ -1084,22 +1084,22 @@ Get the **Apply Network Settings** step from a specific task sequence.
 Get the **Apply OS Image** step from a specific task sequence.
 
 ### [Get-CMTSStepApplyWindowsSetting](Get-CMTSStepApplyWindowsSetting.md)
-{{ Fill in the Synopsis }}
+Get the **Apply Windows Settings** step from a specific task sequence.
 
 ### [Get-CMTSStepAutoApplyDriver](Get-CMTSStepAutoApplyDriver.md)
-{{ Fill in the Synopsis }}
+Get the **Auto Apply Drivers** step from a specific task sequence.
 
 ### [Get-CMTSStepCaptureNetworkSettings](Get-CMTSStepCaptureNetworkSettings.md)
-{{ Fill in the Synopsis }}
+Get the **Capture Network Settings** step from a specific task sequence.
 
 ### [Get-CMTSStepCaptureSystemImage](Get-CMTSStepCaptureSystemImage.md)
-{{ Fill in the Synopsis }}
+Get the **Capture OS Image** step from a specific task sequence.
 
 ### [Get-CMTSStepCaptureUserState](Get-CMTSStepCaptureUserState.md)
-{{ Fill in the Synopsis }}
+Get the **Capture User State** step from a specific task sequence.
 
 ### [Get-CMTSStepCaptureWindowsSettings](Get-CMTSStepCaptureWindowsSettings.md)
-{{ Fill in the Synopsis }}
+Get the **Capture Windows Settings** step from a specific task sequence.
 
 ### [Get-CMTSStepConditionFile](Get-CMTSStepConditionFile.md)
 Gets a TS step condition file.
@@ -1126,76 +1126,76 @@ Gets a TS step condition software.
 Gets a TS step condition variable.
 
 ### [Get-CMTSStepConnectNetworkFolder](Get-CMTSStepConnectNetworkFolder.md)
-{{ Fill in the Synopsis }}
+Get the **Connect To Network Folder** step from a specific task sequence.
 
 ### [Get-CMTSStepConvertDisk](Get-CMTSStepConvertDisk.md)
 {{ Fill in the Synopsis }}
 
 ### [Get-CMTSStepDisableBitLocker](Get-CMTSStepDisableBitLocker.md)
-{{ Fill in the Synopsis }}
+Get the **Disable BitLocker** step from a specific task sequence.
 
 ### [Get-CMTSStepDownloadPackageContent](Get-CMTSStepDownloadPackageContent.md)
-{{ Fill in the Synopsis }}
+Get the **Download Package Content** step from a specific task sequence.
 
 ### [Get-CMTSStepEnableBitLocker](Get-CMTSStepEnableBitLocker.md)
-{{ Fill in the Synopsis }}
+Get the **Enable BitLocker** step from a specific task sequence.
 
 ### [Get-CMTSStepInstallApplication](Get-CMTSStepInstallApplication.md)
-Gets a TS step install application.
+Get the **Install Application** step from a specific task sequence.
 
 ### [Get-CMTSStepInstallSoftware](Get-CMTSStepInstallSoftware.md)
-Gets a TS step install software.
+Get the **Install Package** step from a specific task sequence.
 
 ### [Get-CMTSStepInstallUpdate](Get-CMTSStepInstallUpdate.md)
-Gets a TS step install update.
+Get the **Install Software Updates** step from a specific task sequence.
 
 ### [Get-CMTSStepJoinDomainWorkgroup](Get-CMTSStepJoinDomainWorkgroup.md)
-{{ Fill in the Synopsis }}
+Get the **Join Domain or Workgroup** step from a specific task sequence.
 
 ### [Get-CMTSStepOfflineEnableBitLocker](Get-CMTSStepOfflineEnableBitLocker.md)
-{{ Fill in the Synopsis }}
+Get the **Pre-provision BitLocker** step from a specific task sequence.
 
 ### [Get-CMTSStepPartitionDisk](Get-CMTSStepPartitionDisk.md)
-Gets a TS step partition disk.
+Get the **Format and Partition Disk** step from a specific task sequence.
 
 ### [Get-CMTSStepPrepareConfigMgrClient](Get-CMTSStepPrepareConfigMgrClient.md)
-{{ Fill in the Synopsis }}
+Get the **Prepare ConfigMgr Client for Capture** step from a specific task sequence.
 
 ### [Get-CMTSStepPrepareWindows](Get-CMTSStepPrepareWindows.md)
-{{ Fill in the Synopsis }}
+Get the **Prepare Windows for Capture** step from a specific task sequence.
 
 ### [Get-CMTSStepPrestartCheck](Get-CMTSStepPrestartCheck.md)
-{{ Fill in the Synopsis }}
+Get the **Check Readiness** step from a specific task sequence.
 
 ### [Get-CMTSStepReboot](Get-CMTSStepReboot.md)
-Gets a TS step reboot.
+Get the **Restart Computer** step from a specific task sequence.
 
 ### [Get-CMTSStepReleaseStateStore](Get-CMTSStepReleaseStateStore.md)
-{{ Fill in the Synopsis }}
+Get the **Release State Store** step from a specific task sequence.
 
 ### [Get-CMTSStepRequestStateStore](Get-CMTSStepRequestStateStore.md)
-{{ Fill in the Synopsis }}
+Get the **Request State Store** step from a specific task sequence.
 
 ### [Get-CMTSStepRestoreUserState](Get-CMTSStepRestoreUserState.md)
-{{ Fill in the Synopsis }}
+Get the **Restore User State** step from a specific task sequence.
 
 ### [Get-CMTSStepRunCommandLine](Get-CMTSStepRunCommandLine.md)
-Gets a TS step run command line.
+Get the **Run Command Line** step from a specific task sequence.
 
 ### [Get-CMTSStepRunPowerShellScript](Get-CMTSStepRunPowerShellScript.md)
 Get the **Run PowerShell Script** step from a specific task sequence.
 
 ### [Get-CMTSStepRunTaskSequence](Get-CMTSStepRunTaskSequence.md)
-Use this cmdlet to get the **Run Task Sequence** step from a specific task sequence.
+Get the **Run Task Sequence** step from a specific task sequence.
 
 ### [Get-CMTSStepSetDynamicVariable](Get-CMTSStepSetDynamicVariable.md)
-Gets task sequence Set Dynamic Variable steps in Configuration Manager.
+Get the **Set Dynamic Variables** step from a specific task sequence.
 
 ### [Get-CMTSStepSetupWindowsAndConfigMgr](Get-CMTSStepSetupWindowsAndConfigMgr.md)
 Get the **Setup Windows and ConfigMgr** step from a specific task sequence.
 
 ### [Get-CMTSStepSetVariable](Get-CMTSStepSetVariable.md)
-Gets a TS step set variable.
+Get the **Set Task Sequence Variable** step from a specific task sequence.
 
 ### [Get-CMTSStepUpgradeOperatingSystem](Get-CMTSStepUpgradeOperatingSystem.md)
 Get the **Upgrade OS** step from a specific task sequence.
@@ -1969,10 +1969,10 @@ Create a policy to control whether Windows refreshes platform validation data wh
 Create a settings object for a network adapter on the **Apply Network Settings** task sequence step.
 
 ### [New-CMTSPartitionSetting](New-CMTSPartitionSetting.md)
-Create a task sequence partition object to use with the **Format and Partition Disk** step.
+Create a disk partition object to use with the **Format and Partition Disk** task sequence step.
 
 ### [New-CMTSRule](New-CMTSRule.md)
-Create a rule to add to a Set Dynamic Variables task sequence step.
+Create a rule to add to a **Set Dynamic Variables** task sequence step.
 
 ### [New-CMTSStepApplyDataImage](New-CMTSStepApplyDataImage.md)
 Create an **Apply Data Image** step, which you can add to a task sequence.
@@ -1987,22 +1987,22 @@ Create an **Apply Network Settings** step, which you can add to a task sequence.
 Create an **Apply OS Image** step, which you can add to a task sequence.
 
 ### [New-CMTSStepApplyWindowsSetting](New-CMTSStepApplyWindowsSetting.md)
-{{ Fill in the Synopsis }}
+Create an **Apply Windows Settings** step, which you can add to a task sequence.
 
 ### [New-CMTSStepAutoApplyDriver](New-CMTSStepAutoApplyDriver.md)
-{{ Fill in the Synopsis }}
+Create an **Auto Apply Drivers** step, which you can add to a task sequence.
 
 ### [New-CMTSStepCaptureNetworkSettings](New-CMTSStepCaptureNetworkSettings.md)
-{{ Fill in the Synopsis }}
+Create an **Capture Network Settings** step, which you can add to a task sequence.
 
 ### [New-CMTSStepCaptureSystemImage](New-CMTSStepCaptureSystemImage.md)
-{{ Fill in the Synopsis }}
+Create an **Capture OS Image** step, which you can add to a task sequence.
 
 ### [New-CMTSStepCaptureUserState](New-CMTSStepCaptureUserState.md)
-{{ Fill in the Synopsis }}
+Create an **Capture User State** step, which you can add to a task sequence.
 
 ### [New-CMTSStepCaptureWindowsSettings](New-CMTSStepCaptureWindowsSettings.md)
-{{ Fill in the Synopsis }}
+Create an **Capture Windows Settings** step, which you can add to a task sequence.
 
 ### [New-CMTSStepConditionFile](New-CMTSStepConditionFile.md)
 Creates a t s step condition file.
@@ -2032,76 +2032,76 @@ Creates a t s step condition software.
 Create a condition variable on a task sequence step.
 
 ### [New-CMTSStepConnectNetworkFolder](New-CMTSStepConnectNetworkFolder.md)
-{{ Fill in the Synopsis }}
+Create an **Connect To Network Folder** step, which you can add to a task sequence.
 
 ### [New-CMTSStepConvertDisk](New-CMTSStepConvertDisk.md)
 {{ Fill in the Synopsis }}
 
 ### [New-CMTSStepDisableBitLocker](New-CMTSStepDisableBitLocker.md)
-{{ Fill in the Synopsis }}
+Create an **Disable BitLocker** step, which you can add to a task sequence.
 
 ### [New-CMTSStepDownloadPackageContent](New-CMTSStepDownloadPackageContent.md)
-Add the **Download Package Content** step to a task sequence.
+Create an **Download Package Content** step, which you can add to a task sequence.
 
 ### [New-CMTSStepEnableBitLocker](New-CMTSStepEnableBitLocker.md)
-Add the **Enable BitLocker** step to a task sequence, which enables BitLocker encryption on the hard drive.
+Create an **Enable BitLocker** step, which you can add to a task sequence.
 
 ### [New-CMTSStepInstallApplication](New-CMTSStepInstallApplication.md)
-Creates a t s step install application.
+Create an **Install Application** step, which you can add to a task sequence.
 
 ### [New-CMTSStepInstallSoftware](New-CMTSStepInstallSoftware.md)
-Creates a t s step install software.
+Create an **Install Package** step, which you can add to a task sequence.
 
 ### [New-CMTSStepInstallUpdate](New-CMTSStepInstallUpdate.md)
-Creates a t s step install update.
+Create an **Install Software Updates** step, which you can add to a task sequence.
 
 ### [New-CMTSStepJoinDomainWorkgroup](New-CMTSStepJoinDomainWorkgroup.md)
-{{ Fill in the Synopsis }}
+Create an **Join Domain or Workgroup** step, which you can add to a task sequence.
 
 ### [New-CMTSStepOfflineEnableBitLocker](New-CMTSStepOfflineEnableBitLocker.md)
-Add the **Pre-provision BitLocker** step in a task sequence, to enable BitLocker encryption on a drive while in Windows PE.
+Create a **Pre-provision BitLocker** step, which you can add to a task sequence.
 
 ### [New-CMTSStepPartitionDisk](New-CMTSStepPartitionDisk.md)
-Add the **Format and Partition Disk** step in a task sequence.
+Create the **Format and Partition Disk** step, which you can add to a task sequence.
 
 ### [New-CMTSStepPrepareConfigMgrClient](New-CMTSStepPrepareConfigMgrClient.md)
-{{ Fill in the Synopsis }}
+Create the **Prepare ConfigMgr Client for Capture** step, which you can add to a task sequence.
 
 ### [New-CMTSStepPrepareWindows](New-CMTSStepPrepareWindows.md)
-{{ Fill in the Synopsis }}
+Create the **Prepare Windows for Capture** step, which you can add to a task sequence.
 
 ### [New-CMTSStepPrestartCheck](New-CMTSStepPrestartCheck.md)
-Add the **Check Readiness** step to a task sequence. Use this step to verify that the target computer meets the specified deployment prerequisite conditions.
+Create an **Check Readiness** step, which you can add to a task sequence.
 
 ### [New-CMTSStepReboot](New-CMTSStepReboot.md)
-Creates a t s step reboot.
+Create an **Restart Computer** step, which you can add to a task sequence.
 
 ### [New-CMTSStepReleaseStateStore](New-CMTSStepReleaseStateStore.md)
-{{ Fill in the Synopsis }}
+Create the **Release State Store** step, which you can add to a task sequence.
 
 ### [New-CMTSStepRequestStateStore](New-CMTSStepRequestStateStore.md)
-{{ Fill in the Synopsis }}
+Create the **Request State Store** step, which you can add to a task sequence.
 
 ### [New-CMTSStepRestoreUserState](New-CMTSStepRestoreUserState.md)
-{{ Fill in the Synopsis }}
+Create an **Restore User State** step, which you can add to a task sequence.
 
 ### [New-CMTSStepRunCommandLine](New-CMTSStepRunCommandLine.md)
-Creates a t s step run command line.
+Create an **Run Command Line** step, which you can add to a task sequence.
 
 ### [New-CMTSStepRunPowerShellScript](New-CMTSStepRunPowerShellScript.md)
 Create the **Run PowerShell Script** step in a task sequence.
 
 ### [New-CMTSStepRunTaskSequence](New-CMTSStepRunTaskSequence.md)
-Use this cmdlet to create the task sequence step **Run Task Sequence**.
+Create a **Run Task Sequence** step, which you can add to a task sequence.
 
 ### [New-CMTSStepSetDynamicVariable](New-CMTSStepSetDynamicVariable.md)
-Create a task sequence Set Dynamic Variable step in Configuration Manager.
+Create a **Set Dynamic Variables** step, which you can add to a task sequence.
 
 ### [New-CMTSStepSetupWindowsAndConfigMgr](New-CMTSStepSetupWindowsAndConfigMgr.md)
-Create the **Setup Windows and ConfigMgr** step in a task sequence.
+Create a **Setup Windows and ConfigMgr** step, which you can add to a task sequence.
 
 ### [New-CMTSStepSetVariable](New-CMTSStepSetVariable.md)
-Creates a t s step set variable.
+Create a **Set Task Sequence Variable** step, which you can add to a task sequence.
 
 ### [New-CMTSStepUpgradeOperatingSystem](New-CMTSStepUpgradeOperatingSystem.md)
 Create an **Upgrade OS** step, which you can add to a task sequence.
@@ -2539,94 +2539,94 @@ Remove the **Apply Network Settings** step from a task sequence.
 Remove the **Apply OS Image** step from a task sequence.
 
 ### [Remove-CMTSStepApplyWindowsSetting](Remove-CMTSStepApplyWindowsSetting.md)
-{{ Fill in the Synopsis }}
+Remove the **Apply Windows Settings** step from a task sequence.
 
 ### [Remove-CMTSStepAutoApplyDriver](Remove-CMTSStepAutoApplyDriver.md)
-{{ Fill in the Synopsis }}
+Remove the **Auto Apply Drivers** step from a task sequence.
 
 ### [Remove-CMTSStepCaptureNetworkSettings](Remove-CMTSStepCaptureNetworkSettings.md)
-{{ Fill in the Synopsis }}
+Remove the **Capture Network Settings** step from a task sequence.
 
 ### [Remove-CMTSStepCaptureSystemImage](Remove-CMTSStepCaptureSystemImage.md)
-{{ Fill in the Synopsis }}
+Remove the **Capture OS Image** step from a task sequence.
 
 ### [Remove-CMTSStepCaptureUserState](Remove-CMTSStepCaptureUserState.md)
-{{ Fill in the Synopsis }}
+Remove the **Capture User State** step from a task sequence.
 
 ### [Remove-CMTSStepCaptureWindowsSettings](Remove-CMTSStepCaptureWindowsSettings.md)
-{{ Fill in the Synopsis }}
+Remove the **Capture Windows Settings** step from a task sequence.
 
 ### [Remove-CMTSStepConnectNetworkFolder](Remove-CMTSStepConnectNetworkFolder.md)
-{{ Fill in the Synopsis }}
+Remove the **Connect To Network Folder** step from a task sequence.
 
 ### [Remove-CMTSStepConvertDisk](Remove-CMTSStepConvertDisk.md)
 {{ Fill in the Synopsis }}
 
 ### [Remove-CMTSStepDisableBitLocker](Remove-CMTSStepDisableBitLocker.md)
-{{ Fill in the Synopsis }}
+Remove the **Disable BitLocker** step from a task sequence.
 
 ### [Remove-CMTSStepDownloadPackageContent](Remove-CMTSStepDownloadPackageContent.md)
-{{ Fill in the Synopsis }}
+Remove the **Download Package Content** step from a task sequence.
 
 ### [Remove-CMTSStepEnableBitLocker](Remove-CMTSStepEnableBitLocker.md)
-{{ Fill in the Synopsis }}
+Remove the **Enable BitLocker** step from a task sequence.
 
 ### [Remove-CMTSStepInstallApplication](Remove-CMTSStepInstallApplication.md)
-Removes a TS step install application.
+Remove the **Install Application** step from a task sequence.
 
 ### [Remove-CMTSStepInstallSoftware](Remove-CMTSStepInstallSoftware.md)
-Removes a TS step install software.
+Remove the **Install Package** step from a task sequence.
 
 ### [Remove-CMTSStepInstallUpdate](Remove-CMTSStepInstallUpdate.md)
-Removes a TS step install update.
+Remove the **Install Software Updates** step from a task sequence.
 
 ### [Remove-CMTSStepJoinDomainWorkgroup](Remove-CMTSStepJoinDomainWorkgroup.md)
-{{ Fill in the Synopsis }}
+Remove the **Join Domain or Workgroup** step from a task sequence.
 
 ### [Remove-CMTSStepOfflineEnableBitLocker](Remove-CMTSStepOfflineEnableBitLocker.md)
-{{ Fill in the Synopsis }}
+Remove the **Pre-provision BitLocker** step from a task sequence.
 
 ### [Remove-CMTSStepPartitionDisk](Remove-CMTSStepPartitionDisk.md)
-Removes a TS step partition disk.
+Remove the **Format and Partition Disk** step from a task sequence.
 
 ### [Remove-CMTSStepPrepareConfigMgrClient](Remove-CMTSStepPrepareConfigMgrClient.md)
-{{ Fill in the Synopsis }}
+Remove the **Prepare ConfigMgr Client for Capture** step from a task sequence.
 
 ### [Remove-CMTSStepPrepareWindows](Remove-CMTSStepPrepareWindows.md)
-{{ Fill in the Synopsis }}
+Remove the **Prepare Windows for Capture** step from a task sequence.
 
 ### [Remove-CMTSStepPrestartCheck](Remove-CMTSStepPrestartCheck.md)
-{{ Fill in the Synopsis }}
+Remove the **Check Readiness** step from a task sequence.
 
 ### [Remove-CMTSStepReboot](Remove-CMTSStepReboot.md)
-Removes a TS step reboot
+Remove the **Restart Computer** step from a task sequence.
 
 ### [Remove-CMTSStepReleaseStateStore](Remove-CMTSStepReleaseStateStore.md)
-{{ Fill in the Synopsis }}
+Remove the **Release State Store** step from a task sequence.
 
 ### [Remove-CMTSStepRequestStateStore](Remove-CMTSStepRequestStateStore.md)
-{{ Fill in the Synopsis }}
+Remove the **Request State Store** step from a task sequence.
 
 ### [Remove-CMTSStepRestoreUserState](Remove-CMTSStepRestoreUserState.md)
-{{ Fill in the Synopsis }}
+Remove the **Restore User State** step from a task sequence.
 
 ### [Remove-CMTSStepRunCommandLine](Remove-CMTSStepRunCommandLine.md)
-Removes a TS step run command line
+Remove the **Run Command Line** step from a task sequence.
 
 ### [Remove-CMTSStepRunPowerShellScript](Remove-CMTSStepRunPowerShellScript.md)
 Remove the **Run PowerShell Script** step from a task sequence.
 
 ### [Remove-CMTSStepRunTaskSequence](Remove-CMTSStepRunTaskSequence.md)
-Use cmdlet to remove the task sequence step **Run Task Sequence** from a specific task sequence.
+Remove the **Run Task Sequence** step from a task sequence.
 
 ### [Remove-CMTSStepSetDynamicVariable](Remove-CMTSStepSetDynamicVariable.md)
-Remove Set Dynamic Variable steps from a Configuration Manager task sequence.
+Remove the **Set Dynamic Variables** step from a task sequence.
 
 ### [Remove-CMTSStepSetupWindowsAndConfigMgr](Remove-CMTSStepSetupWindowsAndConfigMgr.md)
 Remove the **Setup Windows and ConfigMgr** step from a task sequence.
 
 ### [Remove-CMTSStepSetVariable](Remove-CMTSStepSetVariable.md)
-Removes a TS step set variable
+Remove the **Set Task Sequence Variable** step from a task sequence.
 
 ### [Remove-CMTSStepUpgradeOperatingSystem](Remove-CMTSStepUpgradeOperatingSystem.md)
 Remove the **Upgrade OS** step from a task sequence.
@@ -3292,94 +3292,94 @@ Configure an instance of the **Apply Network Settings** task sequence step.
 Configure an instance of the **Apply OS Image** task sequence step.
 
 ### [Set-CMTSStepApplyWindowsSetting](Set-CMTSStepApplyWindowsSetting.md)
-{{ Fill in the Synopsis }}
+Configure an instance of the **Apply Windows Settings** task sequence step.
 
 ### [Set-CMTSStepAutoApplyDriver](Set-CMTSStepAutoApplyDriver.md)
-{{ Fill in the Synopsis }}
+Configure an instance of the **Auto Apply Drivers** task sequence step.
 
 ### [Set-CMTSStepCaptureNetworkSettings](Set-CMTSStepCaptureNetworkSettings.md)
-{{ Fill in the Synopsis }}
+Configure an instance of the **Capture Network Settings** task sequence step.
 
 ### [Set-CMTSStepCaptureSystemImage](Set-CMTSStepCaptureSystemImage.md)
-{{ Fill in the Synopsis }}
+Configure an instance of the **Capture OS Image** task sequence step.
 
 ### [Set-CMTSStepCaptureUserState](Set-CMTSStepCaptureUserState.md)
-{{ Fill in the Synopsis }}
+Configure an instance of the **Capture User State** task sequence step.
 
 ### [Set-CMTSStepCaptureWindowsSettings](Set-CMTSStepCaptureWindowsSettings.md)
-{{ Fill in the Synopsis }}
+Configure an instance of the **Capture Windows Settings** task sequence step.
 
 ### [Set-CMTSStepConnectNetworkFolder](Set-CMTSStepConnectNetworkFolder.md)
-{{ Fill in the Synopsis }}
+Configure an instance of the **Connect To Network Folder** task sequence step.
 
 ### [Set-CMTSStepConvertDisk](Set-CMTSStepConvertDisk.md)
 {{ Fill in the Synopsis }}
 
 ### [Set-CMTSStepDisableBitLocker](Set-CMTSStepDisableBitLocker.md)
-{{ Fill in the Synopsis }}
+Configure an instance of the **Disable BitLocker** task sequence step.
 
 ### [Set-CMTSStepDownloadPackageContent](Set-CMTSStepDownloadPackageContent.md)
-{{ Fill in the Synopsis }}
+Configure an instance of the **Download Package Content** task sequence step.
 
 ### [Set-CMTSStepEnableBitLocker](Set-CMTSStepEnableBitLocker.md)
-Configure the **Enable BitLocker** step in a task sequence, to enable BitLocker encryption on the hard drive.
+Configure an instance of the **Enable BitLocker** task sequence step.
 
 ### [Set-CMTSStepInstallApplication](Set-CMTSStepInstallApplication.md)
-Sets a TS step install application.
+Configure an instance of the **Install Application** task sequence step.
 
 ### [Set-CMTSStepInstallSoftware](Set-CMTSStepInstallSoftware.md)
-Sets a TS step install software.
+Configure an instance of the **Install Package** task sequence step.
 
 ### [Set-CMTSStepInstallUpdate](Set-CMTSStepInstallUpdate.md)
-Sets a TS step install update.
+Configure an instance of the **Install Software Updates** task sequence step.
 
 ### [Set-CMTSStepJoinDomainWorkgroup](Set-CMTSStepJoinDomainWorkgroup.md)
-{{ Fill in the Synopsis }}
+Configure an instance of the **Join Domain or Workgroup** task sequence step.
 
 ### [Set-CMTSStepOfflineEnableBitLocker](Set-CMTSStepOfflineEnableBitLocker.md)
-Configure the **Pre-provision BitLocker** step in a task sequence, to enable BitLocker encryption on a drive while in Windows PE.
+Configure an instance of the **Pre-provision BitLocker** task sequence step.
 
 ### [Set-CMTSStepPartitionDisk](Set-CMTSStepPartitionDisk.md)
-Configure the **Format and Partition Disk** step in a task sequence.
+Configure an instance of the **Format and Partition Disk** task sequence step.
 
 ### [Set-CMTSStepPrepareConfigMgrClient](Set-CMTSStepPrepareConfigMgrClient.md)
-{{ Fill in the Synopsis }}
+Configure an instance of the **Prepare ConfigMgr Client for Capture** task sequence step.
 
 ### [Set-CMTSStepPrepareWindows](Set-CMTSStepPrepareWindows.md)
-{{ Fill in the Synopsis }}
+Configure an instance of the **Prepare Windows for Capture** task sequence step.
 
 ### [Set-CMTSStepPrestartCheck](Set-CMTSStepPrestartCheck.md)
-Configure the **Check Readiness** step in a task sequence, to verify that the target computer meets the specified deployment prerequisite conditions.
+Configure an instance of the **Check Readiness** task sequence step.
 
 ### [Set-CMTSStepReboot](Set-CMTSStepReboot.md)
-Sets a TS step reboot.
+Configure an instance of the **Restart Computer** task sequence step.
 
 ### [Set-CMTSStepReleaseStateStore](Set-CMTSStepReleaseStateStore.md)
-{{ Fill in the Synopsis }}
+Configure an instance of the **Release State Store** task sequence step.
 
 ### [Set-CMTSStepRequestStateStore](Set-CMTSStepRequestStateStore.md)
-{{ Fill in the Synopsis }}
+Configure an instance of the **Request State Store** task sequence step.
 
 ### [Set-CMTSStepRestoreUserState](Set-CMTSStepRestoreUserState.md)
-{{ Fill in the Synopsis }}
+Configure an instance of the **Restore User State** task sequence step.
 
 ### [Set-CMTSStepRunCommandLine](Set-CMTSStepRunCommandLine.md)
-Sets a TS step run command line.
+Configure an instance of the **Run Command Line** task sequence step.
 
 ### [Set-CMTSStepRunPowerShellScript](Set-CMTSStepRunPowerShellScript.md)
-Configure the **Run PowerShell Script** step in a task sequence.
+Configure an instance of the **Run PowerShell Script** task sequence step.
 
 ### [Set-CMTSStepRunTaskSequence](Set-CMTSStepRunTaskSequence.md)
-Use this cmdlet to edit the task sequence step **Run Task Sequence**.
+Configure an instance of the **Run Task Sequence** task sequence step.
 
 ### [Set-CMTSStepSetDynamicVariable](Set-CMTSStepSetDynamicVariable.md)
-Configure the Set Dynamic Variable task sequence step.
+Configure an instance of the **Set Dynamic Variables** task sequence step.
 
 ### [Set-CMTSStepSetupWindowsAndConfigMgr](Set-CMTSStepSetupWindowsAndConfigMgr.md)
-Configure the **Setup Windows and ConfigMgr** step in a task sequence.
+Configure an instance of the **Setup Windows and ConfigMgr** task sequence step.
 
 ### [Set-CMTSStepSetVariable](Set-CMTSStepSetVariable.md)
-Sets a TS step set variable.
+Configure an instance of the **Set Task Sequence Variable** task sequence step.
 
 ### [Set-CMTSStepUpgradeOperatingSystem](Set-CMTSStepUpgradeOperatingSystem.md)
 Configure an instance of the **Upgrade OS** task sequence step.

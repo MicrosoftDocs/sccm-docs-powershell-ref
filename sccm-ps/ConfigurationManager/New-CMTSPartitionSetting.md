@@ -107,7 +107,7 @@ $partWin = New-CMTSPartitionSetting -Name "Windows" -PartitionPrimary -Size 99 -
 This example creates settings for a **Recovery** partition that's **100%** of the remaining disk space and saves it as the **partMsr** variable.
 
 ```powershell
-$partRec = New-CMTSPartitionSetting -Name "Recovery" -PartitionRecovery -Size 100 -SizeUnit Percent 
+$partRec = New-CMTSPartitionSetting -Name "Recovery" -PartitionRecovery -Size 100 -SizeUnit Percent
 ```
 
 ### Example 5: View the partition setting details for a step
@@ -129,22 +129,6 @@ $tsStepFormatDisk.Partitions[0]
 You can use this process to copy partition settings between steps or task sequences. Save this partition settings object as a variable and then add it to another step.
 
 ## PARAMETERS
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -DisableWildcardHandling
 
@@ -416,6 +400,22 @@ By default, Configuration Manager assigns the next available drive letter to thi
 Type: String
 Parameter Sets: PrimaryPartition
 Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
 
 Required: False
 Position: Named

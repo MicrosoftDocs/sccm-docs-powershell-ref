@@ -60,22 +60,6 @@ $tsStepAutoApplyDvr = Get-CMTSStepAutoApplyDriver -InputObject $tsOsd -StepName 
 
 ## PARAMETERS
 
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -InputObject
 
 Specify a task sequence object from which to get the **Auto Apply Drivers** step. To get this object, use the [Get-CMTaskSequence](Get-CMTaskSequence.md) cmdlet.
@@ -135,6 +119,22 @@ Aliases:
 
 Required: True
 Position: 0
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

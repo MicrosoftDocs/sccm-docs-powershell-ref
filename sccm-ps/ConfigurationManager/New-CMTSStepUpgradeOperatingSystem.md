@@ -66,21 +66,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -ContinueOnError
 
 Add this parameter to enable the step option **Continue on error**. When you enable this option, if the step fails, the task sequence continues.
@@ -296,6 +281,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -SoftwareUpdate
+
+Starting in version 2107, specify a software update object to upgrade a client's Windows OS by using a feature update. To get this object, use the [Get-CMSoftwareUpdate](Get-CMSoftwareUpdate.md) cmdlet.
+
+```yaml
+Type: IResultObject[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -SourcePath
 
 Specify a local or network path to the Windows media that Windows Setup uses.
@@ -346,14 +347,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhatIf
-
-Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: wi
+Aliases: cf
 
 Required: False
 Position: Named
@@ -362,14 +362,14 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -SoftwareUpdate
+### -WhatIf
 
-Starting in version 2107, specify a software update object to upgrade a client's Windows OS by using a feature update. To get this object, use the [Get-CMSoftwareUpdate](Get-CMSoftwareUpdate.md) cmdlet.
+Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
 
 ```yaml
-Type: IResultObject[]
+Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: wi
 
 Required: False
 Position: Named
