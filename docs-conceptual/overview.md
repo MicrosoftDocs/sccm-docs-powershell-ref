@@ -5,6 +5,7 @@ ms.date: 07/16/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: overview
+ms.localizationpriority: low
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
