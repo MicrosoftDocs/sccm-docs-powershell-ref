@@ -6,7 +6,7 @@ ms.date: 07/14/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: conceptual
-ms.assetid: bec00fb4-1ac0-4e49-b330-0871b3722459
+ms.localizationpriority: low
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby

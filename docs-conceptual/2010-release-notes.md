@@ -6,6 +6,7 @@ ms.date: 12/21/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
+ms.localizationpriority: low
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
