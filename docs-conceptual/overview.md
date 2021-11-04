@@ -44,6 +44,8 @@ Connect to Configuration Manager from an existing Windows PowerShell session by 
 
 1. Import the Configuration Manager module by using the **Import-Module** cmdlet. Specify the path to the Configuration Manager module, or change to the directory that contains the module. By default, the module is at the following path: `C:\Program Files (x86)\Microsoft Endpoint Manager\AdminConsole\bin\ConfigurationManager.psd1`
 
+    Starting in version 2111, when you install the Configuration Manager console, the path to the module is now added to the system environment variable, **PSModulePath**. For more information, see [about_PSModulePath](/powershell/module/microsoft.powershell.core/about/about_psmodulepath). With this change, you can import the module just by its name: `Import-Module ConfigurationManager`
+
     > [!IMPORTANT]
     > Make sure you don't import an older version of the module that might exist in another folder. After you import the module, use the following commands to check the module version and path:
     >
