@@ -1,11 +1,11 @@
 ---
 title: Configuration Manager PowerShell cmdlets
 description: Manage your Configuration Manager hierarchy using Windows PowerShell. 
-ms.date: 07/16/2021
+ms.date: 12/01/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: overview
-ms.localizationpriority: low
+ms.localizationpriority: null
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
@@ -44,8 +44,10 @@ Connect to Configuration Manager from an existing Windows PowerShell session by 
 
 1. Import the Configuration Manager module by using the **Import-Module** cmdlet. Specify the path to the Configuration Manager module, or change to the directory that contains the module. By default, the module is at the following path: `C:\Program Files (x86)\Microsoft Endpoint Manager\AdminConsole\bin\ConfigurationManager.psd1`
 
+    Starting in version 2111, when you install the Configuration Manager console, the path to the module is now added to the system environment variable, **PSModulePath**. For more information, see [about_PSModulePath](/powershell/module/microsoft.powershell.core/about/about_psmodulepath). With this change, you can import the module just by its name: `Import-Module ConfigurationManager`
+
     > [!IMPORTANT]
-    > This path changed starting in version 1910 to use the `Microsoft Endpoint Manager` folder. Make sure you don't import an older version of the module that might exist in another folder. After you import the module, use the following commands to check the module version and path:
+    > Make sure you don't import an older version of the module that might exist in another folder. After you import the module, use the following commands to check the module version and path:
     >
     > ```powershell
     > (Get-Module -Name ConfigurationManager).Version
@@ -89,10 +91,10 @@ Connect to Configuration Manager from an existing Windows PowerShell session by 
 
 <!--7774961-->
 
-Starting in version 2010, to get the latest information for the Configuration Manager PowerShell module, use the [Update-Help](/powershell/module/microsoft.powershell.core/update-help) cmdlet. This content is the same as what's published on docs.microsoft.com for the [ConfigurationManager module](/powershell/module/configurationmanager/).
+To get the latest information for the Configuration Manager PowerShell module, use the [Update-Help](/powershell/module/microsoft.powershell.core/update-help) cmdlet. This content is the same as what's published on docs.microsoft.com for the [ConfigurationManager module](/powershell/module/configurationmanager/).
 
 > [!IMPORTANT]
-> Because of a change in how the updateable content is structured and published with the release of version 2103, don't use **Update-Help** on a version 2010 site. Update the site to version 2103, and then update the local help content.
+> Because of a change in how the updateable content is structured and published with the release of version 2103, don't use **Update-Help** on a version 2010 site. Update the site to version 2103 or later, and then update the local help content.
 >
 > For more information, see [PowerShell version 2103 release notes](/powershell/sccm/2103-release-notes#known-issue-with-updateable-powershell-help).
 
