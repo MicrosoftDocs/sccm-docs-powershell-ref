@@ -2,11 +2,11 @@
 title: Version 2111 release notes
 titleSuffix: Configuration Manager
 description: Release notes for the changes to PowerShell cmdlets in Configuration Manager version 2111.
-ms.date: 11/19/2021
+ms.date: 12/01/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-ms.localizationpriority: low
+ms.localizationpriority: null
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
@@ -22,8 +22,6 @@ These release notes summarize changes to the Configuration Manager cmdlet librar
 > Configuration Manager current branch version 2107 is the baseline for these changes. For more information, see [Configuration Manager cmdlet library changes for version 2107](2107-release-notes.md).
 
 ## Module changes
-
-<!-- ADD THIS TO OVERVIEW ARTICLE -->
 
 When you install the Configuration Manager console, the path to the **ConfigurationManager** PowerShell module is now added to the system environment variable, **PSModulePath**. For example, by default, this path is `C:\Program Files (x86)\Microsoft Endpoint Manager\AdminConsole\bin`.
 
