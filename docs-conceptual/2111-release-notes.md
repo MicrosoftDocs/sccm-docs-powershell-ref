@@ -2,11 +2,11 @@
 title: Version 2111 release notes
 titleSuffix: Configuration Manager
 description: Release notes for the changes to PowerShell cmdlets in Configuration Manager version 2111.
-ms.date: 11/19/2021
+ms.date: 12/01/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-ms.localizationpriority: low
+ms.localizationpriority: null
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
