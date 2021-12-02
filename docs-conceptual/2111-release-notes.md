@@ -23,8 +23,6 @@ These release notes summarize changes to the Configuration Manager cmdlet librar
 
 ## Module changes
 
-<!-- ADD THIS TO OVERVIEW ARTICLE -->
-
 When you install the Configuration Manager console, the path to the **ConfigurationManager** PowerShell module is now added to the system environment variable, **PSModulePath**. For example, by default, this path is `C:\Program Files (x86)\Microsoft Endpoint Manager\AdminConsole\bin`.
 
 With this change, it's easier to import this module with the following command: `Import-Module ConfigurationManager`
