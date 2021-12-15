@@ -1,7 +1,7 @@
 ﻿---
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 08/13/2021
+ms.date: 12/14/2021
 online version:
 schema: 2.0.0
 ---
@@ -273,7 +273,8 @@ Accept wildcard characters: False
 ```
 
 ### -CheckTpmActivated
-{{ Fill CheckTpmActivated Description }}
+
+Applies to version 2111 and later. Set this parameter to `$true` to enable the **TPM 2.0 or above is activated** check.
 
 ```yaml
 Type: Boolean
@@ -288,7 +289,8 @@ Accept wildcard characters: False
 ```
 
 ### -CheckTpmEnabled
-{{ Fill CheckTpmEnabled Description }}
+
+Applies to version 2111 and later. Set this parameter to `$true` to enable the **TPM 2.0 or above is enabled** check.
 
 ```yaml
 Type: Boolean

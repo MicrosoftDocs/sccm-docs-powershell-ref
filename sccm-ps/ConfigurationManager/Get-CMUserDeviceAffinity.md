@@ -2,7 +2,7 @@
 description: Get the relationships between a device and its primary users.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 09/04/2020
+ms.date: 12/14/2021
 schema: 2.0.0
 title: Get-CMUserDeviceAffinity
 ---
@@ -193,7 +193,8 @@ Accept wildcard characters: False
 ```
 
 ### -ShowApprovedOnly
-{{ Fill ShowApprovedOnly Description }}
+
+Add this parameter to filter out non-approved affinities.
 
 ```yaml
 Type: SwitchParameter
@@ -253,6 +254,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### IResultObject#SMS_UserMachineRelationship
 
 ## NOTES
+
+For more information on this return object and its properties, see [SMS_UserMachineRelationship server WMI class](/mem/configmgr/develop/reference/core/clients/manage/sms_usermachinerelationship-server-wmi-class).
 
 ## RELATED LINKS
 

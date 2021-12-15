@@ -1,8 +1,7 @@
 ﻿---
-description: Configure a distribution point
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 03/23/2021
+ms.date: 12/14/2021
 schema: 2.0.0
 title: Set-CMDistributionPoint
 ---
@@ -506,7 +505,8 @@ Accept wildcard characters: False
 ```
 
 ### -EnableMaintenanceMode
-{{ Fill EnableMaintenanceMode Description }}
+
+Set this parameter to `$true` to enable [maintenance mode](/mem/configmgr/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_maint).
 
 ```yaml
 Type: Boolean

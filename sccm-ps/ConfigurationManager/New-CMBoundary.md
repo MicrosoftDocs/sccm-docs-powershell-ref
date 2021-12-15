@@ -1,7 +1,7 @@
 ﻿---
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 03/26/2021
+ms.date: 12/14/2021
 schema: 2.0.0
 title: New-CMBoundary
 ---
@@ -152,7 +152,8 @@ Accept wildcard characters: False
 ```
 
 ### -ValueStartsWith
-{{ Fill ValueStartsWith Description }}
+
+Set this parameter to `$true` to match the start of a connection name or description instead of the whole string. For more information, see [Define network locations as boundaries](/mem/configmgr/core/servers/deploy/configure/boundaries#vpn).
 
 ```yaml
 Type: Boolean

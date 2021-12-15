@@ -1,8 +1,7 @@
 ﻿---
-description: Modifies Configuration Manager boundary settings.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/07/2019
+ms.date: 12/14/2021
 schema: 2.0.0
 title: Set-CMBoundary
 ---
@@ -10,7 +9,8 @@ title: Set-CMBoundary
 # Set-CMBoundary
 
 ## SYNOPSIS
-Modifies Configuration Manager boundary settings.
+
+Configure a site boundary.
 
 ## SYNTAX
 
@@ -36,10 +36,8 @@ Set-CMBoundary [-NewName <String>] [-NewType <BoundaryTypes>] [-NewValue <String
 ```
 
 ## DESCRIPTION
-The **Set-CMBoundary** cmdlet modifies boundary settings.
 
-In Configuration Manager, a boundary is an intranet location that contains one or more devices that you can manage.
-A boundary can be an IP subnet, Active Directory site name, IPv6 prefix, or an IP address range.
+Use this cmdlet to configure a site boundary. A boundary is a network location that contains one or more devices that you can manage. A boundary can be an IP subnet, Active Directory site name, IPv6 prefix, an IP address range, or a VPN. For more information, see [Define site boundaries and boundary groups](/mem/configmgr/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
@@ -47,21 +45,23 @@ A boundary can be an IP subnet, Active Directory site name, IPv6 prefix, or an I
 ## EXAMPLES
 
 ### Example 1: Rename a boundary
-```
-PS XYZ:\> Set-CMBoundary -Name "Default-ADSite" -NewName "ADSiteBoundary01"
-```
 
 This command changes a boundary name from Default-ADSite to ADSiteBoundary01.
 
+```powershell
+Set-CMBoundary -Name "Default-ADSite" -NewName "ADSiteBoundary01"
+```
+
 ### Example 2: Modify the value of a boundary by using an InputObject
-```
-PS XYZ:\> $BoundaryObj = Get-CMBoundary -Id "16777217"
-PS XYZ:\> Set-CMBoundary -InputObject $BoundaryObj -Value "IPSubnet17"
-```
 
 In this example, the first command gets a boundary that has the ID of 16777217 and inserts it into the input object $BoundaryObj.
 
 The second command identifies the boundary by using the input object $BoundaryObj and modifies its value to IPSubnet17.
+
+```powershell
+$BoundaryObj = Get-CMBoundary -Id "16777217"
+Set-CMBoundary -InputObject $BoundaryObj -Value "IPSubnet17"
+```
 
 ## PARAMETERS
 
@@ -98,7 +98,8 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-Specifies an array of boundary identifiers (IDs).
+
+Specify a boundary identifier (ID) to modify. This value is an integer, for example `26`.
 
 ```yaml
 Type: String
@@ -113,8 +114,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies an input object to this cmdlet.
-You can get the input object by using the Get-CMBoundary cmdlet.
+
+Specify a boundary object to modify. To get this object, use the [Get-CMBoundary](Get-CMBoundary.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -129,7 +130,8 @@ Accept wildcard characters: False
 ```
 
 ### -NewName
-Specifies a new name for a boundary.
+
+Specify a new name for a boundary.
 
 ```yaml
 Type: String
@@ -144,7 +146,8 @@ Accept wildcard characters: False
 ```
 
 ### -NewType
-{{ Fill NewType Description }}
+
+Specify the boundary type.
 
 ```yaml
 Type: BoundaryTypes
@@ -160,7 +163,8 @@ Accept wildcard characters: False
 ```
 
 ### -NewValue
-{{ Fill NewValue Description }}
+
+Specify the data that defines the boundary. For example, an Active Directory site value can be `Default-First-Site-Name`.
 
 ```yaml
 Type: String
@@ -191,8 +195,8 @@ Accept wildcard characters: False
 ```
 
 ### -Type
-Specifies a boundary type.
-Valid values are: ADSite, IPV6Prefix, IPSubnet, and IPRange.
+
+Specify a boundary type.
 
 ```yaml
 Type: BoundaryTypes
@@ -208,8 +212,8 @@ Accept wildcard characters: False
 ```
 
 ### -Value
-Specifies the data that describes the boundary.
-For example, an Active Directory site value can be Default-ADSite.
+
+Specify the data that describes the boundary.
 
 ```yaml
 Type: String
@@ -224,7 +228,8 @@ Accept wildcard characters: False
 ```
 
 ### -ValueStartsWith
-{{ Fill ValueStartsWith Description }}
+
+Set this parameter to `$true` to match the start of a connection name or description instead of the whole string. For more information, see [Define network locations as boundaries](/mem/configmgr/core/servers/deploy/configure/boundaries#vpn).
 
 ```yaml
 Type: Boolean
@@ -239,6 +244,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -282,6 +288,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## NOTES
 
+For more information on this return object and its properties, see [SMS_Boundary server WMI class](/mem/configmgr/develop/reference/core/servers/configure/sms_boundary-server-wmi-class).
+
 ## RELATED LINKS
 
 [Get-CMBoundary](Get-CMBoundary.md)
@@ -289,5 +297,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-CMBoundary](New-CMBoundary.md)
 
 [Remove-CMBoundary](Remove-CMBoundary.md)
-
-
