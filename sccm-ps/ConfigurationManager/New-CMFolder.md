@@ -1,31 +1,33 @@
-﻿---
+---
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 online version:
 schema: 2.0.0
 ---
 
-# Get-CMNotification
+# New-CMFolder
 
 ## SYNOPSIS
 {{ Fill in the Synopsis }}
 
 ## SYNTAX
 
-### ByName (Default)
+### SearchByNameMandatory (Default)
 ```
-Get-CMNotification [-Name <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
-```
-
-### ById
-```
-Get-CMNotification -Id <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
-```
-
-### ByType
-```
-Get-CMNotification -Type <NotificationType[]> [-DisableWildcardHandling] [-ForceWildcardHandling]
+New-CMFolder [-Name <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
+```
+
+### CreateByParentPathMandatory
+```
+New-CMFolder [-Name <String>] -ParentFolderPath <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### CreateByParentObjectMandatory
+```
+New-CMFolder [-Name <String>] -InputObject <IResultObject> [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -72,18 +74,18 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Id
-{{ Fill Id Description }}
+### -InputObject
+{{ Fill InputObject Description }}
 
 ```yaml
-Type: String
-Parameter Sets: ById
-Aliases: TaskId, Task_Id
+Type: IResultObject
+Parameter Sets: CreateByParentObjectMandatory
+Aliases: ParentContainerNode
 
 Required: True
 Position: Named
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
@@ -92,8 +94,8 @@ Accept wildcard characters: False
 
 ```yaml
 Type: String
-Parameter Sets: ByName
-Aliases: TaskName, Task_Name
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named
@@ -102,16 +104,46 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Type
-{{ Fill Type Description }}
+### -ParentFolderPath
+{{ Fill ParentFolderPath Description }}
 
 ```yaml
-Type: NotificationType[]
-Parameter Sets: ByType
-Aliases: Types
-Accepted values: SiteVersionOutOfSupport, ConsoleVersionMismatch, SiteReadonly, SiteVersionToBeExpired, EvalVersionExpired, EvalVersionApproachExpiration, UpdatePackageAvailable, SiteBusy, CloudConnectorMissing, PushNotificationsStayInformed, PushNotificationsPlanForChange, PushNotificationsFixIssue, OfficeAdrObsoleteChannelName, AzureTenantCertApproachExpiration, AzureTenantCertExpired, ManagementInsightsWin10OutOfSupport, ManagementInsightsWin7OutOfSupport, ConsoleCustomExtensionsFound, CloudConnectivityBroken, AzureTenantCertCloseToExpiration, ManagementInsightsGeneric, CloudAttachOnboard
+Type: String
+Parameter Sets: CreateByParentPathMandatory
+Aliases:
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -123,13 +155,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### None
+### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
 
 ## OUTPUTS
 
-### ConnectionManagerNotificationTaskBase
-
-### ConnectionManagerNotificationTaskBase[]
+### IResultObject#SMS_ObjectContainerNode
 
 ## NOTES
 

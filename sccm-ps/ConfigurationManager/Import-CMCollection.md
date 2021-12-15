@@ -1,4 +1,4 @@
----
+﻿---
 description: Imports a Configuration Manager collection.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -76,7 +76,7 @@ Specifies the full path of the import (MOF) file for the collection.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: Path
+Aliases: FileName, FilePath, Path
 
 Required: True
 Position: 0
@@ -122,6 +122,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
+
 ## OUTPUTS
 
 ### System.Object

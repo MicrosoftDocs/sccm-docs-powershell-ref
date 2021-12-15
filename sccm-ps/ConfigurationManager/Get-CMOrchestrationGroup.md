@@ -1,11 +1,11 @@
-﻿---
+---
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 online version:
 schema: 2.0.0
 ---
 
-# Get-CMNotification
+# Get-CMOrchestrationGroup
 
 ## SYNOPSIS
 {{ Fill in the Synopsis }}
@@ -14,18 +14,13 @@ schema: 2.0.0
 
 ### ByName (Default)
 ```
-Get-CMNotification [-Name <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
+Get-CMOrchestrationGroup [[-Name] <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [<CommonParameters>]
 ```
 
 ### ById
 ```
-Get-CMNotification -Id <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
-```
-
-### ByType
-```
-Get-CMNotification -Type <NotificationType[]> [-DisableWildcardHandling] [-ForceWildcardHandling]
- [<CommonParameters>]
+Get-CMOrchestrationGroup [-Id] <Int32> [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -76,12 +71,12 @@ Accept wildcard characters: False
 {{ Fill Id Description }}
 
 ```yaml
-Type: String
+Type: Int32
 Parameter Sets: ById
-Aliases: TaskId, Task_Id
+Aliases: MOGID
 
 Required: True
-Position: Named
+Position: 0
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -93,26 +88,10 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: ByName
-Aliases: TaskName, Task_Name
+Aliases: OrchestrationGroupName
 
 Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Type
-{{ Fill Type Description }}
-
-```yaml
-Type: NotificationType[]
-Parameter Sets: ByType
-Aliases: Types
-Accepted values: SiteVersionOutOfSupport, ConsoleVersionMismatch, SiteReadonly, SiteVersionToBeExpired, EvalVersionExpired, EvalVersionApproachExpiration, UpdatePackageAvailable, SiteBusy, CloudConnectorMissing, PushNotificationsStayInformed, PushNotificationsPlanForChange, PushNotificationsFixIssue, OfficeAdrObsoleteChannelName, AzureTenantCertApproachExpiration, AzureTenantCertExpired, ManagementInsightsWin10OutOfSupport, ManagementInsightsWin7OutOfSupport, ConsoleCustomExtensionsFound, CloudConnectivityBroken, AzureTenantCertCloseToExpiration, ManagementInsightsGeneric, CloudAttachOnboard
-
-Required: True
-Position: Named
+Position: 0
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -127,9 +106,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### ConnectionManagerNotificationTaskBase
-
-### ConnectionManagerNotificationTaskBase[]
+### IResultObject#SMS_MachineOrchestrationGroup
 
 ## NOTES
 

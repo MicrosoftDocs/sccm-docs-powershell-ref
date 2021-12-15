@@ -1,4 +1,4 @@
----
+﻿---
 description: Export a driver package.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -99,7 +99,7 @@ Specify the network path for the driver package. The path needs to specify the f
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: FileName, FilePath, Path
 
 Required: True
 Position: Named
@@ -256,6 +256,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ### System.Object

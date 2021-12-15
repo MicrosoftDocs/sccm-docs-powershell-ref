@@ -1,4 +1,4 @@
----
+﻿---
 description: Modifies Configuration Manager boundary settings.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -17,20 +17,22 @@ Modifies Configuration Manager boundary settings.
 ### SetByValue (Default)
 ```
 Set-CMBoundary -InputObject <IResultObject> [-NewName <String>] [-NewType <BoundaryTypes>] [-NewValue <String>]
- [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-PassThru] [-ValueStartsWith <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ### SetById
 ```
 Set-CMBoundary -Id <String> [-NewName <String>] [-NewType <BoundaryTypes>] [-NewValue <String>] [-PassThru]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-ValueStartsWith <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### SetByName
 ```
 Set-CMBoundary [-NewName <String>] [-NewType <BoundaryTypes>] [-NewValue <String>] [-PassThru]
- -Type <BoundaryTypes> -Value <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ -Type <BoundaryTypes> -Value <String> [-ValueStartsWith <Boolean>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -221,6 +223,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ValueStartsWith
+{{ Fill ValueStartsWith Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Confirm
 Prompts you for confirmation before running the cmdlet.
 
@@ -258,9 +275,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ### IResultObject#SMS_Boundary
+
 ## NOTES
 
 ## RELATED LINKS

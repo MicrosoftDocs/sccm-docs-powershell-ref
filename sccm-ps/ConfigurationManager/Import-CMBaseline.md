@@ -1,4 +1,4 @@
----
+﻿---
 description: Imports Configuration Manager baselines.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -91,7 +91,7 @@ Each file contains Configuration Manager configuration items.
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases:
+Aliases: FilePath, ImportFilePath, Path, FileNames, FilePaths, ImportFilePaths, Paths
 
 Required: True
 Position: Named
@@ -168,6 +168,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
+
 ## OUTPUTS
 
 ### System.Object

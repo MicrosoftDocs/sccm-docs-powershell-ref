@@ -1,4 +1,4 @@
----
+﻿---
 description: Exports a security role to an XML file.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -100,7 +100,7 @@ Specifies the path to which you export the XML file for the security role.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: ExportFilePath
+Aliases: FileName, FilePath, ExportFilePath, XmlFileName, RolesXml
 
 Required: True
 Position: Named
@@ -174,6 +174,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ### System.Object

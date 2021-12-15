@@ -1,31 +1,33 @@
-﻿---
+---
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 online version:
 schema: 2.0.0
 ---
 
-# Get-CMNotification
+# Remove-CMOrchestrationGroup
 
 ## SYNOPSIS
 {{ Fill in the Synopsis }}
 
 ## SYNTAX
 
-### ByName (Default)
+### SearchByIdMandatory (Default)
 ```
-Get-CMNotification [-Name <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
-```
-
-### ById
-```
-Get-CMNotification -Id <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
+Remove-CMOrchestrationGroup [-Force] [-Id] <Int32> [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### ByType
+### SearchByValueMandatory
 ```
-Get-CMNotification -Type <NotificationType[]> [-DisableWildcardHandling] [-ForceWildcardHandling]
- [<CommonParameters>]
+Remove-CMOrchestrationGroup [-Force] [-InputObject] <IResultObject> [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SearchByNameMandatory
+```
+Remove-CMOrchestrationGroup [-Force] [-Name] <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -44,6 +46,21 @@ PS C:\> {{ Add example code here }}
 
 ### -DisableWildcardHandling
 {{ Fill DisableWildcardHandling Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Force
+{{ Fill Force Description }}
 
 ```yaml
 Type: SwitchParameter
@@ -76,14 +93,29 @@ Accept wildcard characters: False
 {{ Fill Id Description }}
 
 ```yaml
-Type: String
-Parameter Sets: ById
-Aliases: TaskId, Task_Id
+Type: Int32
+Parameter Sets: SearchByIdMandatory
+Aliases: MOGId
 
 Required: True
-Position: Named
+Position: 0
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InputObject
+{{ Fill InputObject Description }}
+
+```yaml
+Type: IResultObject
+Parameter Sets: SearchByValueMandatory
+Aliases: OrchestrationGroup
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
@@ -92,8 +124,23 @@ Accept wildcard characters: False
 
 ```yaml
 Type: String
-Parameter Sets: ByName
-Aliases: TaskName, Task_Name
+Parameter Sets: SearchByNameMandatory
+Aliases: OrchestrationGroupName
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
 
 Required: False
 Position: Named
@@ -102,16 +149,16 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Type
-{{ Fill Type Description }}
+### -WhatIf
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
-Type: NotificationType[]
-Parameter Sets: ByType
-Aliases: Types
-Accepted values: SiteVersionOutOfSupport, ConsoleVersionMismatch, SiteReadonly, SiteVersionToBeExpired, EvalVersionExpired, EvalVersionApproachExpiration, UpdatePackageAvailable, SiteBusy, CloudConnectorMissing, PushNotificationsStayInformed, PushNotificationsPlanForChange, PushNotificationsFixIssue, OfficeAdrObsoleteChannelName, AzureTenantCertApproachExpiration, AzureTenantCertExpired, ManagementInsightsWin10OutOfSupport, ManagementInsightsWin7OutOfSupport, ConsoleCustomExtensionsFound, CloudConnectivityBroken, AzureTenantCertCloseToExpiration, ManagementInsightsGeneric, CloudAttachOnboard
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
 
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -123,14 +170,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### None
+### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
 
 ## OUTPUTS
 
-### ConnectionManagerNotificationTaskBase
-
-### ConnectionManagerNotificationTaskBase[]
-
+### System.Object
 ## NOTES
 
 ## RELATED LINKS

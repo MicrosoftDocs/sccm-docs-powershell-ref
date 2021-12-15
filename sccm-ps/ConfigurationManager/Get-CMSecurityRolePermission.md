@@ -1,30 +1,32 @@
-﻿---
+---
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 online version:
 schema: 2.0.0
 ---
 
-# Get-CMNotification
+# Get-CMSecurityRolePermission
 
 ## SYNOPSIS
 {{ Fill in the Synopsis }}
 
 ## SYNTAX
 
-### ByName (Default)
+### SearchByName (Default)
 ```
-Get-CMNotification [-Name <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
-```
-
-### ById
-```
-Get-CMNotification -Id <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
+Get-CMSecurityRolePermission -Name <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [<CommonParameters>]
 ```
 
-### ByType
+### SearchById
 ```
-Get-CMNotification -Type <NotificationType[]> [-DisableWildcardHandling] [-ForceWildcardHandling]
+Get-CMSecurityRolePermission -Id <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [<CommonParameters>]
+```
+
+### SearchByValue
+```
+Get-CMSecurityRolePermission -InputObject <IResultObject> [-DisableWildcardHandling] [-ForceWildcardHandling]
  [<CommonParameters>]
 ```
 
@@ -77,13 +79,28 @@ Accept wildcard characters: False
 
 ```yaml
 Type: String
-Parameter Sets: ById
-Aliases: TaskId, Task_Id
+Parameter Sets: SearchById
+Aliases: RoleId
 
 Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InputObject
+{{ Fill InputObject Description }}
+
+```yaml
+Type: IResultObject
+Parameter Sets: SearchByValue
+Aliases: SecurityRole
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
@@ -92,30 +109,14 @@ Accept wildcard characters: False
 
 ```yaml
 Type: String
-Parameter Sets: ByName
-Aliases: TaskName, Task_Name
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Type
-{{ Fill Type Description }}
-
-```yaml
-Type: NotificationType[]
-Parameter Sets: ByType
-Aliases: Types
-Accepted values: SiteVersionOutOfSupport, ConsoleVersionMismatch, SiteReadonly, SiteVersionToBeExpired, EvalVersionExpired, EvalVersionApproachExpiration, UpdatePackageAvailable, SiteBusy, CloudConnectorMissing, PushNotificationsStayInformed, PushNotificationsPlanForChange, PushNotificationsFixIssue, OfficeAdrObsoleteChannelName, AzureTenantCertApproachExpiration, AzureTenantCertExpired, ManagementInsightsWin10OutOfSupport, ManagementInsightsWin7OutOfSupport, ConsoleCustomExtensionsFound, CloudConnectivityBroken, AzureTenantCertCloseToExpiration, ManagementInsightsGeneric, CloudAttachOnboard
+Parameter Sets: SearchByName
+Aliases: RoleName
 
 Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### CommonParameters
@@ -123,13 +124,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### None
+### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
 
 ## OUTPUTS
 
-### ConnectionManagerNotificationTaskBase
+### IResultObject[]#RoleOperation
 
-### ConnectionManagerNotificationTaskBase[]
+### IResultObject#RoleOperation
 
 ## NOTES
 

@@ -1,4 +1,4 @@
----
+﻿---
 description: Imports a security role into Configuration Manager.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -103,7 +103,7 @@ Specifies the XML export file that contains the security role definition.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: RolesXml, Path, FileName
+Aliases: FileName, FilePath, ImportFilePath, Path, RolesXml
 
 Required: True
 Position: Named
@@ -149,6 +149,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
+
 ## OUTPUTS
 
 ### System.Object

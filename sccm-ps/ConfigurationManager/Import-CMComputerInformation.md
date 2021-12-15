@@ -1,4 +1,4 @@
----
+﻿---
 description: Imports computer information into a Configuration Manager database.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -156,7 +156,7 @@ The file must contain the name and MAC address of each computer to be imported.
 ```yaml
 Type: String
 Parameter Sets: ImportComputerByUsingFile
-Aliases:
+Aliases: FilePath, ImportFilePath, Path
 
 Required: True
 Position: Named
@@ -351,6 +351,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject[]
+
 ## OUTPUTS
 
 ### System.Object

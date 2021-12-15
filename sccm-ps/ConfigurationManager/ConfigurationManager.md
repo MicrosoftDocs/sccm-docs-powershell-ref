@@ -1,4 +1,4 @@
----
+﻿---
 Module Name: ConfigurationManager
 Module Guid: 7f590131-5253-4425-8b32-eeab51a4c393
 Download Help Link: https://aka.ms/configmgrps-help
@@ -1128,9 +1128,6 @@ Get a _task sequence variable_ condition from a task sequence step.
 ### [Get-CMTSStepConnectNetworkFolder](Get-CMTSStepConnectNetworkFolder.md)
 Get the **Connect To Network Folder** step from a specific task sequence.
 
-### [Get-CMTSStepConvertDisk](Get-CMTSStepConvertDisk.md)
-{{ Fill in the Synopsis }}
-
 ### [Get-CMTSStepDisableBitLocker](Get-CMTSStepDisableBitLocker.md)
 Get the **Disable BitLocker** step from a specific task sequence.
 
@@ -2034,9 +2031,6 @@ Create a _task sequence variable_ condition for a task sequence step.
 ### [New-CMTSStepConnectNetworkFolder](New-CMTSStepConnectNetworkFolder.md)
 Create a **Connect To Network Folder** step, which you can add to a task sequence.
 
-### [New-CMTSStepConvertDisk](New-CMTSStepConvertDisk.md)
-{{ Fill in the Synopsis }}
-
 ### [New-CMTSStepDisableBitLocker](New-CMTSStepDisableBitLocker.md)
 Create a **Disable BitLocker** step, which you can add to a task sequence.
 
@@ -2558,9 +2552,6 @@ Remove the **Capture Windows Settings** step from a task sequence.
 
 ### [Remove-CMTSStepConnectNetworkFolder](Remove-CMTSStepConnectNetworkFolder.md)
 Remove the **Connect To Network Folder** step from a task sequence.
-
-### [Remove-CMTSStepConvertDisk](Remove-CMTSStepConvertDisk.md)
-{{ Fill in the Synopsis }}
 
 ### [Remove-CMTSStepDisableBitLocker](Remove-CMTSStepDisableBitLocker.md)
 Remove the **Disable BitLocker** step from a task sequence.
@@ -3311,9 +3302,6 @@ Configure an instance of the **Capture Windows Settings** task sequence step.
 
 ### [Set-CMTSStepConnectNetworkFolder](Set-CMTSStepConnectNetworkFolder.md)
 Configure an instance of the **Connect To Network Folder** task sequence step.
-
-### [Set-CMTSStepConvertDisk](Set-CMTSStepConvertDisk.md)
-{{ Fill in the Synopsis }}
 
 ### [Set-CMTSStepDisableBitLocker](Set-CMTSStepDisableBitLocker.md)
 Configure an instance of the **Disable BitLocker** task sequence step.

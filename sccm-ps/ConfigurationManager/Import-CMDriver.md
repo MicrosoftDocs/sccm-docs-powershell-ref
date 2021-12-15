@@ -1,4 +1,4 @@
----
+﻿---
 description: Import a device driver into the driver catalog.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -240,7 +240,7 @@ Specify a path to the driver files to import.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: UncFileLocation, Location
+Aliases: FileName, FilePath, ImportFilePath, Location, UncFileLocation
 
 Required: True
 Position: Named
@@ -351,9 +351,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
+
 ## OUTPUTS
 
 ### IResultObject#SMS_Driver
+
 ## NOTES
 
 ## RELATED LINKS

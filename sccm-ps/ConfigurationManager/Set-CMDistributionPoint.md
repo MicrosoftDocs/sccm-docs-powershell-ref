@@ -1,4 +1,4 @@
----
+﻿---
 description: Configure a distribution point
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -17,17 +17,17 @@ Configure a distribution point.
 
 ### SetByValue (Default)
 ```
-Set-CMDistributionPoint [-AddBoundaryGroupName <String[]>] [-AddMacAddressForRespondingPxeRequest <String[]>]
- [-AllowFallbackForContent <Boolean>] [-AllowPreStaging <Boolean>] [-AllowProxyTraffic <Boolean>]
- [-AllowPxeResponse <Boolean>] [-CertificateExpirationTimeUtc <DateTime>] [-CertificatePassword <SecureString>]
- [-CertificatePath <String>] [-ClearMacAddressForRespondingPxeRequest]
- [-ClientCommunicationType <ComputerCommunicationType>] [-ClientConnectionType <ClientConnectionTypes>]
- [-ClientTransferRate <NetworkProfile>] [-ContentMonitoringPriority <Priority>]
- [-ContentValidationSchedule <IResultObject>] [-Description <String>] [-EnableAnonymous <Boolean>]
- [-EnableBranchCache <Boolean>] [-EnableContentValidation <Boolean>] [-EnableLedbat <Boolean>]
- [-EnableMulticast <Boolean>] [-EnableNonWdsPxe <Boolean>] [-EnablePullDP <Boolean>] [-EnablePxe <Boolean>]
- [-EnableScheduledMulticast <Boolean>] [-EnableUnknownComputerSupport <Boolean>] [-EndIPAddress <String>]
- [-EndUdpPort <Int32>] [-Force] [-InputObject] <IResultObject> [-KeepWds <Boolean>]
+Set-CMDistributionPoint [-EnableMaintenanceMode <Boolean>] [-AddBoundaryGroupName <String[]>]
+ [-AddMacAddressForRespondingPxeRequest <String[]>] [-AllowFallbackForContent <Boolean>]
+ [-AllowPreStaging <Boolean>] [-AllowProxyTraffic <Boolean>] [-AllowPxeResponse <Boolean>]
+ [-CertificateExpirationTimeUtc <DateTime>] [-CertificatePassword <SecureString>] [-CertificatePath <String>]
+ [-ClearMacAddressForRespondingPxeRequest] [-ClientCommunicationType <ComputerCommunicationType>]
+ [-ClientConnectionType <ClientConnectionTypes>] [-ClientTransferRate <NetworkProfile>]
+ [-ContentMonitoringPriority <Priority>] [-ContentValidationSchedule <IResultObject>] [-Description <String>]
+ [-EnableAnonymous <Boolean>] [-EnableBranchCache <Boolean>] [-EnableContentValidation <Boolean>]
+ [-EnableLedbat <Boolean>] [-EnableMulticast <Boolean>] [-EnableNonWdsPxe <Boolean>] [-EnablePullDP <Boolean>]
+ [-EnablePxe <Boolean>] [-EnableScheduledMulticast <Boolean>] [-EnableUnknownComputerSupport <Boolean>]
+ [-EndIPAddress <String>] [-EndUdpPort <Int32>] [-Force] [-InputObject] <IResultObject> [-KeepWds <Boolean>]
  [-MacAddressForRespondingPxeRequest <String[]>] [-MinimumSessionSize <Int32>]
  [-MulticastMaximumClientCount <Int32>] [-PassThru] [-PxePassword <SecureString>]
  [-PxeServerResponseDelaySec <Int32>] [-ReassignSiteCode <String>] [-RemoveBoundaryGroupName <String[]>]
@@ -41,18 +41,19 @@ Set-CMDistributionPoint [-AddBoundaryGroupName <String[]>] [-AddMacAddressForRes
 
 ### SetByName
 ```
-Set-CMDistributionPoint [-AddBoundaryGroupName <String[]>] [-AddMacAddressForRespondingPxeRequest <String[]>]
- [-AllowFallbackForContent <Boolean>] [-AllowPreStaging <Boolean>] [-AllowProxyTraffic <Boolean>]
- [-AllowPxeResponse <Boolean>] [-CertificateExpirationTimeUtc <DateTime>] [-CertificatePassword <SecureString>]
- [-CertificatePath <String>] [-ClearMacAddressForRespondingPxeRequest]
- [-ClientCommunicationType <ComputerCommunicationType>] [-ClientConnectionType <ClientConnectionTypes>]
- [-ClientTransferRate <NetworkProfile>] [-ContentMonitoringPriority <Priority>]
- [-ContentValidationSchedule <IResultObject>] [-Description <String>] [-EnableAnonymous <Boolean>]
- [-EnableBranchCache <Boolean>] [-EnableContentValidation <Boolean>] [-EnableLedbat <Boolean>]
- [-EnableMulticast <Boolean>] [-EnableNonWdsPxe <Boolean>] [-EnablePullDP <Boolean>] [-EnablePxe <Boolean>]
- [-EnableScheduledMulticast <Boolean>] [-EnableUnknownComputerSupport <Boolean>] [-EndIPAddress <String>]
- [-EndUdpPort <Int32>] [-Force] [-KeepWds <Boolean>] [-MacAddressForRespondingPxeRequest <String[]>]
- [-MinimumSessionSize <Int32>] [-MulticastMaximumClientCount <Int32>] [-PassThru] [-PxePassword <SecureString>]
+Set-CMDistributionPoint [-EnableMaintenanceMode <Boolean>] [-AddBoundaryGroupName <String[]>]
+ [-AddMacAddressForRespondingPxeRequest <String[]>] [-AllowFallbackForContent <Boolean>]
+ [-AllowPreStaging <Boolean>] [-AllowProxyTraffic <Boolean>] [-AllowPxeResponse <Boolean>]
+ [-CertificateExpirationTimeUtc <DateTime>] [-CertificatePassword <SecureString>] [-CertificatePath <String>]
+ [-ClearMacAddressForRespondingPxeRequest] [-ClientCommunicationType <ComputerCommunicationType>]
+ [-ClientConnectionType <ClientConnectionTypes>] [-ClientTransferRate <NetworkProfile>]
+ [-ContentMonitoringPriority <Priority>] [-ContentValidationSchedule <IResultObject>] [-Description <String>]
+ [-EnableAnonymous <Boolean>] [-EnableBranchCache <Boolean>] [-EnableContentValidation <Boolean>]
+ [-EnableLedbat <Boolean>] [-EnableMulticast <Boolean>] [-EnableNonWdsPxe <Boolean>] [-EnablePullDP <Boolean>]
+ [-EnablePxe <Boolean>] [-EnableScheduledMulticast <Boolean>] [-EnableUnknownComputerSupport <Boolean>]
+ [-EndIPAddress <String>] [-EndUdpPort <Int32>] [-Force] [-KeepWds <Boolean>]
+ [-MacAddressForRespondingPxeRequest <String[]>] [-MinimumSessionSize <Int32>]
+ [-MulticastMaximumClientCount <Int32>] [-PassThru] [-PxePassword <SecureString>]
  [-PxeServerResponseDelaySec <Int32>] [-ReassignSiteCode <String>] [-RemoveBoundaryGroupName <String[]>]
  [-RemoveMacAddressForRespondingPxeRequest <String[]>] [-RespondToAllNetwork] [-SessionStartDelayMins <Int32>]
  [-SiteCode <String>] [-SiteSystemServerName] <String> [-SourceDistributionPoint <String[]>]
@@ -491,6 +492,21 @@ Accept wildcard characters: False
 ### -EnableLedbat
 
 Enable distribution points to use network congestion control with Windows LEDBAT. This feature can adjust the download speed to use the unused network bandwidth.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableMaintenanceMode
+{{ Fill EnableMaintenanceMode Description }}
 
 ```yaml
 Type: Boolean
@@ -1106,10 +1122,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ### IResultObject#SMS_SCI_SysResUse
-For more information on this return object and its properties, see SMS_SCI_SysResUse server WMI class (/mem/configmgr/develop/reference/core/servers/configure/sms_sci_sysresuse-server-wmi-class).
 
 ## NOTES
 

@@ -1,4 +1,4 @@
----
+﻿---
 description: Modifies a software update point.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -20,7 +20,7 @@ Set-CMSoftwareUpdatePointComponent [-AddCompany <String[]>] [-AddLanguageSummary
  [-AddLanguageUpdateFile <String[]>] [-AddProduct <String[]>] [-AddProductFamily <String[]>]
  [-AddUpdateClassification <String[]>] [-ContentFileOption <ContentFileOptions>] [-DefaultWsusServer <String>]
  [-EnableCallWsusCleanupWizard <Boolean>] [-EnableManualCertManagement <Boolean>]
- [-EnableSyncFailureAlert <Boolean>] [-EnableSynchronization <Boolean>] [-EnableThirdPartyUpdates <Boolean>]
+ [-EnableSyncFailureAlert <Boolean>] [-EnableThirdPartyUpdates <Boolean>]
  [-FeatureUpdateMaxRuntimeMins <Int32>] [-ImmediatelyExpireSupersedence <Boolean>]
  [-ImmediatelyExpireSupersedenceForFeature <Boolean>] [-NonFeatureUpdateMaxRuntimeMins <Int32>] [-PassThru]
  [-RemoveCompany <String[]>] [-RemoveLanguageSummaryDetail <String[]>] [-RemoveLanguageUpdateFile <String[]>]
@@ -37,7 +37,7 @@ Set-CMSoftwareUpdatePointComponent [-AddCompany <String[]>] [-AddLanguageSummary
  [-AddLanguageUpdateFile <String[]>] [-AddProduct <String[]>] [-AddProductFamily <String[]>]
  [-AddUpdateClassification <String[]>] [-ContentFileOption <ContentFileOptions>] [-DefaultWsusServer <String>]
  [-EnableCallWsusCleanupWizard <Boolean>] [-EnableManualCertManagement <Boolean>]
- [-EnableSyncFailureAlert <Boolean>] [-EnableSynchronization <Boolean>] [-EnableThirdPartyUpdates <Boolean>]
+ [-EnableSyncFailureAlert <Boolean>] [-EnableThirdPartyUpdates <Boolean>]
  [-FeatureUpdateMaxRuntimeMins <Int32>] [-ImmediatelyExpireSupersedence <Boolean>]
  [-ImmediatelyExpireSupersedenceForFeature <Boolean>] -Name <String> [-NonFeatureUpdateMaxRuntimeMins <Int32>]
  [-PassThru] [-RemoveCompany <String[]>] [-RemoveLanguageSummaryDetail <String[]>]
@@ -54,7 +54,7 @@ Set-CMSoftwareUpdatePointComponent [-AddCompany <String[]>] [-AddLanguageSummary
  [-AddLanguageUpdateFile <String[]>] [-AddProduct <String[]>] [-AddProductFamily <String[]>]
  [-AddUpdateClassification <String[]>] [-ContentFileOption <ContentFileOptions>] [-DefaultWsusServer <String>]
  [-EnableCallWsusCleanupWizard <Boolean>] [-EnableManualCertManagement <Boolean>]
- [-EnableSyncFailureAlert <Boolean>] [-EnableSynchronization <Boolean>] [-EnableThirdPartyUpdates <Boolean>]
+ [-EnableSyncFailureAlert <Boolean>] [-EnableThirdPartyUpdates <Boolean>]
  [-FeatureUpdateMaxRuntimeMins <Int32>] [-ImmediatelyExpireSupersedence <Boolean>]
  [-ImmediatelyExpireSupersedenceForFeature <Boolean>] -InputObject <IResultObject>
  [-NonFeatureUpdateMaxRuntimeMins <Int32>] [-PassThru] [-RemoveCompany <String[]>]
@@ -247,22 +247,6 @@ Accept wildcard characters: False
 
 ### -EnableSyncFailureAlert
 Indicates whether Configuration Manager creates an alert when synchronization fails on a site.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -EnableSynchronization
-Indicates whether this site automatically synchronizes updates according to a schedule.
-Specify a schedule by using the *Schedule* parameter.
 
 ```yaml
 Type: Boolean
@@ -667,9 +651,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ### IResultObject#SMS_SCI_Component
+
 ## NOTES
 
 ## RELATED LINKS

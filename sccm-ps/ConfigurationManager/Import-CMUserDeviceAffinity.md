@@ -1,4 +1,4 @@
----
+﻿---
 description: Imports a file that contains user and device affinities to Configuration Manager.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -78,7 +78,7 @@ Use the format \<Domain\>\\\<user name\>,\<device NetBIOS name\>.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: FilePath, ImportFilePath, Path
 
 Required: True
 Position: Named
@@ -154,6 +154,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
+
 ## OUTPUTS
 
 ### System.Object

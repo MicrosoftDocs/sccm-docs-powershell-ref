@@ -1,4 +1,4 @@
----
+﻿---
 description: Import a query to Configuration Manager.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -84,7 +84,7 @@ Specify the path to the file to import. The file extension is **.mof**.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: Path
+Aliases: FileName, FilePath, Path
 
 Required: True
 Position: 0
@@ -131,6 +131,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
+
 ## OUTPUTS
 
 ### System.Object

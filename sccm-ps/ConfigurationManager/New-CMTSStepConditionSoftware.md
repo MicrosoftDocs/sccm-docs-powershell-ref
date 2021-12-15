@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 09/02/2021
@@ -45,7 +45,6 @@ $tsNameOsd = "Default OS deployment"
 $tsStepNameRunPwsh = "Run PowerShell Script"
 
 Set-CMTSStepRunPowerShellScript -TaskSequenceName $tsNameOsd -StepName $tsStepNameRunPwsh -AddCondition $condition
-
 ```
 
 This sample script creates the following condition on the step:
