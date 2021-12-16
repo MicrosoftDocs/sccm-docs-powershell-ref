@@ -85,7 +85,7 @@ The following cmdlets are deprecated and may be removed in a future release:
 The following cmdlets are no longer available because the underlying feature is no longer supported:
 
 - Get-CMTSStepConvertDisk
-- New-CMTSStepConverDisk
+- New-CMTSStepConvertDisk
 - Remove-CMTSStepConvertDisk
 - Set-CMTSStepConvertDisk
 
