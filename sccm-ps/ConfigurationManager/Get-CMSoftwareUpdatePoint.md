@@ -1,8 +1,7 @@
 ﻿---
-description: Gets a Configuration Manager software update point.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/02/2019
+ms.date: 12/15/2021
 schema: 2.0.0
 title: Get-CMSoftwareUpdatePoint
 ---
@@ -10,7 +9,8 @@ title: Get-CMSoftwareUpdatePoint
 # Get-CMSoftwareUpdatePoint
 
 ## SYNOPSIS
-Gets a Configuration Manager software update point.
+
+Get a software update point.
 
 ## SYNTAX
 
@@ -27,13 +27,14 @@ Get-CMSoftwareUpdatePoint [-AllSite] -InputObject <IResultObject> [-DisableWildc
 ```
 
 ## DESCRIPTION
-The **Get-CMSoftwareUpdatePoint** cmdlet gets a software update point site system role for Configuration Manager.
+
+Use this cmdlet to get a software update point site system role.
 
 A software update point is a site server role that hosts software updates.
 Configuration Manager clients connect to a software update point to get available updates.
 The software update point interacts with Windows Server Update Services (WSUS) to configure update settings, request synchronization to the update source, and to synchronize software updates from the WSUS database.
 
-You can specify a software update point by site code or by the name of the computer that hosts the site system role.
+For more information, see [Plan for software updates in Configuration Manager](/mem/configmgr/sum/plan-design/plan-for-software-updates).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
@@ -41,15 +42,19 @@ You can specify a software update point by site code or by the name of the compu
 ## EXAMPLES
 
 ### Example 1: Get a software update point
-```
-PS XYZ:\> Get-CMSoftwareUpdatePoint -SiteSystemServerName "UpdateSystem.Western.Contoso.com"
-```
 
 The command gets a software update point that UpdateSystem.Western.Contoso.com hosts.
+
+```powershell
+Get-CMSoftwareUpdatePoint -SiteSystemServerName "UpdateSystem.Western.Contoso.com"
+```
 
 ## PARAMETERS
 
 ### -AllSite
+
+Add this parameter to get the software update points from all sites in the hierarchy.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -95,8 +100,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies the input to this cmdlet.
-You can use this parameter, or you can pipe the input to this cmdlet.
+
+Specify a site system server object that has the software update point role. To get this object, use the [Get-CMSiteSystemServer](Get-CMSiteSystemServer.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -111,7 +116,8 @@ Accept wildcard characters: False
 ```
 
 ### -SiteCode
-Specifies a site code for a Configuration Manager site.
+
+Specify the three-character code for the site that manages the system role for the software update point.
 
 ```yaml
 Type: String
@@ -126,7 +132,8 @@ Accept wildcard characters: False
 ```
 
 ### -SiteSystemServerName
-Specifies the name of a computer that hosts the software update point site system role.
+
+Specify the name of the site system server that hosts the software update point role.
 
 ```yaml
 Type: String
@@ -146,11 +153,16 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ### IResultObject[]#SMS_SCI_SysResUse
+
 ### IResultObject#SMS_SCI_SysResUse
+
 ## NOTES
+
+For more information on this return object and its properties, see [SMS_SCI_SysResUse server WMI class](/mem/configmgr/develop/reference/core/servers/configure/sms_sci_sysresuse-server-wmi-class).
 
 ## RELATED LINKS
 
@@ -159,5 +171,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-CMSoftwareUpdatePoint](Remove-CMSoftwareUpdatePoint.md)
 
 [Set-CMSoftwareUpdatePoint](Set-CMSoftwareUpdatePoint.md)
-
-

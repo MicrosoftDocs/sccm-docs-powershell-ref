@@ -1,8 +1,7 @@
 ﻿---
-description: Modifies a software update point.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/07/2019
+ms.date: 12/15/2021
 schema: 2.0.0
 title: Set-CMSoftwareUpdatePointComponent
 ---
@@ -10,7 +9,8 @@ title: Set-CMSoftwareUpdatePointComponent
 # Set-CMSoftwareUpdatePointComponent
 
 ## SYNOPSIS
-Modifies a software update point.
+
+Configure the site component for the software update point.
 
 ## SYNTAX
 
@@ -67,30 +67,73 @@ Set-CMSoftwareUpdatePointComponent [-AddCompany <String[]>] [-AddLanguageSummary
 ```
 
 ## DESCRIPTION
-The **Set-CMSoftwareUpdatePointComponent** cmdlet modifies a software update point.
+
+Use this cmdlet to configure the site component for the software update point. Use it after you add a software update point, for example with the **Add-CMSoftwareUpdatePoint** cmdlet. You can also use this cmdlet to reconfigure an existing software update point.
+
 A software update point component interacts with a Windows Server Update Services (WSUS) server to configure update settings, request synchronization to the upstream update source, and synchronize updates from the WSUS database to the site server database on the central site.
 
-You can specify a software update point to modify by name, by site code, or by using the [Get-CMSoftwareUpdatePointComponent](Get-CMSoftwareUpdatePointComponent.md) cmdlet.
+For more information, see [Site components for Configuration Manager](/mem/configmgr/core/servers/deploy/configure/site-components).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
-### Example 1: Modify a software update point
-```
-PS XYZ:\> $CIObj = Get-CMSoftwareUpdatePointComponent -SiteSystemServerName "Contoso-SiteSysSrv.Western.Contoso.com"
-PS XYZ:\> Set-CMSoftwareUpdatePointComponent -InputObject $CIObj
+### Example 1: Modify a software update point site component
+
+The first command gets a software update point component object from the **XYZ** site. The command stores the object in the **$supComp** variable.
+
+The second command creates a schedule object to recur every three days.
+
+This example then [splats](/powershell/module/microsoft.powershell.core/about/about_splatting) the cmdlet parameters into the **parameters** variable. It's not required to splat the parameters, it just makes it easier to read the parameters for such a long command line.
+
+The last command modifies common properties of the software update point component.
+
+```powershell
+$supComp = Get-CMSoftwareUpdatePointComponent -SiteSystemServerName 'sup1.contoso.com' -SiteCode 'XYZ'
+
+$schedule = New-CMSchedule -RecurCount 3 -RecurInterval Days -Start "2020/1/7 12:00:00"
+
+$addLang = "Dutch"
+$removeLang = "English"
+
+$parameters = @{
+  InputObject = $supComp
+  DefaultWsusServer = 'sup.contoso.com'
+  SynchronizeAction = 'SynchronizeFromMicrosoftUpdate'
+  ReportingEvent = 'CreateAllWsusReportingEvents'
+  RemoveUpdateClassification = "Update Rollups"
+  AddUpdateClassification = "Critical Updates"
+  Schedule = $schedule
+  EnableSyncFailureAlert = $true
+  ImmediatelyExpireSupersedence = $true
+  AddLanguageUpdateFile = $addLang
+  AddLanguageSummaryDetails = $addLang
+  RemoveLanguageUpdateFile = $removeLang
+  RemoveLanguageSummaryDetails = $removeLang
+}
+
+Set-CMSoftwareUpdatePointComponent @parameters
 ```
 
-The first command retrieves a software update point component object on the server named Contoso-SiteSysSrv.TSQA.Contoso.com.
-The command stores the object in the **$CIObj** variable.
+### Example 2: Disable software update point synchronization
 
-The second command modifies the software update point component in **$CIObj**.
+The following command removes the schedule from the site component, which disables synchronization.
+
+```powershell
+Set-CMSoftwareUpdatePointComponent -Name "Contoso-SiteSysSrv.Western.Contoso.com" -Schedule $null
+```
 
 ## PARAMETERS
 
 ### -AddCompany
+
+This parameter is a string array of company names. Use this option to synchronize the entire company's list of **Products**.
+
+To remove an entire company from this list, use the **RemoveCompany** parameter.
+
+For more information, see [Configure classifications and products to synchronize](/mem/configmgr/sum/get-started/configure-classifications-and-products).
+
 ```yaml
 Type: String[]
 Parameter Sets: (All)
@@ -104,6 +147,13 @@ Accept wildcard characters: False
 ```
 
 ### -AddLanguageSummaryDetail
+
+This parameter is a string array of language names. Use this option to download **Summary details** for the specified languages.
+
+To remove languages from this list, use the **RemoveLanguageSummaryDetail** parameter.
+
+For more information, see [Plan for synchronization settings - Languages](/mem/configmgr/sum/plan-design/plan-for-software-updates#BKMK_UpdateLanguages).
+
 ```yaml
 Type: String[]
 Parameter Sets: (All)
@@ -117,8 +167,12 @@ Accept wildcard characters: False
 ```
 
 ### -AddLanguageUpdateFile
-Specifies an array of languages, as strings.
-The cmdlet adds these languages to the languages supported for software updates at this site.
+
+This parameter is a string array of language names. Use this option to download the **Software update file** for the specified languages.
+
+To remove languages from this list, use the **RemoveLanguageUpdateFile** parameter.
+
+For more information, see [Plan for synchronization settings - Languages](/mem/configmgr/sum/plan-design/plan-for-software-updates#BKMK_UpdateLanguages).
 
 ```yaml
 Type: String[]
@@ -133,6 +187,13 @@ Accept wildcard characters: False
 ```
 
 ### -AddProduct
+
+This parameter is a string array of product names. Use this option to synchronize **Products**.
+
+To remove a product from this list, use the **RemoveProduct** parameter.
+
+For more information, see [Configure classifications and products to synchronize](/mem/configmgr/sum/get-started/configure-classifications-and-products).
+
 ```yaml
 Type: String[]
 Parameter Sets: (All)
@@ -146,6 +207,13 @@ Accept wildcard characters: False
 ```
 
 ### -AddProductFamily
+
+This parameter is a string array of product family names. Use this option to synchronize a product family's list of **Products**.
+
+To remove an entire product family from this list, use the **RemoveProductFamily** parameter.
+
+For more information, see [Configure classifications and products to synchronize](/mem/configmgr/sum/get-started/configure-classifications-and-products).
+
 ```yaml
 Type: String[]
 Parameter Sets: (All)
@@ -159,8 +227,12 @@ Accept wildcard characters: False
 ```
 
 ### -AddUpdateClassification
-Specifies an array of software update classifications, as strings.
-This cmdlet adds these classifications to the classifications supported for software updates at this site.
+
+This parameter is a string array of update classifications. Use this option to synchronize specific software update **Classifications**.
+
+To remove a classification from this list, use the **RemoveUpdateClassification** parameter.
+
+For more information, see [Configure classifications and products to synchronize](/mem/configmgr/sum/get-started/configure-classifications-and-products).
 
 ```yaml
 Type: String[]
@@ -175,6 +247,12 @@ Accept wildcard characters: False
 ```
 
 ### -ContentFileOption
+
+Use this parameter to configure how the software update point downloads update files. Express installation files provide smaller download and faster installation on computers because only the necessary files are downloaded and installed. They're larger files and will increase download times for your site servers and distribution points.
+
+- `FullFilesOnly`: Download full files for all approved updates
+- `ExpressForWindows10Only`: Download both full files for all approved updates and express installation files for Windows 10 or later
+
 ```yaml
 Type: ContentFileOptions
 Parameter Sets: (All)
@@ -189,6 +267,9 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultWsusServer
+
+Specify the FQDN of the WSUS server.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -218,6 +299,9 @@ Accept wildcard characters: False
 ```
 
 ### -EnableCallWsusCleanupWizard
+
+Set this parameter to `$true` to enable WSUS cleanup tasks to run after synchronization. For more information, see [Software updates maintenance](/mem/configmgr/sum/deploy-use/software-updates-maintenance).
+
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
@@ -231,7 +315,10 @@ Accept wildcard characters: False
 ```
 
 ### -EnableManualCertManagement
-Starting in version 1910, use this parameter to enable or disable manual management of the WSUS signing certificate for third-party updates.
+
+Set this parameter to `$true` to manually manage the WSUS signing certificate for third-party updates. This parameter is dependent on the **EnableThirdPartyUpdates** parameter.
+
+For more information, see [Enable third-party updates](/mem/configmgr/sum/deploy-use/third-party-software-updates).
 
 ```yaml
 Type: Boolean
@@ -246,7 +333,8 @@ Accept wildcard characters: False
 ```
 
 ### -EnableSyncFailureAlert
-Indicates whether Configuration Manager creates an alert when synchronization fails on a site.
+
+Set this parameter to `$true` to enable the component to create an alert when synchronization fails.
 
 ```yaml
 Type: Boolean
@@ -261,7 +349,10 @@ Accept wildcard characters: False
 ```
 
 ### -EnableThirdPartyUpdates
-Starting in version 1910, use this parameter to enable or disable the following option on the **Third Party Updates** tab of the software update point component properties: **Enable third-party software updates**.
+
+Set this parameter to `$true` to **Enable third-party software updates**. You can also use the **EnableManualCertManagement** parameter.
+
+For more information, see [Enable third-party updates](/mem/configmgr/sum/deploy-use/third-party-software-updates).
 
 ```yaml
 Type: Boolean
@@ -276,7 +367,12 @@ Accept wildcard characters: False
 ```
 
 ### -FeatureUpdateMaxRuntimeMins
-Starting in 1910, use this parameter to configure the following setting on the **Maximum Run Time** tab of the software update point component properties: **Maximum run time for Windows feature updates (minutes)**.
+
+Specify an integer value for the default maximum amount of time a software update installation has to complete. You can override this default for a specific update. This setting only affects newly synchronized updates. This parameter only applies to Windows feature updates.
+
+To configure the maximum run time for Office 365 updates and non-feature updates for Windows, use the **NonFeatureUpdateMaxRuntimeMins** parameter.
+
+For more information, see [Plan for synchronization settings](/mem/configmgr/sum/plan-design/plan-for-software-updates#bkmk_maxruntime).
 
 ```yaml
 Type: Int32
@@ -307,10 +403,16 @@ Accept wildcard characters: False
 ```
 
 ### -ImmediatelyExpireSupersedence
-Indicates whether a software update expires immediately after another update supersedes it or after a specified period of time.
-If you specify a value of $False for this parameter, specify the number of months to wait for expiration by using the *WaitMonth* parameter.
 
-System Center 2016 Endpoint Protection definition updates and software updates that Service Packs supersede never expire.
+Set this parameter to `$true` to immediately expire a software update when another update supersedes it or after a specified period of time.
+
+If you specify a value of `$False` for this parameter, specify the number of months to wait for expiration by using the **WaitMonth** parameter.
+
+Some updates never expire, for example definition updates.
+
+If you change this setting, the site starts a full synchronization.
+
+To configure this behavior for Windows feature updates, use the **ImmediatelyExpireSupersedenceForFeature** parameter.
 
 ```yaml
 Type: Boolean
@@ -325,7 +427,14 @@ Accept wildcard characters: False
 ```
 
 ### -ImmediatelyExpireSupersedenceForFeature
-{{ Fill ImmediatelyExpireSupersedenceForFeature Description }}
+
+Set this parameter to `$true` to immediately expire a Windows feature update when another update supersedes it or after a specified period of time.
+
+If you specify a value of `$False` for this parameter, specify the number of months to wait for expiration by using the **WaitMonthForFeature** parameter.
+
+If you change this setting, the site starts a full synchronization.
+
+To configure this behavior for non-feature updates, use the **ImmediatelyExpireSupersedence** parameter.
 
 ```yaml
 Type: Boolean
@@ -340,8 +449,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies a software update point component object.
-To obtain a software update point component object, use the [Get-CMSoftwareUpdatePointComponent](Get-CMSoftwareUpdatePointComponent.md) cmdlet.
+
+Specify a software update point site component object to configure. To get this object, use the [Get-CMSoftwareUpdatePointComponent](Get-CMSoftwareUpdatePointComponent.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -356,7 +465,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies a name of a site system server in Configuration Manager.
+
+Specify the name of a site system server with the software update point role.
 
 ```yaml
 Type: String
@@ -371,7 +481,12 @@ Accept wildcard characters: False
 ```
 
 ### -NonFeatureUpdateMaxRuntimeMins
-Starting in 1910, use this parameter to configure the following setting on the **Maximum Run Time** tab of the software update point component properties: **Maximum run time for Office 365 updates and non-feature updates for Windows (minutes)**.
+
+Specify an integer value for the default maximum amount of time a software update installation has to complete. You can override this default for a specific update. This setting only affects newly synchronized updates. This parameter only applies to Office 365 updates and non-feature updates for Windows.
+
+To configure the maximum run time for Windows feature updates, use the **FeatureUpdateMaxRuntimeMins** parameter.
+
+For more information, see [Plan for synchronization settings](/mem/configmgr/sum/plan-design/plan-for-software-updates#bkmk_maxruntime).
 
 ```yaml
 Type: Int32
@@ -402,6 +517,13 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveCompany
+
+This parameter is a string array of company names. Use this option to _not_ synchronize the entire company's list of **Products**.
+
+To add an entire company to this list, use the **AddCompany** parameter.
+
+For more information, see [Configure classifications and products to synchronize](/mem/configmgr/sum/get-started/configure-classifications-and-products).
+
 ```yaml
 Type: String[]
 Parameter Sets: (All)
@@ -415,6 +537,13 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveLanguageSummaryDetail
+
+This parameter is a string array of language names. Use this option to _not_ download **Summary details** for the specified languages.
+
+To add languages to this list, use the **AddLanguageSummaryDetail** parameter.
+
+For more information, see [Plan for synchronization settings - Languages](/mem/configmgr/sum/plan-design/plan-for-software-updates#BKMK_UpdateLanguages).
+
 ```yaml
 Type: String[]
 Parameter Sets: (All)
@@ -428,8 +557,12 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveLanguageUpdateFile
-Specifies an array of languages, as strings.
-The cmdlet removes these languages from the languages supported for software updates at this site.
+
+This parameter is a string array of language names. Use this option to _not_ download the **Software update file** for the specified languages.
+
+To add languages to this list, use the **AddLanguageUpdateFile** parameter.
+
+For more information, see [Plan for synchronization settings - Languages](/mem/configmgr/sum/plan-design/plan-for-software-updates#BKMK_UpdateLanguages).
 
 ```yaml
 Type: String[]
@@ -444,7 +577,12 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveProduct
-Specifies an array of products, as strings.
+
+This parameter is a string array of product names. Use this option to _not_ synchronize **Products**.
+
+To add a product to this list, use the **AddProduct** parameter.
+
+For more information, see [Configure classifications and products to synchronize](/mem/configmgr/sum/get-started/configure-classifications-and-products).
 
 ```yaml
 Type: String[]
@@ -459,7 +597,12 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveProductFamily
-Specifies an array of product families, as strings.
+
+This parameter is a string array of product family names. Use this option to _not_ synchronize a product family's list of **Products**.
+
+To add an entire product family to this list, use the **AddProductFamily** parameter.
+
+For more information, see [Configure classifications and products to synchronize](/mem/configmgr/sum/get-started/configure-classifications-and-products).
 
 ```yaml
 Type: String[]
@@ -474,8 +617,12 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveUpdateClassification
-Specifies an array of software update classifications, as strings.
-This cmdlet removes these classifications from the classifications supported for software updates at this site.
+
+This parameter is a string array of update classifications. Use this option to _not_ synchronize specific software update **Classifications**.
+
+To add a classification to this list, use the **AddUpdateClassification** parameter.
+
+For more information, see [Configure classifications and products to synchronize](/mem/configmgr/sum/get-started/configure-classifications-and-products).
 
 ```yaml
 Type: String[]
@@ -490,12 +637,8 @@ Accept wildcard characters: False
 ```
 
 ### -ReportingEvent
-Specifies whether to create event messages for WSUS reporting for status reporting events or for all reporting events.
-The acceptable values for this parameter are:
 
-- CreateAllWsusReportingEvents
-- CreateOnlyWsusStatusReportingEvents
-- DoNotCreateWsusReportingEvents
+Specify whether the Windows Update Agent (WUA) on clients create event messages for WSUS reporting. Configuration Manager doesn't use these events. Don't create these events, unless you require them for other uses.
 
 ```yaml
 Type: ReportingEventType
@@ -511,9 +654,10 @@ Accept wildcard characters: False
 ```
 
 ### -Schedule
-Specifies a **Schedule** object.
-Configuration Manager can synchronize updates according this schedule if you specify a value of $True for the *EnableSynchronization* parameter.
-To obtain a **Schedule** object, use the [New-CMSchedule](New-CMSchedule.md) cmdlet.
+
+Specify a **Schedule** object to enable synchronization. To disable synchronization, set this parameter to `$null`.
+
+To get a schedule object, use the [New-CMSchedule](New-CMSchedule.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -528,7 +672,8 @@ Accept wildcard characters: False
 ```
 
 ### -SiteCode
-Specifies a site code in Configuration Manager.
+
+Specify the three-character code for the site at which to configure its software update point component.
 
 ```yaml
 Type: String
@@ -543,14 +688,12 @@ Accept wildcard characters: False
 ```
 
 ### -SynchronizeAction
-Specifies a source for synchronization for this software update point.
-The acceptable values for this parameter are:
 
-- DoNotSynchronizeFromMicrosoftUpdateOrUpstreamDataSource
-- SynchronizeFromAnUpstreamDataSourceLocation
-- SynchronizeFromMicrosoftUpdate
+Specify the synchronization source for this software update point.
 
-If you select a value of SynchronizeFromAnUpstreamDataSourceLocation, specify the data source location by using the **UpstreamSourceLocation** parameter.
+If you select a value of `SynchronizeFromAnUpstreamDataSourceLocation`, specify the data source location by using the **UpstreamSourceLocation** parameter.
+
+For more information, see [Plan for synchronization settings](/mem/configmgr/sum/plan-design/plan-for-software-updates#BKMK_SyncSource).
 
 ```yaml
 Type: SynchronizeActionType
@@ -566,8 +709,10 @@ Accept wildcard characters: False
 ```
 
 ### -UpstreamSourceLocation
-Specifies an upstream data location as a URL.
-To use this location, specify a value of SynchronizeFromAnUpstreamDataSourceLocation for the *SynchronizeAction* parameter.
+
+Specify an upstream data location as a URL. For example, `https://wsusserver.contoso.com:8531`
+
+To use this location, specify `SynchronizeFromAnUpstreamDataSourceLocation` for the **SynchronizeAction** parameter.
 
 ```yaml
 Type: String
@@ -582,10 +727,10 @@ Accept wildcard characters: False
 ```
 
 ### -WaitMonth
-Specifies how long, in months, to wait before a software update expires after another update supersedes it.
-Specify a value of $True for the *ImmediatelyExpireSupersedence* parameter for software updates to expire immediately.
 
-Endpoint Protection definition updates and software updates that Service Packs supersede never expire.
+Set the integer value for the number of months to wait before a software update expires after another update supersedes it.
+
+This parameter depends on the **ImmediatelyExpireSupersedence** parameter.
 
 ```yaml
 Type: Int32
@@ -600,7 +745,10 @@ Accept wildcard characters: False
 ```
 
 ### -WaitMonthForFeature
-{{ Fill WaitMonthForFeature Description }}
+
+Set the integer value for the number of months to wait before a Windows feature update expires after another update supersedes it.
+
+This parameter depends on the **ImmediatelyExpireSupersedenceForFeature** parameter.
 
 ```yaml
 Type: Int32
@@ -615,6 +763,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -658,17 +807,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## NOTES
 
+For more information on this return object and its properties, see [SMS_SCI_Component server WMI class](/mem/configmgr/develop/reference/core/servers/configure/sms_sci_component-server-wmi-class).
+
 ## RELATED LINKS
 
 [Get-CMSoftwareUpdatePointComponent](Get-CMSoftwareUpdatePointComponent.md)
 
-[New-CMSchedule](New-CMSchedule.md)
+[Add-CMSoftwareUpdatePoint](Add-CMSoftwareUpdatePoint.md)
 
-[Set-CMCollectionMembershipEvaluationComponent](Set-CMCollectionMembershipEvaluationComponent.md)
-
-[Set-CMEmailNotificationComponent](Set-CMEmailNotificationComponent.md)
-
-[Set-CMManagementPointComponent](Set-CMManagementPointComponent.md)
-
-[Set-CMStatusReportingComponent](Set-CMStatusReportingComponent.md)
-
+[Site components for Configuration Manager](/mem/configmgr/core/servers/deploy/configure/site-components)

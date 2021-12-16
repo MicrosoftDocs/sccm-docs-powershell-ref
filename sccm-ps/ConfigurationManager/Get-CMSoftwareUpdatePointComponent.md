@@ -1,8 +1,7 @@
 ﻿---
-description: Retrieves a software update point component in Configuration Manager.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/02/2019
+ms.date: 12/15/2021
 schema: 2.0.0
 title: Get-CMSoftwareUpdatePointComponent
 ---
@@ -10,7 +9,8 @@ title: Get-CMSoftwareUpdatePointComponent
 # Get-CMSoftwareUpdatePointComponent
 
 ## SYNOPSIS
-Retrieves a software update point component in Configuration Manager.
+
+Get the site component for the software update point.
 
 ## SYNTAX
 
@@ -20,27 +20,41 @@ Get-CMSoftwareUpdatePointComponent [-SiteCode <String>] [-SiteSystemServerName <
 ```
 
 ## DESCRIPTION
-The **Get-CMSoftwareUpdatePointComponent** cmdlet retrieves a software update point component.
-A software update point component interacts with WSUS services to configure update settings, request synchronization to the upstream update source, and synchronize updates from the WSUS database to the site server database on the central site.
+
+Use this cmdlet to get the site component for the software update point. You can use the cmdlet to view the component configuration, or to get an object to configure with the [Set-CMSoftwareUpdatePointComponent](Set-CMSoftwareUpdatePointComponent.md) cmdlet.
+
+A software update point component interacts with a Windows Server Update Services (WSUS) server to configure update settings, request synchronization to the upstream update source, and synchronize updates from the WSUS database to the site server database on the central site.
+
+For more information, see [Site components for Configuration Manager](/mem/configmgr/core/servers/deploy/configure/site-components).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
-### Example 1: Retrieve a software update point component by name
-```
-PS XYZ:\> Get-CMSoftwareUpdatePointComponent -SiteSystemServerName "Contoso-SiteSysSrv.Western.Contoso.com"
+### Example 1: Get a software update point component by name
+
+This command gets a software update point component by using the site system server name.
+
+```powershell
+Get-CMSoftwareUpdatePointComponent -SiteSystemServerName "Contoso-SiteSysSrv.Western.Contoso.com"
 ```
 
-This command retrieves a software update point component by using the site system server name.
+### Example 2: Get a software update point component by site code
 
-### Example 2: Retrieve a software update point component by site code
-```
-PS XYZ:\> Get-CMSoftwareUpdatePointComponent -SiteCode "CM1"
+This command gets a software update point component by using the site code.
+
+```powershell
+Get-CMSoftwareUpdatePointComponent -SiteCode "CM1"
 ```
 
-This command retrieves a software update point component by using the site code.
+### Example 3: Show the status of third-party updates in the hierarchy
+
+```powershell
+$SUPWsusSyncMgr = Get-CMSoftwareUpdatePointComponent -WsusSyncManager
+
+$SUPWsusSyncMgr.Props | Where PropertyName -eq "EnableThirdPartyUpdates"
+```
 
 ## PARAMETERS
 
@@ -77,7 +91,8 @@ Accept wildcard characters: False
 ```
 
 ### -SiteCode
-Specifies a site code in Configuration Manager.
+
+Specify the three-character code for the site from which to get the software update point component.
 
 ```yaml
 Type: String
@@ -92,7 +107,8 @@ Accept wildcard characters: False
 ```
 
 ### -SiteSystemServerName
-Specifies an array of names of a site system servers in Configuration Manager.
+
+Specify the FQDN of a site system server that has the software update point role.
 
 ```yaml
 Type: String
@@ -107,6 +123,9 @@ Accept wildcard characters: False
 ```
 
 ### -WsusSyncManager
+
+By default, this cmdlet gets objects and properties from the **SMS_WSUS_CONFIGURATION_MANAGER** component. Add this parameter to get objects and properties from the **SMS_WSUS_SYNC_MANAGER** component.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -125,14 +144,19 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
+
 ## OUTPUTS
 
 ### IResultObject[]#SMS_SCI_Component
+
 ### IResultObject#SMS_SCI_Component
+
 ## NOTES
+
+For more information on this return object and its properties, see [SMS_SCI_Component server WMI class](/mem/configmgr/develop/reference/core/servers/configure/sms_sci_component-server-wmi-class).
 
 ## RELATED LINKS
 
 [Set-CMSoftwareUpdatePointComponent](Set-CMSoftwareUpdatePointComponent.md)
 
-
+[Site components for Configuration Manager](/mem/configmgr/core/servers/deploy/configure/site-components)
