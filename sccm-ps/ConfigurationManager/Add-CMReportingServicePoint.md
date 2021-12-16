@@ -1,8 +1,7 @@
 ---
-description: Adds a reporting service point to Configuration Manager.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 04/29/2019
+ms.date: 12/15/2021
 schema: 2.0.0
 title: Add-CMReportingServicePoint
 ---
@@ -10,7 +9,8 @@ title: Add-CMReportingServicePoint
 # Add-CMReportingServicePoint
 
 ## SYNOPSIS
-Adds a reporting service point to Configuration Manager.
+
+Add a reporting service point.
 
 ## SYNTAX
 
@@ -30,8 +30,12 @@ Add-CMReportingServicePoint [-DatabaseName <String>] [-DatabaseServerName <Strin
 ```
 
 ## DESCRIPTION
-The **Add-CMReportingServicePoint** cmdlet adds a reporting service point to Configuration Manager.
-A reporting service point is a site system role that is installed on a server that run Microsoft SQL Server Reporting Services.
+Use this cmdlet to add a reporting service point to the site. A reporting service point is a site system role that's installed on a server that run Microsoft SQL Server Reporting Services.
+
+For more information, see [Introduction to reporting in Configuration Manager](/mem/configmgr/core/servers/manage/introduction-to-reporting).
+
+> [!IMPORTANT]
+> This cmdlet doesn't support [PowerShell 7](/powershell/sccm/overview#support-for-powershell-version-7).<!-- 12500019 --> It requires the .NET Framework instead of .NET Core that's used with PowerShell version 7.
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
@@ -39,16 +43,20 @@ A reporting service point is a site system role that is installed on a server th
 ## EXAMPLES
 
 ### Example 1: Add a reporting service point
-```
-PS XYZ:\>Add-CMReportingServicePoint -SiteCode "CM1" -SiteSystemServerName "CMReportingServicePoint.TSQA.Contoso.com"
-```
 
 This command adds a reporting service point on the computer named CMReportingServicePoint.TSQA.Contoso.com for the Configuration Manager site that has the site code CM1.
+
+```powershell
+Add-CMReportingServicePoint -SiteCode "CM1" -SiteSystemServerName "CMReportingServicePoint.TSQA.Contoso.com"
+```
 
 ## PARAMETERS
 
 ### -DatabaseName
-Specifies the name of the Configuration Manager database that you want to use as the data source for reports from Microsoft SQL Server Reporting Services.
+
+Specify the name of the Configuration Manager database that you want to use as the data source for reports from Microsoft SQL Server Reporting Services.
+
+To specify a database instance, use the format `ServerName\InstanceName`.
 
 ```yaml
 Type: String
@@ -63,8 +71,8 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseServerName
-Specifies the name of the Configuration Manager database server that you want to use as the data source for reports from Microsoft SQL Server Reporting Services.
-To specify a database instance, use the format \<Server Name\>\\\<Instance Name\>.
+
+Specify the name of the Configuration Manager database server that you want to use as the data source for reports from Microsoft SQL Server Reporting Services.
 
 ```yaml
 Type: String
@@ -95,7 +103,8 @@ Accept wildcard characters: False
 ```
 
 ### -FolderName
-Specifies the name of the report folder on the report server.
+
+Specify the name of the report folder on the report server.
 
 ```yaml
 Type: String
@@ -110,6 +119,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
+
 Run the command without asking for confirmation.
 
 ```yaml
@@ -141,8 +151,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies the input to this cmdlet.
-You can use this parameter, or you can pipe the input to this cmdlet.
+
+Specify a site system server object on which to add the reporting service point role. To get this object, use the [Get-CMSiteSystemServer](Get-CMSiteSystemServer.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -157,7 +167,8 @@ Accept wildcard characters: False
 ```
 
 ### -ReportServerInstance
-Specifies the name of an instance of Microsoft SQL Server Reporting Services.
+
+Specify the name of an instance of Microsoft SQL Server Reporting Services.
 
 ```yaml
 Type: String
@@ -172,7 +183,8 @@ Accept wildcard characters: False
 ```
 
 ### -SiteCode
-Specifies a site code of a Configuration Manager site that hosts this site system role.
+
+Specify the three-character code for the site that manages the system role for the reporting service point.
 
 ```yaml
 Type: String
@@ -187,7 +199,8 @@ Accept wildcard characters: False
 ```
 
 ### -SiteSystemServerName
-Specifies a fully qualified domain name (FQDN) of the server that hosts the site system role.
+
+Specify the name of the site system server to host the reporting service point role.
 
 ```yaml
 Type: String
@@ -202,7 +215,8 @@ Accept wildcard characters: False
 ```
 
 ### -UserName
-Specifies a user name for an account that Configuration Manager uses to connect with Microsoft SQL Server Reporting Services and that gives this user access to the site database.
+
+Specify the user name for the Reporting services point account. This account provides authenticated access from the site to Microsoft SQL Server Reporting Services. For more information, see [Accounts used in Configuration Manager](/mem/configmgr/core/plan-design/hierarchy/accounts#reporting-services-point-account).
 
 ```yaml
 Type: String
@@ -217,6 +231,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -253,10 +268,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ### IResultObject#SMS_SCI_SysResUse
+
 ## NOTES
+
+For more information on this return object and its properties, see [SMS_SCI_SysResUse server WMI class](/mem/configmgr/develop/reference/core/servers/configure/sms_sci_sysresuse-server-wmi-class).
 
 ## RELATED LINKS
 
@@ -265,5 +284,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-CMReportingServicePoint](Remove-CMReportingServicePoint.md)
 
 [Set-CMReportingServicePoint](Set-CMReportingServicePoint.md)
-
-

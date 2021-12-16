@@ -1,7 +1,7 @@
 ---
 title: Configuration Manager PowerShell cmdlets
 description: Manage your Configuration Manager hierarchy using Windows PowerShell. 
-ms.date: 12/01/2021
+ms.date: 12/15/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: overview
@@ -152,6 +152,10 @@ The following cmdlets don't support PowerShell 7:
 - Export-CMPackage
 - Export-CMDriverPackage
 - Export-CMTaskSequence
+- Add-CMReportingServicePoint<!-- 12500019 -->
+- Get-CMReportingServicePoint
+- Remove-CMReportingServicePoint
+- Set-CMReportingServicePoint
 
 They require the .NET Framework instead of .NET Core that's used with PowerShell version 7.
 
