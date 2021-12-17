@@ -1,6 +1,7 @@
 ---
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
+ms.date: 12/16/2021
 online version:
 schema: 2.0.0
 ---
@@ -8,7 +9,8 @@ schema: 2.0.0
 # Set-CMApplicationSupersedence
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Set deployment type supersedence for an application.
 
 ## SYNTAX
 
@@ -43,21 +45,41 @@ Set-CMApplicationSupersedence [-InputObject] <IResultObject> [-CurrentDeployment
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+Use this cmdlet to set deployment type supersedence for the specified application.
+
+For more information, see [Supersede applications](/mem/configmgr/apps/deploy-use/revise-and-supersede-applications#supersedence).
+
+> [!NOTE]
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Add deployment type supersedence
+
 ```powershell
-PS C:\> {{ Add example code here }}
+$AppSupersededName = "Superseded app"
+$AppSuperseded = New-CMApplication -Name $AppSupersededName
+$OriginalDT = Add-CMScriptDeploymentType -ApplicationName $AppSuperseded -DeploymentTypeName "ScriptDT01" -InstallCommand 'appsetup.exe'
+
+$AppSupersedingName = "Superseding app"
+$AppSuperseding = New-CMApplication -Name $AppSupersedingName
+$AppSupersedingDT = Add-CMScriptDeploymentType -ApplicationName $AppSuperseding -DeploymentTypeName "ScriptDT02" -InstallCommand 'appsetup2.exe'
+
+Set-CMApplicationSupersedence -ApplicationId ($AppSuperseding.CI_ID) -CurrentDeploymentTypeId ($AppSupersedingDT.CI_ID) -SupersededApplicationId ($AppSuperseded.CI_ID) -OldDeploymentTypeId ($OriginalDT.CI_ID)
 ```
 
-{{ Add example description here }}
+### Example 2: Remove deployment type supersedence
+
+```powershell
+Set-CMApplicationSupersedence -ApplicationName $AppSupersedingName -CurrentDeploymentTypeName ($AppSupersedingDT.LocalizedDisplayName) -SupersededApplicationName $AppSupersededName -OldDeploymentTypeName ($OriginalDT.LocalizedDisplayName) -RemoveSupersedence -Force
+```
 
 ## PARAMETERS
 
 ### -CurrentDeploymentType
-{{ Fill CurrentDeploymentType Description }}
+
+Specify a deployment type object from the _superseding_ application. To get this object, use the [Get-CMDeploymentType](Get-CMDeploymentType.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -72,7 +94,8 @@ Accept wildcard characters: False
 ```
 
 ### -CurrentDeploymentTypeId
-{{ Fill CurrentDeploymentTypeId Description }}
+
+Specify the ID of a deployment type from the _superseding_ application.
 
 ```yaml
 Type: Int32
@@ -87,7 +110,8 @@ Accept wildcard characters: False
 ```
 
 ### -CurrentDeploymentTypeName
-{{ Fill CurrentDeploymentTypeName Description }}
+
+Specify the name of a deployment type from the _superseding_ application.
 
 ```yaml
 Type: String
@@ -102,7 +126,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-{{ Fill DisableWildcardHandling Description }}
+
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -117,7 +142,8 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-{{ Fill Force Description }}
+
+Add this parameter to run the command without asking for confirmation.
 
 ```yaml
 Type: SwitchParameter
@@ -132,7 +158,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-{{ Fill ForceWildcardHandling Description }}
+
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -147,7 +174,8 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-{{ Fill Id Description }}
+
+Specify the ID of the current (_superseding_) application.
 
 ```yaml
 Type: Int32
@@ -162,7 +190,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{ Fill InputObject Description }}
+
+Specify an object for the current (_superseding_) application. To get this object, use the [Get-CMApplication](Get-CMApplication.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -177,7 +206,8 @@ Accept wildcard characters: False
 ```
 
 ### -IsUninstall
-{{ Fill IsUninstall Description }}
+
+Set this parameter to `$true` to uninstall the superseded application before the client installs the superseding application.
 
 ```yaml
 Type: Boolean
@@ -192,7 +222,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{ Fill Name Description }}
+
+Specify the localized display name of the current (_superseding_) application.
 
 ```yaml
 Type: String
@@ -207,7 +238,8 @@ Accept wildcard characters: False
 ```
 
 ### -OldDeploymentType
-{{ Fill OldDeploymentType Description }}
+
+Specify a deployment type object from the _superseded_ application. To get this object, use the [Get-CMDeploymentType](Get-CMDeploymentType.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -222,7 +254,8 @@ Accept wildcard characters: False
 ```
 
 ### -OldDeploymentTypeId
-{{ Fill OldDeploymentTypeId Description }}
+
+Specify the ID of a deployment type from the _superseded_ application.
 
 ```yaml
 Type: Int32
@@ -237,7 +270,8 @@ Accept wildcard characters: False
 ```
 
 ### -OldDeploymentTypeName
-{{ Fill OldDeploymentTypeName Description }}
+
+Specify the name of a deployment type from the _superseded_ application.
 
 ```yaml
 Type: String
@@ -252,7 +286,8 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-{{ Fill PassThru Description }}
+
+Add this parameter to return an object that represents the item with which you're working. By default, this cmdlet may not generate any output.
 
 ```yaml
 Type: SwitchParameter
@@ -267,7 +302,8 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveSupersedence
-{{ Fill RemoveSupersedence Description }}
+
+Add this parameter to remove the supersedence relationship.
 
 ```yaml
 Type: SwitchParameter
@@ -282,7 +318,8 @@ Accept wildcard characters: False
 ```
 
 ### -SupersededApplication
-{{ Fill SupersededApplication Description }}
+
+Specify an object for the old (_superseded_) application. To get this object, use the [Get-CMApplication](Get-CMApplication.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -297,7 +334,8 @@ Accept wildcard characters: False
 ```
 
 ### -SupersededApplicationId
-{{ Fill SupersededApplicationId Description }}
+
+Specify the ID of the old (_superseded_) application.
 
 ```yaml
 Type: Int32
@@ -312,7 +350,8 @@ Accept wildcard characters: False
 ```
 
 ### -SupersededApplicationName
-{{ Fill SupersededApplicationName Description }}
+
+Specify the localized display name of the old (_superseded_) application.
 
 ```yaml
 Type: String
@@ -327,6 +366,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -342,8 +382,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+
+Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
 
 ```yaml
 Type: SwitchParameter
@@ -367,6 +407,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-CMApplication](Get-CMApplication.md)
+
+[Get-CMDeploymentType](Get-CMDeploymentType.md)
+
+[Supersede applications](/mem/configmgr/apps/deploy-use/revise-and-supersede-applications#supersedence)

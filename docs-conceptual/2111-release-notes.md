@@ -36,7 +36,7 @@ For more information, see [about_PSModulePath](/powershell/module/microsoft.powe
 
 - [Remove-CMSoftwareUpdateFromPackage](/powershell/module/configurationmanager/Remove-CMSoftwareUpdateFromPackage): Use this cmdlet to remove the specified software update from a package.
 
-- Set-CMApplicationSupersedence<!-- ](/powershell/module/configurationmanager/Set-CMApplicationSupersedence) -->: Use this cmdlet to set deployment type supersedence for the specified application. <!-- ALSO LINK IN DEPRECATED SECTION -->
+- [Set-CMApplicationSupersedence](/powershell/module/configurationmanager/Set-CMApplicationSupersedence): Use this cmdlet to set deployment type supersedence for the specified application.
 
 ### Orchestration groups
 
@@ -78,9 +78,9 @@ The following cmdlets are deprecated and may be removed in a future release:
 
 | Deprecated cmdlet | Replacement |
 |---------|---------|
-| Add-CMDeploymentTypeSupersedence | Set-CMApplicationSupersedence<!-- ](/powershell/module/configurationmanager/Set-CMApplicationSupersedence) --> |
-| Remove-CMDeploymentTypeSupersedence | Set-CMApplicationSupersedence<!-- ](/powershell/module/configurationmanager/Set-CMApplicationSupersedence) --> |
-| Set-CMDeploymentTypeSupersedence | Set-CMApplicationSupersedence<!-- ](/powershell/module/configurationmanager/Set-CMApplicationSupersedence) --> |
+| Add-CMDeploymentTypeSupersedence | [Set-CMApplicationSupersedence](/powershell/module/configurationmanager/Set-CMApplicationSupersedence) |
+| Remove-CMDeploymentTypeSupersedence | [Set-CMApplicationSupersedence](/powershell/module/configurationmanager/Set-CMApplicationSupersedence) |
+| Set-CMDeploymentTypeSupersedence | [Set-CMApplicationSupersedence](/powershell/module/configurationmanager/Set-CMApplicationSupersedence) |
 
 The following cmdlets are no longer available because the underlying feature is no longer supported:
 
