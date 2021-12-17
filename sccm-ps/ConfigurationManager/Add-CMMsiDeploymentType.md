@@ -254,6 +254,8 @@ Specify an array of requirement objects for the deployment type. To create a req
 - [New-CMRequirementRuleRegistryKeyPermissionValue](New-CMRequirementRuleRegistryKeyPermissionValue.md)
 - [New-CMRequirementRuleScreenResolutionValue](New-CMRequirementRuleScreenResolutionValue.md)
 
+Starting in version 2111, you can use the [Get-CMDeploymentTypeRequirement](Get-CMDeploymentTypeRequirement.md) cmdlet to copy rules from another deployment type.
+
 ```yaml
 Type: Rule[]
 Parameter Sets: (All)

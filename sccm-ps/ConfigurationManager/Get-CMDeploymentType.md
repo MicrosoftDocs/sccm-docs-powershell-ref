@@ -1,8 +1,7 @@
 ﻿---
-description: Get a deployment type for a Configuration Manager application.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 12/29/2020
+ms.date: 12/16/2021
 schema: 2.0.0
 title: Get-CMDeploymentType
 ---
@@ -167,11 +166,16 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ### IResultObject[]#SMS_DeploymentType
+
 ### IResultObject#SMS_DeploymentType
+
 ## NOTES
+
+For more information on this return object and its properties, see [SMS_DeploymentType server WMI class](/mem/configmgr/develop/reference/apps/sms_deploymenttype-server-wmi-class).
 
 ## RELATED LINKS
 
@@ -180,3 +184,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-CMDeploymentType](Remove-CMDeploymentType.md)
 
 [Set-CMDeploymentType](Set-CMDeploymentType.md)
+
+[Get-CMDeploymentTypeRequirement](Get-CMDeploymentTypeRequirement.md)

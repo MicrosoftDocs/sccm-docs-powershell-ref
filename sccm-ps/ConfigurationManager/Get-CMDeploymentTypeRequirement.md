@@ -1,6 +1,7 @@
 ---
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
+ms.date: 12/16/2021
 online version:
 schema: 2.0.0
 ---
@@ -8,7 +9,8 @@ schema: 2.0.0
 # Get-CMDeploymentTypeRequirement
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Get the requirement rules for a deployment type.
 
 ## SYNTAX
 
@@ -18,21 +20,28 @@ Get-CMDeploymentTypeRequirement -InputObject <IResultObject> [-DisableWildcardHa
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+Use this cmdlet to get the requirement rules for the specified application deployment type. You can use the returned object to add the same rules to another deployment type.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
-```
+### Example 1: Copy requirement rules between deployment types
 
-{{ Add example description here }}
+The following sample first gets a deployment type object from **AppA**. It passes that object to the **Get-CMDeploymentTypeRequirement** cmdlet to get its requirement rules. It then uses the **Set-CMScriptDeploymentType** cmdlet to add the same requirement rule to another deployment type on a different application.
+
+```powershell
+$dt1 = Get-CMDeploymentType -ApplicationName "AppA" -DeploymentTypeName "dt1"
+
+$rule = $dt1 | Get-CMDeploymentTypeRequirement
+
+Set-CMScriptDeploymentType -ApplicationName "AppB" -DeploymentTypeName "dt2" -AddRequirement $rule
+```
 
 ## PARAMETERS
 
 ### -DisableWildcardHandling
-{{ Fill DisableWildcardHandling Description }}
+
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -47,7 +56,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-{{ Fill ForceWildcardHandling Description }}
+
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -62,7 +72,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{ Fill InputObject Description }}
+
+Specify a deployment type object from which to get the requirement rules. To get this object, use the [Get-CMDeploymentType](Get-CMDeploymentType.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -92,3 +103,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-CMDeploymentType](Get-CMDeploymentType.md)

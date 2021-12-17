@@ -2,7 +2,7 @@
 title: Version 2111 release notes
 titleSuffix: Configuration Manager
 description: Release notes for the changes to PowerShell cmdlets in Configuration Manager version 2111.
-ms.date: 12/01/2021
+ms.date: 12/16/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -32,7 +32,7 @@ For more information, see [about_PSModulePath](/powershell/module/microsoft.powe
 ## New cmdlets
 
 <!-- - [<cmdlet>](/powershell/module/configurationmanager/): -->
-- Get-CMDeploymentTypeRequirement<!-- ](/powershell/module/configurationmanager/Get-CMDeploymentTypeRequirement) -->: Use this cmdlet to get the requirement rules for the specified deployment type. You can use the returned object to add the same rules to another deployment type.
+- [Get-CMDeploymentTypeRequirement](/powershell/module/configurationmanager/Get-CMDeploymentTypeRequirement): Use this cmdlet to get the requirement rules for the specified deployment type. You can use the returned object to add the same rules to another deployment type.
 
 - Remove-CMSoftwareUpdateFromPackage<!-- ](/powershell/module/configurationmanager/Remove-CMSoftwareUpdateFromPackage) -->: Use this cmdlet to remove the specified software update from a package.
 
