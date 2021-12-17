@@ -1,7 +1,7 @@
 ---
 title: Configuration Manager PowerShell cmdlets
 description: Manage your Configuration Manager hierarchy using Windows PowerShell. 
-ms.date: 12/15/2021
+ms.date: 12/16/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: overview
@@ -73,7 +73,7 @@ Connect to Configuration Manager from an existing Windows PowerShell session by 
 1. If it's the first time importing the Configuration Manager module on this computer, you may need to create the site drive.<!-- SCCMDocs#1915 --> For example:
 
     ```powershell
-    New-PSDrive -Name "ABC" -PSProvider "AdminUI.PS.Provider\CMSite" -Root "siteserver.contoso.com" -Description "Primary site"
+    New-PSDrive -Name "ABC" -PSProvider "CMSite" -Root "siteserver.contoso.com" -Description "Primary site"
     ```
 
     > [!TIP]
