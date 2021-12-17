@@ -36,6 +36,12 @@ The easiest method to open PowerShell is directly from the Configuration Manager
 
 1. To verify it works, use the **Get-CMSite** cmdlet. This cmdlet returns information about the Configuration Manager site you're currently connected to and any child sites. For example, the site server name, installation director, site name, and version.
 
+> [!NOTE]
+> When you start PowerShell or the PowerShell ISE from the Configuration Manager console, it uses the **AllSigned** execution policy for the **Process** scope.<!-- 12618619 --> If this default secure configuration is too much for your environment, there are two options to work around it:
+>
+> - Change the execution policy with a command similar to the following example: `Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process`
+> - [Import the Configuration Manager PowerShell module](#import-the-configuration-manager-powershell-module).
+
 ## Import the Configuration Manager PowerShell module
 
 Connect to Configuration Manager from an existing Windows PowerShell session by manually loading the Configuration Manager module.
