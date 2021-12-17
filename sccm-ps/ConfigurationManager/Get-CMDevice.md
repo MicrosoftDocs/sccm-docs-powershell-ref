@@ -2,7 +2,7 @@
 description: Get a Configuration Manager device.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 10/01/2020
+ms.date: 12/16/2021
 schema: 2.0.0
 title: Get-CMDevice
 ---
@@ -65,7 +65,7 @@ Get-CMDevice [-CollectionMember] [-Fast] [-Resource] -ResourceId <Int32> [-Disab
 
 ## DESCRIPTION
 
-The **Get-CMDevice** cmdlet gets a Configuration Manager device. By default it queries the **SMS_CM_RES_COLL_SMS00001** class. You can use the **-Resource** or **-CollectionMember** parameters to change the query class. Depending upon your role-based access in the site, you may need to use one of these other parameters.
+The **Get-CMDevice** cmdlet gets a Configuration Manager device. By default it queries the **SMS_CM_RES_COLL_SMS00001** class. You can use the **Resource** or **CollectionMember** parameters to change the query class. Depending upon your role-based access in the site, you may need to use one of these other parameters. For example, if you don't have access to SMS00001, then by default this cmdlet returns zero results.<!-- 12549811 -->
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
@@ -323,7 +323,7 @@ Accept wildcard characters: True
 
 ### -Resource
 
-Add this parameter to query the **SMS_Resource** class for device information. This class shouldn't be restricted by role-based access. The output is the same as with the **Get-CMResource** cmdlet. This output has minimal properties for the device. For more detailed properties, don't add this parameter, or use the **-CollectionMember** parameter.
+Add this parameter to query the **SMS_Resource** class for device information. This class shouldn't be restricted by role-based access. The output is the same as with the **Get-CMResource** cmdlet. This output has minimal properties for the device. For more detailed properties, don't add this parameter, or use the **CollectionMember** parameter.
 
 ```yaml
 Type: SwitchParameter
@@ -391,11 +391,16 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ### IResultObject[]#SMS_CombinedDeviceResources
+
 ### IResultObject#SMS_CombinedDeviceResources
+
 ## NOTES
+
+For more information on this return object and its properties, see [SMS_CombinedDeviceResources server WMI class](/mem/configmgr/develop/reference/core/clients/collections/sms_combineddeviceresources-server-wmi-class).
 
 ## RELATED LINKS
 
