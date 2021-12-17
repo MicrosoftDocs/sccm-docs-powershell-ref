@@ -64,13 +64,13 @@ For more information on security roles and permissions, see [Fundamentals of rol
 
 For more information on folders, see [How to use the Configuration Manager console](/mem/configmgr/core/servers/manage/admin-console#nodes).
 
-- Get-CMFolder<!-- ](/powershell/module/configurationmanager/Get-CMFolder) -->: Use this cmdlet to get all customized folders or folders from the specified parent path.
+- [Get-CMFolder](/powershell/module/configurationmanager/Get-CMFolder): Use this cmdlet to get all customized folders or folders from the specified parent path.
 
-- New-CMFolder<!-- ](/powershell/module/configurationmanager/New-CMFolder) -->: Use this cmdlet to create a new folder under the specified parent folder path.
+- [New-CMFolder](/powershell/module/configurationmanager/New-CMFolder): Use this cmdlet to create a new folder under the specified parent folder path.
 
-- Remove-CMFolder<!-- ](/powershell/module/configurationmanager/Remove-CMFolder) -->: Use this cmdlet to remove the specified folder.
+- [Remove-CMFolder](/powershell/module/configurationmanager/Remove-CMFolder): Use this cmdlet to remove the specified folder.
 
-- Set-CMFolder<!-- ](/powershell/module/configurationmanager/Set-CMFolder) -->: Use this cmdlet to configure the specified folder. For example, rename it or move it to another folder.
+- [Set-CMFolder](/powershell/module/configurationmanager/Set-CMFolder): Use this cmdlet to configure the specified folder. For example, rename it or move it to another folder.
 
 ## Deprecated and removed cmdlets
 

@@ -1,6 +1,7 @@
 ---
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
+ms.date: 12/16/2021
 online version:
 schema: 2.0.0
 ---
@@ -8,7 +9,8 @@ schema: 2.0.0
 # New-CMFolder
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Create one or more folders in the console.
 
 ## SYNTAX
 
@@ -31,21 +33,27 @@ New-CMFolder [-Name <String>] -InputObject <IResultObject> [-DisableWildcardHand
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+Use this cmdlet to create a new folder under the specified parent folder path.
+
+> [!NOTE]
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
-```
 
-{{ Add example description here }}
+```powershell
+$parentPath = 'DeviceCollection'
+$name =  'Folder1'
+$folder = New-CMFolder -ParentFolderPath $parentPath -Name $name
+```
 
 ## PARAMETERS
 
 ### -DisableWildcardHandling
-{{ Fill DisableWildcardHandling Description }}
+
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -60,7 +68,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-{{ Fill ForceWildcardHandling Description }}
+
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -75,7 +84,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{ Fill InputObject Description }}
+
+Specify a folder object for the parent container. To get this object, use the [Get-CMFolder](Get-CMFolder.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -90,7 +100,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{ Fill Name Description }}
+
+Specify a name for the folder to create.
 
 ```yaml
 Type: String
@@ -105,7 +116,8 @@ Accept wildcard characters: False
 ```
 
 ### -ParentFolderPath
-{{ Fill ParentFolderPath Description }}
+
+Specify the path of the parent folder.
 
 ```yaml
 Type: String
@@ -120,6 +132,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -135,8 +148,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+
+Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
 
 ```yaml
 Type: SwitchParameter
@@ -163,4 +176,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## NOTES
 
+For more information on this return object and its properties, see [SMS_ObjectContainerNode server WMI class](/mem/configmgr/develop/reference/core/servers/console/sms_objectcontainernode-server-wmi-class).
+
 ## RELATED LINKS
+
+[Get-CMFolder](Get-CMFolder.md)
+
+[Remove-CMFolder](Remove-CMFolder.md)
+
+[Set-CMFolder](Set-CMFolder.md)

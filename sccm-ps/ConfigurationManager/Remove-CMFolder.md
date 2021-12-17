@@ -1,6 +1,7 @@
 ---
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
+ms.date: 12/16/2021
 online version:
 schema: 2.0.0
 ---
@@ -8,7 +9,8 @@ schema: 2.0.0
 # Remove-CMFolder
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Remove the specified folder in the console.
 
 ## SYNTAX
 
@@ -43,21 +45,41 @@ Remove-CMFolder -InputObject <IResultObject> [-Force] [-DisableWildcardHandling]
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+Use this cmdlet to remove the specified folder.
+
+> [!NOTE]
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
 ### Example 1
+
 ```powershell
-PS C:\> {{ Add example code here }}
+$parentPath = 'DeviceCollection'
+$name = 'Folder1'
+$name2 = 'Folder2'
+$name3 = 'Folder3'
+Remove-CMFolder -Name $name3 -ParentContainerNode (Get-CMFolder -Name $name2) -Force
 ```
 
-{{ Add example description here }}
+### Example 2
+
+```powershell
+(Get-CMFolder -Name $name2) | Remove-CMFolder -Force
+```
+
+### Example 3
+
+```powershell
+Remove-CMFolder -FolderPath  ($parentPath + '\' + $name) -Force
+```
 
 ## PARAMETERS
 
 ### -DisableWildcardHandling
-{{ Fill DisableWildcardHandling Description }}
+
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -72,7 +94,8 @@ Accept wildcard characters: False
 ```
 
 ### -FolderPath
-{{ Fill FolderPath Description }}
+
+Specify the path to the console folder. For example, `DeviceCollection\Folder1`
 
 ```yaml
 Type: String
@@ -87,7 +110,8 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-{{ Fill Force Description }}
+
+Add this parameter to run the command without asking for confirmation.
 
 ```yaml
 Type: SwitchParameter
@@ -102,7 +126,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-{{ Fill ForceWildcardHandling Description }}
+
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -117,7 +142,8 @@ Accept wildcard characters: False
 ```
 
 ### -Guid
-{{ Fill Guid Description }}
+
+Specify the GUID of the console folder to remove.
 
 ```yaml
 Type: Guid
@@ -132,7 +158,8 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-{{ Fill Id Description }}
+
+Specify the ID of the console folder to remove.
 
 ```yaml
 Type: Int32
@@ -147,7 +174,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{ Fill InputObject Description }}
+
+Specify a folder object. To get this object, use the [Get-CMFolder](Get-CMFolder.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -162,7 +190,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{ Fill Name Description }}
+
+Specify the name of the console folder to remove.
 
 ```yaml
 Type: String
@@ -177,7 +206,8 @@ Accept wildcard characters: False
 ```
 
 ### -ParentContainerNode
-{{ Fill ParentContainerNode Description }}
+
+Specify a folder object for the parent container. To get this object, use the [Get-CMFolder](Get-CMFolder.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -192,7 +222,8 @@ Accept wildcard characters: False
 ```
 
 ### -ParentFolderPath
-{{ Fill ParentFolderPath Description }}
+
+Specify the path of the parent folder.
 
 ```yaml
 Type: String
@@ -207,6 +238,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -222,8 +254,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+
+Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
 
 ```yaml
 Type: SwitchParameter
@@ -247,6 +279,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-CMFolder](Get-CMFolder.md)
+
+[New-CMFolder](New-CMFolder.md)
+
+[Set-CMFolder](Set-CMFolder.md)

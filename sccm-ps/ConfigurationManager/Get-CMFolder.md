@@ -1,6 +1,7 @@
 ---
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
+ms.date: 12/16/2021
 online version:
 schema: 2.0.0
 ---
@@ -8,7 +9,8 @@ schema: 2.0.0
 # Get-CMFolder
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Get one or more folders in the console.
 
 ## SYNTAX
 
@@ -35,21 +37,30 @@ Get-CMFolder -FolderPath <String> [-DisableWildcardHandling] [-ForceWildcardHand
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+Use this cmdlet to get all customized folders or folders from the specified parent path.
+
+> [!NOTE]
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
-```
 
-{{ Add example description here }}
+```powershell
+$parentPath = 'DeviceCollection'
+$name = 'Folder1'
+$name2 = 'Folder2'
+$name3 = 'Folder3'
+$root = New-CMFolder -ParentFolderPath $parentPath -Name $name
+$folder = Get-CMFolder -FolderPath ($parentPath + '\' + $name + '\' + $name2 + '\' +$name3)
+```
 
 ## PARAMETERS
 
 ### -DisableWildcardHandling
-{{ Fill DisableWildcardHandling Description }}
+
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -64,7 +75,8 @@ Accept wildcard characters: False
 ```
 
 ### -FolderPath
-{{ Fill FolderPath Description }}
+
+Specify the path to the console folder. For example, `DeviceCollection\Folder1`
 
 ```yaml
 Type: String
@@ -79,7 +91,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-{{ Fill ForceWildcardHandling Description }}
+
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -94,7 +107,8 @@ Accept wildcard characters: False
 ```
 
 ### -Guid
-{{ Fill Guid Description }}
+
+Specify the GUID of the console folder.
 
 ```yaml
 Type: Guid
@@ -109,7 +123,8 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-{{ Fill Id Description }}
+
+Specify the ID of the console folder.
 
 ```yaml
 Type: Int32
@@ -124,7 +139,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{ Fill InputObject Description }}
+
+Specify a folder object for the parent container.
 
 ```yaml
 Type: IResultObject
@@ -139,7 +155,8 @@ Accept wildcard characters: False
 ```
 
 ### -IsEmpty
-{{ Fill IsEmpty Description }}
+
+Set this parameter to `$true` to filter the results by empty folders.
 
 ```yaml
 Type: Boolean
@@ -154,7 +171,8 @@ Accept wildcard characters: False
 ```
 
 ### -IsSearchFolder
-{{ Fill IsSearchFolder Description }}
+
+Set this parameter to `$true` to filter the results by search folders.
 
 ```yaml
 Type: Boolean
@@ -169,7 +187,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{ Fill Name Description }}
+
+Specify the name of the console folder.
 
 ```yaml
 Type: String
@@ -184,7 +203,8 @@ Accept wildcard characters: True
 ```
 
 ### -ParentFolderPath
-{{ Fill ParentFolderPath Description }}
+
+Specify the path of the parent folder.
 
 ```yaml
 Type: String
@@ -199,7 +219,8 @@ Accept wildcard characters: False
 ```
 
 ### -SiteCode
-{{ Fill SiteCode Description }}
+
+Specify the three-character code for the site.
 
 ```yaml
 Type: String
@@ -214,7 +235,12 @@ Accept wildcard characters: False
 ```
 
 ### -TypeName
-{{ Fill TypeName Description }}
+
+Specify the type to filter the results. For example:
+
+- `SMS_Collection_Device`
+- `SMS_Package`
+- `SMS_Driver`
 
 ```yaml
 Type: String
@@ -243,4 +269,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## NOTES
 
+For more information on this return object and its properties, see [SMS_ObjectContainerNode server WMI class](/mem/configmgr/develop/reference/core/servers/console/sms_objectcontainernode-server-wmi-class).
+
 ## RELATED LINKS
+
+[New-CMFolder](New-CMFolder.md)
+
+[Remove-CMFolder](Remove-CMFolder.md)
+
+[Set-CMFolder](Set-CMFolder.md)
