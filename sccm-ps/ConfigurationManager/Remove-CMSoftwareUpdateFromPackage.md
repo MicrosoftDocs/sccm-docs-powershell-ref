@@ -1,6 +1,7 @@
 ---
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
+ms.date: 12/16/2021
 online version:
 schema: 2.0.0
 ---
@@ -8,7 +9,8 @@ schema: 2.0.0
 # Remove-CMSoftwareUpdateFromPackage
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Remove an update from a software update package.
 
 ## SYNTAX
 
@@ -76,21 +78,49 @@ Remove-CMSoftwareUpdateFromPackage -SoftwareUpdateName <String[]> -SoftwareUpdat
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+Use this cmdlet to remove the specified software update from a package.
+
+> [!NOTE]
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Remove an update and refresh the content
+
+This example first gets the ID of a software update.
+It then gets a software update package by its ID.
+The last command removes the update from the package. It refreshes the content on the distribution point, and doesn't prompt for confirmation.
+
 ```powershell
-PS C:\> {{ Add example code here }}
+$SU0 = "Bing Bar 7.1 (KB2673770)"
+$SU0_ID = ( Get-CMSoftwareUpdate -Name $SU0 -Fast ).CI_ID
+
+$suppkg1 = Get-CMSoftwareUpdateDeploymentPackage -Id "XYZ0000C"
+
+Remove-CMSoftwareUpdateFromPackage -SoftwareUpdatePackageId $suppkg1.PackageID -SoftwareUpdateId $SU0_ID -RefreshDistributionPoint -Force
 ```
 
-{{ Add example description here }}
+### Example 2: Remove two updates but don't refresh the content
+
+This example first defines the names of two software updates.
+It then gets a software update package by its ID.
+The last command removes both software updates from the package. Since this command doesn't include the **Force** parameter, it prompts for confirmation. Since it doesn't include the **RefreshDistributionPoint** parameter, you need to manually update the content on distribution points.
+
+```powershell
+$SU1 = "Bing Bar 7.1 (KB2673771)"
+$SU2 = "Bing Bar 7.1 (KB2673772)"
+
+$suppkg1 = Get-CMSoftwareUpdateDeploymentPackage -Id "XYZ0000C"
+
+Remove-CMSoftwareUpdateFromPackage -SoftwareUpdatePackage $suppkg1 -SoftwareUpdateName ($SU1, $SU2)
+```
 
 ## PARAMETERS
 
 ### -DisableWildcardHandling
-{{ Fill DisableWildcardHandling Description }}
+
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -105,7 +135,8 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-{{ Fill Force Description }}
+
+Add this parameter to run the command without asking for confirmation.
 
 ```yaml
 Type: SwitchParameter
@@ -120,7 +151,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-{{ Fill ForceWildcardHandling Description }}
+
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -135,7 +167,8 @@ Accept wildcard characters: False
 ```
 
 ### -RefreshDistributionPoint
-{{ Fill RefreshDistributionPoint Description }}
+
+Add this parameter to update the package content on the distribution points. If you don't include this parameter, you need to manually update distribution points. For more information, see [Manage distributed content](/mem/configmgr/core/servers/deploy/configure/deploy-and-manage-content#bkmk_manage).
 
 ```yaml
 Type: SwitchParameter
@@ -150,7 +183,8 @@ Accept wildcard characters: False
 ```
 
 ### -SoftwareUpdate
-{{ Fill SoftwareUpdate Description }}
+
+Specify an array of software update objects to remove from the package. To get this object, use the [Get-CMSoftwareUpdate](Get-CMSoftwareUpdate.md) cmdlet.
 
 ```yaml
 Type: IResultObject[]
@@ -165,7 +199,8 @@ Accept wildcard characters: False
 ```
 
 ### -SoftwareUpdateId
-{{ Fill SoftwareUpdateId Description }}
+
+Specify an array of IDs for software updates to remove from the package. This value is the **CI_ID** of the update, for example `1584792`.
 
 ```yaml
 Type: String[]
@@ -180,7 +215,8 @@ Accept wildcard characters: False
 ```
 
 ### -SoftwareUpdateName
-{{ Fill SoftwareUpdateName Description }}
+
+Specify an array of names for software updates to remove from the package.
 
 ```yaml
 Type: String[]
@@ -195,7 +231,8 @@ Accept wildcard characters: True
 ```
 
 ### -SoftwareUpdatePackage
-{{ Fill SoftwareUpdatePackage Description }}
+
+Specify a software update package object from which to remove the updates. To get this object, use the [Get-CMSoftwareUpdateDeploymentPackage](Get-CMSoftwareUpdateDeploymentPackage.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -210,7 +247,8 @@ Accept wildcard characters: False
 ```
 
 ### -SoftwareUpdatePackageId
-{{ Fill SoftwareUpdatePackageId Description }}
+
+Specify a software update package ID from which to remove the updates. This value is a standard package ID, for example `XYZ0035E`.
 
 ```yaml
 Type: String
@@ -225,7 +263,8 @@ Accept wildcard characters: False
 ```
 
 ### -SoftwareUpdatePackageName
-{{ Fill SoftwareUpdatePackageName Description }}
+
+Specify a software update package name from which to remove the updates.
 
 ```yaml
 Type: String
@@ -240,6 +279,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -255,8 +295,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+
+Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
 
 ```yaml
 Type: SwitchParameter
@@ -282,6 +322,19 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-CMSoftwareUpdateDeploymentPackage](Get-CMSoftwareUpdateDeploymentPackage.md)
+
+[New-CMSoftwareUpdateDeploymentPackage](Set-CMSoftwareUpdateDeploymentPackage.md)
+
+[Set-CMSoftwareUpdateDeploymentPackage](Set-CMSoftwareUpdateDeploymentPackage.md)
+
+[Remove-CMSoftwareUpdateDeploymentPackage](Remove-CMSoftwareUpdateDeploymentPackage.md)
+
+[Get-CMSoftwareUpdate](Get-CMSoftwareUpdate.md)
+
+[Save-CMSoftwareUpdate](Save-CMSoftwareUpdate.md)

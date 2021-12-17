@@ -34,7 +34,7 @@ For more information, see [about_PSModulePath](/powershell/module/microsoft.powe
 <!-- - [<cmdlet>](/powershell/module/configurationmanager/): -->
 - [Get-CMDeploymentTypeRequirement](/powershell/module/configurationmanager/Get-CMDeploymentTypeRequirement): Use this cmdlet to get the requirement rules for the specified deployment type. You can use the returned object to add the same rules to another deployment type.
 
-- Remove-CMSoftwareUpdateFromPackage<!-- ](/powershell/module/configurationmanager/Remove-CMSoftwareUpdateFromPackage) -->: Use this cmdlet to remove the specified software update from a package.
+- [Remove-CMSoftwareUpdateFromPackage](/powershell/module/configurationmanager/Remove-CMSoftwareUpdateFromPackage): Use this cmdlet to remove the specified software update from a package.
 
 - Set-CMApplicationSupersedence<!-- ](/powershell/module/configurationmanager/Set-CMApplicationSupersedence) -->: Use this cmdlet to set deployment type supersedence for the specified application. <!-- ALSO LINK IN DEPRECATED SECTION -->
 

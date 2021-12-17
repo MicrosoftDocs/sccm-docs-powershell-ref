@@ -23,6 +23,9 @@ Get-CMDeploymentTypeRequirement -InputObject <IResultObject> [-DisableWildcardHa
 
 Use this cmdlet to get the requirement rules for the specified application deployment type. You can use the returned object to add the same rules to another deployment type.
 
+> [!NOTE]
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
+
 ## EXAMPLES
 
 ### Example 1: Copy requirement rules between deployment types
