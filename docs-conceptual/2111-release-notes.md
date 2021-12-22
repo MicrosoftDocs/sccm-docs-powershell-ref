@@ -56,9 +56,9 @@ For more information about this feature, see [Orchestration groups in Configurat
 
 For more information on security roles and permissions, see [Fundamentals of role-based administration in Configuration Manager](/mem/configmgr/core/understand/fundamentals-of-role-based-administration).
 
-- Get-CMSecurityRolePermission<!-- ](/powershell/module/configurationmanager/Get-CMSecurityRolePermission) -->: Use this cmdlet to get the permissions for the specified security role.
+- [Get-CMSecurityRolePermission](/powershell/module/configurationmanager/Get-CMSecurityRolePermission): Use this cmdlet to get the permissions for the specified security role.
 
-- Set-CMSecurityRolePermission<!-- ](/powershell/module/configurationmanager/Set-CMSecurityRolePermission) -->: Use this cmdlet to configure a security role with specific permissions.
+- [Set-CMSecurityRolePermission](/powershell/module/configurationmanager/Set-CMSecurityRolePermission): Use this cmdlet to configure a security role with specific permissions.
 
 ### Folder management
 

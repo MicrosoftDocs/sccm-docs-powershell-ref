@@ -1,8 +1,7 @@
 ---
-description: Creates an administrative user.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/05/2019
+ms.date: 12/21/2021
 schema: 2.0.0
 title: New-CMAdministrativeUser
 ---
@@ -10,7 +9,8 @@ title: New-CMAdministrativeUser
 # New-CMAdministrativeUser
 
 ## SYNOPSIS
-Creates an administrative user.
+
+Create an administrative user.
 
 ## SYNTAX
 
@@ -28,9 +28,8 @@ New-CMAdministrativeUser -Name <String> -Permission <IResultObject[]> [-DisableW
 ```
 
 ## DESCRIPTION
-The **New-CMAdministrativeUser** cmdlet creates an administrative user for Configuration Manager.
-At the same time that you create the administrative user account, you can give the new administrative user access to collections of Configuration Manager resources.
-You can also define the types of access that the new administrative user has to each collection by assigning security roles to the user.
+
+Use this cmdlet to create an administrative user for Configuration Manager. An _administrative user_ in Configuration Manager defines a local or domain user or group. When you create the administrative user in Configuration Manager, you can give it access to security roles, security scopes, and collections. For more information about security roles, see [Fundamentals of role-based administration in Configuration Manager](/mem/configmgr/core/understand/fundamentals-of-role-based-administration).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
@@ -38,18 +37,33 @@ You can also define the types of access that the new administrative user has to 
 ## EXAMPLES
 
 ### Example 1: Add an administrative user
-```
-PS XYZ:\> New-CMAdministrativeUser -Name "Consoto\AdminUser1" -RoleName "Application Administrator","Software Update Manager" -SecurityScopeName "scope1","scope2" -CollectionName "userCollection1","deviceCollection1"
+
+This command adds the Contoso domain user named **AdminUser1** as an administrative user.
+It adds this user to the **Application Administrator** and **Software Update Manager** built-in security roles.
+The command also adds the user to the **scope1** and **scope2** security scopes, and to the **userCollection1** and **deviceCollection1** collections.
+
+```powershell
+$name = "Contoso\AdminUser1"
+$roles = "Application Administrator","Software Update Manager"
+$scopes = "scope1","scope2"
+$colls = "userCollection1","deviceCollection1"
+
+New-CMAdministrativeUser -Name $name -RoleName $roles -SecurityScopeName $scopes -CollectionName $colls
 ```
 
-This command adds the user named AdminUser1 as an administrative user to the Application Administrator and Software Update Manager security roles.
-The command also adds admin1 to the security scopes named scope1 and scope 2, and to the collections userCollection1 and deviceCollection1.
+### Example 2: Add a domain group
+
+This example adds the Contoso domain group **Security Analysts** to the built-in **Read-only Analyst** security role.
+
+```powershell
+New-CMAdministrativeUser -Name "Contoso\Security Analysts" -RoleName "Read-only Analyst"
+```
 
 ## PARAMETERS
 
 ### -CollectionName
-Specifies an array of collection names.
-The cmdlet assigns the new administrative user to each of these collections.
+
+Specify an array of collection names. The cmdlet assigns the new administrative user to each of these collections.
 
 ```yaml
 Type: String[]
@@ -96,7 +110,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies the name of the administrative user in the form \<domain\>\\\<user\>.
+
+Specify the name of the administrative user to add. Use the format `domain\name`, where `name` is either the user or the group.
 
 ```yaml
 Type: String
@@ -111,7 +126,8 @@ Accept wildcard characters: False
 ```
 
 ### -Permission
-{{ Fill Permission Description }}
+
+Specify an array of permissions objects to assign to this new user. To get these objects, use the [New-CMAdministrativeUserPermission](New-CMAdministrativeUserPermission.md) cmdlet.
 
 ```yaml
 Type: IResultObject[]
@@ -126,25 +142,8 @@ Accept wildcard characters: False
 ```
 
 ### -RoleName
-Specifies an array of names for the roles that you assign to an administrative user.
-Valid values are:
 
-- Application Administrator
-- Application Author
-- Application Deployment Manager
-- Asset Manager
-- Compliance Settings Manager
-- Discovery Operator
-- Endpoint Protection Manager
-- Full Administrator
-- Infrastructure Administrator
-- Operating System Deployment Manager
-- Operations Administrator
-- Read-only Analyst
-- Remote Tools Operator
-- Security Administrator
-- Software Update Manager
-- Custom-defined security roles
+Specify an array of security role names. This name can be for a built-in or custom role. To see the list of built-in security roles, see [Security roles](/mem/configmgr/core/understand/fundamentals-of-role-based-administration#security-roles).
 
 ```yaml
 Type: String[]
@@ -159,7 +158,8 @@ Accept wildcard characters: False
 ```
 
 ### -SecurityScopeName
-Specifies an array of names of security scopes.
+
+Specify an array of security scope names.
 A security scope name can be "Default" or the name of a custom security scope.
 The cmdlet assigns the security scopes that you specify to the administrative user.
 
@@ -176,6 +176,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -212,10 +213,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
+
 ## OUTPUTS
 
 ### IResultObject#SMS_Admin
+
 ## NOTES
+
+For more information on this return object and its properties, see [SMS_Admin server WMI class](/mem/configmgr/develop/reference/core/servers/configure/sms_admin-server-wmi-class).
 
 ## RELATED LINKS
 
@@ -223,4 +228,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Remove-CMAdministrativeUser](Remove-CMAdministrativeUser.md)
 
+[New-CMAdministrativeUserPermission](New-CMAdministrativeUserPermission.md)
 
+[Automate role-based administration with Windows PowerShell](/mem/configmgr/core/servers/deploy/configure/configure-role-based-administration#automate-with-windows-power-shell)

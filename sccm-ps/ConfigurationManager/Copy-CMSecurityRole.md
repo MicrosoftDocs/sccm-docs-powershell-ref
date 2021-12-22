@@ -1,8 +1,7 @@
 ---
-description: Creates a custom security role.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 04/29/2019
+ms.date: 12/21/2021
 schema: 2.0.0
 title: Copy-CMSecurityRole
 ---
@@ -10,7 +9,8 @@ title: Copy-CMSecurityRole
 # Copy-CMSecurityRole
 
 ## SYNOPSIS
-Creates a custom security role.
+
+Create a custom security role.
 
 ## SYNTAX
 
@@ -33,9 +33,11 @@ Copy-CMSecurityRole [-Description <String>] -InputObject <IResultObject> -Name <
 ```
 
 ## DESCRIPTION
-The **Copy-CMSecurityRole** cmdlet creates a new security role by using an existing security role as a template.
-Configuration Manager provides several built-in security roles.
+
+Use this cmdlet to create a new security role by using an existing security role as a template. Configuration Manager provides several built-in security roles.
 If you require additional security roles, you can create a custom security role by creating a copy of an existing security role, and then modifying the copy.
+
+For more information on security roles and permissions, see [Fundamentals of role-based administration in Configuration Manager](/mem/configmgr/core/understand/fundamentals-of-role-based-administration).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
@@ -43,33 +45,18 @@ If you require additional security roles, you can create a custom security role 
 ## EXAMPLES
 
 ### Example 1: Copy a security role by using an ID
-```
-PS XYZ:\>Copy-CMSecurityRole -Name "SecRole02" -SourceRoleId "SMS000CR"
-```
 
-This command creates a new security role named SecRole02 by copying the security role that has the ID SMS000CR.
+This command creates a new security role named **SecRole02**. It copies the security role with ID `SMS000CR`, which is the **Software Update Manager** role.
 
-### Example 2: Copy a security role by using a name
+```powershell
+Copy-CMSecurityRole -Name "SecRole02" -SourceRoleId "SMS000CR"
 ```
-PS XYZ:\>Copy-CMSecurityRole -Name "SecRole02" -SourceRoleName "Software Update Manager"
-```
-
-This command creates a new security role named SecRole02 by copying the security role named Software Update Manager.
-
-### Example 3: Copy a security role
-```
-PS XYZ:\> $Srole = Get-CMSecurityRole -Name "Software Update Manager"
-PS XYZ:\> Copy-CMSecurityRole -InputObject $Srole -Name "SecRole02"
-```
-
-The first command gets the security role named Software Update Manager and stores it in the $Srole variable.
-
-The second command creates a new security role named SecRole02 by copying the object stored in $Srole.
 
 ## PARAMETERS
 
 ### -Description
-Specifies the description of a security role.
+
+Specify an optional description for the security role.
 
 ```yaml
 Type: String
@@ -116,8 +103,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies a **CMSecurityRole** object.
-To obtain a **CMSecurityRole** object, use the [Get-CMSecurityRole](Get-CMSecurityRole.md) cmdlet.
+
+Specify a security role object to copy. To get this object, use the [Get-CMSecurityRole](Get-CMSecurityRole.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -132,7 +119,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies a name for the new security scope.
+
+Specify a name for the new security role.
 
 ```yaml
 Type: String
@@ -147,7 +135,8 @@ Accept wildcard characters: False
 ```
 
 ### -SourceRoleId
-Specifies the ID of a security role.
+
+Specify the ID of the security role to copy. This value is the `RoleID` property, for example `SMS000AR` for the **OS Deployment Manager** role.
 
 ```yaml
 Type: String
@@ -162,7 +151,8 @@ Accept wildcard characters: False
 ```
 
 ### -SourceRoleName
-Specifies the name of a security role.
+
+Specify the name of the security role to copy.
 
 ```yaml
 Type: String
@@ -177,6 +167,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -213,9 +204,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
@@ -228,8 +221,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Remove-CMSecurityRole](Remove-CMSecurityRole.md)
 
-[Remove-CMSecurityRoleFromAdministrativeUser](Remove-CMSecurityRoleFromAdministrativeUser.md)
-
 [Set-CMSecurityRole](Set-CMSecurityRole.md)
 
+[Add-CMSecurityRoleToAdministrativeUser](Add-CMSecurityRoleToAdministrativeUser.md)
 
+[Set-CMSecurityRolePermission](Set-CMSecurityRolePermission.md)
+
+[Automate role-based administration with Windows PowerShell](/mem/configmgr/core/servers/deploy/configure/configure-role-based-administration#automate-with-windows-power-shell)

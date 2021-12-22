@@ -1,8 +1,7 @@
 ﻿---
-description: Imports a security role into Configuration Manager.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/05/2019
+ms.date: 12/21/2021
 schema: 2.0.0
 title: Import-CMSecurityRole
 ---
@@ -10,7 +9,8 @@ title: Import-CMSecurityRole
 # Import-CMSecurityRole
 
 ## SYNOPSIS
-Imports a security role into Configuration Manager.
+
+Import a security role from an XML file.
 
 ## SYNTAX
 
@@ -20,7 +20,12 @@ Import-CMSecurityRole [-NewRoleName <String>] -Overwrite <Boolean> -XmlFileName 
 ```
 
 ## DESCRIPTION
-The **Import-CMSecurityRole** cmdlet imports a security role that was exported from another Configuration Manager hierarchy.
+
+Use this cmdlet to import a security role from an XML file. The XML was previously exported from Configuration Manager. You can use this export/import process to backup custom security roles, or copy them between separate hierarchies.
+
+For example, you develop a custom security role in a lab environment. Export this new role from the lab hierarchy, and then import it into the production hierarchy.
+
+For more information on security roles and permissions, see [Fundamentals of role-based administration in Configuration Manager](/mem/configmgr/core/understand/fundamentals-of-role-based-administration).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
@@ -28,12 +33,13 @@ The **Import-CMSecurityRole** cmdlet imports a security role that was exported f
 ## EXAMPLES
 
 ### Example 1: Import a security role
-```
-PS XYZ:\>Import-CMSecurityRole -Overwrite $True -XmlFileName "RemoteAdminSecurity.xml"
-```
 
-This command imports a security role into Configuration Manager from the XML export file named RemoteAdminSecurity.
+This command imports a security role into Configuration Manager from the XML export file named **RemoteAdminSecurity.xml**.
 The command specifies that the security role that you import overwrites an existing security role with the same name.
+
+```powershell
+Import-CMSecurityRole -XmlFileName "RemoteAdminSecurity.xml" -Overwrite $True
+```
 
 ## PARAMETERS
 
@@ -70,6 +76,9 @@ Accept wildcard characters: False
 ```
 
 ### -NewRoleName
+
+Specify the name for the new security role. If you specify `-Overwrite $false`, this value overrides the `RoleName` property in the XML file.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -83,7 +92,8 @@ Accept wildcard characters: False
 ```
 
 ### -Overwrite
-Indicates whether the security role that you import overwrites an existing security role with the same name that you specify in the *XmlFileName* parameter.
+
+Set this parameter to `$true` to overwrite an existing security role with the same name.
 
 ```yaml
 Type: Boolean
@@ -98,7 +108,8 @@ Accept wildcard characters: False
 ```
 
 ### -XmlFileName
-Specifies the XML export file that contains the security role definition.
+
+Specify the path of the XML file to import the security role. It can be a local or network path. Include the `.xml` file extension.
 
 ```yaml
 Type: String
@@ -113,6 +124,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -153,6 +165,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
@@ -169,4 +182,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Set-CMSecurityRole](Set-CMSecurityRole.md)
 
-
+[Automate role-based administration with Windows PowerShell](/mem/configmgr/core/servers/deploy/configure/configure-role-based-administration#automate-with-windows-power-shell)

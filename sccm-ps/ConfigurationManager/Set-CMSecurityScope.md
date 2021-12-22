@@ -1,8 +1,7 @@
 ---
-description: Sets a security scope.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/07/2019
+ms.date: 12/21/2021
 schema: 2.0.0
 title: Set-CMSecurityScope
 ---
@@ -10,7 +9,8 @@ title: Set-CMSecurityScope
 # Set-CMSecurityScope
 
 ## SYNOPSIS
-Sets a security scope.
+
+Configure a security scope.
 
 ## SYNTAX
 
@@ -33,34 +33,33 @@ Set-CMSecurityScope [-Description <String>] -Name <String> [-NewName <String>] [
 ```
 
 ## DESCRIPTION
-The **Set-CMSecurityScope** cmdlet changes the configuration settings of a security scope.
+
+Use this cmdlet to change the configuration settings of a security scope. You can only configure custom scopes.
+
+For more information on security scopes, see [Fundamentals of role-based administration in Configuration Manager](/mem/configmgr/core/understand/fundamentals-of-role-based-administration).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
-### Example 1: Get a security scope and update its name
-```
-PS XYZ:\> $Scope = Get-CMSecurityScope -Name "Scope"
-PS XYZ:\> Set-CMSecurityScope -InputObject $Scope -NewName "newScope"
-```
+### Example 1: Rename a security scope
 
-The first command gets the security scope object named Scope and stores the object in the $Scope variable.
+The first command gets the security scope object named **Scope1** and stores it in the **$Scope** variable.
 
-The second command changes the name of the security scope stored in $Scope to newScope.
+The second command changes the name of the security scope to **Admin scope**.
 
-### Example 2: Pass a security scope through the pipeline and update its name
+```powershell
+$Scope = Get-CMSecurityScope -Name "Scope1"
+
+Set-CMSecurityScope -InputObject $Scope -NewName "Admin scope"
 ```
-PS XYZ:\> Get-CMSecurityScope -Name "Scope" | Set-CMSecurityScope -NewName "newScope"
-```
-
-This command gets the security scope object named Scope and uses the pipeline operator to pass the object to **Set-CMSecurityScope**, which changes the name of the security scope to newScope.
 
 ## PARAMETERS
 
 ### -Description
-Specifies a description for the security scope.
+
+Specify an optional description for the security scope.
 
 ```yaml
 Type: String
@@ -107,7 +106,8 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-Specifies the ID of a security scope.
+
+Specify the ID of a security scope to configure. This value is the `CategoryID` property. Since this cmdlet only works with custom scopes, this value should always start with the site code. (IDs for built-in scopes start with `SMS`.)
 
 ```yaml
 Type: String
@@ -122,8 +122,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies a security scope object.
-To obtain a security scope object, use the [Get-CMSecurityScope](Get-CMSecurityScope.md) cmdlet.
+
+Specify a security scope object to configure. To get this object, use the [Get-CMSecurityScope](Get-CMSecurityScope.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -138,7 +138,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies the name of a security scope.
+
+Specify the name of a security scope to configure.
 
 ```yaml
 Type: String
@@ -153,7 +154,8 @@ Accept wildcard characters: False
 ```
 
 ### -NewName
-Specifies a new name for the security scope.
+
+Specify a new name for the security scope.
 
 ```yaml
 Type: String
@@ -168,6 +170,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -204,9 +207,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
@@ -217,4 +222,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Remove-CMSecurityScope](Remove-CMSecurityScope.md)
 
-[Remove-CMSecurityScopeFromAdministrativeUser](Remove-CMSecurityScopeFromAdministrativeUser.md)
+[Automate role-based administration with Windows PowerShell](/mem/configmgr/core/servers/deploy/configure/configure-role-based-administration#automate-with-windows-power-shell)

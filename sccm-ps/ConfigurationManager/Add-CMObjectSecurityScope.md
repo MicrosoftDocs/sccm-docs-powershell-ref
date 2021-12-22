@@ -1,8 +1,7 @@
 ---
-description: Adds a security scope to an object.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 04/29/2019
+ms.date: 12/21/2021
 schema: 2.0.0
 title: Add-CMObjectSecurityScope
 ---
@@ -10,7 +9,8 @@ title: Add-CMObjectSecurityScope
 # Add-CMObjectSecurityScope
 
 ## SYNOPSIS
-Adds a security scope to an object.
+
+Add a security scope to an object.
 
 ## SYNTAX
 
@@ -33,30 +33,26 @@ Add-CMObjectSecurityScope -InputObject <IResultObject[]> [-Name] <String> [-Disa
 ```
 
 ## DESCRIPTION
-The **Add-CMObjectSecurityScope** cmdlet adds security scope to a Configuration Manager object.
+
+Use this cmdlet to add a security scope to a Configuration Manager object.
+
+For more information on security scopes, see [Fundamentals of role-based administration in Configuration Manager](/mem/configmgr/core/understand/fundamentals-of-role-based-administration).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
-### Example 1: Add a security scope to application objects by using the pipeline
-```
-PS XYZ:\> $Scope = New-CMSecurityScope -Name "Scope1" -Description "Security scope 1"
-PS XYZ:\> Get-CMApplication -Name "Application*" | Add-CMObjectSecurityScope -Scope $Scope
-```
+### Example 1: Add a security scope to application objects
 
-The first command creates a security scope object named Scope1 and stores the object in the $Scope variable.
+The first command creates a security scope object named **Scope1** and stores it in the **$Scope** variable.
 
-The second command gets all application objects that have a name beginning with "Application" and uses the pipeline operator to pass the objects to **Add-CMObjectSecurityScope**.
-**Add-CMObjectSecurityScope** adds the security scope stored in $Scope to each application object.
+The second command gets all application objects whose name begins with "Central". It then uses the pipeline operator to pass the objects to **Add-CMObjectSecurityScope**. This cmdlet adds the security scope to each application object.
 
-### Example 2: Add a security scope to application objects
+```powershell
+$Scope = New-CMSecurityScope -Name "Scope1" -Description "Security scope 1"
+Get-CMApplication -Name "Central*" | Add-CMObjectSecurityScope -Scope $Scope
 ```
-PS XYZ:\>Add-CMObjectSecurityScope -Name "Scope1" -InputObject (Get-CMApplication -Name "Application*")
-```
-
-This command gets all application objects that have a name beginning with "Application" and then adds the security scope named Scope1 to each application object.
 
 ## PARAMETERS
 
@@ -93,7 +89,8 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-Specifies the ID of a security scope.
+
+Specify the ID of a security scope to add to a Configuration Manager object. This value is the `CategoryID` property, for example `SMS00UNA` for the **Default** scope.
 
 ```yaml
 Type: String
@@ -108,7 +105,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies an array of objects to which you want to assign a security scope.
+
+Specify an array of Configuration Manager objects to add the security scope. To get this object, use the **Get** cmdlet for the object type. For example, **Get-CMApplication** for app objects.
 
 ```yaml
 Type: IResultObject[]
@@ -123,8 +121,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies the name of a security scope that this cmdlet adds.
-A security scope name can be Default or the name of a custom security scope.
+
+Specify the name of a security scope to add to a Configuration Manager object.
 
 ```yaml
 Type: String
@@ -139,7 +137,8 @@ Accept wildcard characters: False
 ```
 
 ### -Scope
-Specifies an array of security scopes.
+
+Specify an array of security scope objects to add. To get this object use the [Get-CMSecurityScope](Get-CMSecurityScope.md) cmdlet.
 
 ```yaml
 Type: IResultObject[]
@@ -154,6 +153,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -190,21 +190,21 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject[]
+
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
 
-[Get-CMApplication](Get-CMApplication.md)
-
 [Get-CMObjectSecurityScope](Get-CMObjectSecurityScope.md)
-
-[New-CMSecurityScope](New-CMSecurityScope.md)
 
 [Remove-CMObjectSecurityScope](Remove-CMObjectSecurityScope.md)
 
-[Set-CMObjectSecurityScope](Set-CMObjectSecurityScope.md)
+[Get-CMSecurityScope](Get-CMSecurityScope.md)
 
+[Add-CMSecurityScopeToAdministrativeUser](Add-CMSecurityScopeToAdministrativeUser.md)
 
+[Automate role-based administration with Windows PowerShell](/mem/configmgr/core/servers/deploy/configure/configure-role-based-administration#automate-with-windows-power-shell)
