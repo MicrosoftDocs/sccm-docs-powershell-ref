@@ -1,8 +1,7 @@
 ---
-description: Create a new program for a package.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 11/20/2020
+ms.date: 12/28/2021
 schema: 2.0.0
 title: New-CMProgram
 ---
@@ -55,30 +54,36 @@ New-CMProgram -CommandLine <String> [-CommandLineFolder <String>] [-Comment <Str
 
 ## DESCRIPTION
 
-The **New-CMProgram** cmdlet creates a program in Configuration Manager.
+Use this cmdlet to create a program for a package.
 Programs are commands that are associated with a Configuration Manager package.
-Programs identify the actions that occur when the client receives the client package.
+They identify the actions that occur when the client receives the client package.
 You can associate multiple programs with the same package.
+For more information, see [Packages and programs in Configuration Manager](/mem/configmgr/apps/deploy-use/packages-and-programs).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
-### Example 1: Create a standard program
+### Example 1: Create a program
 
-This command creates a standard program in Configuration Manager.
+This example first [splats](/powershell/module/microsoft.powershell.core/about/about_splatting) the cmdlet parameters into the **parameters** variable. It's not required to splat the parameters, it just makes it easier to read the parameters for such a long command line.
 
-```powershell
-New-CMProgram -PackageName "test" -StandardProgramName SPM -CommandLine "RunMe" -WorkingDirectory "C:\temp" -RunType Hidden -ProgramRunType OnlyWhenNoUserIsLoggedOn -DiskSpaceRequirement 100 -DiskSpaceUnit GB -Duration 100 -DriveMode RunWithUnc
-```
-
-### Example 2: Create a device program
-
-This command creates a device program in Configuration Manager.
+This command creates a program named **Scan x64** in the default **User State Migration Tool for Windows** package.
 
 ```powershell
-New-CMProgram -PackageName "Contoso-12" -DeviceProgramName DPM -Comment "Upgrades for December" -WorkingDirectory "C:\temp" -CommandLine "RunMe" -CommandLineFolder "C:\Windows\" -DiskSpaceRequirement 10 -DiskSpaceUnit GB -DownloadProgramType OnlyWhenTheDeviceIsDocked -Requirement "All previous updates"
+$parameters = @{
+  PackageName = "User State Migration Tool for Windows"
+  StandardProgramName = "Scan x64"
+  CommandLine = "amd64\scanstate.exe \\gold\sources$\userdata /i:miguser.xml /i:migapp.xml /o"
+  RunType = "Normal"
+  ProgramRunType = "OnlyWhenNoUserIsLoggedOn"
+  DiskSpaceRequirement = 200
+  DiskSpaceUnit = "MB"
+  Duration = 100
+  DriveMode = "RunWithUnc"
+}
+New-CMProgram @parameters
 ```
 
 ## PARAMETERS
@@ -505,10 +510,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
+
 ## OUTPUTS
 
 ### IResultObject#SMS_Program
+
 ## NOTES
+
+For more information on this return object and its properties, see [SMS_Program server WMI class](/mem/configmgr/develop/reference/core/servers/configure/sms_program-server-wmi-class).
 
 ## RELATED LINKS
 
@@ -521,3 +530,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-CMProgram](Remove-CMProgram.md)
 
 [Set-CMProgram](Set-CMProgram.md)
+
+[Packages and programs in Configuration Manager](/mem/configmgr/apps/deploy-use/packages-and-programs)
