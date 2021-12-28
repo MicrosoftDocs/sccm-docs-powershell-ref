@@ -1,8 +1,7 @@
 ﻿---
-description: Imports Configuration Manager baselines.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/05/2019
+ms.date: 12/28/2021
 schema: 2.0.0
 title: Import-CMBaseline
 ---
@@ -10,7 +9,8 @@ title: Import-CMBaseline
 # Import-CMBaseline
 
 ## SYNOPSIS
-Imports Configuration Manager baselines.
+
+Import a configuration baseline.
 
 ## SYNTAX
 
@@ -20,15 +20,13 @@ Import-CMBaseline [-DuplicateWhileImporting] -FileName <String[]> [-Force] [-Dis
 ```
 
 ## DESCRIPTION
-The **Import-CMBaseline** cmdlet imports Configuration Manager baselines from files.
-A baseline is a collection of configuration items that Configuration Manager uses to evaluate whether a computer complies with software requirements.
-After you import a baseline, you can deploy it to a collection so that devices in that collection download the configuration baseline and assess compliance with it.
 
-You can import a configuration baseline from a .cab file that conforms to the Service Modeling Language (SML) schema.
-For example, you might import data previously exported from Configuration Manager or best practices included in a Monitoring Pack for Configuration Manager.
+Use this cmdlet to import one or more configuration baselines from files.
 
-When you import a baseline configuration, you have the option of creating a local copy.
-You can modify that baseline in the future.
+You can import a configuration baseline from a cabinet (`.cab`) file that conforms to the Service Modeling Language (SML) schema.
+For example, you might import data previously exported from Configuration Manager or included in a configuration pack from a vendor.
+
+When you import a baseline configuration, you have the option of creating a local copy. You can then modify that baseline copy.
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
@@ -36,19 +34,21 @@ You can modify that baseline in the future.
 ## EXAMPLES
 
 ### Example 1: Import a baseline
-```
-PS XYZ:\>Import-CMBaseline -FileName "\\ContosoServer01\Public\CM\BaselineW2K8.cab"
-```
 
-This command imports a baseline from a file named BaselineW2K8.cab.
+This command imports a baseline from a file named **BaselineW2K8.cab**.
+
+```powershell
+Import-CMBaseline -FileName "\\ContosoServer01\Public\CM\BaselineW2K8.cab"
+```
 
 ### Example 2: Import multiple baselines
-```
-PS XYZ:\>Import-CMBaseline -FileName "\\ContosoServer01\Public\CM\BaselineW2K8.cab","\\ContosoServer01\Public\CM\BaselineWin7.cab" -DuplicateWhileImporting
-```
 
-This command imports baselines from .cab files named BaselineW2K8.cab and BaselineWin7.cab.
-This command uses the *DuplicateWhileImporting* parameter, so the command creates an editable version of the configuration baselines.
+This command imports baselines from .cab files named **BaselineW2K8.cab** and **BaselineWin7.cab**.
+It uses the **DuplicateWhileImporting** parameter, so it creates an editable version of the configuration baselines.
+
+```powershell
+Import-CMBaseline -FileName "\\ContosoServer01\Public\CM\BaselineW2K8.cab","\\ContosoServer01\Public\CM\BaselineWin7.cab" -DuplicateWhileImporting
+```
 
 ## PARAMETERS
 
@@ -69,8 +69,9 @@ Accept wildcard characters: False
 ```
 
 ### -DuplicateWhileImporting
-Indicates that the cmdlet duplicates a baseline while it imports the baseline.
-If you duplicate a baseline, you can modify that baseline in the future.
+
+Add this parameter to duplicate the baseline when it imports.
+When you duplicate a baseline, you can then modify it.
 
 ```yaml
 Type: SwitchParameter
@@ -85,8 +86,8 @@ Accept wildcard characters: False
 ```
 
 ### -FileName
-Specifies an array of .cab file names.
-Each file contains Configuration Manager configuration items.
+
+Specify an array of cabinet (`.cab`) file names to import.
 
 ```yaml
 Type: String[]
@@ -101,6 +102,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
+
 Forces the command to run without asking for user confirmation.
 
 ```yaml
@@ -132,6 +134,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -172,6 +175,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
@@ -189,5 +193,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-CMBaseline](Remove-CMBaseline.md)
 
 [Set-CMBaseline](Set-CMBaseline.md)
-
-

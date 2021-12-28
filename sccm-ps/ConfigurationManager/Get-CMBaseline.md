@@ -1,8 +1,7 @@
 ﻿---
-description: Get a configuration baseline.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 03/23/2021
+ms.date: 12/28/2021
 schema: 2.0.0
 title: Get-CMBaseline
 ---
@@ -217,6 +216,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ### IResultObject[]#SMS_ConfigurationBaselineInfo
@@ -225,6 +225,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### IResultObject#SMS_ConfigurationItem
 ### IResultObject[]#SMS_SoftwareUpdate
 ### IResultObject#SMS_SoftwareUpdate
+
 ## NOTES
 
 For more information on these return objects and their properties, see the following articles:

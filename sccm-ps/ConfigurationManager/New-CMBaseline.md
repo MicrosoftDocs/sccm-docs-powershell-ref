@@ -1,8 +1,7 @@
 ---
-description: Creates a Configuration Manager baseline.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/05/2019
+ms.date: 12/28/2021
 schema: 2.0.0
 title: New-CMBaseline
 ---
@@ -10,7 +9,8 @@ title: New-CMBaseline
 # New-CMBaseline
 
 ## SYNOPSIS
-Creates a Configuration Manager baseline.
+
+Create a configuration baseline.
 
 ## SYNTAX
 
@@ -20,9 +20,10 @@ New-CMBaseline [-AllowComanagedClients] [-Category <String[]>] [-Description <St
 ```
 
 ## DESCRIPTION
-The **New-CMBaseline** cmdlet creates a Configuration Manager baseline.
-A baseline is a collection of configuration items that Configuration Manager uses to evaluate whether a computer complies with software requirements.
-After you create a baseline, you can deploy it to a collection so that devices in that collection download the configuration baseline and assess compliance with it.
+
+Use this cmdlet to create a configuration baseline. A baseline is a collection of configuration items that Configuration Manager uses to evaluate whether a computer complies with software requirements. For more information, see [Create configuration baselines in Configuration Manager](/mem/configmgr/compliance/deploy-use/create-configuration-baselines).
+
+After you create a baseline, use the [Set-CMBaseline](Set-CMBaseline.md) cmdlet to add configuration items. Then use the [New-CMBaselineDeployment](New-CMBaselineDeployment.md) cmdlet to deploy the baseline to a collection. When deployed, devices in that collection download the configuration baseline and assess compliance with it.
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
@@ -30,18 +31,19 @@ After you create a baseline, you can deploy it to a collection so that devices i
 ## EXAMPLES
 
 ### Example 1: Create a configuration baseline
-```
-PS XYZ:\> New-CMBaseline -Name "Accounting Department baseline" -Description "Compliance standards for Accounting computers."
-```
 
-This command creates a baseline for compliance named Accounting Department baseline.
+This command creates a baseline for compliance named **Accounting Department baseline**.
 The command specifies a description for the baseline.
+
+```powershell
+New-CMBaseline -Name "Accounting Department baseline" -Description "Compliance standards for Accounting computers."
+```
 
 ## PARAMETERS
 
 ### -AllowComanagedClients
-Starting in version 1906, use this parameter to set the following option on the configuration baseline properties: **Always apply this baseline even for co-managed clients**
 
+Add this parameter to always apply this baseline even for co-managed clients.
 
 ```yaml
 Type: SwitchParameter
@@ -56,13 +58,15 @@ Accept wildcard characters: False
 ```
 
 ### -Category
-Specifies an array of categories to which the baseline configuration belongs.
-Valid values are:
+
+Specify an array of configuration category names to add to the configuration baselines. These categories improve searching and filtering. By default, the site includes the following categories for configuration baselines:
 
 - Client
 - IT Infrastructure
 - Line of Business
 - Server
+
+To use another category, first add it with the [New-CMCategory](New-CMCategory.md) cmdlet and `-CategoryType BaselineCategories` parameter.
 
 ```yaml
 Type: String[]
@@ -77,7 +81,8 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-Specifies a description for the baseline.
+
+Specify an optional description for the baseline to help identify it.
 
 ```yaml
 Type: String
@@ -124,7 +129,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies a name for the configuration baseline.
+
+Specify a name for the configuration baseline.
 
 ```yaml
 Type: String
@@ -139,6 +145,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -175,10 +182,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
+
 ## OUTPUTS
 
 ### IResultObject#SMS_ConfigurationBaselineInfo
+
 ## NOTES
+
+For more information on this return object and its properties, see [SMS_ConfigurationBaselineInfo server WMI class](/mem/configmgr/develop/reference/compliance/sms_configurationbaselineinfo-server-wmi-class).
 
 ## RELATED LINKS
 
@@ -196,4 +207,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Set-CMBaseline](Set-CMBaseline.md)
 
+[New-CMBaselineDeployment](New-CMBaselineDeployment.md)
 
+[Create configuration baselines in Configuration Manager](/mem/configmgr/compliance/deploy-use/create-configuration-baselines)

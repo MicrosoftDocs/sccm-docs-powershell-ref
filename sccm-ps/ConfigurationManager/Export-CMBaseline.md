@@ -1,8 +1,7 @@
 ﻿---
-description: Exports configuration baselines.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/01/2019
+ms.date: 12/28/2021
 schema: 2.0.0
 title: Export-CMBaseline
 ---
@@ -10,7 +9,8 @@ title: Export-CMBaseline
 # Export-CMBaseline
 
 ## SYNOPSIS
-Exports configuration baselines.
+
+Export a configuration baseline.
 
 ## SYNTAX
 
@@ -33,9 +33,10 @@ Export-CMBaseline [-InputObject] <IResultObject> -Path <String> [-DisableWildcar
 ```
 
 ## DESCRIPTION
-The **Export-CMBaseline** cmdlet exports configuration baselines in a cabinet (.cab) file format from a Configuration Manager site.
-You can then import it to the same or a different Configuration Manager site.
-Configuration data is converted to desired configuration management (DCM) Digest.
+
+Use this cmdlet to export a configuration baseline to a cabinet (`.cab`) file. Configuration data is converted to desired configuration management (DCM) digest XML files.
+
+You can then import it to the same or a different Configuration Manager site. You can use this export/import process to backup custom configuration data, or for development lifecycle. For example, you develop a new configuration baseline in a lab environment. Export the baseline from the test environment, and then import it into the production hierarchy.
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
@@ -43,11 +44,12 @@ Configuration data is converted to desired configuration management (DCM) Digest
 ## EXAMPLES
 
 ### Example 1: Export a baseline
-```
-PS XYZ:\>Export-CMBaseline -Name "BLConfig01" -Path "\\Contoso01\CM\Toolbox\BaselineW2K8.cab"
-```
 
-This command exports the configuration baseline named BLConfig01 to the file named BaselineW2K8.cab.
+This command exports the configuration baseline named **BLConfig01** to the file named **BaselineW2K8.cab**.
+
+```powershell
+Export-CMBaseline -Name "BLConfig01" -Path "\\Contoso01\CM\Toolbox\BaselineW2K8.cab"
+```
 
 ## PARAMETERS
 
@@ -84,7 +86,8 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-Specifies an array of IDs of configuration baselines.
+
+Specify the **CI_ID** of the configuration baseline to export. For example, `16777516`.
 
 ```yaml
 Type: Int32
@@ -99,8 +102,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies a **CMBaseline** object.
-To obtain a **CMBaseline** object, use the [Get-CMBaseline](Get-CMBaseline.md) cmdlet.
+
+Specify a configuration baseline object to export. To get this object, use the [Get-CMBaseline](Get-CMBaseline.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -115,7 +118,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies an array of names of configuration baselines.
+
+Specify the name of the configuration baseline to export.
 
 ```yaml
 Type: String
@@ -130,7 +134,8 @@ Accept wildcard characters: False
 ```
 
 ### -Path
-Specifies the full path of the cabinet (.cab) file.
+
+Specify the full path of the cabinet file to export to. Include the file extension `.cab` in the path.
 
 ```yaml
 Type: String
@@ -145,6 +150,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -185,6 +191,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
