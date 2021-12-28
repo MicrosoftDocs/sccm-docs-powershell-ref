@@ -1,7 +1,7 @@
 ﻿---
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 01/04/2021
+ms.date: 12/28/2021
 online version:
 schema: 2.0.0
 ---
@@ -40,9 +40,9 @@ This example first uses the **Get-CMGlobalCondition** cmdlet to get the default 
 ```powershell
 $myGC = Get-CMGlobalCondition -Name "Operating System" | Where-Object PlatformType -eq 1
 
-$platformA = Get-CMConfigurationPlatform -Name "All Windows Server 2019 and higher (64-bit)"
+$platformA = Get-CMConfigurationPlatform -Name "All Windows Server 2019 and higher (64-bit)" -Fast
 
-$platformB = Get-CMConfigurationPlatform -Name "All Windows Server 2016 and higher (64-bit)"
+$platformB = Get-CMConfigurationPlatform -Name "All Windows Server 2016 and higher (64-bit)" -Fast
 
 $myRule = $myGC | New-CMRequirementRuleOperatingSystemValue -RuleOperator OneOf -Platform $platformA, $platformB
 
@@ -127,11 +127,11 @@ Accept wildcard characters: False
 
 ### -PlatformString
 
-Instead of using the **Get-CMConfigurationPlatform** cmdlet with the **Platform** parameter, you can use this parameter to specify an array of one or more known **CI_ID** strings. For example, the **CI_ID** for the platform **All Windows Server 2019 and higher (64-bit)** is `287650`.
+Instead of using the **Get-CMConfigurationPlatform** cmdlet with the **Platform** parameter, you can use this parameter to specify an array of one or more known **ModelName** strings. For example, the **ModelName** for the platform **All Windows 11 and higher (64-bit)** is `Windows/All_x64_Windows_11_and_higher_Clients`.
 
-Use a command similar to the following to discover the CI_ID for a platform:
+Use a command similar to the following to discover the model name for a platform:
 
-`Get-CMConfigurationPlatform -Name "*Server 2019*" | Select-Object LocalizedDisplayName, CI_ID`
+`Get-CMConfigurationPlatform -Name "*Server 2019*" -Fast | Select-Object LocalizedDisplayName, ModelName`
 
 ```yaml
 Type: String[]
