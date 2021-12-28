@@ -1,7 +1,7 @@
 ﻿---
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 03/30/2021
+ms.date: 12/28/2021
 schema: 2.0.0
 title: Get-CMComponentStatusSetting
 ---
@@ -92,6 +92,9 @@ Accept wildcard characters: False
 ### -SiteSystemServerName
 
 Specify the name of a site system server that hosts a component.
+
+> [!NOTE]
+> This parameter is deprecated and may be removed in a future release.
 
 ```yaml
 Type: String
