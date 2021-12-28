@@ -1,8 +1,7 @@
 ---
-description: Modifies a software update deployment in Configuration Manager.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 08/25/2020
+ms.date: 12/28/2021
 schema: 2.0.0
 title: Set-CMSoftwareUpdateDeployment
 ---
@@ -10,7 +9,8 @@ title: Set-CMSoftwareUpdateDeployment
 # Set-CMSoftwareUpdateDeployment
 
 ## SYNOPSIS
-Modifies a software update deployment in Configuration Manager.
+
+Modify a software update deployment.
 
 ## SYNTAX
 
@@ -95,7 +95,10 @@ Set-CMSoftwareUpdateDeployment [-AlertDateTime <DateTime>] [-AllowRestart <Boole
 ```
 
 ## DESCRIPTION
-The **Set-CMSoftwareUpdateDeployment** cmdlet modifies a deployment of software updates in Configuration Manager.
+
+Use this cmdlet to modify a deployment of software updates in Configuration Manager.
+
+For more information, see [Deploy software updates in Configuration Manager](/mem/configmgr/sum/deploy-use/deploy-software-updates).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
@@ -543,7 +546,10 @@ Accept wildcard characters: False
 
 ### -RestartServer
 
-Indicates whether to allow a server to restart following a software update.
+Indicate whether to suppress a server restart, if a restart is required to complete update installation.
+
+- `$true`: Suppress the restart
+- `$false`: Allow servers to restart
 
 ```yaml
 Type: Boolean
@@ -559,7 +565,10 @@ Accept wildcard characters: False
 
 ### -RestartWorkstation
 
-Indicates whether to allow a workstation to restart following a software update.
+Indicate whether to suppress a workstation restart, if a restart is required to complete update installation.
+
+- `$true`: Suppress the restart
+- `$false`: Allow servers to restart
 
 ```yaml
 Type: Boolean
@@ -580,7 +589,7 @@ Indicates whether to send a wake-up packet to computers before the deployment be
 - `$True`: Configuration Manager wakes a computer from sleep.
 - `$False`: It doesn't wake computers from sleep.
 
-For computers to wake, first configure Wake On LAN.
+For computers to wake, first [configure wake on LAN](/mem/configmgr/core/clients/deploy/configure-wake-on-lan).
 
 ```yaml
 Type: Boolean
@@ -596,7 +605,7 @@ Accept wildcard characters: False
 
 ### -SoftDeadlineEnabled
 
-Starting in version 1906, use this parameter to set the following option on the **Deployment Schedule** page of the ADR deployment settings: **Delay enforcement of this deployment according to user preferences, up to the grace period defined in client settings**.
+Set this parameter to `$true` to delay enforcement of this deployment according to user preferences, up to the grace period defined in client settings.
 
 ```yaml
 Type: Boolean
@@ -818,11 +827,19 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
 
+[Get-CMSoftwareUpdateDeployment](Get-CMSoftwareUpdateDeployment.md)
+
 [New-CMSoftwareUpdateDeployment](New-CMSoftwareUpdateDeployment.md)
+
+[Remove-CMSoftwareUpdateDeployment](Remove-CMSoftwareUpdateDeployment.md)
+
+[Deploy software updates in Configuration Manager](/mem/configmgr/sum/deploy-use/deploy-software-updates)
