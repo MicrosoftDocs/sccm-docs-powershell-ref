@@ -1,6 +1,7 @@
 ---
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
+ms.date: 12/28/2021
 online version:
 schema: 2.0.0
 ---
@@ -8,7 +9,8 @@ schema: 2.0.0
 # New-CMScript
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Create a PowerShell script in Configuration Manager.
 
 ## SYNTAX
 
@@ -25,23 +27,36 @@ New-CMScript [-Fast] -ScriptName <String> -ScriptText <String> [-DisableWildcard
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+Use this cmdlet to create a new PowerShell script. These scripts are integrated and managed in Configuration Manager.
+
+For more information, see [Create and run PowerShell scripts from the Configuration Manager console](/mem/configmgr/apps/deploy-use/create-deploy-scripts).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Create a script with text
+
+This example creates a new script named **CMScript**. It specifies the text of the script.
+
 ```powershell
-PS XYZ:\> {{ Add example code here }}
+New-CMScript -ScriptName "CMScript" -ScriptText 'Write-Host "New Script"'
 ```
 
-{{ Add example description here }}
+### Example 2: Create a script from a file
+
+This example creates a new script named **ImportScript**. It imports the script from an existing file on a network share.
+
+```powershell
+New-CMScript -ScriptName "ImportScript" -ScriptFile "\\abc\importedscript.ps1" -Fast
+```
 
 ## PARAMETERS
 
 ### -DisableWildcardHandling
+
 This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
@@ -75,6 +90,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
+
 This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
@@ -90,7 +106,8 @@ Accept wildcard characters: False
 ```
 
 ### -ScriptFile
-{{ Fill ScriptFile Description }}
+
+Specify the path to a PowerShell script file (`.ps1`). The text of the file is used for the script in Configuration Manager.
 
 ```yaml
 Type: String
@@ -105,7 +122,8 @@ Accept wildcard characters: False
 ```
 
 ### -ScriptName
-{{ Fill ScriptName Description }}
+
+Specify a name for the script to create.
 
 ```yaml
 Type: String
@@ -120,7 +138,8 @@ Accept wildcard characters: False
 ```
 
 ### -ScriptText
-{{ Fill ScriptText Description }}
+
+Specify the text of the script to create.
 
 ```yaml
 Type: String
@@ -135,6 +154,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -171,9 +191,20 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
+
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
+
+[Approve-CMScript](Approve-CMScript.md)
+[Deny-CMScript](Deny-CMScript.md)
+[Get-CMScript](Get-CMScript.md)
+[Invoke-CMScript](Invoke-CMScript.md)
+[Remove-CMScript](Remove-CMScript.md)
+[Set-CMScript](Set-CMScript.md)
+
+[Create and run PowerShell scripts from the Configuration Manager console](/mem/configmgr/apps/deploy-use/create-deploy-scripts)

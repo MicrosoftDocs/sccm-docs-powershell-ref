@@ -1,8 +1,7 @@
 ---
-description: Approves a Configuration Manager PowerShell script.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 11/15/2018
+ms.date: 12/28/2021
 schema: 2.0.0
 title: Approve-CMScript
 ---
@@ -11,7 +10,7 @@ title: Approve-CMScript
 
 ## SYNOPSIS
 
-Approves a Configuration Manager PowerShell script.
+Approve a PowerShell script in Configuration Manager.
 
 ## SYNTAX
 
@@ -29,33 +28,50 @@ Approve-CMScript [-Comment <String>] -ScriptGuid <String> [-DisableWildcardHandl
 
 ## DESCRIPTION
 
-The **Approve-CMScript** cmdlet approves a Configuration Manager Powershell script. Configuration Manager has an integrated ability to run Powershell scripts. The scripts simplify building custom tools to administer software and let you accomplish mundane tasks quickly, allowing you to get large jobs done more easily and more consistently. For more information, see [Create and run PowerShell scripts from the Configuration Manager console](/sccm/apps/deploy-use/create-deploy-scripts).
+Use this cmdlet to approve a Powershell script in Configuration Manager. These scripts are integrated and managed in Configuration Manager. You can't run a script on devices until it's approved. After you approve a script, to run it use the [Invoke-CMScript](Invoke-CMScript.md) cmdlet.
 
-You can approve a specific script by specifying the script object or the name of the script.
+By default, you can't approve scripts that you author.
+
+For more information, see [Create and run PowerShell scripts from the Configuration Manager console](/mem/configmgr/apps/deploy-use/create-deploy-scripts).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
-### Example 1: Approve a script by using the script id
+### Example 1: Approve a script by using the script ID
+
+This command approves a script that has the ID `DF8E7546-FD66-4A3D-A129-53AF5AA54F80`.
 
 ```powershell
-PS XYZ:\> Approve-CMScript -ScriptGuid "DF8E7546-FD66-4A3D-A129-53AF5AA54F80"
+Approve-CMScript -ScriptGuid "DF8E7546-FD66-4A3D-A129-53AF5AA54F80"
 ```
-
-This command approves a script that has the ID DF8E7546-FD66-4A3D-A129-53AF5AA54F80  .
 
 ### Example 2: Approve a script by using script object variable
 
+The first command gets a script object with ID `DF8E7546-FD66-4A3D-A129-53AF5AA54F80`. It then stores the object in the **$ScriptObj** variable.
+
+The second command approves the script stored in the variable.
+
 ```powershell
-PS XYZ:\> $ScriptObj = Get-CMScript -Id "DF8E7546-FD66-4A3D-A129-53AF5AA54F80"
-PS XYZ:\> Approve-CMScript -InputObject $ScriptObj
+$ScriptObj = Get-CMScript -Id "DF8E7546-FD66-4A3D-A129-53AF5AA54F80"
+Approve-CMScript -InputObject $ScriptObj
 ```
 
-The first command gets a **CMScript** object that has the ID DF8E7546-FD66-4A3D-A129-53AF5AA54F80, and then stores it in the $ScriptObj variable.
+### Example 3: Bulk approve all unapproved scripts
 
-The second command approves the script stored in the $ScriptObj variable.
+This command gets all scripts in Configuration Manager that aren't approved. It then loops through each script in the **scripts** array. If the current user is not the author of the script, it approves it.
+
+```powershell
+$scripts = Get-CMScript -Fast | Where-Object { -not $_.ApprovalState }
+
+$me = $env:userdomain + "\" + $env:username
+foreach ( $script in $scripts ) {
+  if ( $script.Author -ne $me ) {
+    Approve-CMScript -InputObject $script
+  }
+}
+```
 
 ## PARAMETERS
 
@@ -109,8 +125,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 
-Specifies a **CMScript** object.
-To obtain a **CMScript** object, use [Get-CMScript](Get-CMScript.md).
+Specify a script object to approve. To get this object, use the [Get-CMScript](Get-CMScript.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -126,7 +141,7 @@ Accept wildcard characters: False
 
 ### -ScriptGuid
 
-Specifies the script ID.
+Specify the ID of the script to approve. The format is a standard GUID.
 
 ```yaml
 Type: String
@@ -158,8 +173,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
 
 ```yaml
 Type: SwitchParameter
@@ -179,23 +193,20 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
 
 [Deny-CMScript](Deny-CMScript.md)
-
-[Get-CMScript](Invoke-CMScript.md)
-
+[Get-CMScript](Get-CMScript.md)
 [Invoke-CMScript](Invoke-CMScript.md)
-
+[New-CMScript](New-CMScript.md)
 [Remove-CMScript](Remove-CMScript.md)
+[Set-CMScript](Set-CMScript.md)
 
-[Approve-CMScript](Approve-CMScript.md)
-
-[Set-CMScriptDeploymentType](Set-CMScriptDeploymentType.md)
-
-[Add-CMScriptDeploymentType](Add-CMScriptDeploymentType.md)
+[Create and run PowerShell scripts from the Configuration Manager console](/mem/configmgr/apps/deploy-use/create-deploy-scripts)

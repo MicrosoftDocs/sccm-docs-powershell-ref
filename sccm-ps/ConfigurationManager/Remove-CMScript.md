@@ -1,8 +1,7 @@
 ---
-description: Removes Configuration Manager Powershell scripts.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 11/15/2018
+ms.date: 12/28/2021
 schema: 2.0.0
 title: Remove-CMScript
 ---
@@ -11,7 +10,7 @@ title: Remove-CMScript
 
 ## SYNOPSIS
 
-Remove a Configuration Manager PowerShell script.
+Remove a PowerShell script from Configuration Manager.
 
 ## SYNTAX
 
@@ -29,7 +28,9 @@ Remove-CMScript [-Force] -ScriptName <String> [-DisableWildcardHandling] [-Force
 
 ## DESCRIPTION
 
-The **Remove-CMScript** cmdlet removes one or more Configuration Manager scripts. Configuration Manager has an integrated ability to run Powershell scripts. The scripts simplify building custom tools to administer software and let you accomplish mundane tasks quickly, allowing you to get large jobs done more easily and more consistently.
+Use this cmdlet to remove a PowerShell script from Configuration Manager. These scripts are integrated and managed in Configuration Manager. When you remove a script, it you can't run it anymore. Instead of removing a script, you can also deny it so it can't run on clients. For more information, see [Deny-CMScript](Deny-CMScript.md).
+
+For more general information, see [Create and run PowerShell scripts from the Configuration Manager console](/mem/configmgr/apps/deploy-use/create-deploy-scripts).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
@@ -38,11 +39,11 @@ The **Remove-CMScript** cmdlet removes one or more Configuration Manager scripts
 
 ### Example 1: Remove a script by using the script name
 
-```powershell
-PS XYZ:\> Remove-CMScript -ScriptName "getUsers"
-```
+This command removes a script that has the name **getUesrs**.
 
-This command removes a script that has the name getUesrs.
+```powershell
+Remove-CMScript -ScriptName "getUsers" -Force
+```
 
 ## PARAMETERS
 
@@ -96,8 +97,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 
-Specifies a **CMScript** object.
-To obtain a **CMScript** object, use [Get-CMScript](Get-CMScript.md).
+Specify a script object to remove. To get this object, use the [Get-CMScript](Get-CMScript.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -113,7 +113,7 @@ Accept wildcard characters: False
 
 ### -ScriptName
 
-Specifies a script name.
+Specify the name of the script to remove.
 
 ```yaml
 Type: String
@@ -145,8 +145,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
 
 ```yaml
 Type: SwitchParameter
@@ -166,21 +165,20 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
 
 [Approve-CMScript](Approve-CMScript.md)
-
 [Deny-CMScript](Deny-CMScript.md)
-
-[Get-CMScript](Invoke-CMScript.md)
-
+[Get-CMScript](Get-CMScript.md)
 [Invoke-CMScript](Invoke-CMScript.md)
+[New-CMScript](New-CMScript.md)
+[Set-CMScript](Set-CMScript.md)
 
-[Set-CMScriptDeploymentType](Set-CMScriptDeploymentType.md)
-
-[Add-CMScriptDeploymentType](Add-CMScriptDeploymentType.md)
+[Create and run PowerShell scripts from the Configuration Manager console](/mem/configmgr/apps/deploy-use/create-deploy-scripts)
