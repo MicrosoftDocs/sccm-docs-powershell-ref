@@ -1,8 +1,7 @@
 ﻿---
-description: Gets how often Configuration Manager evaluates collection membership.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/02/2019
+ms.date: 12/29/2021
 schema: 2.0.0
 title: Get-CMCollectionMembershipEvaluationComponent
 ---
@@ -10,7 +9,8 @@ title: Get-CMCollectionMembershipEvaluationComponent
 # Get-CMCollectionMembershipEvaluationComponent
 
 ## SYNOPSIS
-Gets how often Configuration Manager evaluates collection membership.
+
+Get the site component that evaluates collection membership.
 
 ## SYNTAX
 
@@ -20,28 +20,26 @@ Get-CMCollectionMembershipEvaluationComponent [-SiteCode <String>] [-SiteSystemS
 ```
 
 ## DESCRIPTION
-The **Get-CMCollectionMembershipEvaluationComponent** cmdlet gets the value for how often Configuration Manager evaluates collections.
-Configuration Manager queries the database at a regular interval to check for changes in collection membership.
-You can specify which value to get by site server name or site code.
+
+Use this cmdlet to get the site component that evaluates collection membership. This component controls how often collection membership is incrementally evaluated. Incremental evaluation updates a collection membership with only new or changed resources.
+
+For more information, see [Site components for Configuration Manager](/mem/configmgr/core/servers/deploy/configure/site-components#bkmk_colleval).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
-### Example 1: Get an evaluation period for a site code
-```
-PS XYZ:\> Get-CMCollectionMembershipEvaluationComponent -SiteCode "CM4"
-```
+### Example 1: Get an evaluation period for the site
 
-This command gets the evaluation frequency for collection membership for the specified site code.
+This example first gets the **XYZ** site component for collection membership evaluation and stores the object in the **$component** variable.
+The next command looks at the **Props** property on the component object (`$component`), looks for the embedded property for the **Incremental Interval**, and displays the **Value**. By default, this value is 5 minutes.
 
-### Example 2: Get an evaluation period for a system
-```
-PS XYZ:\> Get-CMCollectionMembershipEvaluationComponent -SiteSystemServerName "CM01.West01.Contoso.com"
-```
+```powershell
+$component = Get-CMCollectionMembershipEvaluationComponent -SiteCode "XYZ"
 
-This command gets the evaluation frequency for the server named CM01.West01.Contoso.com.
+$component.Props | Where-Object { $_.PropertyName -eq "Incremental Interval" } | Select-Object Value
+```
 
 ## PARAMETERS
 
@@ -78,7 +76,8 @@ Accept wildcard characters: False
 ```
 
 ### -SiteCode
-Specifies a site codes for a Configuration Manager site.
+
+Specify the three-character site code to query for this component.
 
 ```yaml
 Type: String
@@ -93,7 +92,8 @@ Accept wildcard characters: False
 ```
 
 ### -SiteSystemServerName
-Specifies an array of names for Configuration Manager servers.
+
+This parameter is deprecated, don't use it.
 
 ```yaml
 Type: String
@@ -113,14 +113,21 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
+
 ## OUTPUTS
 
 ### IResultObject[]#SMS_SCI_Component
 ### IResultObject#SMS_SCI_Component
+
 ## NOTES
+
+For more information on this return object and its properties, see [SMS_SCI_Component server WMI class](/mem/configmgr/develop/reference/core/servers/configure/sms_sci_component-server-wmi-class).
 
 ## RELATED LINKS
 
 [Set-CMCollectionMembershipEvaluationComponent](Set-CMCollectionMembershipEvaluationComponent.md)
 
+[Get-CMSiteComponent](Get-CMSiteComponent.md)
 
+[Site components for Configuration Manager](/mem/configmgr/core/servers/deploy/configure/site-components#bkmk_colleval)
+[Collection evaluation in Configuration Manager](/mem/configmgr/core/clients/manage/collections/collection-evaluation)

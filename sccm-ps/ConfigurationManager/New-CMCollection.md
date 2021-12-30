@@ -1,8 +1,7 @@
 ---
-description: Creates a Configuration Manager collection.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/05/2019
+ms.date: 12/29/2021
 schema: 2.0.0
 title: New-CMCollection
 ---
@@ -10,7 +9,8 @@ title: New-CMCollection
 # New-CMCollection
 
 ## SYNOPSIS
-Creates a Configuration Manager collection.
+
+Create a device or user collection.
 
 ## SYNTAX
 
@@ -39,40 +39,48 @@ New-CMCollection -CollectionType <CollectionType> [-Comment <String>] -LimitingC
 ```
 
 ## DESCRIPTION
-The **New-CMCollection** cmdlet creates a collection in Configuration Manager.
 
-Configuration Manager collections provide a way to manage users, computers, and other resources in your organization. They not only give you a means to organize your resources, but they also give you a means to distribute Configuration Manager packages to clients and users.
+Use this cmdlet to create a device or user collection.
+
+The limiting collection determines which resources can be a member of the collection that you create.
+For instance, when you use the **All Systems** collection as the limiting collection, since it's a device collection, the new device collection can include any device in the Configuration Manager hierarchy.
+
+To scope the type of collection that you create, you can also use the [New-CMDeviceCollection](New-CMDeviceCollection.md) or [New-CMUserCollection](New-CMUserCollection.md) cmdlets.
+
+After you create a collection, add resources to the collection with membership rules.
+To add members to the collection, use one of the cmdlets to add membership rules, for example:
+
+- [Add-CMDeviceCollectionQueryMembershipRule](Add-CMDeviceCollectionQueryMembershipRule.md)
+- [Add-CMUserCollectionQueryMembershipRule](Add-CMUserCollectionQueryMembershipRule.md)
+
+For more information, see [How to create collections in Configuration Manager](/mem/configmgr/core/clients/manage/collections/create-collections).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
-### Example 1: Create a collection and specify its scope
-```
-PS XYZ:\> New-CMCollection -CollectionType User -LimitingCollectionName "All Users" -Name "testUser"
+### Example 1: Create a user collection
+
+This command creates a user collection named **testUser** that sets the **All Users** collection as the limiting collection.
+
+```powershell
+New-CMCollection -CollectionType User -LimitingCollectionName "All Users" -Name "testUser"
 ```
 
-This command creates a user collection named testUser that establishes the All Users collection as the scope from which you can add members.
+### Example 2: Set the limiting collection through the pipeline
 
-### Example 2: Create a collection based on an existing one
-```
-PS XYZ:\> Get-CMCollection -Name "All Users" | New-CMCollection -Name "testUser" -CollectionType "User"
-```
+This command first uses the **Get-CMCollection** to get the **All Users** collection object. It then uses the pipeline operator to pass the object to the **New-CMCollection** cmdlet, which creates a collection named **testUser**. The limiting collection for the new **testUser** collection is the **All Users** collection.
 
-This command gets the collection object named All Users and uses the pipeline operator to pass the object to **New-CMCollection**.
-**New-CMCollection** creates a collection named testUser that is based on the membership of the All Users collection.
+```powershell
+Get-CMCollection -Name "All Users" | New-CMCollection -Name "testUser" -CollectionType "User"
+```
 
 ## PARAMETERS
 
 ### -CollectionType
-Specifies a type for the collection.
-Valid values are:
 
-- Root
-- User
-- Device
-- Unknown
+Specify the type of collection to create. This parameter is functionally the same as using the [New-CMDeviceCollection](New-CMDeviceCollection.md) or [New-CMUserCollection](New-CMUserCollection.md) cmdlets.
 
 ```yaml
 Type: CollectionType
@@ -88,7 +96,8 @@ Accept wildcard characters: False
 ```
 
 ### -Comment
-Specifies a comment for the collection.
+
+Specify an optional comment to describe and identify this collection.
 
 ```yaml
 Type: String
@@ -135,8 +144,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies a collection object to use as a scope for this collection.
-To obtain a collection object, use the [Get-CMCollection](Get-CMCollection.md) cmdlet.
+
+Specify an object for the limiting collection. To get this object, use the [Get-CMCollection](Get-CMCollection.md), [Get-CMDeviceCollection](Get-CMDeviceCollection.md), or [Get-CMUserCollection](Get-CMUserCollection.md) cmdlets.
 
 ```yaml
 Type: IResultObject
@@ -151,7 +160,8 @@ Accept wildcard characters: False
 ```
 
 ### -LimitingCollectionId
-Specifies the ID of a collection to use as a scope for this collection.
+
+Specify the ID of the limiting collection. This value is the **CollectionID** property, for example, `XYZ00012` or `SMS00001`.
 
 ```yaml
 Type: String
@@ -166,7 +176,8 @@ Accept wildcard characters: False
 ```
 
 ### -LimitingCollectionName
-Specifies the name of a collection to use as a scope for this collection.
+
+Specify the name of the limiting collection.
 
 ```yaml
 Type: String
@@ -181,7 +192,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies a name for the collection.
+
+Specify the name for the new collection.
 
 ```yaml
 Type: String
@@ -196,7 +208,8 @@ Accept wildcard characters: False
 ```
 
 ### -RefreshSchedule
-Specifies a schedule that determines when Configuration Manager refreshes the collection.
+
+If you set the **RefreshType** parameter to either `Periodic` or `Both`, use this parameter to set the schedule. Specify a schedule object for when the site runs a full update of the collection membership. To get this object, use the [New-CMSchedule](New-CMSchedule.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -211,14 +224,18 @@ Accept wildcard characters: False
 ```
 
 ### -RefreshType
-Specifies how Configuration Manager refreshes the collection.
-Valid values are:
 
-- None
-- Manual
-- Periodic
-- Continuous
-- Both
+Specify how the collection membership is updated:
+
+- `Manual` (1): An administrator manually triggers a membership update in the Configuration Manager console or with the [Invoke-CMCollectionUpdate](Invoke-CMCollectionUpdate.md) cmdlet.
+- `Periodic` (2): The site does a full update on a schedule. It doesn't use incremental updates. If you don't specify a type, this value is the default.
+- `Continuous` (4): The site periodically evaluates new resources and then adds new members. This type is also known as an _incremental update_. It doesn't do a full update on a schedule.
+- `Both` (6): A combination of both `Periodic` and `Continuous`, with both incremental updates and a full update on a schedule.
+
+If you specify either `Periodic` or `Both`, use the **RefreshSchedule** parameter to set the schedule.
+
+> [!NOTE]
+> The `None` value (0) is functionally the same as `Manual`.
 
 ```yaml
 Type: CollectionRefreshType
@@ -234,7 +251,10 @@ Accept wildcard characters: False
 ```
 
 ### -VariablePriority
-{{ Fill VariablePriority Description }}
+
+Specify an integer value from 1-9 for the priority of device collection variables. `1` is the lowest priority, and `9` is the highest.
+
+To create variables on a device collection, use the [New-CMDeviceCollectionVariable](New-CMDeviceCollectionVariable.md) cmdlet.
 
 ```yaml
 Type: Int32
@@ -249,6 +269,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -285,21 +306,30 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ### IResultObject#SMS_Collection
+
 ## NOTES
+
+For more information on this return object and its properties, see [SMS_Collection server WMI class](/mem/configmgr/develop/reference/core/clients/collections/sms_collection-server-wmi-class).
 
 ## RELATED LINKS
 
+[Copy-CMCollection](Copy-CMCollection.md)
 [Export-CMCollection](Export-CMCollection.md)
-
 [Get-CMCollection](Get-CMCollection.md)
-
+[Get-CMCollectionMember](Get-CMCollectionMember.md)
+[Get-CMCollectionSetting](Get-CMCollectionSetting.md)
 [Import-CMCollection](Import-CMCollection.md)
-
+[Invoke-CMCollectionUpdate](Invoke-CMCollectionUpdate.md)
 [Remove-CMCollection](Remove-CMCollection.md)
-
 [Set-CMCollection](Set-CMCollection.md)
 
+[New-CMDeviceCollectionVariable](New-CMDeviceCollectionVariable.md)
 
+[New-CMDeviceCollection](New-CMDeviceCollection.md)
+[New-CMUserCollection](New-CMUserCollection.md)
+
+[How to create collections in Configuration Manager](/mem/configmgr/core/clients/manage/collections/create-collections)

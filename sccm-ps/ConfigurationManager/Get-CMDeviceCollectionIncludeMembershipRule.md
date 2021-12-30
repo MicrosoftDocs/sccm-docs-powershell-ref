@@ -1,8 +1,7 @@
 ﻿---
-description: Gets an Include Collections membership rule for a device collection.
 external help file: AdminUI.PS.psm1-help.xml
 Module Name: ConfigurationManager
-ms.date: 05/02/2019
+ms.date: 12/28/2021
 schema: 2.0.0
 title: Get-CMDeviceCollectionIncludeMembershipRule
 ---
@@ -10,7 +9,8 @@ title: Get-CMDeviceCollectionIncludeMembershipRule
 # Get-CMDeviceCollectionIncludeMembershipRule
 
 ## SYNOPSIS
-Gets an Include Collections membership rule for a device collection.
+
+Get an include membership rule for a device collection.
 
 ## SYNTAX
 
@@ -69,31 +69,40 @@ Get-CMDeviceCollectionIncludeMembershipRule -InputObject <IResultObject> [-Inclu
 ```
 
 ## DESCRIPTION
-The **Get-CMDeviceCollectionIncludeMembershipRule** cmdlet gets one or more Include Collections membership rules for a device collection.
+
+Use this cmdlet to get one or more include membership rules for a device collection.
+An _include_ membership rule includes the members of another collection to the device collections where the rule is applied.
+
+Configuration Manager dynamically updates the membership of the device collection on a schedule if the membership of the included collection changes.
+
+For more information, see [How to create collections in Configuration Manager](/mem/configmgr/core/clients/manage/collections/create-collections).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
-### Example 1: Get all Include Collections membership rules
-```
-PS XYZ:\> Get-CMDeviceCollectionIncludeMembershipRule -CollectionName "Device"
+### Example 1: Get all include membership rules
+
+This command gets all include membership rules for the collection named **Device**.
+
+```powershell
+Get-CMDeviceCollectionIncludeMembershipRule -CollectionName "Device"
 ```
 
-This command gets all Include Collections membership rules for the collection named Device.
+### Example 2: Get include membership rules by using the pipeline
 
-### Example 2: Get Include Collections rules by using the pipeline
-```
-PS XYZ:\> Get-CMCollection -Name "Device" | Get-CMDeviceCollectionIncludeMembershipRule
-```
+This command first uses the **Get-CMCollection** to get the device collection object named **Device**. It then uses the pipeline operator to pass the object to the **Get-CMDeviceCollectionIncludeMembershipRule** cmdlet, which gets all include membership rules for the device collection object.
 
-This command gets the device collection object named Device and uses the pipeline operator to pass the object to **Get-CMDeviceCollectionIncludeMembershipRule**, which gets all Include Collections membership rules for the device collection object.
+```powershell
+Get-CMCollection -Name "Device" | Get-CMDeviceCollectionIncludeMembershipRule
+```
 
 ## PARAMETERS
 
 ### -CollectionId
-Specifies the ID of a device collection.
+
+Specify the ID of the device collection to get the rule. This value is the **CollectionID** property, for example, `XYZ00012`. Since default collections don't have include membership rules, this ID starts with the site code and not `SMS`.
 
 ```yaml
 Type: String
@@ -108,7 +117,8 @@ Accept wildcard characters: False
 ```
 
 ### -CollectionName
-Specifies the name of a device collection.
+
+Specify the name of the device collection to get the rule.
 
 ```yaml
 Type: String
@@ -123,8 +133,8 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeCollection
-Specifies a device collection object included in a membership rule.
-To obtain a collection object, use the [Get-CMCollection](Get-CMCollection.md) cmdlet.
+
+Specify an object for the included collection to get the rule. To get this object, use the [Get-CMCollection](Get-CMCollection.md) or [Get-CMDeviceCollection](Get-CMDeviceCollection.md) cmdlets.
 
 ```yaml
 Type: IResultObject
@@ -139,7 +149,8 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeCollectionId
-Specifies the ID of a device collection included in a membership rule.
+
+Specify the ID of the included collection to get the rule. This value is the **CollectionID** property, for example, `XYZ00012`. You can include default collections, so this value can start with either the site code or `SMS`.
 
 ```yaml
 Type: String
@@ -154,7 +165,8 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeCollectionName
-Specifies the name of a device collection included in a membership rule.
+
+Specify the name of the included collection to get the rule.
 
 ```yaml
 Type: String
@@ -169,8 +181,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies the input to this cmdlet.
-You can use this parameter, or you can pipe the input to this cmdlet.
+
+Specify an object for the device collection to get the rule. To get this object, use the [Get-CMCollection](Get-CMCollection.md) or [Get-CMDeviceCollection](Get-CMDeviceCollection.md) cmdlets.
 
 ```yaml
 Type: IResultObject
@@ -190,23 +202,23 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
 
-[Introduction to Collections in Configuration Manager](/mem/configmgr/core/clients/manage/collections/introduction-to-collections)
-
 [Add-CMDeviceCollectionIncludeMembershipRule](Add-CMDeviceCollectionIncludeMembershipRule.md)
-
-[Get-CMCollection](Get-CMCollection.md)
-
 [Remove-CMDeviceCollectionIncludeMembershipRule](Remove-CMDeviceCollectionIncludeMembershipRule.md)
 
-[Get-CMCollection](Get-CMCollection.md)
+[Get-CMCollectionIncludeMembershipRule](Get-CMCollectionIncludeMembershipRule.md)
 
+[Get-CMCollection](Get-CMCollection.md)
 [Get-CMDeviceCollection](Get-CMDeviceCollection.md)
 
+[Get-CMUserCollectionIncludeMembershipRule](Get-CMUserCollectionIncludeMembershipRule.md)
 
+[How to create collections in Configuration Manager](/mem/configmgr/core/clients/manage/collections/create-collections)

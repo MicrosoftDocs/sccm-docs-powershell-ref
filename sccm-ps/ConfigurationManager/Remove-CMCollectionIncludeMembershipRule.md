@@ -1,8 +1,7 @@
 ---
-description: Removes a collection include membership rule.
 external help file: AdminUI.PS.psm1-help.xml
 Module Name: ConfigurationManager
-ms.date: 05/07/2019
+ms.date: 12/30/2021
 schema: 2.0.0
 title: Remove-CMCollectionIncludeMembershipRule
 ---
@@ -10,7 +9,8 @@ title: Remove-CMCollectionIncludeMembershipRule
 # Remove-CMCollectionIncludeMembershipRule
 
 ## SYNOPSIS
-Removes a collection include membership rule.
+
+Remove an include membership rule from a device or user collection.
 
 ## SYNTAX
 
@@ -70,19 +70,41 @@ Remove-CMCollectionIncludeMembershipRule -InputObject <IResultObject> -IncludeCo
 
 ## DESCRIPTION
 
+Use this cmdlet to remove an include membership rule from a device or user collection.
+An _include_ membership rule includes the members of another collection in the collection where the rule is applied.
+
+For more information, see [How to create collections in Configuration Manager](/mem/configmgr/core/clients/manage/collections/create-collections).
+
+When you remove an include membership rule to a collection, a resource may no longer be a member of the collection. This action can cause any software or configuration deployment to not apply to a resource.
+
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Remove an include membership rule
+
+This command removes the include membership rule for the **All Systems** collection from the device collection named **Devices**.
+Specifying the **Force** parameter indicates that the membership rule is removed without prompting you.
+
+```powershell
+Remove-CMCollectionIncludeMembershipRule -CollectionName "Devices" -IncludeCollectionName "All Systems" -Force
 ```
-PS XYZ:\>
+
+### Example 2: Remove an include membership rule by using the pipeline
+
+This command first uses the **Get-CMCollection** cmdlet to get the user collection object named **Users**. It then uses the pipeline operator to pass the object to the **Remove-CMCollectionIncludeMembershipRule** cmdlet.
+
+```powershell
+Get-CMCollection -Name "Users" | Remove-CMCollectionIncludeMembershipRule -IncludeCollectionName "All Users" -Force
 ```
 
 ## PARAMETERS
 
 ### -CollectionId
+
+Specify the ID of the collection to remove the rule. This value is the **CollectionID** property, for example, `XYZ00012`. Since default collections don't have include membership rules, this ID starts with the site code and not `SMS`.
+
 ```yaml
 Type: String
 Parameter Sets: ByIdAndValue, ByIdAndId, ByIdAndName
@@ -96,6 +118,9 @@ Accept wildcard characters: False
 ```
 
 ### -CollectionName
+
+Specify the name of the collection to remove the rule.
+
 ```yaml
 Type: String
 Parameter Sets: ByNameAndName, ByNameAndValue, ByNameAndId
@@ -125,6 +150,9 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeCollection
+
+Specify an object for the included collection to remove the rule. To get this object, use the [Get-CMCollection](Get-CMCollection.md), [Get-CMDeviceCollection](Get-CMDeviceCollection.md), or [Get-CMUserCollection](Get-CMUserCollection.md) cmdlets.
+
 ```yaml
 Type: IResultObject
 Parameter Sets: ByNameAndValue, ByIdAndValue, ByValueAndValue
@@ -138,6 +166,9 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeCollectionId
+
+Specify the ID of the included collection to remove the rule. This value is the **CollectionID** property, for example, `XYZ00012`. You can include default collections, so this value can start with either the site code or `SMS`.
+
 ```yaml
 Type: String
 Parameter Sets: ByNameAndId, ByIdAndId, ByValueAndId
@@ -151,6 +182,9 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeCollectionName
+
+Specify the name of the included collection to remove the rule.
+
 ```yaml
 Type: String
 Parameter Sets: ByNameAndName, ByIdAndName, ByValueAndName
@@ -164,6 +198,9 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
+
+Specify an object for the collection to remove the rule. To get this object, use the [Get-CMCollection](Get-CMCollection.md), [Get-CMDeviceCollection](Get-CMDeviceCollection.md), or [Get-CMUserCollection](Get-CMUserCollection.md) cmdlets.
+
 ```yaml
 Type: IResultObject
 Parameter Sets: ByValueAndValue, ByValueAndId, ByValueAndName
@@ -177,6 +214,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -213,9 +251,31 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
+This cmdlet is similar to **Remove-CMDeviceCollectionIncludeMembershipRule** and **Remove-CMUserCollectionIncludeMembershipRule**, which are specific to the type of collection. This cmdlet works with either device or user collections.
+
 ## RELATED LINKS
+
+[Get-CMCollectionIncludeMembershipRule](Get-CMCollectionIncludeMembershipRule.md)
+
+[Remove-CMCollectionDirectMembershipRule](Remove-CMCollectionDirectMembershipRule.md)
+[Remove-CMCollectionExcludeMembershipRule](Remove-CMCollectionExcludeMembershipRule.md)
+[Remove-CMCollectionQueryMembershipRule](Remove-CMCollectionQueryMembershipRule.md)
+
+[Add-CMDeviceCollectionIncludeMembershipRule](Add-CMDeviceCollectionIncludeMembershipRule.md)
+[Add-CMUserCollectionIncludeMembershipRule](Add-CMUserCollectionIncludeMembershipRule.md)
+
+[Get-CMDeviceCollectionIncludeMembershipRule](Get-CMDeviceCollectionIncludeMembershipRule.md)
+[Get-CMUserCollectionIncludeMembershipRule](Get-CMUserCollectionIncludeMembershipRule.md)
+
+[Get-CMCollection](Get-CMCollection.md)
+[Get-CMDeviceCollection](Get-CMDeviceCollection.md)
+[Get-CMUserCollection](Get-CMUserCollection.md)
+
+[How to create collections in Configuration Manager](/mem/configmgr/core/clients/manage/collections/create-collections)

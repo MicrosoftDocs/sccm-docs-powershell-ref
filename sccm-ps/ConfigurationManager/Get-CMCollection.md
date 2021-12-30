@@ -1,8 +1,7 @@
 ﻿---
-description: Gets a Configuration Manager collection.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/02/2019
+ms.date: 12/29/2021
 schema: 2.0.0
 title: Get-CMCollection
 ---
@@ -10,7 +9,8 @@ title: Get-CMCollection
 # Get-CMCollection
 
 ## SYNOPSIS
-Gets a Configuration Manager collection.
+
+Get a device or user collection object.
 
 ## SYNTAX
 
@@ -45,9 +45,16 @@ Get-CMCollection [-CollectionType <CollectionType>] -Id <String> [-DisableWildca
 ```
 
 ## DESCRIPTION
-The **Get-CMCollection** cmdlet gets a Configuration Manager collection.
 
-Configuration Manager collections provide a way to manage users, computers, and other resources in your organization. They not only give you a means to organize your resources, but they also give you a means to distribute Configuration Manager packages to clients and users.
+Use this cmdlet to get a device or user collection object.
+
+Collections help you organize resources into manageable units. You can create collections to match your client management needs, and to perform operations on multiple resources at one time. Most management tasks rely on or require using one or more collections.
+
+To scope the type of collection that you get, use the [Get-CMDeviceCollection](Get-CMDeviceCollection.md) or [Get-CMUserCollection](Get-CMUserCollection.md) cmdlets.
+
+If you don't specify a collection by name, ID or object, this cmdlet returns all collections.
+
+For more information, see [Introduction to collections in Configuration Manager](/mem/configmgr/core/clients/manage/collections/introduction-to-collections).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
@@ -55,29 +62,28 @@ Configuration Manager collections provide a way to manage users, computers, and 
 ## EXAMPLES
 
 ### Example 1: Get a collection by name
-```
-PS XYZ:\> Get-CMCollection -Name "testUser"
-```
 
-This command gets the collection named testUser.
+This command gets the collection named **testUser**.
+
+```powershell
+Get-CMCollection -Name "testUser"
+```
 
 ### Example 2: Get a collection for a distribution point group
-```
-PS XYZ:\> Get-CMDistributionPointGroup -Name "testDPGroup" | Get-CMCollection
+
+This command gets the distribution point group object named **dpg1** and uses the pipeline operator to pass the object to **Get-CMCollection**, which gets the collections associated with the distribution point group.
+
+```powershell
+Get-CMDistributionPointGroup -Name "dpg1" | Get-CMCollection
 ```
 
-This command gets the distribution point group object named testDPGroup and uses the pipeline operator to pass the object to **Get-CMCollection**, which gets the collection associated with the distribution point group.
+When you distribute content to these collections, the site automatically distributes to all current members of this distribution point group. For more information, see [Manage distribution point groups](/mem/configmgr/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_manage).
 
 ## PARAMETERS
 
 ### -CollectionType
-Specifies a type for the collection.
-Valid values are:
 
-- Root
-- User
-- Device
-- Unknown
+Filter the type of collection to get. This parameter is functionally the same as using the [Get-CMDeviceCollection](Get-CMDeviceCollection.md) or [Get-CMUserCollection](Get-CMUserCollection.md) cmdlets.
 
 ```yaml
 Type: CollectionType
@@ -109,8 +115,8 @@ Accept wildcard characters: False
 ```
 
 ### -DistributionPointGroup
-Specifies a distribution point group object that is associated with a collection.
-To obtain a distribution point group object, use the [Get-CMDistributionPointGroup](Get-CMDistributionPointGroup.md) cmdlet.
+
+Specify a distribution point group object that's associated with this collection. To get this object, use the [Get-CMDistributionPointGroup](Get-CMDistributionPointGroup.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -125,7 +131,8 @@ Accept wildcard characters: False
 ```
 
 ### -DistributionPointGroupId
-Specifies the ID of the distribution point group that is associated with the collection.
+
+Specify the GUID for a distribution point group that's associated with this collection. This value is the **GroupID** property, which is a standard GUID surrounded by curly brackets, for example, `{537e6303-69eb-4104-bf7b-7baf43ce2352}`.
 
 ```yaml
 Type: String
@@ -140,7 +147,8 @@ Accept wildcard characters: False
 ```
 
 ### -DistributionPointGroupName
-Specifies the name of the distribution point group that is associated with a collection.
+
+Specify the name of a distribution point group that's associated with this collection.
 
 ```yaml
 Type: String
@@ -171,8 +179,8 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-Specifies a collection ID.
-If you do not specify a collection, all collections in the hierarchy are returned.
+
+Specify the ID of the collection to get. This value is the **CollectionID** property, for example, `XYZ00012` or `SMS00001`.
 
 ```yaml
 Type: String
@@ -187,8 +195,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies a collection name.
-If you do not specify a collection, all collections in the hierarchy are returned.
+
+Specify the name of the collection to get.
 
 ```yaml
 Type: String
@@ -208,24 +216,29 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ### IResultObject[]#SMS_Collection
 ### IResultObject#SMS_Collection
+
 ## NOTES
+
+For more information on this return object and its properties, see [SMS_Collection server WMI class](/mem/configmgr/develop/reference/core/clients/collections/sms_collection-server-wmi-class).
 
 ## RELATED LINKS
 
+[Copy-CMCollection](Copy-CMCollection.md)
 [Export-CMCollection](Export-CMCollection.md)
-
-[Get-CMDistributionPointGroup](Get-CMDistributionPointGroup.md)
-
+[Get-CMCollectionMember](Get-CMCollectionMember.md)
+[Get-CMCollectionSetting](Get-CMCollectionSetting.md)
 [Import-CMCollection](Import-CMCollection.md)
-
+[Invoke-CMCollectionUpdate](Invoke-CMCollectionUpdate.md)
 [New-CMCollection](New-CMCollection.md)
-
 [Remove-CMCollection](Remove-CMCollection.md)
-
 [Set-CMCollection](Set-CMCollection.md)
 
+[Get-CMDeviceCollection](Get-CMDeviceCollection.md)
+[Get-CMUserCollection](Get-CMUserCollection.md)
 
+[Introduction to collections in Configuration Manager](/mem/configmgr/core/clients/manage/collections/introduction-to-collections)

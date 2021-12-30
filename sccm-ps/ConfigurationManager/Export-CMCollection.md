@@ -1,8 +1,7 @@
 ﻿---
-description: Exports a Configuration Manager collection.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/01/2019
+ms.date: 12/29/2021
 schema: 2.0.0
 title: Export-CMCollection
 ---
@@ -10,7 +9,8 @@ title: Export-CMCollection
 # Export-CMCollection
 
 ## SYNOPSIS
-Exports a Configuration Manager collection.
+
+Export a collection.
 
 ## SYNTAX
 
@@ -33,9 +33,12 @@ Export-CMCollection [-ExportComment <String>] -ExportFilePath <String> [-Force] 
 ```
 
 ## DESCRIPTION
-The **Export-CMCollection** cmdlet saves a collection object to a specified MOF file in Configuration Manager.
 
-Configuration Manager collections provide a way to manage users, computers, and other resources in your organization. They not only give you a means to organize your resources, but they also give you a means to distribute Configuration Manager packages to clients and users.
+Use this cmdlet to save a collection object to a managed object format (`.mof`) file.
+
+You can then import it to the same or a different Configuration Manager site. You can use this export/import process to backup custom collections, or for development lifecycle. For example, you develop a new collection in a lab environment. Export the collection from the test environment, and then import it into the production hierarchy.
+
+For more information, see [How to manage collections in Configuration Manager](/mem/configmgr/core/clients/manage/collections/manage-collections).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
@@ -43,24 +46,30 @@ Configuration Manager collections provide a way to manage users, computers, and 
 ## EXAMPLES
 
 ### Example 1: Export a collection by name
-```
-PS XYZ:\> Export-CMCollection -Name "testUser" -ExportFilePath "C:\collection.mof"
+
+This command exports the collection named **testUser** to the file named **collection.mof**.
+
+```powershell
+Export-CMCollection -Name "testUser" -ExportFilePath "C:\collection.mof"
 ```
 
-This command exports the collection named testUser to the file named collection.mof.
+### Example 2: Export all collections
 
-### Example 2: Get a collection object and export it
-```
-PS XYZ:\> Get-CMCollection -Name "testUser" | Export-CMCollection -ExportFilePath "C:\collection.mof"
-```
+This example first uses the **Get-CMCollection** cmdlet to get all collections, and stores them in the **allColl** variable. It then loops through each collection, and exports it to a separate file. It uses the collection name (`$coll.Name`) as the file name.
 
-This command gets the collection object named testUser and uses the pipeline operator to pass the object to **Export-CMCollection**, which exports the object to the file named collection.mof.
+```powershell
+$allColl = Get-CMCollection
+
+foreach ( $coll in $allcoll ) {
+  Export-CMCollection -InputObject $coll -ExportFilePath "D:\Export\Collections\$($coll.Name).mof"
+}
+```
 
 ## PARAMETERS
 
 ### -CollectionId
-Specifies a collection ID.
-If you do not specify a collection, all collections in the hierarchy are exported.
+
+Specify the ID of a collection to export. This value is the **CollectionID** property, for example, `XYZ00012`.
 
 ```yaml
 Type: String
@@ -91,7 +100,8 @@ Accept wildcard characters: False
 ```
 
 ### -ExportComment
-Specifies a comment for the exported collection.
+
+Specify an optional comment for the exported collection in the MOF file.
 
 ```yaml
 Type: String
@@ -106,7 +116,8 @@ Accept wildcard characters: False
 ```
 
 ### -ExportFilePath
-Specifies the full path for the export file. The file name must end in ".mof".
+
+Specify the full path for the export file. Include the file extension `.mof`.
 
 ```yaml
 Type: String
@@ -121,6 +132,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
+
 Run the command without asking for confirmation.
 
 ```yaml
@@ -152,8 +164,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies a collection object.
-To obtain a collection object, use the [Get-CMCollection](Get-CMCollection.md) cmdlet.
+
+Specify a collection object to export. To get this object, use the [Get-CMCollection](Get-CMCollection.md), [Get-CMDeviceCollection](Get-CMDeviceCollection.md), or [Get-CMUserCollection](Get-CMUserCollection.md) cmdlets.
 
 ```yaml
 Type: IResultObject
@@ -168,8 +180,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies the name of a collection.
-If you do not specify a collection, all collections in the hierarchy are exported.
+
+Specify the name of a collection to export.
 
 ```yaml
 Type: String
@@ -184,6 +196,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -224,16 +237,19 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
 
+[Copy-CMCollection](Copy-CMCollection.md)
 [Get-CMCollection](Get-CMCollection.md)
-
+[Get-CMCollectionMember](Get-CMCollectionMember.md)
+[Get-CMCollectionSetting](Get-CMCollectionSetting.md)
 [Import-CMCollection](Import-CMCollection.md)
-
+[Invoke-CMCollectionUpdate](Invoke-CMCollectionUpdate.md)
 [New-CMCollection](New-CMCollection.md)
-
 [Remove-CMCollection](Remove-CMCollection.md)
-
 [Set-CMCollection](Set-CMCollection.md)
+
+[How to create collections in Configuration Manager](/mem/configmgr/core/clients/manage/collections/create-collections)

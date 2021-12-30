@@ -1,8 +1,7 @@
 ﻿---
-description: Gets the direct membership rules of one or more user collections in the Configuration Manager hierarchy.
 external help file: AdminUI.PS.psm1-help.xml
 Module Name: ConfigurationManager
-ms.date: 05/02/2019
+ms.date: 12/30/2021
 schema: 2.0.0
 title: Get-CMUserCollectionDirectMembershipRule
 ---
@@ -10,7 +9,8 @@ title: Get-CMUserCollectionDirectMembershipRule
 # Get-CMUserCollectionDirectMembershipRule
 
 ## SYNOPSIS
-Gets the direct membership rules of one or more user collections in the Configuration Manager hierarchy.
+
+Get a direct membership rule for a user collection.
 
 ## SYNTAX
 
@@ -63,27 +63,31 @@ Get-CMUserCollectionDirectMembershipRule -InputObject <IResultObject> [-Resource
 ```
 
 ## DESCRIPTION
-The **Get-CMUserCollectionDirectMembershipRule** cmdlet retrieves the direct rules of the specified collections.
-You can specify the user collections by using their names, IDs, or by specifying an object that represents the collections.
 
-A direct rule lets you explicitly choose the members of the user collection.
-For more information about collection rules, see [Introduction to Collections in Configuration Manager](/mem/configmgr/core/clients/manage/collections/introduction-to-collections).
+Use this cmdlet to get one or more direct membership rules for a user collection.
+A _direct_ membership rule lets you explicitly choose the members of the user collection.
+Default collections don't have direct membership rules. Any collection that you target should have an ID that starts with the site code, not `SMS`.
+For more information, see [How to create collections in Configuration Manager](/mem/configmgr/core/clients/manage/collections/create-collections).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
-### Example 1: Get a direct membership rule
-```
-PS XYZ:\> Get-CMUserCollectionDirectMembershipRule -CollectionName "All Mobile Devices" -ResourceId "Res_94412512"
-```
+### Example 1: Get all direct membership rules for a collection by name
 
-This command gets the direct membership rule that has the Id Res_94412512 for the collection named All Mobile Devices.
+This command gets the direct membership rules for the user collection named **Users**.
+
+```powershell
+Get-CMUserCollectionDirectMembershipRule -CollectionName "Users"
+```
 
 ## PARAMETERS
 
 ### -CollectionId
+
+Specify the ID of the user collection to get the rule. This value is the **CollectionID** property, for example, `XYZ00012`. Since default collections can't have direct membership rules, this ID starts with the site code and not `SMS`.
+
 ```yaml
 Type: String
 Parameter Sets: ByIdAndValue, ByIdAndId, ByIdAndName
@@ -97,6 +101,9 @@ Accept wildcard characters: False
 ```
 
 ### -CollectionName
+
+Specify the name of the user collection to get the rule.
+
 ```yaml
 Type: String
 Parameter Sets: ByNameAndName, ByNameAndValue, ByNameAndId
@@ -110,8 +117,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies the input to this cmdlet.
-You can use this parameter, or you can pipe the input to this cmdlet.
+
+Specify an object for the user collection to get the rule. To get this object, use the [Get-CMCollection](Get-CMCollection.md) or [Get-CMDeviceCollection](Get-CMDeviceCollection.md) cmdlets.
 
 ```yaml
 Type: IResultObject
@@ -126,6 +133,9 @@ Accept wildcard characters: False
 ```
 
 ### -Resource
+
+Specify a user object to get its direct membership rule from the user collection. To get this object, use the [Get-CMResource](Get-CMResource.md) or [Get-CMUser](Get-CMUser.md) cmdlets.
+
 ```yaml
 Type: IResultObject
 Parameter Sets: ByNameAndValue, ByIdAndValue, ByValueAndValue
@@ -139,6 +149,9 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceId
+
+Specify the ID of the user to get its direct membership rule from the user collection. This value is the **ResourceID** property, for example `16777219`.
+
 ```yaml
 Type: String
 Parameter Sets: ByNameAndId, ByIdAndId, ByValueAndId
@@ -152,6 +165,9 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceName
+
+Specify the name of the user to get its direct membership rule from the user collection.
+
 ```yaml
 Type: String
 Parameter Sets: ByNameAndName, ByIdAndName, ByValueAndName
@@ -170,17 +186,25 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
 
 [Add-CMUserCollectionDirectMembershipRule](Add-CMUserCollectionDirectMembershipRule.md)
-
-[Get-CMUserCollection](Get-CMUserCollection.md)
-
 [Remove-CMUserCollectionDirectMembershipRule](Remove-CMUserCollectionDirectMembershipRule.md)
 
+[Get-CMCollectionDirectMembershipRule](Get-CMCollectionDirectMembershipRule.md)
 
+[Get-CMCollection](Get-CMCollection.md)
+[Get-CMUserCollection](Get-CMUserCollection.md)
+[Get-CMResource](Get-CMResource.md)
+[Get-CMUser](Get-CMUser.md)
+
+[Get-CMDeviceCollectionDirectMembershipRule](Get-CMDeviceCollectionDirectMembershipRule.md)
+
+[How to create collections in Configuration Manager](/mem/configmgr/core/clients/manage/collections/create-collections)

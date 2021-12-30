@@ -1,8 +1,7 @@
 ---
-description: Adds a Configuration Manager collection membership rule.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 04/27/2019
+ms.date: 12/30/2021
 schema: 2.0.0
 title: Add-CMCollectionMembershipRule
 ---
@@ -10,7 +9,8 @@ title: Add-CMCollectionMembershipRule
 # Add-CMCollectionMembershipRule
 
 ## SYNOPSIS
-Adds a Configuration Manager collection membership rule.
+
+_For system use only_ to add membership rules to collections.
 
 ## SYNTAX
 
@@ -39,10 +39,18 @@ Add-CMCollectionMembershipRule -ChildSearchCriteria <SmsProviderSearch> -Collect
 ```
 
 ## DESCRIPTION
-This cmdlet is usually called by higher level wrapper cmdlets. This cmdlet shall never be called directly.
 
-> [!NOTE]
-> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
+This cmdlet is used by other cmdlets to create membership rules. Don't directly use this cmdlet. Use one of the following cmdlets:
+
+- [Add-CMDeviceCollectionDirectMembershipRule](Add-CMDeviceCollectionDirectMembershipRule.md)
+- [Add-CMDeviceCollectionExcludeMembershipRule](Add-CMDeviceCollectionExcludeMembershipRule.md)
+- [Add-CMDeviceCollectionIncludeMembershipRule](Add-CMDeviceCollectionIncludeMembershipRule.md)
+- [Add-CMDeviceCollectionQueryMembershipRule](Add-CMDeviceCollectionQueryMembershipRule.md)
+
+- [Add-CMUserCollectionDirectMembershipRule](Add-CMUserCollectionDirectMembershipRule.md)
+- [Add-CMUserCollectionExcludeMembershipRule](Add-CMUserCollectionExcludeMembershipRule.md)
+- [Add-CMUserCollectionIncludeMembershipRule](Add-CMUserCollectionIncludeMembershipRule.md)
+- [Add-CMUserCollectionQueryMembershipRule](Add-CMUserCollectionQueryMembershipRule.md)
 
 ## EXAMPLES
 

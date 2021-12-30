@@ -1,8 +1,7 @@
 ---
-description: Remove a direct membership rule from a collection.
 external help file: AdminUI.PS.psm1-help.xml
 Module Name: ConfigurationManager
-ms.date: 01/05/2021
+ms.date: 12/30/2021
 schema: 2.0.0
 title: Remove-CMCollectionDirectMembershipRule
 ---
@@ -11,7 +10,7 @@ title: Remove-CMCollectionDirectMembershipRule
 
 ## SYNOPSIS
 
-Remove a direct membership rule from a collection.
+Remove a direct membership rule from a device or user collection.
 
 ## SYNTAX
 
@@ -71,7 +70,12 @@ Remove-CMCollectionDirectMembershipRule -InputObject <IResultObject> -ResourceNa
 
 ## DESCRIPTION
 
-Use this cmdlet to remove a direct membership rule from either a device or user collection. A direct membership rule specifies a single resource as a member of a collection. For example, to add a specific device to a collection, use a direct rule.
+Use this cmdlet to remove a direct membership rule from a device or user collection.
+A _direct_ membership rule lets you explicitly choose the members of the collection.
+Default collections don't have direct membership rules. Any collection that you target should have an ID that starts with the site code, not `SMS`.
+For more information, see [How to create collections in Configuration Manager](/mem/configmgr/core/clients/manage/collections/create-collections).
+
+When you remove a direct membership rule from a collection, the resource may no longer be a member of the collection. This action can cause any software or configuration deployment to not apply to the resource.
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
@@ -138,7 +142,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 
-Specify a collection object with the direct rule to remove. To get this object, use the [Get-CMCollection](Get-CMCollection.md) cmdlet.
+Specify a collection object with the direct rule to remove. To get this object, use the [Get-CMCollection](Get-CMCollection.md), [Get-CMDeviceCollection](Get-CMDeviceCollection.md), or [Get-CMUserCollection](Get-CMUserCollection.md) cmdlets.
 
 ```yaml
 Type: IResultObject
@@ -154,7 +158,7 @@ Accept wildcard characters: False
 
 ### -Resource
 
-Specify an array of resource objects to remove from the collection. To get this object, use the [Get-CMResource](Get-CMResource.md) cmdlet.
+Specify an array of resource objects to remove from the collection. To get this object, use the [Get-CMResource](Get-CMResource.md), [Get-CMDevice](Get-CMDevice.md), or [Get-CMUser](Get-CMUser.md) cmdlets.
 
 ```yaml
 Type: IResultObject[]
@@ -238,25 +242,35 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 This cmdlet is similar to **Remove-CMDeviceCollectionDirectMembershipRule** and **Remove-CMUserCollectionDirectMembershipRule**, which are specific to the type of collection. This cmdlet works with either device or user collections.
 
 ## RELATED LINKS
 
-[Get-CMCollection](Get-CMCollection.md)
-[Get-CMResource](Get-CMResource.md)
-
-[Add-CMCollectionMembershipRule](Add-CMCollectionMembershipRule.md)
-[Get-CMCollectionMembershipRule](Get-CMCollectionMembershipRule.md)
-[Remove-CMCollectionMembershipRule](Remove-CMCollectionMembershipRule.md)
-
 [Get-CMCollectionDirectMembershipRule](Get-CMCollectionDirectMembershipRule.md)
 
-[Remove-CMDeviceCollectionDirectMembershipRule](Remove-CMDeviceCollectionDirectMembershipRule.md)
-[Remove-CMUserCollectionDirectMembershipRule](Remove-CMUserCollectionDirectMembershipRule.md)
+[Remove-CMCollectionExcludeMembershipRule](Remove-CMCollectionExcludeMembershipRule.md)
+[Remove-CMCollectionIncludeMembershipRule](Remove-CMCollectionIncludeMembershipRule.md)
+[Remove-CMCollectionQueryMembershipRule](Remove-CMCollectionQueryMembershipRule.md)
 
-[Introduction to collections in Configuration Manager](/mem/configmgr/core/clients/manage/collections/introduction-to-collections)
+[Add-CMDeviceCollectionDirectMembershipRule](Add-CMDeviceCollectionDirectMembershipRule.md)
+[Add-CMUserCollectionDirectMembershipRule](Add-CMUserCollectionDirectMembershipRule.md)
+
+[Get-CMDeviceCollectionDirectMembershipRule](Get-CMDeviceCollectionDirectMembershipRule.md)
+[Get-CMUserCollectionDirectMembershipRule](Get-CMUserCollectionDirectMembershipRule.md)
+
+[Get-CMCollection](Get-CMCollection.md)
+[Get-CMDeviceCollection](Get-CMDeviceCollection.md)
+[Get-CMUserCollection](Get-CMUserCollection.md)
+
+[Get-CMResource](Get-CMResource.md)
+[Get-CMDevice](Get-CMDevice.md)
+[Get-CMUser](Get-CMUser.md)
+
+[How to create collections in Configuration Manager](/mem/configmgr/core/clients/manage/collections/create-collections)

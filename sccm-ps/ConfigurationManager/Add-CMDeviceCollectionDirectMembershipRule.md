@@ -1,8 +1,7 @@
 ---
-description: Adds a Direct Rule membership rule to a device collection.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 04/29/2019
+ms.date: 12/28/2021
 schema: 2.0.0
 title: Add-CMDeviceCollectionDirectMembershipRule
 ---
@@ -10,7 +9,8 @@ title: Add-CMDeviceCollectionDirectMembershipRule
 # Add-CMDeviceCollectionDirectMembershipRule
 
 ## SYNOPSIS
-Adds a Direct Rule membership rule to a device collection.
+
+Add a direct membership rule to a device collection.
 
 ## SYNTAX
 
@@ -51,8 +51,11 @@ Add-CMDeviceCollectionDirectMembershipRule -InputObject <IResultObject> [-PassTh
 ```
 
 ## DESCRIPTION
-The **Add-CMDeviceCollectionDirectMembershipRule** cmdlet adds a direct membership rule to a device collection.
-A direct membership rule lets you explicitly choose the members of the device collection.
+
+Use this cmdlet to add a direct membership rule to a device collection.
+A _direct_ membership rule lets you explicitly choose the members of the device collection.
+You can't add membership rules to default collections. Any collection that you target should have an ID that starts with the site code, not `SMS`.
+For more information, see [How to create collections in Configuration Manager](/mem/configmgr/core/clients/manage/collections/create-collections).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
@@ -60,25 +63,26 @@ A direct membership rule lets you explicitly choose the members of the device co
 ## EXAMPLES
 
 ### Example 1: Add a direct membership rule
-```
-PS XYZ:\>Add-CMDeviceCollectionDirectMembershipRule -CollectionId "SC100056" -ResourceId 2097152004
-```
 
-This command adds a device collection direct membership rule to the collection with the ID of SC100056, and adds the resource with the ID of 2097152004 to the collection.
+This command adds a direct membership rule to the device collection with ID **XYZ00056**. It adds the resource with ID **16777219** to the collection.
+
+```powershell
+Add-CMDeviceCollectionDirectMembershipRule -CollectionId "XYZ00056" -ResourceId 16777219
+```
 
 ### Example 2: Add a direct membership rule by using the pipeline
-```
-PS XYZ:\> Get-CMCollection -Name "testCollection" | Add-CMDeviceCollectionDirectMembershipRule -ResourceId 2097152004
-```
 
-This command gets the collection object named testCollection and uses the pipeline operator to pass the object to **Add-CMDeviceCollectionDirectMembershipRule**, which adds the direct membership rule to the collection object, and the resource with the ID of 2097152004 to the collection.This command gets the collection named Collection07 by using the [Get-CMCollection](Get-CMCollection.md) cmdlet.
-The command passes the collection to the current cmdlet by using the pipeline operator.
-The cmdlet adds the direction membership rule that has the ID 2097152004 to that collection.
+This command first uses the **Get-CMCollection** cmdlet to get the collection object named **testCollection**. It then uses the pipeline operator to pass the object to the **Add-CMDeviceCollectionDirectMembershipRule** cmdlet, which adds the direct membership rule to the device collection object. It adds the device with ID **16777219** to the collection.
+
+```powershell
+Get-CMCollection -Name "testCollection" | Add-CMDeviceCollectionDirectMembershipRule -ResourceId 16777219
+```
 
 ## PARAMETERS
 
 ### -CollectionId
-Specifies the ID of a device collection.
+
+Specify the ID of the device collection to add the rule. This value is the **CollectionID** property, for example, `XYZ00012`. Since you can't add membership rules to default collections, this ID starts with the site code and not `SMS`.
 
 ```yaml
 Type: String
@@ -93,7 +97,8 @@ Accept wildcard characters: False
 ```
 
 ### -CollectionName
-Specifies the name of a device collection.
+
+Specify the name of the device collection to add the rule.
 
 ```yaml
 Type: String
@@ -140,8 +145,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies a device collection object.
-To obtain a device collection object, use the [Get-CMCollection](Get-CMCollection.md) cmdlet.
+
+Specify an object for the device collection to add the rule. To get this object, use the [Get-CMCollection](Get-CMCollection.md) or [Get-CMDeviceCollection](Get-CMDeviceCollection.md) cmdlets.
 
 ```yaml
 Type: IResultObject
@@ -172,8 +177,8 @@ Accept wildcard characters: False
 ```
 
 ### -Resource
-Specifies a resource object.
-To obtain a resource object, use the Get-CMResource cmdlet.
+
+Specify an array of resource objects to add to the device collection with this direct membership rule. To get this object, use the [Get-CMResource](Get-CMResource.md) cmdlet, or the [Get-CMDevice](Get-CMDevice.md) cmdlet with the `-Resource` parameter.
 
 ```yaml
 Type: IResultObject[]
@@ -188,7 +193,8 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceId
-Specifies the ID of a resource.
+
+Specify an array of IDs of the resources to add to the device collection with this direct membership rule. This value is the **ResourceID** property, for example `16777219`.
 
 ```yaml
 Type: Int32[]
@@ -203,6 +209,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -239,19 +246,25 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
 
-[Introduction to Collections in Configuration Manager](/mem/configmgr/core/clients/manage/collections/introduction-to-collections)
-
-[Get-CMCollection](Get-CMCollection.md)
-
 [Get-CMDeviceCollectionDirectMembershipRule](Get-CMDeviceCollectionDirectMembershipRule.md)
-
 [Remove-CMDeviceCollectionDirectMembershipRule](Remove-CMDeviceCollectionDirectMembershipRule.md)
 
+[Add-CMCollectionDirectMembershipRule](Add-CMCollectionDirectMembershipRule.md)
 
+[Get-CMCollection](Get-CMCollection.md)
+[Get-CMDeviceCollection](Get-CMDeviceCollection.md)
+[Get-CMResource](Get-CMResource.md)
+[Get-CMDevice](Get-CMDevice.md)
+
+[Add-CMUserCollectionDirectMembershipRule](Add-CMUserCollectionDirectMembershipRule.md)
+
+[How to create collections in Configuration Manager](/mem/configmgr/core/clients/manage/collections/create-collections)

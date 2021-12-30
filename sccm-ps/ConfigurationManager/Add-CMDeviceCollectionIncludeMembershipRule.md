@@ -1,8 +1,7 @@
 ---
-description: Adds an Include Collections membership rule to a device collection.
 external help file: AdminUI.PS.psm1-help.xml
 Module Name: ConfigurationManager
-ms.date: 04/29/2019
+ms.date: 12/28/2021
 schema: 2.0.0
 title: Add-CMDeviceCollectionIncludeMembershipRule
 ---
@@ -10,7 +9,8 @@ title: Add-CMDeviceCollectionIncludeMembershipRule
 # Add-CMDeviceCollectionIncludeMembershipRule
 
 ## SYNOPSIS
-Adds an Include Collections membership rule to a device collection.
+
+Add an include membership rule to a device collection.
 
 ## SYNTAX
 
@@ -69,33 +69,44 @@ Add-CMDeviceCollectionIncludeMembershipRule -InputObject <IResultObject> -Includ
 ```
 
 ## DESCRIPTION
-The **Add-CMDeviceCollectionIncludeMembershipRule** cmdlet adds an Include Collections membership rule to a device collection.
-An Include Collections membership rule includes members of other device collections in the device collection where the rule is applied.
+
+Use this cmdlet to add an include membership rule to a device collection.
+An _include_ membership rule includes the members of another collection to the device collection where the rule is applied.
+
+You can't add membership rules to default collections. Any collection that you target should have an ID that starts with the site code, not `SMS`. You can include a default collection, so the ID of an included collection can start with `SMS`.
+
+Configuration Manager dynamically updates the membership of the device collection on a schedule if the membership of the included collection changes.
+
+When you add an include membership rule to a collection, resources may become members of the collection. This action can cause any software or configuration deployment to apply to devices in the included collection.
+
+For more information, see [How to create collections in Configuration Manager](/mem/configmgr/core/clients/manage/collections/create-collections).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
-### Example 1: Add an Include Collections membership rule
-```
-PS XYZ:\>Add-CMDeviceCollectionIncludeMembershipRule -CollectionName "Device" -IncludeCollectionName "All Systems"
+### Example 1: Add an include membership rule
+
+This command adds the device collection named **All Systems** with an include membership rule. The rule is added to the device collection named **Device**.
+
+```powershell
+Add-CMDeviceCollectionIncludeMembershipRule -CollectionName "Device" -IncludeCollectionName "All Systems"
 ```
 
-This command adds the device collection named All Systems as an Include Collections membership rule associated with the device collection named Device.
+### Example 2: Add an include membership rule to a collection by using the pipeline
 
-### Example 2: Add an Include Membership rule to a collection by using the pipeline
-```
-PS XYZ:\> Get-CMCollection -Name "Device" | Add-CMDeviceCollectionIncludeMembershipRule -IncludeCollectionName "All Systems"
-```
+This command first uses the **Get-CMCollection** cmdlet to get the target collection object named **Device**. It then uses the pipeline operator to pass the object to the **Add-CMDeviceCollectionIncludeMembershipRule** cmdlet, which adds an include membership rule for the device collection named **All Systems**.
 
-This command gets the collection object named Device and uses the pipeline operator to pass the object to **Add-CMDeviceCollectionIncludeMembershipRule**.
-**Add-CMDeviceCollectionIncludeMembershipRule** adds the device collection named All Systems as an Include Collections membership rule associated with the device collection object.
+```powershell
+Get-CMCollection -Name "Device" | Add-CMDeviceCollectionIncludeMembershipRule -IncludeCollectionName "All Systems"
+```
 
 ## PARAMETERS
 
 ### -CollectionId
-Specifies the ID of a device collection.
+
+Specify the ID of the device collection to add the rule. This value is the **CollectionID** property, for example, `XYZ00012`. Since default collections don't have include membership rules, this ID starts with the site code and not `SMS`.
 
 ```yaml
 Type: String
@@ -110,7 +121,8 @@ Accept wildcard characters: False
 ```
 
 ### -CollectionName
-Specifies the name of a device collection.
+
+Specify the name of the device collection to add the rule.
 
 ```yaml
 Type: String
@@ -125,8 +137,8 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeCollection
-Specifies a device collection object to include in the membership rule.
-To obtain a collection object, use the [Get-CMCollection](Get-CMCollection.md) cmdlet.
+
+Specify an object for the included collection to add to the rule. To get this object, use the [Get-CMCollection](Get-CMCollection.md) or [Get-CMDeviceCollection](Get-CMDeviceCollection.md) cmdlets.
 
 ```yaml
 Type: IResultObject
@@ -141,7 +153,8 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeCollectionId
-Specifies the ID of a device collection to include in the membership rule.
+
+Specify the ID of the included collection to add to the rule. This value is the **CollectionID** property, for example, `XYZ00012`. You can include default collections, so this value can start with either the site code or `SMS`.
 
 ```yaml
 Type: String
@@ -156,7 +169,8 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeCollectionName
-Specifies the name of a device collection to include in the membership rule.
+
+Specify the name of the included collection to add to the rule.
 
 ```yaml
 Type: String
@@ -171,8 +185,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies the input to this cmdlet.
-You can use this parameter, or you can pipe the input to this cmdlet.
+
+Specify an object for the device collection to add the rule. To get this object, use the [Get-CMCollection](Get-CMCollection.md) or [Get-CMDeviceCollection](Get-CMDeviceCollection.md) cmdlets.
 
 ```yaml
 Type: IResultObject
@@ -203,6 +217,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -239,19 +254,23 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
 
-[Introduction to Collections in Configuration Manager](/mem/configmgr/core/clients/manage/collections/introduction-to-collections)
-
-[Get-CMCollection](Get-CMCollection.md)
-
 [Get-CMDeviceCollectionIncludeMembershipRule](Get-CMDeviceCollectionIncludeMembershipRule.md)
-
 [Remove-CMDeviceCollectionIncludeMembershipRule](Remove-CMDeviceCollectionIncludeMembershipRule.md)
 
+[Add-CMCollectionIncludeMembershipRule](Add-CMCollectionIncludeMembershipRule.md)
 
+[Get-CMCollection](Get-CMCollection.md)
+[Get-CMDeviceCollection](Get-CMDeviceCollection.md)
+
+[Add-CMUserCollectionIncludeMembershipRule](Add-CMUserCollectionIncludeMembershipRule.md)
+
+[How to create collections in Configuration Manager](/mem/configmgr/core/clients/manage/collections/create-collections)

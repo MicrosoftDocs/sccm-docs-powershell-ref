@@ -1,8 +1,7 @@
 ---
-description: Adds a query membership rule to one or more Configuration Manager user collections.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 04/29/2019
+ms.date: 12/30/2021
 schema: 2.0.0
 title: Add-CMUserCollectionQueryMembershipRule
 ---
@@ -10,7 +9,8 @@ title: Add-CMUserCollectionQueryMembershipRule
 # Add-CMUserCollectionQueryMembershipRule
 
 ## SYNOPSIS
-Adds a query membership rule to one or more Configuration Manager user collections.
+
+Add a query membership rule to a user collection.
 
 ## SYNTAX
 
@@ -36,30 +36,34 @@ Add-CMUserCollectionQueryMembershipRule -CollectionName <String> [-PassThru] -Qu
 ```
 
 ## DESCRIPTION
-The **Add-CMUserCollectionQueryMembershipRule** cmdlet adds a rule that adds users to the collections based on a query in Configuration Manager.
-You can specify the user collections by using their names, IDs, or by specifying an object that represents the collections.
-The query is specified as a text string.
 
-A query rule lets you dynamically update the members of a collection based on a query that is run on a schedule.
-For more information on collection rules, see [Introduction to Collections in Configuration Manager](/mem/configmgr/core/clients/manage/collections/introduction-to-collections).
+Use this cmdlet to add a query membership rule to a user collection.
+A _query_ rule lets you dynamically update the membership of a collection based on a query that is run on a schedule.
+You can't add membership rules to default collections. Any collection that you target should have an ID that starts with the site code, not `SMS`.
+For more information, see [How to create collections in Configuration Manager](/mem/configmgr/core/clients/manage/collections/create-collections).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
-### Example 1: Add a rule to a collection by using a name
-```
-PS XYZ:\>Add-CMUserCollectionQueryMembershipRule -CollectionName "Remote Users" -QueryExpression "select SMS_R_USER.ResourceID,SMS_R_USER.ResourceType,SMS_R_USER.Name,SMS_R_USER.UniqueUserName,SMS_R_USER.WindowsNTDomain from SMS_R_User" -RuleName "Remote Users by Domain"
-```
+### Example 1: Add a query membership rule
 
-This command adds a rule named Remote Users by Domain to the collection named Remote Users.
-The command specifies the query as a string.
+This example first stores the WMI Query Language (WQL) statement into the **wql** variable.
+The next command adds a membership rule named **Remote users by domain** to the user collection named **Remote Users**.
+The **QueryExpression** parameter uses the **wql** variable, and specifies the query that defines the membership rule.
+
+```powershell
+$wql = "select SMS_R_USER.ResourceID,SMS_R_USER.ResourceType,SMS_R_USER.Name,SMS_R_USER.UniqueUserName,SMS_R_USER.WindowsNTDomain from SMS_R_User"
+
+Add-CMUserCollectionQueryMembershipRule -CollectionName "Remote Users" -QueryExpression $wql -RuleName "Remote users by domain"
+```
 
 ## PARAMETERS
 
 ### -CollectionId
-Specifies the ID of the user collection where the rule is applied.
+
+Specify the ID of the user collection to add the rule. This value is the **CollectionID** property, for example, `XYZ00012`. Since you can't add membership rules to default collections, this ID starts with the site code and not `SMS`.
 
 ```yaml
 Type: String
@@ -74,7 +78,8 @@ Accept wildcard characters: False
 ```
 
 ### -CollectionName
-Specifies the name of the user collection where the rule is applied.
+
+Specify the name of the user collection to add the rule.
 
 ```yaml
 Type: String
@@ -121,7 +126,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{ Fill InputObject Description }}
+
+Specify an object for the user collection to add the rule. To get this object, use the [Get-CMCollection](Get-CMCollection.md) or [Get-CMUserCollection](Get-CMUserCollection.md) cmdlets.
 
 ```yaml
 Type: IResultObject
@@ -152,7 +158,8 @@ Accept wildcard characters: False
 ```
 
 ### -QueryExpression
-Specifies the query expression that Configuration Manager uses to update the user collections.
+
+Specify the WMI Query Language (WQL) expression that the site uses to update the user collection.
 
 ```yaml
 Type: String
@@ -167,7 +174,8 @@ Accept wildcard characters: False
 ```
 
 ### -RuleName
-Specifies the name for the rule.
+
+Specify the name of the query rule to add to the collection.
 
 ```yaml
 Type: String
@@ -182,7 +190,10 @@ Accept wildcard characters: False
 ```
 
 ### -ValidateQueryHasResult
-{{ Fill ValidateQueryHasResult Description }}
+
+Add this parameter to test the query expression before adding the rule. When the cmdlet runs with this parameter, if the query expression has no results, the cmdlet returns the following error message: `No object corresponds to the specified parameters.` In this case, the query isn't added to the collection.
+
+If you know the query currently returns zero results, but still want to add the rule, don't use this parameter.
 
 ```yaml
 Type: SwitchParameter
@@ -197,6 +208,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -233,17 +245,23 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
 
-[Get-CMUserCollection](Get-CMUserCollection.md)
-
 [Get-CMUserCollectionQueryMembershipRule](Get-CMUserCollectionQueryMembershipRule.md)
-
 [Remove-CMUserCollectionQueryMembershipRule](Remove-CMUserCollectionQueryMembershipRule.md)
 
+[Add-CMCollectionQueryMembershipRule](Add-CMCollectionQueryMembershipRule.md)
 
+[Get-CMCollection](Get-CMCollection.md)
+[Get-CMUserCollection](Get-CMUserCollection.md)
+
+[Add-CMDeviceCollectionQueryMembershipRule](Add-CMDeviceCollectionQueryMembershipRule.md)
+
+[How to create collections in Configuration Manager](/mem/configmgr/core/clients/manage/collections/create-collections)

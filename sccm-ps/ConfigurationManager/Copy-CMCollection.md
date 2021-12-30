@@ -1,8 +1,7 @@
 ---
-description: Copys a Configuration Manager collection.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 04/29/2019
+ms.date: 12/29/2021
 schema: 2.0.0
 title: Copy-CMCollection
 ---
@@ -10,7 +9,8 @@ title: Copy-CMCollection
 # Copy-CMCollection
 
 ## SYNOPSIS
-Clone a collection to a new one.
+
+Copy a collection to a new one.
 
 ## SYNTAX
 
@@ -33,9 +33,10 @@ Copy-CMCollection -InputObject <IResultObject> [-NewName <String>] [-PassThru] [
 ```
 
 ## DESCRIPTION
-The **Copy-CMCollection** cmdlet clones an existing collection object to a new one in Configuration Manager.
 
-Configuration Manager collections provide a way to manage users, computers, and other resources in your organization. They not only give you a means to organize your resources, but they also give you a means to distribute Configuration Manager packages to clients and users.
+Use this cmdlet to clone an existing collection to a new copy.
+
+For more information, see [How to manage collections in Configuration Manager](/mem/configmgr/core/clients/manage/collections/manage-collections).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
@@ -43,8 +44,9 @@ Configuration Manager collections provide a way to manage users, computers, and 
 ## EXAMPLES
 
 ### Example 1
-```
-PS XYZ:\> Copy-CMCollection -Name "testUser" -NewName "testUserNew"
+
+```powershell
+Copy-CMCollection -Name "testUser" -NewName "testUserNew"
 ```
 
 This command exports the collection named testUser to a new collection named testUserNew.
@@ -84,6 +86,9 @@ Accept wildcard characters: False
 ```
 
 ### -Id
+
+Specify the ID of a collection to copy. This value is the **CollectionID** property, for example, `XYZ00012`.
+
 ```yaml
 Type: String
 Parameter Sets: ById
@@ -97,6 +102,9 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
+
+Specify a collection object to copy. To get this object, use the [Get-CMCollection](Get-CMCollection.md), [Get-CMDeviceCollection](Get-CMDeviceCollection.md), or [Get-CMUserCollection](Get-CMUserCollection.md) cmdlets.
+
 ```yaml
 Type: IResultObject
 Parameter Sets: SetByValue
@@ -110,6 +118,9 @@ Accept wildcard characters: False
 ```
 
 ### -Name
+
+Specify the name of a collection to copy.
+
 ```yaml
 Type: String
 Parameter Sets: ByName
@@ -123,6 +134,9 @@ Accept wildcard characters: False
 ```
 
 ### -NewName
+
+Specify the name of the new collection.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -136,6 +150,7 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
+
 Returns an object representing the item with which you are working. By default, this cmdlet may not generate any output.
 
 ```yaml
@@ -151,6 +166,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -187,10 +203,26 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ### IResultObject[]#SMS_Collection
 ### IResultObject#SMS_Collection
+
 ## NOTES
 
+For more information on this return object and its properties, see [SMS_Collection server WMI class](/mem/configmgr/develop/reference/core/clients/collections/sms_collectionsettings-server-wmi-class).
+
 ## RELATED LINKS
+
+[Export-CMCollection](Export-CMCollection.md)
+[Get-CMCollection](Get-CMCollection.md)
+[Get-CMCollectionMember](Get-CMCollectionMember.md)
+[Get-CMCollectionSetting](Get-CMCollectionSetting.md)
+[Import-CMCollection](Import-CMCollection.md)
+[Invoke-CMCollectionUpdate](Invoke-CMCollectionUpdate.md)
+[New-CMCollection](New-CMCollection.md)
+[Remove-CMCollection](Remove-CMCollection.md)
+[Set-CMCollection](Set-CMCollection.md)
+
+[How to create collections in Configuration Manager](/mem/configmgr/core/clients/manage/collections/create-collections)
