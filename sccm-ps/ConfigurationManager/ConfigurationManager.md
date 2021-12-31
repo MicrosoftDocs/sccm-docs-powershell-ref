@@ -1,4 +1,4 @@
-﻿---
+---
 Module Name: ConfigurationManager
 Module Guid: 7f590131-5253-4425-8b32-eeab51a4c393
 Download Help Link: https://aka.ms/configmgrps-help
@@ -33,7 +33,7 @@ Specify how the client detects an application.
 Add a cloud management gateway connection point.
 
 ### [Add-CMCollectionMembershipRule](Add-CMCollectionMembershipRule.md)
-Adds a Configuration Manager collection membership rule.
+_For system use only_ to add membership rules to collections.
 
 ### [Add-CMCollectionToAdministrativeUser](Add-CMCollectionToAdministrativeUser.md)
 Adds a collection to administrative user
@@ -93,22 +93,22 @@ Add to the specified deployment type the executable files that need to close for
 Add return codes to a supported application deployment type.
 
 ### [Add-CMDeploymentTypeSupersedence](Add-CMDeploymentTypeSupersedence.md)
-Add a deployment type supersedence in Configuration Manager.
+Add a deployment type supersedence. This cmdlet is deprecated.
 
 ### [Add-CMDeviceAffinityToUser](Add-CMDeviceAffinityToUser.md)
 Adds device affinity to a Configuration Manager user.
 
 ### [Add-CMDeviceCollectionDirectMembershipRule](Add-CMDeviceCollectionDirectMembershipRule.md)
-Adds a Direct Rule membership rule to a device collection.
+Add a direct membership rule to a device collection.
 
 ### [Add-CMDeviceCollectionExcludeMembershipRule](Add-CMDeviceCollectionExcludeMembershipRule.md)
-Adds an exclude membership rule to one or more Configuration Manager device collections.
+Add an exclude membership rule to a device collection.
 
 ### [Add-CMDeviceCollectionIncludeMembershipRule](Add-CMDeviceCollectionIncludeMembershipRule.md)
-Adds an Include Collections membership rule to a device collection.
+Add an include membership rule to a device collection.
 
 ### [Add-CMDeviceCollectionQueryMembershipRule](Add-CMDeviceCollectionQueryMembershipRule.md)
-Adds a query membership rule to one or more Configuration Manager device collections.
+Add a query membership rule to a device collection.
 
 ### [Add-CMDistributionPoint](Add-CMDistributionPoint.md)
 Add a distribution point role.
@@ -147,28 +147,28 @@ Add a Windows Installer deployment type.
 Adds a multicast service point.
 
 ### [Add-CMObjectSecurityScope](Add-CMObjectSecurityScope.md)
-Adds a security scope to an object.
+Add a security scope to an object.
 
 ### [Add-CMPassiveSite](Add-CMPassiveSite.md)
 Use this cmdlet to add a site server in passive mode.
 
 ### [Add-CMReportingServicePoint](Add-CMReportingServicePoint.md)
-Adds a reporting service point to Configuration Manager.
+Add a reporting service point.
 
 ### [Add-CMScriptDeploymentType](Add-CMScriptDeploymentType.md)
 Add a script installer deployment type.
 
 ### [Add-CMSecurityRoleToAdministrativeUser](Add-CMSecurityRoleToAdministrativeUser.md)
-Adds a security role to an administrative user or group in Configuration Manager.
+Add a security role to a user or group.
 
 ### [Add-CMSecurityScopeToAdministrativeUser](Add-CMSecurityScopeToAdministrativeUser.md)
-Adds a security scope to an administrative user or group in Configuration Manager.
+Add a security scope to a user or group.
 
 ### [Add-CMServiceConnectionPoint](Add-CMServiceConnectionPoint.md)
 Adds a service connection point to a site system server.
 
 ### [Add-CMSoftwareUpdatePoint](Add-CMSoftwareUpdatePoint.md)
-Adds a software update point for Configuration Manager.
+Add a software update point.
 
 ### [Add-CMSoftwareUpdateToGroup](Add-CMSoftwareUpdateToGroup.md)
 Adds a software update to a software update group in Configuration Manager.
@@ -186,16 +186,16 @@ Add a step or group to a task sequence.
 Adds a primary user to one or more devices in the Configuration Manager hierarchy.
 
 ### [Add-CMUserCollectionDirectMembershipRule](Add-CMUserCollectionDirectMembershipRule.md)
-Adds a direct membership rule to one or more Configuration Manager user collections.
+Add a direct membership rule to a user collection.
 
 ### [Add-CMUserCollectionExcludeMembershipRule](Add-CMUserCollectionExcludeMembershipRule.md)
-Adds an exclude membership rule to one or more Configuration Manager user collections.
+Add an exclude membership rule to a user collection.
 
 ### [Add-CMUserCollectionIncludeMembershipRule](Add-CMUserCollectionIncludeMembershipRule.md)
-Adds an include membership rule to one or more Configuration Manager user collections.
+Add an include membership rule to a user collection.
 
 ### [Add-CMUserCollectionQueryMembershipRule](Add-CMUserCollectionQueryMembershipRule.md)
-Adds a query membership rule to one or more Configuration Manager user collections.
+Add a query membership rule to a user collection.
 
 ### [Add-CMWebApplicationDeploymentType](Add-CMWebApplicationDeploymentType.md)
 Adds a web application deployment type.
@@ -219,7 +219,7 @@ Approves a request to allow the installation of an application.
 Approves a device.
 
 ### [Approve-CMScript](Approve-CMScript.md)
-Approves a Configuration Manager PowerShell script.
+Approve a PowerShell script in Configuration Manager.
 
 ### [Approve-CMUserDeviceAffinityRequest](Approve-CMUserDeviceAffinityRequest.md)
 Approves a request for user device affinity in Configuration Manager.
@@ -285,13 +285,13 @@ Converts a **ManagementBaseObject** to an **IResultObject**.
 Make a copy of a BitLocker management policy settings object.
 
 ### [Copy-CMCollection](Copy-CMCollection.md)
-Clone a collection to a new one.
+Copy a collection to a new one.
 
 ### [Copy-CMConfigurationPolicy](Copy-CMConfigurationPolicy.md)
 Copies a configuration policy.
 
 ### [Copy-CMSecurityRole](Copy-CMSecurityRole.md)
-Creates a custom security role.
+Create a custom security role.
 
 ### [Copy-CMTaskSequence](Copy-CMTaskSequence.md)
 Create a copy of an existing task sequence in Configuration Manager.
@@ -303,7 +303,7 @@ Make a copy of a Microsoft Defender Application Control policy object.
 Denies a request to allow the installation of an application.
 
 ### [Deny-CMScript](Deny-CMScript.md)
-Denies a Configuration Manager PowerShell script.
+Deny a PowerShell script in Configuration Manager.
 
 ### [Deny-CMUserDeviceAffinityRequest](Deny-CMUserDeviceAffinityRequest.md)
 Denies a request for user device affinity in Configuration Manager.
@@ -312,13 +312,13 @@ Denies a request for user device affinity in Configuration Manager.
 Disables alerts in Configuration Manager.
 
 ### [Disable-CMBaseline](Disable-CMBaseline.md)
-Disables configuration baselines.
+Disable a configuration baseline.
 
 ### [Disable-CMDriver](Disable-CMDriver.md)
 Disables a device driver.
 
 ### [Disable-CMProgram](Disable-CMProgram.md)
-Disables programs in Configuration Manager packages.
+Disable a program in a package.
 
 ### [Disable-CMSoftwareMeteringRule](Disable-CMSoftwareMeteringRule.md)
 Disables Configuration Manager software metering rules.
@@ -339,13 +339,13 @@ Clean up unused PowerShell objects to avoid SMS Provider quota violation errors.
 Enables Configuration Manager alerts.
 
 ### [Enable-CMBaseline](Enable-CMBaseline.md)
-Enables configuration baselines.
+Enable a configuration baseline.
 
 ### [Enable-CMDriver](Enable-CMDriver.md)
 Enables a device driver.
 
 ### [Enable-CMProgram](Enable-CMProgram.md)
-Enables programs in Configuration Manager packages.
+Enable a program in a package.
 
 ### [Enable-CMSiteFeature](Enable-CMSiteFeature.md)
 Enable an optional feature.
@@ -370,10 +370,10 @@ Exports an antimalware policy for Endpoint Protection.
 Exports an application.
 
 ### [Export-CMBaseline](Export-CMBaseline.md)
-Exports configuration baselines.
+Export a configuration baseline.
 
 ### [Export-CMCollection](Export-CMCollection.md)
-Exports a Configuration Manager collection.
+Export a collection.
 
 ### [Export-CMConfigurationItem](Export-CMConfigurationItem.md)
 Saves a Configuration Manager configuration item to a file.
@@ -388,7 +388,7 @@ Export a legacy package.
 Export a query from Configuration Manager.
 
 ### [Export-CMSecurityRole](Export-CMSecurityRole.md)
-Exports a security role to an XML file.
+Export a security role to an XML file.
 
 ### [Export-CMTaskSequence](Export-CMTaskSequence.md)
 Export a task sequence.
@@ -412,7 +412,7 @@ Gets one or more Active Directory forest objects.
 Gets Configuration Manager sites that publish data to AD DS.
 
 ### [Get-CMAdministrativeUser](Get-CMAdministrativeUser.md)
-Gets an administrative user.
+Get an administrative user.
 
 ### [Get-CMAdvancedThreatProtectionPolicy](Get-CMAdvancedThreatProtectionPolicy.md)
 Gets an advanced threat protection policy
@@ -556,7 +556,7 @@ Get a cloud management gateway (CMG).
 Get a cloud management gateway connection point.
 
 ### [Get-CMCollection](Get-CMCollection.md)
-Gets a Configuration Manager collection.
+Get a device or user collection object.
 
 ### [Get-CMCollectionDependency](Get-CMCollectionDependency.md)
 Get the limiting collection for the target collection.
@@ -565,19 +565,19 @@ Get the limiting collection for the target collection.
 Get a collection's dependent relationships.
 
 ### [Get-CMCollectionDirectMembershipRule](Get-CMCollectionDirectMembershipRule.md)
-Gets a collection direct membership rule.
+Get a direct membership rule for a device or user collection.
 
 ### [Get-CMCollectionEvaluationStatus](Get-CMCollectionEvaluationStatus.md)
 Get the status of collection evaluation.
 
 ### [Get-CMCollectionExcludeMembershipRule](Get-CMCollectionExcludeMembershipRule.md)
-Gets a collection exclude membership rule.
+Get an exclude membership rule for a device or user collection.
 
 ### [Get-CMCollectionFullEvaluationStatus](Get-CMCollectionFullEvaluationStatus.md)
 Get the full evaluation status for a collection.
 
 ### [Get-CMCollectionIncludeMembershipRule](Get-CMCollectionIncludeMembershipRule.md)
-Gets a collection include membership rule.
+Get an include membership rule for a device or user collection.
 
 ### [Get-CMCollectionIncrementalEvaluationStatus](Get-CMCollectionIncrementalEvaluationStatus.md)
 Get the incremental evaluation status for a collection.
@@ -598,19 +598,19 @@ Get collection information from the manual evaluation queue.
 Get collection information from the new evaluation queue.
 
 ### [Get-CMCollectionMember](Get-CMCollectionMember.md)
-Get members of a collection.
+Get members of a device or user collection.
 
 ### [Get-CMCollectionMembershipEvaluationComponent](Get-CMCollectionMembershipEvaluationComponent.md)
-Gets how often Configuration Manager evaluates collection membership.
+Get the site component that evaluates collection membership.
 
 ### [Get-CMCollectionMembershipRule](Get-CMCollectionMembershipRule.md)
-Get a Configuration Manager collection membership rule.
+_For system use only_ to get membership rules from collections.
 
 ### [Get-CMCollectionQueryMembershipRule](Get-CMCollectionQueryMembershipRule.md)
-Gets a collection query membership rule.
+Get a query membership rule for a device or user collection.
 
 ### [Get-CMCollectionSetting](Get-CMCollectionSetting.md)
-Gets the settings for a collection.
+Get the settings for a collection.
 
 ### [Get-CMComplianceRule](Get-CMComplianceRule.md)
 Get a compliance rule for a configuration item.
@@ -693,6 +693,9 @@ Get the detection clauses from the specified deployment type.
 ### [Get-CMDeploymentTypeInstallBehavior](Get-CMDeploymentTypeInstallBehavior.md)
 Get from the specified deployment type the list of executable files that need to close for the app install to succeed.
 
+### [Get-CMDeploymentTypeRequirement](Get-CMDeploymentTypeRequirement.md)
+Get the requirement rules for a deployment type.
+
 ### [Get-CMDeploymentTypeReturnCode](Get-CMDeploymentTypeReturnCode.md)
 Get the list of return codes from the specified application deployment type.
 
@@ -709,22 +712,22 @@ Get a Configuration Manager device.
 {{ Fill in the Synopsis }}
 
 ### [Get-CMDeviceCollection](Get-CMDeviceCollection.md)
-Gets one or more device collections in the Configuration Manager hierarchy.
+Get one or more device collections.
 
 ### [Get-CMDeviceCollectionDirectMembershipRule](Get-CMDeviceCollectionDirectMembershipRule.md)
-Gets a direct membership rule for a device collection.
+Get a direct membership rule for a device collection.
 
 ### [Get-CMDeviceCollectionExcludeMembershipRule](Get-CMDeviceCollectionExcludeMembershipRule.md)
-Gets the exclude membership rules from one or more device collections in the Configuration Manager hierarchy.
+Get an exclude membership rule for a device collection.
 
 ### [Get-CMDeviceCollectionIncludeMembershipRule](Get-CMDeviceCollectionIncludeMembershipRule.md)
-Gets an Include Collections membership rule for a device collection.
+Get an include membership rule for a device collection.
 
 ### [Get-CMDeviceCollectionQueryMembershipRule](Get-CMDeviceCollectionQueryMembershipRule.md)
-Gets the query membership rules from one or more device collections in the Configuration Manager hierarchy.
+Get a query membership rule for a device collection.
 
 ### [Get-CMDeviceCollectionVariable](Get-CMDeviceCollectionVariable.md)
-Gets a device collection variable.
+Get a device collection variable.
 
 ### [Get-CMDeviceVariable](Get-CMDeviceVariable.md)
 Gets device variables of a Configuration Manager device.
@@ -786,6 +789,9 @@ Gets a Configuration Manager fallback status point.
 ### [Get-CMFileReplicationRoute](Get-CMFileReplicationRoute.md)
 Gets a file replication route from Configuration Manager.
 
+### [Get-CMFolder](Get-CMFolder.md)
+Get one or more folders in the console.
+
 ### [Get-CMGlobalCondition](Get-CMGlobalCondition.md)
 Gets Configuration Manager global condition objects.
 
@@ -844,7 +850,7 @@ Gets a multicast service point.
 Get the details of a SEDO lock for an object.
 
 ### [Get-CMObjectSecurityScope](Get-CMObjectSecurityScope.md)
-Gets the security scope associated with a Configuration Manager object.
+Get the security scope for an object.
 
 ### [Get-CMOneDriveBusinessProfile](Get-CMOneDriveBusinessProfile.md)
 Get a policy for a OneDrive for Business profile.
@@ -860,6 +866,9 @@ Gets OS upgrade packages.
 
 ### [Get-CMOperatingSystemUpgradeUpdateSchedule](Get-CMOperatingSystemUpgradeUpdateSchedule.md)
 Gets an operating system upgrade update schedule.
+
+### [Get-CMOrchestrationGroup](Get-CMOrchestrationGroup.md)
+Get an orchestration group object.
 
 ### [Get-CMPackage](Get-CMPackage.md)
 Get a Configuration Manager legacy package.
@@ -883,7 +892,7 @@ Use this cmdlet to get the status of a specific phased deployment.
 Gets a power management schema.
 
 ### [Get-CMProgram](Get-CMProgram.md)
-Gets programs in Configuration Manager.
+Get a program of a package.
 
 ### [Get-CMQuery](Get-CMQuery.md)
 Get a Configuration Manager query.
@@ -895,7 +904,7 @@ Gets the maximum number of rows that a Configuration Manager report query can re
 Gets a remote connection profile configuration item.
 
 ### [Get-CMReportingServicePoint](Get-CMReportingServicePoint.md)
-Gets a reporting service point.
+Get a reporting service point.
 
 ### [Get-CMResource](Get-CMResource.md)
 Get a Configuration Manager resource.
@@ -910,13 +919,16 @@ Get a Configuration Manager resource.
 Gets a resultant settings.
 
 ### [Get-CMScript](Get-CMScript.md)
-Get Configuration Manager PowerShell scripts.
+Get a PowerShell script in Configuration Manager.
 
 ### [Get-CMSecurityRole](Get-CMSecurityRole.md)
-Gets security roles.
+Get security roles.
+
+### [Get-CMSecurityRolePermission](Get-CMSecurityRolePermission.md)
+Get the permissions for the specified security role.
 
 ### [Get-CMSecurityScope](Get-CMSecurityScope.md)
-Gets a security scope.
+Get a security scope.
 
 ### [Get-CMServiceConnectionPoint](Get-CMServiceConnectionPoint.md)
 Gets a service connection point.
@@ -994,7 +1006,7 @@ Get software update content information.
 Get a software update deployment.
 
 ### [Get-CMSoftwareUpdateDeploymentPackage](Get-CMSoftwareUpdateDeploymentPackage.md)
-Retrieves a deployment package.
+Get a software update deployment package.
 
 ### [Get-CMSoftwareUpdateDeploymentStatus](Get-CMSoftwareUpdateDeploymentStatus.md)
 Get the status of a software update deployment.
@@ -1009,10 +1021,10 @@ Gets a EULA or SLT for a software update in Configuration Manager.
 Use this cmdlet to get the phased deployment for software updates.
 
 ### [Get-CMSoftwareUpdatePoint](Get-CMSoftwareUpdatePoint.md)
-Gets a Configuration Manager software update point.
+Get a software update point.
 
 ### [Get-CMSoftwareUpdatePointComponent](Get-CMSoftwareUpdatePointComponent.md)
-Retrieves a software update point component in Configuration Manager.
+Get the site component for the software update point.
 
 ### [Get-CMSoftwareUpdateSummarizationSchedule](Get-CMSoftwareUpdateSummarizationSchedule.md)
 Displays the Configuration Manager schedule for software update summarization.
@@ -1204,19 +1216,19 @@ Gets an update group deployment.
 Gets a Configuration Manager user.
 
 ### [Get-CMUserCollection](Get-CMUserCollection.md)
-Gets one or more user collections in the Configuration Manager hierarchy.
+Get one or more user collections.
 
 ### [Get-CMUserCollectionDirectMembershipRule](Get-CMUserCollectionDirectMembershipRule.md)
-Gets the direct membership rules of one or more user collections in the Configuration Manager hierarchy.
+Get a direct membership rule for a user collection.
 
 ### [Get-CMUserCollectionExcludeMembershipRule](Get-CMUserCollectionExcludeMembershipRule.md)
-Gets the exclude membership rules from one or more user collections in the Configuration Manager hierarchy.
+Get an exclude membership rule for a user collection.
 
 ### [Get-CMUserCollectionIncludeMembershipRule](Get-CMUserCollectionIncludeMembershipRule.md)
-Gets the include membership rules from one or more user collections in the Configuration Manager hierarchy.
+Get an include membership rule for a user collection.
 
 ### [Get-CMUserCollectionQueryMembershipRule](Get-CMUserCollectionQueryMembershipRule.md)
-Gets the query membership rules from one or more user collections in the Configuration Manager hierarchy.
+Get a query membership rule for a user collection.
 
 ### [Get-CMUserDataAndProfileConfigurationItem](Get-CMUserDataAndProfileConfigurationItem.md)
 Gets a user data and profile configuration item.
@@ -1267,7 +1279,7 @@ Imports an antimalware policy for Endpoint Protection.
 Imports an application into Configuration Manager.
 
 ### [Import-CMBaseline](Import-CMBaseline.md)
-Imports Configuration Manager baselines.
+Import a configuration baseline.
 
 ### [Import-CMCertificate](Import-CMCertificate.md)
 Imports a certificate.
@@ -1276,7 +1288,7 @@ Imports a certificate.
 Imports a client PFX certificate.
 
 ### [Import-CMCollection](Import-CMCollection.md)
-Imports a Configuration Manager collection.
+Import a collection.
 
 ### [Import-CMComputerInformation](Import-CMComputerInformation.md)
 Imports computer information into a Configuration Manager database.
@@ -1297,7 +1309,7 @@ Import a legacy package.
 Import a query to Configuration Manager.
 
 ### [Import-CMSecurityRole](Import-CMSecurityRole.md)
-Imports a security role into Configuration Manager.
+Import a security role from an XML file.
 
 ### [Import-CMSoftwareLicense](Import-CMSoftwareLicense.md)
 Imports a software license.
@@ -1330,7 +1342,7 @@ Sends a notification to client computers to trigger an immediate client action.
 Performs a Configuration Manager client operations summarization.
 
 ### [Invoke-CMCollectionUpdate](Invoke-CMCollectionUpdate.md)
-Updates the membership of a Configuration Manager collection.
+Update the membership of a collection.
 
 ### [Invoke-CMContentRedistribution](Invoke-CMContentRedistribution.md)
 Invokes a content redistribution.
@@ -1362,6 +1374,9 @@ Starts a forest discovery operation in Active Directory.
 ### [Invoke-CMGroupDiscovery](Invoke-CMGroupDiscovery.md)
 Invokes a group discovery.
 
+### [Invoke-CMOrchestrationGroup](Invoke-CMOrchestrationGroup.md)
+Start orchestration on an orchestration group.
+
 ### [Invoke-CMPromotePreProductionClient](Invoke-CMPromotePreProductionClient.md)
 Invokes a promote pre production client.
 
@@ -1375,7 +1390,7 @@ Enables remote control on computers.
 Invokes a report about data and operations in Configuration Manager.
 
 ### [Invoke-CMScript](Invoke-CMScript.md)
-Invoke a script in Configuration Manager.
+Run a PowerShell script in Configuration Manager.
 
 ### [Invoke-CMSecondarySiteUpgrade](Invoke-CMSecondarySiteUpgrade.md)
 Invokes a secondary site upgrade.
@@ -1441,10 +1456,10 @@ Creates one or more Active Directory forest objects in Configuration Manager.
 Creates an Active Directory group discovery scope.
 
 ### [New-CMAdministrativeUser](New-CMAdministrativeUser.md)
-Creates an administrative user.
+Create an administrative user.
 
 ### [New-CMAdministrativeUserPermission](New-CMAdministrativeUserPermission.md)
-{{ Fill in the Synopsis }}
+Create a permissions object to assign to an administrative user.
 
 ### [New-CMAdvancedThreatProtectionPolicy](New-CMAdvancedThreatProtectionPolicy.md)
 Creates an advanced threat protection policy.
@@ -1486,7 +1501,7 @@ Creates an item for the Asset Intelligence catalog.
 Create a deployment for an automatic deployment rule.
 
 ### [New-CMBaseline](New-CMBaseline.md)
-Creates a Configuration Manager baseline.
+Create a configuration baseline.
 
 ### [New-CMBaselineDeployment](New-CMBaselineDeployment.md)
 Create a baseline deployment.
@@ -1561,7 +1576,7 @@ Create the Azure service for **Cloud Management** in Configuration Manager.
 Create a cloud management gateway.
 
 ### [New-CMCollection](New-CMCollection.md)
-Creates a Configuration Manager collection.
+Create a device or user collection.
 
 ### [New-CMCoManagementPolicy](New-CMCoManagementPolicy.md)
 Create a co-management policy for a site.
@@ -1633,10 +1648,10 @@ Create a detection method clause for an MSI product code.
 {{ Fill in the Synopsis }}
 
 ### [New-CMDeviceCollection](New-CMDeviceCollection.md)
-Creates a collection for devices and adds the collection to the Configuration Manager hierarchy.
+Create a device collection.
 
 ### [New-CMDeviceCollectionVariable](New-CMDeviceCollectionVariable.md)
-Creates a device collection variable.
+Create a device collection variable.
 
 ### [New-CMDeviceVariable](New-CMDeviceVariable.md)
 Creates a device variable for a Configuration Manager device.
@@ -1703,6 +1718,9 @@ Creates a file replication route for Configuration Manager.
 
 ### [New-CMFileSystemAccessControlEntry](New-CMFileSystemAccessControlEntry.md)
 Create a file system access control entry.
+
+### [New-CMFolder](New-CMFolder.md)
+Create one or more folders in the console.
 
 ### [New-CMGlobalCondition](New-CMGlobalCondition.md)
 Creates a Configuration Manager global condition object.
@@ -1781,6 +1799,9 @@ Create an OS upgrade package.
 
 ### [New-CMOperatingSystemUpgradeUpdateSchedule](New-CMOperatingSystemUpgradeUpdateSchedule.md)
 Creates an operating system upgrade update schedule.
+
+### [New-CMOrchestrationGroup](New-CMOrchestrationGroup.md)
+Create a new orchestration group.
 
 ### [New-CMOSPassphrase](New-CMOSPassphrase.md)
 Create a policy to specify the constraints for passwords used to unlock BitLocker-protected OS drives.
@@ -1879,13 +1900,13 @@ Create a compliance policy to associate an object identifier from a smart card c
 Create a Configuration Manager schedule token.
 
 ### [New-CMScript](New-CMScript.md)
-{{ Fill in the Synopsis }}
+Create a PowerShell script in Configuration Manager.
 
 ### [New-CMSecondarySite](New-CMSecondarySite.md)
 Create a secondary site.
 
 ### [New-CMSecurityScope](New-CMSecurityScope.md)
-Creates a security scope.
+Create a security scope.
 
 ### [New-CMSettingDeployment](New-CMSettingDeployment.md)
 Deploy a settings policy object to a collection.
@@ -1909,7 +1930,7 @@ Use this cmdlet to create a phased deployment for software updates by generating
 Create a software update deployment.
 
 ### [New-CMSoftwareUpdateDeploymentPackage](New-CMSoftwareUpdateDeploymentPackage.md)
-Creates a software update deployment package.
+Create a software update deployment package.
 
 ### [New-CMSoftwareUpdateGroup](New-CMSoftwareUpdateGroup.md)
 Creates a software update group.
@@ -2110,7 +2131,7 @@ Create a policy to configure the number of days that fixed drives can remain non
 Create a policy to configure the number of days that users can delay complying with BitLocker policies for their OS drive.
 
 ### [New-CMUserCollection](New-CMUserCollection.md)
-Creates a collection for users and adds the collection to the Configuration Manager hierarchy.
+Create a user collection.
 
 ### [New-CMUserDataAndProfileConfigurationItem](New-CMUserDataAndProfileConfigurationItem.md)
 Creates a user data and profile configuration item.
@@ -2161,7 +2182,7 @@ Removes a specified user.
 Removes an Active Directory forest object from Configuration Manager.
 
 ### [Remove-CMAdministrativeUser](Remove-CMAdministrativeUser.md)
-Removes an administrative user.
+Remove an administrative user.
 
 ### [Remove-CMAlert](Remove-CMAlert.md)
 Removes Configuration Manager alerts.
@@ -2206,7 +2227,7 @@ Removes a deployment from an auto deployment rule.
 Remove the Azure service.
 
 ### [Remove-CMBaseline](Remove-CMBaseline.md)
-Removes configuration baselines.
+Remove a configuration baseline.
 
 ### [Remove-CMBaselineDeployment](Remove-CMBaselineDeployment.md)
 Removes a baseline deployment.
@@ -2257,13 +2278,13 @@ Remove a cloud management gateway.
 Remove a cloud management gateway connection point.
 
 ### [Remove-CMCollection](Remove-CMCollection.md)
-Removes a Configuration Manager collection.
+Remove a device or user collection.
 
 ### [Remove-CMCollectionDirectMembershipRule](Remove-CMCollectionDirectMembershipRule.md)
-Remove a direct membership rule from a collection.
+Remove a direct membership rule from a device or user collection.
 
 ### [Remove-CMCollectionExcludeMembershipRule](Remove-CMCollectionExcludeMembershipRule.md)
-Removes a collection exclude membership rule.
+Remove an exclude membership rule from a device or user collection.
 
 ### [Remove-CMCollectionFromAdministrativeUser](Remove-CMCollectionFromAdministrativeUser.md)
 Removes a collection from administrative user.
@@ -2272,13 +2293,13 @@ Removes a collection from administrative user.
 Removes a collection from distribution point group.
 
 ### [Remove-CMCollectionIncludeMembershipRule](Remove-CMCollectionIncludeMembershipRule.md)
-Removes a collection include membership rule.
+Remove an include membership rule from a device or user collection.
 
 ### [Remove-CMCollectionMembershipRule](Remove-CMCollectionMembershipRule.md)
-Removes a Configuration Manager collection membership rule.
+_For system use only_ to remove membership rules from collections.
 
 ### [Remove-CMCollectionQueryMembershipRule](Remove-CMCollectionQueryMembershipRule.md)
-Removes a collection query membership rule.
+Remove a query membership rule from a device or user collection.
 
 ### [Remove-CMComplianceRule](Remove-CMComplianceRule.md)
 Removes a compliance rule.
@@ -2323,7 +2344,7 @@ Remove from the specified deployment type the executable files that need to clos
 Delete return codes from the specified application deployment type.
 
 ### [Remove-CMDeploymentTypeSupersedence](Remove-CMDeploymentTypeSupersedence.md)
-Remove a deployment type supersedence relationship.
+Remove a deployment type supersedence relationship. This cmdlet is deprecated.
 
 ### [Remove-CMDevice](Remove-CMDevice.md)
 Removes a client device from Configuration Manager.
@@ -2338,16 +2359,16 @@ Removes device affinity from a Configuration Manager user.
 Remove a direct membership rule from a device collection.
 
 ### [Remove-CMDeviceCollectionExcludeMembershipRule](Remove-CMDeviceCollectionExcludeMembershipRule.md)
-Removes an exclude membership rule from one or more device collection in the Configuration Manager hierarchy.
+Remove an exclude membership rule from a device collection.
 
 ### [Remove-CMDeviceCollectionIncludeMembershipRule](Remove-CMDeviceCollectionIncludeMembershipRule.md)
-Removes an Include Collections membership rule from a device collection.
+Remove an include membership rule from a device collection.
 
 ### [Remove-CMDeviceCollectionQueryMembershipRule](Remove-CMDeviceCollectionQueryMembershipRule.md)
-Removes a query membership rule from one or more device collection in the Configuration Manager hierarchy.
+Remove a query membership rule from a device collection.
 
 ### [Remove-CMDeviceCollectionVariable](Remove-CMDeviceCollectionVariable.md)
-Removes a device collection variable.
+Remove a device collection variable.
 
 ### [Remove-CMDeviceVariable](Remove-CMDeviceVariable.md)
 Removes a variable defined for a Configuration Manager device.
@@ -2394,6 +2415,9 @@ Removes a Configuration Manager fallback status point.
 ### [Remove-CMFileReplicationRoute](Remove-CMFileReplicationRoute.md)
 Removes a file replication route from Configuration Manager.
 
+### [Remove-CMFolder](Remove-CMFolder.md)
+Remove the specified folder in the console.
+
 ### [Remove-CMGlobalCondition](Remove-CMGlobalCondition.md)
 Removes a Configuration Manager global condition object.
 
@@ -2410,13 +2434,16 @@ Removes a management point.
 Removes a multicast service point.
 
 ### [Remove-CMObjectSecurityScope](Remove-CMObjectSecurityScope.md)
-Removes a security scope from a Configuration Manager object.
+Remove a security scope from a Configuration Manager object.
 
 ### [Remove-CMOperatingSystemImage](Remove-CMOperatingSystemImage.md)
 Removes operating system images.
 
 ### [Remove-CMOperatingSystemInstaller](Remove-CMOperatingSystemInstaller.md)
 Removes operating system installers.
+
+### [Remove-CMOrchestrationGroup](Remove-CMOrchestrationGroup.md)
+Remove an orchestration group.
 
 ### [Remove-CMPackage](Remove-CMPackage.md)
 Removes a Configuration Manager package.
@@ -2428,34 +2455,34 @@ Removes a package deployment from Configuration Manager.
 Reset your site-wide settings.
 
 ### [Remove-CMProgram](Remove-CMProgram.md)
-Removes programs from a Configuration Manager package.
+Remove a program from a package.
 
 ### [Remove-CMQuery](Remove-CMQuery.md)
 Remove a Configuration Manager query.
 
 ### [Remove-CMReportingServicePoint](Remove-CMReportingServicePoint.md)
-Removes a reporting service point.
+Remove a reporting service point.
 
 ### [Remove-CMResource](Remove-CMResource.md)
 Removes a Configuration Manager resource.
 
 ### [Remove-CMScript](Remove-CMScript.md)
-Remove a Configuration Manager PowerShell script.
+Remove a PowerShell script from Configuration Manager.
 
 ### [Remove-CMSecondarySite](Remove-CMSecondarySite.md)
 Removes a secondary site from Configuration Manager.
 
 ### [Remove-CMSecurityRole](Remove-CMSecurityRole.md)
-Removes custom security roles from Configuration Manager.
+Remove a custom security role.
 
 ### [Remove-CMSecurityRoleFromAdministrativeUser](Remove-CMSecurityRoleFromAdministrativeUser.md)
-Removes the association between a security role and an administrative user.
+Remove the association between a security role and an administrative user.
 
 ### [Remove-CMSecurityScope](Remove-CMSecurityScope.md)
-Removes a security scope.
+Remove a security scope.
 
 ### [Remove-CMSecurityScopeFromAdministrativeUser](Remove-CMSecurityScopeFromAdministrativeUser.md)
-Removes the association between security scopes and an administrative user.
+Remove the association between a security scope and an administrative user.
 
 ### [Remove-CMServiceConnectionPoint](Remove-CMServiceConnectionPoint.md)
 Removes a service connection point.
@@ -2479,10 +2506,13 @@ Removes Configuration Manager deployment rules for automatic software updates.
 Removes a software update deployment.
 
 ### [Remove-CMSoftwareUpdateDeploymentPackage](Remove-CMSoftwareUpdateDeploymentPackage.md)
-Removes a deployment package.
+Remove a software update deployment package.
 
 ### [Remove-CMSoftwareUpdateFromGroup](Remove-CMSoftwareUpdateFromGroup.md)
 Removes a software update from group.
+
+### [Remove-CMSoftwareUpdateFromPackage](Remove-CMSoftwareUpdateFromPackage.md)
+Remove an update from a software update package.
 
 ### [Remove-CMSoftwareUpdateGroup](Remove-CMSoftwareUpdateGroup.md)
 Removes Configuration Manager software update groups.
@@ -2491,7 +2521,7 @@ Removes Configuration Manager software update groups.
 Use this cmdlet to remove a phased deployment for software updates.
 
 ### [Remove-CMSoftwareUpdatePoint](Remove-CMSoftwareUpdatePoint.md)
-Removes a software update point site system role from Configuration Manager.
+Remove a software update point.
 
 ### [Remove-CMStateMigrationPoint](Remove-CMStateMigrationPoint.md)
 Removes a state migration point from a Configuration Manager site.
@@ -2635,13 +2665,13 @@ Removes a primary user from one or more devices in the Configuration Manager hie
 Remove a direct membership rule from a user collection.
 
 ### [Remove-CMUserCollectionExcludeMembershipRule](Remove-CMUserCollectionExcludeMembershipRule.md)
-Removes an exclude membership rule from one or more user collection in the Configuration Manager hierarchy.
+Remove an exclude membership rule from a user collection.
 
 ### [Remove-CMUserCollectionIncludeMembershipRule](Remove-CMUserCollectionIncludeMembershipRule.md)
-Removes an include membership rule from one or more user collection in the Configuration Manager hierarchy.
+Remove an include membership rule from a user collection.
 
 ### [Remove-CMUserCollectionQueryMembershipRule](Remove-CMUserCollectionQueryMembershipRule.md)
-Removes a query membership rule from one or more user collection in the Configuration Manager hierarchy.
+Remove a query membership rule from a user collection.
 
 ### [Remove-CMWdacSetting](Remove-CMWdacSetting.md)
 Delete a Microsoft Defender Application Control policy from the site.
@@ -2671,7 +2701,7 @@ Saves database replication diagnostic information for Configuration Manager in a
 Saves an Endpoint Protection definition.
 
 ### [Save-CMSoftwareUpdate](Save-CMSoftwareUpdate.md)
-Saves software updates to update groups and packages.
+Save software updates to update groups and packages.
 
 ### [Send-CMAssetIntelligenceCatalogUpdateRequest](Send-CMAssetIntelligenceCatalogUpdateRequest.md)
 Requests a catalog update for uncategorized software titles.
@@ -2712,6 +2742,9 @@ Configure the deployment of an application group.
 ### [Set-CMApplicationPhasedDeployment](Set-CMApplicationPhasedDeployment.md)
 Configure a phased deployment for an application.
 
+### [Set-CMApplicationSupersedence](Set-CMApplicationSupersedence.md)
+Set deployment type supersedence for an application.
+
 ### [Set-CMAppv5XDeploymentType](Set-CMAppv5XDeploymentType.md)
 Sets an App-V 5X deployment type.
 
@@ -2737,7 +2770,7 @@ Assigns a client computer to a primary site.
 Sets a deployment for an automatic deployment rule.
 
 ### [Set-CMBaseline](Set-CMBaseline.md)
-Changes the settings of configuration baselines.
+Change the settings of configuration baselines.
 
 ### [Set-CMBaselineDeployment](Set-CMBaselineDeployment.md)
 Changes settings for a Configuration Manager baseline deployment.
@@ -2755,7 +2788,7 @@ Modify an existing BitLocker management policy setting.
 Modify an OS boot image.
 
 ### [Set-CMBoundary](Set-CMBoundary.md)
-Modifies Configuration Manager boundary settings.
+Configure a site boundary.
 
 ### [Set-CMBoundaryGroup](Set-CMBoundaryGroup.md)
 Modify the properties of a boundary group.
@@ -2875,10 +2908,10 @@ Configure a cloud management gateway (CMG).
 Configure a cloud management gateway connection point.
 
 ### [Set-CMCollection](Set-CMCollection.md)
-Sets a Configuration Manager collection.
+Configure a device or user collection.
 
 ### [Set-CMCollectionMembershipEvaluationComponent](Set-CMCollectionMembershipEvaluationComponent.md)
-Sets how often Configuration Manager evaluates collections for membership.
+Configure the site component that evaluates collection membership.
 
 ### [Set-CMCollectionPowerManagement](Set-CMCollectionPowerManagement.md)
 Configures power management settings for a device collection.
@@ -2983,19 +3016,19 @@ Modify the executable files that need to close for the app install to succeed.
 Modify return codes for the specified application deployment type.
 
 ### [Set-CMDeploymentTypeSupersedence](Set-CMDeploymentTypeSupersedence.md)
-Configure a supersedence relationship on an application.
+Configure a supersedence relationship on an application. This cmdlet is deprecated.
 
 ### [Set-CMDeviceCategory](Set-CMDeviceCategory.md)
 {{ Fill in the Synopsis }}
 
 ### [Set-CMDeviceCollectionVariable](Set-CMDeviceCollectionVariable.md)
-Sets a device collection variable.
+Configure a device collection variable.
 
 ### [Set-CMDeviceOwnership](Set-CMDeviceOwnership.md)
 Configures ownership type for a device.
 
 ### [Set-CMDeviceVariable](Set-CMDeviceVariable.md)
-Modifies a device variable of a Configuration Manager device.
+Modify a device variable.
 
 ### [Set-CMDiscoveryMethod](Set-CMDiscoveryMethod.md)
 Changes configuration settings of a discovery method.
@@ -3038,6 +3071,9 @@ Changes the throttle interval or the message count for a Configuration Manager f
 
 ### [Set-CMFileReplicationRoute](Set-CMFileReplicationRoute.md)
 Changes settings for a file replication route in Configuration Manager.
+
+### [Set-CMFolder](Set-CMFolder.md)
+Configure a folder in the console.
 
 ### [Set-CMGlobalCondition](Set-CMGlobalCondition.md)
 Modifies settings for a Configuration Manager global condition.
@@ -3121,7 +3157,7 @@ Sets a multicast service point.
 {{ Fill in the Synopsis }}
 
 ### [Set-CMObjectSecurityScope](Set-CMObjectSecurityScope.md)
-Sets the security scopes for Configuration Manager objects.
+Add or remove security scopes for Configuration Manager objects. This cmdlet is deprecated.
 
 ### [Set-CMOneDriveBusinessProfile](Set-CMOneDriveBusinessProfile.md)
 Configure a OneDrive for Business profile policy.
@@ -3132,6 +3168,9 @@ Changes configuration settings of OS images.
 ### [Set-CMOperatingSystemInstaller](Set-CMOperatingSystemInstaller.md)
 Changes configuration settings of OS upgrade packages.
 
+### [Set-CMOrchestrationGroup](Set-CMOrchestrationGroup.md)
+Configure an orchestration group.
+
 ### [Set-CMPackage](Set-CMPackage.md)
 Modify a package.
 
@@ -3139,7 +3178,7 @@ Modify a package.
 Changes values that define how Configuration Manager deploys a software package.
 
 ### [Set-CMProgram](Set-CMProgram.md)
-Modify a program in Configuration Manager.
+Modify a program of a package.
 
 ### [Set-CMQuery](Set-CMQuery.md)
 Configure a Configuration Manager query.
@@ -3151,19 +3190,22 @@ Changes the setting for the query result maximum.
 Modifies a remote connection profile.
 
 ### [Set-CMReportingServicePoint](Set-CMReportingServicePoint.md)
-Modifies a Configuration Manager reporting service point.
+Configure a reporting service point.
 
 ### [Set-CMScript](Set-CMScript.md)
-Use this cmdlet to edit a script.
+Edit a PowerShell script in Configuration Manager.
 
 ### [Set-CMScriptDeploymentType](Set-CMScriptDeploymentType.md)
 Configure a script installer deployment type.
 
 ### [Set-CMSecurityRole](Set-CMSecurityRole.md)
-Changes configuration settings of a security role.
+Configure a security role.
+
+### [Set-CMSecurityRolePermission](Set-CMSecurityRolePermission.md)
+Configure a security role with specific permissions.
 
 ### [Set-CMSecurityScope](Set-CMSecurityScope.md)
-Sets a security scope.
+Configure a security scope.
 
 ### [Set-CMServiceConnectionPoint](Set-CMServiceConnectionPoint.md)
 Sets a service connection point.
@@ -3208,7 +3250,7 @@ Modify an automatic deployment rule (ADR) for software updates.
 Modifies a client installation on a Configuration Manager software update point.
 
 ### [Set-CMSoftwareUpdateDeployment](Set-CMSoftwareUpdateDeployment.md)
-Modifies a software update deployment in Configuration Manager.
+Modify a software update deployment.
 
 ### [Set-CMSoftwareUpdateDeploymentPackage](Set-CMSoftwareUpdateDeploymentPackage.md)
 Modify a software update deployment package.
@@ -3223,10 +3265,10 @@ Use this cmdlet to configure a deployment phase for a software update.
 Configure a phased deployment for a software update.
 
 ### [Set-CMSoftwareUpdatePoint](Set-CMSoftwareUpdatePoint.md)
-Changes settings for a Configuration Manager software update point.
+Configure a software update point.
 
 ### [Set-CMSoftwareUpdatePointComponent](Set-CMSoftwareUpdatePointComponent.md)
-Modifies a software update point.
+Configure the site component for the software update point.
 
 ### [Set-CMSoftwareUpdateSummarizationSchedule](Set-CMSoftwareUpdateSummarizationSchedule.md)
 Sets how often Configuration Manager summarizes the status of updates.
