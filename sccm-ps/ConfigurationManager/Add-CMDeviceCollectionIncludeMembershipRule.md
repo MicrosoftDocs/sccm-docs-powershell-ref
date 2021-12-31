@@ -266,8 +266,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-CMDeviceCollectionIncludeMembershipRule](Get-CMDeviceCollectionIncludeMembershipRule.md)
 [Remove-CMDeviceCollectionIncludeMembershipRule](Remove-CMDeviceCollectionIncludeMembershipRule.md)
 
-[Add-CMCollectionIncludeMembershipRule](Add-CMCollectionIncludeMembershipRule.md)
-
 [Get-CMCollection](Get-CMCollection.md)
 [Get-CMDeviceCollection](Get-CMDeviceCollection.md)
 

@@ -258,8 +258,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-CMUserCollectionIncludeMembershipRule](Get-CMUserCollectionIncludeMembershipRule.md)
 [Remove-CMUserCollectionIncludeMembershipRule](Remove-CMUserCollectionIncludeMembershipRule.md)
 
-[Add-CMCollectionIncludeMembershipRule](Add-CMCollectionIncludeMembershipRule.md)
-
 [Get-CMCollection](Get-CMCollection.md)
 [Get-CMUserCollection](Get-CMUserCollection.md)
 

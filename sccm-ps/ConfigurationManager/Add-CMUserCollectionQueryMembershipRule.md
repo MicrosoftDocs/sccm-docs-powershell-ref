@@ -257,8 +257,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-CMUserCollectionQueryMembershipRule](Get-CMUserCollectionQueryMembershipRule.md)
 [Remove-CMUserCollectionQueryMembershipRule](Remove-CMUserCollectionQueryMembershipRule.md)
 
-[Add-CMCollectionQueryMembershipRule](Add-CMCollectionQueryMembershipRule.md)
-
 [Get-CMCollection](Get-CMCollection.md)
 [Get-CMUserCollection](Get-CMUserCollection.md)
 
