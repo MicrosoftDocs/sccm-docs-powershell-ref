@@ -2,7 +2,7 @@
 title: Version 2111 release notes
 titleSuffix: Configuration Manager
 description: Release notes for the changes to PowerShell cmdlets in Configuration Manager version 2111.
-ms.date: 12/28/2021
+ms.date: 12/30/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -39,7 +39,7 @@ For more information, see [about_PSModulePath](/powershell/module/microsoft.powe
 - [Set-CMApplicationSupersedence](/powershell/module/configurationmanager/Set-CMApplicationSupersedence): Use this cmdlet to set deployment type supersedence for the specified application.
 
 ### Orchestration groups
-[Get-CMOrchestrationGroup](../sccm-ps/ConfigurationManager/Get-CMOrchestrationGroup.md)
+
 For more information about this feature, see [Orchestration groups in Configuration Manager](/mem/configmgr/sum/deploy-use/orchestration-groups).
 
 - [Get-CMOrchestrationGroup](/powershell/module/configurationmanager/Get-CMOrchestrationGroup): Use this cmdlet to get an orchestration group object by name or ID. You can use this object to start, remove, or configure the orchestration group.
