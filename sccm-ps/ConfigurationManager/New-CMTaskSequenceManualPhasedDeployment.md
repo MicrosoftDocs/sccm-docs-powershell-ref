@@ -1,6 +1,7 @@
 ---
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
+ms.date: 01/03/2022
 online version:
 schema: 2.0.0
 ---
@@ -9,7 +10,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-Use this cmdlet to create a phased deployment for a task sequence.
+Create a phased deployment for a task sequence.
 
 ## SYNTAX
 
@@ -36,7 +37,12 @@ New-CMTaskSequenceManualPhasedDeployment [-TaskSequenceName] <String> -AddPhases
 
 ## DESCRIPTION
 
-Starting in version 2002, use this cmdlet to create a phased deployment for a task sequence. Before you use this cmdlet, add new customized deployment phases with the cmdlet [New-CMTaskSequencePhase](New-CMTaskSequencePhase.md).
+Use this cmdlet to create a phased deployment for a task sequence. Before you use this cmdlet, add new customized deployment phases with the cmdlet [New-CMTaskSequencePhase](New-CMTaskSequencePhase.md).
+
+For more information, see [Create phased deployments with Configuration Manager](/mem/configmgr/osd/deploy-use/create-phased-deployment-for-task-sequence).
+
+> [!NOTE]
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
@@ -96,6 +102,8 @@ Accept wildcard characters: False
 
 ### -DisableWildcardHandling
 
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -109,6 +117,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
+
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -140,7 +150,7 @@ Accept wildcard characters: False
 
 ### -TaskSequence
 
-Specify a task sequence object.
+Specify a task sequence object. To get this object, use the [Get-CMTaskSequence](Get-CMTaskSequence.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -229,4 +239,17 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### IResultObject#SMS_PhasedDeployment
 ## NOTES
 
+The return object is the **SMS_PhasedDeployment** server WMI class.
+
 ## RELATED LINKS
+
+[Get-CMTaskSequenceAutoPhasedDeployment](Get-CMTaskSequenceAutoPhasedDeployment.md)
+[Remove-CMTaskSequencePhasedDeployment](Remove-CMTaskSequencePhasedDeployment.md)
+[Set-CMTaskSequencePhasedDeployment](Set-CMTaskSequencePhasedDeployment.md)
+
+[Get-CMPhasedDeploymentStatus](Get-CMPhasedDeploymentStatus.md)
+[Move-CMPhasedDeploymentToNext](Move-CMPhasedDeploymentToNext.md)
+[Resume-CMPhasedDeployment](Resume-CMPhasedDeployment.md)
+[Suspend-CMPhasedDeployment](Suspend-CMPhasedDeployment.md)
+
+[Create phased deployments with Configuration Manager](/mem/configmgr/osd/deploy-use/create-phased-deployment-for-task-sequence)

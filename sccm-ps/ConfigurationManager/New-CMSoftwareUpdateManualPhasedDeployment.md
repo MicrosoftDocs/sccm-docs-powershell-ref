@@ -1,6 +1,7 @@
 ---
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
+ms.date: 01/03/2022
 online version:
 schema: 2.0.0
 ---
@@ -9,7 +10,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-Use this cmdlet to create a phased deployment for software updates.
+Create a phased deployment for software updates.
 
 ## SYNTAX
 
@@ -56,8 +57,13 @@ New-CMSoftwareUpdateManualPhasedDeployment [-SoftwareUpdates] <IResultObject[]> 
 ```
 
 ## DESCRIPTION
-Starting in version 2002, use this cmdlet to create a phased deployment for software updates. Before you use this cmdlet, add new customized deployment phases with the cmdlet [New-CMSoftwareUpdatePhase](New-CMSoftwareUpdatePhase.md).
 
+Use this cmdlet to create a phased deployment for software updates. Before you use this cmdlet, add new customized deployment phases with the cmdlet [New-CMSoftwareUpdatePhase](New-CMSoftwareUpdatePhase.md).
+
+For more information, see [Create phased deployments with Configuration Manager](/mem/configmgr/osd/deploy-use/create-phased-deployment-for-task-sequence?toc=/mem/configmgr/sum/toc.json&bc=/mem/configmgr/sum/breadcrumb/toc.json).
+
+> [!NOTE]
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 ## EXAMPLES
 
 ### Example 1: Create a deployment for software updates by name
@@ -116,6 +122,8 @@ Accept wildcard characters: False
 
 ### -DisableWildcardHandling
 
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -129,6 +137,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
+
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -160,7 +170,7 @@ Accept wildcard characters: False
 
 ### -SoftwareUpdateGroup
 
-Specify an object for a software update group.
+Specify an object for a software update group. To get this object, use the [Get-CMSoftwareUpdateGroup](Get-CMSoftwareUpdateGroup.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -240,7 +250,7 @@ Accept wildcard characters: False
 
 ### -SoftwareUpdates
 
-Specify an array of software update objects.
+Specify an array of software update objects. To get this object, use the [Get-CMSoftwareUpdate](Get-CMSoftwareUpdate.md) cmdlet.
 
 ```yaml
 Type: IResultObject[]
@@ -298,4 +308,17 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### IResultObject#SMS_PhasedDeployment
 ## NOTES
 
+The return object is the **SMS_PhasedDeployment** server WMI class.
+
 ## RELATED LINKS
+
+[Get-CMSoftwareUpdateAutoPhasedDeployment](Get-CMSoftwareUpdateAutoPhasedDeployment.md)
+[Remove-CMSoftwareUpdatePhasedDeployment](Remove-CMSoftwareUpdatePhasedDeployment.md)
+[Set-CMSoftwareUpdatePhasedDeployment](Set-CMSoftwareUpdatePhasedDeployment.md)
+
+[Get-CMPhasedDeploymentStatus](Get-CMPhasedDeploymentStatus.md)
+[Move-CMPhasedDeploymentToNext](Move-CMPhasedDeploymentToNext.md)
+[Resume-CMPhasedDeployment](Resume-CMPhasedDeployment.md)
+[Suspend-CMPhasedDeployment](Suspend-CMPhasedDeployment.md)
+
+[Create phased deployments with Configuration Manager](/mem/configmgr/osd/deploy-use/create-phased-deployment-for-task-sequence?toc=/mem/configmgr/sum/toc.json&bc=/mem/configmgr/sum/breadcrumb/toc.json)

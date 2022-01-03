@@ -1,6 +1,7 @@
 ---
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
+ms.date: 01/03/2022
 online version:
 schema: 2.0.0
 ---
@@ -9,7 +10,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-Use this cmdlet to move the specified phased deployment to the next phase.
+Move the specified phased deployment to the next phase.
 
 ## SYNTAX
 
@@ -33,7 +34,12 @@ Move-CMPhasedDeploymentToNext [-Force] -Name <String> [-DisableWildcardHandling]
 
 ## DESCRIPTION
 
-Starting in version 2002, use this cmdlet to move the specified phased deployment to the next phase.
+Use this cmdlet to move the specified phased deployment to the next phase.
+
+For more information, see [Create phased deployments with Configuration Manager](/mem/configmgr/osd/deploy-use/create-phased-deployment-for-task-sequence).
+
+> [!NOTE]
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
@@ -56,6 +62,8 @@ $myPhasedDeployment | Move-CMPhasedDeploymentToNext -Force
 ## PARAMETERS
 
 ### -DisableWildcardHandling
+
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -87,6 +95,8 @@ Accept wildcard characters: False
 
 ### -ForceWildcardHandling
 
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -117,7 +127,11 @@ Accept wildcard characters: False
 
 ### -InputObject
 
-Specify a phased deployment object.
+Specify a phased deployment object. To get this object, use one of the following cmdlets:
+
+- [Get-CMApplicationPhasedDeployment](Get-CMApplicationPhasedDeployment.md)
+- [Get-CMSoftwareUpdatePhasedDeployment](Get-CMSoftwareUpdatePhasedDeployment.md)
+- [Get-CMTaskSequencePhasedDeployment](Get-CMTaskSequencePhasedDeployment.md)
 
 ```yaml
 Type: IResultObject
@@ -191,3 +205,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-CMPhasedDeploymentStatus](Get-CMPhasedDeploymentStatus.md)
+[Resume-CMPhasedDeployment](Resume-CMPhasedDeployment.md)
+[Suspend-CMPhasedDeployment](Suspend-CMPhasedDeployment.md)
+
+[Get-CMApplicationPhasedDeployment](Get-CMApplicationPhasedDeployment.md)
+[Get-CMSoftwareUpdatePhasedDeployment](Get-CMSoftwareUpdatePhasedDeployment.md)
+[Get-CMTaskSequencePhasedDeployment](Get-CMTaskSequencePhasedDeployment.md)
+
+[Create phased deployments with Configuration Manager](/mem/configmgr/osd/deploy-use/create-phased-deployment-for-task-sequence)

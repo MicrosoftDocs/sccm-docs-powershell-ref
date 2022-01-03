@@ -1,6 +1,7 @@
 ---
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
+ms.date: 01/03/2022
 online version:
 schema: 2.0.0
 ---
@@ -9,7 +10,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-Use this cmdlet to move the content library before adding a passive site.
+Move the content library before adding a passive site.
 
 ## SYNTAX
 
@@ -27,7 +28,10 @@ Move-CMContentLibrary -NewLocation <String> -SiteCode <String> [-DisableWildcard
 
 ## DESCRIPTION
 
-Starting in version 2002, use this cmdlet to move the content library before adding a passive site.
+Use this cmdlet to move the content library. To configure site server high availability or to free up hard drive space on your central administration or primary site servers, relocate the content library to another storage location. For more information, see [Configure a remote content library for the site server](/mem/configmgr/core/plan-design/hierarchy/remote-content-library).
+
+> [!NOTE]
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
@@ -51,6 +55,8 @@ Move-CMContentLibrary -SiteCode $SiteCode -NewLocation $NewLocationPath
 
 ### -DisableWildcardHandling
 
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -64,6 +70,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
+
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -79,7 +87,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 
-Specify a site object.
+Specify a site object. To get this object, use the [Get-CMSite](Get-CMSite.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -169,3 +177,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-CMSite](Get-CMSite.md)
+
+[Configure a remote content library for the site server](/mem/configmgr/core/plan-design/hierarchy/remote-content-library)

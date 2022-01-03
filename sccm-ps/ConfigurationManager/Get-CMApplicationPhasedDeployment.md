@@ -1,6 +1,7 @@
 ﻿---
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
+ms.date: 12/30/2021
 online version:
 schema: 2.0.0
 ---
@@ -9,7 +10,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-Use this cmdlet to get a phased deployment for an application.
+Get a phased deployment for an application.
 
 ## SYNTAX
 
@@ -45,7 +46,12 @@ Get-CMApplicationPhasedDeployment -Name <String> [-DisableWildcardHandling] [-Fo
 
 ## DESCRIPTION
 
-Starting in version 2002, use this cmdlet to get a phased deployment for an application.
+Use this cmdlet to get a phased deployment for an application.
+
+For more information, see [Create phased deployments with Configuration Manager](/mem/configmgr/osd/deploy-use/create-phased-deployment-for-task-sequence?toc=/mem/configmgr/apps/toc.json&bc=/mem/configmgr/apps/breadcrumb/toc.json).
+
+> [!NOTE]
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
@@ -69,7 +75,7 @@ Get-CMApplicationPhasedDeployment -ApplicationName "myApplicationName"
 
 ### -Application
 
-Specify an object for the application.
+Specify an object for the application. To get this object, use the [Get-CMApplication](Get-CMApplication.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -117,6 +123,8 @@ Accept wildcard characters: False
 
 ### -DisableWildcardHandling
 
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -130,6 +138,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
+
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -187,4 +197,17 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### IResultObject[]#SMS_PhasedDeployment
 ## NOTES
 
+The return object is the **SMS_PhasedDeployment** server WMI class.
+
 ## RELATED LINKS
+
+[New-CMApplicationAutoPhasedDeployment](New-CMApplicationAutoPhasedDeployment.md)
+[Remove-CMApplicationPhasedDeployment](Remove-CMApplicationPhasedDeployment.md)
+[Set-CMApplicationPhasedDeployment](Set-CMApplicationPhasedDeployment.md)
+
+[Get-CMPhasedDeploymentStatus](Get-CMPhasedDeploymentStatus.md)
+[Move-CMPhasedDeploymentToNext](Move-CMPhasedDeploymentToNext.md)
+[Resume-CMPhasedDeployment](Resume-CMPhasedDeployment.md)
+[Suspend-CMPhasedDeployment](Suspend-CMPhasedDeployment.md)
+
+[Create phased deployments with Configuration Manager](/mem/configmgr/osd/deploy-use/create-phased-deployment-for-task-sequence?toc=/mem/configmgr/apps/toc.json&bc=/mem/configmgr/apps/breadcrumb/toc.json)
