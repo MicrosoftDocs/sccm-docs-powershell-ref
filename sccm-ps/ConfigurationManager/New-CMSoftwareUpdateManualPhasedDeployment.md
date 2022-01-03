@@ -312,7 +312,7 @@ The return object is the **SMS_PhasedDeployment** server WMI class.
 
 ## RELATED LINKS
 
-[Get-CMSoftwareUpdateAutoPhasedDeployment](Get-CMSoftwareUpdateAutoPhasedDeployment.md)
+[Get-CMSoftwareUpdatePhasedDeployment](Get-CMSoftwareUpdatePhasedDeployment.md)
 [Remove-CMSoftwareUpdatePhasedDeployment](Remove-CMSoftwareUpdatePhasedDeployment.md)
 [Set-CMSoftwareUpdatePhasedDeployment](Set-CMSoftwareUpdatePhasedDeployment.md)
 

@@ -243,7 +243,7 @@ The return object is the **SMS_PhasedDeployment** server WMI class.
 
 ## RELATED LINKS
 
-[Get-CMTaskSequenceAutoPhasedDeployment](Get-CMTaskSequenceAutoPhasedDeployment.md)
+[Get-CMTaskSequencePhasedDeployment](Get-CMTaskSequencePhasedDeployment.md)
 [Remove-CMTaskSequencePhasedDeployment](Remove-CMTaskSequencePhasedDeployment.md)
 [Set-CMTaskSequencePhasedDeployment](Set-CMTaskSequencePhasedDeployment.md)
 
