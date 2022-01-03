@@ -118,7 +118,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowDownloadFromMicrosoftUpdate
-Starting in version 1906, use this parameter to set the following option on the **Download Settings** page of the ADR deployment settings: **If software updates are not available on distribution point in current, neighbor or site boundary groups, download content from Microsoft Updates**.
+Use this parameter to set the following option on the **Download Settings** page of the ADR deployment settings: **If software updates are not available on distribution point in current, neighbor or site boundary groups, download content from Microsoft Updates**.
 
 ```yaml
 Type: Boolean
@@ -163,7 +163,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowUseMeteredNetwork
-Starting in version 1906, use this parameter to set the following option on the **Download Settings** page of the ADR deployment settings: **Allow clients on a metered Internet connection to download content after the installation deadline, which might incur additionl costs**
+Use this parameter to set the following option on the **Download Settings** page of the ADR deployment settings: **Allow clients on a metered Internet connection to download content after the installation deadline, which might incur additionl costs**
 
 ```yaml
 Type: Boolean
@@ -498,7 +498,7 @@ Accept wildcard characters: False
 ```
 
 ### -RequirePostRebootFullScan
-Starting in version 1906, use this parameter to set the following option on the **User Experience** page of the ADR deployment settings: **If any update in this deployment requires a system restart, run updates deployment evaluation cycle after restart**.
+Use this parameter to set the following option on the **User Experience** page of the ADR deployment settings: **If any update in this deployment requires a system restart, run updates deployment evaluation cycle after restart**.
 
 
 ```yaml
@@ -529,7 +529,7 @@ Accept wildcard characters: False
 ```
 
 ### -SoftDeadlineEnabled
-Starting in version 1906, use this parameter to set the following option on the **Deployment Schedule** page of the ADR deployment settings: **Delay enforcement of this deployment according to user preferences, up to the grace period defined in client settings**.
+Use this parameter to set the following option on the **Deployment Schedule** page of the ADR deployment settings: **Delay enforcement of this deployment according to user preferences, up to the grace period defined in client settings**.
 
 
 ```yaml

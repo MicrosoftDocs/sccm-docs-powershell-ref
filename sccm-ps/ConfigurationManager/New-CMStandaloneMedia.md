@@ -301,7 +301,7 @@ Accept wildcard characters: False
 ```
 
 ### -NoAutoRun
-Starting in version 1906, use this parameter to configure the following option from the create task sequence media wizard: **Include autorun.inf file on media**
+Use this parameter to configure the following option from the create task sequence media wizard: **Include autorun.inf file on media**
 
 
 ```yaml

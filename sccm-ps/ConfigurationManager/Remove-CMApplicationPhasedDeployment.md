@@ -51,7 +51,7 @@ Remove-CMApplicationPhasedDeployment [-Force] -Name <String> [-DisableWildcardHa
 
 ## DESCRIPTION
 
-Starting in version 2002, use this cmdlet to remove a phased deployment for an application.
+Use this cmdlet to remove a phased deployment for an application.
 
 ## EXAMPLES
 

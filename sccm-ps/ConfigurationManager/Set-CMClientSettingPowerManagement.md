@@ -181,7 +181,7 @@ Accept wildcard characters: False
 ```
 
 ### -NetworkWakeupOption
-Starting in version 1906, use this parameter to enable or disable the client setting, **Allow network wake-up**.
+Use this parameter to enable or disable the client setting, **Allow network wake-up**.
 
 ```yaml
 Type: NetworkWakeupType

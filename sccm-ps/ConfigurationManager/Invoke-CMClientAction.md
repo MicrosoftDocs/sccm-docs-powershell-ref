@@ -253,7 +253,7 @@ Accept wildcard characters: False
 
 ### -ParentCollection
 
-Applies to version 1906 and later. Use this parameter to support waking up a machine.
+Use this parameter to support waking up a machine.
 
 ```yaml
 Type: IResultObject
@@ -269,7 +269,7 @@ Accept wildcard characters: False
 
 ### -ParentCollectionId
 
-Applies to version 1906 and later. Use this parameter to support waking up a machine.
+Use this parameter to support waking up a machine.
 
 ```yaml
 Type: String
@@ -285,7 +285,7 @@ Accept wildcard characters: False
 
 ### -ParentCollectionName
 
-Applies to version 1906 and later. Use this parameter to support waking up a machine.
+Use this parameter to support waking up a machine.
 
 ```yaml
 Type: String
