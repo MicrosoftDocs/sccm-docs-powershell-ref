@@ -1,7 +1,7 @@
 ﻿---
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 07/30/2020
+ms.date: 12/30/2021
 online version:
 schema: 2.0.0
 ---
@@ -10,7 +10,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-Use this cmdlet to get a deployment phase for a specific instance or a phased deployment.
+Get a deployment phase for a specific instance of a phased deployment.
 
 ## SYNTAX
 
@@ -37,7 +37,12 @@ Get-CMPhase [-Collection <IResultObject>] [-CollectionId <String>] [-CollectionN
 
 ## DESCRIPTION
 
-Starting in version 2002, use this cmdlet to get a deployment phase for a specific instance or a phased deployment.
+Use this cmdlet to get a deployment phase for a specific instance of a phased deployment.
+
+For more information, see [Create phased deployments with Configuration Manager](/mem/configmgr/osd/deploy-use/create-phased-deployment-for-task-sequence).
+
+> [!NOTE]
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
@@ -53,7 +58,7 @@ Get-CMPhase -Id "66DEDF86-D0CB-457D-88BE-47E3FAC92A47"
 
 ### -Collection
 
-Specify a collection object for the phase.
+Specify a collection object for the phase. To get this object, use the [Get-CMCollection](Get-CMCollection.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -101,6 +106,8 @@ Accept wildcard characters: False
 
 ### -DisableWildcardHandling
 
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -114,6 +121,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
+
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter

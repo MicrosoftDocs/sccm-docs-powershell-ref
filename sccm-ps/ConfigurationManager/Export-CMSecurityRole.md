@@ -1,8 +1,7 @@
----
-description: Exports a security role to an XML file.
+﻿---
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/01/2019
+ms.date: 12/21/2021
 schema: 2.0.0
 title: Export-CMSecurityRole
 ---
@@ -10,7 +9,8 @@ title: Export-CMSecurityRole
 # Export-CMSecurityRole
 
 ## SYNOPSIS
-Exports a security role to an XML file.
+
+Export a security role to an XML file.
 
 ## SYNTAX
 
@@ -33,19 +33,21 @@ Export-CMSecurityRole -Path <String> -RoleName <String> [-DisableWildcardHandlin
 ```
 
 ## DESCRIPTION
-The **Export-CMSecurityRole** cmdlet exports a security role configuration from Configuration Manager to an XML file.
+
+Use this cmdlet to export the configuration of a custom security role from the site to an XML file. You can't export built-in roles. For more information on security roles and permissions, see [Fundamentals of role-based administration in Configuration Manager](/mem/configmgr/core/understand/fundamentals-of-role-based-administration).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
-### Example 1: Export a security role
-```
-PS XYZ:\>Export-CMSecurityRole -Path "\\Contoso01\Export\Sec_Roles\Security_Manager" -RoleId "SMS000CR"
-```
+### Example 1: Export a custom security role
 
-This command exports the security role named SMS000CR to the file named Security_Manager.
+This command exports the custom security role named **XYZ00001** to the file named **Security_Manager.xml**.
+
+```powershell
+Export-CMSecurityRole -Path "\\Contoso01\Export\Sec_Roles\Security_Manager.xml" -RoleId "XYZ00001"
+```
 
 ## PARAMETERS
 
@@ -82,6 +84,9 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
+
+Specify a security role object to export. To get this object, use the [Get-CMSecurityRole](Get-CMSecurityRole.md) cmdlet.
+
 ```yaml
 Type: IResultObject
 Parameter Sets: ByValue
@@ -95,12 +100,13 @@ Accept wildcard characters: False
 ```
 
 ### -Path
-Specifies the path to which you export the XML file for the security role.
+
+Specify the path of the XML file to export the security role. It can be a local or network path. Include the `.xml` file extension.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: ExportFilePath
+Aliases: FileName, FilePath, ExportFilePath, XmlFileName, RolesXml
 
 Required: True
 Position: Named
@@ -110,7 +116,8 @@ Accept wildcard characters: False
 ```
 
 ### -RoleId
-Specifies the ID of a role.
+
+Specify the ID of the security role to export. This value is the `RoleID` property. Since this cmdlet only works with custom roles, this value should always start with the site code. (IDs for built-in roles start with `SMS`.)
 
 ```yaml
 Type: String
@@ -125,6 +132,9 @@ Accept wildcard characters: False
 ```
 
 ### -RoleName
+
+Specify the name of the security role to export.
+
 ```yaml
 Type: String
 Parameter Sets: ByName
@@ -138,6 +148,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -174,9 +185,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
@@ -189,8 +202,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Set-CMSecurityRole](Set-CMSecurityRole.md)
 
-[Remove-CMSecurityRoleFromAdministrativeUser](Remove-CMSecurityRoleFromAdministrativeUser.md)
-
 [Remove-CMSecurityRole](Remove-CMSecurityRole.md)
 
-
+[Automate role-based administration with Windows PowerShell](/mem/configmgr/core/servers/deploy/configure/configure-role-based-administration#automate-with-windows-power-shell)

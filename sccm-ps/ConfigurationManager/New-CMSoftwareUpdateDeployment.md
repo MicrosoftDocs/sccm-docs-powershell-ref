@@ -607,7 +607,7 @@ Accept wildcard characters: False
 ```
 
 ### -SoftDeadlineEnabled
-Starting in version 1906, use this parameter to set the following option on the **Deployment Schedule** page of the ADR deployment settings: **Delay enforcement of this deployment according to user preferences, up to the grace period defined in client settings**.
+Use this parameter to set the following option on the **Deployment Schedule** page of the ADR deployment settings: **Delay enforcement of this deployment according to user preferences, up to the grace period defined in client settings**.
 
 ```yaml
 Type: Boolean

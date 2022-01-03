@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 online version:
@@ -109,7 +109,7 @@ Accept wildcard characters: False
 Type: NotificationType[]
 Parameter Sets: ByType
 Aliases: Types
-Accepted values: SiteVersionOutOfSupport, ConsoleVersionMismatch, SiteReadonly, SiteVersionToBeExpired, EvalVersionExpired, EvalVersionApproachExpiration, UpdatePackageAvailable, SiteBusy, CloudConnectorMissing, PushNotificationsStayInformed, PushNotificationsPlanForChange, PushNotificationsFixIssue, OfficeAdrObsoleteChannelName, AzureTenantCertApproachExpiration, AzureTenantCertExpired, ManagementInsightsWin10OutOfSupport, ManagementInsightsWin7OutOfSupport, ConsoleCustomExtensionsFound, CloudConnectivityBroken, AzureTenantCertCloseToExpiration, ManagementInsightsGeneric
+Accepted values: SiteVersionOutOfSupport, ConsoleVersionMismatch, SiteReadonly, SiteVersionToBeExpired, EvalVersionExpired, EvalVersionApproachExpiration, UpdatePackageAvailable, SiteBusy, CloudConnectorMissing, PushNotificationsStayInformed, PushNotificationsPlanForChange, PushNotificationsFixIssue, OfficeAdrObsoleteChannelName, AzureTenantCertApproachExpiration, AzureTenantCertExpired, ManagementInsightsWin10OutOfSupport, ManagementInsightsWin7OutOfSupport, ConsoleCustomExtensionsFound, CloudConnectivityBroken, AzureTenantCertCloseToExpiration, ManagementInsightsGeneric, CloudAttachOnboard
 
 Required: True
 Position: Named

@@ -262,7 +262,7 @@ Accept wildcard characters: False
 ```
 
 ### -HighPerformance
-Starting in version 1910, use this parameter to set the following option on the **Performance** page of the task sequence properties: **Run as high performance power plan**.
+Use this parameter to set the following option on the **Performance** page of the task sequence properties: **Run as high performance power plan**.
 
 ```yaml
 Type: Boolean

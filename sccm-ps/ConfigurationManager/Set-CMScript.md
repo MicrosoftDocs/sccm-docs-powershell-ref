@@ -1,6 +1,7 @@
 ---
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
+ms.date: 12/28/2021
 online version:
 schema: 2.0.0
 ---
@@ -9,7 +10,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-Use this cmdlet to edit a script.
+Edit a PowerShell script in Configuration Manager.
 
 ## SYNTAX
 
@@ -33,7 +34,12 @@ Set-CMScript [-ScriptFile <String>] -ScriptName <String> [-ScriptText <String>] 
 
 ## DESCRIPTION
 
-Starting in version 1906, use this cmdlet to edit a script.
+Use this cmdlet to edit an existing PowerShell script in Configuration Manager. These scripts are integrated and managed in Configuration Manager.
+
+For more information, see [Create and run PowerShell scripts from the Configuration Manager console](/mem/configmgr/apps/deploy-use/create-deploy-scripts).
+
+> [!NOTE]
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
@@ -42,7 +48,7 @@ Starting in version 1906, use this cmdlet to edit a script.
 This example gets a script by name, and then imports a new file as the script source.
 
 ```powershell
-Get-CMScript -ScriptName "myScript" | Set-CMScript -ScriptFile "\\server\share\script.ps1"
+Get-CMScript -ScriptName "myScript" -Fast | Set-CMScript -ScriptFile "\\server\share\script.ps1"
 ```
 
 ## PARAMETERS
@@ -81,7 +87,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 
-Specify a script object as the target to modify.
+Specify a script object to modify. To get this object, use the [Get-CMScript](Get-CMScript.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -113,7 +119,7 @@ Accept wildcard characters: False
 
 ### -ScriptGuid
 
-Specify the GUID for the script target to modify.
+Specify the GUID for the script to modify.
 
 ```yaml
 Type: String
@@ -129,7 +135,7 @@ Accept wildcard characters: False
 
 ### -ScriptName
 
-Specify the name of the script target to modify.
+Specify the name of the script to modify.
 
 ```yaml
 Type: String
@@ -197,9 +203,20 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
+
+[Approve-CMScript](Approve-CMScript.md)
+[Deny-CMScript](Deny-CMScript.md)
+[Get-CMScript](Get-CMScript.md)
+[Invoke-CMScript](Invoke-CMScript.md)
+[New-CMScript](New-CMScript.md)
+[Remove-CMScript](Remove-CMScript.md)
+
+[Create and run PowerShell scripts from the Configuration Manager console](/mem/configmgr/apps/deploy-use/create-deploy-scripts)

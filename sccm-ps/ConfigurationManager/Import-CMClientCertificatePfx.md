@@ -1,4 +1,4 @@
----
+﻿---
 description: Imports a client PFX certificate.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -135,7 +135,7 @@ Specifies the path of the client PFX certificate.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: CertificatePath
+Aliases: CertificatePath, FileName, FilePath, ImportFilePath
 
 Required: True
 Position: Named
@@ -197,9 +197,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ### IResultObject#SMS_ClientPfxCertificate
+
 ## NOTES
 
 ## RELATED LINKS

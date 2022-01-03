@@ -1,8 +1,7 @@
 ﻿---
-description: Get Configuration Manager PowerShell scripts.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 11/17/2020
+ms.date: 12/28/2021
 schema: 2.0.0
 title: Get-CMScript
 ---
@@ -11,7 +10,7 @@ title: Get-CMScript
 
 ## SYNOPSIS
 
-Get Configuration Manager PowerShell scripts.
+Get a PowerShell script in Configuration Manager.
 
 ## SYNTAX
 
@@ -29,19 +28,19 @@ Get-CMScript [-Author <String>] [-Fast] -ScriptGuid <String> [-DisableWildcardHa
 
 ## DESCRIPTION
 
-The **Get-CMScript** cmdlet gets one or more Configuration Manager PowerShell scripts. Configuration Manager has an integrated ability to run PowerShell scripts. The scripts simplify building custom tools to administer software and let you accomplish mundane tasks quickly, allowing you to get large jobs done more easily and more consistently. For more information, see [Create and run PowerShell scripts from the Configuration Manager console](/mem/configmgr/apps/deploy-use/create-deploy-scripts).
+Use this cmdlet to get a Configuration Manager PowerShell script. These scripts are integrated and managed in Configuration Manager. For more information, see [Create and run PowerShell scripts from the Configuration Manager console](/mem/configmgr/apps/deploy-use/create-deploy-scripts).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
-### Example 1: Get all scripts
+### Example 1: Get all unapproved scripts
 
-This command gets all scripts that Configuration Manager manages.
+This command gets all scripts in Configuration Manager that aren't approved.
 
 ```powershell
-Get-CMScript
+Get-CMScript -Fast | Where-Object { -not $_.ApprovalState }
 ```
 
 ### Example 2: Get scripts by using name
@@ -52,11 +51,19 @@ This command gets all scripts that have a name that begins with the letter `D`.
 Get-CMScript -ScriptName "D*"
 ```
 
+### Example 3: Get scripts from a specific author
+
+This command gets all scripts for the author with username **jqpublic**. Since it uses the asterisk (`*`) wildcard, the specific domain doesn't matter. It then returns a table that lists the script name, approval state, and last update time.
+
+```powershell
+Get-CMScript -Fast -Author "*jqpublic" | Select-Object ScriptName, ApprovalState, LastUpdateTime
+```
+
 ## PARAMETERS
 
 ### -Author
 
-Specify the script author. For example, `contoso\jqpublic`.
+Specify the author of the script to get. For example, `contoso\jqpublic`.
 
 You can use wildcard characters:
 
@@ -127,7 +134,7 @@ Accept wildcard characters: False
 
 ### -ScriptGuid
 
-Applies to version 2010 and later. Specify the GUID of script.
+Applies to version 2010 and later. Specify the GUID of a script to get.
 
 ```yaml
 Type: String
@@ -143,7 +150,7 @@ Accept wildcard characters: False
 
 ### -ScriptName
 
-Specify a script name.
+Specify a script name to get.
 
 You can use wildcard characters:
 
@@ -168,24 +175,23 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
+
 ## OUTPUTS
 
 ### IResultObject[]#SMS_Scripts
 ### IResultObject#SMS_Scripts
+
 ## NOTES
+
+This cmdlet returns an object for the **SMS_Scripts** WMI class.
 
 ## RELATED LINKS
 
 [Approve-CMScript](Approve-CMScript.md)
-
 [Deny-CMScript](Deny-CMScript.md)
-
 [Invoke-CMScript](Invoke-CMScript.md)
-
+[New-CMScript](New-CMScript.md)
 [Remove-CMScript](Remove-CMScript.md)
-
-[Set-CMScriptDeploymentType](Set-CMScriptDeploymentType.md)
-
-[Add-CMScriptDeploymentType](Add-CMScriptDeploymentType.md)
+[Set-CMScript](Set-CMScript.md)
 
 [Create and run PowerShell scripts from the Configuration Manager console](/mem/configmgr/apps/deploy-use/create-deploy-scripts)

@@ -254,6 +254,8 @@ Specify an array of requirement objects for the deployment type. To create a req
 - [New-CMRequirementRuleRegistryKeyPermissionValue](New-CMRequirementRuleRegistryKeyPermissionValue.md)
 - [New-CMRequirementRuleScreenResolutionValue](New-CMRequirementRuleScreenResolutionValue.md)
 
+Starting in version 2111, you can use the [Get-CMDeploymentTypeRequirement](Get-CMDeploymentTypeRequirement.md) cmdlet to copy rules from another deployment type.
+
 ```yaml
 Type: Rule[]
 Parameter Sets: (All)
@@ -759,7 +761,7 @@ Accept wildcard characters: False
 
 ### -RepairCommand
 
-Starting in version 2002, use this parameter to configure the repair command. Also configure the **RepairWorkingDirectory** parameter.
+Use this parameter to configure the repair command. Also configure the **RepairWorkingDirectory** parameter.
 
 Starting in version 2006, you can specify an empty string.
 
@@ -777,7 +779,7 @@ Accept wildcard characters: False
 
 ### -RepairWorkingDirectory
 
-Starting in version 2002, use this parameter to configure the repair command's working directory. Also configure the **RepairCommand** parameter.
+Use this parameter to configure the repair command's working directory. Also configure the **RepairCommand** parameter.
 
 ```yaml
 Type: String

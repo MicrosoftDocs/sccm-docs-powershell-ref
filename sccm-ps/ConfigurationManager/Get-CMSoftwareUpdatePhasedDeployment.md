@@ -1,6 +1,7 @@
 ﻿---
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
+ms.date: 12/30/2021
 online version:
 schema: 2.0.0
 ---
@@ -9,7 +10,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-Use this cmdlet to get the phased deployment for software updates.
+Get the phased deployment for software updates.
 
 ## SYNTAX
 
@@ -63,7 +64,12 @@ Get-CMSoftwareUpdatePhasedDeployment -Name <String> [-DisableWildcardHandling] [
 
 ## DESCRIPTION
 
-Starting in version 2002, use this cmdlet to get the phased deployment for software updates.
+Use this cmdlet to get the phased deployment for software updates.
+
+For more information, see [Create phased deployments with Configuration Manager](/mem/configmgr/osd/deploy-use/create-phased-deployment-for-task-sequence?toc=/mem/configmgr/sum/toc.json&bc=/mem/configmgr/sum/breadcrumb/toc.json).
+
+> [!NOTE]
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
@@ -87,6 +93,8 @@ Get-CMSoftwareUpdatePhasedDeployment -SoftwareUpdateName "myUpdateName"
 
 ### -DisableWildcardHandling
 
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -100,6 +108,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
+
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -253,4 +263,17 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### IResultObject[]#SMS_PhasedDeployment
 ## NOTES
 
+The return object is the **SMS_PhasedDeployment** server WMI class.
+
 ## RELATED LINKS
+
+[New-CMSoftwareUpdateAutoPhasedDeployment](New-CMSoftwareUpdateAutoPhasedDeployment.md)
+[Remove-CMSoftwareUpdatePhasedDeployment](Remove-CMSoftwareUpdatePhasedDeployment.md)
+[Set-CMSoftwareUpdatePhasedDeployment](Set-CMSoftwareUpdatePhasedDeployment.md)
+
+[Get-CMPhasedDeploymentStatus](Get-CMPhasedDeploymentStatus.md)
+[Move-CMPhasedDeploymentToNext](Move-CMPhasedDeploymentToNext.md)
+[Resume-CMPhasedDeployment](Resume-CMPhasedDeployment.md)
+[Suspend-CMPhasedDeployment](Suspend-CMPhasedDeployment.md)
+
+[Create phased deployments with Configuration Manager](/mem/configmgr/osd/deploy-use/create-phased-deployment-for-task-sequence?toc=/mem/configmgr/sum/toc.json&bc=/mem/configmgr/sum/breadcrumb/toc.json)

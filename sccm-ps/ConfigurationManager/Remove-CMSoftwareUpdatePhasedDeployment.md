@@ -69,7 +69,7 @@ Remove-CMSoftwareUpdatePhasedDeployment [-Force] -Name <String> [-DisableWildcar
 
 ## DESCRIPTION
 
-Starting in version 2002, use this cmdlet to remove a phased deployment for software updates.
+Use this cmdlet to remove a phased deployment for software updates.
 
 ## EXAMPLES
 

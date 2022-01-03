@@ -1,6 +1,7 @@
 ﻿---
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
+ms.date: 12/21/2021
 online version:
 schema: 2.0.0
 ---
@@ -8,7 +9,8 @@ schema: 2.0.0
 # New-CMAdministrativeUserPermission
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Create a permissions object to assign to an administrative user.
 
 ## SYNTAX
 
@@ -36,7 +38,10 @@ New-CMAdministrativeUserPermission [-Collection <IResultObject[]>] [-CollectionI
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+Use this cmdlet to create a permissions object to assign to an administrative user in Configuration Manager. Permissions can include security roles, security scopes, or collections. An _administrative user_ in Configuration Manager defines a local or domain user or group. For more information about security roles, see [Fundamentals of role-based administration in Configuration Manager](/mem/configmgr/core/understand/fundamentals-of-role-based-administration).
+
+Use this permissions object with the [New-CMAdministrativeUser](New-CMAdministrativeUser.md) cmdlet and its **Permission** parameter.
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
@@ -44,16 +49,37 @@ New-CMAdministrativeUserPermission [-Collection <IResultObject[]>] [-CollectionI
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS XYZ:\> {{ Add example code here }}
-```
 
-{{ Add example description here }}
+This example creates an object that defines the following permissions:
+
+- Security role: **Read-only Analyst**
+- Security scope: **Scope1**
+- Collection: **All Systems**
+
+It then creates a new administrative user for **contoso\jqpublic** and assigns these permissions.
+The last command displays the new user's permissions.
+
+```powershell
+$accountName = "contoso\jqpublic"
+$roleName = "Read-only Analyst"
+$scopeName = "Scope1"
+$collectionName = "All Systems"
+
+$role = Get-CMSecurityRole -Name $roleName
+$scope = Get-CMSecurityScope -Name $scopeName
+$collection = Get-CMCollection -Name $collectionName
+
+$perms = $role | New-CMAdministrativeUserPermission -RoleName $role.RoleName -SecurityScopeNames $scope.CategoryName -CollectionNames $collection.Name
+
+$User = New-CMAdministrativeUser -Name $accountName -Permission $perms
+$User.Permissions
+```
 
 ## PARAMETERS
 
 ### -Collection
-{{ Fill Collection Description }}
+
+Specify an array of collection objects to add to the permissions. To get this object, use the [Get-CMCollection](Get-CMCollection.md) cmdlet.
 
 ```yaml
 Type: IResultObject[]
@@ -68,7 +94,8 @@ Accept wildcard characters: False
 ```
 
 ### -CollectionId
-{{ Fill CollectionId Description }}
+
+Specify an array of collection IDs to add to the permissions. This value is the **CollectionID** property, for example, `SMS00001`.
 
 ```yaml
 Type: String[]
@@ -83,7 +110,8 @@ Accept wildcard characters: False
 ```
 
 ### -CollectionName
-{{ Fill CollectionName Description }}
+
+Specify an array of collection names to add to the permissions.
 
 ```yaml
 Type: String[]
@@ -98,6 +126,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
+
 This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
@@ -113,6 +142,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
+
 This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
@@ -128,7 +158,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{ Fill InputObject Description }}
+
+Specify a security role object to add to the permissions. To get this object, use the [Get-CMSecurityRole](Get-CMSecurityRole.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -143,7 +174,8 @@ Accept wildcard characters: False
 ```
 
 ### -RoleId
-{{ Fill RoleId Description }}
+
+Specify the ID of a security role to add to the permissions. This value is the `RoleID` property, for example `SMS000AR` for the **OS Deployment Manager** role.
 
 ```yaml
 Type: String
@@ -158,7 +190,8 @@ Accept wildcard characters: False
 ```
 
 ### -RoleName
-{{ Fill RoleName Description }}
+
+Specify the name of a security role to add to the permissions.
 
 ```yaml
 Type: String
@@ -173,7 +206,8 @@ Accept wildcard characters: False
 ```
 
 ### -SecurityScope
-{{ Fill SecurityScope Description }}
+
+Specify a security scope object to add to the permissions. To get this object, use the [Get-CMSecurityScope](Get-CMSecurityScope.md) cmdlet.
 
 ```yaml
 Type: IResultObject[]
@@ -188,7 +222,8 @@ Accept wildcard characters: False
 ```
 
 ### -SecurityScopeId
-{{ Fill SecurityScopeId Description }}
+
+Specify the ID of a security scope to add to the permissions. This value is the `CategoryID` property, for example `SMS00UNA` for the **Default** scope.
 
 ```yaml
 Type: String[]
@@ -203,7 +238,8 @@ Accept wildcard characters: False
 ```
 
 ### -SecurityScopeName
-{{ Fill SecurityScopeName Description }}
+
+Specify the name of a security scope to add to the permissions.
 
 ```yaml
 Type: String[]
@@ -223,9 +259,17 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ### IResultObject#SMS_APermission
+
 ## NOTES
 
+For more information on this return object and its properties, see [SMS_APermission server WMI class](/mem/configmgr/develop/reference/core/servers/configure/sms_apermission-server-wmi-class).
+
 ## RELATED LINKS
+
+[New-CMAdministrativeUser](New-CMAdministrativeUser.md)
+
+[Automate role-based administration with Windows PowerShell](/mem/configmgr/core/servers/deploy/configure/configure-role-based-administration#automate-with-windows-power-shell)

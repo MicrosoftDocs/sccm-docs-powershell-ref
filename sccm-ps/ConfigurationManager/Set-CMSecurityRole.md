@@ -1,8 +1,7 @@
 ---
-description: Changes configuration settings of a security role.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/07/2019
+ms.date: 12/21/2021
 schema: 2.0.0
 title: Set-CMSecurityRole
 ---
@@ -10,7 +9,8 @@ title: Set-CMSecurityRole
 # Set-CMSecurityRole
 
 ## SYNOPSIS
-Changes configuration settings of a security role.
+
+Configure a security role.
 
 ## SYNTAX
 
@@ -33,45 +33,30 @@ Set-CMSecurityRole [-Description <String>] -Name <String> [-NewName <String>] [-
 ```
 
 ## DESCRIPTION
-The **Set-CMSecurityRole** cmdlet changes configuration settings of a security role.
-You can use this cmdlet to change the name and description of a security role.
+
+Use this cmdlet to change the configuration settings of a custom security role. You can't configure built-in roles.
+
+For more information on security roles and permissions, see [Fundamentals of role-based administration in Configuration Manager](/mem/configmgr/core/understand/fundamentals-of-role-based-administration).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
-### Example 1: Change the name of a security role by using an ID
-```
-PS XYZ:\> Set-CMSecurityRole -Id "CM100003" -NewName "RTOperator02"
-```
+### Example 1: Rename a security role
 
-This command renames the security role that has the ID CM100003.
+This command renames the security role with the ID **CM100003**.
 The command changes the name to RTOperator02.
 
-### Example 2: Change the name of a security role by using a name
+```powershell
+Set-CMSecurityRole -Id "CM100003" -NewName "RTOperator02"
 ```
-PS XYZ:\> Set-CMSecurityRole -Name "SRole02" -NewName "RTOperator02"
-```
-
-This command renames the security role named SRole02.
-The command changes the name to RTOperator02.
-
-### Example 3: Change the name of a security role by using an object variable
-```
-PS XYZ:\> $Srole = Get-CMSecurityRole -Id "CM100003"
-PS XYZ:\> Set-CMSecurityRole -Inputobject $Srole -NewName "RTOperator02"
-```
-
-The first command gets the security role that has the ID CM100003 and stores it in the $Srole variable.
-
-The second command renames the security role for the object stored in $Srole.
-The command changes the name to RTOperator02.
 
 ## PARAMETERS
 
 ### -Description
-Specifies the description of a security role.
+
+Specify an optional description for the security role.
 
 ```yaml
 Type: String
@@ -118,7 +103,8 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-Specifies an array of IDs of security roles.
+
+Specify the ID of the custom security role to configure. This value is the `RoleID` property. Since this cmdlet only works with custom roles, this value should always start with the site code. (IDs for built-in roles start with `SMS`.)
 
 ```yaml
 Type: String
@@ -133,8 +119,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies a **CMSecurityRole** object.
-To get a **CMSecurityRole** object, use the [Get-CMSecurityRole](Get-CMSecurityRole.md) cmdlet.
+
+Specify a custom security role object to configure. To get this object, use the [Get-CMSecurityRole](Get-CMSecurityRole.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -149,7 +135,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies an array of names of security roles.
+
+Specify the name of the custom security role to configure.
 
 ```yaml
 Type: String
@@ -164,7 +151,8 @@ Accept wildcard characters: False
 ```
 
 ### -NewName
-Specifies a new name for the security role.
+
+Specify a new name for the custom security role.
 
 ```yaml
 Type: String
@@ -179,6 +167,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -215,9 +204,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
@@ -232,6 +223,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Remove-CMSecurityRole](Remove-CMSecurityRole.md)
 
-[Remove-CMSecurityRoleFromAdministrativeUser](Remove-CMSecurityRoleFromAdministrativeUser.md)
-
-
+[Automate role-based administration with Windows PowerShell](/mem/configmgr/core/servers/deploy/configure/configure-role-based-administration#automate-with-windows-power-shell)

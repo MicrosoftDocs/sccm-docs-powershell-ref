@@ -33,7 +33,7 @@ Suspend-CMPhasedDeployment [-Force] -Name <String> [-DisableWildcardHandling] [-
 
 ## DESCRIPTION
 
-Starting in version 2002, use this cmdlet to suspend the specified phased deployment.
+Use this cmdlet to suspend the specified phased deployment.
 
 ## EXAMPLES
 

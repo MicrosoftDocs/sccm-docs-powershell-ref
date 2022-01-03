@@ -1,8 +1,7 @@
 ---
-description: Modify a program in Configuration Manager.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 11/20/2020
+ms.date: 12/28/2021
 schema: 2.0.0
 title: Set-CMProgram
 ---
@@ -11,7 +10,7 @@ title: Set-CMProgram
 
 ## SYNOPSIS
 
-Modify a program in Configuration Manager.
+Modify a program of a package.
 
 ## SYNTAX
 
@@ -109,10 +108,10 @@ Set-CMProgram [-CommandLine <String>] [-CommandLineFolder <String>] [-Comment <S
 
 ## DESCRIPTION
 
-The **Set-CMProgram** cmdlet modifies a program in Configuration Manager.
-Programs are commands that are associated with a Configuration Manager package.
+Use this cmdlet to modify a program of a package.
 Programs identify the actions that occur when the client receives the client package.
 You can associate multiple programs with the same package.
+For more information, see [Packages and programs in Configuration Manager](/mem/configmgr/apps/deploy-use/packages-and-programs).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
@@ -129,6 +128,19 @@ Set-CMProgram -Name "Test" -StandardProgramName SPM -Comment "Standard Upgrades"
 
 ```powershell
 Set-CMProgram -Name "Test" -DeviceProgramName DPM -Comment "Upgrades for December" -CommandLine "RunMe" -WorkingDirectory "\TempWork" -CommandLineFolder "C:\Windows" -DiskSpaceRequirement 30 -DiskSpaceUnit MB -DownloadProgramType AsSoonAsPossible -Requirement "All previous device updates"
+```
+
+### Example 3: Add a supported OS platform
+
+This example sets the OS requirement for a program associated with a standard package. It uses the **Get-CMSupportedPlatform** cmdlet to get an object for the specified platform. It then uses this supported platform object to configure the program.<!-- sccm-docs-powershell-ref #240 -->
+
+```powershell
+$ProgramName = 'Script'
+$PackageID = 'XYZ0000D'
+$Platform = 'All Windows 10 (64-bit) Client'
+$OS = Get-CMSupportedPlatform -Name $Platform -Fast
+
+Set-CMProgram -PackageID $PackageID -ProgramName $ProgramName -AddSupportedOperatingSystemPlatform $OS -StandardProgram
 ```
 
 ## PARAMETERS
@@ -264,7 +276,7 @@ Accept wildcard characters: False
 
 ### -DisableProgram
 
-Set this parameter to `$true` to temporarily disable all deployments that contain this program.
+Set this parameter to `$true` to temporarily disable all deployments that contain this program. You can also use the [Disable-CMProgram](Disable-CMProgram.md) cmdlet.
 
 ```yaml
 Type: Boolean
@@ -761,9 +773,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
@@ -777,3 +791,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-CMProgram](New-CMProgram.md)
 
 [Remove-CMProgram](Remove-CMProgram.md)
+
+[Packages and programs in Configuration Manager](/mem/configmgr/apps/deploy-use/packages-and-programs)

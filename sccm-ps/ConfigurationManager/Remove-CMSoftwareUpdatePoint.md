@@ -1,8 +1,7 @@
 ---
-description: Removes a software update point site system role from Configuration Manager.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/07/2019
+ms.date: 12/15/2021
 schema: 2.0.0
 title: Remove-CMSoftwareUpdatePoint
 ---
@@ -10,7 +9,8 @@ title: Remove-CMSoftwareUpdatePoint
 # Remove-CMSoftwareUpdatePoint
 
 ## SYNOPSIS
-Removes a software update point site system role from Configuration Manager.
+
+Remove a software update point.
 
 ## SYNTAX
 
@@ -28,44 +28,41 @@ Remove-CMSoftwareUpdatePoint [-DefaultServerName <String>] [-Force] [-SiteCode <
 ```
 
 ## DESCRIPTION
-The **Remove-CMSoftwareUpdatePoint** cmdlet removes a software update point site system role from Configuration Manager.
 
-A software update point is a site server role that hosts software updates.
-Configuration Manager clients connect to a software update point to get available updates.
-The software update point interacts with Windows Server Update Services (WSUS) to configure update settings, request synchronization to the update source, and to synchronize software updates from the WSUS database.
-
-You can specify a software update point to remove by site code and the name of the computer that hosts the site system role.
-You can also use the Get-CMSoftwareUpdatePoint cmdlet to obtain a software update point.
+Use this cmdlet to remove a software update point site system role.
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
-### Example 1: Remove a software update point
-```
-PS XYZ:\> Remove-CMSoftwareUpdatePoint -SiteCode "CM1" -SiteSystemServerName "UpdateSystem.Western.Contoso.com"
-```
+### Example 1: Remove a software update point by name
 
-The command removes a software update point.
 The cmdlet requires both the site code and the name.
-Because the command does not include the *Force* parameter, the cmdlet prompts you for confirmation.
+Because the command doesn't include the **Force** parameter, this example prompts you for confirmation.
+
+```powershell
+Remove-CMSoftwareUpdatePoint -SiteCode "CM1" -SiteSystemServerName "UpdateSystem.Western.Contoso.com"
+```
 
 ### Example 2: Remove a software update point by using a variable
-```
-PS XYZ:\> $CMSUP = Get-CMSoftwareUpdatePoint -SiteCode "CM1" -SiteSystemServerName "UpdateSystem.Western.Contoso.com"
-PS XYZ:\> Remove-CMSoftwareUpdatePoint -InputObject $CMSUP -Force
-```
 
-The first command gets a software update point and saves it to the $CMSUP variable.
+The first command gets a software update point and saves it to the **$CMSUP** variable.
 
-The second command removes the software update point saved in the $CMSUP variable.
-This command uses the *Force* parameter, so the cmdlet does not prompt you for confirmation.
+The second command removes the software update point saved in the variable.
+This command uses the **Force** parameter, so the cmdlet doesn't prompt you for confirmation.
+
+```powershell
+$CMSUP = Get-CMSoftwareUpdatePoint -SiteCode "CM1" -SiteSystemServerName "UpdateSystem.Western.Contoso.com"
+
+Remove-CMSoftwareUpdatePoint -InputObject $CMSUP -Force
+```
 
 ## PARAMETERS
 
 ### -DefaultServerName
-{{ Fill DefaultServerName Description }}
+
+Specify the FQDN of the default software update point.
 
 ```yaml
 Type: String
@@ -96,7 +93,8 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Forces the command to run without asking for user confirmation.
+
+Add this parameter to run the cmdlet without asking for confirmation.
 
 ```yaml
 Type: SwitchParameter
@@ -127,8 +125,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies a software update point object.
-To obtain a software update point object, use the **Get-CMSoftwareUpdatePoint** cmdlet.
+
+Specify a software update point object to remove. To get this object, use the [Get-CMSoftwareUpdatePoint](Get-CMSoftwareUpdatePoint.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -143,7 +141,8 @@ Accept wildcard characters: False
 ```
 
 ### -SiteCode
-Specifies a site code for a Configuration Manager site.
+
+Specify the three-character code for the site.
 
 ```yaml
 Type: String
@@ -158,7 +157,8 @@ Accept wildcard characters: False
 ```
 
 ### -SiteSystemServerName
-Specifies the name of a computer that hosts the software update point site system role.
+
+Specify the name of a server that hosts the software update point.
 
 ```yaml
 Type: String
@@ -173,6 +173,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -209,6 +210,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ## NOTES
@@ -220,5 +222,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-CMSoftwareUpdatePoint](Get-CMSoftwareUpdatePoint.md)
 
 [Set-CMSoftwareUpdatePoint](Set-CMSoftwareUpdatePoint.md)
-
-

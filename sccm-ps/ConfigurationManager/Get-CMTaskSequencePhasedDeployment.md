@@ -1,6 +1,7 @@
 ﻿---
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
+ms.date: 01/03/2022
 online version:
 schema: 2.0.0
 ---
@@ -9,7 +10,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-Use this cmdlet to get the phased deployment for a task sequence.
+Get the phased deployment for a task sequence.
 
 ## SYNTAX
 
@@ -45,7 +46,12 @@ Get-CMTaskSequencePhasedDeployment -Name <String> [-DisableWildcardHandling] [-F
 
 ## DESCRIPTION
 
-Starting in version 2002, use this cmdlet to get the phased deployment for a task sequence.
+Use this cmdlet to get the phased deployment for a task sequence.
+
+For more information, see [Create phased deployments with Configuration Manager](/mem/configmgr/osd/deploy-use/create-phased-deployment-for-task-sequence).
+
+> [!NOTE]
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
@@ -69,6 +75,8 @@ Get-CMTaskSequencePhasedDeployment -TaskSequenceName "myTaskSequenceName"
 
 ### -DisableWildcardHandling
 
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -82,6 +90,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
+
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -129,7 +139,7 @@ Accept wildcard characters: False
 
 ### -TaskSequence
 
-Specify a task sequence object.
+Specify a task sequence object. To get this object, use the [Get-CMTaskSequence](Get-CMTaskSequence.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -187,4 +197,17 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### IResultObject[]#SMS_PhasedDeployment
 ## NOTES
 
+The return object is the **SMS_PhasedDeployment** server WMI class.
+
 ## RELATED LINKS
+
+[New-CMTaskSequenceAutoPhasedDeployment](New-CMTaskSequenceAutoPhasedDeployment.md)
+[Remove-CMTaskSequencePhasedDeployment](Remove-CMTaskSequencePhasedDeployment.md)
+[Set-CMTaskSequencePhasedDeployment](Set-CMTaskSequencePhasedDeployment.md)
+
+[Get-CMPhasedDeploymentStatus](Get-CMPhasedDeploymentStatus.md)
+[Move-CMPhasedDeploymentToNext](Move-CMPhasedDeploymentToNext.md)
+[Resume-CMPhasedDeployment](Resume-CMPhasedDeployment.md)
+[Suspend-CMPhasedDeployment](Suspend-CMPhasedDeployment.md)
+
+[Create phased deployments with Configuration Manager](/mem/configmgr/osd/deploy-use/create-phased-deployment-for-task-sequence)

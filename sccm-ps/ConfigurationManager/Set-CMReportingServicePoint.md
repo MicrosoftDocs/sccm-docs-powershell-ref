@@ -1,8 +1,7 @@
 ---
-description: Modifies a Configuration Manager reporting service point.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/07/2019
+ms.date: 12/15/2021
 schema: 2.0.0
 title: Set-CMReportingServicePoint
 ---
@@ -10,7 +9,8 @@ title: Set-CMReportingServicePoint
 # Set-CMReportingServicePoint
 
 ## SYNOPSIS
-Modifies a Configuration Manager reporting service point.
+
+Configure a reporting service point.
 
 ## SYNTAX
 
@@ -29,42 +29,40 @@ Set-CMReportingServicePoint [-DatabaseName <String>] [-DatabaseServerName <Strin
 ```
 
 ## DESCRIPTION
-The **Set-CMReportingServicePoint** cmdlet modifies a Configuration Manager reporting service point.
-A reporting service point is a site system role that is installed on a server that is running Microsoft SQL Server Reporting Services.
+
+Use this cmdlet to change settings for a reporting service point site system role.
+
+> [!IMPORTANT]
+> This cmdlet doesn't support [PowerShell 7](/powershell/sccm/overview#support-for-powershell-version-7).<!-- 12500019 --> It requires the .NET Framework instead of .NET Core that's used with PowerShell version 7.
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
-### Example 1: Set a reporting service point
-```
-PS XYZ:\> Set-CMReportingServicePoint -SiteSystemServerName "Contoso-Test.Contoso.Com" -SiteCode "CM4" -UserName "Contoso\DavidChew"
-```
+### Example 1: Configure the reporting service point account
 
-The command sets a reporting service point by using the *SiteSystemServerName* parameter.
+The command sets a reporting service point account.
 
-### Example 2: Set a reporting service point by using a site system server name
-```
-PS XYZ:\> Set-CMReportingServicePoint -SiteSystemServerName "Contoso-Test.Contoso.Com" -SiteCode "CM4" -DatabaseServerName "Contoso-TestDB.Contoso.Com" -DatabaseName "CM_CM2"
+```powershell
+Set-CMReportingServicePoint -SiteSystemServerName "Contoso-Test.Contoso.Com" -SiteCode "CM4" -UserName "Contoso\DavidChew"
 ```
 
-The command sets a reporting service point by using the *SiteSystemServerName* parameter.
+### Example 2: Configure the reporting service point database
 
-### Example 3: Set a reporting service point by using an input object
+The command sets the reporting service point database server and name.
+
+```powershell
+Set-CMReportingServicePoint -SiteSystemServerName "Contoso-Test.Contoso.Com" -SiteCode "CM4" -DatabaseServerName "Contoso-TestDB.Contoso.Com" -DatabaseName "CM_CM2"
 ```
-PS XYZ:\> $RS = Get-CMReportingServicePoint -SiteSystemServerName "Contoso-Test.Contoso.Com" -SiteCode "CM4"
-PS XYZ:\> Set-CMReportingServicePoint -InputObject $RS -DatabaseServerName "Contoso-TestDB.Contoso.Com" -DatabaseName "CM_CM4"
-```
-
-The first command uses the **Get-CMReportingServicePoint** cmdlet to get a reporting service point, by using the *SiteSystemServerName* parameter.
-
-The second command uses the **Set-CMReportingServicePoint** cmdlet to set the reporting point by using the input object.
 
 ## PARAMETERS
 
 ### -DatabaseName
-Specifies the name of the Configuration Manager database that you want to use as the data source for reports from Microsoft SQL Server Reporting Services.
+
+Specify the name of the Configuration Manager database that you want to use as the data source for reports from Microsoft SQL Server Reporting Services.
+
+To specify a database instance, use the format `ServerName\InstanceName`.
 
 ```yaml
 Type: String
@@ -79,8 +77,8 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseServerName
-Specifies the name of the Configuration Manager database server that you want to use as the data source for the reports from Microsoft SQL Server Reporting Services.
-To specify a database instance, use the format \<Server Name\>\\\<Instance Name\>.
+
+Specify the name of the Configuration Manager database server that you want to use as the data source for reports from Microsoft SQL Server Reporting Services.
 
 ```yaml
 Type: String
@@ -111,6 +109,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
+
 Run the command without asking for confirmation.
 
 ```yaml
@@ -142,8 +141,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies an input object.
-To obtain an input object, use the [Get-CMReportingServicePoint](Get-CMReportingServicePoint.md) cmdlet.
+
+Specify a site system server object on which to configure the reporting service point role. To get this object, use the [Get-CMSiteSystemServer](Get-CMSiteSystemServer.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -174,7 +173,8 @@ Accept wildcard characters: False
 ```
 
 ### -SiteCode
-Specifies a site code of a Configuration Manager site that hosts this system role.
+
+Specify the three-character code for the site that manages the system role for the reporting service point.
 
 ```yaml
 Type: String
@@ -189,7 +189,8 @@ Accept wildcard characters: False
 ```
 
 ### -SiteSystemServerName
-Specifies the name of a server hosting the site system role.
+
+Specify the name of the site system server to host the reporting service point role.
 
 ```yaml
 Type: String
@@ -204,7 +205,8 @@ Accept wildcard characters: False
 ```
 
 ### -UserName
-Specifies a user name that Configuration Manager uses to connect with Microsoft SQL Server Reporting Services and that gives this user access to the site database.
+
+Specify the user name for the Reporting services point account. This account provides authenticated access from the site to Microsoft SQL Server Reporting Services. For more information, see [Accounts used in Configuration Manager](/mem/configmgr/core/plan-design/hierarchy/accounts#reporting-services-point-account).
 
 ```yaml
 Type: String
@@ -219,6 +221,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -255,10 +258,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ### IResultObject#SMS_SCI_SysResUse
+
 ## NOTES
+
+For more information on this return object and its properties, see [SMS_SCI_SysResUse server WMI class](/mem/configmgr/develop/reference/core/servers/configure/sms_sci_sysresuse-server-wmi-class).
 
 ## RELATED LINKS
 

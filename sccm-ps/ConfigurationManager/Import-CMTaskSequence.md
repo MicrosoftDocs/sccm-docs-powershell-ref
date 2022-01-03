@@ -1,4 +1,4 @@
----
+﻿---
 description: Import a task sequence.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -133,7 +133,7 @@ Specify the network path for the exported task sequence. The cmdlet imports all 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: ImportFilePath
+Aliases: FileName, FilePath, ImportFilePath
 
 Required: True
 Position: Named
@@ -180,6 +180,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
+
 ## OUTPUTS
 
 ### System.Object

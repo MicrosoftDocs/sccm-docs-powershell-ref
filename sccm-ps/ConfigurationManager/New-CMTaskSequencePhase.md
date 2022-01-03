@@ -52,7 +52,7 @@ New-CMTaskSequencePhase [-AllowFallback <Boolean>] [-AllowRemoteDP <Boolean>] [-
 
 ## DESCRIPTION
 
-Starting in version 2002, use this cmdlet to create a deployment phase for a task sequence.
+Use this cmdlet to create a deployment phase for a task sequence.
 
 ## EXAMPLES
 

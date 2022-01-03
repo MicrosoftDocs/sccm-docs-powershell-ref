@@ -1,8 +1,7 @@
 ---
-description: Removes custom security roles from Configuration Manager.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/07/2019
+ms.date: 12/21/2021
 schema: 2.0.0
 title: Remove-CMSecurityRole
 ---
@@ -10,7 +9,8 @@ title: Remove-CMSecurityRole
 # Remove-CMSecurityRole
 
 ## SYNOPSIS
-Removes custom security roles from Configuration Manager.
+
+Remove a custom security role.
 
 ## SYNTAX
 
@@ -33,18 +33,12 @@ Remove-CMSecurityRole [-Force] -Name <String> [-DisableWildcardHandling] [-Force
 ```
 
 ## DESCRIPTION
-The **Remove-CMSecurityRole** cmdlet removes custom security roles from Configuration Manager.
-Specify the name or ID of a security role you want to remove or use the [Get-CMSecurityRole](Get-CMSecurityRole.md) cmdlet to obtain one.
 
-Configuration Manager uses security roles, along with security scopes and collections, to define an administrative scope for each administrative user.
-Configuration Manager provides several built-in security roles.
-To create a custom security role, copy an existing security role, and then modifying the copy.
-You can copy a security role by using the Copy-CMSecurityRole cmdlet.
+Use this cmdlet to remove a custom security role from Configuration Manager. Specify the name or ID of a security role you want to remove or use the [Get-CMSecurityRole](Get-CMSecurityRole.md) cmdlet to get one.
 
-You can use the Remove-CMSecurityRole cmdlet to remove old, unneeded custom security roles.
-You cannot remove built-in security roles.
-Every administrative user must have at least one security role.
-Before you remove a security role, make sure every user has a role in addition to the one you remove.
+You can use the **Remove-CMSecurityRole** cmdlet to remove old, unneeded custom security roles. You can't remove built-in security roles. Every administrative user must have at least one security role. Before you remove a security role, make sure every user has a role in addition to the one you remove.
+
+For more information on security roles and permissions, see [Fundamentals of role-based administration in Configuration Manager](/mem/configmgr/core/understand/fundamentals-of-role-based-administration).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
@@ -52,23 +46,24 @@ Before you remove a security role, make sure every user has a role in addition t
 ## EXAMPLES
 
 ### Example 1: Remove a security role by using a name
-```
-PS XYZ:\> Remove-CMSecurityRole -Name "MainSecurityRole" -Force
-```
 
-This command removes a security role named MainSecurityRole from Configuration Manager.
-The command uses the *Force* parameter, so it does not prompt you for confirmation.
+This command removes a security role named **MainSecurityRole**.
+The command uses the **Force** parameter, so it doesn't prompt you for confirmation.
 
-### Example 2: Remove security roles by using a variable
-```
-PS XYZ:\> $Roles = Get-CMSecurityRole -Name *Role
-PS XYZ:\> Remove-CMSecurityRole -SecurityRole $Roles
+```powershell
+Remove-CMSecurityRole -Name "MainSecurityRole" -Force
 ```
 
-The first command uses the [Get-CMSecurityRole](Get-CMSecurityRole.md) cmdlet to get each security role that has a name that ends in Role.
-It stores them in the $Roles variable.
+### Example 2: Remove a security role by using a variable
 
-The second command removes each security role stored in the $Roles variable.
+The first command uses the [Get-CMSecurityRole](Get-CMSecurityRole.md) cmdlet to get all security roles that start with `Custom`, and stores them in the **$role** variable.
+
+The second command removes the first security role stored in the array. Since it doesn't specify the **Force** parameter, this command prompts for confirmation.
+
+```powershell
+$role = Get-CMSecurityRole -Name "Custom*"
+Remove-CMSecurityRole -InputObject $role[1]
+```
 
 ## PARAMETERS
 
@@ -89,6 +84,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
+
 Forces the command to run without asking for user confirmation.
 
 ```yaml
@@ -120,7 +116,8 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-Specifies an array of IDs of security roles.
+
+Specify the ID of the security role to remove. This value is the `RoleID` property. Since this cmdlet only works with custom roles, this value should always start with the site code. (IDs for built-in roles start with `SMS`.)
 
 ```yaml
 Type: String
@@ -135,8 +132,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies a security role object.
-To obtain a security role object, use the [Get-CMSecurityRole](Get-CMSecurityRole.md) cmdlet.
+
+Specify a security role object to remove. To get this object, use the [Get-CMSecurityRole](Get-CMSecurityRole.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -151,7 +148,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies an array of names of security roles.
+
+Specify the name of the security role to remove.
 
 ```yaml
 Type: String
@@ -166,6 +164,7 @@ Accept wildcard characters: True
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -202,9 +201,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
@@ -219,4 +220,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Set-CMSecurityRole](Set-CMSecurityRole.md)
 
+[Remove-CMSecurityRoleFromAdministrativeUser](Remove-CMSecurityRoleFromAdministrativeUser.md)
 
+[Automate role-based administration with Windows PowerShell](/mem/configmgr/core/servers/deploy/configure/configure-role-based-administration#automate-with-windows-power-shell)

@@ -64,7 +64,7 @@ New-CMSoftwareUpdatePhase [-AlertDelta <Int32>] [-AlertThresholdPercentage <Int3
 
 ## DESCRIPTION
 
-Starting in version 2002, use this cmdlet to create a deployment phase for software update.
+Use this cmdlet to create a deployment phase for software update.
 
 ## EXAMPLES
 

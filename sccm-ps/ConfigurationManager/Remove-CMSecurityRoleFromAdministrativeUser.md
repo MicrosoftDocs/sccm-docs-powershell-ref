@@ -1,8 +1,7 @@
 ---
-description: Removes the association between a security role and an administrative user.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/07/2019
+ms.date: 12/21/2021
 schema: 2.0.0
 title: Remove-CMSecurityRoleFromAdministrativeUser
 ---
@@ -10,7 +9,8 @@ title: Remove-CMSecurityRoleFromAdministrativeUser
 # Remove-CMSecurityRoleFromAdministrativeUser
 
 ## SYNOPSIS
-Removes the association between a security role and an administrative user.
+
+Remove the association between a security role and an administrative user.
 
 ## SYNTAX
 
@@ -69,8 +69,9 @@ Remove-CMSecurityRoleFromAdministrativeUser -AdministrativeUserName <String> [-F
 ```
 
 ## DESCRIPTION
-The **Remove-CMSecurityRoleFromAdministrativeUser** cmdlet removes the association between one or more security roles and an administrative user.
-After you remove the association of a security role with an administrative user, the administrative user cannot view the objects in Configuration Manager that are associated with the security role, and no longer has the permission to perform the tasks that are related to those objects.
+
+Use this cmdlet to remove the association between one or more security roles and an administrative user.
+After you remove the association of a security role with an administrative user, the administrative user can't view the objects in Configuration Manager that are associated with the security role. They also no longer have the permission to do the tasks that are related to those objects.
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
@@ -78,17 +79,18 @@ After you remove the association of a security role with an administrative user,
 ## EXAMPLES
 
 ### Example 1: Remove a security role from an administrative user
-```
-PS XYZ:\> Remove-CMSecurityRoleFromAdministrativeUser -AdministrativeUserName "Contoso\PattiFuller" -RoleName "Security Update Manager"
-```
 
-This command removes the association between the security role named Security Update Manager and the administrative user named Contoso\PattiFuller.
+This command removes the association between the security role named **Security Update Manager** and the administrative user named **Contoso\PattiFuller**. Since it specifies the **Force** parameter, it runs without prompting.
+
+```powershell
+Remove-CMSecurityRoleFromAdministrativeUser -AdministrativeUserName "Contoso\PattiFuller" -RoleName "Security Update Manager" -Force
+```
 
 ## PARAMETERS
 
 ### -AdministrativeUser
-Specifies a **CMAdministrativeUser** object.
-To obtain a **CMAdministrativeUser** object, use the [Get-CMAdministrativeUser](Get-CMAdministrativeUser.md) cmdlet.
+
+Specify an administrative user object to configure. To get this object, use the [Get-CMAdministrativeUser](Get-CMAdministrativeUser.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -103,7 +105,8 @@ Accept wildcard characters: False
 ```
 
 ### -AdministrativeUserId
-Specifies the ID of an administrative user.
+
+Specify the ID of the administrative user to configure. This value is the `AdminID` property, which is an integer value. For example, `16777234`.
 
 ```yaml
 Type: Int32
@@ -118,7 +121,8 @@ Accept wildcard characters: False
 ```
 
 ### -AdministrativeUserName
-Specifies the name of an administrative user.
+
+Specify the name of the administrative user to configure.
 
 ```yaml
 Type: String
@@ -149,6 +153,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
+
 Forces the command to run without asking for user confirmation.
 
 ```yaml
@@ -180,8 +185,8 @@ Accept wildcard characters: False
 ```
 
 ### -Role
-Specifies a **CMSecurityRole** object.
-To obtain a **CMSecurityRole** object, use the [Get-CMSecurityRole](Get-CMSecurityRole.md) cmdlet.
+
+Specify a security role object to remove. To get this object, use the [Get-CMSecurityRole](Get-CMSecurityRole.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -196,7 +201,8 @@ Accept wildcard characters: False
 ```
 
 ### -RoleId
-Specifies the ID of a role.
+
+Specify the ID of the security role to remove. This value is the `RoleID` property, for example `SMS000AR` for the **OS Deployment Manager** role.
 
 ```yaml
 Type: String
@@ -211,7 +217,8 @@ Accept wildcard characters: False
 ```
 
 ### -RoleName
-Specifies the name of a role.
+
+Specify the name of the security role to remove.
 
 ```yaml
 Type: String
@@ -226,6 +233,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -262,27 +270,21 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
 
 [Add-CMSecurityRoleToAdministrativeUser](Add-CMSecurityRoleToAdministrativeUser.md)
 
-[Copy-CMSecurityRole](Copy-CMSecurityRole.md)
-
-[Export-CMSecurityRole](Export-CMSecurityRole.md)
+[Remove-CMSecurityScopeFromAdministrativeUser](Remove-CMSecurityScopeFromAdministrativeUser.md)
 
 [Get-CMAdministrativeUser](Get-CMAdministrativeUser.md)
 
 [Get-CMSecurityRole](Get-CMSecurityRole.md)
 
-[Import-CMSecurityRole](Import-CMSecurityRole.md)
-
-[Remove-CMSecurityRole](Remove-CMSecurityRole.md)
-
-[Set-CMSecurityRole](Set-CMSecurityRole.md)
-
-
+[Automate role-based administration with Windows PowerShell](/mem/configmgr/core/servers/deploy/configure/configure-role-based-administration#automate-with-windows-power-shell)

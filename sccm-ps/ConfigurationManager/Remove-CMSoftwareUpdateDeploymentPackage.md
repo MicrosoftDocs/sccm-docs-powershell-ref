@@ -1,8 +1,7 @@
 ---
-description: Removes a deployment package.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/07/2019
+ms.date: 12/16/2021
 schema: 2.0.0
 title: Remove-CMSoftwareUpdateDeploymentPackage
 ---
@@ -10,7 +9,8 @@ title: Remove-CMSoftwareUpdateDeploymentPackage
 # Remove-CMSoftwareUpdateDeploymentPackage
 
 ## SYNOPSIS
-Removes a deployment package.
+
+Remove a software update deployment package.
 
 ## SYNTAX
 
@@ -33,21 +33,23 @@ Remove-CMSoftwareUpdateDeploymentPackage [-Force] -Name <String> [-DisableWildca
 ```
 
 ## DESCRIPTION
-The **Remove-CMSoftwareUpdateDeploymentPackage** cmdlet removes a software update deployment package from the site server and all child sites.
-A **CMSoftwareUpdateDeploymentPackage** object contains one or more software updates that Configuration Manager deploys to a collection of computers.
-Once the deployment package is removed, clients cannot install the software updates.
+
+Use this cmdlet to remove a software update deployment package from the site, all child sites, and all targeted distribution points. Once you remove the deployment package, clients can't install the software updates.
+
+Starting in version 2111, you can remove specific updates from a package with the [Remove-CMSoftwareUpdateFromPackage](Remove-CMSoftwareUpdateFromPackage.md) cmdlet.
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
-### Example 1: Remove a software package by using an ID
-```
-PS XYZ:\> Remove-CMSoftwareUpdateDeploymentPackage -PackageID "ST10000C"
-```
+### Example 1: Remove a software update package by using an ID
 
-This command removes the software package that has the ID ST10000C.
+This command removes the software update package that has the ID **ST10000C**.
+
+```powershell
+Remove-CMSoftwareUpdateDeploymentPackage -PackageID "ST10000C"
+```
 
 ## PARAMETERS
 
@@ -68,6 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
+
 Forces the command to run without asking for user confirmation.
 
 ```yaml
@@ -99,7 +102,8 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-Specifies an array of IDs of deployment packages.
+
+Specify the package ID of the software update deployment package to remove. This value is a standard package ID, for example `XYZ0035C`.
 
 ```yaml
 Type: String
@@ -114,8 +118,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies a **CMSoftwareUpdateDeploymentPackage** object.
-To obtain an **CMSoftwareUpdateDeploymentPackage** object, use the Get-CMSoftwareUpdateDeploymentPackage cmdlet.
+
+Specify software update deployment package object to remove. To get this object, use the [Get-CMSoftwareUpdateDeploymentPackage](Get-CMSoftwareUpdateDeploymentPackage.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -130,7 +134,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies a name of a deployment package.
+
+Specify the name of the software update deployment package to remove.
 
 ```yaml
 Type: String
@@ -145,6 +150,7 @@ Accept wildcard characters: True
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -181,15 +187,19 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
 
 [Get-CMSoftwareUpdateDeploymentPackage](Get-CMSoftwareUpdateDeploymentPackage.md)
 
+[New-CMSoftwareUpdateDeploymentPackage](New-CMSoftwareUpdateDeploymentPackage.md)
+
 [Set-CMSoftwareUpdateDeploymentPackage](Set-CMSoftwareUpdateDeploymentPackage.md)
 
-
+[Remove-CMSoftwareUpdateFromPackage](Remove-CMSoftwareUpdateFromPackage.md)

@@ -1,8 +1,7 @@
 ---
-description: Sets how often Configuration Manager evaluates collections for membership.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/07/2019
+ms.date: 12/29/2021
 schema: 2.0.0
 title: Set-CMCollectionMembershipEvaluationComponent
 ---
@@ -10,7 +9,8 @@ title: Set-CMCollectionMembershipEvaluationComponent
 # Set-CMCollectionMembershipEvaluationComponent
 
 ## SYNOPSIS
-Sets how often Configuration Manager evaluates collections for membership.
+
+Configure the site component that evaluates collection membership.
 
 ## SYNTAX
 
@@ -21,28 +21,23 @@ Set-CMCollectionMembershipEvaluationComponent -EvaluationMins <Int32> [-PassThru
 ```
 
 ## DESCRIPTION
-The **Set-CMCollectionMembershipEvaluationComponent** cmdlet changes how often Configuration Manager evaluates collections.
-Configuration Manager queries the database at a regular interval to check for changes in collection membership.
-You can specify which site to change by site server name or site code.
+
+Use this cmdlet to configure the site component that evaluates collection membership. This component controls how often collection membership is incrementally evaluated. Incremental evaluation updates a collection membership with only new or changed resources.
+
+For more information, see [Site components for Configuration Manager](/mem/configmgr/core/servers/deploy/configure/site-components#bkmk_colleval).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
-### Example 1: Set an evaluation period for a site code
-```
-PS XYZ:\> Set-CMCollectionMembershipEvaluationComponent -MinutesInterval 5 -SiteCode "CM4"
-```
+### Example 1: Set an evaluation interval
 
-This command sets the evaluation frequency to five minutes for the specified site code.
+This command sets the collection membership incremental evaluation interval to `10` minutes for the **XYZ** site.
 
-### Example 2: Set an evaluation period for a system
+```powershell
+Set-CMCollectionMembershipEvaluationComponent -EvaluationMins 10 -SiteCode "XYZ"
 ```
-PS XYZ:\> Set-CMCollectionMembershipEvaluationComponent -MinutesInterval 6 -SiteSystemName "CM01.West01.Contoso.com"
-```
-
-This command sets the evaluation frequency to six minutes for the server named CM01.West01.Contoso.com.
 
 ## PARAMETERS
 
@@ -63,6 +58,9 @@ Accept wildcard characters: False
 ```
 
 ### -EvaluationMins
+
+Specify an integer value for the number of minutes for the evaluation interval. By default, this value is 5 minutes.
+
 ```yaml
 Type: Int32
 Parameter Sets: (All)
@@ -108,7 +106,8 @@ Accept wildcard characters: False
 ```
 
 ### -SiteCode
-Specifies an array of a site codes for Configuration Manager sites.
+
+Specify the three-character site code to configure this component.
 
 ```yaml
 Type: String
@@ -123,7 +122,8 @@ Accept wildcard characters: False
 ```
 
 ### -SiteSystemServerName
-**Note**: This parameter is deprecated starting with version 1610, and may be removed in a future release.
+
+This parameter is deprecated, don't use it.
 
 ```yaml
 Type: String
@@ -138,6 +138,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -174,11 +175,20 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
+
 ## OUTPUTS
 
 ### IResultObject#SMS_SCI_Component
+
 ## NOTES
+
+For more information on this return object and its properties, see [SMS_SCI_Component server WMI class](/mem/configmgr/develop/reference/core/servers/configure/sms_sci_component-server-wmi-class).
 
 ## RELATED LINKS
 
 [Get-CMCollectionMembershipEvaluationComponent](Get-CMCollectionMembershipEvaluationComponent.md)
+
+[Get-CMSiteComponent](Get-CMSiteComponent.md)
+
+[Site components for Configuration Manager](/mem/configmgr/core/servers/deploy/configure/site-components#bkmk_colleval)
+[Collection evaluation in Configuration Manager](/mem/configmgr/core/clients/manage/collections/collection-evaluation)

@@ -33,7 +33,7 @@ Resume-CMPhasedDeployment [-Force] -Name <String> [-DisableWildcardHandling] [-F
 
 ## DESCRIPTION
 
-Starting in version 2002, use this cmdlet to resume the phased deployment from the suspend status.
+Use this cmdlet to resume the phased deployment from the suspend status.
 
 ## EXAMPLES
 

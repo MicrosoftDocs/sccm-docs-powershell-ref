@@ -1,25 +1,40 @@
 ---
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
+ms.date: 12/16/2021
 online version:
 schema: 2.0.0
 ---
 
-# New-CMTSStepConvertDisk
+# New-CMFolder
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Create one or more folders in the console.
 
 ## SYNTAX
 
+### SearchByNameMandatory (Default)
 ```
-New-CMTSStepConvertDisk [-DiskNumber <Int32>] [-Condition <IResultObject[]>] [-ContinueOnError]
- [-Description <String>] [-Disable] -Name <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
+New-CMFolder [-Name <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### CreateByParentPathMandatory
+```
+New-CMFolder [-Name <String>] -ParentFolderPath <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### CreateByParentObjectMandatory
+```
+New-CMFolder [-Name <String>] -InputObject <IResultObject> [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+Use this cmdlet to create a new folder under the specified parent folder path.
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
@@ -27,75 +42,17 @@ New-CMTSStepConvertDisk [-DiskNumber <Int32>] [-Condition <IResultObject[]>] [-C
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS XYZ:\> {{ Add example code here }}
-```
 
-{{ Add example description here }}
+```powershell
+$parentPath = 'DeviceCollection'
+$name =  'Folder1'
+$folder = New-CMFolder -ParentFolderPath $parentPath -Name $name
+```
 
 ## PARAMETERS
 
-### -Condition
-Specify a condition object to use with this step.
-
-```yaml
-Type: IResultObject[]
-Parameter Sets: (All)
-Aliases: Conditions
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ContinueOnError
-Add this parameter to enable the step option **Continue on error**. When you enable this option, if the step fails, the task sequence continues.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Description
-Specify an optional description for this task sequence step.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Disable
-Add this parameter to disable this task sequence step.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: DisableThisStep
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -DisableWildcardHandling
+
 This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
@@ -110,22 +67,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -DiskNumber
-{{ Fill DiskNumber Description }}
-
-```yaml
-Type: Int32
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -ForceWildcardHandling
+
 This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
@@ -140,13 +83,46 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -InputObject
+
+Specify a folder object for the parent container. To get this object, use the [Get-CMFolder](Get-CMFolder.md) cmdlet.
+
+```yaml
+Type: IResultObject
+Parameter Sets: CreateByParentObjectMandatory
+Aliases: ParentContainerNode
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
 ### -Name
-Specify a name for this step to identify it in the task sequence.
+
+Specify a name for the folder to create.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: StepName
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ParentFolderPath
+
+Specify the path of the parent folder.
+
+```yaml
+Type: String
+Parameter Sets: CreateByParentPathMandatory
+Aliases:
 
 Required: True
 Position: Named
@@ -156,6 +132,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -191,10 +168,20 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### None
+### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
-### IResultObject#SMS_TaskSequence_ConvertDiskAction
+### IResultObject#SMS_ObjectContainerNode
+
 ## NOTES
 
+For more information on this return object and its properties, see [SMS_ObjectContainerNode server WMI class](/mem/configmgr/develop/reference/core/servers/console/sms_objectcontainernode-server-wmi-class).
+
 ## RELATED LINKS
+
+[Get-CMFolder](Get-CMFolder.md)
+
+[Remove-CMFolder](Remove-CMFolder.md)
+
+[Set-CMFolder](Set-CMFolder.md)

@@ -1,8 +1,7 @@
----
-description: Configure a distribution point
+﻿---
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 03/23/2021
+ms.date: 12/16/2021
 schema: 2.0.0
 title: Set-CMDistributionPoint
 ---
@@ -17,17 +16,17 @@ Configure a distribution point.
 
 ### SetByValue (Default)
 ```
-Set-CMDistributionPoint [-AddBoundaryGroupName <String[]>] [-AddMacAddressForRespondingPxeRequest <String[]>]
- [-AllowFallbackForContent <Boolean>] [-AllowPreStaging <Boolean>] [-AllowProxyTraffic <Boolean>]
- [-AllowPxeResponse <Boolean>] [-CertificateExpirationTimeUtc <DateTime>] [-CertificatePassword <SecureString>]
- [-CertificatePath <String>] [-ClearMacAddressForRespondingPxeRequest]
- [-ClientCommunicationType <ComputerCommunicationType>] [-ClientConnectionType <ClientConnectionTypes>]
- [-ClientTransferRate <NetworkProfile>] [-ContentMonitoringPriority <Priority>]
- [-ContentValidationSchedule <IResultObject>] [-Description <String>] [-EnableAnonymous <Boolean>]
- [-EnableBranchCache <Boolean>] [-EnableContentValidation <Boolean>] [-EnableLedbat <Boolean>]
- [-EnableMulticast <Boolean>] [-EnableNonWdsPxe <Boolean>] [-EnablePullDP <Boolean>] [-EnablePxe <Boolean>]
- [-EnableScheduledMulticast <Boolean>] [-EnableUnknownComputerSupport <Boolean>] [-EndIPAddress <String>]
- [-EndUdpPort <Int32>] [-Force] [-InputObject] <IResultObject> [-KeepWds <Boolean>]
+Set-CMDistributionPoint [-EnableMaintenanceMode <Boolean>] [-AddBoundaryGroupName <String[]>]
+ [-AddMacAddressForRespondingPxeRequest <String[]>] [-AllowFallbackForContent <Boolean>]
+ [-AllowPreStaging <Boolean>] [-AllowProxyTraffic <Boolean>] [-AllowPxeResponse <Boolean>]
+ [-CertificateExpirationTimeUtc <DateTime>] [-CertificatePassword <SecureString>] [-CertificatePath <String>]
+ [-ClearMacAddressForRespondingPxeRequest] [-ClientCommunicationType <ComputerCommunicationType>]
+ [-ClientConnectionType <ClientConnectionTypes>] [-ClientTransferRate <NetworkProfile>]
+ [-ContentMonitoringPriority <Priority>] [-ContentValidationSchedule <IResultObject>] [-Description <String>]
+ [-EnableAnonymous <Boolean>] [-EnableBranchCache <Boolean>] [-EnableContentValidation <Boolean>]
+ [-EnableLedbat <Boolean>] [-EnableMulticast <Boolean>] [-EnableNonWdsPxe <Boolean>] [-EnablePullDP <Boolean>]
+ [-EnablePxe <Boolean>] [-EnableScheduledMulticast <Boolean>] [-EnableUnknownComputerSupport <Boolean>]
+ [-EndIPAddress <String>] [-EndUdpPort <Int32>] [-Force] [-InputObject] <IResultObject> [-KeepWds <Boolean>]
  [-MacAddressForRespondingPxeRequest <String[]>] [-MinimumSessionSize <Int32>]
  [-MulticastMaximumClientCount <Int32>] [-PassThru] [-PxePassword <SecureString>]
  [-PxeServerResponseDelaySec <Int32>] [-ReassignSiteCode <String>] [-RemoveBoundaryGroupName <String[]>]
@@ -41,18 +40,19 @@ Set-CMDistributionPoint [-AddBoundaryGroupName <String[]>] [-AddMacAddressForRes
 
 ### SetByName
 ```
-Set-CMDistributionPoint [-AddBoundaryGroupName <String[]>] [-AddMacAddressForRespondingPxeRequest <String[]>]
- [-AllowFallbackForContent <Boolean>] [-AllowPreStaging <Boolean>] [-AllowProxyTraffic <Boolean>]
- [-AllowPxeResponse <Boolean>] [-CertificateExpirationTimeUtc <DateTime>] [-CertificatePassword <SecureString>]
- [-CertificatePath <String>] [-ClearMacAddressForRespondingPxeRequest]
- [-ClientCommunicationType <ComputerCommunicationType>] [-ClientConnectionType <ClientConnectionTypes>]
- [-ClientTransferRate <NetworkProfile>] [-ContentMonitoringPriority <Priority>]
- [-ContentValidationSchedule <IResultObject>] [-Description <String>] [-EnableAnonymous <Boolean>]
- [-EnableBranchCache <Boolean>] [-EnableContentValidation <Boolean>] [-EnableLedbat <Boolean>]
- [-EnableMulticast <Boolean>] [-EnableNonWdsPxe <Boolean>] [-EnablePullDP <Boolean>] [-EnablePxe <Boolean>]
- [-EnableScheduledMulticast <Boolean>] [-EnableUnknownComputerSupport <Boolean>] [-EndIPAddress <String>]
- [-EndUdpPort <Int32>] [-Force] [-KeepWds <Boolean>] [-MacAddressForRespondingPxeRequest <String[]>]
- [-MinimumSessionSize <Int32>] [-MulticastMaximumClientCount <Int32>] [-PassThru] [-PxePassword <SecureString>]
+Set-CMDistributionPoint [-EnableMaintenanceMode <Boolean>] [-AddBoundaryGroupName <String[]>]
+ [-AddMacAddressForRespondingPxeRequest <String[]>] [-AllowFallbackForContent <Boolean>]
+ [-AllowPreStaging <Boolean>] [-AllowProxyTraffic <Boolean>] [-AllowPxeResponse <Boolean>]
+ [-CertificateExpirationTimeUtc <DateTime>] [-CertificatePassword <SecureString>] [-CertificatePath <String>]
+ [-ClearMacAddressForRespondingPxeRequest] [-ClientCommunicationType <ComputerCommunicationType>]
+ [-ClientConnectionType <ClientConnectionTypes>] [-ClientTransferRate <NetworkProfile>]
+ [-ContentMonitoringPriority <Priority>] [-ContentValidationSchedule <IResultObject>] [-Description <String>]
+ [-EnableAnonymous <Boolean>] [-EnableBranchCache <Boolean>] [-EnableContentValidation <Boolean>]
+ [-EnableLedbat <Boolean>] [-EnableMulticast <Boolean>] [-EnableNonWdsPxe <Boolean>] [-EnablePullDP <Boolean>]
+ [-EnablePxe <Boolean>] [-EnableScheduledMulticast <Boolean>] [-EnableUnknownComputerSupport <Boolean>]
+ [-EndIPAddress <String>] [-EndUdpPort <Int32>] [-Force] [-KeepWds <Boolean>]
+ [-MacAddressForRespondingPxeRequest <String[]>] [-MinimumSessionSize <Int32>]
+ [-MulticastMaximumClientCount <Int32>] [-PassThru] [-PxePassword <SecureString>]
  [-PxeServerResponseDelaySec <Int32>] [-ReassignSiteCode <String>] [-RemoveBoundaryGroupName <String[]>]
  [-RemoveMacAddressForRespondingPxeRequest <String[]>] [-RespondToAllNetwork] [-SessionStartDelayMins <Int32>]
  [-SiteCode <String>] [-SiteSystemServerName] <String> [-SourceDistributionPoint <String[]>]
@@ -74,27 +74,31 @@ The **Set-CMDistributionPoint** cmdlet modifies a distribution point on a site s
 
 ### Example 1: Set properties of a distribution point
 
-The first command gets the distribution point object for the site system server named MySiteSys_11310.Contoso.com. It then stores the object in the `$DP` variable. The second command modifies the distribution point object stored in that variable.
+The first command gets the distribution point object for the site system server named **MySiteSys_11310.Contoso.com**. It then stores the object in the **$DP** variable. The second command modifies the distribution point object stored in that variable.
 
 ```powershell
 $DP = Get-CMDistributionPoint -SiteSystemServerName "MySiteSys_11310.Contoso.com"
 Set-CMDistributionPoint -InputObject $DP -AllowFallbackForContent $True -AllowPreStaging $True -AllowPxeResponse $False -ClientCommunicationType Http -ClientConnectionType Internet -ContentMonitoringPriority High
 ```
 
-### Example 2: Set properties of a distribution point by using the pipeline
+### Example 2: Reassign a distribution point to a new site
 
-This command gets the distribution point object for the site system server named MySiteSys_11310.Contoso.com. It then uses the pipeline operator to pass the object to **Set-CMDistributionPoint**, which modifies the distribution point object.
-
-```powershell
-Get-CMDistributionPoint -SiteSystemServerName "MySiteSys_11310.Contoso.com" | Set-CMDistributionPoint -AllowFallbackForContent $True -AllowPreStaging $True -AllowPxeResponse $True -ClientCommunicationType Http -ClientConnectionType Internet -ContentMonitoringPriority High
-```
-
-### Example 3: Reassign a distribution point to a new site
-
-The following example reassigns the mydp server from site ABC to site XYZ
+The following example reassigns the **mydp** server from site **ABC** to site **XYZ**.
 
 ```PowerShell
-Set-CMDistributionPoint -SiteSystemServerName "MyDP.TestDOM.net" -ReassignSiteCode "XYZ" -SiteCode "ABC"
+Set-CMDistributionPoint -SiteSystemServerName "MyDP.TestDOM.net" -SiteCode "ABC" -ReassignSiteCode "XYZ"
+```
+
+### Example 3: Enable Microsoft Connected Cache
+
+The first command gets the distribution point object, and stores it in a variable. It passes that object through the pipeline to enable Connected Cache and configure other related settings.
+
+```powershell
+$dp = Get-CMDistributionPoint -SiteSystemServerName "dp01.contoso.com"
+
+$dp | Set-CMDistributionPoint -RetainDoincCache $true -EnableDoinc $true -AgreeDoincLicense $true
+
+$dp | Set-CMDistributionPoint -LocalDriveDoinc "Z:" -DiskSpaceDoinc 9000 -DiskSpaceUnit GB
 ```
 
 ## PARAMETERS
@@ -133,7 +137,10 @@ Accept wildcard characters: False
 
 ### -AgreeDoincLicense
 
-When you use the **EnableDoinc** parameter, set this parameter to `$true` to accept the Microsoft Connected Cache server license terms. For more information, [download the license terms](https://go.microsoft.com/fwlink/?linkid=2157308).
+When you use the **EnableDoinc** parameter, set this parameter to `$true` to accept the Microsoft Connected Cache server license terms. For more information, see [Microsoft Connected Cache in Configuration Manager](/mem/configmgr/core/plan-design/hierarchy/microsoft-connected-cache#licensing).
+
+If you've already agreed to the licensing terms, you don't have to include this parameter. You'll see this warning when you unnecessarily include it:<!-- 12502130 -->
+`The parameter 'AgreeDoincLicense' has been ignored. Reason: Once the license terms agreement is selected, it will be grayed out and never uncheck it.`
 
 ```yaml
 Type: Boolean
@@ -491,6 +498,22 @@ Accept wildcard characters: False
 ### -EnableLedbat
 
 Enable distribution points to use network congestion control with Windows LEDBAT. This feature can adjust the download speed to use the unused network bandwidth.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableMaintenanceMode
+
+Set this parameter to `$true` to enable [maintenance mode](/mem/configmgr/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_maint).
 
 ```yaml
 Type: Boolean
@@ -1106,10 +1129,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ### IResultObject#SMS_SCI_SysResUse
-For more information on this return object and its properties, see SMS_SCI_SysResUse server WMI class (/mem/configmgr/develop/reference/core/servers/configure/sms_sci_sysresuse-server-wmi-class).
 
 ## NOTES
 

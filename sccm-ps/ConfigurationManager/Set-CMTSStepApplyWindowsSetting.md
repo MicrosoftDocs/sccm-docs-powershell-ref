@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 08/11/2021
@@ -16,44 +16,41 @@ Configure an instance of the **Apply Windows Settings** task sequence step.
 
 ### ByValue (Default)
 ```
-Set-CMTSStepApplyWindowsSetting [-InputLocale <String>] [-MaximumConnection <Int32>]
- [-OrganizationName <String>] [-Password <SecureString>] [-ProductKey <String>]
- [-ServerLicensing <ServerLicenseMode>] [-SystemLocale <String>] [-TimeZone <TimeZoneInfo>]
- [-UILanguage <String>] [-UILanguageFallback <String>] [-UserLocale <String>] [-UserName <String>]
- [-AddCondition <IResultObject[]>] [-ClearCondition] [-Description <String>] -InputObject <IResultObject>
- [-IsContinueOnError <Boolean>] [-IsEnabled <Boolean>] [-MoveToIndex <Int32>] [-NewStepName <String>]
- [-RemoveConditionFile] [-RemoveConditionFolder] [-RemoveConditionIfStatement]
- [-RemoveConditionOperatingSystem] [-RemoveConditionQueryWmi] [-RemoveConditionRegistry]
- [-RemoveConditionSoftware] [-RemoveConditionVariable] [-StepName <String>] [-StepOrder <ReorderType>]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMTSStepApplyWindowsSetting [-InputLocale <String>] [-OrganizationName <String>] [-Password <SecureString>]
+ [-ProductKey <String>] [-SystemLocale <String>] [-TimeZone <TimeZoneInfo>] [-UILanguage <String>]
+ [-UILanguageFallback <String>] [-UserLocale <String>] [-UserName <String>] [-AddCondition <IResultObject[]>]
+ [-ClearCondition] [-Description <String>] -InputObject <IResultObject> [-IsContinueOnError <Boolean>]
+ [-IsEnabled <Boolean>] [-MoveToIndex <Int32>] [-NewStepName <String>] [-RemoveConditionFile]
+ [-RemoveConditionFolder] [-RemoveConditionIfStatement] [-RemoveConditionOperatingSystem]
+ [-RemoveConditionQueryWmi] [-RemoveConditionRegistry] [-RemoveConditionSoftware] [-RemoveConditionVariable]
+ [-StepName <String>] [-StepOrder <ReorderType>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ### ById
 ```
-Set-CMTSStepApplyWindowsSetting [-InputLocale <String>] [-MaximumConnection <Int32>]
- [-OrganizationName <String>] [-Password <SecureString>] [-ProductKey <String>]
- [-ServerLicensing <ServerLicenseMode>] [-SystemLocale <String>] [-TimeZone <TimeZoneInfo>]
- [-UILanguage <String>] [-UILanguageFallback <String>] [-UserLocale <String>] [-UserName <String>]
- [-AddCondition <IResultObject[]>] [-ClearCondition] [-Description <String>] [-IsContinueOnError <Boolean>]
- [-IsEnabled <Boolean>] [-MoveToIndex <Int32>] [-NewStepName <String>] [-RemoveConditionFile]
- [-RemoveConditionFolder] [-RemoveConditionIfStatement] [-RemoveConditionOperatingSystem]
- [-RemoveConditionQueryWmi] [-RemoveConditionRegistry] [-RemoveConditionSoftware] [-RemoveConditionVariable]
- [-StepName <String>] [-StepOrder <ReorderType>] -TaskSequenceId <String> [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMTSStepApplyWindowsSetting [-InputLocale <String>] [-OrganizationName <String>] [-Password <SecureString>]
+ [-ProductKey <String>] [-SystemLocale <String>] [-TimeZone <TimeZoneInfo>] [-UILanguage <String>]
+ [-UILanguageFallback <String>] [-UserLocale <String>] [-UserName <String>] [-AddCondition <IResultObject[]>]
+ [-ClearCondition] [-Description <String>] [-IsContinueOnError <Boolean>] [-IsEnabled <Boolean>]
+ [-MoveToIndex <Int32>] [-NewStepName <String>] [-RemoveConditionFile] [-RemoveConditionFolder]
+ [-RemoveConditionIfStatement] [-RemoveConditionOperatingSystem] [-RemoveConditionQueryWmi]
+ [-RemoveConditionRegistry] [-RemoveConditionSoftware] [-RemoveConditionVariable] [-StepName <String>]
+ [-StepOrder <ReorderType>] -TaskSequenceId <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByName
 ```
-Set-CMTSStepApplyWindowsSetting [-InputLocale <String>] [-MaximumConnection <Int32>]
- [-OrganizationName <String>] [-Password <SecureString>] [-ProductKey <String>]
- [-ServerLicensing <ServerLicenseMode>] [-SystemLocale <String>] [-TimeZone <TimeZoneInfo>]
- [-UILanguage <String>] [-UILanguageFallback <String>] [-UserLocale <String>] [-UserName <String>]
- [-AddCondition <IResultObject[]>] [-ClearCondition] [-Description <String>] [-IsContinueOnError <Boolean>]
- [-IsEnabled <Boolean>] [-MoveToIndex <Int32>] [-NewStepName <String>] [-RemoveConditionFile]
- [-RemoveConditionFolder] [-RemoveConditionIfStatement] [-RemoveConditionOperatingSystem]
- [-RemoveConditionQueryWmi] [-RemoveConditionRegistry] [-RemoveConditionSoftware] [-RemoveConditionVariable]
- [-StepName <String>] [-StepOrder <ReorderType>] -TaskSequenceName <String> [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMTSStepApplyWindowsSetting [-InputLocale <String>] [-OrganizationName <String>] [-Password <SecureString>]
+ [-ProductKey <String>] [-SystemLocale <String>] [-TimeZone <TimeZoneInfo>] [-UILanguage <String>]
+ [-UILanguageFallback <String>] [-UserLocale <String>] [-UserName <String>] [-AddCondition <IResultObject[]>]
+ [-ClearCondition] [-Description <String>] [-IsContinueOnError <Boolean>] [-IsEnabled <Boolean>]
+ [-MoveToIndex <Int32>] [-NewStepName <String>] [-RemoveConditionFile] [-RemoveConditionFolder]
+ [-RemoveConditionIfStatement] [-RemoveConditionOperatingSystem] [-RemoveConditionQueryWmi]
+ [-RemoveConditionRegistry] [-RemoveConditionSoftware] [-RemoveConditionVariable] [-StepName <String>]
+ [-StepOrder <ReorderType>] -TaskSequenceName <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByIdSetConditionIfStatement
@@ -582,22 +579,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -MaximumConnection
-
-Don't use this parameter. This setting only applies to legacy versions of Windows that are no longer supported.
-
-```yaml
-Type: Int32
-Parameter Sets: ByValue, ById, ByName
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -MoveToIndex
 
 Move this step to the specified index position in the task sequence.
@@ -945,23 +926,6 @@ Type: RegistryRootKeyType
 Parameter Sets: ByValueSetConditionRegistry, ByIdSetConditionRegistry, ByNameSetConditionRegistry
 Aliases:
 Accepted values: HKeyCurrentUser, HKeyLocalMachine, HKeyUsers, HKeyCurrentConfig
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ServerLicensing
-
-Don't use this parameter. This setting only applies to legacy versions of Windows that are no longer supported.
-
-```yaml
-Type: ServerLicenseMode
-Parameter Sets: ByValue, ById, ByName
-Aliases:
-Accepted values: NotSpecified, PerSeat, PerServer
 
 Required: False
 Position: Named
@@ -1376,7 +1340,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
-
 ## NOTES
 
 ## RELATED LINKS

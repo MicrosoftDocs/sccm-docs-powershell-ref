@@ -242,7 +242,7 @@ Accept wildcard characters: False
 
 ### -Architecture
 
-Starting in version 1906, use this parameter to set the **Architecture** property filter on the Software Updates page of the ADR properties.
+Use this parameter to set the **Architecture** property filter on the Software Updates page of the ADR properties.
 
 ```yaml
 Type: ArchitectureType[]
@@ -922,7 +922,7 @@ Accept wildcard characters: False
 
 ### -O365LanguageSelection
 
-Applies to version 1906 and later. Use this parameter to set the **Office 365 Client Update** language selection. Specify a string array of languages. Clients download software updates available in the specified languages, and language-neutral updates.
+Use this parameter to set the **Office 365 Client Update** language selection. Specify a string array of languages. Clients download software updates available in the specified languages, and language-neutral updates.
 
 Use the format of the language as displayed in the console for the **Windows Update** language selection. This format is the same as the with the **LanguageSelection** parameter. For example:
 
@@ -1003,7 +1003,7 @@ Accept wildcard characters: False
 
 ### -RequirePostRebootFullScan
 
-Starting in version 1906, use this parameter to set the following option on the **User Experience** page of the ADR deployment settings: **If any update in this deployment requires a system restart, run updates deployment evaluation cycle after restart**.
+Use this parameter to set the following option on the **User Experience** page of the ADR deployment settings: **If any update in this deployment requires a system restart, run updates deployment evaluation cycle after restart**.
 
 ```yaml
 Type: Boolean
@@ -1092,7 +1092,7 @@ Accept wildcard characters: False
 
 ### -SoftDeadlineEnabled
 
-Starting in version 1906, use this parameter to set the following option on the **Deployment Schedule** page of the ADR deployment settings: **Delay enforcement of this deployment according to user preferences, up to the grace period defined in client settings**.
+Use this parameter to set the following option on the **Deployment Schedule** page of the ADR deployment settings: **Delay enforcement of this deployment according to user preferences, up to the grace period defined in client settings**.
 
 ```yaml
 Type: Boolean

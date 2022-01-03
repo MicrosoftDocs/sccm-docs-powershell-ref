@@ -98,19 +98,20 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ### IResultObject[]#SMS_DeploymentType
+
 ### IResultObject#SMS_DeploymentType
+
 ## NOTES
+
+For more information on this return object and its properties, see [SMS_SCI_SysResUse server WMI class](/mem/configmgr/develop/reference/apps/sms_deploymenttype-server-wmi-class).
 
 ## RELATED LINKS
 
-[Add-CMDeploymentTypeSupersedence](./Add-CMDeploymentTypeSupersedence.md)
-
-[Set-CMDeploymentTypeSupersedence](./Set-CMDeploymentTypeSupersedence.md)
-
-[Remove-CMDeploymentTypeSupersedence](./Remove-CMDeploymentTypeSupersedence.md)
+[Set-CMApplicationSupersedence](Set-CMApplicationSupersedence.md)
 
 [Get-CMDeploymentType](Get-CMDeploymentType.md)
 

@@ -87,7 +87,7 @@ New-CMSoftwareUpdateAutoPhasedDeployment [-SoftwareUpdates] <IResultObject[]> [-
 
 ## DESCRIPTION
 
-Starting in version 2002, use this cmdlet to create a phased deployment for software updates by generating two phases with same settings. This cmdlet's behavior is the same as the **Create Phased Deployment** wizard on a software update, when you select the option to **Automatically create a default two phase deployment**.
+Use this cmdlet to create a phased deployment for software updates by generating two phases with same settings. This cmdlet's behavior is the same as the **Create Phased Deployment** wizard on a software update, when you select the option to **Automatically create a default two phase deployment**.
 
 > [!NOTE]
 > Before you create a phased deployment, make sure to distribute the software update content to a distribution point.

@@ -1,7 +1,7 @@
----
+﻿---
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 03/26/2021
+ms.date: 12/14/2021
 schema: 2.0.0
 title: New-CMBoundary
 ---
@@ -15,8 +15,8 @@ Create a site boundary.
 ## SYNTAX
 
 ```
-New-CMBoundary [-Name <String>] -Type <BoundaryTypes> -Value <String> [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+New-CMBoundary [-Name <String>] -Type <BoundaryTypes> -Value <String> [-ValueStartsWith <Boolean>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -151,6 +151,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ValueStartsWith
+
+Set this parameter to `$true` to match the start of a connection name or description instead of the whole string. For more information, see [Define network locations as boundaries](/mem/configmgr/core/servers/deploy/configure/boundaries#vpn).
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Confirm
 
 Prompts you for confirmation before running the cmdlet.
@@ -189,9 +205,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
+
 ## OUTPUTS
 
 ### IResultObject#SMS_Boundary
+
 ## NOTES
 
 For more information on this return object and its properties, see [SMS_Boundary server WMI class](/mem/configmgr/develop/reference/core/servers/configure/sms_boundary-server-wmi-class).

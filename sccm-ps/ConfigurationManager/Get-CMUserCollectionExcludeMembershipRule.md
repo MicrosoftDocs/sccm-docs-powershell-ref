@@ -1,8 +1,7 @@
 ﻿---
-description: Gets the exclude membership rules from one or more user collections in the Configuration Manager hierarchy.
 external help file: AdminUI.PS.psm1-help.xml
 Module Name: ConfigurationManager
-ms.date: 05/02/2019
+ms.date: 12/30/2021
 schema: 2.0.0
 title: Get-CMUserCollectionExcludeMembershipRule
 ---
@@ -10,7 +9,8 @@ title: Get-CMUserCollectionExcludeMembershipRule
 # Get-CMUserCollectionExcludeMembershipRule
 
 ## SYNOPSIS
-Gets the exclude membership rules from one or more user collections in the Configuration Manager hierarchy.
+
+Get an exclude membership rule for a user collection.
 
 ## SYNTAX
 
@@ -69,28 +69,33 @@ Get-CMUserCollectionExcludeMembershipRule -InputObject <IResultObject> [-Exclude
 ```
 
 ## DESCRIPTION
-The **Get-CMUserCollectionExcludeMembershipRule** cmdlet retrieves the rules that exclude the members of another collection from the user collections where the rule is applied.
-You can specify the user collections where the rule is applied by using their names, IDs, or by specifying an object that represents the collections.
-You can specify the collection whose members are excluded by using its name, ID, or an object that represents the collection.
+
+Use this cmdlet to get one or more exclude membership rules for a user collection.
+An _exclude_ membership rule excludes the members of another collection from the user collections where the rule is applied.
 
 Configuration Manager dynamically updates the membership of the user collection on a schedule if the membership of the excluded collection changes.
-For more information about membership rules, see [Introduction to Collections in Configuration Manager](/mem/configmgr/core/clients/manage/collections/introduction-to-collections).
+
+For more information, see [How to create collections in Configuration Manager](/mem/configmgr/core/clients/manage/collections/create-collections).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
-### Example 1: Get the exclude membership rule from a user collection
-```
-PS XYZ:\> Get-CMUserCollectionExcludeMembershipRule -CollectionId "9990000D" -ExcludeCollectionId "SMSDM001"
-```
+### Example 1: Get the exclude membership rules for a user collection
 
-This command gets the rule that excludes the members of the collection that has the ID SMSDM001 from the user collection that has the ID 9990000D.
+This command gets the rules that exclude the members of the collection with ID **XYZ00089** from the user collection with ID **XYZ00012**.
+
+```powershell
+Get-CMUserCollectionExcludeMembershipRule -CollectionId "XYZ00012" -ExcludeCollectionId "XYZ00089"
+```
 
 ## PARAMETERS
 
 ### -CollectionId
+
+Specify the ID of the user collection to get the rule. This value is the **CollectionID** property, for example, `XYZ00012`. Since default collections don't have exclude membership rules, this ID starts with the site code and not `SMS`.
+
 ```yaml
 Type: String
 Parameter Sets: ByIdAndValue, ByIdAndId, ByIdAndName
@@ -104,6 +109,9 @@ Accept wildcard characters: False
 ```
 
 ### -CollectionName
+
+Specify the name of the user collection to get the rule.
+
 ```yaml
 Type: String
 Parameter Sets: ByNameAndName, ByNameAndValue, ByNameAndId
@@ -117,6 +125,9 @@ Accept wildcard characters: False
 ```
 
 ### -ExcludeCollection
+
+Specify an object for the excluded collection to get the rule. To get this object, use the [Get-CMCollection](Get-CMCollection.md) or [Get-CMUserCollection](Get-CMUserCollection.md) cmdlets.
+
 ```yaml
 Type: IResultObject
 Parameter Sets: ByNameAndValue, ByIdAndValue, ByValueAndValue
@@ -130,6 +141,9 @@ Accept wildcard characters: False
 ```
 
 ### -ExcludeCollectionId
+
+Specify the ID of the excluded collection to get the rule. This value is the **CollectionID** property, for example, `XYZ00012`. You can exclude default collections, so this value can start with either the site code or `SMS`.
+
 ```yaml
 Type: String
 Parameter Sets: ByNameAndId, ByIdAndId, ByValueAndId
@@ -143,6 +157,9 @@ Accept wildcard characters: False
 ```
 
 ### -ExcludeCollectionName
+
+Specify the name of the excluded collection to get the rule.
+
 ```yaml
 Type: String
 Parameter Sets: ByNameAndName, ByIdAndName, ByValueAndName
@@ -156,8 +173,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies the input to this cmdlet.
-You can use this parameter, or you can pipe the input to this cmdlet.
+
+Specify an object for the user collection to get the rule. To get this object, use the [Get-CMCollection](Get-CMCollection.md) or [Get-CMUserCollection](Get-CMUserCollection.md) cmdlets.
 
 ```yaml
 Type: IResultObject
@@ -177,17 +194,23 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
 
 [Add-CMUserCollectionExcludeMembershipRule](Add-CMUserCollectionExcludeMembershipRule.md)
-
-[Get-CMUserCollection](Get-CMUserCollection.md)
-
 [Remove-CMUserCollectionExcludeMembershipRule](Remove-CMUserCollectionExcludeMembershipRule.md)
 
+[Get-CMCollectionExcludeMembershipRule](Get-CMCollectionExcludeMembershipRule.md)
 
+[Get-CMCollection](Get-CMCollection.md)
+[Get-CMUserCollection](Get-CMUserCollection.md)
+
+[Get-CMDeviceCollectionExcludeMembershipRule](Get-CMDeviceCollectionExcludeMembershipRule.md)
+
+[How to create collections in Configuration Manager](/mem/configmgr/core/clients/manage/collections/create-collections)

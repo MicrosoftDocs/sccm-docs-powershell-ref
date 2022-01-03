@@ -1,8 +1,7 @@
 ---
-description: Removes the association between security scopes and an administrative user.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/07/2019
+ms.date: 12/21/2021
 schema: 2.0.0
 title: Remove-CMSecurityScopeFromAdministrativeUser
 ---
@@ -10,7 +9,8 @@ title: Remove-CMSecurityScopeFromAdministrativeUser
 # Remove-CMSecurityScopeFromAdministrativeUser
 
 ## SYNOPSIS
-Removes the association between security scopes and an administrative user.
+
+Remove the association between a security scope and an administrative user.
 
 ## SYNTAX
 
@@ -76,9 +76,12 @@ Remove-CMSecurityScopeFromAdministrativeUser -AdministrativeUserName <String> [-
 ```
 
 ## DESCRIPTION
-The **Remove-CMSecurityScopeFromAdministrativeUser** cmdlet removes the association between one or more security scopes and an administrative user.
 
-After you remove the association between a security scope and an administrative user, the administrative user cannot view the objects in Configuration Manager that are associated with the security scope, and no longer has the permission to perform the tasks that are related to those objects.
+Use this cmdlet to remove the association between a security scope and an administrative user. An _administrative user_ in Configuration Manager defines a local or domain user or group.
+
+After you remove the association between a security scope and an administrative user, the administrative user can't view the objects in Configuration Manager that are associated with the security scope, and no longer has the permission to perform the tasks that are related to those objects.
+
+For more information about security scopes, see [Fundamentals of role-based administration in Configuration Manager](/mem/configmgr/core/understand/fundamentals-of-role-based-administration).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
@@ -86,17 +89,18 @@ After you remove the association between a security scope and an administrative 
 ## EXAMPLES
 
 ### Example 1: Remove a security scope from an administrative user
-```
-PS XYZ:\> Remove-CMSecurityScopeFromAdministrativeUser -AdministrativeUserName "Contoso\PattiFuller" -SecurityScopeName "SecScope02"
-```
 
-This command removes the association between the security scope named SecScope02 and the administrative user named Contoso\PattiFuller.
+This command removes the association between the security scope named **SecScope02** and the administrative user named **Contoso\PattiFuller**. Since it specifies the **Force** parameter, it runs without prompting.
+
+```powershell
+Remove-CMSecurityScopeFromAdministrativeUser -AdministrativeUserName "Contoso\PattiFuller" -SecurityScopeName "SecScope02" -Force
+```
 
 ## PARAMETERS
 
 ### -AdministrativeUser
-Specifies a **CMAdministrativeUser** object.
-To obtain a **CMAdministrativeUser** object, use the [Get-CMAdministrativeUser](Get-CMAdministrativeUser.md) cmdlet.
+
+Specify an administrative user object to configure. To get this object, use the [Get-CMAdministrativeUser](Get-CMAdministrativeUser.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -111,7 +115,8 @@ Accept wildcard characters: False
 ```
 
 ### -AdministrativeUserId
-Specifies the ID of an administrative user.
+
+Specify the ID of the administrative user to configure. This value is the `AdminID` property, which is an integer value. For example, `16777234`.
 
 ```yaml
 Type: Int32
@@ -126,7 +131,13 @@ Accept wildcard characters: False
 ```
 
 ### -AdministrativeUserName
-Specifies the name of an administrative user.
+
+Specify the name of the administrative user to configure.
+
+You can use wildcard characters:
+
+- `*`: Multiple characters
+- `?`: Single character
 
 ```yaml
 Type: String
@@ -157,6 +168,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
+
 Forces the command to run without asking for user confirmation.
 
 ```yaml
@@ -188,8 +200,8 @@ Accept wildcard characters: False
 ```
 
 ### -SecurityScope
-Specifies a security scope object.
-To obtain a security scope object, use the [Get-CMSecurityScope](Get-CMSecurityScope.md) cmdlet.
+
+Specify a security scope object to remove. To get this object, use the [Get-CMSecurityScope](Get-CMSecurityScope.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -204,7 +216,8 @@ Accept wildcard characters: False
 ```
 
 ### -SecurityScopeId
-Specifies the ID of a security scope.
+
+Specify the ID of the security scope to remove. This value is the `CategoryID` property, for example `SMS00UNA` for the **Default** scope.
 
 ```yaml
 Type: String
@@ -219,8 +232,8 @@ Accept wildcard characters: False
 ```
 
 ### -SecurityScopeName
-Specifies the name of a security scope.
-A security scope name can be Default or the name of a custom security scope.
+
+Specify the name of the security scope to remove.
 
 ```yaml
 Type: String
@@ -235,6 +248,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -271,14 +285,18 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
 
 [Add-CMSecurityScopeToAdministrativeUser](Add-CMSecurityScopeToAdministrativeUser.md)
+
+[Remove-CMSecurityRoleFromAdministrativeUser](Remove-CMSecurityRoleFromAdministrativeUser.md)
 
 [Get-CMAdministrativeUser](Get-CMAdministrativeUser.md)
 
@@ -290,4 +308,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Set-CMSecurityScope](Set-CMSecurityScope.md)
 
-
+[Automate role-based administration with Windows PowerShell](/mem/configmgr/core/servers/deploy/configure/configure-role-based-administration#automate-with-windows-power-shell)

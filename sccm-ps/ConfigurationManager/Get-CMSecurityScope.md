@@ -1,8 +1,7 @@
 ﻿---
-description: Gets a security scope.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/02/2019
+ms.date: 12/21/2021
 schema: 2.0.0
 title: Get-CMSecurityScope
 ---
@@ -10,7 +9,8 @@ title: Get-CMSecurityScope
 # Get-CMSecurityScope
 
 ## SYNOPSIS
-Gets a security scope.
+
+Get a security scope.
 
 ## SYNTAX
 
@@ -25,9 +25,12 @@ Get-CMSecurityScope -Id <String> [-DisableWildcardHandling] [-ForceWildcardHandl
 ```
 
 ## DESCRIPTION
-The **Get-CMSecurityScope** cmdlet gets one or more security scopes in Configuration Manager.
+
+Use this cmdlet to get one or more security scopes in Configuration Manager.
 You can get a security scope by its name or ID.
 If you don't provide any parameters, all security scopes are returned.
+
+For more information on security scopes, see [Fundamentals of role-based administration in Configuration Manager](/mem/configmgr/core/understand/fundamentals-of-role-based-administration).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
@@ -35,18 +38,20 @@ If you don't provide any parameters, all security scopes are returned.
 ## EXAMPLES
 
 ### Example 1: Get a security scope by name
-```
-PS XYZ:\> Get-CMSecurityScope -Name "Scope"
-```
 
-This command gets the security scope named Scope.
+This command gets the security scope named **Scope1**.
+
+```powershell
+Get-CMSecurityScope -Name "Scope1"
+```
 
 ### Example 2: Get a security scope by using a wildcard
-```
-PS XYZ:\> Get-CMSecurityScope -Name "S*"
-```
 
-This command gets all security scope objects that have a name beginning with "S".
+This command gets all security scope objects that have a name beginning with "Contoso".
+
+```powershell
+Get-CMSecurityScope -Name "Contoso*"
+```
 
 ## PARAMETERS
 
@@ -83,7 +88,8 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-Specifies the ID of a security scope.
+
+Specify the ID of a security scope to get. This value is the `CategoryID` property, for example `SMS00UNA` for the **Default** scope.
 
 ```yaml
 Type: String
@@ -98,7 +104,13 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies the name of a security scope.
+
+Specify the name of a security scope to get.
+
+You can use wildcard characters:
+
+- `*`: Multiple characters
+- `?`: Single character
 
 ```yaml
 Type: String
@@ -118,11 +130,16 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
+
 ## OUTPUTS
 
 ### IResultObject[]#SMS_SecuredCategory
+
 ### IResultObject#SMS_SecuredCategory
+
 ## NOTES
+
+For more information on this return object and its properties, see [SMS_SecuredCategory server WMI class](/mem/configmgr/develop/reference/core/servers/configure/sms_securedcategory-server-wmi-class).
 
 ## RELATED LINKS
 
@@ -130,8 +147,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Remove-CMSecurityScope](Remove-CMSecurityScope.md)
 
-[Remove-CMSecurityScopeFromAdministrativeUser](Remove-CMSecurityScopeFromAdministrativeUser.md)
-
 [Set-CMSecurityScope](Set-CMSecurityScope.md)
 
+[Get-CMObjectSecurityScope](Get-CMObjectSecurityScope.md)
 
+[Remove-CMSecurityScopeFromAdministrativeUser](Remove-CMSecurityScopeFromAdministrativeUser.md)
+
+[New-CMAdministrativeUserPermission](New-CMAdministrativeUserPermission.md)
+
+[Automate role-based administration with Windows PowerShell](/mem/configmgr/core/servers/deploy/configure/configure-role-based-administration#automate-with-windows-power-shell)

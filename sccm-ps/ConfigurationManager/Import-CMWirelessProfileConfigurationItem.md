@@ -1,4 +1,4 @@
----
+﻿---
 description: Imports a wireless profile configuration item.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -134,7 +134,7 @@ Specifies the path to the file that contains the wireless profile to import.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: WifiProfileXmlPath
+Aliases: FileName, FilePath, ImportFilePath, WifiProfileXmlPath
 
 Required: True
 Position: Named
@@ -220,9 +220,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
+
 ## OUTPUTS
 
 ### IResultObject#SMS_ConfigurationPolicy
+
 ## NOTES
 
 ## RELATED LINKS

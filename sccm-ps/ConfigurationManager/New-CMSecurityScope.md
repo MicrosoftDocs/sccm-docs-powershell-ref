@@ -1,8 +1,7 @@
 ---
-description: Creates a security scope.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/07/2019
+ms.date: 12/21/2021
 schema: 2.0.0
 title: New-CMSecurityScope
 ---
@@ -10,7 +9,8 @@ title: New-CMSecurityScope
 # New-CMSecurityScope
 
 ## SYNOPSIS
-Creates a security scope.
+
+Create a security scope.
 
 ## SYNTAX
 
@@ -20,8 +20,10 @@ New-CMSecurityScope [-Description <String>] -Name <String> [-DisableWildcardHand
 ```
 
 ## DESCRIPTION
-The **New-CMSecurityScope** cmdlet creates a security scope.
-Security scopes provide administrative users with access to securable objects.
+
+Use this cmdlet to create a security scope. Security scopes provide administrative users with access to securable objects.
+
+For more information on security scopes, see [Fundamentals of role-based administration in Configuration Manager](/mem/configmgr/core/understand/fundamentals-of-role-based-administration).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
@@ -29,16 +31,18 @@ Security scopes provide administrative users with access to securable objects.
 ## EXAMPLES
 
 ### Example 1: Create a security scope
-```
-PS XYZ:\> New-CMSecurityScope -Name "testSecope" -Description "Security Scope"
-```
 
-This command creates a security scope named testScope.
+This command creates a security scope named **Scope1** with a description.
+
+```powershell
+New-CMSecurityScope -Name "Scope1" -Description "Custom scope"
+```
 
 ## PARAMETERS
 
 ### -Description
-Specifies a description for the security scope.
+
+Specify an optional description for the security scope.
 
 ```yaml
 Type: String
@@ -85,7 +89,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies a name for the security scope.
+
+Specify a name for the security scope to create.
 
 ```yaml
 Type: String
@@ -100,6 +105,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -136,10 +142,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
+
 ## OUTPUTS
 
 ### IResultObject#SMS_SecuredCategory
+
 ## NOTES
+
+For more information on this return object and its properties, see [SMS_SecuredCategory server WMI class](/mem/configmgr/develop/reference/core/servers/configure/sms_securedcategory-server-wmi-class).
 
 ## RELATED LINKS
 
@@ -149,6 +159,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Remove-CMSecurityScope](Remove-CMSecurityScope.md)
 
-[Remove-CMSecurityScopeFromAdministrativeUser](Remove-CMSecurityScopeFromAdministrativeUser.md)
+[Add-CMSecurityScopeToAdministrativeUser](Add-CMSecurityScopeToAdministrativeUser.md)
 
+[Add-CMObjectSecurityScope](Add-CMObjectSecurityScope.md)
 
+[Automate role-based administration with Windows PowerShell](/mem/configmgr/core/servers/deploy/configure/configure-role-based-administration#automate-with-windows-power-shell)

@@ -1,4 +1,4 @@
----
+﻿---
 description: Saves a Configuration Manager configuration item to a file.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -165,7 +165,7 @@ Specifies a full file path for an export file.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: FileName, FilePath, ExportFilePath
 
 Required: True
 Position: Named
@@ -213,6 +213,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ### System.Object

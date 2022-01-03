@@ -1,8 +1,7 @@
 ---
-description: Removes a query membership rule from one or more device collection in the Configuration Manager hierarchy.
 external help file: AdminUI.PS.psm1-help.xml
 Module Name: ConfigurationManager
-ms.date: 05/07/2019
+ms.date: 12/29/2021
 schema: 2.0.0
 title: Remove-CMDeviceCollectionQueryMembershipRule
 ---
@@ -10,7 +9,8 @@ title: Remove-CMDeviceCollectionQueryMembershipRule
 # Remove-CMDeviceCollectionQueryMembershipRule
 
 ## SYNOPSIS
-Removes a query membership rule from one or more device collection in the Configuration Manager hierarchy.
+
+Remove a query membership rule from a device collection.
 
 ## SYNTAX
 
@@ -33,10 +33,13 @@ Remove-CMDeviceCollectionQueryMembershipRule -CollectionId <String> -RuleName <S
 ```
 
 ## DESCRIPTION
-The **Remove-CMDeviceCollectionQueryMembershipRule** cmdlet removes a query rule from the specified device collections.
-You can specify the device collections by name, ID, or an input object that represents the collections.
 
-For more information about membership rules, see [Introduction to Collections in Configuration Manager](/mem/configmgr/core/clients/manage/collections/introduction-to-collections).
+Use this cmdlet to remove a query membership rule from a device collection.
+A _query_ rule lets you dynamically update the membership of a collection based on a query that is run on a schedule.
+You can't remove query rules from the default collections. Any collection that you target should have an ID that starts with the site code, not `SMS`.
+For more information, see [How to create collections in Configuration Manager](/mem/configmgr/core/clients/manage/collections/create-collections).
+
+When you remove a query membership rule from a collection, multiple resources may no longer be members of the collection. This action can cause any software or configuration deployment to not apply to the devices.
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
@@ -44,15 +47,19 @@ For more information about membership rules, see [Introduction to Collections in
 ## EXAMPLES
 
 ### Example 1: Remove the query membership rules for a device collection
-```
-PS XYZ:\> Remove-CMDeviceCollectionQueryMembershipRule -CollectionName "Mobile Windows 7 Devices" -RuleName "TPM Information"
-```
 
-This command removes the query membership rule named TPM Information from the device collection named Mobile Windows 7 Devices.
+This command removes the query membership rule named **TPM** from the device collection named **Windows 10 devices**.
+
+```powershell
+Remove-CMDeviceCollectionQueryMembershipRule -CollectionName "Windows 10 devices" -RuleName "TPM" -Force
+```
 
 ## PARAMETERS
 
 ### -CollectionId
+
+Specify the ID of the device collection to remove the rule. This value is the **CollectionID** property, for example, `XYZ00012`. Since you can't remove the query rules from default collections, this ID starts with the site code and not `SMS`.
+
 ```yaml
 Type: String
 Parameter Sets: ById
@@ -66,6 +73,9 @@ Accept wildcard characters: False
 ```
 
 ### -CollectionName
+
+Specify the name of the device collection to remove the rule.
+
 ```yaml
 Type: String
 Parameter Sets: ByName
@@ -95,8 +105,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies the input to this cmdlet.
-You can use this parameter, or you can pipe the input to this cmdlet.
+
+Specify an object for the device collection to remove the rule. To get this object, use the [Get-CMCollection](Get-CMCollection.md) or [Get-CMDeviceCollection](Get-CMDeviceCollection.md) cmdlets.
 
 ```yaml
 Type: IResultObject
@@ -111,6 +121,9 @@ Accept wildcard characters: False
 ```
 
 ### -RuleName
+
+Specify the name of the query rule to remove from the collection.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -124,6 +137,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -160,19 +174,23 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
 
-[Introduction to Collections in Configuration Manager](/mem/configmgr/core/clients/manage/collections/introduction-to-collections)
-
 [Get-CMDeviceCollectionQueryMembershipRule](Get-CMDeviceCollectionQueryMembershipRule.md)
-
 [Add-CMDeviceCollectionQueryMembershipRule](Add-CMDeviceCollectionQueryMembershipRule.md)
 
+[Get-CMCollection](Get-CMCollection.md)
 [Get-CMDeviceCollection](Get-CMDeviceCollection.md)
 
+[Remove-CMCollectionQueryMembershipRule](Remove-CMDeviceCollectionQueryMembershipRule.md)
 
+[Remove-CMUserCollectionQueryMembershipRule](Remove-CMUserCollectionQueryMembershipRule.md)
+
+[How to create collections in Configuration Manager](/mem/configmgr/core/clients/manage/collections/create-collections)

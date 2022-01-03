@@ -1,4 +1,4 @@
----
+﻿---
 description: Export a legacy package.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -110,7 +110,7 @@ Specify the network path for the package. The path needs to specify the file, in
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: ExportFilePath
+Aliases: FilePath, ExportFilePath, Path
 
 Required: True
 Position: Named
@@ -267,6 +267,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ### System.Object

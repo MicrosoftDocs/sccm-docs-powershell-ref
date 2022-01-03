@@ -1,4 +1,4 @@
----
+﻿---
 description: Imports an application into Configuration Manager.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -60,7 +60,7 @@ Specifies a file path for the application.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: FileName, ImportFilePath, Path
 
 Required: True
 Position: Named
@@ -160,6 +160,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
+
 ## OUTPUTS
 
 ### System.Object

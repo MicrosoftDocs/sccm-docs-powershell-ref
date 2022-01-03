@@ -1,8 +1,7 @@
 ---
-description: Removes a collection query membership rule.
 external help file: AdminUI.PS.psm1-help.xml
 Module Name: ConfigurationManager
-ms.date: 05/07/2019
+ms.date: 12/30/2021
 schema: 2.0.0
 title: Remove-CMCollectionQueryMembershipRule
 ---
@@ -10,7 +9,8 @@ title: Remove-CMCollectionQueryMembershipRule
 # Remove-CMCollectionQueryMembershipRule
 
 ## SYNOPSIS
-Removes a collection query membership rule.
+
+Remove a query membership rule from a device or user collection.
 
 ## SYNTAX
 
@@ -34,19 +34,32 @@ Remove-CMCollectionQueryMembershipRule -CollectionId <String> -RuleName <String>
 
 ## DESCRIPTION
 
+Use this cmdlet to remove a query membership rule from a device or user collection.
+A _query_ rule lets you dynamically update the membership of a collection based on a query that is run on a schedule.
+You can't remove query rules from the default collections. Any collection that you target should have an ID that starts with the site code, not `SMS`.
+For more information, see [How to create collections in Configuration Manager](/mem/configmgr/core/clients/manage/collections/create-collections).
+
+When you remove a query membership rule from a collection, multiple resources may no longer be members of the collection. This action can cause any software or configuration deployment to not apply to the resources.
+
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
-### Example 1
-```
-PS XYZ:\>
+### Example 1: Remove the query membership rules for a device collection
+
+This command removes the query membership rule named **TPM** from the device collection named **Windows 10 devices**.
+
+```powershell
+Remove-CMCollectionQueryMembershipRule -CollectionName "Windows 10 devices" -RuleName "TPM" -Force
 ```
 
 ## PARAMETERS
 
 ### -CollectionId
+
+Specify the ID of the collection to remove the rule. This value is the **CollectionID** property, for example, `XYZ00012`. Since you can't remove the query rules from default collections, this ID starts with the site code and not `SMS`.
+
 ```yaml
 Type: String
 Parameter Sets: ById
@@ -60,6 +73,9 @@ Accept wildcard characters: False
 ```
 
 ### -CollectionName
+
+Specify the name of the collection to remove the rule.
+
 ```yaml
 Type: String
 Parameter Sets: ByName
@@ -89,6 +105,9 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
+
+Specify an object for the collection to remove the rule. To get this object, use the [Get-CMCollection](Get-CMCollection.md), [Get-CMDeviceCollection](Get-CMDeviceCollection.md), or [Get-CMUserCollection](Get-CMUserCollection.md) cmdlets.
+
 ```yaml
 Type: IResultObject
 Parameter Sets: ByValue
@@ -102,6 +121,9 @@ Accept wildcard characters: False
 ```
 
 ### -RuleName
+
+Specify the name of the query rule to remove from the collection.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -115,6 +137,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -151,9 +174,31 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
+This cmdlet is similar to **Remove-CMDeviceCollectionQueryMembershipRule** and **Remove-CMUserCollectionQueryMembershipRule**, which are specific to the type of collection. This cmdlet works with either device or user collections.
+
 ## RELATED LINKS
+
+[Get-CMCollectionQueryMembershipRule](Get-CMCollectionQueryMembershipRule.md)
+
+[Remove-CMCollectionDirectMembershipRule](Remove-CMCollectionDirectMembershipRule.md)
+[Remove-CMCollectionExcludeMembershipRule](Remove-CMCollectionExcludeMembershipRule.md)
+[Remove-CMCollectionIncludeMembershipRule](Remove-CMCollectionIncludeMembershipRule.md)
+
+[Add-CMDeviceCollectionQueryMembershipRule](Add-CMDeviceCollectionQueryMembershipRule.md)
+[Add-CMUserCollectionQueryMembershipRule](Add-CMUserCollectionQueryMembershipRule.md)
+
+[Get-CMDeviceCollectionQueryMembershipRule](Get-CMDeviceCollectionQueryMembershipRule.md)
+[Get-CMUserCollectionQueryMembershipRule](Get-CMUserCollectionQueryMembershipRule.md)
+
+[Get-CMCollection](Get-CMCollection.md)
+[Get-CMDeviceCollection](Get-CMDeviceCollection.md)
+[Get-CMUserCollection](Get-CMUserCollection.md)
+
+[How to create collections in Configuration Manager](/mem/configmgr/core/clients/manage/collections/create-collections)

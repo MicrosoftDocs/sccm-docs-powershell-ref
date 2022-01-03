@@ -1,8 +1,7 @@
 ﻿---
-description: Retrieves a deployment package.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/02/2019
+ms.date: 12/16/2021
 schema: 2.0.0
 title: Get-CMSoftwareUpdateDeploymentPackage
 ---
@@ -10,7 +9,8 @@ title: Get-CMSoftwareUpdateDeploymentPackage
 # Get-CMSoftwareUpdateDeploymentPackage
 
 ## SYNOPSIS
-Retrieves a deployment package.
+
+Get a software update deployment package.
 
 ## SYNTAX
 
@@ -27,8 +27,8 @@ Get-CMSoftwareUpdateDeploymentPackage -Id <String> [-DisableWildcardHandling] [-
 ```
 
 ## DESCRIPTION
-The **Get-CMSoftwareUpdateDeploymentPackage** cmdlet retrieves a deployment package for a software update.
-A **CMSoftwareUpdateDeploymentPackage** object contains one or more software updates.
+
+Use this cmdlet to get a deployment package for a software update. A software update deployment package object contains one or more software updates.
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
@@ -36,18 +36,20 @@ A **CMSoftwareUpdateDeploymentPackage** object contains one or more software upd
 ## EXAMPLES
 
 ### Example 1: Get a deployment package by using a name
-```
-PS XYZ:\> Get-CMSoftwareUpdateDeploymentPackage -Name "Asdset"
-```
 
-This command gets a deployment package named Asdset.
+This command gets a deployment package named **Asdset**.
+
+```powershell
+Get-CMSoftwareUpdateDeploymentPackage -Name "Asdset"
+```
 
 ### Example 2: Get a deployment package by using an ID
-```
-PS XYZ:\> Get-CMSoftwareUpdateDeploymentPackage -Id "ST10000C"
-```
 
-This command gets a deployment package that has the ID ST10000C.
+This command gets a deployment package that has the ID **ST10000C**.
+
+```powershell
+Get-CMSoftwareUpdateDeploymentPackage -Id "ST10000C"
+```
 
 ## PARAMETERS
 
@@ -84,7 +86,8 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-Specifies an array of IDs for the deployment package.
+
+Specify a package ID for the deployment package to get. This value is a standard package ID, for example `XYZ0035C`.
 
 ```yaml
 Type: String
@@ -99,7 +102,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies a name for the deployment package.
+
+Specify the name of the deployment package to get.
 
 ```yaml
 Type: String
@@ -119,16 +123,23 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
+
 ## OUTPUTS
 
 ### IResultObject[]#SMS_SoftwareUpdatesPackage
+
 ### IResultObject#SMS_SoftwareUpdatesPackage
+
 ## NOTES
 
+For more information on this return object and its properties, see [SMS_SoftwareUpdatesPackage server WMI class](/mem/configmgr/develop/reference/sum/sms_softwareupdatespackage-server-wmi-class).
+
 ## RELATED LINKS
+
+[New-CMSoftwareUpdateDeploymentPackage](New-CMSoftwareUpdateDeploymentPackage.md)
 
 [Remove-CMSoftwareUpdateDeploymentPackage](Remove-CMSoftwareUpdateDeploymentPackage.md)
 
 [Set-CMSoftwareUpdateDeploymentPackage](Set-CMSoftwareUpdateDeploymentPackage.md)
 
-
+[Remove-CMSoftwareUpdateFromPackage](Remove-CMSoftwareUpdateFromPackage.md)

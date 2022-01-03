@@ -1,8 +1,7 @@
 ---
-description: Disables alerts in Configuration Manager.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 04/29/2019
+ms.date: 12/30/2021
 schema: 2.0.0
 title: Disable-CMAlert
 ---
@@ -11,7 +10,7 @@ title: Disable-CMAlert
 
 ## SYNOPSIS
 
-Disables alerts in Configuration Manager.
+Disable alerts
 
 ## SYNTAX
 
@@ -35,9 +34,9 @@ Disable-CMAlert -Name <String> [-PassThru] [-DisableWildcardHandling] [-ForceWil
 
 ## DESCRIPTION
 
-The **Disable-CMAlert** cmdlet disables one or more alerts in Configuration Manager.
+Use this cmdlet to disable one or more alerts in Configuration Manager.
 
-Configuration Manager does not evaluate the condition for a disabled alert and does not update a disabled alert, even if the state of the alert changes.
+Configuration Manager doesn't evaluate the condition for a disabled alert. It doesn't update a disabled alert, even if the state of the alert changes.
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
@@ -46,22 +45,22 @@ Configuration Manager does not evaluate the condition for a disabled alert and d
 
 ### Example 1: Disable an alert by using alert ID
 
-```powershell
-PS XYZ:\>Disable-CMAlert -Id "16777218"
-```
-
 This command disables an alert that has the ID 16777218.
 
-### Example 2: Disable an alert by using alert object variable
-
 ```powershell
-PS XYZ:\> $AlertObj = Get-CMAlert -Id "16777221"
-PS XYZ:\> Disable-CMAlert -InputObject $AlertObj
+Disable-CMAlert -Id "16777218"
 ```
+
+### Example 2: Disable an alert by using alert object variable
 
 The first command gets an alert object that has the ID 16777221, and then stores it in the $AlertObj variable.
 
 The second command disables the alert stored in the $AlertObj variable.
+
+```powershell
+$AlertObj = Get-CMAlert -Id "16777221"
+Disable-CMAlert -InputObject $AlertObj
+```
 
 ## PARAMETERS
 
@@ -99,8 +98,7 @@ Accept wildcard characters: False
 
 ### -Id
 
-Specifies an alert ID.
-You can obtain the ID of an alert by using the [Get-CMAlert](Get-CMAlert.md) cmdlet.
+Specify the ID of an alert to disable. You can get the ID of an alert by using the [Get-CMAlert](Get-CMAlert.md) cmdlet.
 
 ```yaml
 Type: String
@@ -116,8 +114,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 
-Specifies a **CMAlert** object.
-To obtain a **CMAlert** object, use **Get-CMAlert**.
+Specify an alert object to disable. To get this object, use the [Get-CMAlert](Get-CMAlert.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -133,8 +130,7 @@ Accept wildcard characters: False
 
 ### -Name
 
-Specifies the name of an alert.
-You can obtain the name of an alert by using **Get-CMAlert**.
+Specify the name of an alert to disable. You can get the name of an alert by using the [Get-CMAlert](Get-CMAlert.md) cmdlet.
 
 ```yaml
 Type: String
@@ -149,6 +145,8 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
+
+Add this parameter to return an object that represents the item with which you're working. By default, this cmdlet may not generate any output.
 
 ```yaml
 Type: SwitchParameter
