@@ -1,8 +1,7 @@
 ---
-description: Remove a deployment type supersedence relationship.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 01/05/2021
+ms.date: 12/16/2021
 schema: 2.0.0
 title: Remove-CMDeploymentTypeSupersedence
 ---
@@ -11,7 +10,7 @@ title: Remove-CMDeploymentTypeSupersedence
 
 ## SYNOPSIS
 
-Remove a deployment type supersedence relationship.
+Remove a deployment type supersedence relationship. This cmdlet is deprecated.
 
 ## SYNTAX
 
@@ -22,6 +21,9 @@ Remove-CMDeploymentTypeSupersedence [-Force] [-SupersededDeploymentType] <IResul
 ```
 
 ## DESCRIPTION
+
+> [!IMPORTANT]
+> Starting in version 2111, this cmdlet is deprecated and may be removed in a future release. Use the [Set-CMApplicationSupersedence](Set-CMApplicationSupersedence.md) cmdlet instead.
 
 Use this cmdlet to remove a superseding deployment type from a superseded deployment type. In other words, remove the _replacement_ deployment type from the _old_ deployment type.
 
@@ -170,11 +172,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Add-CMDeploymentTypeSupersedence](./Add-CMDeploymentTypeSupersedence.md)
+[Set-CMApplicationSupersedence](Set-CMApplicationSupersedence.md)
 
 [Get-CMDeploymentTypeSupersedence](./Get-CMDeploymentTypeSupersedence.md)
-
-[Set-CMDeploymentTypeSupersedence](./Set-CMDeploymentTypeSupersedence.md)
 
 [Get-CMDeploymentType](Get-CMDeploymentType.md)
 

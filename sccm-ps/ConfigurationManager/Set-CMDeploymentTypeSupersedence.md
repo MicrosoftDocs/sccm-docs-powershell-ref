@@ -1,8 +1,7 @@
 ---
-description: Configure a supersedence relationship on an application.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 01/05/2021
+ms.date: 12/16/2021
 schema: 2.0.0
 title: Set-CMDeploymentTypeSupersedence
 ---
@@ -11,7 +10,7 @@ title: Set-CMDeploymentTypeSupersedence
 
 ## SYNOPSIS
 
-Configure a supersedence relationship on an application.
+Configure a supersedence relationship on an application. This cmdlet is deprecated.
 
 ## SYNTAX
 
@@ -22,6 +21,9 @@ Set-CMDeploymentTypeSupersedence -InputObject <IResultObject> [-IsUninstall <Boo
 ```
 
 ## DESCRIPTION
+
+> [!IMPORTANT]
+> Starting in version 2111, this cmdlet is deprecated and may be removed in a future release. Use the [Set-CMApplicationSupersedence](Set-CMApplicationSupersedence.md) cmdlet instead.
 
 Use this cmdlet to configure a supersedence relationship on an application.
 
@@ -179,17 +181,17 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
 
-[Add-CMDeploymentTypeSupersedence](./Add-CMDeploymentTypeSupersedence.md)
+[Set-CMApplicationSupersedence](Set-CMApplicationSupersedence.md)
 
 [Get-CMDeploymentTypeSupersedence](./Get-CMDeploymentTypeSupersedence.md)
-
-[Remove-CMDeploymentTypeSupersedence](./Remove-CMDeploymentTypeSupersedence.md)
 
 [Supersede applications in Configuration Manager](/mem/configmgr/apps/deploy-use/revise-and-supersede-applications#supersedence)

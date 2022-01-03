@@ -804,7 +804,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableUserPolicyOnTS
-Starting in version 1910, use this parameter to enable or disable the client setting, **Enable user policy for multiple user sessions**.
+Use this parameter to enable or disable the client setting, **Enable user policy for multiple user sessions**.
 
 ```yaml
 Type: Boolean

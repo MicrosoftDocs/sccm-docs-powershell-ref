@@ -1,8 +1,7 @@
 ---
-description: Enables configuration baselines.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/01/2019
+ms.date: 12/28/2021
 schema: 2.0.0
 title: Enable-CMBaseline
 ---
@@ -10,7 +9,8 @@ title: Enable-CMBaseline
 # Enable-CMBaseline
 
 ## SYNOPSIS
-Enables configuration baselines.
+
+Enable a configuration baseline.
 
 ## SYNTAX
 
@@ -33,7 +33,8 @@ Enable-CMBaseline [-Name] <String> [-DisableWildcardHandling] [-ForceWildcardHan
 ```
 
 ## DESCRIPTION
-The **Enable-CMBaseline** cmdlet enables one or more configuration baselines for compliance monitoring.
+
+Use this cmdlet to enable a configuration baseline for compliance evaluation.
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
@@ -41,11 +42,26 @@ The **Enable-CMBaseline** cmdlet enables one or more configuration baselines for
 ## EXAMPLES
 
 ### Example 1: Enable a configuration baseline
-```
-PS XYZ:\>Enable-CMBaseline -Name "BLConfig01"
+
+This command enables the configuration baseline named **BLconfig01**.
+
+```powershell
+Enable-CMBaseline -Name "BLConfig01"
 ```
 
-This command enables the configuration baseline named BLconfig01.
+### Example 2: Enable all disabled configuration baselines
+
+This example first uses the [Get-CMBaseline](Get-CMBaseline.md) cmdlet to get all disabled configuration baselines.
+
+It then uses a `foreach` loop to enable each baseline.
+
+```powershell
+$baselines = Get-CMBaseline -Fast | Where-Object { -not $_.IsEnabled }
+
+foreach ( $baseline in $baselines ) {
+  Enable-CMBaseline -InputObject $baseline
+}
+```
 
 ## PARAMETERS
 
@@ -82,7 +98,8 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-Specifies an array of IDs of configuration baselines.
+
+Specify the **CI_ID** of the configuration baseline to enable. For example, `16777516`.
 
 ```yaml
 Type: Int32
@@ -97,8 +114,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies a **CMBaseline** object.
-To obtain a **CMBaseline** object, use the [Get-CMBaseline](Get-CMBaseline.md) cmdlet.
+
+Specify a configuration baseline object to enable. To get this object, use the [Get-CMBaseline](Get-CMBaseline.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -113,7 +130,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies an array of names of configuration baselines.
+
+Specify the name of the configuration baseline to enable.
 
 ```yaml
 Type: String
@@ -128,6 +146,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -164,9 +183,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
@@ -184,5 +205,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-CMBaseline](Remove-CMBaseline.md)
 
 [Set-CMBaseline](Set-CMBaseline.md)
-
-

@@ -1,8 +1,7 @@
 ﻿---
-description: Get a software update.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 08/03/2021
+ms.date: 12/16/2021
 schema: 2.0.0
 title: Get-CMSoftwareUpdate
 ---
@@ -541,11 +540,15 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject[]
+
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ### IResultObject[]#SMS_SoftwareUpdate
+
 ### IResultObject#SMS_SoftwareUpdate
+
 ## NOTES
 
 For more information on this return object and its properties, see [SMS_SoftwareUpdate server WMI class](/mem/configmgr/develop/reference/sum/sms_softwareupdate-server-wmi-class).

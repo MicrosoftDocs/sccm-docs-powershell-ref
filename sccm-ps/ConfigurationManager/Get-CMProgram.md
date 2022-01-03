@@ -1,8 +1,7 @@
 ﻿---
-description: Gets programs in Configuration Manager.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/02/2019
+ms.date: 12/28/2021
 schema: 2.0.0
 title: Get-CMProgram
 ---
@@ -10,7 +9,8 @@ title: Get-CMProgram
 # Get-CMProgram
 
 ## SYNOPSIS
-Gets programs in Configuration Manager.
+
+Get a program of a package.
 
 ## SYNTAX
 
@@ -33,29 +33,24 @@ Get-CMProgram -PackageId <String> [-ProgramName <String>] [-DisableWildcardHandl
 ```
 
 ## DESCRIPTION
-The **Get-CMProgram** cmdlet gets one or more programs in Configuration Manager.
-Programs are commands that are associated with a Configuration Manager package.
+
+Use this cmdlet to get a program of a package.
 Programs identify the actions that occur when the client receives the client package.
 You can associate multiple programs with the same package.
+For more information, see [Packages and programs in Configuration Manager](/mem/configmgr/apps/deploy-use/packages-and-programs).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
-### Example 1: Get all programs
-```
-PS XYZ:\> Get-CMProgram
-```
+### Example 1: Get a program by using a name and an ID
 
-This command gets all programs in Configuration Manager.
+This command gets the program named **Script** in the package that has the ID **XYZ0000F**.
 
-### Example 2: Get a program by using a name and an ID
+```powershell
+Get-CMProgram -PackageId "XYZ0000F" -ProgramName "Script"
 ```
-PS XYZ:\> Get-CMProgram -PackageId "ST10000F" -ProgramName "ProgramD02"
-```
-
-This command gets the program named ProgramD02 in the package that has the ID ST10000F.
 
 ## PARAMETERS
 
@@ -92,6 +87,9 @@ Accept wildcard characters: False
 ```
 
 ### -Package
+
+Specify a package object with the program to get. To get this object, use the [Get-CMPackage](Get-CMPackage.md) cmdlet.
+
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValue
@@ -105,7 +103,8 @@ Accept wildcard characters: False
 ```
 
 ### -PackageId
-Specifies the package that contains the program by using an ID.
+
+Specify the ID of the package with the program to get.
 
 ```yaml
 Type: String
@@ -120,6 +119,9 @@ Accept wildcard characters: False
 ```
 
 ### -PackageName
+
+Specify the name of the package with the program to get.
+
 ```yaml
 Type: String
 Parameter Sets: SearchByName
@@ -133,7 +135,8 @@ Accept wildcard characters: False
 ```
 
 ### -ProgramName
-Specifies the program within the package by using a name.
+
+Specify the name of the program in the package.
 
 ```yaml
 Type: String
@@ -153,11 +156,16 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ### IResultObject[]#SMS_Program
+
 ### IResultObject#SMS_Program
+
 ## NOTES
+
+For more information on this return object and its properties, see [SMS_Program server WMI class](/mem/configmgr/develop/reference/core/servers/configure/sms_program-server-wmi-class).
 
 ## RELATED LINKS
 
@@ -165,6 +173,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Disable-CMProgram](Disable-CMProgram.md)
 
+[New-CMProgram](New-CMProgram.md)
+
 [Remove-CMProgram](Remove-CMProgram.md)
 
+[Set-CMProgram](Set-CMProgram.md)
 
+[Packages and programs in Configuration Manager](/mem/configmgr/apps/deploy-use/packages-and-programs)

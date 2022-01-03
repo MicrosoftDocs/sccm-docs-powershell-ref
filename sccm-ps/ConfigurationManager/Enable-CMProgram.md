@@ -1,8 +1,7 @@
 ---
-description: Enables programs in Configuration Manager packages.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/01/2019
+ms.date: 12/28/2021
 schema: 2.0.0
 title: Enable-CMProgram
 ---
@@ -10,7 +9,8 @@ title: Enable-CMProgram
 # Enable-CMProgram
 
 ## SYNOPSIS
-Enables programs in Configuration Manager packages.
+
+Enable a program in a package.
 
 ## SYNTAX
 
@@ -33,13 +33,11 @@ Enable-CMProgram -PackageName <String> [-PassThru] -ProgramName <String> [-Disab
 ```
 
 ## DESCRIPTION
-The **Enable-CMProgram** cmdlet enables one or more programs in Configuration Manager packages.
-You can enable a program that has been disabled in order to resume availability of that program to client computers.
-You can also enable a program by enabling an advertisement that you used to disable it.
 
-Programs are commands that are associated with a Configuration Manager package.
-Programs identify the actions that occur when the client receives the client package.
-You can associate multiple programs with the same package.
+Use this cmdlet to enable a program in a package.
+You can enable a program to resume availability of it to clients.
+
+For more information, see [Packages and programs in Configuration Manager](/mem/configmgr/apps/deploy-use/packages-and-programs).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
@@ -47,11 +45,12 @@ You can associate multiple programs with the same package.
 ## EXAMPLES
 
 ### Example 1: Enable a program
-```
-PS XYZ:\>Enable-CMProgram -PackageId "CM400007" -ProgramName "ProgramD02"
-```
 
-This command enables the program named ProgramD02 in the package that has the ID CM400007.
+This command enables the program named **ProgramD02** in the package that has the ID **XYZ00007**.
+
+```powershell
+Enable-CMProgram -PackageId "XYZ00007" -ProgramName "ProgramD02"
+```
 
 ## PARAMETERS
 
@@ -88,8 +87,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies the input to this cmdlet.
-You can use this parameter, or you can pipe the input to this cmdlet.
+
+Specify a program object to enable. To get this object, use the [Get-CMProgram](Get-CMProgram.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -104,7 +103,8 @@ Accept wildcard characters: False
 ```
 
 ### -PackageId
-Specifies an array of package IDs.
+
+Specify the ID of the package with the program to enable.
 
 ```yaml
 Type: String
@@ -119,7 +119,8 @@ Accept wildcard characters: False
 ```
 
 ### -PackageName
-Specifies an array of package names.
+
+Specify the name of the package with the program to enable.
 
 ```yaml
 Type: String
@@ -150,7 +151,8 @@ Accept wildcard characters: False
 ```
 
 ### -ProgramName
-Specifies an array of program names.
+
+Specify the name of the package with the program to enable.
 
 ```yaml
 Type: String
@@ -165,6 +167,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -201,6 +204,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ## NOTES

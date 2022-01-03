@@ -1,8 +1,7 @@
 ---
-description: Removes a security scope from a Configuration Manager object.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/07/2019
+ms.date: 12/21/2021
 schema: 2.0.0
 title: Remove-CMObjectSecurityScope
 ---
@@ -10,7 +9,8 @@ title: Remove-CMObjectSecurityScope
 # Remove-CMObjectSecurityScope
 
 ## SYNOPSIS
-Removes a security scope from a Configuration Manager object.
+
+Remove a security scope from a Configuration Manager object.
 
 ## SYNTAX
 
@@ -33,51 +33,51 @@ Remove-CMObjectSecurityScope [-Force] -InputObject <IResultObject[]> [-Name] <St
 ```
 
 ## DESCRIPTION
-The **Remove-CMObjectSecurityScope** cmdlet removes a security scope from a Configuration Manager object.
+
+Use this cmdlet to remove one or more security scopes from a Configuration Manager object.
+
+For more information on security scopes, see [Fundamentals of role-based administration in Configuration Manager](/mem/configmgr/core/understand/fundamentals-of-role-based-administration).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
-### Example 1: Remove a security scope from application objects by using the pipeline
-```
-PS XYZ:\> $Scope = Get-CMSecurityScope -Name "Scope1"
-PS XYZ:\> Get-CMApplication -Name "Application*" | Remove-CMObjectSecurityScope -Scope $Scope -Force
-```
+### Example 1: Remove a security scope from an application
 
-The first command gets the security scope object named Scope1 and stores the object in the $Scope variable.
+The first command gets the security scope named **Scope1** and stores the object in the **$Scope** variable.
 
-The second command gets all application objects that have a name that begins with Application and uses the pipeline operator to pass the objects to **Remove-CMObjectSecurityScope**.
-**Remove-CMObjectSecurityScope** removes the security scope stored in $Scope from each of the application objects.
-The *Force* parameter indicates that the user is not prompted before the security scope is removed.
+The second command gets all application objects whose name begins with "Central". It then uses the pipeline operator to pass the objects to **Remove-CMObjectSecurityScope**.
 
-### Example 2: Remove a security scope from application objects
+The last command removes the security scope from each of the application objects.
+The **Force** parameter indicates that you're not prompted before the cmdlet runs.
+
+```powershell
+$Scope = Get-CMSecurityScope -Name "Scope1"
+$apps = Get-CMApplication -Name "Central*"
+$app | Remove-CMObjectSecurityScope -Scope $Scope -Force
 ```
-PS XYZ:\> Remove-CMObjectSecurityScope -InputObject (Get-CMApplication -Name "Application*") -Name "Scope1" -Force
-```
-
-This command gets all application objects that have a name beginning with Application and removes the security scope named Scope1 from each application object.
-The *Force* parameter indicates that the user is not prompted before the security scope is removed.
 
 ### Example 3: Add a new security scope then remove all others from application object
 
+The first command gets a security scope in variable **TeamABCScope**.
+The second command gets an app object for **Edge Enterprise Stable**.
+The third command adds the new **TeamABCScope** to the app.
+The last command gets scopes from the app that aren't **TeamABCScope**, and then removes them all.
+
 ```powershell
-#Get Desired Security Scope
 $ScopeName = "Team ABC"
 $TeamABCScope = Get-CMSecurityScope | Where-Object {$_.CategoryName -eq $ScopeName}
 
-#Get Object to add scope too
-$Application = Get-CMApplication -Name "Edge Enterprise Stable"
+$app = Get-CMApplication -Name "Edge Enterprise Stable"
 
-#Add Scope to object
-Add-CMObjectSecurityScope -InputObject $Application -Scope $TeamABCScope
+Add-CMObjectSecurityScope -InputObject $app -Scope $TeamABCScope
 
-#Get Scopes on Application that're are NOT the one you just added, then cycle through and remove.
-foreach ($ExtraScope in (Get-CMObjectSecurityScope -InputObject $Application | Where-Object {$_.CategoryName -ne $ScopeName}))
-    {
-    Remove-CMObjectSecurityScope -InputObject $Application -Scope $ExtraScope -Force
-    }
+$scopes = Get-CMObjectSecurityScope -InputObject $app | Where-Object {$_.CategoryName -ne $ScopeName}
+foreach ( $ExtraScope in $scopes )
+  {
+  Remove-CMObjectSecurityScope -InputObject $app -Scope $ExtraScope -Force
+  }
 ```
 
 ## PARAMETERS
@@ -99,6 +99,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
+
 Forces the command to run without asking for user confirmation.
 
 ```yaml
@@ -130,7 +131,8 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-Specifies the ID of a security scope.
+
+Specify the ID of a security scope that's associated with a Configuration Manager object. This value is the `CategoryID` property, for example `SMS00UNA` for the **Default** scope.
 
 ```yaml
 Type: String
@@ -145,7 +147,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies an array of Configuration Manager objects associated with a security scope.
+
+Specify an array of Configuration Manager objects that are associated with a security scope. To get this object, use the **Get** cmdlet for the object type. For example, **Get-CMApplication** for app objects.
 
 ```yaml
 Type: IResultObject[]
@@ -160,7 +163,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies the name of a security scope.
+
+Specify the name of a security scope that's associated with a Configuration Manager object.
 
 ```yaml
 Type: String
@@ -175,7 +179,8 @@ Accept wildcard characters: False
 ```
 
 ### -Scope
-Specifies an array of security scopes.
+
+Specify an array of security scope objects to remove. To get this object use the [Get-CMSecurityScope](Get-CMSecurityScope.md) cmdlet.
 
 ```yaml
 Type: IResultObject[]
@@ -190,6 +195,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -226,9 +232,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject[]
+
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
@@ -239,6 +247,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Get-CMSecurityScope](Get-CMSecurityScope.md)
 
-[Set-CMObjectSecurityScope](Set-CMObjectSecurityScope.md)
+[Remove-CMSecurityScope](Remove-CMSecurityScope.md)
 
+[Remove-CMSecurityScopeFromAdministrativeUser](Remove-CMSecurityScopeFromAdministrativeUser.md)
 
+[Automate role-based administration with Windows PowerShell](/mem/configmgr/core/servers/deploy/configure/configure-role-based-administration#automate-with-windows-power-shell)

@@ -1,4 +1,4 @@
----
+﻿---
 description: Export a query from Configuration Manager.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -113,7 +113,7 @@ Specify the path to the exported file. The file extension is **.mof**. It can be
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: FileName, FilePath, Path
 
 Required: True
 Position: Named
@@ -224,6 +224,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ### System.Object

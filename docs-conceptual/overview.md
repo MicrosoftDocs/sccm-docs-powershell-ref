@@ -1,7 +1,7 @@
 ---
 title: Configuration Manager PowerShell cmdlets
 description: Manage your Configuration Manager hierarchy using Windows PowerShell. 
-ms.date: 12/01/2021
+ms.date: 12/16/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: overview
@@ -35,6 +35,12 @@ The easiest method to open PowerShell is directly from the Configuration Manager
 1. After Windows PowerShell loads, you'll see a prompt that contains your site code. For example, if the site code is "ABC", the prompt looks like: `PS ABC:\>`
 
 1. To verify it works, use the **Get-CMSite** cmdlet. This cmdlet returns information about the Configuration Manager site you're currently connected to and any child sites. For example, the site server name, installation director, site name, and version.
+
+> [!NOTE]
+> When you start PowerShell or the PowerShell ISE from the Configuration Manager console, it uses the **AllSigned** execution policy for the **Process** scope.<!-- 12618619 --> If this default secure configuration is too much for your environment, there are two options to work around it:
+>
+> - Change the execution policy with a command similar to the following example: `Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process`
+> - [Import the Configuration Manager PowerShell module](#import-the-configuration-manager-powershell-module).
 
 ## Import the Configuration Manager PowerShell module
 
@@ -73,7 +79,7 @@ Connect to Configuration Manager from an existing Windows PowerShell session by 
 1. If it's the first time importing the Configuration Manager module on this computer, you may need to create the site drive.<!-- SCCMDocs#1915 --> For example:
 
     ```powershell
-    New-PSDrive -Name "ABC" -PSProvider "AdminUI.PS.Provider\CMSite" -Root "siteserver.contoso.com" -Description "Primary site"
+    New-PSDrive -Name "ABC" -PSProvider "CMSite" -Root "siteserver.contoso.com" -Description "Primary site"
     ```
 
     > [!TIP]
@@ -152,6 +158,10 @@ The following cmdlets don't support PowerShell 7:
 - Export-CMPackage
 - Export-CMDriverPackage
 - Export-CMTaskSequence
+- Add-CMReportingServicePoint<!-- 12500019 -->
+- Get-CMReportingServicePoint
+- Remove-CMReportingServicePoint
+- Set-CMReportingServicePoint
 
 They require the .NET Framework instead of .NET Core that's used with PowerShell version 7.
 

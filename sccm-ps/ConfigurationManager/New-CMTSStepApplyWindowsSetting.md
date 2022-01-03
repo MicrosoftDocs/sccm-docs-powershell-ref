@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 08/11/2021
@@ -15,12 +15,11 @@ Create an **Apply Windows Settings** step, which you can add to a task sequence.
 ## SYNTAX
 
 ```
-New-CMTSStepApplyWindowsSetting [-InputLocale <String>] [-MaximumConnection <Int32>] -OrganizationName <String>
- [-Password <SecureString>] [-ProductKey <String>] [-ServerLicensing <ServerLicenseMode>]
- [-SystemLocale <String>] [-TimeZone <TimeZoneInfo>] [-UILanguage <String>] [-UILanguageFallback <String>]
- [-UserLocale <String>] -UserName <String> [-Condition <IResultObject[]>] [-ContinueOnError]
- [-Description <String>] [-Disable] -Name <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+New-CMTSStepApplyWindowsSetting [-InputLocale <String>] -OrganizationName <String> [-Password <SecureString>]
+ [-ProductKey <String>] [-SystemLocale <String>] [-TimeZone <TimeZoneInfo>] [-UILanguage <String>]
+ [-UILanguageFallback <String>] [-UserLocale <String>] -UserName <String> [-Condition <IResultObject[]>]
+ [-ContinueOnError] [-Description <String>] [-Disable] -Name <String> [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -165,22 +164,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -MaximumConnection
-
-Don't use this parameter. This setting only applies to legacy versions of Windows that are no longer supported.
-
-```yaml
-Type: Int32
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Name
 
 Specify a name for this step to identify it in the task sequence.
@@ -237,23 +220,6 @@ Specify the product key to use for the Windows installation on the destination c
 Type: String
 Parameter Sets: (All)
 Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ServerLicensing
-
-Don't use this parameter. This setting only applies to legacy versions of Windows that are no longer supported.
-
-```yaml
-Type: ServerLicenseMode
-Parameter Sets: (All)
-Aliases:
-Accepted values: NotSpecified, PerSeat, PerServer
 
 Required: False
 Position: Named

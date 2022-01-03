@@ -1,8 +1,7 @@
 ---
-description: Creates a collection for devices and adds the collection to the Configuration Manager hierarchy.
 external help file: AdminUI.PS.psm1-help.xml
 Module Name: ConfigurationManager
-ms.date: 05/05/2019
+ms.date: 12/29/2021
 schema: 2.0.0
 title: New-CMDeviceCollection
 ---
@@ -10,7 +9,8 @@ title: New-CMDeviceCollection
 # New-CMDeviceCollection
 
 ## SYNOPSIS
-Creates a collection for devices and adds the collection to the Configuration Manager hierarchy.
+
+Create a device collection.
 
 ## SYNTAX
 
@@ -36,21 +36,20 @@ New-CMDeviceCollection [-Comment <String>] -LimitingCollectionId <String> -Name 
 ```
 
 ## DESCRIPTION
-The **New-CMDeviceCollection** cmdlet creates a collection based on a specific limiting collection.
-The limiting collection determines which devices can be a member of the device collection that you create.
-For instance, when you use the All Systems collection as the limiting collection, the new collection can include any device in the Configuration Manager hierarchy.
-You specify the limiting collection by providing its name or ID.
 
-Devices are added to the collection by membership rules.
-To add members to the device collection use one of the following membership rule cmdlets:
+Use this cmdlet to create a device collection based on a specific limiting collection.
+The limiting collection determines which devices can be a member of the device collection that you create.
+For instance, when you use the **All Systems** collection as the limiting collection, the new collection can include any device in the Configuration Manager hierarchy.
+
+You can then add devices to the collection with membership rules.
+To add members to the device collection, use one of the following membership rule cmdlets:
 
 - [Add-CMDeviceCollectionDirectMembershipRule](Add-CMDeviceCollectionDirectMembershipRule.md)
 - [Add-CMDeviceCollectionExcludeMembershipRule](Add-CMDeviceCollectionExcludeMembershipRule.md)
 - [Add-CMDeviceCollectionIncludeMembershipRule](Add-CMDeviceCollectionIncludeMembershipRule.md)
 - [Add-CMDeviceCollectionQueryMembershipRule](Add-CMDeviceCollectionQueryMembershipRule.md)
 
-Collections represent logical groupings of resources, such as users and devices.
-For more information about Configuration Manager collections, see [Introduction to Collections in Configuration Manager](/mem/configmgr/core/clients/manage/collections/introduction-to-collections).
+For more information, see [How to create collections in Configuration Manager](/mem/configmgr/core/clients/manage/collections/create-collections).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
@@ -58,16 +57,20 @@ For more information about Configuration Manager collections, see [Introduction 
 ## EXAMPLES
 
 ### Example 1: Create a device collection
-```
-PS XYZ:\> New-CMDeviceCollection -Name "Windows 7" -LimitingCollectionName "All Systems"
-```
 
-This command creates a collection for all computers that run Windows� 7.
-The *LimitingCollectionName* parameter specifies that any device in the All Systems collection can be a member of the Windows� 7 collection.
+This command creates a collection for all computers that run **Windows 11**.
+The **LimitingCollectionName** parameter specifies that any device in the **All Systems** collection can be a member of the new collection.
+
+```powershell
+New-CMDeviceCollection -Name "Windows 11" -LimitingCollectionName "All Systems"
+```
 
 ## PARAMETERS
 
 ### -Comment
+
+Specify an optional comment to describe and identify this collection.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -81,8 +84,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies the input to this cmdlet.
-You can use this parameter, or you can pipe the input to this cmdlet.
+
+Specify an object for the limiting collection. To get this object, use the [Get-CMCollection](Get-CMCollection.md) or [Get-CMDeviceCollection](Get-CMDeviceCollection.md) cmdlets.
 
 ```yaml
 Type: IResultObject
@@ -97,6 +100,9 @@ Accept wildcard characters: False
 ```
 
 ### -LimitingCollectionId
+
+Specify the ID of the limiting collection. This value is the **CollectionID** property, for example, `XYZ00012` or `SMS00001`.
+
 ```yaml
 Type: String
 Parameter Sets: ById
@@ -110,6 +116,9 @@ Accept wildcard characters: False
 ```
 
 ### -LimitingCollectionName
+
+Specify the name of the limiting collection.
+
 ```yaml
 Type: String
 Parameter Sets: ByName
@@ -123,6 +132,9 @@ Accept wildcard characters: False
 ```
 
 ### -Name
+
+Specify the name for the new device collection.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -136,6 +148,9 @@ Accept wildcard characters: False
 ```
 
 ### -RefreshSchedule
+
+If you set the **RefreshType** parameter to either `Periodic` or `Both`, use this parameter to set the schedule. Specify a schedule object for when the site runs a full update of the collection membership. To get this object, use the [New-CMSchedule](New-CMSchedule.md) cmdlet.
+
 ```yaml
 Type: IResultObject
 Parameter Sets: (All)
@@ -149,6 +164,19 @@ Accept wildcard characters: False
 ```
 
 ### -RefreshType
+
+Specify how the collection membership is updated:
+
+- `Manual` (1): An administrator manually triggers a membership update in the Configuration Manager console or with the [Invoke-CMCollectionUpdate](Invoke-CMCollectionUpdate.md) cmdlet.
+- `Periodic` (2): The site does a full update on a schedule. It doesn't use incremental updates. If you don't specify a type, this value is the default.
+- `Continuous` (4): The site periodically evaluates new resources and then adds new members. This type is also known as an _incremental update_. It doesn't do a full update on a schedule.
+- `Both` (6): A combination of both `Periodic` and `Continuous`, with both incremental updates and a full update on a schedule.
+
+If you specify either `Periodic` or `Both`, use the **RefreshSchedule** parameter to set the schedule.
+
+> [!NOTE]
+> The `None` value (0) is functionally the same as `Manual`.
+
 ```yaml
 Type: CollectionRefreshType
 Parameter Sets: (All)
@@ -163,6 +191,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -199,13 +228,22 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
 
-[Introduction to Collections in Configuration Manager](/mem/configmgr/core/clients/manage/collections/introduction-to-collections)
-
 [Get-CMDeviceCollection](Get-CMDeviceCollection.md)
+
+[Set-CMCollection](Set-CMCollection.md)
+[Remove-CMCollection](Remove-CMCollection.md)
+
+[Invoke-CMCollectionUpdate](Invoke-CMCollectionUpdate.md)
+
+[New-CMUserCollection](New-CMUserCollection.md)
+
+[Introduction to collections in Configuration Manager](/mem/configmgr/core/clients/manage/collections/introduction-to-collections)

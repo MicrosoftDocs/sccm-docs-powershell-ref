@@ -1,8 +1,7 @@
 ---
-description: Adds a security scope to an administrative user or group in Configuration Manager.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 04/29/2019
+ms.date: 12/21/2021
 schema: 2.0.0
 title: Add-CMSecurityScopeToAdministrativeUser
 ---
@@ -10,7 +9,8 @@ title: Add-CMSecurityScopeToAdministrativeUser
 # Add-CMSecurityScopeToAdministrativeUser
 
 ## SYNOPSIS
-Adds a security scope to an administrative user or group in Configuration Manager.
+
+Add a security scope to a user or group.
 
 ## SYNTAX
 
@@ -69,11 +69,12 @@ Add-CMSecurityScopeToAdministrativeUser -AdministrativeUserName <String> -Securi
 ```
 
 ## DESCRIPTION
-The **Add-CMSecurityScopeToAdministrativeUser** cmdlet adds a security scope to an administrative user or administrative group in Configuration Manager.
 
-For more information about security scopes, see [Configuring Security for Configuration Manager](/mem/configmgr/core/plan-design/security/configure-security).
+Use this cmdlet to add a security scope to an administrative user or administrative group in Configuration Manager.
 
-You can specify an administrative user or group by name or by ID or you can use the use the [Get-CMAdministrativeUser](Get-CMAdministrativeUser.md) cmdlet to obtain a user or group object.
+For more information about security scopes, see [Fundamentals of role-based administration in Configuration Manager](/mem/configmgr/core/understand/fundamentals-of-role-based-administration).
+
+You can specify an administrative user or group by name or by ID or you can use the use the [Get-CMAdministrativeUser](Get-CMAdministrativeUser.md) cmdlet to obtain a user or group object. An _administrative user_ in Configuration Manager defines a local or domain user or group.
 You can specify a security scope to add by name or by ID or you can use the [Get-CMSecurityScope](Get-CMSecurityScope.md) cmdlet to obtain a security scope.
 
 > [!NOTE]
@@ -81,25 +82,19 @@ You can specify a security scope to add by name or by ID or you can use the [Get
 
 ## EXAMPLES
 
-### Example 1: Add a named security scope to a named administrative group
-```
-PS XYZ:\>Add-CMSecurityScopeToAdministrativeUser -AdministrativeUserName "Western Administrators" -SecurityScopeName "Scope22"
-```
+### Example 1: Add a custom security scope to a domain user group
 
-This command adds a security scope named Scope22 to an administrative group named Western Administrators.
+This command adds a security scope named **Scope22** for a domain group named **Western Administrators**. This command assumes that you already created the custom security scope and the administrative user.
 
-### Example 2: Add a security scope to an administrative group by using an ID
+```powershell
+Add-CMSecurityScopeToAdministrativeUser -AdministrativeUserName "Contoso\Western Administrators" -SecurityScopeName "Scope22"
 ```
-PS XYZ:\>Add-CMSecurityScopeToAdministrativeUser -AdministrativeUserId 345 -SecurityScopeId "SMS00067"
-```
-
-This command adds the security scope that has the ID SMS00067 to the administrative user that has the ID 345.
 
 ## PARAMETERS
 
 ### -AdministrativeUser
-Specifies an administrative user or administrative group object.
-To get an administrative user or administrative group object, use the [Get-CMAdministrativeUser](Get-CMAdministrativeUser.md) cmdlet.
+
+Specify an administrative user object to configure. To get this object, use the [Get-CMAdministrativeUser](Get-CMAdministrativeUser.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -114,7 +109,8 @@ Accept wildcard characters: False
 ```
 
 ### -AdministrativeUserId
-Specifies an ID of an administrative user or administrative group.
+
+Specify the ID of the administrative user to configure. This value is the `AdminID` property, which is an integer value. For example, `16777234`.
 
 ```yaml
 Type: Int32
@@ -129,7 +125,13 @@ Accept wildcard characters: False
 ```
 
 ### -AdministrativeUserName
-Specifies a name of an administrative user or administrative group.
+
+Specify the name of the administrative user to configure.
+
+You can use wildcard characters:
+
+- `*`: Multiple characters
+- `?`: Single character
 
 ```yaml
 Type: String
@@ -176,8 +178,8 @@ Accept wildcard characters: False
 ```
 
 ### -SecurityScope
-Specifies a security scope object.
-To obtain a security scope object, use the [Get-CMSecurityScope](Get-CMSecurityScope.md) cmdlet.
+
+Specify a security scope object to add. To get this object, use the [Get-CMSecurityScope](Get-CMSecurityScope.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -192,7 +194,8 @@ Accept wildcard characters: False
 ```
 
 ### -SecurityScopeId
-Specifies the ID of a security scope.
+
+Specify the ID of the security scope to add. This value is the `CategoryID` property, for example `SMS00UNA` for the **Default** scope.
 
 ```yaml
 Type: String
@@ -207,8 +210,8 @@ Accept wildcard characters: False
 ```
 
 ### -SecurityScopeName
-Specifies the name of a security scope.
-A security scope name can be Default or the name of a custom security scope.
+
+Specify the name of the security scope to add.
 
 ```yaml
 Type: String
@@ -223,6 +226,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -259,12 +263,16 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
+
+[Remove-CMSecurityScopeFromAdministrativeUser](Remove-CMSecurityScopeFromAdministrativeUser.md)
 
 [Add-CMSecurityRoleToAdministrativeUser](Add-CMSecurityRoleToAdministrativeUser.md)
 
@@ -272,6 +280,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Get-CMSecurityScope](Get-CMSecurityScope.md)
 
-[Remove-CMSecurityScopeFromAdministrativeUser](Remove-CMSecurityScopeFromAdministrativeUser.md)
-
-
+[Automate role-based administration with Windows PowerShell](/mem/configmgr/core/servers/deploy/configure/configure-role-based-administration#automate-with-windows-power-shell)

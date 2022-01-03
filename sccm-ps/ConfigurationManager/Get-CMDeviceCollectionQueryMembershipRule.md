@@ -1,8 +1,7 @@
 ﻿---
-description: Gets the query membership rules from one or more device collections in the Configuration Manager hierarchy.
 external help file: AdminUI.PS.psm1-help.xml
 Module Name: ConfigurationManager
-ms.date: 05/02/2019
+ms.date: 12/29/2021
 schema: 2.0.0
 title: Get-CMDeviceCollectionQueryMembershipRule
 ---
@@ -10,7 +9,8 @@ title: Get-CMDeviceCollectionQueryMembershipRule
 # Get-CMDeviceCollectionQueryMembershipRule
 
 ## SYNOPSIS
-Gets the query membership rules from one or more device collections in the Configuration Manager hierarchy.
+
+Get a query membership rule for a device collection.
 
 ## SYNTAX
 
@@ -31,28 +31,40 @@ Get-CMDeviceCollectionQueryMembershipRule -InputObject <IResultObject> [-RuleNam
 ```
 
 ## DESCRIPTION
-The **Get-CMDeviceCollectionQueryMembershipRule** cmdlet retrieves rules from the specified device collections.
-You can specify the device collections where the rule is applied by names, IDs, or an input object that represents the device collections.
-The query is specified by its ID or name.
 
-A query rule lets you dynamically update the membership of a collection based on a query that is run on a schedule.
-For more information about membership rules, see [Introduction to Collections in Configuration Manager](/mem/configmgr/core/clients/manage/collections/introduction-to-collections).
+Use this cmdlet to get one or more query membership rules for a device collection.
+A _query_ rule lets you dynamically update the membership of a collection based on a query that is run on a schedule.
+For more information, see [How to create collections in Configuration Manager](/mem/configmgr/core/clients/manage/collections/create-collections).
+
+For more information about membership rules, see [Introduction to collections in Configuration Manager](/mem/configmgr/core/clients/manage/collections/introduction-to-collections).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
-### Example 1: Get the query membership rules for a device collection
-```
-PS XYZ:\> Get-CMUserCollectionQueryMembershipRule -CollectionName "Remote Users" -RuleName "Remote Users By Domain"
+### Example 1: Get all query membership rules for the All Systems collection
+
+This command gets the query membership rules from the default device collection named **All Systems**.
+
+```powershell
+Get-CMDeviceCollectionQueryMembershipRule -CollectionName "All Systems"
 ```
 
-This command gets the query membership rule named Remote Users By Domain from device collection named Remote Users.
+### Example 2: View the query expression for a rule on the All Systems collection
+
+This command gets the query membership rule named **All Systems** from the **All Systems** collection and returns the query expression.
+
+```powershell
+Get-CMDeviceCollectionQueryMembershipRule -CollectionId "SMS00001" -RuleName "All Systems" | Select-Object QueryExpression
+```
 
 ## PARAMETERS
 
 ### -CollectionId
+
+Specify the ID of the device collection to get the rule. This value is the **CollectionID** property, for example, `XYZ00012` or `SMS00001`.
+
 ```yaml
 Type: String
 Parameter Sets: ById
@@ -66,6 +78,9 @@ Accept wildcard characters: False
 ```
 
 ### -CollectionName
+
+Specify the name of the device collection to get the rule.
+
 ```yaml
 Type: String
 Parameter Sets: ByName
@@ -79,8 +94,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies the input to this cmdlet.
-You can use this parameter, or you can pipe the input to this cmdlet.
+
+Specify an object for the device collection to get the rule. To get this object, use the [Get-CMCollection](Get-CMCollection.md) or [Get-CMDeviceCollection](Get-CMDeviceCollection.md) cmdlets.
 
 ```yaml
 Type: IResultObject
@@ -95,6 +110,9 @@ Accept wildcard characters: False
 ```
 
 ### -RuleName
+
+Specify the name of the query rule to get from the collection.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -113,21 +131,23 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
 
-[Introduction to Collections in Configuration Manager](/mem/configmgr/core/clients/manage/collections/introduction-to-collections)
+[Add-CMDeviceCollectionQueryMembershipRule](Add-CMDeviceCollectionQueryMembershipRule.md)
+[Remove-CMDeviceCollectionQueryMembershipRule](Remove-CMDeviceCollectionQueryMembershipRule.md)
 
-[Add-CMUserCollectionQueryMembershipRule](Add-CMUserCollectionQueryMembershipRule.md)
+[Get-CMCollectionQueryMembershipRule](Get-CMCollectionQueryMembershipRule.md)
 
-[Remove-CMUserCollectionQueryMembershipRule](Remove-CMUserCollectionQueryMembershipRule.md)
-
-[Get-CMUserCollection](Get-CMUserCollection.md)
-
+[Get-CMCollection](Get-CMCollection.md)
 [Get-CMDeviceCollection](Get-CMDeviceCollection.md)
 
+[Get-CMUserCollectionQueryMembershipRule](Get-CMUserCollectionQueryMembershipRule.md)
 
+[How to create collections in Configuration Manager](/mem/configmgr/core/clients/manage/collections/create-collections)

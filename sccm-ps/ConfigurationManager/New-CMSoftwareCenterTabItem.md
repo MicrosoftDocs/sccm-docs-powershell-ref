@@ -1,6 +1,7 @@
 ﻿---
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
+ms.date: 01/03/2022
 online version:
 schema: 2.0.0
 ---
@@ -9,7 +10,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-Use this cmdlet to create a custom Software Center tab.
+Create a custom Software Center tab.
 
 ## SYNTAX
 
@@ -20,7 +21,12 @@ New-CMSoftwareCenterTabItem -Name <String> -Url <Uri> [-DisableWildcardHandling]
 
 ## DESCRIPTION
 
-Starting in version 1906, use this cmdlet to create a custom Software Center tab.
+Use this cmdlet to create a custom Software Center tab.
+
+For more information, see [Plan for Software Center](/mem/configmgr/apps/plan-design/plan-for-software-center).
+
+> [!NOTE]
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
@@ -36,6 +42,8 @@ New-CMSoftwareCenterTabItem -Name "Helpdesk" -Url https://helpdesk.contoso.com
 
 ### -DisableWildcardHandling
 
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -49,6 +57,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
+
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -106,3 +116,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[Set-CMClientSettingSoftwareCenter](Set-CMClientSettingSoftwareCenter.md)
+
+[Plan for Software Center](/mem/configmgr/apps/plan-design/plan-for-software-center)

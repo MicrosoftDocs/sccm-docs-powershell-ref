@@ -1,8 +1,7 @@
 ---
-description: Changes settings for a Configuration Manager software update point.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/07/2019
+ms.date: 12/15/2021
 schema: 2.0.0
 title: Set-CMSoftwareUpdatePoint
 ---
@@ -10,7 +9,8 @@ title: Set-CMSoftwareUpdatePoint
 # Set-CMSoftwareUpdatePoint
 
 ## SYNOPSIS
-Changes settings for a Configuration Manager software update point.
+
+Configure a software update point.
 
 ## SYNTAX
 
@@ -34,31 +34,29 @@ Set-CMSoftwareUpdatePoint [-AnonymousWsusAccess] [-ClientConnectionType <ClientC
 ```
 
 ## DESCRIPTION
-The **Set-CMSoftwareUpdatePoint** cmdlet changes settings for a software update point in Configuration Manager.
 
-A software update point is a site server role that hosts software updates.
-Configuration Manager clients connect to a software update point to get available updates.
-The software update point interacts with Windows Server Update Services (WSUS) to configure update settings, request synchronization to the update source, and to synchronize software updates from the WSUS database.
+Use this cmdlet to change settings for a software update point site system role.
 
-You can use this cmdlet to configure the settings a software update point uses when connecting with clients and with a WSUS server.
-These settings include Network Load Balancing (NLB), a virtual IP address, Internet Information Services (IIS) port, and whether to use Secure Socket Locket Layer (SSL) to connect with WSUS.
+Configure the settings that a software update point uses when connecting with clients and with a WSUS server. To configure the site component for software update point, use the [Set-CMSoftwareUpdatePointComponent](Set-CMSoftwareUpdatePointComponent.md) cmdlet.
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
-### Example 1: Modify the server name
-```
-PS XYZ:\> Set-CMSoftwareUpdatePoint -SiteCode "CM1" -SiteSystemServerName "CMSoftwareUpdatePoint.TSQA.Contoso.com"
-```
+### Example 1: Modify the ports
 
-This command modifies the name for the site system server for the site code CM1.
+This command modifies the ports for the site system server for the site code CM1.
+
+```powershell
+Set-CMSoftwareUpdatePoint -SiteCode "CM1" -SiteSystemServerName "CMSoftwareUpdatePoint.TSQA.Contoso.com" -HttpPort 8530 -HttpsPort 8531
+```
 
 ## PARAMETERS
 
 ### -AnonymousWsusAccess
-Indicates that the software update point allows anonymous.
+
+Add this parameter to indicates that the software update point allows anonymous WSUS access.
 
 ```yaml
 Type: SwitchParameter
@@ -73,14 +71,8 @@ Accept wildcard characters: False
 ```
 
 ### -ClientConnectionType
-Specifies a connection type.
-Clients can connect to the software update point in several ways.
-You can configure the software update point to handle different types of connections differently by specifying the connection type.
-Valid values are:
 
-- Internet
-- InternetAndIntranet
-- Intranet
+Specify the type of the client connection.
 
 ```yaml
 Type: ClientConnectionTypes
@@ -112,6 +104,9 @@ Accept wildcard characters: False
 ```
 
 ### -EnableCloudGateway
+
+Add this parameter to allow cloud management gateway (CMG) traffic to this software update point.
+
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
@@ -125,7 +120,10 @@ Accept wildcard characters: False
 ```
 
 ### -EnableSsl
-Indicates that the cmdlet enables SSL for the update point.
+
+Set this parameter to `$true` to require SSL communication to the WSUS server.
+
+For more information, see [Configure a software update point to use TLS/SSL with a PKI certificate](/mem/configmgr/sum/get-started/software-update-point-ssl).
 
 ```yaml
 Type: Boolean
@@ -156,6 +154,9 @@ Accept wildcard characters: False
 ```
 
 ### -HttpPort
+
+Specify an integer value for the HTTP port to use for the WSUS server. By default, this value is `8530`.
+
 ```yaml
 Type: Int32
 Parameter Sets: (All)
@@ -169,6 +170,9 @@ Accept wildcard characters: False
 ```
 
 ### -HttpsPort
+
+Specify an integer value for the HTTPS port to use for the WSUS server. By default, this value is `8531`.
+
 ```yaml
 Type: Int32
 Parameter Sets: (All)
@@ -182,8 +186,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies a software update point object.
-To obtain a software update point object, use the [Get-CMSoftwareUpdatePoint](Get-CMSoftwareUpdatePoint.md) cmdlet.
+
+Specify a site system server object on which to configure the software update point role. To get this object, use the [Get-CMSiteSystemServer](Get-CMSiteSystemServer.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -198,8 +202,8 @@ Accept wildcard characters: False
 ```
 
 ### -NlbVirtualIP
-Specifies an IP address or host name.
-If this software update point uses load balancing, this is the NLB address.
+
+Failover support for a software update point in a network load balancing (NLB) cluster was deprecated in version 1702. For more information, see [Removed and deprecated features](/mem/configmgr/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md#unsupported-and-removed-features).
 
 ```yaml
 Type: String
@@ -230,7 +234,8 @@ Accept wildcard characters: False
 ```
 
 ### -PublicVirtualIP
-Specifies a public virtual IP address for a software update point that is connected to over the Internet.
+
+Specify a public virtual IP address for a software update point that's connected to the internet.
 
 ```yaml
 Type: String
@@ -245,7 +250,8 @@ Accept wildcard characters: False
 ```
 
 ### -SiteCode
-Specifies a site code for a Configuration Manager site.
+
+Specify the three-character code for the site that manages the system role for the software update point.
 
 ```yaml
 Type: String
@@ -260,7 +266,8 @@ Accept wildcard characters: False
 ```
 
 ### -SiteSystemServerName
-Specifies the name of the computer that hosts the software update point site system role.
+
+Specify the name of the site system server that hosts the software update point role.
 
 ```yaml
 Type: String
@@ -275,7 +282,8 @@ Accept wildcard characters: False
 ```
 
 ### -UseProxy
-Specifies whether a software update point can use a proxy.
+
+Set this parameter to `$true` to use a proxy server for software updates.
 
 ```yaml
 Type: Boolean
@@ -290,7 +298,8 @@ Accept wildcard characters: False
 ```
 
 ### -UseProxyForAutoDeploymentRule
-Indicates whether an auto deployment rule can use a proxy.
+
+When you use the **UseProxy** parameter, set this parameter to `$true` to use a proxy server when downloading content with an automatic deployment rule (ADR).
 
 ```yaml
 Type: Boolean
@@ -305,8 +314,8 @@ Accept wildcard characters: False
 ```
 
 ### -WsusAccessAccount
-Specifies an access account.
-Unless a software update point allows anonymous access, use this access account to connect to it.
+
+Specify the user name for the WSUS server connection account. This account provides authenticated access from the site to the WSUS server. For more information, see [Accounts used in Configuration Manager](/mem/configmgr/core/plan-design/hierarchy/accounts#software-update-point-connection-account).
 
 ```yaml
 Type: String
@@ -321,6 +330,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -357,10 +367,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ### IResultObject#SMS_SCI_SysResUse
+
 ## NOTES
+
+For more information on this return object and its properties, see [SMS_SCI_SysResUse server WMI class](/mem/configmgr/develop/reference/core/servers/configure/sms_sci_sysresuse-server-wmi-class).
 
 ## RELATED LINKS
 
@@ -369,3 +383,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-CMSoftwareUpdatePoint](Get-CMSoftwareUpdatePoint.md)
 
 [Remove-CMSoftwareUpdatePoint](Remove-CMSoftwareUpdatePoint.md)
+
+[Set-CMSoftwareUpdatePointComponent](Set-CMSoftwareUpdatePointComponent.md)

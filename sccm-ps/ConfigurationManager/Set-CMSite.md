@@ -1,8 +1,7 @@
 ---
-description: Configure a Configuration Manager site.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 12/23/2020
+ms.date: 12/28/2021
 schema: 2.0.0
 title: Set-CMSite
 ---
@@ -129,6 +128,14 @@ This command first uses the **Get-CMSite** cmdlet to get the **ADC** site. It th
 
 ```powershell
 Get-CMSite -SiteCode "ADC" | Set-CMSite -PromotePassiveSiteToActive
+```
+
+### Example 4: Add trusted root certification authorities (CA)
+
+This example adds the certificate in the exported file **cc.cer** to the **XYZ** site as a trusted root CA.
+
+```powershell
+Set-CMSite -SiteCode "XYZ" -AddCertificateByPath "D:\Secure\Certs\cc.cer"
 ```
 
 ## PARAMETERS
@@ -330,7 +337,9 @@ Accept wildcard characters: False
 
 ### -EnableWakeOnLan
 
-Indicates whether to send Wake On LAN packets for scheduled activities such as deployments of software updates.
+This parameter is for an earlier version of the feature. Instead, use the client settings for wake on LAN with the [Set-CMClientSettingPowerManagement](Set-CMClientSettingPowerManagement.md) cmdlet.
+
+For more information, see [How to configure Wake on LAN in Configuration Manager](/mem/configmgr/core/clients/deploy/configure-wake-on-lan).
 
 ```yaml
 Type: Boolean
@@ -442,7 +451,9 @@ Accept wildcard characters: False
 
 ### -MaximumNumberOfSendingWakeupPacketBeforePausing
 
-Specifies the maximum number of wake up packets transmitted by this site server before pausing.
+This parameter is for an earlier version of the feature. Instead, use the client settings for wake on LAN with the [Set-CMClientSettingPowerManagement](Set-CMClientSettingPowerManagement.md) cmdlet.
+
+For more information, see [How to configure Wake on LAN in Configuration Manager](/mem/configmgr/core/clients/deploy/configure-wake-on-lan).
 
 ```yaml
 Type: Int32
@@ -506,7 +517,7 @@ Accept wildcard characters: False
 
 ### -PromotePassiveSiteToActive
 
-Starting in version 2002, use this parameter to promote a site server in passive mode to the active site server. For more information, see [Site server high availability in Configuration Manager](/mem/configmgr/core/servers/deploy/configure/site-server-high-availability).
+Use this parameter to promote a site server in passive mode to the active site server. For more information, see [Site server high availability in Configuration Manager](/mem/configmgr/core/servers/deploy/configure/site-server-high-availability).
 
 ```yaml
 Type: SwitchParameter
@@ -603,7 +614,7 @@ Accept wildcard characters: False
 
 ### -RetryInstallPassiveSite
 
-Starting in version 2002, use this parameter to retry the installation for a site server in passive mode that previously failed.
+Use this parameter to retry the installation for a site server in passive mode that previously failed.
 
 ```yaml
 Type: SwitchParameter
@@ -635,7 +646,9 @@ Accept wildcard characters: False
 
 ### -RetryNumberOfSendingWakeupPacketTransmission
 
-Specifies the number of times a wake up packet is sent to a target computer.
+This parameter is for an earlier version of the feature. Instead, use the client settings for wake on LAN with the [Set-CMClientSettingPowerManagement](Set-CMClientSettingPowerManagement.md) cmdlet.
+
+For more information, see [How to configure Wake on LAN in Configuration Manager](/mem/configmgr/core/clients/deploy/configure-wake-on-lan).
 
 ```yaml
 Type: Int32
@@ -650,6 +663,11 @@ Accept wildcard characters: False
 ```
 
 ### -SendingWakeupPacketBeforePausingWaitSec
+
+This parameter is for an earlier version of the feature. Instead, use the client settings for wake on LAN with the [Set-CMClientSettingPowerManagement](Set-CMClientSettingPowerManagement.md) cmdlet.
+
+For more information, see [How to configure Wake on LAN in Configuration Manager](/mem/configmgr/core/clients/deploy/configure-wake-on-lan).
+
 ```yaml
 Type: Int32
 Parameter Sets: (All)
@@ -663,6 +681,11 @@ Accept wildcard characters: False
 ```
 
 ### -SendingWakeupPacketTransmissionDelayMins
+
+This parameter is for an earlier version of the feature. Instead, use the client settings for wake on LAN with the [Set-CMClientSettingPowerManagement](Set-CMClientSettingPowerManagement.md) cmdlet.
+
+For more information, see [How to configure Wake on LAN in Configuration Manager](/mem/configmgr/core/clients/deploy/configure-wake-on-lan).
+
 ```yaml
 Type: Int32
 Parameter Sets: (All)
@@ -676,6 +699,11 @@ Accept wildcard characters: False
 ```
 
 ### -SendingWakeupPacketTransmissionOffsetMins
+
+This parameter is for an earlier version of the feature. Instead, use the client settings for wake on LAN with the [Set-CMClientSettingPowerManagement](Set-CMClientSettingPowerManagement.md) cmdlet.
+
+For more information, see [How to configure Wake on LAN in Configuration Manager](/mem/configmgr/core/clients/deploy/configure-wake-on-lan).
+
 ```yaml
 Type: Int32
 Parameter Sets: (All)
@@ -743,7 +771,9 @@ Accept wildcard characters: False
 
 ### -ThreadNumberOfSendingWakeupPacket
 
-Specifies the number of threads a site server uses when sending wake up packets.
+This parameter is for an earlier version of the feature. Instead, use the client settings for wake on LAN with the [Set-CMClientSettingPowerManagement](Set-CMClientSettingPowerManagement.md) cmdlet.
+
+For more information, see [How to configure Wake on LAN in Configuration Manager](/mem/configmgr/core/clients/deploy/configure-wake-on-lan).
 
 ```yaml
 Type: Int32
@@ -872,7 +902,9 @@ Accept wildcard characters: False
 
 ### -WakeOnLanType
 
-Specifies the type of Wake On LAN packet to use.
+This parameter is for an earlier version of the feature. Instead, use the client settings for wake on LAN with the [Set-CMClientSettingPowerManagement](Set-CMClientSettingPowerManagement.md) cmdlet.
+
+For more information, see [How to configure Wake on LAN in Configuration Manager](/mem/configmgr/core/clients/deploy/configure-wake-on-lan).
 
 ```yaml
 Type: WakeOnLanType
@@ -925,6 +957,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ## NOTES

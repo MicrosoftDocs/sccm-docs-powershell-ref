@@ -1,4 +1,4 @@
----
+﻿---
 description: Imports Configuration Manager configuration items.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -97,7 +97,7 @@ Specifies an array of names of cabinet (cab) files.
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases:
+Aliases: FilePath, ImportFilePath, Path, FileNames, FilePaths, ImportFilePaths, Paths
 
 Required: True
 Position: Named
@@ -181,6 +181,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
+
 ## OUTPUTS
 
 ### System.Object

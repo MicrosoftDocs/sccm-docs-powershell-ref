@@ -342,7 +342,7 @@ Accept wildcard characters: False
 
 ### -OffsetDay
 
-Starting in version 1906, use this parameter to configure an offset such as monthly by weekday.
+Use this parameter to configure an offset such as monthly by weekday.
 
 ```yaml
 Type: Int32

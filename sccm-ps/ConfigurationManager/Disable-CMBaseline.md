@@ -1,8 +1,7 @@
 ---
-description: Disables configuration baselines.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 04/29/2019
+ms.date: 12/28/2021
 schema: 2.0.0
 title: Disable-CMBaseline
 ---
@@ -10,7 +9,8 @@ title: Disable-CMBaseline
 # Disable-CMBaseline
 
 ## SYNOPSIS
-Disables configuration baselines.
+
+Disable a configuration baseline.
 
 ## SYNTAX
 
@@ -33,8 +33,8 @@ Disable-CMBaseline [-Name] <String> [-DisableWildcardHandling] [-ForceWildcardHa
 ```
 
 ## DESCRIPTION
-The **Disable-CMBaseline** cmdlet disables one or more configuration baselines in Configuration Manager.
-After you disable a configuration baseline, Configuration Manager no longer evaluates it for compliance on client computers.
+
+Use this cmdlet to disable a configuration baseline. After you disable a configuration baseline, Configuration Manager clients don't evaluate it for compliance.
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
@@ -42,11 +42,12 @@ After you disable a configuration baseline, Configuration Manager no longer eval
 ## EXAMPLES
 
 ### Example 1: Disable a configuration baseline
-```
-PS XYZ:\>Disable-CMBaseline -Name "BLconfig01"
-```
 
-This command disables the configuration baseline named BLconfig01.
+This command disables the configuration baseline named **BLconfig01**.
+
+```powershell
+Disable-CMBaseline -Name "BLconfig01"
+```
 
 ## PARAMETERS
 
@@ -83,7 +84,8 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-Specifies an array of IDs of configuration baselines.
+
+Specify the **CI_ID** of the configuration baseline to disable. For example, `16777516`.
 
 ```yaml
 Type: Int32
@@ -98,8 +100,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies a **CMBaseline** object.
-To obtain a **CMBaseline** object, use the [Get-CMBaseline](Get-CMBaseline.md) cmdlet.
+
+Specify a configuration baseline object to disable. To get this object, use the [Get-CMBaseline](Get-CMBaseline.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -114,7 +116,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies an array of names of configuration baselines.
+
+Specify the name of the configuration baseline to disable.
 
 ```yaml
 Type: String
@@ -129,6 +132,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -165,9 +169,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
@@ -189,5 +195,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-CMBaselineXMLDefinition](Get-CMBaselineXMLDefinition.md)
 
 [Get-CMBaselineSummarizationSchedule](Get-CMBaselineSummarizationSchedule.md)
-
-

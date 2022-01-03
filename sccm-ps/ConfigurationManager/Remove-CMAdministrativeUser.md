@@ -1,8 +1,7 @@
 ---
-description: Removes an administrative user.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/07/2019
+ms.date: 12/21/2021
 schema: 2.0.0
 title: Remove-CMAdministrativeUser
 ---
@@ -10,7 +9,8 @@ title: Remove-CMAdministrativeUser
 # Remove-CMAdministrativeUser
 
 ## SYNOPSIS
-Removes an administrative user.
+
+Remove an administrative user.
 
 ## SYNTAX
 
@@ -33,29 +33,23 @@ Remove-CMAdministrativeUser [-Force] -Id <String> [-DisableWildcardHandling] [-F
 ```
 
 ## DESCRIPTION
-The **Remove-CMAdministrativeUser** cmdlet removes one or more Configuration Manager administrative users.
+
+Use this cmdlet to remove a Configuration Manager administrative user. An _administrative user_ in Configuration Manager defines a local or domain user or group.
 When you remove an administrative user, Configuration Manager revokes the access of the administrative user to manage Configuration Manager.
+For more information about security roles, see [Fundamentals of role-based administration in Configuration Manager](/mem/configmgr/core/understand/fundamentals-of-role-based-administration).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
-### Example 1: SearchByValueMandatory, pipeline
-```
-PS XYZ:\> Get-CMAdministrativeUser -Name contoso\admin1 -RoleName "Application Administrator" | Remove-CMAdministrativeUser -Force
-```
+### Example 1: Remove a user
 
-This command gets the administrative user object named AdminUser1 who is a member of the Application Administrator role and uses the pipeline operator to pass the object to **Remove-CMAdministrativeUser**, which removes the adminsitrative user.
-Specifying the *Force* parameter indicates that the user is not prompted for confirmation prior to the user being removed.
+This command gets the administrative user object named Admin1. It uses the pipeline operator to pass the object to **Remove-CMAdministrativeUser**, which removes the administrative user. With the **Force** parameter, you're not prompted for confirmation before it runs.
 
-### Example 2: SearchByName
+```powershell
+Get-CMAdministrativeUser -Name "contoso\admin1" | Remove-CMAdministrativeUser -Force
 ```
-PS XYZ:\> Remove-CMAdministrativeUser -Name contoso\admin1 -RoleName "Application Administrator" -Force
-```
-
-This command removes the administrative user named AdminUser1 who is a member of the Application Administrator role.
-Specifying the *Force* parameter indicates that the user is not prompted for confirmation prior to the user being removed.
 
 ## PARAMETERS
 
@@ -76,6 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
+
 Forces the command to run without asking for user confirmation.
 
 ```yaml
@@ -107,7 +102,8 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-Specifies the ID of an administrative user.
+
+Specify the ID of the administrative user to remove. This value is the `AdminID` property. It's an integer value, for example `16777234`.
 
 ```yaml
 Type: String
@@ -122,8 +118,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies an administrative user object.
-To obtain an administrative user object, use the [Get-CMAdministrativeUser](Get-CMAdministrativeUser.md) cmdlet.
+
+Specify an administrative user object to remove. To get this object, use the [Get-CMAdministrativeUser](Get-CMAdministrativeUser.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -138,7 +134,13 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies an array of administrative user names in the format of \<domain\>\\\<user\>.
+
+Specify the name of the administrative user to remove. For example, `domain\username` or `domain\groupname`
+
+You can use wildcard characters:
+
+- `*`: Multiple characters
+- `?`: Single character
 
 ```yaml
 Type: String
@@ -153,6 +155,7 @@ Accept wildcard characters: True
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -189,9 +192,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
@@ -200,4 +205,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [New-CMAdministrativeUser](New-CMAdministrativeUser.md)
 
+[Remove-CMSecurityRoleFromAdministrativeUser](Remove-CMSecurityRoleFromAdministrativeUser.md)
 
+[Remove-CMSecurityScopeFromAdministrativeUser](Remove-CMSecurityScopeFromAdministrativeUser.md)
+
+[Automate role-based administration with Windows PowerShell](/mem/configmgr/core/servers/deploy/configure/configure-role-based-administration#automate-with-windows-power-shell)

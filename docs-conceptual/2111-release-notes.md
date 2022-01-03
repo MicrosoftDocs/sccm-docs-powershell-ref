@@ -2,7 +2,7 @@
 title: Version 2111 release notes
 titleSuffix: Configuration Manager
 description: Release notes for the changes to PowerShell cmdlets in Configuration Manager version 2111.
-ms.date: 12/01/2021
+ms.date: 12/30/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -32,45 +32,45 @@ For more information, see [about_PSModulePath](/powershell/module/microsoft.powe
 ## New cmdlets
 
 <!-- - [<cmdlet>](/powershell/module/configurationmanager/): -->
-- Get-CMDeploymentTypeRequirement<!-- ](/powershell/module/configurationmanager/Get-CMDeploymentTypeRequirement) -->: Use this cmdlet to get the requirement rules for the specified deployment type. You can use the returned object to add the same rules to another deployment type.
+- [Get-CMDeploymentTypeRequirement](/powershell/module/configurationmanager/Get-CMDeploymentTypeRequirement): Use this cmdlet to get the requirement rules for the specified deployment type. You can use the returned object to add the same rules to another deployment type.
 
-- Remove-CMSoftwareUpdateFromPackage<!-- ](/powershell/module/configurationmanager/Remove-CMSoftwareUpdateFromPackage) -->: Use this cmdlet to remove the specified software update from a package.
+- [Remove-CMSoftwareUpdateFromPackage](/powershell/module/configurationmanager/Remove-CMSoftwareUpdateFromPackage): Use this cmdlet to remove the specified software update from a package.
 
-- Set-CMApplicationSupersedence<!-- ](/powershell/module/configurationmanager/Set-CMApplicationSupersedence) -->: Use this cmdlet to set deployment type supersedence for the specified application. <!-- ALSO LINK IN DEPRECATED SECTION -->
+- [Set-CMApplicationSupersedence](/powershell/module/configurationmanager/Set-CMApplicationSupersedence): Use this cmdlet to set deployment type supersedence for the specified application.
 
 ### Orchestration groups
 
 For more information about this feature, see [Orchestration groups in Configuration Manager](/mem/configmgr/sum/deploy-use/orchestration-groups).
 
-- Get-CMOrchestrationGroup<!-- ](/powershell/module/configurationmanager/Get-CMOrchestrationGroup) -->: Use this cmdlet to get an orchestration group object by name or ID. You can use this object to start, remove, or configure the orchestration group.
+- [Get-CMOrchestrationGroup](/powershell/module/configurationmanager/Get-CMOrchestrationGroup): Use this cmdlet to get an orchestration group object by name or ID. You can use this object to start, remove, or configure the orchestration group.
 
-- Invoke-CMOrchestrationGroup<!-- ](/powershell/module/configurationmanager/Invoke-CMOrchestrationGroup) -->: Use this cmdlet to start orchestration.
+- [Invoke-CMOrchestrationGroup](/powershell/module/configurationmanager/Invoke-CMOrchestrationGroup): Use this cmdlet to start orchestration.
 
-- New-CMOrchestrationGroup<!-- ](/powershell/module/configurationmanager/New-CMOrchestrationGroup) -->: Use this cmdlet to create a new orchestration group.
+- [New-CMOrchestrationGroup](/powershell/module/configurationmanager/New-CMOrchestrationGroup): Use this cmdlet to create a new orchestration group.
 
-- Remove-CMOrchestrationGroup<!-- ](/powershell/module/configurationmanager/Remove-CMOrchestrationGroup) -->: Use this cmdlet to remove the specified orchestration group.
+- [Remove-CMOrchestrationGroup](/powershell/module/configurationmanager/Remove-CMOrchestrationGroup): Use this cmdlet to remove the specified orchestration group.
 
-- Set-CMOrchestrationGroup<!-- ](/powershell/module/configurationmanager/Set-CMOrchestrationGroup) -->: Use this cmdlet to configure an orchestration group.
+- [Set-CMOrchestrationGroup](/powershell/module/configurationmanager/Set-CMOrchestrationGroup): Use this cmdlet to configure an orchestration group.
 
 ### Role-based administration
 
 For more information on security roles and permissions, see [Fundamentals of role-based administration in Configuration Manager](/mem/configmgr/core/understand/fundamentals-of-role-based-administration).
 
-- Get-CMSecurityRolePermission<!-- ](/powershell/module/configurationmanager/Get-CMSecurityRolePermission) -->: Use this cmdlet to get the permissions for the specified security role.
+- [Get-CMSecurityRolePermission](/powershell/module/configurationmanager/Get-CMSecurityRolePermission): Use this cmdlet to get the permissions for the specified security role.
 
-- Set-CMSecurityRolePermission<!-- ](/powershell/module/configurationmanager/Set-CMSecurityRolePermission) -->: Use this cmdlet to configure a security role with specific permissions.
+- [Set-CMSecurityRolePermission](/powershell/module/configurationmanager/Set-CMSecurityRolePermission): Use this cmdlet to configure a security role with specific permissions.
 
 ### Folder management
 
 For more information on folders, see [How to use the Configuration Manager console](/mem/configmgr/core/servers/manage/admin-console#nodes).
 
-- Get-CMFolder<!-- ](/powershell/module/configurationmanager/Get-CMFolder) -->: Use this cmdlet to get all customized folders or folders from the specified parent path.
+- [Get-CMFolder](/powershell/module/configurationmanager/Get-CMFolder): Use this cmdlet to get all customized folders or folders from the specified parent path.
 
-- New-CMFolder<!-- ](/powershell/module/configurationmanager/New-CMFolder) -->: Use this cmdlet to create a new folder under the specified parent folder path.
+- [New-CMFolder](/powershell/module/configurationmanager/New-CMFolder): Use this cmdlet to create a new folder under the specified parent folder path.
 
-- Remove-CMFolder<!-- ](/powershell/module/configurationmanager/Remove-CMFolder) -->: Use this cmdlet to remove the specified folder.
+- [Remove-CMFolder](/powershell/module/configurationmanager/Remove-CMFolder): Use this cmdlet to remove the specified folder.
 
-- Set-CMFolder<!-- ](/powershell/module/configurationmanager/Set-CMFolder) -->: Use this cmdlet to configure the specified folder. For example, rename it or move it to another folder.
+- [Set-CMFolder](/powershell/module/configurationmanager/Set-CMFolder): Use this cmdlet to configure the specified folder. For example, rename it or move it to another folder.
 
 ## Deprecated and removed cmdlets
 
@@ -78,14 +78,14 @@ The following cmdlets are deprecated and may be removed in a future release:
 
 | Deprecated cmdlet | Replacement |
 |---------|---------|
-| Add-CMDeploymentTypeSupersedence | Set-CMApplicationSupersedence<!-- ](/powershell/module/configurationmanager/Set-CMApplicationSupersedence) --> |
-| Remove-CMDeploymentTypeSupersedence | Set-CMApplicationSupersedence<!-- ](/powershell/module/configurationmanager/Set-CMApplicationSupersedence) --> |
-| Set-CMDeploymentTypeSupersedence | Set-CMApplicationSupersedence<!-- ](/powershell/module/configurationmanager/Set-CMApplicationSupersedence) --> |
+| Add-CMDeploymentTypeSupersedence | [Set-CMApplicationSupersedence](/powershell/module/configurationmanager/Set-CMApplicationSupersedence) |
+| Remove-CMDeploymentTypeSupersedence | [Set-CMApplicationSupersedence](/powershell/module/configurationmanager/Set-CMApplicationSupersedence) |
+| Set-CMDeploymentTypeSupersedence | [Set-CMApplicationSupersedence](/powershell/module/configurationmanager/Set-CMApplicationSupersedence) |
 
 The following cmdlets are no longer available because the underlying feature is no longer supported:
 
 - Get-CMTSStepConvertDisk
-- New-CMTSStepConverDisk
+- New-CMTSStepConvertDisk
 - Remove-CMTSStepConvertDisk
 - Set-CMTSStepConvertDisk
 

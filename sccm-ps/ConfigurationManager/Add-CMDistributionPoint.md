@@ -765,7 +765,10 @@ Accept wildcard characters: False
 ```
 
 ### -SiteCode
-Specifies the site code for the Configuration Manager site that hosts this site system role.
+
+Specify the three-character code for the site that hosts this site system role.
+
+Starting in version 2111, you can't specify the central administration site (CAS) for this parameter, which doesn't support any client-facing site system roles.
 
 ```yaml
 Type: String
@@ -924,9 +927,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ### IResultObject#SMS_SCI_SysResUse
+
 ## NOTES
 
 For more information on this return object and its properties, see [SMS_SCI_SysResUse server WMI class](/mem/configmgr/develop/reference/core/servers/configure/sms_sci_sysresuse-server-wmi-class).

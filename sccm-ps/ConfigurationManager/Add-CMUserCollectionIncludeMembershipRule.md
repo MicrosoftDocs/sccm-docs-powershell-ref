@@ -1,8 +1,7 @@
 ---
-description: Adds an include membership rule to one or more Configuration Manager user collections.
 external help file: AdminUI.PS.psm1-help.xml
 Module Name: ConfigurationManager
-ms.date: 04/29/2019
+ms.date: 12/30/2021
 schema: 2.0.0
 title: Add-CMUserCollectionIncludeMembershipRule
 ---
@@ -10,7 +9,8 @@ title: Add-CMUserCollectionIncludeMembershipRule
 # Add-CMUserCollectionIncludeMembershipRule
 
 ## SYNOPSIS
-Adds an include membership rule to one or more Configuration Manager user collections.
+
+Add an include membership rule to a user collection.
 
 ## SYNTAX
 
@@ -69,28 +69,37 @@ Add-CMUserCollectionIncludeMembershipRule -InputObject <IResultObject> -IncludeC
 ```
 
 ## DESCRIPTION
-The **Add-CMUserCollectionIncludeMembershipRule** cmdlet adds a rule that includes the members of another collection in the user collections where the rule is applied.
-You can specify the user collections where the rule is applied by using their names, IDs, or by specifying an object that represents the collections.
-You can specify the collection whose members are included by using its name, ID, or an object that represents the collection.
+
+Use this cmdlet to add an include membership rule to a user collection.
+An _include_ membership rule includes the members of another collection to the user collection where the rule is applied.
+
+You can't add membership rules to default collections. Any collection that you target should have an ID that starts with the site code, not `SMS`. You can include a default collection, so the ID of an included collection can start with `SMS`.
 
 Configuration Manager dynamically updates the membership of the user collection on a schedule if the membership of the included collection changes.
-For more information on these rules, see [Introduction to Collections in Configuration Manager](/mem/configmgr/core/clients/manage/collections/introduction-to-collections).
+
+When you add an include membership rule to a collection, resources may become members of the collection. This action can cause any software or configuration deployment to apply to users in the included collection.
+
+For more information, see [How to create collections in Configuration Manager](/mem/configmgr/core/clients/manage/collections/create-collections).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
-### Example 1: Add an include membership rule to a user collection
-```
-PS XYZ:\>Add-CMUserCollectionIncludeMembershipRule -CollectionId "9990000D" -IncludeCollectionId "SMSDM001"
-```
+### Example 1: Add an include membership rule
 
-This command adds an include membership rule that has the ID SMSDM001 to the Configuration Manager user collection that has the ID 9990000D.
+This command adds the user collection named **All Users** with an include membership rule. The rule is added to the user collection named **Users**.
+
+```powershell
+Add-CMUserCollectionIncludeMembershipRule -CollectionName "Users" -IncludeCollectionName "All Users"
+```
 
 ## PARAMETERS
 
 ### -CollectionId
+
+Specify the ID of the user collection to add the rule. This value is the **CollectionID** property, for example, `XYZ00012`. Since default collections don't have include membership rules, this ID starts with the site code and not `SMS`.
+
 ```yaml
 Type: String
 Parameter Sets: ByIdAndValue, ByIdAndId, ByIdAndName
@@ -104,6 +113,9 @@ Accept wildcard characters: False
 ```
 
 ### -CollectionName
+
+Specify the name of the user collection to add the rule.
+
 ```yaml
 Type: String
 Parameter Sets: ByNameAndName, ByNameAndValue, ByNameAndId
@@ -117,6 +129,9 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeCollection
+
+Specify an object for the included collection to add to the rule. To get this object, use the [Get-CMCollection](Get-CMCollection.md) or [Get-CMUserCollection](Get-CMUserCollection.md) cmdlets.
+
 ```yaml
 Type: IResultObject
 Parameter Sets: ByNameAndValue, ByIdAndValue, ByValueAndValue
@@ -130,6 +145,9 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeCollectionId
+
+Specify the ID of the included collection to add to the rule. This value is the **CollectionID** property, for example, `XYZ00012`. You can include default collections, so this value can start with either the site code or `SMS`.
+
 ```yaml
 Type: String
 Parameter Sets: ByNameAndId, ByIdAndId, ByValueAndId
@@ -143,6 +161,9 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeCollectionName
+
+Specify the name of the included collection to add to the rule.
+
 ```yaml
 Type: String
 Parameter Sets: ByNameAndName, ByIdAndName, ByValueAndName
@@ -156,8 +177,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies the input to this cmdlet.
-You can use this parameter, or you can pipe the input to this cmdlet.
+
+Specify an object for the user collection to add the rule. To get this object, use the [Get-CMCollection](Get-CMCollection.md) or [Get-CMUserCollection](Get-CMUserCollection.md) cmdlets.
 
 ```yaml
 Type: IResultObject
@@ -188,6 +209,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -224,15 +246,21 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
 
+[Get-CMUserCollectionIncludeMembershipRule](Get-CMUserCollectionIncludeMembershipRule.md)
+[Remove-CMUserCollectionIncludeMembershipRule](Remove-CMUserCollectionIncludeMembershipRule.md)
+
+[Get-CMCollection](Get-CMCollection.md)
 [Get-CMUserCollection](Get-CMUserCollection.md)
 
-[Get-CMUserCollectionIncludeMembershipRule](Get-CMUserCollectionIncludeMembershipRule.md)
+[Add-CMDeviceCollectionIncludeMembershipRule](Add-CMDeviceCollectionIncludeMembershipRule.md)
 
-[Remove-CMUserCollectionIncludeMembershipRule](Remove-CMUserCollectionIncludeMembershipRule.md)
+[How to create collections in Configuration Manager](/mem/configmgr/core/clients/manage/collections/create-collections)

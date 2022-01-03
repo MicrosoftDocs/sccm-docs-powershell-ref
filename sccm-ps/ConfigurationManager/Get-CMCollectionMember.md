@@ -1,8 +1,7 @@
 ﻿---
-description: Get members of a collection.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 10/30/2020
+ms.date: 12/29/2021
 schema: 2.0.0
 title: Get-CMCollectionMember
 ---
@@ -11,7 +10,7 @@ title: Get-CMCollectionMember
 
 ## SYNOPSIS
 
-Get members of a collection.
+Get members of a device or user collection.
 
 ## SYNTAX
 
@@ -35,7 +34,9 @@ Get-CMCollectionMember -InputObject <IResultObject> [-Name <String>] [-ResourceI
 
 ## DESCRIPTION
 
-The **Get-CMCollectionMember** cmdlet gets members of a Configuration Manager collection. Collections can include devices or users, but not both. When you query a collection, this cmdlet returns objects for all members. You can filter the results based on name or ID. Use this cmdlet to scope a query for devices or users to a specific collection.
+Use this cmdlet to get members of a collection. Collections can include devices or users, but not both. When you query a collection, this cmdlet returns objects for all members.
+
+For more information, see [Introduction to collections in Configuration Manager](/mem/configmgr/core/clients/manage/collections/introduction-to-collections).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
@@ -44,7 +45,7 @@ The **Get-CMCollectionMember** cmdlet gets members of a Configuration Manager co
 
 ### Example 1: Get a member of a collection by using the pipeline operator
 
-This command first uses the **Get-CMCollection** cmdlet to get the collection object named **UserCol1**. It then uses the pipeline operator to pass the object to **Get-CMCollectionMember**, which gets all members in UserCol1. Finally, this example uses the **Select-Object** cmdlet to only display the member names.
+This command first uses the **Get-CMCollection** cmdlet to get the collection object named **UserCol1**. It then uses the pipeline operator to pass the object to **Get-CMCollectionMember**, which gets all members in the collection. Finally, this example uses the **Select-Object** cmdlet to only display the member names.
 
 ```powershell
 Get-CMCollection -Name "UserCol1" | Get-CMCollectionMember | Select-Object Name
@@ -219,19 +220,26 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
 
+[Copy-CMCollection](Copy-CMCollection.md)
+[Export-CMCollection](Export-CMCollection.md)
 [Get-CMCollection](Get-CMCollection.md)
+[Get-CMCollectionSetting](Get-CMCollectionSetting.md)
+[Import-CMCollection](Import-CMCollection.md)
+[Invoke-CMCollectionUpdate](Invoke-CMCollectionUpdate.md)
+[New-CMCollection](New-CMCollection.md)
+[Remove-CMCollection](Remove-CMCollection.md)
+[Set-CMCollection](Set-CMCollection.md)
 
 [Get-CMDeviceCollection](Get-CMDeviceCollection.md)
-
 [Get-CMUserCollection](Get-CMUserCollection.md)
 
-[Get-CMDevice](Get-CMDevice.md)
-
-[Get-CMResource](Get-CMResource.md)
+[Introduction to collections in Configuration Manager](/mem/configmgr/core/clients/manage/collections/introduction-to-collections)

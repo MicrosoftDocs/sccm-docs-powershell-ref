@@ -1,8 +1,7 @@
 ---
-description: Adds a security role to an administrative user or group in Configuration Manager.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 04/29/2019
+ms.date: 12/21/2021
 schema: 2.0.0
 title: Add-CMSecurityRoleToAdministrativeUser
 ---
@@ -10,7 +9,8 @@ title: Add-CMSecurityRoleToAdministrativeUser
 # Add-CMSecurityRoleToAdministrativeUser
 
 ## SYNOPSIS
-Adds a security role to an administrative user or group in Configuration Manager.
+
+Add a security role to a user or group.
 
 ## SYNTAX
 
@@ -69,40 +69,35 @@ Add-CMSecurityRoleToAdministrativeUser -AdministrativeUserName <String> -InputOb
 ```
 
 ## DESCRIPTION
-The **Add-CMSecurityRoleToAdministrativeUser** cmdlet adds a security role to an administrative user or administrative group in Configuration Manager.
+
+Use this cmdlet to add a security role to an administrative user or administrative group in Configuration Manager.
 
 Permissions defined in a role represent object types and actions available for each object type.
 Configuration Manager provides some built-in security roles.
 You can also create custom security roles.
-For more information about security roles, see [Configuring Security for Configuration Manager](/mem/configmgr/core/plan-design/security/configure-security).
+For more information about security roles, see [Fundamentals of role-based administration in Configuration Manager](/mem/configmgr/core/understand/fundamentals-of-role-based-administration).
 
-You can specify an administrative user or group by name or by ID or you can use the use the [Get-CMAdministrativeUser](Get-CMAdministrativeUser.md) cmdlet to obtain a user or group object.
-You can specify a role to add by name or by ID, or you can use the [Get-CMSecurityRole](Get-CMSecurityRole.md) cmdlet to obtain a role.
+You can specify an administrative user or group by name or by ID or you can use the use the [Get-CMAdministrativeUser](Get-CMAdministrativeUser.md) cmdlet to get a user or group object. An _administrative user_ in Configuration Manager defines a local or domain user or group.
+You can specify a role to add by name or by ID, or you can use the [Get-CMSecurityRole](Get-CMSecurityRole.md) cmdlet to get a role.
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
-### Example 1: Add a named role to a named user group
-```
-PS XYZ:\>Add-CMSecurityRoleToAdministrativeUser -AdministrativeUserName "Western Administrators " -RoleName "SecurityRole17"
-```
+### Example 1: Add custom security role to a domain user group
 
-This command adds a security role named SecurityRole17 to the administrative group named Western Administrators.
+This command adds the custom security role **SecurityRole17** for the domain group **Western Administrators**. This command assumes that you already created the custom security role and the administrative user.
 
-### Example 2: Add a role to a named user group identified by using an ID
+```powershell
+Add-CMSecurityRoleToAdministrativeUser -AdministrativeUserName "Contoso\Western Administrators " -RoleName "SecurityRole17"
 ```
-PS XYZ:\>Add-CMSecurityRoleToAdministrativeUser -AdministrativeUserName "Western Administrators" -RoleId "SMS38973"
-```
-
-This command adds a security role that has the specified ID to the administrative group named Western Administrators.
 
 ## PARAMETERS
 
 ### -AdministrativeUser
-Specifies an administrative user or administrative group object.
-To obtain an administrative user or administrative group object, use the [Get-CMAdministrativeUser](Get-CMAdministrativeUser.md) cmdlet.
+
+Specify an administrative user object to configure. To get this object, use the [Get-CMAdministrativeUser](Get-CMAdministrativeUser.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -117,7 +112,8 @@ Accept wildcard characters: False
 ```
 
 ### -AdministrativeUserId
-Specifies an ID of an administrative user or administrative group.
+
+Specify the ID of the administrative user to configure. This value is the `AdminID` property, which is an integer value. For example, `16777234`.
 
 ```yaml
 Type: Int32
@@ -132,7 +128,13 @@ Accept wildcard characters: False
 ```
 
 ### -AdministrativeUserName
-Specifies a name of an administrative user or administrative group.
+
+Specify the name of the administrative user to configure.
+
+You can use wildcard characters:
+
+- `*`: Multiple characters
+- `?`: Single character
 
 ```yaml
 Type: String
@@ -179,8 +181,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies the input to this cmdlet.
-You can use this parameter, or you can pipe the input to this cmdlet.
+
+Specify a security role object to add. To get this object, use the [Get-CMSecurityRole](Get-CMSecurityRole.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -195,8 +197,8 @@ Accept wildcard characters: False
 ```
 
 ### -RoleId
-Specifies an ID of a role.
-A role represents Configuration Manager permissions granted to a user.
+
+Specify the ID of the security role to add. This value is the `RoleID` property, for example `SMS000AR` for the **OS Deployment Manager** role.
 
 ```yaml
 Type: String
@@ -211,8 +213,8 @@ Accept wildcard characters: False
 ```
 
 ### -RoleName
-Specifies a name of a role.
-A role represents Configuration Manager permissions granted to a user.
+
+Specify the name of the security role to add.
 
 ```yaml
 Type: String
@@ -227,6 +229,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -263,12 +266,16 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
+
+[Remove-CMSecurityRoleFromAdministrativeUser](Remove-CMSecurityRoleFromAdministrativeUser.md)
 
 [Add-CMSecurityScopeToAdministrativeUser](Add-CMSecurityScopeToAdministrativeUser.md)
 
@@ -276,6 +283,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Get-CMSecurityRole](Get-CMSecurityRole.md)
 
-[Remove-CMSecurityRoleFromAdministrativeUser](Remove-CMSecurityRoleFromAdministrativeUser.md)
-
-
+[Automate role-based administration with Windows PowerShell](/mem/configmgr/core/servers/deploy/configure/configure-role-based-administration#automate-with-windows-power-shell)

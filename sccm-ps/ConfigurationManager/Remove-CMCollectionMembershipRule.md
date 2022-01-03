@@ -1,8 +1,7 @@
 ---
-description: Removes a Configuration Manager collection membership rule.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/07/2019
+ms.date: 12/30/2021
 schema: 2.0.0
 title: Remove-CMCollectionMembershipRule
 ---
@@ -10,7 +9,8 @@ title: Remove-CMCollectionMembershipRule
 # Remove-CMCollectionMembershipRule
 
 ## SYNOPSIS
-Removes a Configuration Manager collection membership rule.
+
+_For system use only_ to remove membership rules from collections.
 
 ## SYNTAX
 
@@ -36,10 +36,13 @@ Remove-CMCollectionMembershipRule -ChildSearchCriteria <SmsProviderSearch> [-Col
 ```
 
 ## DESCRIPTION
-This cmdlet is called by higher-level wrapper cmdlets. It isn't called directly.
 
-> [!NOTE]
-> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
+This cmdlet is used by other cmdlets to get membership rules. Don't directly use this cmdlet. Use one of the following cmdlets:
+
+- [Remove-CMCollectionDirectMembershipRule](Remove-CMCollectionDirectMembershipRule.md)
+- [Remove-CMCollectionExcludeMembershipRule](Remove-CMCollectionExcludeMembershipRule.md)
+- [Remove-CMCollectionIncludeMembershipRule](Remove-CMCollectionIncludeMembershipRule.md)
+- [Remove-CMCollectionQueryMembershipRule](Remove-CMCollectionQueryMembershipRule.md)
 
 ## EXAMPLES
 

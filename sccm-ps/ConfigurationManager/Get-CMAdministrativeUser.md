@@ -1,8 +1,7 @@
 ﻿---
-description: Gets an administrative user.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/01/2019
+ms.date: 12/21/2021
 schema: 2.0.0
 title: Get-CMAdministrativeUser
 ---
@@ -10,7 +9,8 @@ title: Get-CMAdministrativeUser
 # Get-CMAdministrativeUser
 
 ## SYNOPSIS
-Gets an administrative user.
+
+Get an administrative user.
 
 ## SYNTAX
 
@@ -27,27 +27,45 @@ Get-CMAdministrativeUser -Id <String> [-RoleName <String[]>] [-DisableWildcardHa
 ```
 
 ## DESCRIPTION
-The **Get-CMAdministrativeUser** cmdlet gets one or more administrative users in Configuration Manager.
-An administrative user has a defined set of permissions and may be a member of one or more scopes or roles.
+
+Use this cmdlet to get one or more administrative users in Configuration Manager. An administrative user has a defined set of permissions and may be a member of one or more scopes or roles. An _administrative user_ in Configuration Manager defines a local or domain user or group. For more information about security roles, see [Fundamentals of role-based administration in Configuration Manager](/mem/configmgr/core/understand/fundamentals-of-role-based-administration).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
-### Example 1: Get all the administrative users
-```
-PS XYZ:\> Get-CMAdministrativeUser
+### Example 1: Get all administrative users
+
+This command gets all administrative users. It displays the output as a table showing the account name (**LogonName**), security roles (**RoleNames**), security scopes (**CategoryNames**), and collections (**CollectionNames**).
+
+```powershell
+Get-CMAdministrativeUser | Select-Object LogonName, RoleNames, CategoryNames, CollectionNames
 ```
 
-This command gets all administrative users.
+### Example 2: Get an administrative user by name
 
-### Example 2: Get administrative user by name
-```
-PS XYZ:\> Get-CMAdministrativeUser -Name "testDomain\myAdminUser"
+This command gets the administrative user named **jqpublic**.
+
+```powershell
+Get-CMAdministrativeUser -Name "Contoso\jqpublic"
 ```
 
-This command gets the administrative user named AdminUser1.
+### Example 3: Get all users with specific scope
+
+This command gets all administrative users with the **Default** scope and displays the account names.
+
+```powershell
+Get-CMAdministrativeUser | Where-Object { $_.CategoryNames -contains "Default" } | Select-Object LogonName
+```
+
+### Example 4: Get all users with specific role
+
+This command gets all administrative users with the **Full Administrator** role and displays the account names.
+
+```powershell
+Get-CMAdministrativeUser -RoleName "Full Administrator" | Select-Object LogonName
+```
 
 ## PARAMETERS
 
@@ -84,7 +102,8 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-Specifies the ID of an administrative user.
+
+Specify the ID of the administrative user to get. This value is the `AdminID` property. It's an integer value, for example `16777234`.
 
 ```yaml
 Type: String
@@ -99,7 +118,13 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies the name of the administrative user in the form \<domain\>\\\<user\>.
+
+Specify the name of the administrative user to get. For example, `domain\username` or `domain\groupname`
+
+You can use wildcard characters:
+
+- `*`: Multiple characters
+- `?`: Single character
 
 ```yaml
 Type: String
@@ -114,25 +139,8 @@ Accept wildcard characters: True
 ```
 
 ### -RoleName
-Specifies an array of names of security roles.
-Valid values are:
 
-- Application Administrator
-- Application Author
-- Application Deployment Manager
-- Asset Manager
-- Compliance Settings Manager
-- Discovery Operator
-- Endpoint Protection Manager
-- Full Administrator
-- Infrastructure Administrator
-- Operating System Deployment Manager
-- Operations Administrator
-- Read-only Analyst
-- Remote Tools Operator
-- Security Administrator
-- Software Update Manager
-- Custom-defined security roles
+Specify an array of security role names. This name can be for a built-in or custom role. To see the list of built-in security roles, see [Security roles](/mem/configmgr/core/understand/fundamentals-of-role-based-administration#security-roles).
 
 ```yaml
 Type: String[]
@@ -152,11 +160,16 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
+
 ## OUTPUTS
 
 ### IResultObject[]#SMS_Admin
+
 ### IResultObject#SMS_Admin
+
 ## NOTES
+
+For more information on this return object and its properties, see [SMS_Admin server WMI class](/mem/configmgr/develop/reference/core/servers/configure/sms_admin-server-wmi-class).
 
 ## RELATED LINKS
 
@@ -164,4 +177,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Remove-CMAdministrativeUser](Remove-CMAdministrativeUser.md)
 
+[New-CMAdministrativeUserPermission](New-CMAdministrativeUserPermission.md)
 
+[Automate role-based administration with Windows PowerShell](/mem/configmgr/core/servers/deploy/configure/configure-role-based-administration#automate-with-windows-power-shell)

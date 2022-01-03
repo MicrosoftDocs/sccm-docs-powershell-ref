@@ -1,8 +1,7 @@
 ---
-description: Removes a reporting service point.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/07/2019
+ms.date: 12/15/2021
 schema: 2.0.0
 title: Remove-CMReportingServicePoint
 ---
@@ -10,7 +9,8 @@ title: Remove-CMReportingServicePoint
 # Remove-CMReportingServicePoint
 
 ## SYNOPSIS
-Removes a reporting service point.
+
+Remove a reporting service point.
 
 ## SYNTAX
 
@@ -27,33 +27,39 @@ Remove-CMReportingServicePoint [-Force] [-SiteCode <String>] [-SiteSystemServerN
 ```
 
 ## DESCRIPTION
-The **Remove-CMReportingServicePoint** cmdlet removes a reporting service point from a Configuration Manager site.
-The reporting service point is a site system role that is installed on a server that is running Microsoft SQL Server Reporting Services.
 
-After you remove a reporting service point from a Configuration Manager site, you cannot manage reports in Configuration Manager at the site.
+Use this cmdlet to remove a reporting service point from a Configuration Manager site.
+
+After you remove a reporting service point, you can't manage reports at the site.
+
+> [!IMPORTANT]
+> This cmdlet doesn't support [PowerShell 7](/powershell/sccm/overview#support-for-powershell-version-7).<!-- 12500019 --> It requires the .NET Framework instead of .NET Core that's used with PowerShell version 7.
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
-### Example 1: Remove a reporting service point
-```
-PS XYZ:\> Remove-CMReportingServicePoint -SiteCode "CM1" -SiteSystemServerName "CMCEN-DIST02.TSQA.CORP.CONTOSCO.COM"
-```
+### Example 1: Remove a reporting service point by server name
 
 This command removes the reporting service point from the Configuration Manager site that has the site code CM1 on the site system server named CMCEN-DIST02.TSQA.CORP.CONTOSCO.COM.
 
+```powershell
+Remove-CMReportingServicePoint -SiteCode "CM1" -SiteSystemServerName "CMCEN-DIST02.TSQA.CORP.CONTOSCO.COM"
+```
+
 ### Example 2: Remove a reporting service point by using an object variable
-```
-PS XYZ:\> $Rsp = Get-CMReportingServicePoint -SiteCode "CM1" -SiteSystemServerName "CMCEN-DIST02.TSQA.CORP.CONTOSCO.COM"
-PS XYZ:\> Remove-CMReportingServicePoint -InputObject $Rsp
-```
 
 The first command gets the reporting service point from the Configuration Manager site that has the site code CM1 on the site system server named CMCEN-DIST02.TSQA.CORP.CONTOSCO.COM.
 The command stores the results in the $Rsp variable.
 
 The second command removes the reporting service point in $Rsp.
+
+```powershell
+$Rsp = Get-CMReportingServicePoint -SiteCode "CM1" -SiteSystemServerName "CMCEN-DIST02.TSQA.CORP.CONTOSCO.COM"
+
+Remove-CMReportingServicePoint -InputObject $Rsp
+```
 
 ## PARAMETERS
 
@@ -74,6 +80,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
+
 Forces the command to run without asking for user confirmation.
 
 ```yaml
@@ -105,8 +112,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies a **CMReportingServicePoint** object.
-To obtain a **CMReportingServicePoint** object, use the Get-CMReportingServicePoint cmdlet.
+
+Specify a reporting service point object to remove. To get this object, use the [Get-CMReportingServicePoint](Get-CMReportingServicePoint.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -121,7 +128,8 @@ Accept wildcard characters: False
 ```
 
 ### -SiteCode
-Specifies the site code of the Configuration Manager site that hosts the site system role.
+
+Specify the three-character code of the Configuration Manager site that hosts the site system role.
 
 ```yaml
 Type: String
@@ -136,7 +144,8 @@ Accept wildcard characters: False
 ```
 
 ### -SiteSystemServerName
-Specifies a fully qualified domain name (FQDN) of the server that hosts the site system role.
+
+Specify the fully qualified domain name (FQDN) of the server that hosts the site system role.
 
 ```yaml
 Type: String
@@ -151,6 +160,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -187,6 +197,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ## NOTES
@@ -198,5 +209,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-CMReportingServicePoint](Get-CMReportingServicePoint.md)
 
 [Set-CMReportingServicePoint](Set-CMReportingServicePoint.md)
-
-

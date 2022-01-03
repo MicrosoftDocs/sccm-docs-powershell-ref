@@ -1,8 +1,7 @@
 ---
-description: Removes programs from a Configuration Manager package.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/07/2019
+ms.date: 12/28/2021
 schema: 2.0.0
 title: Remove-CMProgram
 ---
@@ -10,7 +9,8 @@ title: Remove-CMProgram
 # Remove-CMProgram
 
 ## SYNOPSIS
-Removes programs from a Configuration Manager package.
+
+Remove a program from a package.
 
 ## SYNTAX
 
@@ -27,14 +27,9 @@ Remove-CMProgram [-Force] -PackageId <String> -ProgramName <String> [-DisableWil
 ```
 
 ## DESCRIPTION
-The **Remove-CMProgram** cmdlet removes one or more programs from a Configuration Manager package.
-Programs are commands that are associated with a Configuration Manager package.
-Programs identify the actions that occur when the client receives the client package.
-You can associate multiple programs with the same package.
 
-When you remove a program from a package, Configuration Manager updates the package information in the Configuration Manager site database.
-Configuration Manager removes all of the advertisements for this program from the database and removes the advertisements from clients that have received them.
-If Configuration Manager has already run the advertised program on the client computer, Configuration Manager does not remove the software.
+Use this cmdlet to remove a program from a package. When you remove a program from a package, Configuration Manager removes all of the deployments for this program.
+If Configuration Manager has already run the deployed program on clients, Configuration Manager doesn't remove the software.
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
@@ -42,22 +37,24 @@ If Configuration Manager has already run the advertised program on the client co
 ## EXAMPLES
 
 ### Example 1: Remove a program by using a name and an ID
-```
-PS XYZ:\> Remove-CMProgram -PackageId "ST10000F" -ProgramName "ProgramD02"
-```
 
-This command removes the program named ProgramD02 from the package that has the ID ST10000F.
+This command removes the program named ProgramD02 from the package with ID **XYZ0000F**.
+
+```powershell
+Remove-CMProgram -PackageId "XYZ0000F" -ProgramName "ProgramD02"
+```
 
 ### Example 2: Remove a program by using an object variable
-```
-PS XYZ:\> $Prog = Get-CMProgram -Name "ProgramD02" -PackageId "ST10000F"
-PS XYZ:\> Remove-CMProgram -InputObject $Prog
-```
 
-The first command gets the program named ProgramD02 in the package that has the ID ST10000F.
-The command stores the results in the $Prog variable.
+The first command uses the **Get-CMProgram** cmdlet to get the program named **ProgramD02** in the package with ID **XYZ0000F**.
+It stores the results in the **$Prog** variable.
 
-The second command removes program in $Prog.
+The second command removes the program.
+
+```powershell
+$Prog = Get-CMProgram -Name "ProgramD02" -PackageId "XYZ0000F"
+Remove-CMProgram -InputObject $Prog -Force
+```
 
 ## PARAMETERS
 
@@ -78,6 +75,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
+
 Forces the command to run without asking for user confirmation.
 
 ```yaml
@@ -109,8 +107,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies a **CMProgram** object.
-To obtain a **CMProgram** object, use the Get-CMProgram cmdlet.
+
+Specify a program object to remove. To get this object, use the [Get-CMProgram](Get-CMProgram.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -125,7 +123,8 @@ Accept wildcard characters: False
 ```
 
 ### -PackageId
-Specifies the package that contains the program by using an ID.
+
+Specify the ID of the package with the program to remove.
 
 ```yaml
 Type: String
@@ -140,7 +139,8 @@ Accept wildcard characters: False
 ```
 
 ### -ProgramName
-Specifies the program within the package by using a name.
+
+Specify the name of the package with the program to remove.
 
 ```yaml
 Type: String
@@ -155,6 +155,7 @@ Accept wildcard characters: True
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -191,9 +192,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
@@ -207,5 +210,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-CMProgram](New-CMProgram.md)
 
 [Set-CMProgram](Set-CMProgram.md)
-
-

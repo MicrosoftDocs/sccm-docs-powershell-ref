@@ -1,8 +1,7 @@
 ---
-description: Sets the security scopes for Configuration Manager objects.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/07/2019
+ms.date: 12/21/2021
 schema: 2.0.0
 title: Set-CMObjectSecurityScope
 ---
@@ -10,7 +9,8 @@ title: Set-CMObjectSecurityScope
 # Set-CMObjectSecurityScope
 
 ## SYNOPSIS
-Sets the security scopes for Configuration Manager objects.
+
+Add or remove security scopes for Configuration Manager objects. This cmdlet is deprecated.
 
 ## SYNTAX
 

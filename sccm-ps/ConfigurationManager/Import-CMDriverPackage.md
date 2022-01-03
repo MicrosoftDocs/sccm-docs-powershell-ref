@@ -1,4 +1,4 @@
----
+﻿---
 description: Import a driver package.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -126,7 +126,7 @@ Specify the network path for the exported package. The cmdlet imports all packag
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: FileName, FilePath, Path
 
 Required: True
 Position: Named
@@ -171,6 +171,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
+
 ## OUTPUTS
 
 ### System.Object

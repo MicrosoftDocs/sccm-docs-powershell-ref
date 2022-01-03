@@ -28,7 +28,7 @@ Add-CMPassiveSite -InstallDirectory <String> [-LocalSourceDirectory <String>]
 ```
 
 ## DESCRIPTION
-Starting in version 2002, use this cmdlet to add a site server in passive mode.
+Use this cmdlet to add a site server in passive mode.
 
 ## EXAMPLES
 

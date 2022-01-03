@@ -1,8 +1,7 @@
 ---
-description: Modifies a device variable of a Configuration Manager device.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/07/2019
+ms.date: 12/15/2021
 schema: 2.0.0
 title: Set-CMDeviceVariable
 ---
@@ -10,7 +9,8 @@ title: Set-CMDeviceVariable
 # Set-CMDeviceVariable
 
 ## SYNOPSIS
-Modifies a device variable of a Configuration Manager device.
+
+Modify a device variable.
 
 ## SYNTAX
 
@@ -36,9 +36,10 @@ Set-CMDeviceVariable [-IsMask <Boolean>] [-NewVariableName <String>] [-NewVariab
 ```
 
 ## DESCRIPTION
-The **Set-CMDeviceVariable** cmdlet modifies a device variable of a Configuration Manager device.
 
-Individual devices have device variables. Task sequence processing uses device variables.
+Use this cmdlet to modify a variable on a Configuration Manager device.
+
+Individual devices have device variables. Task sequence processing uses device variables. For more information, see [Collection and device variables](/mem/configmgr/osd/understand/using-task-sequence-variables#bkmk_set-coll-var).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
@@ -46,18 +47,19 @@ Individual devices have device variables. Task sequence processing uses device v
 ## EXAMPLES
 
 ### Example 1: Modify a device variable
-```
-PS XYZ:\> Set-CMDeviceVariable -DeviceName "gateway-server.contoso.com" -VariableName "ServerIPAddress" -NewVariableValue "192.168.100.10"
-```
 
-This command modifies the device variable ServerIPAddress associated with the device gateway-server.contoso.com.
-In this example, the value of the variable is set to 192.168.100.10.
+This command modifies the device variable **ServerIPAddress** associated with the specified device.com.
+In this example, the value of the variable is set to `192.168.100.10`.
+
+```powershell
+Set-CMDeviceVariable -DeviceName "server01" -VariableName "ServerIPAddress" -NewVariableValue "192.168.100.10"
+```
 
 ## PARAMETERS
 
 ### -DeviceName
-Specifies a device name.
-You can specify a NetBIOS name or a fully qualified domain name (FQDN).
+
+Specify a device name. You can specify a NetBIOS name or a fully qualified domain name (FQDN).
 
 ```yaml
 Type: String
@@ -104,8 +106,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies the input to this cmdlet.
-You can use this parameter, or you can pipe the input to this cmdlet.
+
+Specify a device object on which to set the variable. To get this object, use the [Get-CMDevice](Get-CMDevice.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -120,7 +122,8 @@ Accept wildcard characters: False
 ```
 
 ### -IsMask
-Indicates whether a value displays in the Configuration Manager console.
+
+Set this parameter to `$true` to hide the value in the Configuration Manager console.
 
 ```yaml
 Type: Boolean
@@ -135,7 +138,8 @@ Accept wildcard characters: False
 ```
 
 ### -NewVariableName
-Specifies a name for the variable that this cmdlet modifies.
+
+Specify a new name for the variable.
 
 ```yaml
 Type: String
@@ -150,7 +154,8 @@ Accept wildcard characters: False
 ```
 
 ### -NewVariableValue
-Specifies a value for the variable that this cmdlet modifies.
+
+Specify a new value for the variable.
 
 ```yaml
 Type: String
@@ -181,7 +186,8 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceId
-Specifies a Systems Management Server (SMS) ID.
+
+Specify the resource ID of the device.
 
 ```yaml
 Type: String
@@ -196,7 +202,10 @@ Accept wildcard characters: False
 ```
 
 ### -VariableName
-Specifies the name of the device variable.
+
+Specify the name of the device variable.
+
+Starting in version 2111, this parameter is case insensitive.
 
 ```yaml
 Type: String
@@ -211,6 +220,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -247,9 +257,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS

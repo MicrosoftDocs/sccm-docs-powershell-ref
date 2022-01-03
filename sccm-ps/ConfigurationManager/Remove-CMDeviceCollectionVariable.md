@@ -1,8 +1,7 @@
 ---
-description: Removes a device collection variable.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/07/2019
+ms.date: 12/29/2021
 schema: 2.0.0
 title: Remove-CMDeviceCollectionVariable
 ---
@@ -10,7 +9,8 @@ title: Remove-CMDeviceCollectionVariable
 # Remove-CMDeviceCollectionVariable
 
 ## SYNOPSIS
-Removes a device collection variable.
+
+Remove a device collection variable.
 
 ## SYNTAX
 
@@ -33,7 +33,11 @@ Remove-CMDeviceCollectionVariable -CollectionName <String> [-Force] -VariableNam
 ```
 
 ## DESCRIPTION
-The **Remove-CMDeviceCollectionVariable** cmdlet removes a device collection variable.
+
+Use this cmdlet to remove a device collection variable.
+Default collections can't have variables. Any collection that you target should have an ID that starts with the site code, not `SMS`.
+
+For more information, see [How to set task sequence variables](/mem/configmgr/osd/understand/using-task-sequence-variables#bkmk_set).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
@@ -41,29 +45,39 @@ The **Remove-CMDeviceCollectionVariable** cmdlet removes a device collection var
 ## EXAMPLES
 
 ### Example 1: Remove a device collection variable
-```
-PS XYZ:\> $Collection = Get-CMCollection -Name "Device"
-PS XYZ:\> Remove-CMDeviceCollectionVariable -Collection $Collection -VariableName "testTS" -Force
-```
 
-The first command gets the device collection object named Device and stores the object in the $Collection variable.
+The first command gets the device collection object named **Device** and stores it in the **$Collection** variable.
 
-The second command removes the device collection variable named testTS from the device collection stored in $Collection.
-Specifying the *Force* parameter indicates that the user is not prompted before the variable is removed.
+The second command removes the device collection variable named **testTS** from the device collection stored in the **$Collection** variable.
+Specifying the **Force** parameter indicates that you aren't prompted before the variable is removed.
 
-### Example 2: Remove a device collection variable by using the pipeline
-```
-PS XYZ:\> Get-CMCollection -Name "Device" | Remove-CMDeviceCollectionVariable -VariableName "testTS" -Force
+```powershell
+$Collection = Get-CMCollection -Name "Device"
+Remove-CMDeviceCollectionVariable -Collection $Collection -VariableName "testTS" -Force
 ```
 
-This command gets the device collection object named Device and uses the pipeline operator to pass the object to **Remove-CMDeviceCollectionVariable**, which removes the device collection variable named testTS from the device collection object.
-Specifying the *Force* parameter indicates that the user is not prompted before the variable is removed.
+### Example 2: Remove all variables from a device collection
+
+This example first uses the **Get-CMDeviceCollectionVariable** cmdlet to get all variables on the device collection **IT Servers** and stores the objects in the **vars** array variable. It then loops through each item in the array, and removes the variable by name.
+
+The **Force** parameter is used so that you're not prompted to remove each variable.
+
+```powershell
+$collName = "IT servers"
+$vars = Get-CMDeviceCollectionVariable -CollectionName $collName
+
+foreach ( $var in $vars ) {
+  Remove-CMDeviceCollectionVariable -CollectionName $collName -VariableName $var -Force
+}
+```
+
+Since the **VariableName** parameter doesn't allow wildcards, use this process if you need to quickly clear all variables from a device collection.
 
 ## PARAMETERS
 
 ### -Collection
-Specifies a device collection object.
-To obtain a collection object, use the [Get-CMCollection](Get-CMCollection.md) cmdlet.
+
+Specify a device collection object to remove its variables. To get this object, use the [Get-CMCollection](Get-CMCollection.md) or [Get-CMDeviceCollection](Get-CMDeviceCollection.md) cmdlets.
 
 ```yaml
 Type: IResultObject
@@ -78,7 +92,8 @@ Accept wildcard characters: False
 ```
 
 ### -CollectionId
-Specifies the ID of a device collection.
+
+Specify the ID of a device collection to remove its variables. This value is the **CollectionID** property, for example, `XYZ00012`. Since you can't set variables on default collections, this value starts with the site code, not `SMS`.
 
 ```yaml
 Type: String
@@ -93,7 +108,8 @@ Accept wildcard characters: False
 ```
 
 ### -CollectionName
-Specifies the name of a device collection.
+
+Specify the name of a device collection to remove its variables.
 
 ```yaml
 Type: String
@@ -124,6 +140,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
+
 Forces the command to run without asking for user confirmation.
 
 ```yaml
@@ -155,7 +172,8 @@ Accept wildcard characters: False
 ```
 
 ### -VariableName
-Specifies the name of a collection variable.
+
+Specify the name of a collection variable to remove. This parameter doesn't accept wildcard characters.
 
 ```yaml
 Type: String
@@ -170,6 +188,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -206,19 +225,22 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
 
-[Get-CMCollection](Get-CMCollection.md)
-
 [Get-CMDeviceCollectionVariable](Get-CMDeviceCollectionVariable.md)
-
+[New-CMDeviceCollectionVariable](New-CMDeviceCollectionVariable.md)
 [Set-CMDeviceCollectionVariable](Set-CMDeviceCollectionVariable.md)
 
-[New-CMDeviceCollectionVariable](New-CMDeviceCollectionVariable.md)
+[Get-CMCollection](Get-CMCollection.md)
+[Get-CMDeviceCollection](Get-CMDeviceCollection.md)
 
+[Remove-CMDeviceVariable](Remove-CMDeviceVariable.md)
 
+[How to set task sequence variables](/mem/configmgr/osd/understand/using-task-sequence-variables#bkmk_set)

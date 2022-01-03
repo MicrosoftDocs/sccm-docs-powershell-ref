@@ -1,8 +1,7 @@
 ---
-description: Saves software updates to update groups and packages.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/07/2019
+ms.date: 12/16/2021
 schema: 2.0.0
 title: Save-CMSoftwareUpdate
 ---
@@ -10,7 +9,8 @@ title: Save-CMSoftwareUpdate
 # Save-CMSoftwareUpdate
 
 ## SYNOPSIS
-Saves software updates to update groups and packages.
+
+Save software updates to update groups and packages.
 
 ## SYNTAX
 
@@ -57,7 +57,8 @@ Save-CMSoftwareUpdate -DeploymentPackageName <String> [-Location <String>] [-Ret
 ```
 
 ## DESCRIPTION
-The **Save-CMSoftwareUpdate** cmdlet saves one or more software updates to update groups and packages.
+
+Use this cmdlet to save one or more software updates to update groups and deployment packages.
 
 You can specify one or more software updates associated with deployment packages.
 You can also specify the download source location of updates and the language of the software updates.
@@ -69,30 +70,34 @@ Languages determine which summary details a software update synchronizes and the
 ## EXAMPLES
 
 ### Example 1: Save a software update and add a language to it
-```
-PS XYZ:\> Save-CMSoftwareUpdate -SoftwareUpdateName "Cumulative Update for Windows 10 (KB3095020)" -DeploymentPackageName "Package01" -SoftwareUpdateLanguage "English"
-```
 
-This command saves the software update named Cumulative Update for Windows 10 (KB3095020) for the deployment package named Package01 adding English to its array of languages.
+This command saves the software update named **Cumulative Update for Windows 10 (KB3095020)** for the deployment package named **Package01**. It also adds **English** to its array of languages.
+
+```powershell
+Save-CMSoftwareUpdate -SoftwareUpdateName "Cumulative Update for Windows 10 (KB3095020)" -DeploymentPackageName "Package01" -SoftwareUpdateLanguage "English"
+```
 
 ### Example 2: Save a software update from a software update group
-```
-PS XYZ:\> Get-CMSoftwareUpdateGroup -Name "TestSUgroup10" | Save-CMSoftwareUpdate -DeploymentPackageName "Package01"
-```
 
-This command gets the software update group object named TestSUgroup10 and uses the pipeline operator to pass the object to **Save-CMSoftwareUpdate**, which saves the software update with the package name Package01.
+This command gets the software update group object named **TestSUgroup10** and uses the pipeline operator to pass the object to **Save-CMSoftwareUpdate**, which saves the software update with the package name **Package01**.
+
+```powershell
+Get-CMSoftwareUpdateGroup -Name "TestSUgroup10" | Save-CMSoftwareUpdate -DeploymentPackageName "Package01"
+```
 
 ### Example 3: Save a software update from a software update group and specify a source location to download from
-```
-PS XYZ:\> Get-CMSoftwareUpdateGroup -Name "TestSUgroup10" Save-CMSoftwareUpdate -Location "\\Server01\Updates" -DeploymentPackageName "Package01"
-```
 
-This command gets the software update group object named TestSUgroup10 and uses the pipeline operator to pass the object to **Save-CMSoftwareUpdate**, which saves the software update from the file share Updates on Server01 with the package name Package01.
+This command gets the software update group object named **TestSUgroup10** and uses the pipeline operator to pass the object to **Save-CMSoftwareUpdate**, which saves the software update from the file share **Updates** on **Server01** with the package name **Package01**.
+
+```powershell
+Get-CMSoftwareUpdateGroup -Name "TestSUgroup10" Save-CMSoftwareUpdate -Location "\\Server01\Updates" -DeploymentPackageName "Package01"
+```
 
 ## PARAMETERS
 
 ### -DeploymentPackageName
-Specifies a name of a deployment package.
+
+Specify the name of a deployment package.
 
 ```yaml
 Type: String
@@ -139,7 +144,8 @@ Accept wildcard characters: False
 ```
 
 ### -Location
-Specifies a download source location for software updates.
+
+Specify a download source location for software updates.
 
 ```yaml
 Type: String
@@ -154,7 +160,8 @@ Accept wildcard characters: False
 ```
 
 ### -RetryCount
-{{ Fill RetryCount Description }}
+
+Specify an integer value for the number of times to retry downloading the update.
 
 ```yaml
 Type: UInt32
@@ -169,7 +176,8 @@ Accept wildcard characters: False
 ```
 
 ### -RetryDelaySec
-{{ Fill RetryDelaySec Description }}
+
+Specify an integer value for the number of seconds to wait before retrying.
 
 ```yaml
 Type: UInt32
@@ -184,8 +192,8 @@ Accept wildcard characters: False
 ```
 
 ### -SoftwareUpdate
-Specifies a software update object.
-To obtain a software update object, use the [Get-CMSoftwareUpdate](Get-CMSoftwareUpdate.md) cmdlet.
+
+Specify a software update object to save. To get this object, use the [Get-CMSoftwareUpdate](Get-CMSoftwareUpdate.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -200,8 +208,8 @@ Accept wildcard characters: False
 ```
 
 ### -SoftwareUpdateGroup
-Specifies a software update group object.
-To obtain a software update group object, use the [Get-CMSoftwareUpdateGroup](Get-CMSoftwareUpdateGroup.md) cmdlet.
+
+Specify a software update group object. To get this object, use the [Get-CMSoftwareUpdateGroup](Get-CMSoftwareUpdateGroup.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -216,7 +224,8 @@ Accept wildcard characters: False
 ```
 
 ### -SoftwareUpdateGroupId
-Specifies an array of IDs of software update groups.
+
+Specify an array of IDs of software update groups.
 
 ```yaml
 Type: String[]
@@ -231,7 +240,8 @@ Accept wildcard characters: False
 ```
 
 ### -SoftwareUpdateGroupName
-Specifies an array of names of software update groups.
+
+Specify an array of names of software update groups.
 
 ```yaml
 Type: String[]
@@ -246,7 +256,8 @@ Accept wildcard characters: False
 ```
 
 ### -SoftwareUpdateId
-Specifies an array of IDs of software updates.
+
+Specify an array of IDs of software updates.
 
 ```yaml
 Type: String[]
@@ -261,7 +272,8 @@ Accept wildcard characters: False
 ```
 
 ### -SoftwareUpdateLanguage
-Specifies an array of software update languages.
+
+Specify an array of software update languages.
 
 ```yaml
 Type: String[]
@@ -276,7 +288,8 @@ Accept wildcard characters: False
 ```
 
 ### -SoftwareUpdateName
-Specifies an array of software update names.
+
+Specify an array of software update names.
 
 ```yaml
 Type: String[]
@@ -291,6 +304,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -327,9 +341,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
@@ -342,4 +358,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Sync-CMSoftwareUpdate](Sync-CMSoftwareUpdate.md)
 
-
+[Remove-CMSoftwareUpdateFromPackage](Remove-CMSoftwareUpdateFromPackage.md)

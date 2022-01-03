@@ -1,7 +1,7 @@
----
+﻿---
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 08/13/2021
+ms.date: 12/14/2021
 online version:
 schema: 2.0.0
 ---
@@ -17,12 +17,13 @@ Create a **Check Readiness** step, which you can add to a task sequence.
 ```
 New-CMTSStepPrestartCheck [-CheckCMClientMinVersion <Boolean>] [-CheckMaxOSVersion <Boolean>]
  [-CheckMemory <Boolean>] [-CheckMinOSVersion <Boolean>] [-CheckNetworkConnected <Boolean>]
- [-CheckNetworkWired <Boolean>] [-CheckOS <Boolean>] [-CheckOSArchitecture <Boolean>]
- [-CheckOSLanguageId <Boolean>] [-CheckPowerState <Boolean>] [-CheckSpace <Boolean>] [-CheckSpeed <Boolean>]
- [-CheckUefi <Boolean>] [-CMClientMinVersion <String>] [-DiskSpace <Int32>] [-MaxOSVersion <String>]
- [-Memory <Int32>] [-MinOSVersion <String>] [-OS <OSType>] [-OSArchitecture <OSArch>] [-OSLanguageId <Int32>]
- [-Speed <Int32>] [-Condition <IResultObject[]>] [-ContinueOnError] [-Description <String>] [-Disable]
- -Name <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-CheckNetworkWired <Boolean>] [-CheckTpmEnabled <Boolean>] [-CheckTpmActivated <Boolean>]
+ [-CheckOS <Boolean>] [-CheckOSArchitecture <Boolean>] [-CheckOSLanguageId <Boolean>]
+ [-CheckPowerState <Boolean>] [-CheckSpace <Boolean>] [-CheckSpeed <Boolean>] [-CheckUefi <Boolean>]
+ [-CMClientMinVersion <String>] [-DiskSpace <Int32>] [-MaxOSVersion <String>] [-Memory <Int32>]
+ [-MinOSVersion <String>] [-OS <OSType>] [-OSArchitecture <OSArch>] [-OSLanguageId <Int32>] [-Speed <Int32>]
+ [-Condition <IResultObject[]>] [-ContinueOnError] [-Description <String>] [-Disable] -Name <String>
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -263,6 +264,38 @@ Set this parameter to `$true` to enable the **Minimum processor speed (MHz)** ch
 Type: Boolean
 Parameter Sets: (All)
 Aliases: EnableCheckProcessorSpeed
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CheckTpmActivated
+
+Applies to version 2111 and later. Set this parameter to `$true` to enable the **TPM 2.0 or above is activated** check.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: TpmActivated
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CheckTpmEnabled
+
+Applies to version 2111 and later. Set this parameter to `$true` to enable the **TPM 2.0 or above is enabled** check.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: TpmEnabled
 
 Required: False
 Position: Named

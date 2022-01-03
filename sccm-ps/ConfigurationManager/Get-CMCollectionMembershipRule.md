@@ -1,8 +1,7 @@
 ﻿---
-description: Get a Configuration Manager collection membership rule.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/02/2019
+ms.date: 12/30/2021
 schema: 2.0.0
 title: Get-CMCollectionMembershipRule
 ---
@@ -10,7 +9,8 @@ title: Get-CMCollectionMembershipRule
 # Get-CMCollectionMembershipRule
 
 ## SYNOPSIS
-Get a Configuration Manager collection membership rule.
+
+_For system use only_ to get membership rules from collections.
 
 ## SYNTAX
 
@@ -36,10 +36,13 @@ Get-CMCollectionMembershipRule -ChildSearchCriteria <SmsProviderSearch> [-Collec
 ```
 
 ## DESCRIPTION
-This cmdlet is called by higher-level wrapper cmdlets. It isn't called directly.
 
-> [!NOTE]
-> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
+This cmdlet is used by other cmdlets to get membership rules. Don't directly use this cmdlet. Use one of the following cmdlets:
+
+- [Get-CMCollectionDirectMembershipRule](Get-CMCollectionDirectMembershipRule.md)
+- [Get-CMCollectionExcludeMembershipRule](Get-CMCollectionExcludeMembershipRule.md)
+- [Get-CMCollectionIncludeMembershipRule](Get-CMCollectionIncludeMembershipRule.md)
+- [Get-CMCollectionQueryMembershipRule](Get-CMCollectionQueryMembershipRule.md)
 
 ## EXAMPLES
 

@@ -1,8 +1,7 @@
 ---
-description: Adds a direct membership rule to one or more Configuration Manager user collections.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 04/29/2019
+ms.date: 12/30/2021
 schema: 2.0.0
 title: Add-CMUserCollectionDirectMembershipRule
 ---
@@ -10,7 +9,8 @@ title: Add-CMUserCollectionDirectMembershipRule
 # Add-CMUserCollectionDirectMembershipRule
 
 ## SYNOPSIS
-Adds a direct membership rule to one or more Configuration Manager user collections.
+
+Add a direct membership rule to a user collection.
 
 ## SYNTAX
 
@@ -51,11 +51,11 @@ Add-CMUserCollectionDirectMembershipRule -InputObject <IResultObject> [-PassThru
 ```
 
 ## DESCRIPTION
-The **Add-CMUserCollectionDirectMembershipRule** cmdlet adds a rule that adds a specific resource to the user collections.
-You can specify the user collections by using their names, IDs, or by specifying an object that represents the collections.
 
-A direct rule lets you explicitly choose the members of the user collection.
-For more information on collection rules in Configuration Manager, see [Introduction to Collections in Configuration Manager](/mem/configmgr/core/clients/manage/collections/introduction-to-collections).
+Use this cmdlet to add a direct membership rule to a user collection.
+A _direct_ membership rule lets you explicitly choose the members of the user collection.
+You can't add membership rules to default collections. Any collection that you target should have an ID that starts with the site code, not `SMS`.
+For more information, see [How to create collections in Configuration Manager](/mem/configmgr/core/clients/manage/collections/create-collections).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
@@ -63,16 +63,18 @@ For more information on collection rules in Configuration Manager, see [Introduc
 ## EXAMPLES
 
 ### Example 1: Add a direct membership rule to a user collection
-```
-PS XYZ:\>Add-CMUserCollectionDirectMembershipRule -CollectionName "All Mobile Devices" -ResourceId "Res_94412512"
-```
 
-This command adds a direct membership rule that has the ID Res_94412512 to the Configuration Manager user collection named All Mobile Devices.
+This command adds a direct membership rule to the user collection with ID **XYZ00057**. It adds the resource with ID **16777210** to the collection.
+
+```powershell
+Add-CMUserCollectionDirectMembershipRule -CollectionId "XYZ00057" -ResourceId "16777210"
+```
 
 ## PARAMETERS
 
 ### -CollectionId
-Specifies the ID of the user collection where the rule is applied.
+
+Specify the ID of the user collection to add the rule. This value is the **CollectionID** property, for example, `XYZ00012`. Since you can't add membership rules to default collections, this ID starts with the site code and not `SMS`.
 
 ```yaml
 Type: String
@@ -87,7 +89,8 @@ Accept wildcard characters: False
 ```
 
 ### -CollectionName
-Specifies the name of a user collection where the rule is applied.
+
+Specify the name of the user collection to add the rule.
 
 ```yaml
 Type: String
@@ -134,8 +137,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies the input to this cmdlet.
-You can use this parameter, or you can pipe the input to this cmdlet.
+
+Specify an object for the user collection to add the rule. To get this object, use the [Get-CMCollection](Get-CMCollection.md) or [Get-CMUserCollection](Get-CMUserCollection.md) cmdlets.
 
 ```yaml
 Type: IResultObject
@@ -166,7 +169,8 @@ Accept wildcard characters: False
 ```
 
 ### -Resource
-Specifies the type of the resource that the cmdlet adds to the user collections.
+
+Specify an array of resource objects to add to the user collection with this direct membership rule. To get this object, use the [Get-CMResource](Get-CMResource.md) or [Get-CMUser](Get-CMUser.md) cmdlets.
 
 ```yaml
 Type: IResultObject[]
@@ -181,7 +185,8 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceId
-Specifies the ID of a resource that the cmdlet adds to the user collections.
+
+Specify an array of IDs of the resources to add to the user collection with this direct membership rule. This value is the **ResourceID** property, for example `16777219`.
 
 ```yaml
 Type: Int32[]
@@ -196,6 +201,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -233,15 +239,23 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject[]
+
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
 
-[Get-CMUserCollection](Get-CMUserCollection.md)
-
 [Get-CMUserCollectionDirectMembershipRule](Get-CMUserCollectionDirectMembershipRule.md)
-
 [Remove-CMUserCollectionDirectMembershipRule](Remove-CMUserCollectionDirectMembershipRule.md)
+
+[Get-CMCollection](Get-CMCollection.md)
+[Get-CMUserCollection](Get-CMUserCollection.md)
+[Get-CMResource](Get-CMResource.md)
+[Get-CMUser](Get-CMUser.md)
+
+[Add-CMDeviceCollectionDirectMembershipRule](Add-CMDeviceCollectionDirectMembershipRule.md)
+
+[How to create collections in Configuration Manager](/mem/configmgr/core/clients/manage/collections/create-collections)

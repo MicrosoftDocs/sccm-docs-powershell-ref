@@ -1,7 +1,7 @@
----
+﻿---
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 08/13/2021
+ms.date: 12/14/2021
 online version:
 schema: 2.0.0
 ---
@@ -18,13 +18,14 @@ Configure an instance of the **Check Readiness** task sequence step.
 ```
 Set-CMTSStepPrestartCheck [-CheckCMClientMinVersion <Boolean>] [-CheckMaxOSVersion <Boolean>]
  [-CheckMemory <Boolean>] [-CheckMinOSVersion <Boolean>] [-CheckNetworkConnected <Boolean>]
- [-CheckNetworkWired <Boolean>] [-CheckOS <Boolean>] [-CheckOSArchitecture <Boolean>]
- [-CheckOSLanguageId <Boolean>] [-CheckPowerState <Boolean>] [-CheckSpace <Boolean>] [-CheckSpeed <Boolean>]
- [-CheckUefi <Boolean>] [-CMClientMinVersion <String>] [-DiskSpace <Int32>] [-MaxOSVersion <String>]
- [-Memory <Int32>] [-MinOSVersion <String>] [-OS <OSType>] [-OSArchitecture <OSArch>] [-OSLanguageId <Int32>]
- [-Speed <Int32>] [-AddCondition <IResultObject[]>] [-ClearCondition] [-Description <String>]
- -InputObject <IResultObject> [-IsContinueOnError <Boolean>] [-IsEnabled <Boolean>] [-MoveToIndex <Int32>]
- [-NewStepName <String>] [-RemoveConditionFile] [-RemoveConditionFolder] [-RemoveConditionIfStatement]
+ [-CheckNetworkWired <Boolean>] [-CheckTpmEnabled <Boolean>] [-CheckTpmActivated <Boolean>]
+ [-CheckOS <Boolean>] [-CheckOSArchitecture <Boolean>] [-CheckOSLanguageId <Boolean>]
+ [-CheckPowerState <Boolean>] [-CheckSpace <Boolean>] [-CheckSpeed <Boolean>] [-CheckUefi <Boolean>]
+ [-CMClientMinVersion <String>] [-DiskSpace <Int32>] [-MaxOSVersion <String>] [-Memory <Int32>]
+ [-MinOSVersion <String>] [-OS <OSType>] [-OSArchitecture <OSArch>] [-OSLanguageId <Int32>] [-Speed <Int32>]
+ [-AddCondition <IResultObject[]>] [-ClearCondition] [-Description <String>] -InputObject <IResultObject>
+ [-IsContinueOnError <Boolean>] [-IsEnabled <Boolean>] [-MoveToIndex <Int32>] [-NewStepName <String>]
+ [-RemoveConditionFile] [-RemoveConditionFolder] [-RemoveConditionIfStatement]
  [-RemoveConditionOperatingSystem] [-RemoveConditionQueryWmi] [-RemoveConditionRegistry]
  [-RemoveConditionSoftware] [-RemoveConditionVariable] [-StepName <String>] [-StepOrder <ReorderType>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
@@ -34,34 +35,34 @@ Set-CMTSStepPrestartCheck [-CheckCMClientMinVersion <Boolean>] [-CheckMaxOSVersi
 ```
 Set-CMTSStepPrestartCheck [-CheckCMClientMinVersion <Boolean>] [-CheckMaxOSVersion <Boolean>]
  [-CheckMemory <Boolean>] [-CheckMinOSVersion <Boolean>] [-CheckNetworkConnected <Boolean>]
- [-CheckNetworkWired <Boolean>] [-CheckOS <Boolean>] [-CheckOSArchitecture <Boolean>]
- [-CheckOSLanguageId <Boolean>] [-CheckPowerState <Boolean>] [-CheckSpace <Boolean>] [-CheckSpeed <Boolean>]
- [-CheckUefi <Boolean>] [-CMClientMinVersion <String>] [-DiskSpace <Int32>] [-MaxOSVersion <String>]
- [-Memory <Int32>] [-MinOSVersion <String>] [-OS <OSType>] [-OSArchitecture <OSArch>] [-OSLanguageId <Int32>]
- [-Speed <Int32>] [-AddCondition <IResultObject[]>] [-ClearCondition] [-Description <String>]
- [-IsContinueOnError <Boolean>] [-IsEnabled <Boolean>] [-MoveToIndex <Int32>] [-NewStepName <String>]
- [-RemoveConditionFile] [-RemoveConditionFolder] [-RemoveConditionIfStatement]
- [-RemoveConditionOperatingSystem] [-RemoveConditionQueryWmi] [-RemoveConditionRegistry]
- [-RemoveConditionSoftware] [-RemoveConditionVariable] [-StepName <String>] [-StepOrder <ReorderType>]
- -TaskSequenceId <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-CheckNetworkWired <Boolean>] [-CheckTpmEnabled <Boolean>] [-CheckTpmActivated <Boolean>]
+ [-CheckOS <Boolean>] [-CheckOSArchitecture <Boolean>] [-CheckOSLanguageId <Boolean>]
+ [-CheckPowerState <Boolean>] [-CheckSpace <Boolean>] [-CheckSpeed <Boolean>] [-CheckUefi <Boolean>]
+ [-CMClientMinVersion <String>] [-DiskSpace <Int32>] [-MaxOSVersion <String>] [-Memory <Int32>]
+ [-MinOSVersion <String>] [-OS <OSType>] [-OSArchitecture <OSArch>] [-OSLanguageId <Int32>] [-Speed <Int32>]
+ [-AddCondition <IResultObject[]>] [-ClearCondition] [-Description <String>] [-IsContinueOnError <Boolean>]
+ [-IsEnabled <Boolean>] [-MoveToIndex <Int32>] [-NewStepName <String>] [-RemoveConditionFile]
+ [-RemoveConditionFolder] [-RemoveConditionIfStatement] [-RemoveConditionOperatingSystem]
+ [-RemoveConditionQueryWmi] [-RemoveConditionRegistry] [-RemoveConditionSoftware] [-RemoveConditionVariable]
+ [-StepName <String>] [-StepOrder <ReorderType>] -TaskSequenceId <String> [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByName
 ```
 Set-CMTSStepPrestartCheck [-CheckCMClientMinVersion <Boolean>] [-CheckMaxOSVersion <Boolean>]
  [-CheckMemory <Boolean>] [-CheckMinOSVersion <Boolean>] [-CheckNetworkConnected <Boolean>]
- [-CheckNetworkWired <Boolean>] [-CheckOS <Boolean>] [-CheckOSArchitecture <Boolean>]
- [-CheckOSLanguageId <Boolean>] [-CheckPowerState <Boolean>] [-CheckSpace <Boolean>] [-CheckSpeed <Boolean>]
- [-CheckUefi <Boolean>] [-CMClientMinVersion <String>] [-DiskSpace <Int32>] [-MaxOSVersion <String>]
- [-Memory <Int32>] [-MinOSVersion <String>] [-OS <OSType>] [-OSArchitecture <OSArch>] [-OSLanguageId <Int32>]
- [-Speed <Int32>] [-AddCondition <IResultObject[]>] [-ClearCondition] [-Description <String>]
- [-IsContinueOnError <Boolean>] [-IsEnabled <Boolean>] [-MoveToIndex <Int32>] [-NewStepName <String>]
- [-RemoveConditionFile] [-RemoveConditionFolder] [-RemoveConditionIfStatement]
- [-RemoveConditionOperatingSystem] [-RemoveConditionQueryWmi] [-RemoveConditionRegistry]
- [-RemoveConditionSoftware] [-RemoveConditionVariable] [-StepName <String>] [-StepOrder <ReorderType>]
- -TaskSequenceName <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-CheckNetworkWired <Boolean>] [-CheckTpmEnabled <Boolean>] [-CheckTpmActivated <Boolean>]
+ [-CheckOS <Boolean>] [-CheckOSArchitecture <Boolean>] [-CheckOSLanguageId <Boolean>]
+ [-CheckPowerState <Boolean>] [-CheckSpace <Boolean>] [-CheckSpeed <Boolean>] [-CheckUefi <Boolean>]
+ [-CMClientMinVersion <String>] [-DiskSpace <Int32>] [-MaxOSVersion <String>] [-Memory <Int32>]
+ [-MinOSVersion <String>] [-OS <OSType>] [-OSArchitecture <OSArch>] [-OSLanguageId <Int32>] [-Speed <Int32>]
+ [-AddCondition <IResultObject[]>] [-ClearCondition] [-Description <String>] [-IsContinueOnError <Boolean>]
+ [-IsEnabled <Boolean>] [-MoveToIndex <Int32>] [-NewStepName <String>] [-RemoveConditionFile]
+ [-RemoveConditionFolder] [-RemoveConditionIfStatement] [-RemoveConditionOperatingSystem]
+ [-RemoveConditionQueryWmi] [-RemoveConditionRegistry] [-RemoveConditionSoftware] [-RemoveConditionVariable]
+ [-StepName <String>] [-StepOrder <ReorderType>] -TaskSequenceName <String> [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByIdSetConditionIfStatement
@@ -463,6 +464,38 @@ Set this parameter to `$true` to enable the **Minimum processor speed (MHz)** ch
 Type: Boolean
 Parameter Sets: ByValue, ById, ByName
 Aliases: EnableCheckProcessorSpeed
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CheckTpmActivated
+
+Applies to version 2111 and later. Set this parameter to `$true` to enable the **TPM 2.0 or above is activated** check.
+
+```yaml
+Type: Boolean
+Parameter Sets: ByValue, ById, ByName
+Aliases: TpmActivated
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CheckTpmEnabled
+
+Applies to version 2111 and later. Set this parameter to `$true` to enable the **TPM 2.0 or above is enabled** check.
+
+```yaml
+Type: Boolean
+Parameter Sets: ByValue, ById, ByName
+Aliases: TpmEnabled
 
 Required: False
 Position: Named
@@ -1474,7 +1507,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
-
 ## NOTES
 
 ## RELATED LINKS

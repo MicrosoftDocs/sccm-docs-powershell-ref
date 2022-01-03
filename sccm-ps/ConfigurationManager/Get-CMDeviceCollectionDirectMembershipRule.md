@@ -1,8 +1,7 @@
 ﻿---
-description: Gets a direct membership rule for a device collection.
 external help file: AdminUI.PS.psm1-help.xml
 Module Name: ConfigurationManager
-ms.date: 05/02/2019
+ms.date: 12/28/2021
 schema: 2.0.0
 title: Get-CMDeviceCollectionDirectMembershipRule
 ---
@@ -10,7 +9,8 @@ title: Get-CMDeviceCollectionDirectMembershipRule
 # Get-CMDeviceCollectionDirectMembershipRule
 
 ## SYNOPSIS
-Gets a direct membership rule for a device collection.
+
+Get a direct membership rule for a device collection.
 
 ## SYNTAX
 
@@ -66,31 +66,38 @@ Get-CMDeviceCollectionDirectMembershipRule -InputObject <IResultObject> [-Resour
 ```
 
 ## DESCRIPTION
-The **Get-CMDeviceCollectionDirectMembershipRule** cmdlet gets one or more direct membership rules for a device collection.
+
+Use this cmdlet to get one or more direct membership rules for a device collection.
+A _direct_ membership rule lets you explicitly choose the members of the device collection.
+Default collections don't have direct membership rules. Any collection that you target should have an ID that starts with the site code, not `SMS`.
+For more information, see [How to create collections in Configuration Manager](/mem/configmgr/core/clients/manage/collections/create-collections).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
-### Example 1: Get a direct membership rule by its name
-```
-PS XYZ:\> Get-CMDeviceCollectionDirectMembershipRule -CollectionName "Device01"
+### Example 1: Get all direct membership rules for a collection by name
+
+This command gets the direct membership rules for the device collection named **Device01**.
+
+```powershell
+Get-CMDeviceCollectionDirectMembershipRule -CollectionName "Device01"
 ```
 
-This command gets the direct membership rules for the device collection named Device01.
+### Example 2: Get all direct membership rules by using the pipeline
 
-### Example 2: Get a direct membership rule by using the pipeline
-```
-PS XYZ:\> Get-CMCollection -Name "Device02" | Get-CMDeviceCollectionDirectMembershipRule
-```
+This command uses the **Get-CMCollection** cmdlet to get the device collection object named **Device02**. It then uses the pipeline operator to pass the object to the **Get-CMDeviceCollectionDirectMembershipRule** cmdlet.
 
-This command gets the device collection object named Device02 and uses the pipeline operator to pass the object to Get-CMDeviceCollectionDirectMembershipRule which gets the direct membership rules for the device collection object.
+```powershell
+Get-CMCollection -Name "Device02" | Get-CMDeviceCollectionDirectMembershipRule
+```
 
 ## PARAMETERS
 
 ### -CollectionId
-Specifies the ID of a device collection.
+
+Specify the ID of the device collection to get the rule. This value is the **CollectionID** property, for example, `XYZ00012`. Since default collections can't have direct membership rules, this ID starts with the site code and not `SMS`.
 
 ```yaml
 Type: String
@@ -105,7 +112,8 @@ Accept wildcard characters: False
 ```
 
 ### -CollectionName
-Specifies the name of a device collection.
+
+Specify the name of the device collection to get the rule.
 
 ```yaml
 Type: String
@@ -120,8 +128,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies the input to this cmdlet.
-You can use this parameter, or you can pipe the input to this cmdlet.
+
+Specify an object for the device collection to get the rule. To get this object, use the [Get-CMCollection](Get-CMCollection.md) or [Get-CMDeviceCollection](Get-CMDeviceCollection.md) cmdlets.
 
 ```yaml
 Type: IResultObject
@@ -136,8 +144,8 @@ Accept wildcard characters: False
 ```
 
 ### -Resource
-Specifies a resource object.
-To obtain a resource object, use the **Get-CMResource** cmdlet.
+
+Specify a device object to get its direct membership rule from the device collection. To get this object, use the [Get-CMResource](Get-CMResource.md) or [Get-CMDevice](Get-CMDevice.md) cmdlets.
 
 ```yaml
 Type: IResultObject
@@ -152,7 +160,8 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceId
-Specifies the ID of a resource.
+
+Specify the ID of the device to get its direct membership rule from the device collection. This value is the **ResourceID** property, for example `16777219`.
 
 ```yaml
 Type: String
@@ -167,7 +176,8 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceName
-Specifies the name of a resource.
+
+Specify the name of the device to get its direct membership rule from the device collection.
 
 ```yaml
 Type: String
@@ -187,19 +197,25 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
 
-[Introduction to Collections in Configuration Manager](/mem/configmgr/core/clients/manage/collections/introduction-to-collections)
-
 [Add-CMDeviceCollectionDirectMembershipRule](Add-CMDeviceCollectionDirectMembershipRule.md)
-
 [Remove-CMDeviceCollectionDirectMembershipRule](Remove-CMDeviceCollectionDirectMembershipRule.md)
 
-[Get-CMUserCollection](Get-CMUserCollection.md)
+[Get-CMCollectionDirectMembershipRule](Get-CMCollectionDirectMembershipRule.md)
 
+[Get-CMCollection](Get-CMCollection.md)
+[Get-CMDeviceCollection](Get-CMDeviceCollection.md)
+[Get-CMResource](Get-CMResource.md)
+[Get-CMDevice](Get-CMDevice.md)
 
+[Get-CMUserCollectionDirectMembershipRule](Get-CMUserCollectionDirectMembershipRule.md)
+
+[How to create collections in Configuration Manager](/mem/configmgr/core/clients/manage/collections/create-collections)

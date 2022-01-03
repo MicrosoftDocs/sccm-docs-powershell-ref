@@ -1,8 +1,7 @@
 ---
-description: Updates the membership of a Configuration Manager collection.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/05/2019
+ms.date: 12/29/2021
 schema: 2.0.0
 title: Invoke-CMCollectionUpdate
 ---
@@ -10,7 +9,8 @@ title: Invoke-CMCollectionUpdate
 # Invoke-CMCollectionUpdate
 
 ## SYNOPSIS
-Updates the membership of a Configuration Manager collection.
+
+Update the membership of a collection.
 
 ## SYNTAX
 
@@ -33,7 +33,10 @@ Invoke-CMCollectionUpdate -Name <String> [-DisableWildcardHandling] [-ForceWildc
 ```
 
 ## DESCRIPTION
-The **Invoke-CMCollectionUpdate** cmdlet updates the membership of a Configuration Manager collection.
+
+Use this cmdlet to update the membership of a collection. The site evaluates the membership for the selected collection based on the collection's membership rules. For collections with many members, this update might take some time to finish.
+
+For more information, see [Collection evaluation in Configuration Manager](/mem/configmgr/core/clients/manage/collections/collection-evaluation).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
@@ -41,23 +44,26 @@ The **Invoke-CMCollectionUpdate** cmdlet updates the membership of a Configurati
 ## EXAMPLES
 
 ### Example 1: Update the membership of a collection using the pipeline
-```
-PS XYZ:\> Get-CMCollection -Id MP500014 | Invoke-CMCollectionUpdate
-```
 
-This command gets the collection object with the ID of MP500014 and uses the pipeline operator to pass the object to **Invoke-CMCollectionUpdate**, which updates the membership of the collection.
+This command gets the collection object with the ID of **XYZ00014** and uses the pipeline operator to pass the object to **Invoke-CMCollectionUpdate**, which updates the membership of the collection.
+
+```powershell
+Get-CMCollection -Id XYZ00014 | Invoke-CMCollectionUpdate
+```
 
 ### Example 2: Update the membership of a collection by name
-```
-PS XYZ:\> Invoke-CMCollectionUpdate -Name "UserCol1"
-```
 
-This command updates the membership of the collection named UserCol1.
+This command updates the membership of the collection named **UserCol1**.
+
+```powershell
+Invoke-CMCollectionUpdate -Name "UserCol1"
+```
 
 ## PARAMETERS
 
 ### -CollectionId
-Specifies the ID of a collection.
+
+Specify the ID of the collection to update. This value is the **CollectionID** property, for example, `XYZ00012` or `SMS00001`.
 
 ```yaml
 Type: String
@@ -104,8 +110,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies a collection object.
-To obtain a collection object, use the Get-CMCollection, Get-CMDeviceCollection, or Get-CMUserCollection cmdlets.
+
+Specify a collection object to update. To get this object, use the [Get-CMCollection](Get-CMCollection.md), [Get-CMDeviceCollection](Get-CMDeviceCollection.md), or [Get-CMUserCollection](Get-CMUserCollection.md) cmdlets.
 
 ```yaml
 Type: IResultObject
@@ -120,7 +126,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies the name of a collection.
+
+Specify the name of a collection to update.
 
 ```yaml
 Type: String
@@ -135,6 +142,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -171,17 +179,27 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
 
+[Copy-CMCollection](Copy-CMCollection.md)
+[Export-CMCollection](Export-CMCollection.md)
 [Get-CMCollection](Get-CMCollection.md)
+[Get-CMCollectionMember](Get-CMCollectionMember.md)
+[Get-CMCollectionSetting](Get-CMCollectionSetting.md)
+[Import-CMCollection](Import-CMCollection.md)
+[Invoke-CMCollectionUpdate](Invoke-CMCollectionUpdate.md)
+[New-CMCollection](New-CMCollection.md)
+[Remove-CMCollection](Remove-CMCollection.md)
+[Set-CMCollection](Set-CMCollection.md)
 
 [Get-CMDeviceCollection](Get-CMDeviceCollection.md)
-
 [Get-CMUserCollection](Get-CMUserCollection.md)
 
-
+[Introduction to collections in Configuration Manager](/mem/configmgr/core/clients/manage/collections/introduction-to-collections)

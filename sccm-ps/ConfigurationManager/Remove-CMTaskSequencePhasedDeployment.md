@@ -51,7 +51,7 @@ Remove-CMTaskSequencePhasedDeployment [-Force] -Name <String> [-DisableWildcardH
 
 ## DESCRIPTION
 
-Starting in version 2002, use this cmdlet to remove a phased deployment for a task sequence.
+Use this cmdlet to remove a phased deployment for a task sequence.
 
 ## EXAMPLES
 

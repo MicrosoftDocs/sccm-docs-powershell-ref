@@ -1,8 +1,7 @@
 ﻿---
-description: Gets the settings for a collection.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/02/2019
+ms.date: 12/30/2021
 schema: 2.0.0
 title: Get-CMCollectionSetting
 ---
@@ -10,7 +9,8 @@ title: Get-CMCollectionSetting
 # Get-CMCollectionSetting
 
 ## SYNOPSIS
-Gets the settings for a collection.
+
+Get the settings for a collection.
 
 ## SYNTAX
 
@@ -33,7 +33,12 @@ Get-CMCollectionSetting -CollectionName <String> [-CollectionType <CollectionTyp
 ```
 
 ## DESCRIPTION
-The **Get-CMCollectionSetting** cmdlet gets the settings for a collection.
+
+Use this cmdlet to get the settings for a collection. These settings include properties for device variables, power management, and maintenance windows. In most instances, use the dedicated cmdlets for these properties, for example:
+
+- [Get-CMDeviceCollectionVariable](Get-CMDeviceCollectionVariable.md)
+- [Set-CMCollectionPowerManagement](Set-CMCollectionPowerManagement.md)
+- [Get-CMMaintenanceWindow](Get-CMMaintenanceWindow.md)
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
@@ -41,23 +46,26 @@ The **Get-CMCollectionSetting** cmdlet gets the settings for a collection.
 ## EXAMPLES
 
 ### Example 1: Get the settings for a collection by using the pipeline
-```
-PS XYZ:\> Get-CMCollection -Id MP500014 | Get-CMCollectionSetting -CollectionType Device
-```
 
-This command gets the collection object with the ID of MP500014 and uses the pipeline operator to pass the object to **Get-CMCollectionSetting**, which gets the device collection settings for the collection object.
+This command gets the collection object with the ID of **XYZ00014** and uses the pipeline operator to pass the object to **Get-CMCollectionSetting**, which gets the device collection settings for the collection object.
+
+```powershell
+Get-CMCollection -Id XYZ00014 | Get-CMCollectionSetting -CollectionType Device
+```
 
 ### Example 2: Get the settings for a collection by name
-```
-PS XYZ:\> Get-CMCollectionSetting -CollectionName "Devicecol1"
-```
 
-This command gets the collection settings for the device collection named Devicecol1.
+This command gets the collection settings for the device collection named **Devicecol1**.
+
+```powershell
+Get-CMCollectionSetting -CollectionName "Devicecol1"
+```
 
 ## PARAMETERS
 
 ### -CollectionId
-Specifies the ID of a collection.
+
+Specify the ID of the collection to get its settings. This value is the **CollectionID** property, for example, `XYZ00012`.
 
 ```yaml
 Type: String
@@ -72,7 +80,8 @@ Accept wildcard characters: False
 ```
 
 ### -CollectionName
-Specifies the name of a collection.
+
+Specify the name of the collection to get its settings.
 
 ```yaml
 Type: String
@@ -87,10 +96,8 @@ Accept wildcard characters: False
 ```
 
 ### -CollectionType
-Specifies the collection type.
-A collection type of User is 1.
-A collection type of Device is 2.
-You can specify the type by using either User or Device, or 1 or 2.
+
+Filter the type of collection to get.
 
 ```yaml
 Type: CollectionType
@@ -138,8 +145,14 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies a collection object.
-To obtain a collection object, use the Get-CMCollection, Get-CMDeviceCollection or Get-CMUserCollection cmdlets.
+
+Specify a collection object to get its settings. To get this object, use one of the following cmdlets:
+
+- [Get-CMCollection](Get-CMCollection.md)
+- [Get-CMDeviceCollection](Get-CMDeviceCollection.md)
+- [Get-CMUserCollection](Get-CMUserCollection.md)
+
+You can also use the pipeline operator (`|`) to pass a collection object to **Get-CMCollectionMemeber** on the command line.
 
 ```yaml
 Type: IResultObject
@@ -159,17 +172,26 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
 
+[Copy-CMCollection](Copy-CMCollection.md)
+[Export-CMCollection](Export-CMCollection.md)
 [Get-CMCollection](Get-CMCollection.md)
+[Get-CMCollectionMember](Get-CMCollectionMember.md)
+[Import-CMCollection](Import-CMCollection.md)
+[Invoke-CMCollectionUpdate](Invoke-CMCollectionUpdate.md)
+[New-CMCollection](New-CMCollection.md)
+[Remove-CMCollection](Remove-CMCollection.md)
+[Set-CMCollection](Set-CMCollection.md)
 
 [Get-CMDeviceCollection](Get-CMDeviceCollection.md)
-
 [Get-CMUserCollection](Get-CMUserCollection.md)
 
-
+[Introduction to collections in Configuration Manager](/mem/configmgr/core/clients/manage/collections/introduction-to-collections)

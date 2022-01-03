@@ -1,4 +1,4 @@
----
+﻿---
 description: Imports a software license.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -94,7 +94,7 @@ Specifies the Universal Naming Convention (UNC) path of a valid XML-formatted li
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: FileName, FilePath, ImportFilePath, Path
 
 Required: True
 Position: Named
@@ -155,6 +155,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
+
 ## OUTPUTS
 
 ### System.Object

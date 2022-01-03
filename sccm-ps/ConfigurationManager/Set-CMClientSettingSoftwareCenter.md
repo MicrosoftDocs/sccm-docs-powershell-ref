@@ -132,7 +132,7 @@ Set-CMClientSettingSoftwareCenter -DefaultSetting -ClearCustomTab
 ## PARAMETERS
 
 ### -AddCustomTab
-Starting in version 1906, use this parameter to add a custom tab to the Software Center client setting.
+Use this parameter to add a custom tab to the Software Center client setting.
 
 ```yaml
 Type: SoftwareCenterTabItem[]
@@ -147,7 +147,7 @@ Accept wildcard characters: False
 ```
 
 ### -ClearCustomTab
-Starting in version 1906, use this parameter to remove a custom tab from the Software Center client setting.
+Use this parameter to remove a custom tab from the Software Center client setting.
 
 ```yaml
 Type: SwitchParameter
@@ -162,7 +162,7 @@ Accept wildcard characters: False
 ```
 
 ### -ColorScheme
-Starting in version 1906, use this parameter to configure the Software Center client setting, **Color scheme for Software Center**.
+Use this parameter to configure the Software Center client setting, **Color scheme for Software Center**.
 
 ```yaml
 Type: Color
@@ -177,7 +177,7 @@ Accept wildcard characters: False
 ```
 
 ### -CompanyName
-Starting in version 1906, use this parameter to configure the Software Center client setting, **Company name**.
+Use this parameter to configure the Software Center client setting, **Company name**.
 
 ```yaml
 Type: String
@@ -192,7 +192,7 @@ Accept wildcard characters: False
 ```
 
 ### -CustomTabName
-Starting in version 1906, this parameter is deprecated. To create a custom tab, use the [New-CMSoftwareCenterTabItem](New-CMSoftwareCenterTabItem.md) cmdlet.
+This parameter is deprecated. To create a custom tab, use the [New-CMSoftwareCenterTabItem](New-CMSoftwareCenterTabItem.md) cmdlet.
 
 ```yaml
 Type: String
@@ -207,7 +207,7 @@ Accept wildcard characters: False
 ```
 
 ### -CustomTabUrl
-Starting in version 1906, this parameter is deprecated. To create a custom tab, use the [New-CMSoftwareCenterTabItem](New-CMSoftwareCenterTabItem.md) cmdlet.
+This parameter is deprecated. To create a custom tab, use the [New-CMSoftwareCenterTabItem](New-CMSoftwareCenterTabItem.md) cmdlet.
 
 ```yaml
 Type: Uri

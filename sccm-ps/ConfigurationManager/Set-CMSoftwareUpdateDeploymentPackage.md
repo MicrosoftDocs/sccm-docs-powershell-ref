@@ -1,7 +1,7 @@
 ---
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 04/02/2021
+ms.date: 12/16/2021
 schema: 2.0.0
 title: Set-CMSoftwareUpdateDeploymentPackage
 ---
@@ -322,16 +322,22 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
 
 [Get-CMSoftwareUpdateDeploymentPackage](Get-CMSoftwareUpdateDeploymentPackage.md)
 
+[New-CMSoftwareUpdateDeploymentPackage](Set-CMSoftwareUpdateDeploymentPackage.md)
+
 [Remove-CMSoftwareUpdateDeploymentPackage](Remove-CMSoftwareUpdateDeploymentPackage.md)
+
+[Save-CMSoftwareUpdate](Save-CMSoftwareUpdate.md)
 
 [Deploy software updates](/mem/configmgr/sum/deploy-use/download-software-updates)
 

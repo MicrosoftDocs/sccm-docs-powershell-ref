@@ -1,4 +1,4 @@
----
+﻿---
 description: Imports a certificate.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -97,7 +97,7 @@ Specifies a certification path.
 ```yaml
 Type: String
 Parameter Sets: ByFile
-Aliases:
+Aliases: CertificatePath, FileName, FilePath, ImportFilePath
 
 Required: True
 Position: 0
@@ -156,10 +156,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### System.Security.Cryptography.X509Certificates.X509Certificate
+
 ## OUTPUTS
 
 ### IResultObject[]#SMS_ISVProxyCertificateInfo
+
 ### IResultObject#SMS_ISVProxyCertificateInfo
+
 ## NOTES
 
 ## RELATED LINKS

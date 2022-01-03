@@ -1,8 +1,7 @@
 ---
-description: Disables programs in Configuration Manager packages.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 04/29/2019
+ms.date: 12/28/2021
 schema: 2.0.0
 title: Disable-CMProgram
 ---
@@ -10,7 +9,8 @@ title: Disable-CMProgram
 # Disable-CMProgram
 
 ## SYNOPSIS
-Disables programs in Configuration Manager packages.
+
+Disable a program in a package.
 
 ## SYNTAX
 
@@ -33,14 +33,12 @@ Disable-CMProgram -PackageName <String> [-PassThru] -ProgramName <String> [-Disa
 ```
 
 ## DESCRIPTION
-The **Disable-CMProgram** cmdlet disables one or more programs in Configuration Manager packages.
-Programs are commands that are associated with a Configuration Manager package.
-Programs identify the actions that occur when the client receives the client package.
-You can associate multiple programs with the same package.
 
-You can disable a program to prevent Configuration Manager from running it on client computers where it is currently advertised.
-When you disable a program, Configuration Manager still sends the program to distribution points and still advertises the Program on client computers, but Configuration Manager does not display or run the program on the client.
-This behavior is the same that occurs when you disable an advertisement with which the program has been associated.
+Use this cmdlet to disable a program in a package.
+
+Disable a program to prevent Configuration Manager clients from running it.
+When you disable a program, Configuration Manager still distributes the package content to distribution points and sends the program deployment to clients. The client doesn't display or run the program on the client.
+This behavior is the same when you disable the program deployment.
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
@@ -48,11 +46,12 @@ This behavior is the same that occurs when you disable an advertisement with whi
 ## EXAMPLES
 
 ### Example 1: Disable a program
-```
-PS XYZ:\>Disable-CMProgram -PackageId "CM400007" -ProgramName "ProgramD02"
-```
 
-This command disables the program named ProgramD02 in the package that has the ID CM400007.
+This command disables the program named **ProgramD02** in the package that has the ID **XYZ00007**.
+
+```powershell
+Disable-CMProgram -PackageId "XYZ00007" -ProgramName "ProgramD02"
+```
 
 ## PARAMETERS
 
@@ -89,8 +88,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies the input to this cmdlet.
-You can use this parameter, or you can pipe the input to this cmdlet.
+
+Specify a program object to disable. To get this object, use the [Get-CMProgram](Get-CMProgram.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -105,7 +104,8 @@ Accept wildcard characters: False
 ```
 
 ### -PackageId
-Specifies an array of package IDs.
+
+Specify the ID of the package with the program to disable.
 
 ```yaml
 Type: String
@@ -120,7 +120,8 @@ Accept wildcard characters: False
 ```
 
 ### -PackageName
-Specifies an array of package names.
+
+Specify the name of the package with the program to disable.
 
 ```yaml
 Type: String
@@ -151,7 +152,8 @@ Accept wildcard characters: False
 ```
 
 ### -ProgramName
-Specifies an array of program names.
+
+Specify the name of the package with the program to disable.
 
 ```yaml
 Type: String
@@ -166,6 +168,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -202,10 +205,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ### IResultObject#SMS_Program
+
 ## NOTES
+
+For more information on this return object and its properties, see [SMS_Program server WMI class](/mem/configmgr/develop/reference/core/servers/configure/sms_program-server-wmi-class).
 
 ## RELATED LINKS
 

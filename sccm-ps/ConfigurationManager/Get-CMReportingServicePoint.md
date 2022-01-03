@@ -1,8 +1,7 @@
 ﻿---
-description: Gets a reporting service point.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/02/2019
+ms.date: 12/15/2021
 schema: 2.0.0
 title: Get-CMReportingServicePoint
 ---
@@ -10,7 +9,8 @@ title: Get-CMReportingServicePoint
 # Get-CMReportingServicePoint
 
 ## SYNOPSIS
-Gets a reporting service point.
+
+Get a reporting service point.
 
 ## SYNTAX
 
@@ -27,8 +27,11 @@ Get-CMReportingServicePoint [-AllSite] -InputObject <IResultObject> [-DisableWil
 ```
 
 ## DESCRIPTION
-The **Get-CMReportingServicePoint** cmdlet gets a reporting service point.
-A reporting service point is a site system role that is installed on a server that runs Microsoft SQL Server Reporting Services.
+
+Use this cmdlet to get a reporting service point site system role. A reporting service point is a site system role that's installed on a server that runs Microsoft SQL Server Reporting Services. For more information, see [Introduction to reporting in Configuration Manager](/mem/configmgr/core/servers/manage/introduction-to-reporting).
+
+> [!IMPORTANT]
+> This cmdlet doesn't support [PowerShell 7](/powershell/sccm/overview#support-for-powershell-version-7).<!-- 12500019 --> It requires the .NET Framework instead of .NET Core that's used with PowerShell version 7.
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
@@ -36,16 +39,19 @@ A reporting service point is a site system role that is installed on a server th
 ## EXAMPLES
 
 ### Example 1: Get a reporting service point
-```
-PS XYZ:\> Get-CMReportingServicePoint -SiteSystemServerName "CMCEN-DIST02.TSQA.CORP.CONTOSCO.COM" -SiteCode "CM1" >>\Cmrsp01\Get-CMReportingServicePoint_data.txt
-```
 
 This command gets a reporting service point from the Configuration Manager site that has the site code CM1 on the site system server named CMCEN-DIST02.TSQA.CORP.CONTOSCO.COM.
-The command directs the output to the file \Cmrsp01\Get-CMReportingServicePoint_data.txt.
+
+```powershell
+Get-CMReportingServicePoint -SiteSystemServerName "CMCEN-DIST02.TSQA.CORP.CONTOSCO.COM" -SiteCode "CM1"
+```
 
 ## PARAMETERS
 
 ### -AllSite
+
+Add this parameter to get the reporting service points from all sites in the hierarchy.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -91,8 +97,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies the input to this cmdlet.
-You can use this parameter, or you can pipe the input to this cmdlet.
+
+Specify a site system server object that has the reporting service point role. To get this object, use the [Get-CMSiteSystemServer](Get-CMSiteSystemServer.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -107,7 +113,8 @@ Accept wildcard characters: False
 ```
 
 ### -SiteCode
-Specifies the site code of the Configuration Manager site that hosts the site system role.
+
+Specify the three-character code for the site that manages the system role for the reporting service point.
 
 ```yaml
 Type: String
@@ -122,7 +129,8 @@ Accept wildcard characters: False
 ```
 
 ### -SiteSystemServerName
-Specifies a fully qualified domain name (FQDN) of the server that hosts the site system role.
+
+Specify the name of the site system server that hosts the reporting service point role.
 
 ```yaml
 Type: String
@@ -142,11 +150,16 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
 ### IResultObject[]#SMS_SCI_SysResUse
+
 ### IResultObject#SMS_SCI_SysResUse
+
 ## NOTES
+
+For more information on this return object and its properties, see [SMS_SCI_SysResUse server WMI class](/mem/configmgr/develop/reference/core/servers/configure/sms_sci_sysresuse-server-wmi-class).
 
 ## RELATED LINKS
 
@@ -155,5 +168,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-CMReportingServicePoint](Remove-CMReportingServicePoint.md)
 
 [Set-CMReportingServicePoint](Set-CMReportingServicePoint.md)
-
-

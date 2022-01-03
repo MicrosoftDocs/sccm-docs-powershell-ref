@@ -1,8 +1,7 @@
 ﻿---
-description: Gets a device collection variable.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/02/2019
+ms.date: 12/29/2021
 schema: 2.0.0
 title: Get-CMDeviceCollectionVariable
 ---
@@ -10,7 +9,8 @@ title: Get-CMDeviceCollectionVariable
 # Get-CMDeviceCollectionVariable
 
 ## SYNOPSIS
-Gets a device collection variable.
+
+Get a device collection variable.
 
 ## SYNTAX
 
@@ -33,7 +33,11 @@ Get-CMDeviceCollectionVariable -CollectionId <String> [-VariableName <String>] [
 ```
 
 ## DESCRIPTION
-The **Get-CMDeviceCollectionVariable** cmdlet gets the task sequence variables for a device collection.
+
+Use this cmdlet to get the task sequence variables on a device collection.
+Default collections can't have variables. Any collection that you target should have an ID that starts with the site code, not `SMS`.
+
+For more information, see [How to set task sequence variables](/mem/configmgr/osd/understand/using-task-sequence-variables#bkmk_set).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
@@ -41,17 +45,26 @@ The **Get-CMDeviceCollectionVariable** cmdlet gets the task sequence variables f
 ## EXAMPLES
 
 ### Example 1: Get a device collection variable by name
-```
-PS XYZ:\> Get-CMDeviceCollectionVariable -CollectionName "DeviceCollection02" -VariableName "testTS"
-```
 
 This command gets the collection variable named testTS for the device collection named Device.
+
+```powershell
+Get-CMDeviceCollectionVariable -CollectionName "DeviceCollection02" -VariableName "testTS"
+```
+
+### Example 2: Get all unmasked variables for a collection
+
+This example gets all variables from the collection **IT servers**, and filters the list to only the variables that aren't hidden. It then shows the name and value for each variable in a table.
+
+```powershell
+Get-CMDeviceCollectionVariable -CollectionName "IT servers" | Where-Object { -not $_.IsMasked } | Select-Object Name, Value
+```
 
 ## PARAMETERS
 
 ### -Collection
-Specifies a device collection object.
-To obtain a collection object, use the [Get-CMCollection](Get-CMCollection.md) cmdlet.
+
+Specify a device collection object to get its variables. To get this object, use the [Get-CMCollection](Get-CMCollection.md) or [Get-CMDeviceCollection](Get-CMDeviceCollection.md) cmdlets.
 
 ```yaml
 Type: IResultObject
@@ -66,7 +79,8 @@ Accept wildcard characters: False
 ```
 
 ### -CollectionId
-Specifies the ID of a device collection.
+
+Specify the ID of a device collection to get its variables. This value is the **CollectionID** property, for example, `XYZ00012`. Since you can't set variables on default collections, this value starts with the site code, not `SMS`.
 
 ```yaml
 Type: String
@@ -81,7 +95,8 @@ Accept wildcard characters: False
 ```
 
 ### -CollectionName
-Specifies the name of a device collection.
+
+Specify the name of a device collection to get its variables.
 
 ```yaml
 Type: String
@@ -128,7 +143,8 @@ Accept wildcard characters: False
 ```
 
 ### -VariableName
-Specifies the name of a collection variable.
+
+Specify the name of a collection variable to get.
 
 ```yaml
 Type: String
@@ -148,22 +164,25 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
+
 ## OUTPUTS
 
 ### IResultObject[]#SMS_CollectionVariable
 ### IResultObject#SMS_CollectionVariable
+
 ## NOTES
+
+For more information on this return object and its properties, see [SMS_CollectionVariable server WMI class](/mem/configmgr/develop/reference/osd/sms_collectionvariable-server-wmi-class).
 
 ## RELATED LINKS
 
-[Planning a Task Sequence Strategy in Configuration Manager](/mem/configmgr/osd/plan-design/planning-considerations-for-automating-tasks)
-
+[New-CMDeviceCollectionVariable](New-CMDeviceCollectionVariable.md)
+[Remove-CMDeviceCollectionVariable](Remove-CMDeviceCollectionVariable.md)
 [Set-CMDeviceCollectionVariable](Set-CMDeviceCollectionVariable.md)
 
-[New-CMDeviceCollectionVariable](New-CMDeviceCollectionVariable.md)
+[Get-CMCollection](Get-CMCollection.md)
+[Get-CMDeviceCollection](Get-CMDeviceCollection.md)
 
-[Remove-CMDeviceCollectionVariable](Remove-CMDeviceCollectionVariable.md)
+[Get-CMDeviceVariable](Get-CMDeviceVariable.md)
 
-[Get-CMUserCollection](Get-CMUserCollection.md)
-
-
+[How to set task sequence variables](/mem/configmgr/osd/understand/using-task-sequence-variables#bkmk_set)
