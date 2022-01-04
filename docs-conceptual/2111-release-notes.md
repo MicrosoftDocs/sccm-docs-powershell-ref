@@ -2,7 +2,7 @@
 title: Version 2111 release notes
 titleSuffix: Configuration Manager
 description: Release notes for the changes to PowerShell cmdlets in Configuration Manager version 2111.
-ms.date: 12/30/2021
+ms.date: 01/04/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -300,5 +300,3 @@ Fixed a requirement rule name issue with these cmdlets.
 Many of the fixes and improvements described in this article are a result of your feedback.
 
 To send feedback, use the Configuration Manager console. For more information, see [Feedback for PowerShell](/mem/configmgr/core/understand/product-feedback#feedback-for-powershell).
-
-To submit new feature requests, see the PowerShell group of [Configuration Manager on UserVoice](https://configurationmanager.uservoice.com).
