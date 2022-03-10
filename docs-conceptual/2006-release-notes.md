@@ -330,11 +330,3 @@ For more information, see [Set-CMTSStepPrestartCheck](/powershell/module/configu
 #### Non-breaking changes
 
 Fixed a blocking issue when user specified a value for the **OSArchitecture** parameter.
-
-## How to provide feedback or report issues
-
-Many of the fixes and improvements described in this article are a result of your feedback.
-
-To send feedback, use the Configuration Manager console. For more information, see [Feedback for PowerShell](/mem/configmgr/core/understand/product-feedback#feedback-for-powershell).
-
-To submit new feature requests, see the PowerShell group of [Configuration Manager on UserVoice](https://configurationmanager.uservoice.com).

@@ -150,7 +150,7 @@ Accept wildcard characters: True
 
 Specify a [hashtable](/powershell/module/microsoft.powershell.core/about/about_hash_tables) of allowed operations, or permissions, for the target role. The first value of the hashtable is the class name, and the second value is an array of permission names.
 
-For an example, see [Example 1](#example-1).
+For an example, see [Example 1](#examples).
 
 ```yaml
 Type: Hashtable

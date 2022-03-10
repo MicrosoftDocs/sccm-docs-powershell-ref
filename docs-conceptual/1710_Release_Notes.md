@@ -38,9 +38,6 @@ When the ConfigurationManager.psd1 module is loaded, PowerShell automatically at
 > [!NOTE]
 > When drive auto-creation is disabled, the Configuration Manager console may report an error when launching a PowerShell window.
 
-## How to provide feedback or report issues
-Many of the fixes and improvements described in this document are a result of customer feedback. To leave feedback and bug reports, use [UserVoice](https://configurationmanager.uservoice.com).
-
 ## Known issues
 These are known issues with the Cmdlet Library that are not resolved in this release.
 

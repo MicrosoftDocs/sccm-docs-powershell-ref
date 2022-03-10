@@ -404,11 +404,3 @@ The -ContentLocation shouldn't allow an empty folder.
 ```PowerShell
 Set-CMThirdPartyUpdateCatalog -Name $name –Schedule $schedule
 ```
-
-## How to provide feedback or report issues
-
-Many of the fixes and improvements described in this article are a result of your feedback.
-
-To send feedback, use the Configuration Manager console. For more information, see [Feedback for PowerShell](/mem/configmgr/core/understand/product-feedback#feedback-for-powershell).
-
-To submit new feature requests, see the PowerShell group of [Configuration Manager on UserVoice](https://configurationmanager.uservoice.com).
