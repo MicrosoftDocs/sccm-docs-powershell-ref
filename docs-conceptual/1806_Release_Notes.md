@@ -30,15 +30,6 @@ ROBOTS: NOINDEX
 - ```New-CMGlobalCondition``` and ```Set-CMGlobalCondition``` have been superseded by the new family of global condition cmdlets.
 
 
-
-## How to provide feedback or report issues
-
-Many of the fixes and improvements described in this article are a result of your feedback.
-
-To leave bug reports, use the [Feedback Hub](/sccm/core/understand/find-help). For feature requests, use [UserVoice](https://configurationmanager.uservoice.com).
-
-
-
 ## Known issues
 The following items are known issues with the Cmdlet Library that aren't resolved in this release.
 

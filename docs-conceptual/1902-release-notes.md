@@ -375,13 +375,3 @@ The following changes have been made to existing cmdlets in this version. Change
 #### Non-breaking changes
 - Corrected the type validation.
 
-
-
-## How to provide feedback or report issues
-
-Many of the fixes and improvements described in this article are a result of your feedback.
-
-To submit bug reports, use [send a smile in the Configuration Manager console](/sccm/core/understand/find-help#product-feedback). For new feature requests, use [UserVoice](https://configurationmanager.uservoice.com).
-
-
-
