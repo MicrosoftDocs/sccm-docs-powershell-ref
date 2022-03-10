@@ -88,9 +88,6 @@ Otherwise, the following can be used:
 
 `Import-Module 'C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole\bin\ConfigurationManager'`
 
-## How to provide feedback or report issues
-Many of the fixes and improvements described in this document are a result of customer feedback. To leave feedback and bug reports, use [UserVoice](https://configurationmanager.uservoice.com).
-
 ## Known issues
 These are known issues with the Cmdlet Library that are not resolved in this release.
 
