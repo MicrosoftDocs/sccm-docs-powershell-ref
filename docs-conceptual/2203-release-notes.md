@@ -135,7 +135,7 @@ For more information, see [New-CMPackage](/powershell/module/configurationmanage
 
 **Non-breaking changes**
 
-Added parameter **IconLocationFile** to use a custom icon from the specified file. For more information, see [Custom icon support for task sequences and packages](../../technical-preview-2201.md#bkmk_tsico).
+Added parameter **IconLocationFile** to use a custom icon from the specified file. For more information, see [Custom icon support for task sequences and packages](/mem/configmgr/core/plan-design/changes/whats-new-in-version-2203#custom-icon-support-for-task-sequences-and-packages).
 
 ### New-CMSoftwareUpdateDeployment
 
@@ -143,7 +143,7 @@ For more information, see [New-CMSoftwareUpdateDeployment](/powershell/module/co
 
 **Non-breaking changes**
 
-Added parameter **PreDownloadUpdateContent** to support [pre-download for available software updates](../../technical-preview-2202.md#bkmk_pre-download).
+Added parameter **PreDownloadUpdateContent** to support [pre-download for available software updates](/mem/configmgr/core/plan-design/changes/whats-new-in-version-2203#pre-download-content-for-available-software-updates).
 
 ### New-CMTaskSequence
 
@@ -151,7 +151,7 @@ For more information, see [New-CMTaskSequence](/powershell/module/configurationm
 
 **Non-breaking changes**
 
-Added the **IconLocationFile** parameter to support specifying an icon for the task sequence. For more information, see [Support for task sequence and package icons](#bkmk_tsico).
+Added the **IconLocationFile** parameter to support specifying an icon for the task sequence. For more information, see [Custom icon support for task sequences and packages](/mem/configmgr/core/plan-design/changes/whats-new-in-version-2203#custom-icon-support-for-task-sequences-and-packages).
 
 ### New-CMTaskSequenceDeployment
 
@@ -183,7 +183,7 @@ For more information, see [Set-CMPackage](/powershell/module/configurationmanage
 
 **Non-breaking changes**
 
-Added parameter **IconLocationFile** to use a custom icon from the specified file. For more information, see [Custom icon support for task sequences and packages](../../technical-preview-2201.md#bkmk_tsico).
+Added parameter **IconLocationFile** to use a custom icon from the specified file. For more information, see [Custom icon support for task sequences and packages](/mem/configmgr/core/plan-design/changes/whats-new-in-version-2203#custom-icon-support-for-task-sequences-and-packages).
 
 ### Set-CMSoftwareUpdateDeployment
 
@@ -191,7 +191,7 @@ For more information, see [Set-CMSoftwareUpdateDeployment](/powershell/module/co
 
 **Non-breaking changes**
 
-Added parameter **PreDownloadUpdateContent** to support [pre-download for available software updates](../../technical-preview-2202.md#bkmk_pre-download).
+Added parameter **PreDownloadUpdateContent** to support [pre-download for available software updates](/mem/configmgr/core/plan-design/changes/whats-new-in-version-2203#pre-download-content-for-available-software-updates).
 
 ### Set-CMSoftwareUpdatePoint
 
@@ -215,7 +215,7 @@ For more information, see [Set-CMTaskSequence](/powershell/module/configurationm
 
 **Non-breaking changes**
 
-Added the **IconLocationFile** parameter to support specifying an icon for the task sequence. For more information, see [Support for task sequence and package icons](#bkmk_tsico).
+Added the **IconLocationFile** parameter to support specifying an icon for the task sequence. For more information, see [Custom icon support for task sequences and packages](/mem/configmgr/core/plan-design/changes/whats-new-in-version-2203#custom-icon-support-for-task-sequences-and-packages).
 
 ### Set-CMTaskSequenceDeployment
 
