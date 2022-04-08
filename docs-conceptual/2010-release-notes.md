@@ -10,6 +10,7 @@ ms.localizationpriority: low
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ROBOTS: NOINDEX
 ---
 
 # Configuration Manager cmdlet library changes for version 2010

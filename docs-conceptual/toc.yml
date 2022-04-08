@@ -3,13 +3,13 @@ items:
   href: overview.md
 - name: Release notes
   items:
+  - name: 2203 release notes
+    href: 2203-release-notes.md
   - name: 2111 release notes
     href: 2111-release-notes.md
   - name: 2107 release notes
     href: 2107-release-notes.md
   - name: 2103 release notes
     href: 2103-release-notes.md
-  - name: 2010 release notes
-    href: 2010-release-notes.md
 - name: Privacy statement
   href: privacy-statement.md
