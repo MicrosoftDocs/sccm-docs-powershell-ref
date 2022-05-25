@@ -237,7 +237,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 For more information on these return objects and their properties, see the following articles:
 
 - [SMS_DeploymentSummary server WMI class](/mem/configmgr/develop/reference/apps/sms_deploymentsummary-server-wmi-class)
-- [SMS_UpdateAssignment server WMI class](/mem/configmgr/develop/reference/sum/sms_updateassignment-server-wmi-class)
+- [SMS_UpdateAssignment server WMI class](/mem/configmgr/develop/reference/sum/sms_updatesassignment-server-wmi-class)
 
 ## RELATED LINKS
 
