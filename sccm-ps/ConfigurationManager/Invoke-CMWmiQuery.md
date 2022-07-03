@@ -16,13 +16,15 @@ Run a WMI query.
 ## SYNTAX
 
 ### ByWql (Default)
-```
+
+```powershell
 Invoke-CMWmiQuery [-Context <Hashtable>] [-Option <QueryOptions>] [-Query] <String> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### BySearch
-```
+
+```powershell
 Invoke-CMWmiQuery -ClassName <String> [-Context <Hashtable>] [-Option <QueryOptions>]
  -Search <SmsProviderSearch> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
@@ -108,7 +110,7 @@ The first command clears the search parameters from any existing search object.
 
 The second command adds search parameters to the **$Search** object. In this case, the query searches for applications.
 
-The last command runs the query stored in **$Search**. It specifies **SMS_Site** as the class that contains the site **CI_ID** property.
+The last command runs the query stored in **$Search**. It specifies **SMS_Application** as the class that contains the site **CI_ID** property.
 
 ```powershell
 $Search.Clear()
