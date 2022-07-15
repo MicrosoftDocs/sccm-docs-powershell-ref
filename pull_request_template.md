@@ -1,10 +1,10 @@
-# Pull request for Configuration Manager PowerShell
+# Thanks for contributing!
 
-Thanks for contributing to the [Configuration Manager PowerShell docs](https://docs.microsoft.com/en-us/powershell/sccm/overview). Use the template below to describe your pull request (PR). You may delete any unneeded information from the template.
+Use the template below to describe your pull request (PR) for Configuration Manager PowerShell docs. You may delete any unneeded information from the template.
 
 ## PR status
 
-Remove the `X` or deselect the checkbox if your PR isn't ready for review. The markdown for a checkbox is space sensitive `[ ]` or `[X]`.
+If you're **not ready** for review, remove the `X` or deselect the checkbox below. The markdown for a checkbox is space sensitive `[ ]` or `[X]`.
 
 - [X] This PR is complete and ready for review.
 
