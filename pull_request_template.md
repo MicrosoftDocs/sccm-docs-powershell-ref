@@ -4,10 +4,10 @@ Thanks for contributing to the [Configuration Manager PowerShell docs](https://d
 
 ## PR status
 
-Remove the `X` or deselect the checkbox if your PR isn't ready for review. If this section is removed, the PR will be considered complete and ready for review.
+Remove the `X` or deselect the checkbox if your PR isn't ready for review. The markdown for a checkbox is space sensitive `[ ]` or `[X]`.
 
 - [X] This PR is complete and ready for review.
-   - The markdown for a checkbox is space sensitive `[ ]`
+
 
 ## Description of changes
 
