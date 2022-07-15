@@ -1,6 +1,6 @@
-# Pull request for Configuration Manager PowerShell
+# Thanks for contributing!
 
-Thanks for contributing to the [Configuration Manager PowerShell docs](https://docs.microsoft.com/en-us/powershell/sccm/overview). Use the template below to describe your pull request (PR). You may delete any unneeded information from the template.
+Use the template below to describe your pull request (PR) for Configuration Manager PowerShell docs. You may delete any unneeded information from the template.
 
 ## PR status
 
