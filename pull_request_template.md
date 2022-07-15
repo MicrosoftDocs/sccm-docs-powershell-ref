@@ -12,12 +12,14 @@ If you're **not ready** for review, remove the `X` or deselect the checkbox belo
 
 Give your PR a brief title and describe your doc changes in the comments. Include *why* the changes are needed. Example:
 
+```markdown
 **PR Title:** Fix Get-CMBoundaryGroup
 
 1. For Get-CMBoundaryGroup:
    - Fixed typo in DisableWildcardHandling description
    - Added ForceWildcardHandling because it was missing
 1. Fixed formatting issues for various cmdlet pages
+```
 
 ## Link PR to an issue
 
