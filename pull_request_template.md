@@ -4,7 +4,7 @@ Use the template below to describe your pull request (PR) for Configuration Mana
 
 ## PR status
 
-Remove the `X` or deselect the checkbox if your PR isn't ready for review. The markdown for a checkbox is space sensitive `[ ]` or `[X]`.
+If you're **not ready** for review, remove the `X` or deselect the checkbox below. The markdown for a checkbox is space sensitive `[ ]` or `[X]`.
 
 - [X] This PR is complete and ready for review.
 
