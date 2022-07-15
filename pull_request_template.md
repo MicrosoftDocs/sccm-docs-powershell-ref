@@ -23,11 +23,9 @@ Give your PR a brief title and describe your doc changes in the comments. Includ
 
 If your PR relates to or resolves an issue, link your PR using the URL or the issue number. Use a [keyword](https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword) to automatically close the issue once your PR is merged. Examples:
 
-```text
-
+```markdown
 - Resolves #387
 - Fixes https://github.com/MicrosoftDocs/sccm-docs-powershell/issues/387
-
 ```
 
 ## More information
