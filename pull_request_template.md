@@ -4,14 +4,15 @@ Thanks for contributing to the [Configuration Manager PowerShell docs](https://d
 
 ## Select your PR status
 
-- [X] This PR is finished and ready for review. (default)
+- [X] This PR is complete and ready for review. (default)
 - [ ] This PR isn't ready yet.
 
 ## Description of your changes
 
-Describe your doc changes. Include *why* the changes are needed. Example:
+Give your PR a brief title and describe your doc changes in the comments. Include *why* the changes are needed. Example:
 
 ```markdown
+PR Title: Fix Get-CMBoundaryGroup
 
 1. For Get-CMBoundaryGroup:
    - Fixed typo in DisableWildcardHandling description
