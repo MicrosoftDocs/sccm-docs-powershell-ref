@@ -1,22 +1,22 @@
 ---
-title: Version 2203 release notes
+title: Version 2207 release notes
 titleSuffix: Configuration Manager
-description: Release notes for the changes to PowerShell cmdlets in Configuration Manager version 2203.
-ms.date: 04/05/2022
+description: Release notes for the changes to PowerShell cmdlets in Configuration Manager version 2207.
+ms.date: 08/01/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.localizationpriority: null
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ---
 
-# Configuration Manager cmdlet library changes for version 2203
+# Configuration Manager cmdlet library changes for version 2207
 
 *Applies to: Configuration Manager (current branch)*
 
-These release notes summarize changes to the Configuration Manager cmdlet library in version 2203.
+These release notes summarize changes to the Configuration Manager cmdlet library in version 2207
 
 > [!NOTE]
 > Configuration Manager current branch version 2111 is the baseline for these changes. For more information, see [Configuration Manager cmdlet library changes for version 2111](2111-release-notes.md).
