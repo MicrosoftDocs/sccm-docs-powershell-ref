@@ -168,7 +168,7 @@ For more information, see [](/powershell/module/configurationmanager/).
 
 ### Add-CMManagementPoint
 
-For more information, see [Add-CMManagementPoint](/sccm-ps/ConfigurationManager/Add-CMManagementPoint.md).
+For more information, see [Add-CMManagementPoint](/powershell/module/configurationmanager/Add-CMManagementPoint).
 
 **Non-breaking changes**
 
@@ -177,7 +177,7 @@ For more information, see [Add-CMManagementPoint](/sccm-ps/ConfigurationManager/
 
 ### Add-CMReportingServicePoint
 
-For more information, see [Add-CMReportingServicePoint](/sccm-ps/ConfigurationManager/Add-CMReportingServicePoint.md).
+For more information, see [Add-CMReportingServicePoint](/powershell/module/configurationmanager/Add-CMReportingServicePoint).
 
 **Non-breaking changes**
 
@@ -185,7 +185,7 @@ This cmdlet will be blocked to run on PowerShell7, as SOAP is not supported in P
 
 ### Get-CMObjectSecurityScope
 
-For more information, see [Get-CMObjectSecurityScope](/sccm-ps/ConfigurationManager/Get-CMObjectSecurityScope.md).
+For more information, see [Get-CMObjectSecurityScope](/powershell/module/configurationmanager/Get-CMObjectSecurityScope).
 
 **Non-breaking changes**
 
@@ -193,7 +193,7 @@ You can now use this cmdlet to get the security scope of a specified folder obje
 
 ### New-CMCloudManagementGateway
 
-For more information, see [New-CMCloudManagementGateway](/sccm-ps/ConfigurationManager/New-CMCloudManagementGateway.md).
+For more information, see [New-CMCloudManagementGateway](/powershell/module/configurationmanager/New-CMCloudManagementGateway).
 
 **Non-breaking changes**
 
@@ -201,7 +201,7 @@ Added parameters **VMSSVMSize** and **Version** to support creating a cloud mana
 
 ### New-CMCoManagementPolicy
 
-For more information, see [New-CMCoManagementPolicy](/sccm-ps/ConfigurationManager/New-CMCoManagementPolicy.md).
+For more information, see [New-CMCoManagementPolicy](/powershell/module/configurationmanager/New-CMCoManagementPolicy).
 
 **Non-breaking changes**
 
@@ -210,7 +210,7 @@ For more information, see [New-CMCoManagementPolicy](/sccm-ps/ConfigurationManag
 
 ### New-CMComplianceRuleRegistryKeyPermission
 
-For more information, see [New-CMComplianceRuleRegistryKeyPermission](/sccm-ps/ConfigurationManager/New-CMComplianceRuleRegistryKeyPermission.md).
+For more information, see [New-CMComplianceRuleRegistryKeyPermission](/powershell/module/configurationmanager/New-CMComplianceRuleRegistryKeyPermission).
 
 **Bugs that were fixed**
 
@@ -218,7 +218,7 @@ Fixed an issue in **OperandDataType** property when creating a rule.
 
 ### Add-CMComplianceSettingWqlQuery
 
-For more information, see [Add-CMComplianceSettingWqlQuery](/sccm-ps/ConfigurationManager/Add-CMComplianceSettingWqlQuery.md).
+For more information, see [Add-CMComplianceSettingWqlQuery](/powershell/module/configurationmanager/Add-CMComplianceSettingWqlQuery).
 
 **Non-breaking changes**
 
@@ -226,7 +226,7 @@ When using this cmdlet, you can now specify $null value to the parameter **Where
 
 ### Set-CMClientSettingComplianceSetting
 
-For more information, see [Set-CMClientSettingComplianceSetting](/sccm-ps/ConfigurationManager/Set-CMClientSettingComplianceSetting.md).
+For more information, see [Set-CMClientSettingComplianceSetting](/powershell/module/configurationmanager/Set-CMClientSettingComplianceSetting).
 
 **Non-breaking changes**
 
@@ -234,7 +234,7 @@ Added a new parameter **ScriptExecutionTimeoutSecs** to extend the script execut
 
 ### Set-CMClientSettingClientCache
 
-For more information, see [Set-CMClientSettingClientCache](/sccm-ps/ConfigurationManager/Set-CMClientSettingClientCache.md).
+For more information, see [Set-CMClientSettingClientCache](/powershell/module/configurationmanager/Set-CMClientSettingClientCache).
 
 **Non-breaking changes**
 
@@ -242,7 +242,7 @@ Added a new parameter **MinCacheTombstoneContentMins** to support setting the mi
 
 ### Set-CMClientSettingComputerRestart
 
-For more information, see [Set-CMClientSettingComputerRestart](/sccm-ps/ConfigurationManager/Set-CMClientSettingComputerRestart.md).
+For more information, see [Set-CMClientSettingComputerRestart](/powershell/module/configurationmanager/Set-CMClientSettingComputerRestart).
 
 **Non-breaking changes and bug fixes**
 
@@ -252,7 +252,7 @@ For more information, see [Set-CMClientSettingComputerRestart](/sccm-ps/Configur
 
 ### Set-CMClientSettingEndpointProtection
 
-For more information, see [Set-CMClientSettingEndpointProtection](/sccm-ps/ConfigurationManager/Set-CMClientSettingEndpointProtection.md).
+For more information, see [Set-CMClientSettingEndpointProtection](/powershell/module/configurationmanager/Set-CMClientSettingEndpointProtection).
 
 **Non-breaking changes**
 
@@ -260,7 +260,7 @@ You can now specify the defender agent type with the new parameter **DefenderAge
 
 ### Get-CMNotification
 
-For more information, see [Get-CMNotification](/sccm-ps/ConfigurationManager/Get-CMNotification.md).
+For more information, see [Get-CMNotification](/powershell/module/configurationmanager/Get-CMNotification).
 
 **Non-breaking changes**
 
@@ -270,7 +270,7 @@ For more information, see [Get-CMNotification](/sccm-ps/ConfigurationManager/Get
 
 ### New-CMFolder
 
-For more information, see [New-CMFolder](/sccm-ps/ConfigurationManager/New-CMFolder.md).
+For more information, see [New-CMFolder](/powershell/module/configurationmanager/New-CMFolder).
 
 **Bugs that were fixed**
 
