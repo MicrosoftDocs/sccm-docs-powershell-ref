@@ -306,7 +306,7 @@ The following cmdlets have been removed due to the deprecated RA feature:
 - [New-CMClientCertificateProfileConfigurationItem](/powershell/module/configurationmanager/New-CMClientCertificateProfileConfigurationItem)
 - [New-CMEmailProfile](/powershell/module/configurationmanager/New-CMEmailProfile)
 - [New-CMRootCertificateProfileConfigurationItem](/powershell/module/configurationmanager/New-CMRootCertificateProfileConfigurationItem)
-- [New-CMVpnProfileConfigurationItem](/sccm-ps/ConfigurationManager/New-CMVpnProfileConfigurationItem)
+- [New-CMVpnProfileConfigurationItem](/powershell/module/configurationmanager/New-CMVpnProfileConfigurationItem)
 - [New-CMWirelessProfile](/powershell/module/configurationmanager/New-CMWirelessProfile)
 - [New-CMWirelessProfileConfigurationItem](/powershell/module/configurationmanager/New-CMWirelessProfileConfigurationItem)
 - [Set-CMCertificateProfilePfx](/powershell/module/configurationmanager/Set-CMCertificateProfilePfx)
