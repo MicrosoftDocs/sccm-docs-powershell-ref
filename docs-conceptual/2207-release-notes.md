@@ -32,7 +32,7 @@ These release notes summarize changes to the Configuration Manager cmdlet librar
 <!--Orchestration Group script cmdlets -->
 ### Approve-CMOrchestrationGroupScript
 
-Use this cmdlet to approve an orchestration group script. For more information, see [About orchestration groups in Configuration Manager](../../../../../sum/deploy-use/orchestration-groups.md).
+Use this cmdlet to approve an orchestration group script. For more information, see [About orchestration groups in Configuration Manager](https://docs.microsoft.com/en-us/mem/configmgr/sum/deploy-use/orchestration-groups).
 
 ```powershell
 $referenceOG = Get-CMOrchestrationGroup -Name $Script:OGName
@@ -42,7 +42,7 @@ Approve-CMOrchestrationGroupScript -ScriptGuid $PreScript.ScriptGuid
 ```
 ### Deny-CMOrchestrationGroupScript
 
-Use this cmdlet to deny an orchestration group script. For more information, see [About orchestration groups in Configuration Manager](../../../../../sum/deploy-use/orchestration-groups.md).
+Use this cmdlet to deny an orchestration group script. For more information, see [About orchestration groups in Configuration Manager](https://docs.microsoft.com/en-us/mem/configmgr/sum/deploy-use/orchestration-groups).
 
 ```powershell
 $referenceOG = Get-CMOrchestrationGroup -Name $Script:OGName
@@ -53,7 +53,7 @@ Deny-CMOrchestrationGroupScript -ScriptGuid $PreScript.ScriptGuid -Comment "Deny
 
 ### Get-CMOrchestrationGroupScript
 
-Use this cmdlet to get a script from the specified orchestration group. For more information, see [About orchestration groups in Configuration Manager](../../../../../sum/deploy-use/orchestration-groups.md).
+Use this cmdlet to get a script from the specified orchestration group. For more information, see [About orchestration groups in Configuration Manager](https://docs.microsoft.com/en-us/mem/configmgr/sum/deploy-use/orchestration-groups).
 
 ```powershell
 $referenceOG = Get-CMOrchestrationGroup -Name $Script:OGName
@@ -62,7 +62,7 @@ $preScript = $referenceOG | Get-CMOrchestrationGroupScript -ScriptType Pre
 <!--CMDPMigration script cmdlets -->
 ### Start-CMDPMigration
 
-Use this cmdlet to start migration from source distribution point to destination distribution point. For more information, see [About migration in Configuration Manager](../../../../../core/migration/planning-a-migration-job-strategy.md).
+Use this cmdlet to start migration from source distribution point to destination distribution point. For more information, see [About migration in Configuration Manager](https://docs.microsoft.com/en-us/mem/configmgr/core/migration/planning-a-migration-job-strategy).
 
 ```powershell
 Start-CMDPMigration -SourceDistributionPointName sourceServer.dp -DestinationDistributionPointName destinationServer.dp -LockSourceDP 1
@@ -70,7 +70,7 @@ Start-CMDPMigration -SourceDistributionPointName sourceServer.dp -DestinationDis
 
 ### Stop-CMDPMigration
 
-Use this cmdlet to stop migration from source distribution point to destination distribution point. For more information, see [About migration in Configuration Manager](../../../../../core/migration/planning-a-migration-job-strategy.md).
+Use this cmdlet to stop migration from source distribution point to destination distribution point. For more information, see [About migration in Configuration Manager](https://docs.microsoft.com/en-us/mem/configmgr/core/migration/planning-a-migration-job-strategy).
 
 ```powershell
 Stop-CMDPMigration -SourceDistributionPointName sourceServer.dp -DestinationDistributionPointName destinationServer.dp -LockSourceDP 1
@@ -78,7 +78,7 @@ Stop-CMDPMigration -SourceDistributionPointName sourceServer.dp -DestinationDist
 
 ### Get-CMDPMigrationContentStatus
 
-Use this cmdlet to get the content status of the migration from source distribution point to destination distribution point. For more information, see [About migration in Configuration Manager](../../../../../core/migration/planning-a-migration-job-strategy.md).
+Use this cmdlet to get the content status of the migration from source distribution point to destination distribution point. For more information, see [About migration in Configuration Manager](https://docs.microsoft.com/en-us/mem/configmgr/core/migration/planning-a-migration-job-strategy).
 
 ```powershell
 Get-CMDPMigrationContentStatus  -SourceDistributionPointName sourceServer.dp -DestinationDistributionPointName destinationServer.dp
@@ -86,7 +86,7 @@ Get-CMDPMigrationContentStatus  -SourceDistributionPointName sourceServer.dp -De
 
 ### Get-CMDPMigrationStatus
 
-Use this cmdlet to get the status of the migration from source distribution point to destination distribution point. For more information, see [About migration in Configuration Manager](../../../../../core/migration/planning-a-migration-job-strategy.md).
+Use this cmdlet to get the status of the migration from source distribution point to destination distribution point. For more information, see [About migration in Configuration Manager](https://docs.microsoft.com/en-us/mem/configmgr/core/migration/planning-a-migration-job-strategy).
 
 ```powershell
 Get-CMDPMigrationStatus -SourceDistributionPointName sourceServer.dp -DestinationDistributionPointName destinationServer.dp
@@ -103,7 +103,7 @@ $ci =Get-CMTrustedRootCertificationAuthority -ViewDetail
 <!--CMAAD Client and server application script cmdlets -->
 ### New-CMAADClientApplication
 
-Use this cmdlet to create a client app registration in Azure Active Directory (Azure AD). When you run this cmdlet, it will prompt you to sign in to your tenant. For more information on this app registration, see [Manually register Azure AD apps for the CMG](../../../../clients/manage/cmg/manually-register-azure-ad-apps.md).
+Use this cmdlet to create a client app registration in Azure Active Directory (Azure AD). When you run this cmdlet, it will prompt you to sign in to your tenant. For more information on this app registration, see [Manually register Azure AD apps for the CMG](https://docs.microsoft.com/en-us/mem/configmgr/core/clients/manage/cmg/manually-register-azure-ad-apps).
 
 ```powershell
 $serverApp = New-CMAADServerApplication -AppName $appName
@@ -112,7 +112,7 @@ New-CMAADClientApplication -AppName $name -InputObject $serverApp
 
 ### New-CMAADServerApplication
 
-Use this cmdlet to create a server app registration in Azure AD. When you run this cmdlet, it will prompt you to sign in to your tenant. For more information on this app registration, see [Manually register Azure AD apps for the CMG](../../../../clients/manage/cmg/manually-register-azure-ad-apps.md).
+Use this cmdlet to create a server app registration in Azure AD. When you run this cmdlet, it will prompt you to sign in to your tenant. For more information on this app registration, see [Manually register Azure AD apps for the CMG](https://docs.microsoft.com/en-us/mem/configmgr/core/clients/manage/cmg/manually-register-azure-ad-apps).
 
 ```powershell
 New-CMAADServerApplication -AppName $appName
@@ -120,7 +120,7 @@ New-CMAADServerApplication -AppName $appName
 <!--CMAAD default boundary group script cmdlets -->
 ### Set-CMDefaultBoundaryGroup
 
-Use this cmdlet to modify the properties of a default site boundary group. You can set the options to include and prefer the cloud-based sources for the clients in default site boundary group. For more information on boundary groups, see [About boundary groups in Configuration Manager](../../../../../core/servers/deploy/configure/boundary-groups.md). 
+Use this cmdlet to modify the properties of a default site boundary group. You can set the options to include and prefer the cloud-based sources for the clients in default site boundary group. For more information on boundary groups, see [About boundary groups in Configuration Manager](https://docs.microsoft.com/en-us/mem/configmgr/core/servers/deploy/configure/boundary-groups). 
 
 ```powershell
 Set-CMDefaultBoundaryGroup -IncludeCloudBasedSources $true -PreferCloudBasedSources $true
@@ -166,179 +166,158 @@ For more information, see [](/powershell/module/configurationmanager/).
 **Non-breaking changes**
 -->
 
-### Add-CMSoftwareUpdatePoint
+### Add-CMManagementPoint
 
-For more information, see [Add-CMSoftwareUpdatePoint](/powershell/module/configurationmanager/Add-CMSoftwareUpdatePoint).
-
-**Non-breaking changes**
-
-Added new parameter **Wledbat** to support LEDBAT configuration for software update points.
-
-### Get-CMDeploymentStatusDetails
-
-For more information, see [Get-CMDeploymentStatusDetails](/powershell/module/configurationmanager/Get-CMDeploymentStatusDetails).
-
-**Bugs that were fixed**
-
-Updated the cmdlet to avoid a potential null reference error.
-
-### Get-CMDeploymentTypeDetectionClause
-
-For more information, see [Get-CMDeploymentTypeDetectionClause](/powershell/module/configurationmanager/Get-CMDeploymentTypeDetectionClause).
+For more information, see [Add-CMManagementPoint](/sccm-ps/ConfigurationManager/Add-CMManagementPoint.md).
 
 **Non-breaking changes**
 
-The cmdlet can now get a detection clause from a script deployment type.
+- When you use this cmdlet to enable communication with the cloud management gateway, it now by default configures the management point to support both internet and intranet clients.
+- When you enable cloud gateway, **ClientConnectionTypes.InternetAndIntranet** is now the default value.
 
-### Import-CMApplication
+### Add-CMReportingServicePoint
 
-For more information, see [Import-CMApplication](/powershell/module/configurationmanager/Import-CMApplication).
-
-**Non-breaking changes**
-
-Updated the import logic to align with console. Added new warning messages.
-
-### New-CMApplication
-
-For more information, see [New-CMApplication](/powershell/module/configurationmanager/New-CMApplication).
+For more information, see [Add-CMReportingServicePoint](/sccm-ps/ConfigurationManager/Add-CMReportingServicePoint.md).
 
 **Non-breaking changes**
 
-It can now get an application icon from the specified file.
+This cmdlet will be blocked to run on PowerShell7, as SOAP is not supported in PowerShell7. This cmdlet requires the .NET Framework instead of .NET Core that's used with PowerShell version 7.
 
-### New-CMBoundary
+### Get-CMObjectSecurityScope
 
-For more information, see [New-CMBoundary](/powershell/module/configurationmanager/New-CMBoundary).
+For more information, see [Get-CMObjectSecurityScope](/sccm-ps/ConfigurationManager/Get-CMObjectSecurityScope.md).
 
 **Non-breaking changes**
 
-Updated value validation for VPN boundary.
+You can now use this cmdlet to get the security scope of a specified folder object.
+
+### New-CMCloudManagementGateway
+
+For more information, see [New-CMCloudManagementGateway](/sccm-ps/ConfigurationManager/New-CMCloudManagementGateway.md).
+
+**Non-breaking changes**
+
+Added parameters **VMSSVMSize** and **Version** to support creating a cloud management gateway (CMG) using a virtual machine scale set.
 
 ### New-CMCoManagementPolicy
 
-For more information, see [New-CMCoManagementPolicy](/powershell/module/configurationmanager/New-CMCoManagementPolicy).
+For more information, see [New-CMCoManagementPolicy](/sccm-ps/ConfigurationManager/New-CMCoManagementPolicy.md).
 
 **Non-breaking changes**
 
-The cmdlet now supports applicability for Windows 11 on ARM64 devices.
+- You can now view the policy created as well as prevent creation of second policy from this cmdlet.
+- You can now also create child policies for each workload, like UI, while creating Co-Management policy from this cmdlet.
 
-### New-CMPackage
+### New-CMComplianceRuleRegistryKeyPermission
 
-For more information, see [New-CMPackage](/powershell/module/configurationmanager/New-CMPackage).
-
-**Non-breaking changes**
-
-Added parameter **IconLocationFile** to use a custom icon from the specified file. For more information, see [Custom icon support for task sequences and packages](/mem/configmgr/core/plan-design/changes/whats-new-in-version-2203#custom-icon-support-for-task-sequences-and-packages).
-
-### New-CMSoftwareUpdateDeployment
-
-For more information, see [New-CMSoftwareUpdateDeployment](/powershell/module/configurationmanager/New-CMSoftwareUpdateDeployment).
-
-**Non-breaking changes**
-
-Added parameter **PreDownloadUpdateContent** to support [pre-download for available software updates](/mem/configmgr/core/plan-design/changes/whats-new-in-version-2203#pre-download-content-for-available-software-updates).
-
-### New-CMTaskSequence
-
-For more information, see [New-CMTaskSequence](/powershell/module/configurationmanager/New-CMTaskSequence).
-
-**Non-breaking changes**
-
-Added the **IconLocationFile** parameter to support specifying an icon for the task sequence. For more information, see [Custom icon support for task sequences and packages](/mem/configmgr/core/plan-design/changes/whats-new-in-version-2203#custom-icon-support-for-task-sequences-and-packages).
-
-### New-CMTaskSequenceDeployment
-
-For more information, see [New-CMTaskSequenceDeployment](/powershell/module/configurationmanager/New-CMTaskSequenceDeployment).
+For more information, see [New-CMComplianceRuleRegistryKeyPermission](/sccm-ps/ConfigurationManager/New-CMComplianceRuleRegistryKeyPermission.md).
 
 **Bugs that were fixed**
 
-Fixed an issue with the **AllowSharedContent** parameter.
+Fixed an issue in **OperandDataType** property when creating a rule.
 
-### Publish-CMThirdPartySoftwareUpdateContent
+### Add-CMComplianceSettingWqlQuery
 
-For more information, see [Publish-CMThirdPartySoftwareUpdateContent](/powershell/module/configurationmanager/Publish-CMThirdPartySoftwareUpdateContent).
-
-**Non-breaking changes**
-
-Added the **Force** parameter to run the command without asking for confirmation.
-
-### Set-CMBoundary
-
-For more information, see [Set-CMBoundary](/powershell/module/configurationmanager/Set-CMBoundary).
+For more information, see [Add-CMComplianceSettingWqlQuery](/sccm-ps/ConfigurationManager/Add-CMComplianceSettingWqlQuery.md).
 
 **Non-breaking changes**
 
-Updated value validation for VPN boundary.
+When using this cmdlet, you can now specify $null value to the parameter **WhereClause**.
 
-### Set-CMPackage
+### Set-CMClientSettingComplianceSetting
 
-For more information, see [Set-CMPackage](/powershell/module/configurationmanager/Set-CMPackage).
-
-**Non-breaking changes**
-
-Added parameter **IconLocationFile** to use a custom icon from the specified file. For more information, see [Custom icon support for task sequences and packages](/mem/configmgr/core/plan-design/changes/whats-new-in-version-2203#custom-icon-support-for-task-sequences-and-packages).
-
-### Set-CMSoftwareUpdateDeployment
-
-For more information, see [Set-CMSoftwareUpdateDeployment](/powershell/module/configurationmanager/Set-CMSoftwareUpdateDeployment).
+For more information, see [Set-CMClientSettingComplianceSetting](/sccm-ps/ConfigurationManager/Set-CMClientSettingComplianceSetting.md).
 
 **Non-breaking changes**
 
-Added parameter **PreDownloadUpdateContent** to support [pre-download for available software updates](/mem/configmgr/core/plan-design/changes/whats-new-in-version-2203#pre-download-content-for-available-software-updates).
+Added a new parameter **ScriptExecutionTimeoutSecs** to extend the script execution timeout value.
 
-### Set-CMSoftwareUpdatePoint
+### Set-CMClientSettingClientCache
 
-For more information, see [Set-CMSoftwareUpdatePoint](/powershell/module/configurationmanager/Set-CMSoftwareUpdatePoint).
-
-**Non-breaking changes**
-
-Added new parameter **Wledbat** to support LEDBAT configuration for software update points.
-
-### Set-CMSoftwareUpdatePointComponent
-
-For more information, see [Set-CMSoftwareUpdatePointComponent](/powershell/module/configurationmanager/Set-CMSoftwareUpdatePointComponent).
+For more information, see [Set-CMClientSettingClientCache](/sccm-ps/ConfigurationManager/Set-CMClientSettingClientCache.md).
 
 **Non-breaking changes**
 
-Added the **NonWindowsUpdateMaxRuntimeMins** parameter to change the default maximum run time for non-Windows software updates.
+Added a new parameter **MinCacheTombstoneContentMins** to support setting the minimum duration before the client can remove cached content.
 
-### Set-CMTaskSequence
+### Set-CMClientSettingComputerRestart
 
-For more information, see [Set-CMTaskSequence](/powershell/module/configurationmanager/Set-CMTaskSequence).
+For more information, see [Set-CMClientSettingComputerRestart](/sccm-ps/ConfigurationManager/Set-CMClientSettingComputerRestart.md).
+
+**Non-breaking changes and bug fixes**
+
+- Extended the validation range of the parameters **CountdownMins** and **RebootLogoffNotificationCountdownMins** to align with the console.
+- Added new parameters **CountdownIntervalMins** and **ServerRebootLowRight** to align with the console.
+- Fixed a property name issue for the parameter **NoRebootEnforcement**.
+
+### Set-CMClientSettingEndpointProtection
+
+For more information, see [Set-CMClientSettingEndpointProtection](/sccm-ps/ConfigurationManager/Set-CMClientSettingEndpointProtection.md).
 
 **Non-breaking changes**
 
-Added the **IconLocationFile** parameter to support specifying an icon for the task sequence. For more information, see [Custom icon support for task sequences and packages](/mem/configmgr/core/plan-design/changes/whats-new-in-version-2203#custom-icon-support-for-task-sequences-and-packages).
+You can now specify the defender agent type with the new parameter **DefenderAgent**.
 
-### Set-CMTaskSequenceDeployment
+### Get-CMNotification
 
-For more information, see [Set-CMTaskSequenceDeployment](/powershell/module/configurationmanager/Set-CMTaskSequenceDeployment).
+For more information, see [Get-CMNotification](/sccm-ps/ConfigurationManager/Get-CMNotification.md).
+
+**Non-breaking changes**
+
+- You can now use this cmdlet to get built-in notification by using parameter **IsBuiltIn**.
+- You can now also use this cmdlet to get notification that could be dismissed by using parameter **CanDismiss**.
+- New alias **InputObject** has been added for parameter **NotificationTasks** which now supports pipeline.
+
+### New-CMFolder
+
+For more information, see [New-CMFolder](/sccm-ps/ConfigurationManager/New-CMFolder.md).
 
 **Bugs that were fixed**
 
-Fixed an issue with the **AllowSharedContent** parameter.
-
-### Start-CMTaskSequenceDeployment
-
-For more information, see [Start-CMTaskSequenceDeployment](/powershell/module/configurationmanager/Start-CMTaskSequenceDeployment).
-
-**Bugs that were fixed**
-
-Fixed an issue with the **AllowSharedContent** parameter.
+An issue in folder path validation has been fixed when using this cmdlet to create a new folder in the console.
 
 ## Changes to multiple cmdlets
 
-The following folder-related cmdlets now support software update groups and deployment packages:
+The following folder-related cmdlets now support software update groups and automatic deployment rules:
 
-- [Get-CMFolder](/powershell/module/configurationmanager/get-cmfolder)
-- [New-CMFolder](/powershell/module/configurationmanager/new-cmfolder)
-- [Remove-CMFolder](/powershell/module/configurationmanager/remove-cmfolder)
-- [Set-CMFolder](/powershell/module/configurationmanager/set-cmfolder)
-- [Move-CMObject](/powershell/module/configurationmanager/move-cmobject)
-- [Add-CMObjectSecurityScope](/powershell/module/configurationmanager/Add-CMObjectSecurityScope)
-- [Remove-CMObjectSecurityScope](/powershell/module/configurationmanager/Remove-CMObjectSecurityScope)
+- [Get-CMFolder](/sccm-ps/ConfigurationManager/Get-CMFolder.md)
+- [New-CMFolder](/sccm-ps/ConfigurationManager/New-CMFolder.md)
+- [Remove-CMFolder](/sccm-ps/ConfigurationManager/Remove-CMFolder.md)
+- [Set-CMFolder](/sccm-ps/ConfigurationManager/Set-CMFolder.md)
+- [Move-CMObject](/sccm-ps/ConfigurationManager/Move-CMObject.md)
+- [Add-CMObjectSecurityScope](/sccm-ps/ConfigurationManager/Add-CMObjectSecurityScope.md)
+- [Remove-CMObjectSecurityScope](/sccm-ps/ConfigurationManager/Remove-CMObjectSecurityScope.md)
 
 <!-- For more general information, see [Added folder support for nodes in the Software Library](/mem/configmgr/core/get-started/2022/technical-preview-2202#bkmk_folder). -->
+
+The following cmdlets now have added validation condition for starting or stopping service while CMG is a Virtual Machine Scale Set:
+
+- [Start-CMCloudManagementGateway](/sccm-ps/ConfigurationManager/Start-CMCloudManagementGateway.md)
+- [Stop-CMCloudManagementGateway](/sccm-ps/ConfigurationManager/Stop-CMCloudManagementGateway.md)
+
+The following cmdlets have been removed due to the deprecated RA feature: 
+
+- [Add-CMCertificateRegistrationPoint](/sccm-ps/ConfigurationManager/Add-CMCertificateRegistrationPoint.md)
+- [Import-CMClientCertificatePfx](/sccm-ps/ConfigurationManager/Import-CMClientCertificatePfx.md)
+- [Import-CMWirelessProfileConfigurationItem](/sccm-ps/ConfigurationManager/Import-CMWirelessProfileConfigurationItem.md)
+- [New-CMCertificateProfilePfx](/sccm-ps/ConfigurationManager/New-CMCertificateProfilePfx.md)
+- [New-CMCertificateProfileScep](/sccm-ps/ConfigurationManager/New-CMCertificateProfileScep.md)
+- [New-CMCertificateProfileTrustedRootCA](/sccm-ps/ConfigurationManager/New-CMCertificateProfileTrustedRootCA.md)
+- [New-CMClientCertificateProfileConfigurationItem](/sccm-ps/ConfigurationManager/New-CMClientCertificateProfileConfigurationItem.md)
+- [New-CMEmailProfile](/sccm-ps/ConfigurationManager/New-CMEmailProfile.md)
+- [New-CMRootCertificateProfileConfigurationItem](/sccm-ps/ConfigurationManager/New-CMRootCertificateProfileConfigurationItem.md)
+- [New-CMVpnProfileConfigurationItem](/sccm-ps/ConfigurationManager/New-CMVpnProfileConfigurationItem.md)
+- [New-CMWirelessProfile](/sccm-ps/ConfigurationManager/New-CMWirelessProfile.md)
+- [New-CMWirelessProfileConfigurationItem](/sccm-ps/ConfigurationManager/New-CMWirelessProfileConfigurationItem.md)
+- [Set-CMCertificateProfilePfx](/sccm-ps/ConfigurationManager/Set-CMCertificateProfilePfx.md)
+- [Set-CMCertificateProfileScep](/sccm-ps/ConfigurationManager/Set-CMCertificateProfileScep.md)
+- [Set-CMCertificateProfileTrustedRootCA](/sccm-ps/ConfigurationManager/Set-CMCertificateProfileTrustedRootCA.md)
+- [Set-CMCertificateRegistrationPoint](/sccm-ps/ConfigurationManager/Set-CMCertificateRegistrationPoint.md)
+- [Set-CMClientCertificateProfileConfigurationItem](/sccm-ps/ConfigurationManager/Set-CMClientCertificateProfileConfigurationItem.md)
+- [Set-CMEmailProfile](/sccm-ps/ConfigurationManager/Set-CMEmailProfile.md)
+- [Set-CMVpnProfileConfigurationItem](/sccm-ps/ConfigurationManager/Set-CMVpnProfileConfigurationItem.md)
+- [Set-CMWirelessProfile](/sccm-ps/ConfigurationManager/Set-CMWirelessProfile.md)
+- [Set-CMWirelessProfileConfigurationItem](/sccm-ps/ConfigurationManager/Set-CMWirelessProfileConfigurationItem.md)
 
 ## How to provide feedback or report issues
 
