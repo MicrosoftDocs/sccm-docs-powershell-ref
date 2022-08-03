@@ -280,44 +280,44 @@ An issue in folder path validation has been fixed when using this cmdlet to crea
 
 The following folder-related cmdlets now support software update groups and automatic deployment rules:
 
-- [Get-CMFolder](/sccm-ps/ConfigurationManager/Get-CMFolder.md)
-- [New-CMFolder](/sccm-ps/ConfigurationManager/New-CMFolder.md)
-- [Remove-CMFolder](/sccm-ps/ConfigurationManager/Remove-CMFolder.md)
-- [Set-CMFolder](/sccm-ps/ConfigurationManager/Set-CMFolder.md)
-- [Move-CMObject](/sccm-ps/ConfigurationManager/Move-CMObject.md)
-- [Add-CMObjectSecurityScope](/sccm-ps/ConfigurationManager/Add-CMObjectSecurityScope.md)
-- [Remove-CMObjectSecurityScope](/sccm-ps/ConfigurationManager/Remove-CMObjectSecurityScope.md)
+- [Get-CMFolder](/powershell/module/configurationmanager/Get-CMFolder)
+- [New-CMFolder](/powershell/module/configurationmanager/New-CMFolder)
+- [Remove-CMFolder](/powershell/module/configurationmanager/Remove-CMFolder)
+- [Set-CMFolder](/powershell/module/configurationmanager/Set-CMFolder)
+- [Move-CMObject](/powershell/module/configurationmanager/Move-CMObject)
+- [Add-CMObjectSecurityScope](/powershell/module/configurationmanager/Add-CMObjectSecurityScope)
+- [Remove-CMObjectSecurityScope](/powershell/module/configurationmanager/Remove-CMObjectSecurityScope)
 
 <!-- For more general information, see [Added folder support for nodes in the Software Library](/mem/configmgr/core/get-started/2022/technical-preview-2202#bkmk_folder). -->
 
 The following cmdlets now have added validation condition for starting or stopping service while CMG is a Virtual Machine Scale Set:
 
-- [Start-CMCloudManagementGateway](/sccm-ps/ConfigurationManager/Start-CMCloudManagementGateway.md)
-- [Stop-CMCloudManagementGateway](/sccm-ps/ConfigurationManager/Stop-CMCloudManagementGateway.md)
+- [Start-CMCloudManagementGateway](/powershell/module/configurationmanager/Start-CMCloudManagementGateway)
+- [Stop-CMCloudManagementGateway](/powershell/module/configurationmanager/Stop-CMCloudManagementGateway)
 
 The following cmdlets have been removed due to the deprecated RA feature: 
 
-- [Add-CMCertificateRegistrationPoint](/sccm-ps/ConfigurationManager/Add-CMCertificateRegistrationPoint.md)
-- [Import-CMClientCertificatePfx](/sccm-ps/ConfigurationManager/Import-CMClientCertificatePfx.md)
-- [Import-CMWirelessProfileConfigurationItem](/sccm-ps/ConfigurationManager/Import-CMWirelessProfileConfigurationItem.md)
-- [New-CMCertificateProfilePfx](/sccm-ps/ConfigurationManager/New-CMCertificateProfilePfx.md)
-- [New-CMCertificateProfileScep](/sccm-ps/ConfigurationManager/New-CMCertificateProfileScep.md)
-- [New-CMCertificateProfileTrustedRootCA](/sccm-ps/ConfigurationManager/New-CMCertificateProfileTrustedRootCA.md)
-- [New-CMClientCertificateProfileConfigurationItem](/sccm-ps/ConfigurationManager/New-CMClientCertificateProfileConfigurationItem.md)
-- [New-CMEmailProfile](/sccm-ps/ConfigurationManager/New-CMEmailProfile.md)
-- [New-CMRootCertificateProfileConfigurationItem](/sccm-ps/ConfigurationManager/New-CMRootCertificateProfileConfigurationItem.md)
-- [New-CMVpnProfileConfigurationItem](/sccm-ps/ConfigurationManager/New-CMVpnProfileConfigurationItem.md)
-- [New-CMWirelessProfile](/sccm-ps/ConfigurationManager/New-CMWirelessProfile.md)
-- [New-CMWirelessProfileConfigurationItem](/sccm-ps/ConfigurationManager/New-CMWirelessProfileConfigurationItem.md)
-- [Set-CMCertificateProfilePfx](/sccm-ps/ConfigurationManager/Set-CMCertificateProfilePfx.md)
-- [Set-CMCertificateProfileScep](/sccm-ps/ConfigurationManager/Set-CMCertificateProfileScep.md)
-- [Set-CMCertificateProfileTrustedRootCA](/sccm-ps/ConfigurationManager/Set-CMCertificateProfileTrustedRootCA.md)
-- [Set-CMCertificateRegistrationPoint](/sccm-ps/ConfigurationManager/Set-CMCertificateRegistrationPoint.md)
-- [Set-CMClientCertificateProfileConfigurationItem](/sccm-ps/ConfigurationManager/Set-CMClientCertificateProfileConfigurationItem.md)
-- [Set-CMEmailProfile](/sccm-ps/ConfigurationManager/Set-CMEmailProfile.md)
-- [Set-CMVpnProfileConfigurationItem](/sccm-ps/ConfigurationManager/Set-CMVpnProfileConfigurationItem.md)
-- [Set-CMWirelessProfile](/sccm-ps/ConfigurationManager/Set-CMWirelessProfile.md)
-- [Set-CMWirelessProfileConfigurationItem](/sccm-ps/ConfigurationManager/Set-CMWirelessProfileConfigurationItem.md)
+- [Add-CMCertificateRegistrationPoint](/powershell/module/configurationmanager/Add-CMCertificateRegistrationPoint)
+- [Import-CMClientCertificatePfx](/powershell/module/configurationmanager/Import-CMClientCertificatePfx)
+- [Import-CMWirelessProfileConfigurationItem](/powershell/module/configurationmanager/Import-CMWirelessProfileConfigurationItem)
+- [New-CMCertificateProfilePfx](/powershell/module/configurationmanager/New-CMCertificateProfilePfx)
+- [New-CMCertificateProfileScep](/powershell/module/configurationmanager/New-CMCertificateProfileScep)
+- [New-CMCertificateProfileTrustedRootCA](/powershell/module/configurationmanager/New-CMCertificateProfileTrustedRootCA)
+- [New-CMClientCertificateProfileConfigurationItem](/powershell/module/configurationmanager/New-CMClientCertificateProfileConfigurationItem)
+- [New-CMEmailProfile](/powershell/module/configurationmanager/New-CMEmailProfile)
+- [New-CMRootCertificateProfileConfigurationItem](/powershell/module/configurationmanager/New-CMRootCertificateProfileConfigurationItem)
+- [New-CMVpnProfileConfigurationItem](/sccm-ps/ConfigurationManager/New-CMVpnProfileConfigurationItem)
+- [New-CMWirelessProfile](/powershell/module/configurationmanager/New-CMWirelessProfile)
+- [New-CMWirelessProfileConfigurationItem](/powershell/module/configurationmanager/New-CMWirelessProfileConfigurationItem)
+- [Set-CMCertificateProfilePfx](/powershell/module/configurationmanager/Set-CMCertificateProfilePfx)
+- [Set-CMCertificateProfileScep](/powershell/module/configurationmanager//Set-CMCertificateProfileScep)
+- [Set-CMCertificateProfileTrustedRootCA](/powershell/module/configurationmanager/Set-CMCertificateProfileTrustedRootCA)
+- [Set-CMCertificateRegistrationPoint](/powershell/module/configurationmanager/Set-CMCertificateRegistrationPoint)
+- [Set-CMClientCertificateProfileConfigurationItem](/powershell/module/configurationmanager/Set-CMClientCertificateProfileConfigurationItem)
+- [Set-CMEmailProfile](/powershell/module/configurationmanager/Set-CMEmailProfile)
+- [Set-CMVpnProfileConfigurationItem](/powershell/module/configurationmanager/Set-CMVpnProfileConfigurationItem)
+- [Set-CMWirelessProfile](/powershell/module/configurationmanager/Set-CMWirelessProfile)
+- [Set-CMWirelessProfileConfigurationItem](/powershell/module/configurationmanager/Set-CMWirelessProfileConfigurationItem)
 
 ## How to provide feedback or report issues
 
