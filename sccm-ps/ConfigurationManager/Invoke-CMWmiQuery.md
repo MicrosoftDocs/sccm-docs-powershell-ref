@@ -2,7 +2,7 @@
 description: Run a WMI query.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 12/28/2020
+ms.date: 08/02/2022
 schema: 2.0.0
 title: Invoke-CMWmiQuery
 ---
@@ -108,7 +108,7 @@ The first command clears the search parameters from any existing search object.
 
 The second command adds search parameters to the **$Search** object. In this case, the query searches for applications.
 
-The last command runs the query stored in **$Search**. It specifies **SMS_Site** as the class that contains the site **CI_ID** property.
+The last command runs the query stored in **$Search**. It specifies **SMS_Application** as the class that contains the site **CI_ID** property.
 
 ```powershell
 $Search.Clear()

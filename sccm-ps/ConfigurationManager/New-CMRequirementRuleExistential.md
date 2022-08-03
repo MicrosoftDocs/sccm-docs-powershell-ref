@@ -38,7 +38,7 @@ This example first uses the **Get-CMGlobalCondition** cmdlet to get a custom glo
 
 ```powershell
 $myGC = Get-CMGlobalCondition -Name "Custom GC1"
-$myRule = New-CMRequirementRuleCommonValue -GlobalCondition $myGC -Existential $true
+$myRule = New-CMRequirementRuleExistential -GlobalCondition $myGC -Existential $true
 
 Set-CMScriptDeploymentType -ApplicationName "Central app" -DeploymentTypeName "Install" -AddRequirement $myRule
 ```
