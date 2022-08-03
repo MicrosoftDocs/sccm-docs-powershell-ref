@@ -2,7 +2,7 @@
 description: Run a WMI query.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 12/28/2020
+ms.date: 08/02/2022
 schema: 2.0.0
 title: Invoke-CMWmiQuery
 ---
@@ -16,15 +16,13 @@ Run a WMI query.
 ## SYNTAX
 
 ### ByWql (Default)
-
-```powershell
+```
 Invoke-CMWmiQuery [-Context <Hashtable>] [-Option <QueryOptions>] [-Query] <String> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### BySearch
-
-```powershell
+```
 Invoke-CMWmiQuery -ClassName <String> [-Context <Hashtable>] [-Option <QueryOptions>]
  -Search <SmsProviderSearch> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
