@@ -29,9 +29,102 @@ These release notes summarize changes to the Configuration Manager cmdlet librar
 
 <!-- - [<cmdlet>](/powershell/module/configurationmanager/): -->
 
-- Get-CMAADTenant<!-- ](/powershell/module/configurationmanager/Get-CMAADTenant) -->: Get an Azure Active Directory (Azure AD) tenant from the site.
+<!--Orchestration Group script cmdlets -->
+### Approve-CMOrchestrationGroupScript
 
-- Set-CMCollectionCloudSync<!-- ](/powershell/module/configurationmanager/Set-CMCollectionCloudSync) -->: Configure cloud sync features for a collection.
+Use this cmdlet to approve an orchestration group script. For more information, see [About orchestration groups in Configuration Manager](../../../../../sum/deploy-use/orchestration-groups.md).
+
+```powershell
+$referenceOG = Get-CMOrchestrationGroup -Name $Script:OGName
+$preScript = $referenceOG | Get-CMOrchestrationGroupScript -ScriptType Pre
+$preScript | Approve-CMOrchestrationGroupScript -Comment "Approve"
+Approve-CMOrchestrationGroupScript -ScriptGuid $PreScript.ScriptGuid
+```
+### Deny-CMOrchestrationGroupScript
+
+Use this cmdlet to deny an orchestration group script. For more information, see [About orchestration groups in Configuration Manager](../../../../../sum/deploy-use/orchestration-groups.md).
+
+```powershell
+$referenceOG = Get-CMOrchestrationGroup -Name $Script:OGName
+$preScript = $referenceOG | Get-CMOrchestrationGroupScript -ScriptType Pre
+$preScript | Deny-CMOrchestrationGroupScript -Comment "Deny"
+Deny-CMOrchestrationGroupScript -ScriptGuid $PreScript.ScriptGuid -Comment "Deny"
+```
+
+### Get-CMOrchestrationGroupScript
+
+Use this cmdlet to get a script from the specified orchestration group. For more information, see [About orchestration groups in Configuration Manager](../../../../../sum/deploy-use/orchestration-groups.md).
+
+```powershell
+$referenceOG = Get-CMOrchestrationGroup -Name $Script:OGName
+$preScript = $referenceOG | Get-CMOrchestrationGroupScript -ScriptType Pre
+```
+<!--CMDPMigration script cmdlets -->
+### Start-CMDPMigration
+
+Use this cmdlet to start migration from source distribution point to destination distribution point. For more information, see [About migration in Configuration Manager](../../../../../core/migration/planning-a-migration-job-strategy.md).
+
+```powershell
+Start-CMDPMigration -SourceDistributionPointName sourceServer.dp -DestinationDistributionPointName destinationServer.dp -LockSourceDP 1
+```
+
+### Stop-CMDPMigration
+
+Use this cmdlet to stop migration from source distribution point to destination distribution point. For more information, see [About migration in Configuration Manager](../../../../../core/migration/planning-a-migration-job-strategy.md).
+
+```powershell
+Stop-CMDPMigration -SourceDistributionPointName sourceServer.dp -DestinationDistributionPointName destinationServer.dp -LockSourceDP 1
+```
+
+### Get-CMDPMigrationContentStatus
+
+Use this cmdlet to get the content status of the migration from source distribution point to destination distribution point. For more information, see [About migration in Configuration Manager](../../../../../core/migration/planning-a-migration-job-strategy.md).
+
+```powershell
+Get-CMDPMigrationContentStatus  -SourceDistributionPointName sourceServer.dp -DestinationDistributionPointName destinationServer.dp
+```
+
+### Get-CMDPMigrationStatus
+
+Use this cmdlet to get the status of the migration from source distribution point to destination distribution point. For more information, see [About migration in Configuration Manager](../../../../../core/migration/planning-a-migration-job-strategy.md).
+
+```powershell
+Get-CMDPMigrationStatus -SourceDistributionPointName sourceServer.dp -DestinationDistributionPointName destinationServer.dp
+```
+<!--CMTrustedRootCertificationAuthority script cmdlets -->
+### Get-CMTrustedRootCertificationAuthority
+
+Use this cmdlet to get the certificates for trusted root certification authorities from the site.
+
+```powershell
+$ci =Get-CMTrustedRootCertificationAuthority
+$ci =Get-CMTrustedRootCertificationAuthority -ViewDetail
+```
+<!--CMAAD Client and server application script cmdlets -->
+### New-CMAADClientApplication
+
+Use this cmdlet to create a client app registration in Azure Active Directory (Azure AD). When you run this cmdlet, it will prompt you to sign in to your tenant. For more information on this app registration, see [Manually register Azure AD apps for the CMG](../../../../clients/manage/cmg/manually-register-azure-ad-apps.md).
+
+```powershell
+$serverApp = New-CMAADServerApplication -AppName $appName
+New-CMAADClientApplication -AppName $name -InputObject $serverApp
+```
+
+### New-CMAADServerApplication
+
+Use this cmdlet to create a server app registration in Azure AD. When you run this cmdlet, it will prompt you to sign in to your tenant. For more information on this app registration, see [Manually register Azure AD apps for the CMG](../../../../clients/manage/cmg/manually-register-azure-ad-apps.md).
+
+```powershell
+New-CMAADServerApplication -AppName $appName
+```
+<!--CMAAD default boundary group script cmdlets -->
+### Set-CMDefaultBoundaryGroup
+
+Use this cmdlet to modify the properties of a default site boundary group. You can set the options to include and prefer the cloud-based sources for the clients in default site boundary group. For more information on boundary groups, see [About boundary groups in Configuration Manager](../../../../../core/servers/deploy/configure/boundary-groups.md). 
+
+```powershell
+Set-CMDefaultBoundaryGroup -IncludeCloudBasedSources $true -PreferCloudBasedSources $true
+```
 
 ## Deprecated and removed cmdlets
 
