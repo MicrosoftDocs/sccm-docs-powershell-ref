@@ -2,7 +2,7 @@
 title: Version 2207 release notes
 titleSuffix: Configuration Manager
 description: Release notes for the changes to PowerShell cmdlets in Configuration Manager version 2207.
-ms.date: 08/01/2022
+ms.date: 08/04/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
