@@ -19,7 +19,7 @@ manager: apoorvseth
 These release notes summarize changes to the Configuration Manager cmdlet library in version 2207
 
 > [!NOTE]
-> Configuration Manager current branch version 2111 is the baseline for these changes. For more information, see [Configuration Manager cmdlet library changes for version 2111](2111-release-notes.md).
+> Configuration Manager current branch version 2203 is the baseline for these changes. For more information, see [Configuration Manager cmdlet library changes for version 2203](2203-release-notes.md).
 
 <!--
 ## Module changes
@@ -32,7 +32,7 @@ These release notes summarize changes to the Configuration Manager cmdlet librar
 <!--Orchestration Group script cmdlets -->
 ### Approve-CMOrchestrationGroupScript
 
-Use this cmdlet to approve an orchestration group script. For more information, see [About orchestration groups in Configuration Manager](https://docs.microsoft.com/en-us/mem/configmgr/sum/deploy-use/orchestration-groups).
+Use this cmdlet to approve an orchestration group script. For more information, see [About orchestration groups in Configuration Manager](/mem/configmgr/sum/deploy-use/orchestration-groups).
 
 ```powershell
 $referenceOG = Get-CMOrchestrationGroup -Name $Script:OGName
@@ -42,7 +42,7 @@ Approve-CMOrchestrationGroupScript -ScriptGuid $PreScript.ScriptGuid
 ```
 ### Deny-CMOrchestrationGroupScript
 
-Use this cmdlet to deny an orchestration group script. For more information, see [About orchestration groups in Configuration Manager](https://docs.microsoft.com/en-us/mem/configmgr/sum/deploy-use/orchestration-groups).
+Use this cmdlet to deny an orchestration group script. For more information, see [About orchestration groups in Configuration Manager](/mem/configmgr/sum/deploy-use/orchestration-groups).
 
 ```powershell
 $referenceOG = Get-CMOrchestrationGroup -Name $Script:OGName
@@ -53,7 +53,7 @@ Deny-CMOrchestrationGroupScript -ScriptGuid $PreScript.ScriptGuid -Comment "Deny
 
 ### Get-CMOrchestrationGroupScript
 
-Use this cmdlet to get a script from the specified orchestration group. For more information, see [About orchestration groups in Configuration Manager](https://docs.microsoft.com/en-us/mem/configmgr/sum/deploy-use/orchestration-groups).
+Use this cmdlet to get a script from the specified orchestration group. For more information, see [About orchestration groups in Configuration Manager](/mem/configmgr/sum/deploy-use/orchestration-groups).
 
 ```powershell
 $referenceOG = Get-CMOrchestrationGroup -Name $Script:OGName
@@ -62,7 +62,7 @@ $preScript = $referenceOG | Get-CMOrchestrationGroupScript -ScriptType Pre
 <!--CMDPMigration script cmdlets -->
 ### Start-CMDPMigration
 
-Use this cmdlet to start migration from source distribution point to destination distribution point. For more information, see [About migration in Configuration Manager](https://docs.microsoft.com/en-us/mem/configmgr/core/migration/planning-a-migration-job-strategy).
+Use this cmdlet to start migration from source distribution point to destination distribution point. For more information, see [About migration in Configuration Manager](/mem/configmgr/core/migration/planning-a-migration-job-strategy).
 
 ```powershell
 Start-CMDPMigration -SourceDistributionPointName sourceServer.dp -DestinationDistributionPointName destinationServer.dp -LockSourceDP 1
@@ -70,7 +70,7 @@ Start-CMDPMigration -SourceDistributionPointName sourceServer.dp -DestinationDis
 
 ### Stop-CMDPMigration
 
-Use this cmdlet to stop migration from source distribution point to destination distribution point. For more information, see [About migration in Configuration Manager](https://docs.microsoft.com/en-us/mem/configmgr/core/migration/planning-a-migration-job-strategy).
+Use this cmdlet to stop migration from source distribution point to destination distribution point. For more information, see [About migration in Configuration Manager](/mem/configmgr/core/migration/planning-a-migration-job-strategy).
 
 ```powershell
 Stop-CMDPMigration -SourceDistributionPointName sourceServer.dp -DestinationDistributionPointName destinationServer.dp -LockSourceDP 1
@@ -78,7 +78,7 @@ Stop-CMDPMigration -SourceDistributionPointName sourceServer.dp -DestinationDist
 
 ### Get-CMDPMigrationContentStatus
 
-Use this cmdlet to get the content status of the migration from source distribution point to destination distribution point. For more information, see [About migration in Configuration Manager](https://docs.microsoft.com/en-us/mem/configmgr/core/migration/planning-a-migration-job-strategy).
+Use this cmdlet to get the content status of the migration from source distribution point to destination distribution point. For more information, see [About migration in Configuration Manager](/mem/configmgr/core/migration/planning-a-migration-job-strategy).
 
 ```powershell
 Get-CMDPMigrationContentStatus  -SourceDistributionPointName sourceServer.dp -DestinationDistributionPointName destinationServer.dp
@@ -86,7 +86,7 @@ Get-CMDPMigrationContentStatus  -SourceDistributionPointName sourceServer.dp -De
 
 ### Get-CMDPMigrationStatus
 
-Use this cmdlet to get the status of the migration from source distribution point to destination distribution point. For more information, see [About migration in Configuration Manager](https://docs.microsoft.com/en-us/mem/configmgr/core/migration/planning-a-migration-job-strategy).
+Use this cmdlet to get the status of the migration from source distribution point to destination distribution point. For more information, see [About migration in Configuration Manager](/mem/configmgr/core/migration/planning-a-migration-job-strategy).
 
 ```powershell
 Get-CMDPMigrationStatus -SourceDistributionPointName sourceServer.dp -DestinationDistributionPointName destinationServer.dp
@@ -103,7 +103,7 @@ $ci =Get-CMTrustedRootCertificationAuthority -ViewDetail
 <!--CMAAD Client and server application script cmdlets -->
 ### New-CMAADClientApplication
 
-Use this cmdlet to create a client app registration in Azure Active Directory (Azure AD). When you run this cmdlet, it will prompt you to sign in to your tenant. For more information on this app registration, see [Manually register Azure AD apps for the CMG](https://docs.microsoft.com/en-us/mem/configmgr/core/clients/manage/cmg/manually-register-azure-ad-apps).
+Use this cmdlet to create a client app registration in Azure Active Directory (Azure AD). When you run this cmdlet, it will prompt you to sign in to your tenant. For more information on this app registration, see [Manually register Azure AD apps for the CMG](/mem/configmgr/core/clients/manage/cmg/manually-register-azure-ad-apps).
 
 ```powershell
 $serverApp = New-CMAADServerApplication -AppName $appName
@@ -112,7 +112,7 @@ New-CMAADClientApplication -AppName $name -InputObject $serverApp
 
 ### New-CMAADServerApplication
 
-Use this cmdlet to create a server app registration in Azure AD. When you run this cmdlet, it will prompt you to sign in to your tenant. For more information on this app registration, see [Manually register Azure AD apps for the CMG](https://docs.microsoft.com/en-us/mem/configmgr/core/clients/manage/cmg/manually-register-azure-ad-apps).
+Use this cmdlet to create a server app registration in Azure AD. When you run this cmdlet, it will prompt you to sign in to your tenant. For more information on this app registration, see [Manually register Azure AD apps for the CMG](/mem/configmgr/core/clients/manage/cmg/manually-register-azure-ad-apps).
 
 ```powershell
 New-CMAADServerApplication -AppName $appName
@@ -120,14 +120,14 @@ New-CMAADServerApplication -AppName $appName
 <!--CMAAD default boundary group script cmdlets -->
 ### Set-CMDefaultBoundaryGroup
 
-Use this cmdlet to modify the properties of a default site boundary group. You can set the options to include and prefer the cloud-based sources for the clients in default site boundary group. For more information on boundary groups, see [About boundary groups in Configuration Manager](https://docs.microsoft.com/en-us/mem/configmgr/core/servers/deploy/configure/boundary-groups). 
+Use this cmdlet to modify the properties of a default site boundary group. You can set the options to include and prefer the cloud-based sources for the clients in default site boundary group. For more information on boundary groups, see [About boundary groups in Configuration Manager](/mem/configmgr/core/servers/deploy/configure/boundary-groups). 
 
 ```powershell
 Set-CMDefaultBoundaryGroup -IncludeCloudBasedSources $true -PreferCloudBasedSources $true
 ```
 
 ## Deprecated and removed cmdlets
-
+<!-- 2203 release removed cmdlets
 The following cmdlets for asset intelligence are deprecated and may be removed in a future release:
 
 - Add-CMAssetIntelligenceSynchronizationPoint
@@ -138,7 +138,7 @@ The following cmdlets for asset intelligence are deprecated and may be removed i
 - Set-CMAssetIntelligenceSynchronizationPoint
 - Sync-CMAssetIntelligenceCatalog
 
-<!--
+
 The following cmdlets are deprecated and may be removed in a future release:
 
 | Deprecated cmdlet | Replacement |
@@ -146,6 +146,28 @@ The following cmdlets are deprecated and may be removed in a future release:
 
 The following cmdlets are no longer available because the underlying feature is no longer supported:
 -->
+The following cmdlets are no longer available because the resource access feature is no longer supported:
+- [Add-CMCertificateRegistrationPoint](/powershell/module/configurationmanager/Add-CMCertificateRegistrationPoint)
+- [Import-CMClientCertificatePfx](/powershell/module/configurationmanager/Import-CMClientCertificatePfx)
+- [Import-CMWirelessProfileConfigurationItem](/powershell/module/configurationmanager/Import-CMWirelessProfileConfigurationItem)
+- [New-CMCertificateProfilePfx](/powershell/module/configurationmanager/New-CMCertificateProfilePfx)
+- [New-CMCertificateProfileScep](/powershell/module/configurationmanager/New-CMCertificateProfileScep)
+- [New-CMCertificateProfileTrustedRootCA](/powershell/module/configurationmanager/New-CMCertificateProfileTrustedRootCA)
+- [New-CMClientCertificateProfileConfigurationItem](/powershell/module/configurationmanager/New-CMClientCertificateProfileConfigurationItem)
+- [New-CMEmailProfile](/powershell/module/configurationmanager/New-CMEmailProfile)
+- [New-CMRootCertificateProfileConfigurationItem](/powershell/module/configurationmanager/New-CMRootCertificateProfileConfigurationItem)
+- [New-CMVpnProfileConfigurationItem](/powershell/module/configurationmanager/New-CMVpnProfileConfigurationItem)
+- [New-CMWirelessProfile](/powershell/module/configurationmanager/New-CMWirelessProfile)
+- [New-CMWirelessProfileConfigurationItem](/powershell/module/configurationmanager/New-CMWirelessProfileConfigurationItem)
+- [Set-CMCertificateProfilePfx](/powershell/module/configurationmanager/Set-CMCertificateProfilePfx)
+- [Set-CMCertificateProfileScep](/powershell/module/configurationmanager//Set-CMCertificateProfileScep)
+- [Set-CMCertificateProfileTrustedRootCA](/powershell/module/configurationmanager/Set-CMCertificateProfileTrustedRootCA)
+- [Set-CMCertificateRegistrationPoint](/powershell/module/configurationmanager/Set-CMCertificateRegistrationPoint)
+- [Set-CMClientCertificateProfileConfigurationItem](/powershell/module/configurationmanager/Set-CMClientCertificateProfileConfigurationItem)
+- [Set-CMEmailProfile](/powershell/module/configurationmanager/Set-CMEmailProfile)
+- [Set-CMVpnProfileConfigurationItem](/powershell/module/configurationmanager/Set-CMVpnProfileConfigurationItem)
+- [Set-CMWirelessProfile](/powershell/module/configurationmanager/Set-CMWirelessProfile)
+- [Set-CMWirelessProfileConfigurationItem](/powershell/module/configurationmanager/Set-CMWirelessProfileConfigurationItem)
 
 
 <!--
@@ -290,34 +312,11 @@ The following folder-related cmdlets now support software update groups and auto
 
 <!-- For more general information, see [Added folder support for nodes in the Software Library](/mem/configmgr/core/get-started/2022/technical-preview-2202#bkmk_folder). -->
 
-The following cmdlets now have added validation condition for starting or stopping service while CMG is a Virtual Machine Scale Set:
+The following cmdlets now have added validation condition for starting or stopping service while CMG is a virtual machine scale set:
 
 - [Start-CMCloudManagementGateway](/powershell/module/configurationmanager/Start-CMCloudManagementGateway)
 - [Stop-CMCloudManagementGateway](/powershell/module/configurationmanager/Stop-CMCloudManagementGateway)
 
-The following cmdlets have been removed due to the deprecated RA feature: 
-
-- [Add-CMCertificateRegistrationPoint](/powershell/module/configurationmanager/Add-CMCertificateRegistrationPoint)
-- [Import-CMClientCertificatePfx](/powershell/module/configurationmanager/Import-CMClientCertificatePfx)
-- [Import-CMWirelessProfileConfigurationItem](/powershell/module/configurationmanager/Import-CMWirelessProfileConfigurationItem)
-- [New-CMCertificateProfilePfx](/powershell/module/configurationmanager/New-CMCertificateProfilePfx)
-- [New-CMCertificateProfileScep](/powershell/module/configurationmanager/New-CMCertificateProfileScep)
-- [New-CMCertificateProfileTrustedRootCA](/powershell/module/configurationmanager/New-CMCertificateProfileTrustedRootCA)
-- [New-CMClientCertificateProfileConfigurationItem](/powershell/module/configurationmanager/New-CMClientCertificateProfileConfigurationItem)
-- [New-CMEmailProfile](/powershell/module/configurationmanager/New-CMEmailProfile)
-- [New-CMRootCertificateProfileConfigurationItem](/powershell/module/configurationmanager/New-CMRootCertificateProfileConfigurationItem)
-- [New-CMVpnProfileConfigurationItem](/powershell/module/configurationmanager/New-CMVpnProfileConfigurationItem)
-- [New-CMWirelessProfile](/powershell/module/configurationmanager/New-CMWirelessProfile)
-- [New-CMWirelessProfileConfigurationItem](/powershell/module/configurationmanager/New-CMWirelessProfileConfigurationItem)
-- [Set-CMCertificateProfilePfx](/powershell/module/configurationmanager/Set-CMCertificateProfilePfx)
-- [Set-CMCertificateProfileScep](/powershell/module/configurationmanager//Set-CMCertificateProfileScep)
-- [Set-CMCertificateProfileTrustedRootCA](/powershell/module/configurationmanager/Set-CMCertificateProfileTrustedRootCA)
-- [Set-CMCertificateRegistrationPoint](/powershell/module/configurationmanager/Set-CMCertificateRegistrationPoint)
-- [Set-CMClientCertificateProfileConfigurationItem](/powershell/module/configurationmanager/Set-CMClientCertificateProfileConfigurationItem)
-- [Set-CMEmailProfile](/powershell/module/configurationmanager/Set-CMEmailProfile)
-- [Set-CMVpnProfileConfigurationItem](/powershell/module/configurationmanager/Set-CMVpnProfileConfigurationItem)
-- [Set-CMWirelessProfile](/powershell/module/configurationmanager/Set-CMWirelessProfile)
-- [Set-CMWirelessProfileConfigurationItem](/powershell/module/configurationmanager/Set-CMWirelessProfileConfigurationItem)
 
 ## How to provide feedback or report issues
 
