@@ -97,7 +97,7 @@ Connect to Configuration Manager from an existing Windows PowerShell session by 
 
 <!--7774961-->
 
-To get the latest information for the Configuration Manager PowerShell module, use the [Update-Help](/powershell/module/microsoft.powershell.core/update-help) cmdlet. This content is the same as what's published on docs.microsoft.com for the [ConfigurationManager module](/powershell/module/configurationmanager/).
+To get the latest information for the Configuration Manager PowerShell module, use the [Update-Help](/powershell/module/microsoft.powershell.core/update-help) cmdlet. This content is the same as what's published on Microsoft Docs for the [ConfigurationManager module](/powershell/module/configurationmanager/).
 
 > [!IMPORTANT]
 > Because of a change in how the updateable content is structured and published with the release of version 2103, don't use **Update-Help** on a version 2010 site. Update the site to version 2103 or later, and then update the local help content.
