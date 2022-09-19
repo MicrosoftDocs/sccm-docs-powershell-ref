@@ -33,6 +33,6 @@ If your PR relates to or resolves an issue, link your PR using the URL or the is
 ## More information
 
 Here are some resources that might be helpful while contributing:
-- [Microsoft Docs contributor guide](https://docs.microsoft.com/contribute/)
-- [Docs Markdown reference](https://docs.microsoft.com/contribute/markdown-reference)
-- [Microsoft Writing Style Guide](https://docs.microsoft.com/style-guide/welcome/)
+- [Microsoft Docs contributor guide](https://learn.microsoft.com/contribute/)
+- [Docs Markdown reference](https://learn.microsoft.com/contribute/markdown-reference)
+- [Microsoft Writing Style Guide](https://learn.microsoft.com/style-guide/welcome/)
