@@ -243,7 +243,7 @@ $ts = Get-CMTaskSequence -Name "Default IPU"
 $tscondition = New-CMTSStepConditionVariable -ConditionVariableName "_SMSTSInWinPE" -ConditionVariableValue "false" -OperatorType Equals
 
 $tsrule1 = New-CMTSRule -DefaultGateway "192.168.10.1" -Variable @{'OSDRegisteredUserName' = 'Contoso';'OSDRegisteredOrgName' = 'Contoso'}
-$tsrule2 = New CMTSRule -Make "Surface" -Model "*" -Variable @{'custTattoo1' = 'AllSurface'}
+$tsrule2 = New-CMTSRule -Make "Surface" -Model "*" -Variable @{'custTattoo1' = 'AllSurface'}
 
 $ts | Set-CMTaskSequenceStepSetDynamicVariable -ClearCondition -AddCondition $tscondition -CleanRule -AddRule ($tsrule1,$tsrule2)
 ```
