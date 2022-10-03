@@ -6,9 +6,9 @@ ms.date: 11/20/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+ms.author: banreetkaur
+author: Banreet
+manager: apoorvseth
 ROBOTS: NOINDEX
 ---
 

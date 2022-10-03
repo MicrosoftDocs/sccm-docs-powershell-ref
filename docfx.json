@@ -98,16 +98,16 @@
     },
     "fileMetadata": {
       "author": {
-          "**/**.md": "aczechowski",
-          "**/**.yml": "aczechowski"
+          "**/**.md": "banreet",
+          "**/**.yml": "banreet"
       },
       "manager": {
-          "**/**.md": "dougeby",
-          "**/**.yml": "dougeby"
+          "**/**.md": "apoorvseth",
+          "**/**.yml": "apoorvseth"
       },
       "ms.author": {
-          "**/**.md": "aaroncz",
-          "**/**.yml": "aaroncz"
+          "**/**.md": "banreetkaur",
+          "**/**.yml": "banreetkaur"
       },
       "ms.prod": {
           "**/**.md": "configuration-manager",
