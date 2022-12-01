@@ -203,10 +203,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-```Note
-Use -TenantId or -TenantName or -TenantObject to specifiy the target Azure Active Directory tenant.
-```
-
 ### -TenantId
 
 Specify the ID of the Azure Active Directory tenant. This value is the **TenantId** property, for example, `72f988bf-00ab-11cd-22ef-2d7cd011db00`.
