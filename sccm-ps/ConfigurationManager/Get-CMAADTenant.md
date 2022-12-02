@@ -168,5 +168,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Set-CMCollectionCloudSync](Set-CMCollectionCloudSync.md)
-
-<!--[How to synchronize collection members to Azure AD groups](mem/configmgr/core/clients/manage/collections/synchronize-collections-aad-group)-->
