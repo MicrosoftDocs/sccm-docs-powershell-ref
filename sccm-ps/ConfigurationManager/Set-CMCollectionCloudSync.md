@@ -302,4 +302,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-CMDeviceCollection](Get-CMDeviceCollection.md)
 [Get-CMUserCollection](Get-CMUserCollection.md)
 [Get-CMAADTenant](Get-CMAADTenant.md)
-<!--[How to synchronize collection members to Azure AD groups](mem/configmgr/core/clients/manage/collections/synchronize-collections-aad-group)-->
