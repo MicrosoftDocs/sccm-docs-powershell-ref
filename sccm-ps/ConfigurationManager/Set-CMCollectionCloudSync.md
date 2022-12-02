@@ -42,7 +42,7 @@ Set-CMCollectionCloudSync -Name <string> [-AddGroupName <string[]>] [-EnableAssi
 
 Use this cmdlet to configure collection membership synchronization to Azure Active Directory groups for a device or user collection.
 
-For more information, see [How to synchronize collection members to Azure AD groups](mem/configmgr/core/clients/manage/collections/synchronize-collections-aad-group).
+<!--For more information, see [How to synchronize collection members to Azure AD groups](mem/configmgr/core/clients/manage/collections/synchronize-collections-aad-group)-->
 
 
 > [!NOTE]
@@ -302,3 +302,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-CMDeviceCollection](Get-CMDeviceCollection.md)
 [Get-CMUserCollection](Get-CMUserCollection.md)
 [Get-CMAADTenant](Get-CMAADTenant.md)
+<!--[How to synchronize collection members to Azure AD groups](mem/configmgr/core/clients/manage/collections/synchronize-collections-aad-group)-->
