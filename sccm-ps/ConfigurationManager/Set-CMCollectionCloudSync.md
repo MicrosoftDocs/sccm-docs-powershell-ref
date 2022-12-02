@@ -42,9 +42,6 @@ Set-CMCollectionCloudSync -Name <string> [-AddGroupName <string[]>] [-EnableAssi
 
 Use this cmdlet to configure collection membership synchronization to Azure Active Directory groups for a device or user collection.
 
-<!--For more information, see [How to synchronize collection members to Azure AD groups](mem/configmgr/core/clients/manage/collections/synchronize-collections-aad-group)-->
-
-
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
