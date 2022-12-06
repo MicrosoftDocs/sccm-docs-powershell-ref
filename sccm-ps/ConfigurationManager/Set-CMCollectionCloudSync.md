@@ -10,7 +10,7 @@ title: Set-CMCollectionCloudSync
 
 ## SYNOPSIS
 
-Configure collection membership synchronization to Azure Active Directory groups for a device or user collection. Click [How to synchronize collection members to Azure AD groups](mem/configmgr/core/clients/manage/collections/synchronize-collections-aad-group) to learn more.
+Configure collection membership synchronization to Azure Active Directory groups for a device or user collection. For more information, see [How to synchronize collection members to Azure AD groups](mem/configmgr/core/clients/manage/collections/synchronize-collections-aad-group)
 
 ## SYNTAX
 
