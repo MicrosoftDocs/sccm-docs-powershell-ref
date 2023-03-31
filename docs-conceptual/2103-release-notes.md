@@ -7,9 +7,9 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.localizationpriority: low
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+ms.author: banreetkaur
+author: Banreet
+manager: apoorvseth
 ---
 
 # Configuration Manager cmdlet library changes for version 2103
