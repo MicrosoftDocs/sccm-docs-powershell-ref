@@ -52,8 +52,13 @@ Set-CMClientSettingSoftwareInventory [-AddCollectFile <Hashtable[]>] [-AddInvent
 ## EXAMPLES
 
 ### Example 1
+Activate Software Inventory for "My custom setting" and set a recurring schedule for every first Sunday of every month. 
+Also, add **.exe** as inventory file type with the default inventory settings. 
 ```
-PS XYZ:\>
+PS XYZ:\>$inventoryFileTypeTable = @{FileName="*.exe";ExcludeWindirAndSubfolders=$True;ExcludeEncryptedAndCompressedFiles=$True;Subdirectories=$True;Path='All client hard disks'}
+PS XYZ:\>$schedule = New-CMSchedule -Start '2022-01-01 04:00' -DayOfWeek Sunday -WeekOrder First
+PS XYZ:\>Set-CMClientSettingSoftwareInventory -Name 'My custom setting' -Enable $true -Schedule $schedule -AddInventoryFileType $inventoryFileTypeTable
+
 ```
 
 ## PARAMETERS

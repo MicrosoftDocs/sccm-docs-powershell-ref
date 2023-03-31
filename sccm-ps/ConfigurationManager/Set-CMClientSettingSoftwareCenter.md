@@ -163,6 +163,7 @@ Accept wildcard characters: False
 
 ### -ColorScheme
 Use this parameter to configure the Software Center client setting, **Color scheme for Software Center**.
+Example color object for: Red=255, Green=74, Blue=74: **$colorObject = [system.drawing.color]::FromArgb(255,255,74,74)**
 
 ```yaml
 Type: Color
@@ -222,7 +223,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultSetting
-{{ Fill DefaultSetting Description }}
+This parameter will apply settings to the default client setting. Use parameter **-Name** for any custom client setting.
 
 ```yaml
 Type: SwitchParameter
@@ -282,7 +283,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableCustomize
-{{ Fill EnableCustomize Description }}
+This parameter will enable custom Software Center settings. Like the color scheme or a logo.
 
 ```yaml
 Type: Boolean
@@ -417,7 +418,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{ Fill InputObject Description }}
+Object of **Get-CMClientSetting**
 
 ```yaml
 Type: IResultObject
@@ -462,7 +463,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{ Fill Name Description }}
+Use this parameter to specify a client setting by its name.
 
 ```yaml
 Type: String
