@@ -203,7 +203,7 @@ Accept wildcard characters: False
 
 ### -NlbVirtualIP
 
-Failover support for a software update point in a network load balancing (NLB) cluster was deprecated in version 1702. For more information, see [Removed and deprecated features](/mem/configmgr/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md#unsupported-and-removed-features).
+Failover support for a software update point in a network load balancing (NLB) cluster was deprecated in version 1702. For more information, see [Removed and deprecated features](/mem/configmgr/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures#unsupported-and-removed-features).
 
 ```yaml
 Type: String
