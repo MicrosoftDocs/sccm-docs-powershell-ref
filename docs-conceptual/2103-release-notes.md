@@ -214,7 +214,7 @@ Parameter **OperatorType** has another possible value: `NotLike`
 
 **Breaking changes**
 
-Fixed an issue for parameter **O365LanguageSelection**. You now need to specify a language with a country name. This change aligns this parameter with the options in the Configuration Manager console. For example, `-O365LanguageSelection "English (United States)"`
+Fixed an issue for parameter **O365LanguageSelection**. You now need to specify a language with a country/region name. This change aligns this parameter with the options in the Configuration Manager console. For example, `-O365LanguageSelection "English (United States)"`
 
 ### Set-CMCertificateProfileScep
 
