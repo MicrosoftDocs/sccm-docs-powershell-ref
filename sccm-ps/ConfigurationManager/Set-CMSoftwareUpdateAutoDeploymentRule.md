@@ -937,7 +937,7 @@ The format for the string array is: `"English","Hungarian","Chinese (Simplified,
 
 You currently can't specify with this parameter all of the languages that are available in the Configuration Manager console. For example, you can't specify "Irish (Ireland)" or "Maltese (Malta)".<!-- CMADO-7059972 -->
 
-Starting in version 2103, you need to specify a language with a country name. This change aligns this parameter with the options in the Configuration Manager console. For example, `-O365LanguageSelection "English (United States)"`
+Starting in version 2103, you need to specify a language with a country/region name. This change aligns this parameter with the options in the Configuration Manager console. For example, `-O365LanguageSelection "English (United States)"`
 
 This parameter overwrites any existing values with the values that you specify.
 
