@@ -1,7 +1,8 @@
-![image](https://github.com/Banreet/sccm-docs-powershell/assets/92906285/b59e5e74-2d4e-4028-9e47-57d5c017a7bf)---
+---
+description: Adding distribution points.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 08/04/2021
+ms.date: 09/06/2023
 schema: 2.0.0
 title: Add-CMDistributionPoint
 ---
