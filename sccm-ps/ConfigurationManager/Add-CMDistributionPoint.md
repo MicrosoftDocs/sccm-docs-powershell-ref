@@ -1,4 +1,4 @@
----
+![image](https://github.com/Banreet/sccm-docs-powershell/assets/92906285/b59e5e74-2d4e-4028-9e47-57d5c017a7bf)---
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 08/04/2021
@@ -570,6 +570,16 @@ Default value: None
 Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
+### -InitialMPForLookup
+It is required (and requires) when providing -PreferredMPEnabled parameter. It expects a string input that represents the different lookup MP's separated by the * symbol. MPs are filtered based on the Site code of the DP, if the MPs site code is different, an error is thrown.
+
+```yaml
+Type: String
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -InstallInternetServer
 Indicates that Configuration Manager installs and configures Internet Information Services (IIS) on the server if it isn't already installed. The distribution point role requires IIS.
@@ -649,7 +659,17 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+### -PreferredMPEnabled
 
+It's a switch parameter. The presence of the parameter indicates that the dynamic MP usage is enabled. PXE has to be enabled on the Distribution Point before using this parameter.
+
+```yaml
+Type: SwitchParameter
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 ### -PrimaryContentLibraryLocation
 
 Specifies the primary content location.
