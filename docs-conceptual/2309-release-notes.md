@@ -38,8 +38,8 @@ For more information, see [Add-CMDistributionPoint](/powershell/module/configura
 **Non-breaking changes**
 
 Two new parameters have been added to the cmdlet
- - _InitialMPForLookup:_ It is required (and requires) when providing -PreferredMPEnabled parameter. It expects a string input that represents the different lookup MP's separated by the '*' symbol. MP's are filtered based on the Site code of the DP, if the MP's site code is different, an error is thrown.
- - _PreferredMPEnabled:_ It is a switch parameter. The presence of the parameter indicates that the dynamic MP usage is enabled. PXE has to be enabled on the Distribution Point before using this parameter.
+ - _InitialMPForLookup:_ It's required (and requires) when providing -PreferredMPEnabled parameter. It expects a string input that represents the different lookup MPs separated by the * symbol. MPs are filtered based on the Site code of the DP, if the MPs site code is different, an error is thrown.
+ - _PreferredMPEnabled:_ It's a switch parameter. The presence of the parameter indicates that the dynamic MP usage is enabled. PXE has to be enabled on the Distribution Point before using this parameter.
 
 ### Set-CMDistributionPoint
 For more information, see [Set-CMDistributionPoint](/powershell/module/configurationmanager/set-cmdistributionpoint).
@@ -47,8 +47,8 @@ For more information, see [Set-CMDistributionPoint](/powershell/module/configura
 **Non-breaking changes**
 
 Two new parameters have been added to the cmdlet
-- _InitialMPForLookup:_ This parameter expects a string that represents the different lookup MP's separated by the symbol'*'. MP's are filtered out based on the Site code of the DP, if the MP's site code is different, an error is thrown.
-- _PreferredMPEnabled:_ This is a boolean parameter where the $true value for the parameter indicates that the dynamic MP usage is enabled. PXE has to be enabled on the Distribution Point before using this parameter.
+- _InitialMPForLookup:_ This parameter expects a string that represents the different lookup MPs separated by the symbol'*'. MPs are filtered out based on the Site code of the DP, if the MPs site code is different, an error is thrown.
+- _PreferredMPEnabled:_ This parameter is boolean where the $true value for the parameter indicates that the dynamic MP usage is enabled. PXE has to be enabled on the Distribution Point before using this parameter.
 
 ### Invoke-CMScript
 For more information, see [Invoke-CMScript](/powershell/module/configurationmanager/invoke-cmscript).
