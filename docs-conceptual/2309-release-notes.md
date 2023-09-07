@@ -35,6 +35,12 @@ Use this cmdlet to create a Windows 11 edition upgrade policy. For more informat
 ```powershell
 New-CMWindows11EditionUpgrade -Name "NewEditionPolicyByKey" -WindowsEdition Windows11Enterprise -ProductKey "123ab-cd456-789ef-2j3k4-0ghi1"
 ```
+### Set-UpdateServerApplication
+Use this cmdlet to add the missing URL 'http://localhost' to your existing server app. For more information, see [About creating and deploying applications in Configuration Manager](/mem/configmgr/apps/get-started/create-and-deploy-an-application).
+
+```powershell
+SET-UpdateServerApplication -TenantId 1E7C0B63-1DAB-4754-8433-AF8F9CFFCF38
+```
 
 ## Cmdlet changes
 The following changes have been made to existing cmdlets in this version. Changes may be new functionality or bug fixes. Some changes may be breaking. If you use one of the cmdlets or feature areas listed in this section, carefully review the changes to understand how they may affect your use.
