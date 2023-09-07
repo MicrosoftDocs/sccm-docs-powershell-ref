@@ -25,9 +25,16 @@ These release notes summarize changes to the Configuration Manager cmdlet librar
 ## Module changes
  -->
 
-<!-- ## New cmdlets -->
+## New cmdlets 
 
 <!-- - [<cmdlet>](/powershell/module/configurationmanager/): -->
+### New-CMWindows11EditionUpgrade
+
+Use this cmdlet to create a Windows 11 edition upgrade policy. For more information, see [About upgrading windows version in Configuration Manager](/mem/configmgr/compliance/deploy-use/upgrade-windows-version).
+
+```powershell
+New-CMWindows11EditionUpgrade -Name "NewEditionPolicyByKey" -WindowsEdition Windows11Enterprise -ProductKey "123ab-cd456-789ef-2j3k4-0ghi1"
+```
 
 ## Cmdlet changes
 The following changes have been made to existing cmdlets in this version. Changes may be new functionality or bug fixes. Some changes may be breaking. If you use one of the cmdlets or feature areas listed in this section, carefully review the changes to understand how they may affect your use.
@@ -66,3 +73,9 @@ For more information, see [New-CMCloudManagementGateway](/powershell/module/conf
 **Non-breaking changes**
 
 A new parameter, TenantId, has been added to the New-CMCloudManagementGateway cmdlet.  
+
+## How to provide feedback or report issues
+
+Many of the fixes and improvements described in this article are a result of your feedback.
+
+To send feedback, use the Configuration Manager console. For more information, see [Feedback for PowerShell](/mem/configmgr/core/understand/product-feedback#feedback-for-powershell).
