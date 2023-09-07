@@ -1,4 +1,5 @@
-![image](https://github.com/Banreet/sccm-docs-powershell/assets/92906285/5fee0c46-ee24-4ffd-998a-ddf45812fe54)﻿---
+---
+description: Configuring distribution points.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 12/16/2021
@@ -693,6 +694,14 @@ Accept wildcard characters: False
 This parameter expects a string that represents the different lookup MPs separated by the symbol *. MPs are filtered out based on the Site code of the DP, if the MPs site code is different, an error is thrown.
   - If the DP has Preferred MP already enabled, -InitialMPForLookup accepts the string of MPs.
   - If we are setting the PreferredMPEnabled as disabled, -InitialMPForLookup is not required to be passed in.
+
+```yaml
+Type: String
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -InputObject
 
