@@ -14,10 +14,8 @@ Use the console to update the server app or use this cmdlet to add the missing U
 
 ## SYNTAX
 
-```powershell
-
+```
 SET-UpdateServerApplication -TenantId 1E7C0B63-1DAB-4754-8433-AF8F9CFFCF38
-
 ```
 
 ## PARAMETER
