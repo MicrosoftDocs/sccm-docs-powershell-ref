@@ -12,17 +12,18 @@ schema: 2.0.0
 
 Use the console to update the server app or use this cmdlet to add the missing URL 'http://localhost' to your existing server app.
 
-## SYNTAX
+##  Example 
+Below sample show how to use the cmdlet to update the missing URL of server app by providing the tenantId.
 
-```
-SET-UpdateServerApplication -TenantId 1E7C0B63-1DAB-4754-8433-AF8F9CFFCF38
+```powershell
+  SET-UpdateServerApplication -TenantId 1E7C0B63-1DAB-4754-8433-AF8F9CFFCF38
 ```
 
 ## PARAMETER
 
 ### -TenantId
 
-It is a mandatory parameter that user has to provide.
+It is a mandatory parameter for this cmdlet
 
 ```yaml
 Type: String
