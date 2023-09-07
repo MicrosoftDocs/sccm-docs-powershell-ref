@@ -12,11 +12,13 @@ schema: 2.0.0
 
 Use the console to update the server app or use this cmdlet to add the missing URL 'http://localhost' to your existing server app.
 
-## EXAMPLES 
+## EXAMPLE
+
 Below sample show how to use the cmdlet to update the missing URL of server app by providing the tenantId.
 
+### TenantId
 ```
-  SET-UpdateServerApplication -TenantId 1E7C0B63-1DAB-4754-8433-AF8F9CFFCF38
+ SET-UpdateServerApplication -TenantId 1E7C0B63-1DAB-4754-8433-AF8F9CFFCF38
 ```
 
 ## PARAMETER
