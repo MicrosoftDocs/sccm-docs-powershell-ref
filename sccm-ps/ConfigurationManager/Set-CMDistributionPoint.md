@@ -1,4 +1,4 @@
-﻿---
+![image](https://github.com/Banreet/sccm-docs-powershell/assets/92906285/5fee0c46-ee24-4ffd-998a-ddf45812fe54)﻿---
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 12/16/2021
@@ -688,6 +688,11 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+### -InitialMPForLookup
+
+This parameter expects a string that represents the different lookup MPs separated by the symbol *. MPs are filtered out based on the Site code of the DP, if the MPs site code is different, an error is thrown.
+  - If the DP has Preferred MP already enabled, -InitialMPForLookup accepts the string of MPs.
+  - If we are setting the PreferredMPEnabled as disabled, -InitialMPForLookup is not required to be passed in.
 
 ### -InputObject
 
@@ -802,6 +807,17 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -PreferredMPEnabled
+
+This parameter is boolean where the $true value for the parameter indicates that the dynamic MP usage is enabled. PXE has to be enabled on the Distribution Point before using this parameter.
+
+```yaml
+Type: SwitchParameter
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 ### -PxePassword
 
 Specify the PXE password as a secure string.
