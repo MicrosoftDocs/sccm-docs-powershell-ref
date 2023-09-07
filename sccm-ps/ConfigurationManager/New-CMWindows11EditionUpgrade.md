@@ -213,8 +213,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Get-CMWindowsEditionUpgradeConfigurationItem](Get-CMWindowsEditionUpgradeConfigurationItem.md)
 
-<<! -- [Remove-CMWindows10EditionUpgrade](Remove-CMWindows10EditionUpgrade.md) -->
-
-<<! -- [Set-CMWindows10EditionUpgrade](Set-CMWindows10EditionUpgrade.md) -->
+<!-- Remove-CMWindows11EditionUpgrade -->
+<!-- Set-CMWindows11EditionUpgrade -->
 
 [Upgrade Windows devices to a new edition with Configuration Manager](/mem/configmgr/compliance/deploy-use/upgrade-windows-version)
