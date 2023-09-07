@@ -12,7 +12,7 @@ schema: 2.0.0
 
 Use the console to update the server app or use this cmdlet to add the missing URL 'http://localhost' to your existing server app.
 
-## EXAMPLE
+## SYNTAX
 
 Below sample show how to use the cmdlet to update the missing URL of server app by providing the tenantId.
 
@@ -25,7 +25,7 @@ Below sample show how to use the cmdlet to update the missing URL of server app 
 
 ### -TenantId
 
-It is a mandatory parameter for this cmdlet
+It's a mandatory parameter for this cmdlet
 
 ```yaml
 Type: String
