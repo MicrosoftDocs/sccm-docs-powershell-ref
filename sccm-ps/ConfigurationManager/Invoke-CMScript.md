@@ -1,7 +1,7 @@
 ---
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 12/28/2021
+ms.date: 09/13/2023
 schema: 2.0.0
 title: Invoke-CMScript
 ---
@@ -213,6 +213,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 Sample command: 
+
 ```powershell
 $ScriptObj = Get-CMScript -ScriptName "test"
 Invoke-CMScript -InputObject $ScriptObj -CollectionId "SMSDM003" -ScheduleTime "08/14/2023 05:00:00"
