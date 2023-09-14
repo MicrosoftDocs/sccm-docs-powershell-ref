@@ -106,7 +106,7 @@ You can add the distribution point site role to a new site system server or add 
 
 ### Example 1: Add a site by using a site system server object
 
-The first command creates a date object for thirty years from the current date and stores the object in the **$Date** variable.
+The first command creates a date object for 30 years from the current date and stores the object in the **$Date** variable.
 
 The second command gets the site system server object named **MySiteSys_11310.Contoso.com** and stores the object in the **$SystemServer** variable.
 
@@ -120,7 +120,7 @@ Add-CMDistributionPoint -InputObject $SystemServer -CertificateExpirationTimeUtc
 
 ### Example 2: Add a site by using the pipeline
 
-The first command creates a date object for thirty years from the current date and stores the object in the **$Date** variable.
+The first command creates a date object for 30 years from the current date and stores the object in the **$Date** variable.
 
 The second command gets the site system server object named **MySiteSys_11310.Contoso.com**. It then uses the pipeline operator to pass the object to **Add-DistributionPoint**, which adds a distribution point to the site system server object. It then sets the certificate expiration to the date stored in **$Date**.
 
@@ -147,7 +147,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowPreStaging
-Indicates that the distribution point can pre-stage contents.
+Indicates that the distribution point can prestage contents.
 
 ```yaml
 Type: SwitchParameter
@@ -432,7 +432,7 @@ Accept wildcard characters: False
 ### -EnablePxe
 Indicates that PXE is enabled on the distribution point.
 
-When you enable PXE, Configuration Manager installs Windows Deployment Services on the server, if required.
+When you enable PXE, Configuration Manager installs Windows Deployment Services on the server, if necessary.
 Windows Deployment Service is the service that performs the PXE boot to install operating systems.
 After you create the distribution point, Configuration Manager installs a provider in Windows Deployment Services that uses the PXE boot functions.
 
@@ -480,7 +480,7 @@ Accept wildcard characters: False
 
 ### -EnableUnknownComputerSupport
 Indicates that support for unknown computers is enabled.
-Unknown computers are computers that are not managed by Configuration Manager.
+Unknown computers are computers that aren't managed by Configuration Manager.
 
 ```yaml
 Type: SwitchParameter
@@ -572,7 +572,7 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 ### -InitialMPForLookup
-It is required (and requires) when providing -PreferredMPEnabled parameter. It expects a string input that represents the different lookup MP's separated by the * symbol. MPs are filtered based on the Site code of the DP, if the MPs site code is different, an error is thrown.
+It's required (and requires) when providing -PreferredMPEnabled parameter. It expects a string input that represents the different lookup MP's separated by the * symbol. MP's are filtered based on the Site code of the DP, if the MP's site code is different, an error is thrown.
 
 ```yaml
 Type: String
@@ -723,7 +723,7 @@ Accept wildcard characters: False
 ```
 
 ### -PxeServerResponseDelaySec
-Specifies, in seconds, how long the distribution point delays before it responds to computer requests when you are using multiple PXE-enabled distribution points.
+Specifies, in seconds, how long the distribution point delays before it responds to computer requests when you're using multiple PXE-enabled distribution points.
 By default, the Configuration Manager PXE service point responds first to network PXE requests.
 
 ```yaml
