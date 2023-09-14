@@ -1,4 +1,5 @@
 ---
+external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 09/13/2023
 online version:
