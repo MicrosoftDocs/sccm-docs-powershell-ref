@@ -14,7 +14,7 @@ Use the console to update the server app or use this cmdlet to add the missing U
 
 ## DESCRIPTION
 
-This is for existing customer who are using pre existing old Server App and it has missing URL http://localhost. These customers have to add this URL to their Server App in both database (Table:AAD_Application_Ex) and in AAD in Azure portal where Server App reside. Customers can use console to update the server app or this cmdlet.
+This cmdlet is for existing customer who is using pre-existing old Server App and it has missing URL http://localhost. These customers have to add this URL to their Server App in both database (Table:AAD_Application_Ex) and in azure active directory in Azure portal where Server Apps reside. Customers can use console to update the server app or this cmdlet.
 
 ## EXAMPLES
 
@@ -28,7 +28,7 @@ SET-UpdateServerApplication -TenantId 1E7C0B63-1DAB-4754-8433-AF8F9CFFCF38
 
 ### -TenantId
 
-It is a mandatory parameter that user has to provide.
+It's a mandatory parameter that user has to provide.
 
 ```yaml
 Type: String
