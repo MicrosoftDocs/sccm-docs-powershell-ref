@@ -94,7 +94,7 @@ Add-CMDistributionPoint [-AllowFallbackForContent] [-AllowPreStaging] [-AllowPro
 ## DESCRIPTION
 
 The **Add-CMDistributionPoint** cmdlet creates a distribution point on a site system server.
-A distribution point is a site system role that Configuration Manager uses to store files for clients to download, such as application content, software packages, software updates, operating system images, and boot images.
+A distribution point is a site system role that Configuration Manager uses to store files for clients to download. Files such as application content, software packages, software updates, operating system images, and boot images are stored.
 
 Before you can make content available to client computers, assign a site system server as a distribution point.
 You can add the distribution point site role to a new site system server or add the site role to an existing site system server.
@@ -132,7 +132,7 @@ Get-CMSiteSystemServer -SiteSystemServerName "MySiteSys_11310.Contoso.com" | Add
 ## PARAMETERS
 
 ### -AllowFallbackForContent
-Indicates that clients outside of the boundary groups associated with a site system can fall back and use this site system as a source location for content when no other site systems are available.
+Indicates that clients outside of the boundary groups associated with a site system can fall back. Those clients can use this site system as a source location for content when no other site systems are available.
 
 ```yaml
 Type: SwitchParameter
@@ -572,7 +572,7 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 ### -InitialMPForLookup
-It's required (and requires) when providing -PreferredMPEnabled parameter. It expects a string input that represents the different lookup MP's separated by the * symbol. MP's are filtered based on the Site code of the DP, if the MP's site code is different, an error is thrown.
+It's required (and requires) when providing -PreferredMPEnabled parameter. It expects a string input that represents different lookup MPs separated by the * symbol. MPs are filtered based on the Site code of the DP, if the MPs site code is different, an error is thrown.
 
 ```yaml
 Type: String
