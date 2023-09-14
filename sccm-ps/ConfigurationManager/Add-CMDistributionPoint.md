@@ -572,7 +572,7 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 ### -InitialMPForLookup
-It's required (and requires) when providing -PreferredMPEnabled parameter. It expects a string input that represents different lookup MPs separated by the * symbol. MPs are filtered based on the Site code of the DP, if the MPs site code is different, an error is thrown.
+It's required (and requires) when providing -PreferredMPEnabled parameter. It expects a string input that represents different lookup MPs separated by the * symbol. MPs are filtered based on the Site code of the DP, if the MP's site code is different, an error is thrown.
 
 ```yaml
 Type: String
