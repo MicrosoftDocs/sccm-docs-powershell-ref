@@ -1,7 +1,8 @@
 ---
+description: Adding distribution points.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 08/04/2021
+ms.date: 09/06/2023
 schema: 2.0.0
 title: Add-CMDistributionPoint
 ---
@@ -93,7 +94,7 @@ Add-CMDistributionPoint [-AllowFallbackForContent] [-AllowPreStaging] [-AllowPro
 ## DESCRIPTION
 
 The **Add-CMDistributionPoint** cmdlet creates a distribution point on a site system server.
-A distribution point is a site system role that Configuration Manager uses to store files for clients to download, such as application content, software packages, software updates, operating system images, and boot images.
+A distribution point is a site system role that Configuration Manager uses to store files for clients to download. Files such as application content, software packages, software updates, operating system images, and boot images are stored.
 
 Before you can make content available to client computers, assign a site system server as a distribution point.
 You can add the distribution point site role to a new site system server or add the site role to an existing site system server.
@@ -105,7 +106,7 @@ You can add the distribution point site role to a new site system server or add 
 
 ### Example 1: Add a site by using a site system server object
 
-The first command creates a date object for thirty years from the current date and stores the object in the **$Date** variable.
+The first command creates a date object for 30 years from the current date and stores the object in the **$Date** variable.
 
 The second command gets the site system server object named **MySiteSys_11310.Contoso.com** and stores the object in the **$SystemServer** variable.
 
@@ -119,7 +120,7 @@ Add-CMDistributionPoint -InputObject $SystemServer -CertificateExpirationTimeUtc
 
 ### Example 2: Add a site by using the pipeline
 
-The first command creates a date object for thirty years from the current date and stores the object in the **$Date** variable.
+The first command creates a date object for 30 years from the current date and stores the object in the **$Date** variable.
 
 The second command gets the site system server object named **MySiteSys_11310.Contoso.com**. It then uses the pipeline operator to pass the object to **Add-DistributionPoint**, which adds a distribution point to the site system server object. It then sets the certificate expiration to the date stored in **$Date**.
 
@@ -131,7 +132,7 @@ Get-CMSiteSystemServer -SiteSystemServerName "MySiteSys_11310.Contoso.com" | Add
 ## PARAMETERS
 
 ### -AllowFallbackForContent
-Indicates that clients outside of the boundary groups associated with a site system can fall back and use this site system as a source location for content when no other site systems are available.
+Indicates that clients outside of the boundary groups associated with a site system can fall back. Those clients can use this site system as a source location for content when no other site systems are available.
 
 ```yaml
 Type: SwitchParameter
@@ -146,7 +147,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowPreStaging
-Indicates that the distribution point can pre-stage contents.
+Indicates that the distribution point can prestage contents.
 
 ```yaml
 Type: SwitchParameter
@@ -431,7 +432,7 @@ Accept wildcard characters: False
 ### -EnablePxe
 Indicates that PXE is enabled on the distribution point.
 
-When you enable PXE, Configuration Manager installs Windows Deployment Services on the server, if required.
+When you enable PXE, Configuration Manager installs Windows Deployment Services on the server, if necessary.
 Windows Deployment Service is the service that performs the PXE boot to install operating systems.
 After you create the distribution point, Configuration Manager installs a provider in Windows Deployment Services that uses the PXE boot functions.
 
@@ -479,7 +480,7 @@ Accept wildcard characters: False
 
 ### -EnableUnknownComputerSupport
 Indicates that support for unknown computers is enabled.
-Unknown computers are computers that are not managed by Configuration Manager.
+Unknown computers are computers that aren't managed by Configuration Manager.
 
 ```yaml
 Type: SwitchParameter
@@ -570,6 +571,16 @@ Default value: None
 Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
+### -InitialMPForLookup
+It's required (and requires) when providing -PreferredMPEnabled parameter. It expects a string input that represents different lookup MPs separated by the * symbol. MPs are filtered based on the Site code of the DP, if the MP's site code is different, an error is thrown.
+
+```yaml
+Type: String
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -InstallInternetServer
 Indicates that Configuration Manager installs and configures Internet Information Services (IIS) on the server if it isn't already installed. The distribution point role requires IIS.
@@ -649,7 +660,17 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+### -PreferredMPEnabled
 
+It's a switch parameter. The presence of the parameter indicates that the dynamic MP usage is enabled. PXE has to be enabled on the Distribution Point before using this parameter.
+
+```yaml
+Type: SwitchParameter
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 ### -PrimaryContentLibraryLocation
 
 Specifies the primary content location.
@@ -702,7 +723,7 @@ Accept wildcard characters: False
 ```
 
 ### -PxeServerResponseDelaySec
-Specifies, in seconds, how long the distribution point delays before it responds to computer requests when you are using multiple PXE-enabled distribution points.
+Specifies, in seconds, how long the distribution point delays before it responds to computer requests when you're using multiple PXE-enabled distribution points.
 By default, the Configuration Manager PXE service point responds first to network PXE requests.
 
 ```yaml
