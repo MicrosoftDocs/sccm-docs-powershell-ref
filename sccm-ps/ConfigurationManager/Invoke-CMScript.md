@@ -1,7 +1,7 @@
 ---
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 12/28/2021
+ms.date: 09/13/2023
 schema: 2.0.0
 title: Invoke-CMScript
 ---
@@ -196,6 +196,17 @@ Parameter Sets: (All)
 Aliases:
 
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+### -ScheduleTime
+
+Specify a UTC DateTime to schedule the script's execution for a later time. 
+
+```yaml
+Type: DateTime
 Position: Named
 Default value: None
 Accept pipeline input: False

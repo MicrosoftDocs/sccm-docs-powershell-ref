@@ -1,4 +1,5 @@
-﻿---
+---
+description: Configuring distribution points.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 12/16/2021
@@ -139,7 +140,7 @@ Accept wildcard characters: False
 
 When you use the **EnableDoinc** parameter, set this parameter to `$true` to accept the Microsoft Connected Cache server license terms. For more information, see [Microsoft Connected Cache in Configuration Manager](/mem/configmgr/core/plan-design/hierarchy/microsoft-connected-cache#licensing).
 
-If you've already agreed to the licensing terms, you don't have to include this parameter. You'll see this warning when you unnecessarily include it:<!-- 12502130 -->
+If you've already agreed to the licensing terms, you don't have to include this parameter. You see this warning when you unnecessarily include it:<!-- 12502130 -->
 `The parameter 'AgreeDoincLicense' has been ignored. Reason: Once the license terms agreement is selected, it will be grayed out and never uncheck it.`
 
 ```yaml
@@ -688,6 +689,19 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+### -InitialMPForLookup
+
+This parameter expects a string that represents the different lookup MPs separated by the symbol *. MPs are filtered out based on the Site code of the DP, if the MP' site code is different, an error is thrown.
+  - If the DP has Preferred MP already enabled, -InitialMPForLookup accepts the string of MPs.
+  - If we're setting the PreferredMPEnabled as disabled, -InitialMPForLookup isn't required to be passed in.
+
+```yaml
+Type: String
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -InputObject
 
@@ -802,6 +816,17 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -PreferredMPEnabled
+
+This parameter is boolean where the $true value for the parameter indicates that the dynamic MP usage is enabled. PXE has to be enabled on the Distribution Point before using this parameter.
+
+```yaml
+Type: SwitchParameter
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 ### -PxePassword
 
 Specify the PXE password as a secure string.

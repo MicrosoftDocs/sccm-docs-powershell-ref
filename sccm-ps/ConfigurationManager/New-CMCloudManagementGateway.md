@@ -461,6 +461,17 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+### -TenantId
+
+Mandatory parameter where tenantId needs to be added while creating cmg.
+
+```yaml
+Type: String
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -TrafficCriticalPct
 
