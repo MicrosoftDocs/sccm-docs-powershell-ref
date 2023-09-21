@@ -42,4 +42,4 @@ Accept wildcard characters: False
 
 ## RELATED LINKS
 
-[About upgrading windows version in Configuration Manager](/mem/configmgr/compliance/deploy-use/upgrade-windows-version).
+[About upgrading windows version in Configuration Manager](/mem/configmgr/compliance/deploy-use/upgrade-windows-version)
