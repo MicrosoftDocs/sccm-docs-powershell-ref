@@ -3,6 +3,10 @@ items:
   href: overview.md
 - name: Release notes
   items:
+  - name: 2309 release notes
+    href: 2309-release-notes.md
+  - name: 2211 release notes
+    href: 2211-release-notes.md
   - name: 2207 release notes
     href: 2207-release-notes.md
   - name: 2203 release notes
