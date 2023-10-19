@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 11/20/2020
@@ -10,7 +10,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-Get the Azure Active Directory (Azure AD) app object from the site.
+Get the Microsoft Entra app object from the site.
 
 ## SYNTAX
 
@@ -22,16 +22,18 @@ Get-CMAADApplication [-AppName <String>] [-AppType <CloudApplicationType>] [-Cli
 
 ## DESCRIPTION
 
-Use this cmdlet to get the Azure AD app object from the site. It's commonly used with the [New-CMCloudManagementAzureService](New-CMCloudManagementAzureService.md) cmdlet.
+Use this cmdlet to get the Microsoft Entra app object from the site. It's commonly used with the [New-CMCloudManagementAzureService](New-CMCloudManagementAzureService.md) cmdlet.
 
-For more information about Azure AD apps in Configuration Manager, see [Configure Azure services](/mem/configmgr/core/servers/deploy/configure/azure-services-wizard).
+For more information about Microsoft Entra apps in Configuration Manager, see [Configure Azure services](/mem/configmgr/core/servers/deploy/configure/azure-services-wizard).
 
 > [!NOTE]
 > While some of the new cmdlets might work with other Azure services, they're only tested with the **Cloud management** connection to support the cloud management gateway (CMG).
 
 ## EXAMPLES
 
-### Example 1: Get Azure AD client apps by tenant name
+<a name='example-1-get-azure-ad-client-apps-by-tenant-name'></a>
+
+### Example 1: Get Microsoft Entra client apps by tenant name
 
 This example returns all client apps in the specified tenant.
 
@@ -39,7 +41,9 @@ This example returns all client apps in the specified tenant.
 Get-CMAADApplication -TenantName "Contoso" -AppType ClientApplication
 ```
 
-### Example 2: Get Azure AD server apps by tenant ID
+<a name='example-2-get-azure-ad-server-apps-by-tenant-id'></a>
+
+### Example 2: Get Microsoft Entra server apps by tenant ID
 
 This example returns all server apps in the specified tenant.
 
@@ -47,7 +51,9 @@ This example returns all server apps in the specified tenant.
 Get-CMAADApplication -TenantId "05a349fa-298a-4427-8771-9efcdb73431e" -AppType ServerApplication
 ```
 
-### Example 3: Get an Azure AD app by its name
+<a name='example-3-get-an-azure-ad-app-by-its-name'></a>
+
+### Example 3: Get a Microsoft Entra app by its name
 
 ```powershell
 Get-CMAADApplication -AppName "CmgServerApp"
@@ -57,7 +63,7 @@ Get-CMAADApplication -AppName "CmgServerApp"
 
 ### -AppName
 
-Specify the name of the app in Azure AD.
+Specify the name of the app in Microsoft Entra ID.
 
 ```yaml
 Type: String
@@ -75,7 +81,7 @@ Accept wildcard characters: False
 
 Specify whether to target the server or client app.
 
-In Azure AD, the server app is known as a _web_ app registration, and the client app is known as a _native_ app registration.
+In Microsoft Entra ID, the server app is known as a _web_ app registration, and the client app is known as a _native_ app registration.
 
 ```yaml
 Type: CloudApplicationType
@@ -92,7 +98,7 @@ Accept wildcard characters: False
 
 ### -ClientId
 
-Specify the **Application (client) ID** value of the app registration in Azure AD. The format is a standard GUID.
+Specify the **Application (client) ID** value of the app registration in Microsoft Entra ID. The format is a standard GUID.
 
 ```yaml
 Type: String
@@ -140,7 +146,7 @@ Accept wildcard characters: False
 
 ### -TenantId
 
-Specify the GUID of your Azure AD tenant.
+Specify the GUID of your Microsoft Entra tenant.
 
 ```yaml
 Type: String
@@ -156,7 +162,7 @@ Accept wildcard characters: False
 
 ### -TenantName
 
-Specify the name of your Azure AD tenant.
+Specify the name of your Microsoft Entra tenant.
 
 ```yaml
 Type: String

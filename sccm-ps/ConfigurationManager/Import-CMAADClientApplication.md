@@ -10,7 +10,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-Create the Azure Active Directory (Azure AD) client app definition in Configuration Manager.
+Create the Microsoft Entra client app definition in Configuration Manager.
 
 ## SYNTAX
 
@@ -28,11 +28,11 @@ Import-CMAADClientApplication -AppName <String> -ClientId <String> -TenantId <St
 
 ## DESCRIPTION
 
-Use this cmdlet to import the client app from Azure AD, and define it for the Configuration Manager site. It assumes that an Azure administrator already created the app in Azure AD. In Azure AD, this app is known as a _native_ app registration.
+Use this cmdlet to import the client app from Microsoft Entra ID, and define it for the Configuration Manager site. It assumes that an Azure administrator already created the app in Microsoft Entra ID. In Microsoft Entra ID, this app is known as a _native_ app registration.
 
 For more information on how to use this cmdlet to create a cloud management gateway (CMG), see [2010 release notes: Cloud management gateway](/powershell/sccm/2010-release-notes#cloud-management-gateway).
 
-For more information about Azure AD apps in Configuration Manager, see [Configure Azure services](/mem/configmgr/core/servers/deploy/configure/azure-services-wizard).
+For more information about Microsoft Entra apps in Configuration Manager, see [Configure Azure services](/mem/configmgr/core/servers/deploy/configure/azure-services-wizard).
 
 > [!NOTE]
 > This cmdlet might work with other Azure services, but it's only tested with the **Cloud management** connection to support the cloud management gateway (CMG).
@@ -57,7 +57,7 @@ Import-CMAADClientApplication -ServerApp $serverApp -AppName "CmgClientApp" -Cli
 
 ### -AppName
 
-Specify the name of the app in Azure AD.
+Specify the name of the app in Microsoft Entra ID.
 
 ```yaml
 Type: String
@@ -73,7 +73,7 @@ Accept wildcard characters: False
 
 ### -ClientId
 
-Specify the **Application (client) ID** value of the app registration in Azure AD. The format is a standard GUID.
+Specify the **Application (client) ID** value of the app registration in Microsoft Entra ID. The format is a standard GUID.
 
 ```yaml
 Type: String
@@ -137,7 +137,7 @@ Accept wildcard characters: False
 
 ### -TenantId
 
-Specify the GUID of your Azure AD tenant.
+Specify the GUID of your Microsoft Entra tenant.
 
 ```yaml
 Type: String

@@ -394,7 +394,7 @@ Export a security role to an XML file.
 Export a task sequence.
 
 ### [Get-CMAADApplication](Get-CMAADApplication.md)
-Get the Azure Active Directory (Azure AD) app object from the site.
+Get the Microsoft Entra app object from the site.
 
 ### [Get-CMAccessAccount](Get-CMAccessAccount.md)
 Gets an access account.
@@ -1267,10 +1267,10 @@ Gets a wireless profile.
 Gets a wireless profile configuration item.
 
 ### [Import-CMAADClientApplication](Import-CMAADClientApplication.md)
-Create the Azure Active Directory (Azure AD) client app definition in Configuration Manager.
+Create the Microsoft Entra client app definition in Configuration Manager.
 
 ### [Import-CMAADServerApplication](Import-CMAADServerApplication.md)
-Create the Azure Active Directory (Azure AD) server app definition in Configuration Manager.
+Create the Microsoft Entra server app definition in Configuration Manager.
 
 ### [Import-CMAntimalwarePolicy](Import-CMAntimalwarePolicy.md)
 Imports an antimalware policy for Endpoint Protection.
@@ -3557,4 +3557,3 @@ Updates client status.
 
 ### [Update-CMDistributionPoint](Update-CMDistributionPoint.md)
 Update content on a distribution point.
-
