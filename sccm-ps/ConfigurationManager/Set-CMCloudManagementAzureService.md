@@ -64,7 +64,7 @@ Get-CMAzureService -Name "Contoso" | Set-CMCloudManagementAzureService -NewName 
 
 ### -AddGroupName
 
-Specify an Azure Active Directory (Azure AD) group name to discover. Use this parameter with the **EnableGroupDiscovery** parameter.
+Specify a Microsoft Entra group name to discover. Use this parameter with the **EnableGroupDiscovery** parameter.
 
 ```yaml
 Type: String[]
@@ -80,7 +80,7 @@ Accept wildcard characters: False
 
 ### -DeleteGroupName
 
-Specify an Azure AD group name to remove from discovery.
+Specify a Microsoft Entra group name to remove from discovery.
 
 ```yaml
 Type: String[]
@@ -128,7 +128,7 @@ Accept wildcard characters: False
 
 ### -EnableAADGroupSync
 
-Enable Configuration Manager to sync collections to groups in Azure AD. For more information, see [Synchronize members to Azure AD groups](/mem/configmgr/core/clients/manage/collections/create-collections#bkmk_aadcollsync).
+Enable Configuration Manager to sync collections to groups in Microsoft Entra ID. For more information, see [Synchronize members to Microsoft Entra groups](/mem/configmgr/core/clients/manage/collections/create-collections#bkmk_aadcollsync).
 
 ```yaml
 Type: Boolean
@@ -144,7 +144,7 @@ Accept wildcard characters: False
 
 ### -EnableGroupDeltaDiscovery
 
-Set this parameter to `true` to enable delta discovery for Azure AD group discovery. Use this parameter with the **EnableGroupDiscovery** parameter. Use the **GroupDeltaDiscoveryMins** parameter to configure the delta discovery interval.
+Set this parameter to `true` to enable delta discovery for Microsoft Entra group discovery. Use this parameter with the **EnableGroupDiscovery** parameter. Use the **GroupDeltaDiscoveryMins** parameter to configure the delta discovery interval.
 
 ```yaml
 Type: Boolean
@@ -160,14 +160,14 @@ Accept wildcard characters: False
 
 ### -EnableGroupDiscovery
 
-Set this parameter to `true` to enable Azure AD group discovery. When you enable this discovery method, also configure the following parameters:
+Set this parameter to `true` to enable Microsoft Entra group discovery. When you enable this discovery method, also configure the following parameters:
 
-- **AddGroupName**: Add Azure AD groups to discover
+- **AddGroupName**: Add Microsoft Entra groups to discover
 - **EnableGroupDeltaDiscovery**: Configure delta discovery
 - **GroupDeltaDiscoveryMins**: Delta discovery interval
 - **GroupDiscoverySchedule**: Full polling schedule
 
-For more information on this discovery method, see [Azure Active Directory user group discovery](/mem/configmgr/core/servers/deploy/configure/about-discovery-methods#bkmk_azuregroupdisco).
+For more information on this discovery method, see [Microsoft Entra user group discovery](/mem/configmgr/core/servers/deploy/configure/about-discovery-methods#bkmk_azuregroupdisco).
 
 
 ```yaml
@@ -184,7 +184,7 @@ Accept wildcard characters: False
 
 ### -EnableUserDeltaDiscovery
 
-Set this parameter to `true` to enable delta discovery for Azure AD user discovery. Use this parameter with the **EnableUserDiscovery** parameter.
+Set this parameter to `true` to enable delta discovery for Microsoft Entra user discovery. Use this parameter with the **EnableUserDiscovery** parameter.
 
 ```yaml
 Type: Boolean
@@ -200,13 +200,13 @@ Accept wildcard characters: False
 
 ### -EnableUserDiscovery
 
-Set this parameter to `true` to enable Azure AD user discovery. When you enable this discovery method, also configure the following parameters:
+Set this parameter to `true` to enable Microsoft Entra user discovery. When you enable this discovery method, also configure the following parameters:
 
 - **EnableUserDeltaDiscovery**: Configure delta discovery
 - **UserDeltaDiscoveryMins**: Delta discovery interval
 - **UserDiscoverySchedule**: Full polling schedule
 
-For more information on this discovery method, see [Azure Active Directory user discovery](/mem/configmgr/core/servers/deploy/configure/about-discovery-methods#azureaddisc).
+For more information on this discovery method, see [Microsoft Entra user discovery](/mem/configmgr/core/servers/deploy/configure/about-discovery-methods#azureaddisc).
 
 ```yaml
 Type: Boolean
@@ -238,7 +238,7 @@ Accept wildcard characters: False
 
 ### -GroupDeltaDiscoveryMins
 
-When you enable delta discovery for Azure AD group discovery with the **EnableGroupDeltaDiscovery** parameter, use this parameter to configure the delta discovery interval. The integer value you specify is the polling interval in minutes.
+When you enable delta discovery for Microsoft Entra group discovery with the **EnableGroupDeltaDiscovery** parameter, use this parameter to configure the delta discovery interval. The integer value you specify is the polling interval in minutes.
 
 ```yaml
 Type: Int32
@@ -254,7 +254,7 @@ Accept wildcard characters: False
 
 ### -GroupDiscoverySchedule
 
-Specify a schedule object for the Azure AD group discovery full polling schedule. To get this object, use the [New-CMSchedule](New-CMSchedule.md) cmdlet.
+Specify a schedule object for the Microsoft Entra group discovery full polling schedule. To get this object, use the [New-CMSchedule](New-CMSchedule.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -350,7 +350,7 @@ Accept wildcard characters: False
 
 ### -UserDeltaDiscoveryMins
 
-When you enable delta discovery for Azure AD user discovery with the **EnableUserDeltaDiscovery** parameter, use this parameter to configure the delta discovery interval. The integer value you specify is the polling interval in minutes.
+When you enable delta discovery for Microsoft Entra user discovery with the **EnableUserDeltaDiscovery** parameter, use this parameter to configure the delta discovery interval. The integer value you specify is the polling interval in minutes.
 
 ```yaml
 Type: Int32
@@ -366,7 +366,7 @@ Accept wildcard characters: False
 
 ### -UserDiscoverySchedule
 
-Specify a schedule object for the Azure AD user discovery full polling schedule. To get this object, use the [New-CMSchedule](New-CMSchedule.md) cmdlet.
+Specify a schedule object for the Microsoft Entra user discovery full polling schedule. To get this object, use the [New-CMSchedule](New-CMSchedule.md) cmdlet.
 
 ```yaml
 Type: IResultObject

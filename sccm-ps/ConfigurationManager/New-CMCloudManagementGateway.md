@@ -324,7 +324,7 @@ Accept wildcard characters: False
 
 ### -ServerAppClientId
 
-Applies to version 2010 and later. Specify the client ID of the Azure AD server app. Use this parameter for non-user interaction mode. In the CMG properties, this value is the **Azure AD app name**.
+Applies to version 2010 and later. Specify the client ID of the Microsoft Entra server app. Use this parameter for non-user interaction mode. In the CMG properties, this value is the **Microsoft Entra app name**.
 
 ```yaml
 Type: String

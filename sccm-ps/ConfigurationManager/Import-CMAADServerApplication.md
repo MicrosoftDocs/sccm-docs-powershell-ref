@@ -10,7 +10,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-Create the Azure Active Directory (Azure AD) server app definition in Configuration Manager.
+Create the Microsoft Entra server app definition in Configuration Manager.
 
 ## SYNTAX
 
@@ -23,11 +23,11 @@ Import-CMAADServerApplication [-AppIdUri <Uri>] [-AppName] <String>
 
 ## DESCRIPTION
 
-Use this cmdlet to import the server app from Azure AD, and define it for the Configuration Manager site. It assumes that an Azure administrator already created the app in Azure AD. In Azure AD, this app is known as a _web_ app registration.
+Use this cmdlet to import the server app from Microsoft Entra ID, and define it for the Configuration Manager site. It assumes that an Azure administrator already created the app in Microsoft Entra ID. In Microsoft Entra ID, this app is known as a _web_ app registration.
 
 For more information on how to use this cmdlet to create a cloud management gateway (CMG), see [2010 release notes: Cloud management gateway](/powershell/sccm/2010-release-notes#cloud-management-gateway).
 
-For more information about Azure AD apps in Configuration Manager, see [Configure Azure services](/mem/configmgr/core/servers/deploy/configure/azure-services-wizard).
+For more information about Microsoft Entra apps in Configuration Manager, see [Configure Azure services](/mem/configmgr/core/servers/deploy/configure/azure-services-wizard).
 
 > [!NOTE]
 > This cmdlet might work with other Azure services, but it's only tested with the **Cloud management** connection to support the cloud management gateway (CMG).
@@ -48,7 +48,7 @@ Import-CMAADServerApplication -TenantName "Contoso" -TenantId "05a349fa-298a-442
 
 ### -AppIdUri
 
-Specify the  **Application ID URI** of the app registration entry in the Azure AD portal. This value needs to be unique in your Azure AD tenant. It's in the access token used by the Configuration Manager client to request access to the service. The format is similar to https://ConfigMgrService.
+Specify the  **Application ID URI** of the app registration entry in the Microsoft Entra admin center. This value needs to be unique in your Microsoft Entra tenant. It's in the access token used by the Configuration Manager client to request access to the service. The format is similar to https://ConfigMgrService.
 
 ```yaml
 Type: Uri
@@ -97,7 +97,7 @@ Accept wildcard characters: False
 
 ### -ClientId
 
-Specify the **Application (client) ID** value of the app registration in Azure AD. The format is a standard GUID.
+Specify the **Application (client) ID** value of the app registration in Microsoft Entra ID. The format is a standard GUID.
 
 ```yaml
 Type: String
@@ -145,7 +145,7 @@ Accept wildcard characters: False
 
 ### -SecretKey
 
-Specify the secret key for this app as copied from the Azure portal. You copied the secret key when you registered the app in Azure AD.
+Specify the secret key for this app as copied from the Azure portal. You copied the secret key when you registered the app in Microsoft Entra ID.
 
 ```yaml
 Type: SecureString
@@ -161,7 +161,7 @@ Accept wildcard characters: False
 
 ### -SecretKeyExpiry
 
-Specify the date when the **SecretKey** will expire. You configure this value when you create the secret key for the app in Azure AD.
+Specify the date when the **SecretKey** will expire. You configure this value when you create the secret key for the app in Microsoft Entra ID.
 
 ```yaml
 Type: DateTime
@@ -177,7 +177,7 @@ Accept wildcard characters: False
 
 ### -TenantId
 
-Specify the GUID of your Azure AD tenant.
+Specify the GUID of your Microsoft Entra tenant.
 
 ```yaml
 Type: String
@@ -193,7 +193,7 @@ Accept wildcard characters: False
 
 ### -TenantName
 
-Specify the name of your Azure AD tenant.
+Specify the name of your Microsoft Entra tenant.
 
 ```yaml
 Type: String
