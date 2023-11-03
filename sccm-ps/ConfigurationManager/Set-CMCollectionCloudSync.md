@@ -47,8 +47,6 @@ Use this cmdlet to configure collection membership synchronization to Microsoft 
 
 ## EXAMPLES
 
-<a name='example-1-enable-a-collection-to-synchronize-members-to-azure-ad-group'></a>
-
 ### Example 1: Enable a collection to synchronize members to Microsoft Entra group
 
 The first command gets the collection object named **testUserCollection** and stores it in the **$userCollection** variable.
@@ -61,7 +59,6 @@ $AADTenant = Get-CMAADTenant -Name "contoso"
 Set-CMCollectionCloudSync -InputObject $userCollection -AddGroupName "testUserGroup" -EnableAssignEndpointSecurityPolicy $true -TenantObject $AADTenant
 
 ```
-<a name='example-2-remove-collection-synchronization-with-azure-ad-group'></a>
 
 ### Example 2: Remove collection synchronization with Microsoft Entra group
 
