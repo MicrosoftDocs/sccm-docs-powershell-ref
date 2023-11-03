@@ -33,8 +33,6 @@ Use this cmdlet to get Microsoft Entra tenant connected with the Configuration M
 
 ## EXAMPLES
 
-<a name='example-1-get-all-azure-active-directory-tenants-connected-with-the-configuration-manager-site'></a>
-
 ### Example 1: Get all Microsoft Entra tenants connected with the Configuration Manager site
 
 ```powershell
@@ -42,16 +40,12 @@ Get-CMAADTenant
 
 ```
 
-<a name='example-2-get-an-azure-active-directory-tenant-with-name-contoso-connected-with-the-configuration-manager-site'></a>
-
 ### Example 2: Get a Microsoft Entra tenant with name "Contoso" connected with the Configuration Manager site
 
 ```powershell
 Get-CMAADTenant -Name "Contoso"
 
 ```
-
-<a name='example-2-get-an-azure-active-directory-tenant-with-id-72f988bf-00ab-11cd-22ef-2d7cd011db00-connected-with-the-configuration-manager-site'></a>
 
 ### Example 2: Get a Microsoft Entra tenant with Id "72f988bf-00ab-11cd-22ef-2d7cd011db00" connected with the Configuration Manager site
 
