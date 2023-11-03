@@ -31,8 +31,6 @@ For more information about Microsoft Entra apps in Configuration Manager, see [C
 
 ## EXAMPLES
 
-<a name='example-1-get-azure-ad-client-apps-by-tenant-name'></a>
-
 ### Example 1: Get Microsoft Entra client apps by tenant name
 
 This example returns all client apps in the specified tenant.
@@ -41,8 +39,6 @@ This example returns all client apps in the specified tenant.
 Get-CMAADApplication -TenantName "Contoso" -AppType ClientApplication
 ```
 
-<a name='example-2-get-azure-ad-server-apps-by-tenant-id'></a>
-
 ### Example 2: Get Microsoft Entra server apps by tenant ID
 
 This example returns all server apps in the specified tenant.
@@ -50,8 +46,6 @@ This example returns all server apps in the specified tenant.
 ```powershell
 Get-CMAADApplication -TenantId "05a349fa-298a-4427-8771-9efcdb73431e" -AppType ServerApplication
 ```
-
-<a name='example-3-get-an-azure-ad-app-by-its-name'></a>
 
 ### Example 3: Get a Microsoft Entra app by its name
 
