@@ -10,7 +10,7 @@ title: Get-CMAADTenant
 
 ## SYNOPSIS
 
-Get Azure Active Directory tenant connected with the Configuration Manager site.
+Get Microsoft Entra tenant connected with the Configuration Manager site.
 
 ## SYNTAX
 
@@ -26,28 +26,28 @@ Get-CMAADTenant [-Name <string>] [-DisableWildcardHandling] [-ForceWildcardHandl
 
 ## DESCRIPTION
 
-Use this cmdlet to get Azure Active Directory tenant connected with the Configuration Manager site.
+Use this cmdlet to get Microsoft Entra tenant connected with the Configuration Manager site.
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
-### Example 1: Get all Azure Active Directory tenants connected with the Configuration Manager site
+### Example 1: Get all Microsoft Entra tenants connected with the Configuration Manager site
 
 ```powershell
 Get-CMAADTenant
 
 ```
 
-### Example 2: Get an Azure Active Directory tenant with name "Contoso" connected with the Configuration Manager site
+### Example 2: Get a Microsoft Entra tenant with name "Contoso" connected with the Configuration Manager site
 
 ```powershell
 Get-CMAADTenant -Name "Contoso"
 
 ```
 
-### Example 2: Get an Azure Active Directory tenant with Id "72f988bf-00ab-11cd-22ef-2d7cd011db00" connected with the Configuration Manager site
+### Example 2: Get a Microsoft Entra tenant with Id "72f988bf-00ab-11cd-22ef-2d7cd011db00" connected with the Configuration Manager site
 
 ```powershell
 Get-CMAADTenant -Id "72f988bf-00ab-11cd-22ef-2d7cd011db00"
@@ -90,7 +90,7 @@ Accept wildcard characters: False
 
 ### -Id
 
-Specify the Tenant ID of Azure Active Directory tenant.
+Specify the Tenant ID of Microsoft Entra tenant.
 
 ```yaml
 Type: String
@@ -106,7 +106,7 @@ Accept wildcard characters: False
 
 ### -Name
 
-Specify the Name of Azure Active Directory tenant.
+Specify the Name of Microsoft Entra tenant.
 
 ```yaml
 Type: String

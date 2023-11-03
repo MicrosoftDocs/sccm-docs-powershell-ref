@@ -10,7 +10,7 @@ title: Set-CMCollectionCloudSync
 
 ## SYNOPSIS
 
-Configure collection membership synchronization to Azure Active Directory groups for a device or user collection. For more information, see [How to synchronize collection members to Azure AD groups](/mem/configmgr/core/clients/manage/collections/synchronize-collections-aad-group)
+Configure collection membership synchronization to Microsoft Entra groups for a device or user collection. For more information, see [How to synchronize collection members to Microsoft Entra groups](/mem/configmgr/core/clients/manage/collections/synchronize-collections-aad-group)
 
 ## SYNTAX
 
@@ -40,18 +40,18 @@ Set-CMCollectionCloudSync -Name <string> [-AddGroupName <string[]>] [-EnableAssi
 
 ## DESCRIPTION
 
-Use this cmdlet to configure collection membership synchronization to Azure Active Directory groups for a device or user collection.
+Use this cmdlet to configure collection membership synchronization to Microsoft Entra groups for a device or user collection.
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
-### Example 1: Enable a collection to synchronize members to Azure AD group
+### Example 1: Enable a collection to synchronize members to Microsoft Entra group
 
 The first command gets the collection object named **testUserCollection** and stores it in the **$userCollection** variable.
-The second command gets the Azure Active Directory Tenant named **contoso** and stores it in the **$AADTenant** variable.
-The third command enables the synchronization of the collection with Azure AD group named **testUserGroup** belonging to tenant name "contoso"
+The second command gets the Microsoft Entra tenant named **contoso** and stores it in the **$AADTenant** variable.
+The third command enables the synchronization of the collection with Microsoft Entra group named **testUserGroup** belonging to tenant name "contoso"
 
 ```powershell
 $userCollection = Get-CMCollection -Name "testUserCollection"
@@ -59,10 +59,11 @@ $AADTenant = Get-CMAADTenant -Name "contoso"
 Set-CMCollectionCloudSync -InputObject $userCollection -AddGroupName "testUserGroup" -EnableAssignEndpointSecurityPolicy $true -TenantObject $AADTenant
 
 ```
-### Example 2: Remove collection synchronization with Azure AD group
+
+### Example 2: Remove collection synchronization with Microsoft Entra group
 
 The first command gets the collection object named **testUserCollection** and stores it in the **$userCollection** variable.
-The second command removes the synchronization of the collection with Azure AD group named **testUserGroup** belonging to tenant name "contoso", which is passed as value for -TenantName parameter. Alternatively -TenantId parameter can also be used.
+The second command removes the synchronization of the collection with Microsoft Entra group named **testUserGroup** belonging to tenant name "contoso", which is passed as value for -TenantName parameter. Alternatively -TenantId parameter can also be used.
 
 ```powershell
 $userCollection = Get-CMCollection -Name "testUserCollection"
@@ -74,7 +75,7 @@ Set-CMCollectionCloudSync -InputObject $userCollection -RemoveGroupName "testUse
 
 ### -AADGroupName
 
-Specify target Azure Active Directory group name with which the collection's members needs to be synchronized.
+Specify target Microsoft Entra group name with which the collection's members needs to be synchronized.
 
 ```yaml
 Type: String
@@ -186,7 +187,7 @@ Accept wildcard characters: False
 
 ### -RemoveGroupName
 
-Use this parameter to remove synchronization with the specified Azure Active Directory group. 
+Use this parameter to remove synchronization with the specified Microsoft Entra group. 
 
 ```yaml
 Type: String
@@ -202,7 +203,7 @@ Accept wildcard characters: False
 
 ### -TenantId
 
-Specify the ID of the Azure Active Directory tenant. This value is the **TenantId** property, for example, `72f988bf-00ab-11cd-22ef-2d7cd011db00`.
+Specify the ID of the Microsoft Entra tenant. This value is the **TenantId** property, for example, `72f988bf-00ab-11cd-22ef-2d7cd011db00`.
 
 ```yaml
 Type: String
@@ -218,7 +219,7 @@ Accept wildcard characters: False
 
 ### -TenantName
 
-Specify the name of the Azure Active Directory tenant, for example, `contoso`.
+Specify the name of the Microsoft Entra tenant, for example, `contoso`.
 
 ```yaml
 Type: String
@@ -234,7 +235,7 @@ Accept wildcard characters: False
 
 ### -TenantObject
 
-Specify an object for the Azure Active Directory tenant. To get this object, use the [Get-CMAADTenant](Get-CMAADTenant.md) cmdlet.
+Specify an object for the Microsoft Entra tenant. To get this object, use the [Get-CMAADTenant](Get-CMAADTenant.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -299,4 +300,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-CMDeviceCollection](Get-CMDeviceCollection.md)
 [Get-CMUserCollection](Get-CMUserCollection.md)
 [Get-CMAADTenant](Get-CMAADTenant.md)
-[How to synchronize collection members to Azure AD groups](/mem/configmgr/core/clients/manage/collections/synchronize-collections-aad-group)
+[How to synchronize collection members to Microsoft Entra groups](/mem/configmgr/core/clients/manage/collections/synchronize-collections-aad-group)
