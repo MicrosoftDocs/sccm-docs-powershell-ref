@@ -44,12 +44,12 @@ PS XYZ:\> Get-CMSoftwareUpdateGroup
 
 This command gets all software update groups.
 
-### Example 2: Get a software update group by using an ID
+### Example 2: Get a software update group by using a Config Item ID (CI_ID)
 ```
-PS XYZ:\> Get-CMSoftwareUpdateGroup -Id "ST10000D"
+PS XYZ:\> Get-CMSoftwareUpdateGroup -Id "19060233"
 ```
 
-This command gets a software update group that has the ID ST10000D.
+This command gets a software update group with the Config Item ID "19060233".
 
 ### Example 3: Get a software update group by using a name
 ```
@@ -93,7 +93,7 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-Specifies an array of IDs of software update groups.
+Specifies an array of Config Item IDs (CI_ID) of software update groups.
 
 ```yaml
 Type: Int32[]
