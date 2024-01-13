@@ -3,8 +3,6 @@ title: Version 2010 release notes
 titleSuffix: Configuration Manager
 description: Release notes for the changes to PowerShell cmdlets in Configuration Manager version 2010. 
 ms.date: 12/21/2020
-ms.prod: configuration-manager
-ms.technology: configmgr-other
 ms.topic: conceptual
 ms.localizationpriority: low
 ms.author: banreetkaur

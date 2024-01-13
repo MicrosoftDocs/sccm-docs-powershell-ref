@@ -102,6 +102,14 @@
       ]
     },
     "fileMetadata": {
+      "ms.subservice": {
+        "**/**.md": "other",
+        "**/**.yml": "other"
+      },
+      "ms.service": {
+        "**/**.md": "configuration-manager",
+        "**/**.yml": "configuration-manager"
+      },
       "author": {
           "**/**.md": "banreet",
           "**/**.yml": "banreet"
@@ -115,12 +123,8 @@
           "**/**.yml": "banreetkaur"
       },
       "ms.prod": {
-          "**/**.md": "configuration-manager",
-          "**/**.yml": "configuration-manager"
       },      
       "ms.technology": {
-          "**/**.md": "configmgr-other",
-          "**/**.yml": "configmgr-other"
       },
       "ms.topic": {
           "**/sccm-ps/ConfigurationManager/**.md": "reference",

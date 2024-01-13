@@ -3,8 +3,6 @@ title: Version 1906 release notes
 titleSuffix: Configuration Manager
 description: Release notes for the changes to PowerShell cmdlets in Configuration Manager version 1906. 
 ms.date: 07/19/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
 ms.topic: conceptual
 ms.author: banreetkaur
 author: Banreet
