@@ -3,8 +3,6 @@ title: Version 1710 release notes
 titleSuffix: Configuration Manager
 description: Release notes for the changes to PowerShell cmdlets in Configuration Manager version 1710.
 ms.date: 11/20/2017
-ms.prod: configuration-manager
-ms.technology: configmgr-other
 ms.topic: conceptual
 ms.author: banreetkaur
 author: Banreet

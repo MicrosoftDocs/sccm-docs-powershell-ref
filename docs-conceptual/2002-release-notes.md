@@ -3,8 +3,6 @@ title: Version 2002 release notes
 titleSuffix: Configuration Manager
 description: Release notes for the changes to PowerShell cmdlets in Configuration Manager version 2002. 
 ms.date: 03/20/2020
-ms.prod: configuration-manager
-ms.technology: configmgr-other
 ms.topic: conceptual
 ms.author: banreetkaur
 author: Banreet
