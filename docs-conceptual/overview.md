@@ -2,8 +2,8 @@
 title: Configuration Manager PowerShell cmdlets
 description: Manage your Configuration Manager hierarchy using Windows PowerShell. 
 ms.date: 08/04/2022
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: overview
 ms.localizationpriority: null
 author: banreet

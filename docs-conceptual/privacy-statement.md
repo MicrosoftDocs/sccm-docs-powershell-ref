@@ -3,8 +3,8 @@ title: Privacy statement for cmdlets
 titleSuffix: Configuration Manager
 description: Learn about how Microsoft collects and uses data related to the Configuration Manager cmdlets
 ms.date: 07/14/2020
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: conceptual
 ms.localizationpriority: low
 ms.author: banreetkaur
