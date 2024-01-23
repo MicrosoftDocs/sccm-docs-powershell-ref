@@ -1,7 +1,6 @@
 ---
 ms.author: banreetkaur
 author: Banreet
-ms.prod: configuration-manager
 ms.topic: include
 ms.date: 10/27/2020
 ---
