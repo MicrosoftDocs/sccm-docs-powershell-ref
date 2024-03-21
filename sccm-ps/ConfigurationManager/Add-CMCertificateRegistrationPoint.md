@@ -2,7 +2,7 @@
 description: Adds a certificate registration point role to a site system server.
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 04/27/2019
+ms.date: 03/21/2024
 schema: 2.0.0
 title: Add-CMCertificateRegistrationPoint
 ---
