@@ -190,8 +190,6 @@ Accept wildcard characters: False
 
 Specify one or more user category objects to help you filter and find the app group in the console. To get these objects, use the [Get-CMCategory](Get-CMCategory.md) cmdlet. These categories are of type **CatalogCategories**.
 
-To add categories to help users filter and find applications in Software Center, use the **AddAppCategory** parameter.
-
 ```yaml
 Type: IResultObject[]
 Parameter Sets: (All)
