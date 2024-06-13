@@ -150,7 +150,7 @@ Accept wildcard characters: False
 
 ### -ModelName
 
-Specify the **ModelID** of an application to get. For example, `136846`.
+Specify the **ModelName** of an application to get. For example, `ScopeId_2558247F-19FB-43D4-8FBA-E34809F419D3/Application_1deec342-670d-487f-889f-27fb3662b9d8`.
 
 ```yaml
 Type: String
