@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Release notes for the changes to PowerShell cmdlets in Configuration Manager version 2309.
 ms.date: 09/13/2023
 ms.topic: conceptual
-ms.localizationpriority: null
+ms.localizationpriority: Low
 author: banreet
 ms.author: banreetkaur
 manager: sunitashaw
