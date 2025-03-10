@@ -73,7 +73,7 @@ Set-CMCollectionCloudSync -InputObject $userCollection -RemoveGroupName "testUse
 
 ## PARAMETERS
 
-### -AADGroupName
+### -AddGroupName
 
 Specify target Microsoft Entra group name with which the collection's members needs to be synchronized.
 
