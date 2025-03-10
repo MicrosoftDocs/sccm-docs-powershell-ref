@@ -53,6 +53,18 @@ This command gets multiple boundary groups that are specified by the identifiers
 Get-CMBoundaryGroup -Id 5,6
 ```
 
+### Example 3: Show all Boundary Groups and their Settings:
+
+This command shows all Boundary Groups and their configured settings.
+
+```powershell
+Get-CMBoundaryGroup | Format-Table Name, GroupID, `
+  @{ N = "AllowPeerDownloads"; E = { -not ($_.Flags -band 1) } }, `
+  @{ N = "SubnetOnly"; E = { ($_.Flags -band 2) -eq 2 } }, `
+  @{ N = "PreferDistributionPoint"; E = { ($_.Flags -band 4) -eq 4 } }, `
+  @{ N = "PreferCloud"; E = { ($_.Flags -band 8) -eq 8 } }
+```
+
 ## PARAMETERS
 
 ### -DisableWildcardHandling
