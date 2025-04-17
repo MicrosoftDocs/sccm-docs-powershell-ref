@@ -1,7 +1,7 @@
 ---
 title: Version 1610 release notes
 titleSuffix: Configuration Manager
-description: Release notes for the changes to PowerShell cmdlets in Configuration Manager version 1610. 
+description: Release notes for the changes to PowerShell cmdlets in Configuration Manager version 1610.
 ms.date: 11/19/2016
 ms.topic: conceptual
 ms.author: banreetkaur
@@ -39,7 +39,7 @@ If the path to the ConfigurationManager.psd1 module is added to the PSMODULEPATH
 
 #### Workaround
 *  Use the full path to the module
-*  https://gallery.technet.microsoft.com/Make-Configuration-Manager-04474a87
+*  `https://gallery.technet.microsoft.com/Make-Configuration-Manager-04474a87`
 
     > [!NOTE]
     > This workaround is supplied by the user community and is not tested or supported by Microsoft.
