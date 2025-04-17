@@ -223,7 +223,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## NOTES
 
-For more information on this return object and its properties, see [SMS_TaskSequence_SubTasksequence server WMI class](/mem/configmgr/develop/reference/osd/sms_tasksequence_subtasksequence-server-wmi-class).
 
 ## RELATED LINKS
 
