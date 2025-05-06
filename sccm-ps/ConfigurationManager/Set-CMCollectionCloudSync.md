@@ -44,6 +44,12 @@ Use this cmdlet to configure collection membership synchronization to Microsoft 
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
+>
+> [!NOTE]
+> There is currently a limitation with this cmdlet where the -AddGroupName and -RemoveGrouName parameters are limited in the number of groups it searches in the tenant.
+> It is equivilent to running "Get-AzureADGroup -top 900" and then searching the results for the group name. If the group is not in the returned results you will see
+> an error "Set-CMCollectionCloudSync : The specified group discovery scope 'GroupName' could not be found." There is currently no way to filter or sort the results to
+> ensure your group is returned in the object.
 
 ## EXAMPLES
 
