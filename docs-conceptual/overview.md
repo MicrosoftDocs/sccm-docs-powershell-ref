@@ -104,7 +104,7 @@ To get the latest information for the Configuration Manager PowerShell module, u
 >
 > For more information, see [PowerShell version 2103 release notes](/powershell/sccm/2103-release-notes#known-issue-with-updateable-powershell-help).
 
-The computer on which you run this cmdlet needs internet access, specifically `pshelpprod.blob.core.windows.net`. Then run the following command from an elevated PowerShell session:
+The computer on which you run this cmdlet needs internet access, specifically `pshelpprod.z22.web.core.windows.net`. Then run the following command from an elevated PowerShell session:
 
 ```powershell
 Update-Help -Module ConfigurationManager
