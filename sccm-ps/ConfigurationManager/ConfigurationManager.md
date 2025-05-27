@@ -396,6 +396,9 @@ Export a task sequence.
 ### [Get-CMAADApplication](Get-CMAADApplication.md)
 Get the Microsoft Entra app object from the site.
 
+### [Get-CMAADTenant](Get-CMAADTenant.md)
+Get Microsoft Entra tenant connected with the Configuration Manager site.
+
 ### [Get-CMAccessAccount](Get-CMAccessAccount.md)
 Gets an access account.
 
@@ -423,7 +426,7 @@ Get Configuration Manager alerts.
 ### [Get-CMAlertSubscription](Get-CMAlertSubscription.md)
 Get one or more alert subscription objects.
 
-### [Get-CMAntimalwarePolicy](Get-CMAntimalwarePolicy.md)
+### [Get-CMAntiMalwarePolicy](Get-CMAntiMalwarePolicy.md)
 Get an antimalware policy for endpoint protection.
 
 ### [Get-CMApplication](Get-CMApplication.md)
@@ -660,7 +663,7 @@ Gets an object that represents a Configuration Manager database.
 ### [Get-CMDatabaseReplicationLinkProperty](Get-CMDatabaseReplicationLinkProperty.md)
 Gets a replication link between a Configuration Manager parent site and child site.
 
-### [Get-CMDatabaseReplicationStatus](Get-CMDatabaseReplicationStatus.md)
+### [Get-CMDataBaseReplicationStatus](Get-CMDataBaseReplicationStatus.md)
 Gets the status for database replication.
 
 ### [Get-CMDataWarehouseServicePoint](Get-CMDataWarehouseServicePoint.md)
@@ -2148,6 +2151,9 @@ Create a Microsoft Defender Application Control settings policy object.
 ### [New-CMWindows10EditionUpgrade](New-CMWindows10EditionUpgrade.md)
 Create a Windows 10 edition upgrade policy.
 
+### [New-CMWindows11EditionUpgrade](New-CMWindows11EditionUpgrade.md)
+Create a Windows 11 edition upgrade policy.
+
 ### [New-CMWindowsFirewallPolicy](New-CMWindowsFirewallPolicy.md)
 Creates a new Windows Firewall policy in Configuration Manager.
 
@@ -2190,7 +2196,7 @@ Removes Configuration Manager alerts.
 ### [Remove-CMAlertSubscription](Remove-CMAlertSubscription.md)
 Removes an alert subscription object.
 
-### [Remove-CMAntimalwarePolicy](Remove-CMAntimalwarePolicy.md)
+### [Remove-CMAntiMalwarePolicy](Remove-CMAntiMalwarePolicy.md)
 Remove an antimalware policy for endpoint protection.
 
 ### [Remove-CMApplication](Remove-CMApplication.md)
@@ -2724,7 +2730,7 @@ Changes properties of Configuration Manager alerts.
 ### [Set-CMAlertSubscription](Set-CMAlertSubscription.md)
 Changes the properties of an alert subscription.
 
-### [Set-CMAntimalwarePolicy](Set-CMAntimalwarePolicy.md)
+### [Set-CMAntiMalwarePolicy](Set-CMAntiMalwarePolicy.md)
 Configure settings for an endpoint protection antimalware policy.
 
 ### [Set-CMApplication](Set-CMApplication.md)
@@ -2909,6 +2915,9 @@ Configure a cloud management gateway connection point.
 
 ### [Set-CMCollection](Set-CMCollection.md)
 Configure a device or user collection.
+
+### [Set-CMCollectionCloudSync](Set-CMCollectionCloudSync.md)
+Configure collection membership synchronization to Microsoft Entra groups for a device or user collection. For more information, see [How to synchronize collection members to Microsoft Entra groups](/mem/configmgr/core/clients/manage/collections/synchronize-collections-aad-group)
 
 ### [Set-CMCollectionMembershipEvaluationComponent](Set-CMCollectionMembershipEvaluationComponent.md)
 Configure the site component that evaluates collection membership.
@@ -3452,6 +3461,9 @@ Sets a wireless profile.
 
 ### [Set-CMWirelessProfileConfigurationItem](Set-CMWirelessProfileConfigurationItem.md)
 Modifies a wireless profile.
+
+### [Set-UpdateServerApplication](Set-UpdateServerApplication.md)
+Use the console to update the server app or use this cmdlet to add the missing URL http://localhost to your existing server app.
 
 ### [Start-CMAntimalwarePolicyDeployment](Start-CMAntimalwarePolicyDeployment.md)
 (Deprecated) Starts the deployment of an antimalware policy to the members of a Configuration Manager collection.
