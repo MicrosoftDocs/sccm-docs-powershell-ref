@@ -4,10 +4,10 @@ external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 05/02/2019
 schema: 2.0.0
-title: Get-CMDatabaseReplicationStatus
+title: Get-CMDataBaseReplicationStatus
 ---
 
-# Get-CMDatabaseReplicationStatus
+# Get-CMDataBaseReplicationStatus
 
 ## SYNOPSIS
 Gets the status for database replication.
@@ -15,12 +15,12 @@ Gets the status for database replication.
 ## SYNTAX
 
 ```
-Get-CMDatabaseReplicationStatus [-ChildSiteCode <String>] [-ParentSiteCode <String>] [-DisableWildcardHandling]
+Get-CMDataBaseReplicationStatus [-ChildSiteCode <String>] [-ParentSiteCode <String>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Get-CMDatabaseReplicationStatus** cmdlet gets the status of the database replication link for a Configuration Manager parent/child site pair.
+The **Get-CMDataBaseReplicationStatus** cmdlet gets the status of the database replication link for a Configuration Manager parent/child site pair.
 The cmdlet identifies the sites by site code.
 
 You can specify just the site code or just the name for a parent or child and get all the database replication links for the specified site.
