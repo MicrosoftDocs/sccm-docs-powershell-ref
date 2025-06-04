@@ -20,7 +20,7 @@
       "template_folder": "_themes",
       "version": 0,
       "monikerPath": [
-        "mapping/monikerMapping.json"
+        "mapping/MAML2Yaml/monikerMapping.json"
       ],
       "customized_tasks": {
         "docset_prebuild": [
