@@ -1,7 +1,7 @@
 ---
 external help file: AdminUI.PS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 12/01/2022
+ms.date: 11/19/2025
 schema: 2.0.0
 title: Set-CMCollectionCloudSync
 ---
@@ -73,7 +73,7 @@ Set-CMCollectionCloudSync -InputObject $userCollection -RemoveGroupName "testUse
 
 ## PARAMETERS
 
-### -AADGroupName
+### -AddGroupName
 
 Specify target Microsoft Entra group name with which the collection's members needs to be synchronized.
 
