@@ -43,7 +43,7 @@ Get-CMUser -ResourceId <Int32> [-DisableWildcardHandling] [-ForceWildcardHandlin
 ```
 
 ## DESCRIPTION
-The **Get-CMUser** cmdlet gets a Configuration Manager user object.
+The **Get-CMUser** cmdlet gets a Configuration Manager user object. By default it queries the **All Users** collection. You can use the **CollectionID** or **CollectionName** parameters to change the collection to be queried. Depending upon your role-based access in the site, you may need to use one of these other parameters. For example, if you don't have access to SMS00002 (All Users collection), then by default this cmdlet returns zero results.
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
