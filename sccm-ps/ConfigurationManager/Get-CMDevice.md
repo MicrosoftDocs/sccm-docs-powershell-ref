@@ -65,7 +65,7 @@ Get-CMDevice [-CollectionMember] [-Fast] [-Resource] -ResourceId <Int32> [-Disab
 
 ## DESCRIPTION
 
-The **Get-CMDevice** cmdlet gets a Configuration Manager device. By default it queries the **SMS_CM_RES_COLL_SMS00001** class. You can use the **Resource** or **CollectionMember** parameters to change the query class. Depending upon your role-based access in the site, you may need to use one of these other parameters. For example, if you don't have access to SMS00001, then by default this cmdlet returns zero results.<!-- 12549811 -->
+The **Get-CMDevice** cmdlet gets a Configuration Manager device. By default it queries the **All Systems** collection. You can use the **Resource** or **CollectionMember** parameters to change the collection to be queried. Depending upon your role-based access in the site, you may need to use one of these other parameters. For example, if you don't have access to SMS00001 (All Systems collection), then by default this cmdlet returns zero results.<!-- 12549811 -->
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
