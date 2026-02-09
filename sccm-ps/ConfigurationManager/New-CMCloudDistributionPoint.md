@@ -38,11 +38,11 @@ For more information about cloud distribution points, see [Planning for Content 
 
 ### Example 1: Create a cloud distribution point
 ```
-PS XYZ:\> New-CMCloudDistributionPoint -ManagementCertificatePath "C:\Certificates\Management.pfx" -Region "WestUS" -ServiceCertificatePath "C:\Certificates\Distribution.pfx" -ServiceCName "distribution-server.contoso.com" -SiteCode "ContosoSite"-SubscriptionID "81c87063-04a3-4abf-8e4c-736569bc1f60"
+PS XYZ:\> New-CMCloudDistributionPoint -ManagementCertificatePath "C:\Certificates\Management.pfx" -Region "WestUS" -ServiceCertificatePath "C:\Certificates\Distribution.pfx" -ServiceCName "distribution-server.contoso.com" -SiteCode "ContosoSite"-SubscriptionID "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e"
 ```
 
 This command creates a distribution with the canonical name server.contoso.com.
-The distribution point is located in the WestUS Azure region and is associated with the Azure subscription 81c87063-04a3-4abf-8e4c-736569bc1f60.
+The distribution point is located in the WestUS Azure region and is associated with the Azure subscription aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e.
 
 ## PARAMETERS
 
@@ -407,5 +407,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Start-CMCloudDistributionPoint](Start-CMCloudDistributionPoint.md)
 
 [Stop-CMCloudDistributionPoint](Stop-CMCloudDistributionPoint.md)
-
-
