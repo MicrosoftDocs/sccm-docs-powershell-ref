@@ -41,7 +41,7 @@ In this example, the first command creates a datetime variable for `11/16/2021`.
 ```powershell
 $date = [datetime]::parseexact("11/16/2021", 'MM/dd/yyyy', $null)
 
-Import-CMAADServerApplication -TenantName "Contoso" -TenantId "05a349fa-298a-4427-8771-9efcdb73431e" -AppName "CmgServerApp" -ClientId "7078946d-fc1c-43b7-8dee-dd6e6b00d783" -SecretKey "1uXGR^!0@Cjas6qI*J02ZeS&&zY19^hC*9" -SecretKeyExpiry $date
+Import-CMAADServerApplication -TenantName "Contoso" -TenantId "aaaabbbb-0000-cccc-1111-dddd2222eeee" -AppName "CmgServerApp" -ClientId "7078946d-fc1c-43b7-8dee-dd6e6b00d783" -SecretKey "1uXGR^!0@Cjas6qI*J02ZeS&&zY19^hC*9" -SecretKeyExpiry $date
 ```
 
 ## PARAMETERS

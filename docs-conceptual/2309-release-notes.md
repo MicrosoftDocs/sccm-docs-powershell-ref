@@ -37,7 +37,7 @@ New-CMWindows11EditionUpgrade -Name "NewEditionPolicyByKey" -WindowsEdition Wind
 Use this cmdlet to add the missing URL 'http://localhost' to your existing server app. For more information, see [About creating and deploying applications in Configuration Manager](/mem/configmgr/apps/get-started/create-and-deploy-an-application).
 
 ```powershell
-SET-UpdateServerApplication -TenantId 1E7C0B63-1DAB-4754-8433-AF8F9CFFCF38
+SET-UpdateServerApplication -TenantId aaaabbbb-0000-cccc-1111-dddd2222eeee
 ```
 
 ## Cmdlet changes

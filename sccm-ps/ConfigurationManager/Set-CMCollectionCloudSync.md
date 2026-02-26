@@ -203,7 +203,7 @@ Accept wildcard characters: False
 
 ### -TenantId
 
-Specify the ID of the Microsoft Entra tenant. This value is the **TenantId** property, for example, `72f988bf-00ab-11cd-22ef-2d7cd011db00`.
+Specify the ID of the Microsoft Entra tenant. This value is the **TenantId** property, for example, `aaaabbbb-0000-cccc-1111-dddd2222eeee`.
 
 ```yaml
 Type: String
