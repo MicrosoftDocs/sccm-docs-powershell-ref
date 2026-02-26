@@ -44,7 +44,7 @@ Get-CMAADApplication -TenantName "Contoso" -AppType ClientApplication
 This example returns all server apps in the specified tenant.
 
 ```powershell
-Get-CMAADApplication -TenantId "05a349fa-298a-4427-8771-9efcdb73431e" -AppType ServerApplication
+Get-CMAADApplication -TenantId "aaaabbbb-0000-cccc-1111-dddd2222eeee" -AppType ServerApplication
 ```
 
 ### Example 3: Get a Microsoft Entra app by its name

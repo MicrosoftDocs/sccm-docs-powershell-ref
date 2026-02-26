@@ -28,7 +28,7 @@ Customers can use console to update the server app or this cmdlet.
 ### Example 1
 
 ```powershell
-Set-UpdateServerApplication -TenantId 1E7C0B63-1DAB-4754-8433-AF8F9CFFCF38
+Set-UpdateServerApplication -TenantId aaaabbbb-0000-cccc-1111-dddd2222eeee
 ```
 
 ## PARAMETERS

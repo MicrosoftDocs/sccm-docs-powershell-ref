@@ -42,7 +42,7 @@ For more information about Microsoft Entra apps in Configuration Manager, see [C
 ### Example 1: Import the client app based on the tenant ID
 
 ```powershell
-Import-CMAADClientApplication -TenantId "05a349fa-298a-4427-8771-9efcdb73431e" -AppName "CmgClientApp" -ClientId "cf114f48-88db-4829-ac45-0c186e86dbf6"
+Import-CMAADClientApplication -TenantId "aaaabbbb-0000-cccc-1111-dddd2222eeee" -AppName "CmgClientApp" -ClientId "cf114f48-88db-4829-ac45-0c186e86dbf6"
 ```
 
 ### Example 2: Import the client app based on the server app

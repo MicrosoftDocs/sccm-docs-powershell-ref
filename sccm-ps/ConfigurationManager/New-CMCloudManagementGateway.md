@@ -73,13 +73,13 @@ $Cert =@{$Path = $Type}
 
 $Password = '0HNy*c@63kAe' | ConvertTo-SecureString -AsPlainText -Force
 
-New-CMCloudManagementGateway -ServiceCertPath "c:\TestPath\ServiceCert.pfx" -EnvironmentSetting AzurePublicCloud -SubscriptionId "e517b8cb-a969-4d1e-b2ea-ae1e6c052020" -ServiceCertPassword $Password -ServiceName "GraniteFalls.CloudApp.Net" -Description "EastUS CMG for Contoso" -Region EastUS -VMInstanceCount 2 -CARootCert $Cert -CheckClientCertRevocation $False -EnforceProtocol $True -IsUsingExistingGroup $true -GroupName "Resource group 1"
+New-CMCloudManagementGateway -ServiceCertPath "c:\TestPath\ServiceCert.pfx" -EnvironmentSetting AzurePublicCloud -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e" -ServiceCertPassword $Password -ServiceName "GraniteFalls.CloudApp.Net" -Description "EastUS CMG for Contoso" -Region EastUS -VMInstanceCount 2 -CARootCert $Cert -CheckClientCertRevocation $False -EnforceProtocol $True -IsUsingExistingGroup $true -GroupName "Resource group 1"
 ```
 
 ### Example 2
 
 ```powershell
-New-CMCloudManagementGateway -ServiceCertPath "c:\TestPath\ServiceCert.pfx" -EnvironmentSetting AzurePublicCloud -SubscriptionId "e517b8cb-a969-4d1e-b2ea-ae1e6c052020" -ServiceCertPassword $Password -ServiceName "GraniteFalls.CloudApp.Net" -Description "EastUS CMG for Contoso" -Region EastUS -VMInstanceCount 2 -CARootCert $Cert -CheckClientCertRevocation $False -EnforceProtocol $True -GroupName "Resource group 1" -EnableCloudDPFunction $true -EnableTrafficOut $true -TrafficOutStopService $true -TrafficOutGB 10000 -TrafficWarningPct 50 -TrafficCriticalPct 90 -EnableStorageQuota $true -StorageQuotaGB 2000 -StorageWarningPct 50 -StorageCriticalPct 90 -Force
+New-CMCloudManagementGateway -ServiceCertPath "c:\TestPath\ServiceCert.pfx" -EnvironmentSetting AzurePublicCloud -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e" -ServiceCertPassword $Password -ServiceName "GraniteFalls.CloudApp.Net" -Description "EastUS CMG for Contoso" -Region EastUS -VMInstanceCount 2 -CARootCert $Cert -CheckClientCertRevocation $False -EnforceProtocol $True -GroupName "Resource group 1" -EnableCloudDPFunction $true -EnableTrafficOut $true -TrafficOutStopService $true -TrafficOutGB 10000 -TrafficWarningPct 50 -TrafficCriticalPct 90 -EnableStorageQuota $true -StorageQuotaGB 2000 -StorageWarningPct 50 -StorageCriticalPct 90 -Force
 ```
 
 ## PARAMETERS
