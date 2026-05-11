@@ -3,7 +3,7 @@ title: Version 2103 release notes
 titleSuffix: Configuration Manager
 description: Release notes for the changes to PowerShell cmdlets in Configuration Manager version 2103.
 ms.date: 03/26/2021
-ms.topic: conceptual
+ms.topic: article
 ms.localizationpriority: low
 ms.author: banreetkaur
 author: Banreet
