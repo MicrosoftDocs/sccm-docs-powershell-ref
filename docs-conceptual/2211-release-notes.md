@@ -3,7 +3,7 @@ title: Version 2211 release notes
 titleSuffix: Configuration Manager
 description: Release notes for the changes to PowerShell cmdlets in Configuration Manager version 2211.
 ms.date: 12/02/2022
-ms.topic: conceptual
+ms.topic: article
 ms.localizationpriority: Low
 author: banreet
 ms.author: banreetkaur
