@@ -5,7 +5,7 @@ description: Learn about how Microsoft collects and uses data related to the Con
 ms.date: 07/14/2020
 ms.subservice: sdk
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 ms.localizationpriority: low
 ms.author: banreetkaur
 author: Banreet

@@ -3,7 +3,7 @@ title: Version 1810 release notes
 titleSuffix: Configuration Manager
 description: Release notes for the changes to PowerShell cmdlets in Configuration Manager version 1810. 
 ms.date: 02/20/2019
-ms.topic: conceptual
+ms.topic: article
 ms.author: banreetkaur
 author: Banreet
 manager: apoorvseth
