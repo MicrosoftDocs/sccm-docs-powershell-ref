@@ -132,7 +132,7 @@
       "ms.topic": {
           "**/sccm-ps/ConfigurationManager/**.md": "reference",
           "**/sccm-ps/ConfigurationManager/**.yml": "reference",
-          "**/docs-conceptual/**.md": "conceptual"
+          "**/docs-conceptual/**.md": "article"
       },
       "titleSuffix": {
           "**/**.md": "Configuration Manager",
