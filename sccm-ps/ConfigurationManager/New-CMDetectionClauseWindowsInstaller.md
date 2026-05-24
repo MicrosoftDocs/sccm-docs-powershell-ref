@@ -48,7 +48,7 @@ This example adds the Configuration Manager console MSI product code to the depl
 ```powershell
 $clause = New-CMDetectionClauseWindowsInstaller -Existence -ProductCode 4F7840A9-9816-45E2-9F6C-F7067A8BC0FD
 
-Set-CMScriptDeploymentType -ApplicationName "Configuration Manager console" -DeploymentTypeName "Install" -AddDetectionClause $clause
+Set-CMMsiDeploymentType -ApplicationName "Configuration Manager console" -DeploymentTypeName "Install" -AddDetectionClause $clause
 ```
 
 ## PARAMETERS
