@@ -69,7 +69,7 @@ $role = Get-CMSecurityRole -Name $roleName
 $scope = Get-CMSecurityScope -Name $scopeName
 $collection = Get-CMCollection -Name $collectionName
 
-$perms = $role | New-CMAdministrativeUserPermission -RoleName $role.RoleName -SecurityScopeNames $scope.CategoryName -CollectionNames $collection.Name
+$perms = New-CMAdministrativeUserPermission -RoleName $role.RoleName -SecurityScopeNames $scope.CategoryName -CollectionNames $collection.Name
 
 $User = New-CMAdministrativeUser -Name $accountName -Permission $perms
 $User.Permissions
