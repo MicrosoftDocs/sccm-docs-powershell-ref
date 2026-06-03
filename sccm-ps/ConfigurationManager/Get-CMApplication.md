@@ -186,11 +186,11 @@ Add this parameter to show hidden applications. A hidden application has the **I
 
 To hide an application, use the following commands:
 
-
-
+```powershell
 $app = Get-CMApplication -Name "test app"
 $app.IsHidden = $true
 $app.Put()
+```
 
 ```yaml
 Type: SwitchParameter
@@ -205,16 +205,19 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
-### IResultObject[]#SMS_ApplicationLatest
-### IResultObject#SMS_ApplicationLatest
-### IResultObject#SMS_Application
+### IResultObject\[]\#SMS_ApplicationLatest
+### IResultObject\#SMS_ApplicationLatest
+### IResultObject\#SMS_Application
+
 ## NOTES
 
 For more information on these return object and their properties, see the following articles:
